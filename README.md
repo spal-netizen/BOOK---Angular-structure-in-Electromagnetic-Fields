@@ -71,3 +71,4 @@ End with 2 sentences linking to the next subsection.
 - Drafting contract lock: `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`
 - Citation lock: `TOC/CITATION-CONTRACT-ULTIMATE.md`
 - No-recursion audit lock: `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md`
+# BOOK---Angular-structure-in-Electromagnetic-Fields
