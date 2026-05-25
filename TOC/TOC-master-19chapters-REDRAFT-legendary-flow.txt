@@ -1,0 +1,259 @@
+# ===============================================================================
+# Angular Structure in Electromagnetic Fields
+# Redrafted Master TOC (19 Chapters) - Readability + Forward Logical Flow
+# Authoring intent: maximum mathematical rigor, full-proof progression, physical interpretation
+# Conventions: exp(-j*omega*t), SI, forward-only inheritance, no recursive re-derivation
+# ===============================================================================
+
+Chapter 1 - Foundations: Maxwell Structure, Symmetry, Gauge, and Observability
+1.0 Scope, assumptions, and roadmap
+1.1 Maxwell equations, admissibility, and uniqueness structure
+1.2 Energy, momentum, and angular momentum conservation
+1.3 Rotational covariance, frame dependence, and invariants
+1.4 Gauge structure, helicity, and limits of local decompositions
+1.5 Measurement theory for electromagnetic angular observables
+1.6 Foundational examples and counterexamples [FIG+PROB]
+1.7 Chapter synthesis and forward map
+
+Chapter 2 - Maxwell Operators, Green Mappings, and Radiation Structure
+2.0 Transition from field laws to operator formulation
+2.1 Function spaces, domains, adjoints, and closure properties
+2.2 Time-domain and frequency-domain Maxwell evolution
+2.3 Green operators, singular structure, and inversion
+2.4 Radiation conditions and uniqueness of outgoing fields
+2.5 Source-to-field integral representations and asymptotics
+2.6 Spectral and Fredholm structure of radiation operators
+2.7 Null spaces, non-radiating sources, and accessibility limits
+2.8 Reciprocity and operator symmetries
+2.9 Action of radiation operators on angular spectra
+2.10 Operator-level worked problems [FIG+PROB]
+2.11 Chapter synthesis and forward map
+
+Chapter 3 - Angular-Momentum Eigenfields and Representation Theory
+3.0 Transition from operators to eigenfield representations
+3.1 Hilbert and rigged-Hilbert structure of radiative fields
+3.2 Angular-momentum operators, SO(3), and Wigner structure
+3.3 Vector Helmholtz separation and Debye constructions
+3.4 Vector spherical harmonics and electromagnetic eigenfields
+3.5 Normalization, spectral density, and multiplicity
+3.6 Completeness, truncation, and symmetry breaking
+3.7 Discrete and continuous angular spectra
+3.8 Basis transformations and representation equivalence
+3.9 Gauge-invariant interpretation and approximation limits
+3.10 Spectral worked problems [FIG+PROB]
+3.11 Chapter synthesis and forward map
+
+Chapter 4 - Realizability, Truncation, and Effective Electromagnetic Dimension
+4.0 Finite geometry and realizability as primary constraints
+4.1 Admissible source spaces and physical support conditions
+4.2 Equivalence principles and aperture representations
+4.3 Source-radiation-field operator chains
+4.4 Finite-support restrictions on angular spectra
+4.5 Coupling to angular-momentum eigenfields
+4.6 Singular-value decay and effective dimension
+4.7 Null spaces, inversion limits, and non-accessibility
+4.8 Scaling laws, concentration theory, and n-width limits
+4.9 Physical meaning of realizability limits
+4.10 Truncation worked problems [FIG+PROB]
+4.11 Chapter synthesis and forward map
+
+Chapter 5 - Canonical Radiation Mechanisms and Angular Formation
+5.0 Bridge from realizability to physical radiation mechanisms
+5.1 Retardation, acceleration, and radiation formation
+5.2 Canonical dipole and multipole source mechanisms
+5.3 Superposition, interference, and angular structure emergence
+5.4 Circular and helical source distributions
+5.5 Continuous currents, apertures, and angular spectra
+5.6 Reactive-radiative partition and asymptotic selection
+5.7 Generation versus redistribution of angular structure
+5.8 Scaling limits of canonical radiators
+5.9 Canonical-radiation worked problems [FIG+PROB]
+5.10 Chapter synthesis and forward map
+
+Chapter 6 - Discrete Arrays, Sampling, and Cyclic Symmetry
+6.0 Discrete realizations of angularly structured radiation
+6.1 Electromagnetic modeling of array elements and excitations
+6.2 Sampling of continuous angular sources
+6.3 Finite-array superposition and collective flux structure
+6.4 Uniform circular arrays and C_N representation structure
+6.5 Angular aliasing, spectral folding, and Nyquist limits
+6.6 Coupling rules in eigenfield bases
+6.7 Collective angular transport and non-additivity
+6.8 Distortion, leakage, and purity limits under discretization
+6.9 Joint truncation bounds from aperture and sampling
+6.10 Discrete-array worked problems [FIG+PROB]
+6.11 Chapter synthesis and forward map
+
+Chapter 7 - Continuous Apertures, Reflectors, and Boundary Conversion
+7.0 Transition from discrete to continuous boundary radiators
+7.1 Boundary-value structure and well-posed exterior problems
+7.2 Equivalent-source aperture formulations
+7.3 Surface-radiation integrals and operator spectra
+7.4 Circular and annular apertures with azimuthal structure
+7.5 Bandlimitation and truncation in continuous apertures
+7.6 Reflectors as linear boundary operators
+7.7 Axisymmetric transport and conversion-versus-generation criteria
+7.8 Stress-tensor torque exchange at boundaries
+7.9 Phase-modifying surfaces and mode-conversion operators
+7.10 Continuous-boundary worked problems [FIG+PROB]
+7.11 Chapter synthesis and forward map
+
+Chapter 8 - Metasurfaces, Metamaterials, and Subwavelength Operator Design
+8.0 Structured surfaces as electromagnetic operators
+8.1 Microscopic Maxwell description of subwavelength inclusions
+8.2 Multipole hierarchy, truncation, and angular content
+8.3 Homogenization and its breakdown regimes
+8.4 GSTC formulation and admissibility constraints
+8.5 Metasurfaces as finite-rank field transformers
+8.6 Angular-momentum transport with field-matter torque accounting
+8.7 Spatial dispersion, nonlocality, and control limits
+8.8 Phase engineering under rank and causality constraints
+8.9 Conversion versus generation in structured-surface operators
+8.10 Structured-surface worked problems [FIG+PROB]
+8.11 Chapter synthesis and forward map
+
+Chapter 9 - Free-Space Propagation, Transport, and Invariants
+9.0 Propagation as geometric evolution of radiative structure
+9.1 Maxwell propagators and conservation-preserving evolution
+9.2 Green propagators and integral transport maps
+9.3 Spectral representations and basis-independent observables
+9.4 Angular-momentum currents and invariant transport quantities
+9.5 Near-field to far-field asymptotic evolution
+9.6 Exact non-paraxial solutions and paraxial limits
+9.7 Divergence, spreading, and angular-order scaling
+9.8 Stability and finite-observation effects
+9.9 Free-space propagation worked problems [FIG+PROB]
+9.10 Chapter synthesis and forward map
+
+Chapter 10 - Linear Media: Dispersion, Anisotropy, and Inhomogeneity
+10.0 Transition from free-space to material propagation
+10.1 Constitutive structure, causality, and passivity
+10.2 Maxwell evolution operators in dissipative media
+10.3 Biorthogonal spectral structure in non-Hermitian settings
+10.4 Field-matter angular transport and modified conservation laws
+10.5 Temporal dispersion and spatiotemporal angular evolution
+10.6 Anisotropy, symmetry breaking, and geometric phase
+10.7 Inhomogeneous and periodic media transport
+10.8 Mode coupling, preservation conditions, and irreversibility
+10.9 Linear-media worked problems [FIG+PROB]
+10.10 Chapter synthesis and forward map
+
+Chapter 11 - Random Media, Turbulence, and Statistical Angular Transport
+11.0 Deterministic-to-stochastic propagation transition
+11.1 Stochastic Maxwell formulation and solution notions
+11.2 Correlation, structure functions, and statistical symmetries
+11.3 Ensemble and pathwise operator evolution
+11.4 Angular observables in random media
+11.5 Weak random phase distortion and coherence erosion
+11.6 Turbulence-induced mode coupling and random-matrix structure
+11.7 Angular diffusion, kinetic limits, and radiative transfer
+11.8 Decoherence, detectability collapse, and scaling laws
+11.9 Random-media worked problems [FIG+PROB]
+11.10 Chapter synthesis and forward map
+
+Chapter 12 - Interaction with Ponderable Media: Force, Torque, and Exchange
+12.0 Bridge from propagation to mechanical interaction
+12.1 Maxwell fields with free and bound sources
+12.2 Energy balance, work, and dissipation channels
+12.3 Linear momentum balance and force densities
+12.4 Angular momentum balance and torque exchange
+12.5 Stress-tensor formulations and validity domains
+12.6 Microscopic-to-macroscopic consistency limits
+12.7 Momentum partitioning debates under conservation constraints
+12.8 Interface localization of force and torque exchange
+12.9 Excitation selectivity, symmetry rules, and efficiency scaling
+12.10 Interaction worked problems [FIG+PROB]
+12.11 Chapter synthesis and forward map
+
+Chapter 13 - Detection, Measurement, and Estimation of Angular Content
+13.0 Measurement as finite-dimensional electromagnetic inference
+13.1 Measurable observables versus mathematical labels
+13.2 Detector operators, transfer functions, and noise injection
+13.3 Projection operators, singular spectra, and conditioning
+13.4 Aperture/sampling limits and observable dimensionality
+13.5 Near-field/far-field measurement complementarity
+13.6 Reconstruction in angular bases and inverse stability
+13.7 Detectability, uncertainty, and estimation geometry
+13.8 Fisher information and Cramer-Rao structure
+13.9 Measurement worked problems [FIG+PROB]
+13.10 Chapter synthesis and forward map
+
+Chapter 14 - Information Structure, Degrees of Freedom, and Capacity Limits
+14.0 Electromagnetic information under finite geometry
+14.1 Distinguishability and physical state-space definition
+14.2 Source, field, and observable degrees of freedom
+14.3 Hilbert-space geometry and finite-rank channels
+14.4 Source-to-detector operator chains and singular spectra
+14.5 Bandlimitation, concentration theory, and effective rank
+14.6 Basis invariance and relabeling non-advantage
+14.7 Propagation and measurement impacts on information accessibility
+14.8 Capacity structure under fixed electromagnetic rank
+14.9 Information-theoretic worked problems [FIG+PROB]
+14.10 Chapter synthesis and forward map
+
+Chapter 15 - Communication Systems with Angularly Structured Fields
+15.0 End-to-end communication as cascaded Maxwell operators
+15.1 Message states versus physical field states
+15.2 Communication rank and usable subspaces
+15.3 Eigenchannel decomposition and conditioning
+15.4 Angular encoding under basis invariance
+15.5 Space-time-bandwidth coupling in practical links
+15.6 Far-field communication limits and equivalence regimes
+15.7 Near-field/reactive regimes and distance constraints
+15.8 Multiuser subspace allocation and interference structure
+15.9 Receiver architecture and measurement bottlenecks
+15.10 Communication worked problems [FIG+PROB]
+15.11 Chapter synthesis and forward map
+
+Chapter 16 - Sensing, Radar, and Scientific Inference Applications
+16.0 Structured-field sensing as physical inverse inference
+16.1 Detectability, identifiability, and inference taxonomy
+16.2 Scattering operators under angular illumination
+16.3 Radar cross section, modulation, and sensitivity limits
+16.4 Resolution, bandlimits, and null-space persistence
+16.5 Estimation bounds and conditioning trade-offs
+16.6 Diversity gains versus dimensionality invariance
+16.7 Imaging/tomography limits under finite rank
+16.8 Near-field sensing advantages and transport limits
+16.9 End-to-end sensing worked problems [FIG+PROB]
+16.10 Chapter synthesis and forward map
+
+Chapter 17 - Astrophysical and Remote Observation with Angular Fields
+17.0 Passive observational electromagnetics and constraints
+17.1 Natural-field angular statistics and admissibility
+17.2 Broadband/incoherent coherence-collapse mechanisms
+17.3 Natural generation pathways of angular structure
+17.4 Long-range propagation through stratified random media
+17.5 Source-symmetry diagnostics and degeneracy structure
+17.6 Remote-scattering observables and reconstruction limits
+17.7 Noise sensitivity and finite-aperture projection bias
+17.8 Frame dependence and geometric interpretation ambiguities
+17.9 Passive-observation worked problems [FIG+PROB]
+17.10 Chapter synthesis and forward map
+
+Chapter 18 - Limits, Judgment, and Physically Admissible Interpretation
+18.0 Purpose of judgment chapter and validity discipline
+18.1 Taxonomy of limits: absolute, conditional, and apparent
+18.2 Hierarchy of proven results across field/operator/inference layers
+18.3 Assumptions underlying monograph-valid conclusions
+18.4 Beyond-scope regimes and re-derivation requirements
+18.5 Existence, realizability, observability, and inferability hierarchy
+18.6 Angular momentum reinterpretation under symmetry principles
+18.7 Representation dependence and over-counting diagnostics
+18.8 Canonical synthesis theorem for dimensionality claims
+18.9 Judgment worked problems [FIG+PROB]
+18.10 Chapter synthesis and forward map
+
+Chapter 19 - Open Problems and Constraint-Preserving Future Directions
+19.0 Scope conditions for legitimate future extensions
+19.1 Physics-closed versus physics-open problem classification
+19.2 Open problems within classical Maxwell framework
+19.3 Mathematical frontiers in truncated/spectral Maxwell theory
+19.4 Beyond-linear extensions: nonlinearity, gain, time variance
+19.5 Quantization transitions and dimensionality re-establishment
+19.6 Near-field and subwavelength research frontiers
+19.7 Experimental bottlenecks and validation protocols
+19.8 Consistency audits for future claims
+19.9 Final monograph synthesis and outlook
+
+# END REDRAFT MASTER TOC

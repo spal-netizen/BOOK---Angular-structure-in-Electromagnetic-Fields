@@ -1,0 +1,50 @@
+---
+description: Volume I EM book — LOCKED baseline 2026-05-24; notation; forward-only; AI rules
+globs:
+  - "**/*.tex"
+  - "**/*.md"
+  - "**/*.yaml"
+  - "**/*.txt"
+alwaysApply: true
+---
+
+# Angular Structure in EM Fields — Volume I (Ch. 1–4)
+
+## Conventions (locked)
+- Time: phasor fields with **exp(-j ω t)**; ∂/∂t → -jω on phasors.
+- **SI units** only.
+- Read `00-NOTATION.md`, `00-FORWARD-MAP.yaml`, and `TOC/volume-I-ch01-04-FINAL.txt` before editing any section.
+- Volume I: honor [HOME] / [USE SSx.y.z] / [DEFER] tags on every subsection line.
+- Full series outline: `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` (official master, Ch. 1–19).
+- Every `[FIG+PROB]` subsection: Problem, schematic figure with caption, all math steps, physical meaning per step.
+
+## Forward progression (no recursion)
+- Each chapter has an **inheritance section** (1.7, 2.11, 3.11, 4.11). Only these sections may list concepts deferred to later chapters.
+- Elsewhere: **use** prior results via `\ref{...}` / "By Theorem ... (§x.y)" — never re-derive.
+- Honor `forbidden_repeat` in `00-FORWARD-MAP.yaml` for the active chapter.
+
+## AI drafting rules
+- Expand only from author bullets in `outlines/chNN/*.txt` when present.
+- Do not invent references; use keys from `latex/references.bib` or mark `[CITATION NEEDED]`.
+- Definitions of `Y_l^m`, `M_lm`, `N_lm`, radiation operator domain, and Maxwell equations: **once only** (see NOTATION + §3.4.1 / Ch. 1).
+- Mark unverified proofs with `% PROOF: AUTHOR REVIEW`.
+- Prefer `\E`, `\H`, `\Jimp` macros from `latex/macros.tex`.
+- Enforce unique exposition per subsection: avoid repeated equation displays, repeated concept statements, and repeated sentence-construction templates; inherit prior content only via `\ref{...}` and targeted citation.
+- Enforce unique subsection rhetoric: opening and closing paragraphs must not reuse the same framing template across subsections.
+- Place citations exactly at the claim location and prioritize original/pioneering sources plus latest validated developments.
+- Keep figures minimal and schematic; include only when they materially improve equation-to-physics interpretation.
+- Maintain chapter-wise numbering intent for equations `(chapter.index)` and references `[chapter.index]`.
+- In chapter manuscript prose (`latex/ch*.tex`), avoid bullet-list exposition; define variables, figure levels, and captions inline within formal text.
+- Use `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` as the primary 19-chapter structure.
+- Use `TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt` only as ownership-reference source when checking tag ancestry.
+- Enforce theorem ownership from `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md`: one HOME proof, all non-home chapters USE by citation only.
+- Enforce per-subsection depth contract from `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`.
+- Enforce citation placement and source pairing from `TOC/CITATION-CONTRACT-ULTIMATE.md`.
+- Run no-recursion checks from `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md` before marking chapter drafts complete.
+- In Volume I, every section (`X.0`, `X.1`, `X.2`, ...) must include an introductory framing paragraph before subsection flow and a summative framing paragraph after subsection flow.
+
+## Tone
+Graduate research monograph (Harrington/Collin level): precise, no survey padding, no popular OAM hype without gauge caveats from Ch. 1.
+
+## Volume boundary
+Do not draft Ch. 5+ content in Volume I files except brief forward pointers in §4.11.2–4.11.3.

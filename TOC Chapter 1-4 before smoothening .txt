@@ -1,0 +1,263 @@
+Chapter 1 — Foundations of Angular Electromagnetic Structure
+
+1.0 Foundational Perspective and Governing Principles
+1.0.1 Scope and Structural Role of the Chapter
+1.0.2 Angular Structure as a Consequence of Maxwellian Symmetry and Boundary Conditions
+1.0.3 Foundational Assumptions, Finite-Energy Admissibility, and Domain of Validity
+
+1.1 Maxwell Electrodynamics and Electromagnetic Conservation Laws
+1.1.1 Maxwell Equations in Differential and Integral Form and Constitutive Closure in Vacuum
+1.1.2 Sources, Boundary Conditions, and Physical Admissibility
+1.1.3 Initial-Value, Boundary-Value, Uniqueness, and Solution Admissibility Structure
+1.1.4 Energy, Linear Momentum, and Electromagnetic Stress
+1.1.5 Angular Momentum Conservation and Torque Balance
+
+1.2 Angular Structure in Electromagnetic Fields
+1.2.1 Angular Dependence and Angular Momentum
+1.2.2 Amplitude, Phase, Polarization, and Energy-Flow Topological Structure
+1.2.3 Necessary Conditions for Angular-Momentum Transport
+1.2.4 Reactive and Radiative Angular Structure
+
+1.3 Rotational Symmetry, Covariance, and Observer Independence
+1.3.1 Coordinate Transformations, Active/Passive Rotations, and Rotational Symmetry
+1.3.2 Tensorial, Dyadic, and Transformation Structure of Electromagnetic Quantities
+1.3.3 Origin Dependence, Translational Effects, and Observer Covariance
+1.3.4 Physical Invariants, Total Angular Momentum Invariance, and Frame-Independent Observables of Angular Electromagnetic Structure
+
+1.4 Gauge Structure and Physical Observables
+1.4.1 Electromagnetic Potentials and Gauge Transformations
+1.4.2 Gauge Dependence of Local Electromagnetic Quantities
+1.4.3 Gauge-Invariant Electromagnetic Observables, Helicity, Dual Symmetry, and Conserved Electromagnetic Structures
+1.4.4 Operational Meaning of Gauge-Invariant Quantities
+1.4.5 Limits of Local Spin–Orbital Decompositions and Interpretations
+
+1.5 Physical Interpretation and Measurement of Angular Electromagnetic Quantities
+1.5.1 Field–Matter Interaction and Measurement
+1.5.2 Torque, Momentum-Flux, and Stress-Tensor Measurements
+1.5.3 Modal Projections, Representation Dependence, Measurement Accessibility, and Projection Limits
+1.5.4 Observable Quantities Versus Inferred Quantities, Detector Dependence, and Finite Observability
+
+1.6 Foundational Examples and Counterexamples
+1.6.1 Angular Momentum Conservation in Radiation
+1.6.2 Angular Phase Structure Without True Angular-Momentum Transport
+1.6.3 Gauge Dependence of Local Angular Densities
+1.6.4 Reactive Versus Radiative Angular Structure
+
+1.7 Structural Summary and Chapter Inheritance
+1.7.1 Foundational Results Established in Chapter 1
+1.7.2 Concepts Deferred to Later Chapters
+1.7.3 Transition to Radiation Operators, Spectral Theory, and Electromagnetic Representation Structure
+
+Chapter 2 — Maxwell Operators and Radiation Mappings
+
+2.0 Operator Formulation and Radiation Mapping of Electromagnetic Fields
+2.0.1 Radiation as a Mapping Between Sources and Fields
+2.0.2 Maxwell Equations in Operator Form
+2.0.3 Relation to the Foundations Established in Chapter 1
+
+2.1 Functional Spaces and Maxwell Operators
+2.1.1 Function Spaces of Sources, Fields, and Distributions
+2.1.2 Linear Operators, Domains, Codomains, and Adjoint Structure
+2.1.3 Boundedness, Compactness, Unboundedness, Rank Deficiency, and Spectral Compression
+2.1.4 Self-Adjointness, Operator Closures, and Physical Admissibility
+
+2.2 Maxwell Operators in Time and Frequency Domains
+2.2.1 Time-Domain Maxwell Evolution Structure
+2.2.2 Frequency-Domain Maxwell Operators
+2.2.3 Linear Evolution, Time–Frequency Equivalence, Causality, and Propagation Structure
+2.2.4 Propagating, Evanescent, and Non-Propagating Field Subspaces
+
+2.3 Green Functions and Electromagnetic Inversion
+2.3.1 Scalar, Vector, and Dyadic Green Functions and Singular Operators
+2.3.2 Singularities, Generalized Functions, Distributional Sources, Regularization, and Distributional Structure
+2.3.3 Retardation, Radiation Causality, and Covariant Propagation
+2.3.4 Inversion Structure and Causal Solvability of Maxwell Theory
+
+2.4 Radiation Conditions and Uniqueness
+2.4.1 Sommerfeld Radiation Condition
+2.4.2 Outgoing-Wave Structure and Elimination of Incoming Solutions
+2.4.3 Uniqueness of Radiative Fields
+2.4.4 Consequences for Source Reconstruction
+
+2.5 Radiation Integrals and Source-to-Field Mappings
+2.5.1 Integral Source-to-Field Representation of Radiated Fields
+2.5.2 Spatial Regimes and Asymptotic Structure of Radiation Operators
+2.5.3 Energy Conservation, Power Flow, and Operator Norms
+2.5.4 Radiative, Evanescent, and Non-Propagating Components
+
+2.6 Spectral Structure of Radiation Operators
+2.6.1 Eigenfunctions, Continuous Spectra, Spectral Decomposition, and Modal Structure
+2.6.2 Rotational Symmetry, Spectral Degeneracy, and Representation Structure
+2.6.3 Compactness, Rank Deficiency, Fredholm Structure, and Solvability Conditions
+2.6.4 Geometric Restrictions on Radiative Spectral Support
+
+2.7 Null Spaces and Non-Radiating Sources
+2.7.1 Null Spaces of Radiation Operators
+2.7.2 Non-Radiating and Non-Propagating Current Configurations
+2.7.3 Evanescent Subspaces, Information Loss, and Non-Reconstructability
+2.7.4 Consequences for Angular Spectral Accessibility and Representability
+
+2.8 Reciprocity, Symmetry, Self-Adjointness, and Radiative Coupling
+2.8.1 Lorentz Reciprocity, Operator Symmetry, and Bilinear Structure
+2.8.2 Orthogonality, Coupling, and Symmetry of Radiative Modes
+2.8.3 Reciprocity Constraints on Radiation and Reception
+
+2.9 Radiation Operators and Angular Spectral Structure
+2.9.1 Action of Radiation Operators on Angular Spectra
+2.9.2 Retained, Suppressed, and Filtered Angular Components
+2.9.3 Near–Far Spectral Transformation and Evanescent Suppression
+2.9.4 Dimensional Reduction, Spectral Filtering, and Far-Field Angular Accessibility
+
+2.10 Foundational Examples and Operator-Level Problems
+2.10.1 Compactness of Radiation Operators
+2.10.2 Non-Radiating Source Configurations
+2.10.3 Evanescent Suppression in Near-to-Far Transformations
+2.10.4 Radiation of Angularly Structured Source States
+
+2.11 Structural Summary and Chapter Inheritance
+2.11.1 Radiation-Operator Structures Established in Chapter 2
+2.11.2 Concepts Deferred to Later Spectral and Representation Chapters
+2.11.3 Transition to Angular Momentum Eigenfields, Spectral Structure, and Representation Theory
+
+Chapter 3 — Angular Momentum Eigenfields and Representation Theory
+
+3.0 Spectral Representation and Electromagnetic Eigenfields of Radiative Maxwell Fields
+3.0.1 Symmetry, Operators, and Electromagnetic Representations
+3.0.2 Eigenfield Expansions, Radiative Field Spaces, and Covariant Field Structure
+3.0.3 Relation to Chapters 1 and 2
+
+3.1 Hilbert Spaces and Spectral Structure of Maxwell Fields
+3.1.1 Finite-Energy Radiative Maxwell Field Spaces
+3.1.2 Inner Products, Orthogonality, Completeness, and Resolution Structure
+3.1.3 Generalized Eigenfunctions and Continuous Spectra
+3.1.4 Distributional Structure, Distributional Normalization, Generalized Eigenfunctions, and Rigged Hilbert Spaces
+
+3.2 Angular Momentum Operators and Electromagnetic Representations
+3.2.1 Total Angular Momentum Operators on Maxwell Fields
+3.2.2 Commutation Structure, Simultaneous Diagonalization Conditions, and Eigenfields
+3.2.3 SO(3) Representations, Rotational Symmetry, and Degeneracy Structure
+3.2.4 Wigner Rotations, Angular Transformations, Tensorial Coupling, and Irreducible Representation Structure
+3.2.5 Helicity, Polarization, Dual Symmetry, and Electromagnetic Representation Structure
+
+3.3 Vector Helmholtz Theory and Separation of Variables
+3.3.1 Reduction to Vector Helmholtz Form
+3.3.2 Spherical Coordinate Separation and Angular Structure
+3.3.3 Radial Functions, Outgoing-Wave Conditions, Radiative Admissibility, and Regularity
+3.3.4 Debye Potentials, Scalar Generating Functions, and Representation Construction
+
+3.4 Vector Spherical Harmonics and Electromagnetic Eigenfields
+3.4.1 Scalar and Vector Spherical Harmonics and Angular Basis Structure
+3.4.2 Toroidal, Poloidal, Radial, and Divergence-Free Structures
+3.4.3 Orthogonality, Completeness, and Resolution of Identity
+3.4.4 Construction of Angular Momentum Eigenfields
+3.4.5 Degeneracy, Representation Coupling, and Angular Momentum Structure
+
+3.5 Normalization and Spectral Representation
+3.5.1 Energy, Flux, and Finite-Volume Normalization
+3.5.2 Continuous-Spectrum and Distributional Normalization
+3.5.3 Spectral Density, Density of States, and Representation Multiplicity
+3.5.4 Geometric and Spectral Consequences of Normalization Choices
+
+3.6 Completeness, Restricted Spectral Support, and Symmetry Breaking
+3.6.1 Completeness in Infinite Domains
+3.6.2 Spectral Restrictions, Truncation, and Loss of Completeness Under Finite Support
+3.6.3 Boundary-Induced Symmetry Breaking and Mode Mixing
+3.6.4 Representation Constraints on Accessible Radiative Angular Structure
+
+3.7 Continuous, Discrete, and Boundary-Constrained Angular Spectra
+3.7.1 Angular Spectra in Unbounded Space
+3.7.2 Quantization Through Boundary Constraints
+3.7.3 Integer, Non-Integer, and Boundary-Constrained Angular Structure
+3.7.4 Phase Singularities, Representation Dependence, and Limits of Topological Interpretation
+
+3.8 Relation Between Electromagnetic Representation Bases
+3.8.1 Plane-Wave and Fourier Representations
+3.8.2 Cylindrical, Parabolic, and Alternative Coordinate Bases
+3.8.3 Change-of-Basis Transformations and Representation Equivalence
+3.8.4 Representation Dependence of Angular Momentum and “OAM” Modes
+
+3.9 Physical Interpretation, Gauge-Invariant Meaning, and Limits of Eigenfield Representations
+3.9.1 Gauge-Invariant Interpretation of Electromagnetic Eigenfields
+3.9.2 Conserved, Gauge-Invariant, and Representation-Dependent Quantities
+3.9.3 Limits of Scalar, Paraxial, and Reduced-Symmetry Approximations
+3.9.4 Observable Electromagnetic Structure Versus Representation Artifacts
+
+3.10 Foundational Examples and Spectral Problems
+3.10.1 Construction of Free-Space Angular Momentum Eigenfields
+3.10.2 Orthogonality and Completeness of Vector Spherical Harmonics
+3.10.3 Continuous-Spectrum Normalization and Mode Counting
+3.10.4 Symmetry Breaking and Mode Coupling
+
+3.11 Structural Summary and Chapter Inheritance
+3.11.1 Spectral and Representation Structures Established in Chapter 3
+3.11.2 Concepts Deferred to Radiation, Aperture, and Truncation Chapters
+3.11.3 Transition to Source Realizability, Spectral Truncation, and Accessible Angular Structure
+
+Chapter 4 — Source Realizability and Spectral Truncation
+
+4.0 Finite Geometry, Radiative Accessibility, and Spectral Realizability
+4.0.1 Realizability and Accessibility Limits in Electromagnetic Radiation
+4.0.2 Finite Geometry as a Spectral, Dimensional, and Accessibility Constraint
+4.0.3 Relation to the Operator and Representation Structures of Chapters 1–3
+
+4.1 Admissible Electromagnetic Sources
+4.1.1 Impressed Currents, Sources, and Electromagnetic Excitation
+4.1.2 Finite Energy, Passivity, Causality, and Spatial Support
+4.1.3 Distributional Sources, Generalized Functions, and Physical Admissibility
+4.1.4 Realizable Source Spaces, Radiative Support, Accessibility, and Support Constraints
+
+4.2 Equivalence Principles and Aperture Representations
+4.2.1 Volume–Surface Equivalence Principles and Source Transformations
+4.2.2 Apertures as Equivalent Surface Radiating Sources
+4.2.3 Boundary Conditions, Tangential Continuity, and Field Structure
+4.2.4 Radiative Support Restrictions and Limits of Equivalent-Source Representations
+4.3 Source Spaces and Radiation Operators
+4.3.1 Finite-Support Source Spaces and Compact Spatial Domains
+4.3.2 Compactness and Spectral Compression Induced by Finite Geometry
+4.3.3 Source-to-Radiation-to-Field Operator Chains
+4.3.4 Singular Values, Rank Deficiency, and Radiative Accessibility
+4.4 Finite Geometry and Angular Spectral Restrictions
+4.4.1 Spatial Localization and Fourier–Angular Duality
+4.4.2 Evanescent and Propagating Angular Components
+4.4.3 Suppression and Asymptotic Decay of High-Order Angular Structure
+4.4.4 Finite-Support Restrictions on Radiative Spectral Support
+4.5 Coupling to Angular Momentum Eigenfields
+4.5.1 Eigenfield Expansions and Representation of Radiated Fields
+4.5.2 Coupling Integrals, Selection Rules, and Spectral Accessibility
+4.5.3 Dependence on Source Geometry and Aperture Size
+4.5.4 Orthogonality, Accessibility, Modal Weighting, Representation Dependence, and Coupling Strength
+
+4.6 Angular-Momentum Truncation, Singular-Value Decay, and Effective Dimensionality
+4.6.1 Maximum Supported Angular Structure and Spectral Accessibility
+4.6.2 Scaling Laws and Asymptotics for Angular Spectral Truncation
+4.6.3 Asymptotic Decay of High-Order Coupling
+4.6.4 Singular-Value Decay, Effective Rank, and Electromagnetic Dimensionality
+
+4.7 Null Spaces, Accessibility, and Reconstruction Limits
+4.7.1 Non-Radiating, Unreachable, Inaccessible, and Null-Space Eigenfields
+4.7.2 Reactive Structure, Accessible Radiation Subspaces, and Evanescent Accessibility
+4.7.3 Limits of Angular Synthesis, Reconstruction, and Inversion
+4.7.4 Spatial Localization Versus Angular Resolution
+
+4.8 Scaling Laws and Spectral Concentration
+4.8.1 Aperture Size, Frequency, and Supported Electromagnetic Mode Count
+4.8.2 High- and Low-Frequency Asymptotic Scaling Regimes
+4.8.3 Spectral Concentration and Finite-Domain Spatial Localization
+4.8.4 Landau–Pollak–Slepian Concentration, Kolmogorov n-Width, and Electromagnetic Dimensionality Limits
+
+4.9 Physical Meaning of Realizability and Accessibility Limits
+4.9.1 Finite Geometry as the Origin of Radiative Dimensionality Constraints
+4.9.2 Why Phase Engineering Cannot Eliminate Spectral Truncation
+4.9.3 Observable and Measurable Manifestations of Spectral Accessibility Limits
+4.9.4 Consequences for Electromagnetic Radiation, Synthesis, and Measurement Systems
+
+4.10 Foundational Examples and Truncation Problems
+4.10.1 Maximum Angular Momentum Supported by a Finite Aperture
+4.10.2 Construction of Non-Accessible Eigenfields
+4.10.3 Near-Field Structure and Far-Field Spectral Truncation
+4.10.4 Scaling of Electromagnetic Mode Count with Geometry and Frequency
+
+4.11 Structural Summary and Chapter Inheritance
+4.11.1 Realizability, Accessibility, and Truncation Structures Established in Chapter 4
+4.11.2 Concepts Deferred to Radiation, Aperture, and Implementation Chapters
+4.11.3 Transition to Radiation Mechanisms, Physical Radiators, and Spectral Realization

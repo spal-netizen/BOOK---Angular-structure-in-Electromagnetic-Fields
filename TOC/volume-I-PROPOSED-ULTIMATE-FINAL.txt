@@ -1,0 +1,19 @@
+# Proposed Volume I from ULTIMATE FINAL TOC
+
+Primary proposal: Volume I = Chapters 1-5.
+
+This gives a complete foundational arc:
+
+- Foundations and invariants (Chapter 1)
+- Operator and Green-function machinery (Chapter 2)
+- Eigenfield and representation theory (Chapter 3)
+- Realizability and dimensional truncation limits (Chapter 4)
+- Canonical radiation mechanisms as first physical closure (Chapter 5)
+
+Included chapters:
+
+1. Foundations: Maxwell Structure, Symmetry, Gauge, Observability
+2. Maxwell Operators, Green Mappings, and Radiation
+3. Angular-Momentum Eigenfields and Representations
+4. Realizability, Truncation, and Effective Electromagnetic Dimension
+5. Canonical Radiation Mechanisms and Angular Formation

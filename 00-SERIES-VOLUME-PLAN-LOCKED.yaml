@@ -1,0 +1,96 @@
+# ===============================================================================
+# LOCKED — Three-volume series plan
+# Angular Structure in Electromagnetic Fields (19 chapters)
+# Locked: 2026-05-25 (author mandate — timeless masterpiece criterion)
+# Unlock: note reason in progress.md; update LOCK-MANIFEST.md; re-align forward maps
+# ===============================================================================
+
+meta:
+  status: LOCKED
+  locked_date: 2026-05-25
+  total_chapters: 19
+  total_subsections_v22: 815
+  authoritative_toc: TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt
+  ownership_reference: TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt
+  criterion: >
+    Entire TOC drafted forward-only; every mathematical and physical detail
+    complete in its HOME subsection only; for curious researchers; timeless
+    treatise — not a survey, handbook, or device catalogue.
+
+volumes:
+  I:
+    number: I
+    chapters: [1, 2, 3, 4]
+    movement: "Existence & realizability"
+    working_title: "Foundations, Operators, Eigenfields, and Realizability"
+    question: >
+      What is angular electromagnetic structure in Maxwell theory, and what
+      subsets are physically realizable under finite geometry and truncation?
+    status: active_draft
+    forward_map: 00-FORWARD-MAP.yaml
+    volume_toc: TOC/volume-I-ch01-04-FINAL.txt
+    transitions_to: "Volume II, Chapter 5"
+    est_pages: "640–705"
+
+  II:
+    number: II
+    chapters: [5, 6, 7, 8, 9, 10, 11, 12]
+    movement: "Manifestation in the classical world"
+    working_title: "Radiation, Geometry, Propagation, and Matter"
+    question: >
+      How is angular structure formed at sources and boundaries, carried through
+      free space and material media, randomized, and exchanged with ponderable
+      matter?
+    status: toc_only
+    transitions_from: "Volume I, Chapter 4.11"
+    transitions_to: "Volume III, Chapter 13"
+    est_pages: "1100–1350"
+    binding_note: >
+      One logical volume. Optional physical Part A (Ch. 5–8) and Part B (Ch. 9–12)
+      with continuous pagination — printing/binding only; do not split intellectually.
+
+  III:
+    number: III
+    chapters: [13, 14, 15, 16, 17, 18, 19]
+    movement: "Knowledge & admissible claim"
+    working_title: "Measurement, Information, Systems, and Admissible Interpretation"
+    question: >
+      What can be measured, inferred, communicated, sensed, and passively
+      observed; and under what assumptions may one claim angular degrees of
+      freedom?
+    status: toc_only
+    transitions_from: "Volume II, Chapter 12.11"
+    capstone_chapters: [18, 19]
+    est_pages: "950–1200"
+
+# Chapter blocks within volumes (for cross-reference)
+chapter_blocks:
+  volume_I:
+    - { range: "1–4", role: "Mathematical spine: laws → operators → eigenfields → realizability" }
+  volume_II:
+    - { range: "5–8", role: "Formation: mechanisms → arrays → apertures → metasurfaces" }
+    - { range: "9–12", role: "Dynamics: propagation → media → turbulence → field–matter exchange" }
+  volume_III:
+    - { range: "13–14", role: "Ownership: measurement, Fisher, DOF, capacity (theory)" }
+    - { range: "15–16", role: "Applications: communication, sensing (USE only)" }
+    - { range: "17", role: "Passive / astrophysical observation" }
+    - { range: "18–19", role: "Judgment, assumption registry, open problems (capstone)" }
+
+# Non-negotiable split rules
+split_rules:
+  do_not_split:
+    - "Ch. 5–12 across logical volumes (generation–transport–exchange arc)"
+    - "Ch. 13 from Ch. 14 (measurement vs DOF ownership)"
+    - "Ch. 18 from Ch. 19 (judgment vs open problems)"
+    - "Ch. 17 into Ch. 16 (different epistemology: passive observation)"
+  retired:
+    - "Four-volume marketing split"
+  volume_prefaces:
+    rule: "One bridge paragraph per volume; no re-teaching of prior volumes"
+
+# Tag discipline (unchanged across all volumes)
+tag_rules:
+  HOME: "Define and prove once; never repeat in body"
+  USE: "Cite as Section x.y.z or \\ref{sec:chxyz}; no re-display of equations"
+  DEFER: "List only in chapter synthesis sections (x.7, x.11, x.14, etc.)"
+  FIG_PROB: "Problem + schematic figure + all steps + physical meaning per step"

@@ -1,0 +1,11 @@
+LOCKED BASELINE - 2026-05-24
+==========================
+The following Volume I TOC is frozen for writing:
+
+  volume-I-ch01-04-FINAL.txt  (AUTHORITATIVE - 171 subsections)
+
+Copies (volume-I-ch01-04.txt) mirror FINAL for convenience.
+Do not edit *-smoothed.txt files.
+Do not reduce subsection count.
+
+Unlock only with documented change in LOCK-MANIFEST.md.

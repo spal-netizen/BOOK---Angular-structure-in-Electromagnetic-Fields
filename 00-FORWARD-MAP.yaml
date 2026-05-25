@@ -1,0 +1,111 @@
+# Volume I forward architecture — FINAL TOC (Chapters 1–4)
+# Read with: TOC/volume-I-ch01-04-FINAL.txt
+
+meta:
+  volume: I
+  chapters: [1, 2, 3, 4]
+  time_convention: exp(-j*omega*t)
+  units: SI
+  subsections: 171
+  authoritative_toc: TOC/volume-I-ch01-04-FINAL.txt
+  review: TOC/VOLUME-I-FINAL-REVIEW.md
+
+tag_rules:
+  HOME: define and prove once; never repeat in body
+  USE: cite as "Section SSx.y.z" or \ref{sec:chxyz}; no re-display of equations
+  DEFER: list only in section 1.7, 2.11, 3.11, 4.11
+  FIG_PROB: problem + captioned schematic + all steps + physical meaning
+
+chapter_1:
+  title: Foundations of Angular Electromagnetic Structure
+  establishes:
+    - "1.1.1 maxwell_si_phasor"
+    - "1.1.4 stress_tensor_energy_momentum"
+    - "1.1.5 angular_momentum_conservation"
+    - "1.2 angular_structure_definition"
+    - "1.3 rotations_tensors_covariance"
+    - "1.4 gauge_helicity_spin_orbit_limits"
+    - "1.5 measurement_observables"
+  requires: []
+  forbidden_repeat: []
+  inheritance: "1.7"
+  examples: "1.6"
+
+chapter_2:
+  title: Maxwell Operators and Radiation Mappings
+  establishes:
+    - "2.1 function_spaces_operators"
+    - "2.2 time_frequency_maxwell"
+    - "2.3 dyadic_green_functions"
+    - "2.4 sommerfeld_uniqueness"
+    - "2.5 radiation_integrals"
+    - "2.6 spectral_fredholm"
+    - "2.7 non_radiating_null_spaces"
+    - "2.8 reciprocity"
+    - "2.9 angular_spectrum_action"
+  requires: [chapter_1]
+  forbidden_repeat:
+    - full_maxwell_derivation
+    - angular_momentum_conservation_proof
+    - gauge_introduction
+  inheritance: "2.11"
+  examples: "2.10"
+  use_map:
+    "2.5.3": "1.1.4"
+    "2.5.4": "2.2.4"
+    "2.6.2": "1.3"
+
+chapter_3:
+  title: Angular Momentum Eigenfields and Representation Theory
+  establishes:
+    - "3.1 hilbert_rigged"
+    - "3.2 angular_momentum_SO3_Wigner"
+    - "3.3 vector_helmholtz_debye"
+    - "3.4 VSH_definitions_eigenfields"
+    - "3.5 normalization"
+    - "3.6 completeness_symmetry_breaking"
+    - "3.7 discrete_continuous_spectra"
+    - "3.8 basis_transformations"
+    - "3.9 paraxial_limits"
+  requires: [chapter_2]
+  forbidden_repeat:
+    - sommerfeld_full_proof
+    - green_function_construction
+    - maxwell_equations
+  inheritance: "3.11"
+  examples: "3.10"
+  use_map:
+    "3.2.5": "1.4.3"
+    "3.3.3": "2.4"
+    "3.9.1": "1.4"
+    "3.9.2": "1.4.3"
+
+chapter_4:
+  title: Source Realizability and Spectral Truncation
+  establishes:
+    - "4.1 admissible_sources"
+    - "4.2 equivalence_apertures"
+    - "4.3 operator_chains_SVD"
+    - "4.4 bandlimits"
+    - "4.5 eigenfield_coupling"
+    - "4.6 truncation_scaling"
+    - "4.7 reconstruction_limits"
+    - "4.8 LPS_n_width"
+    - "4.9 physical_consequences"
+  requires: [chapter_2, chapter_3]
+  forbidden_repeat:
+    - VSH_construction
+    - hilbert_space_introduction
+    - NR_source_definition
+  inheritance: "4.11"
+  examples: "4.10"
+  use_map:
+    "4.1.3": "2.3.2"
+    "4.2.3": "1.1.2"
+    "4.3.2": "2.1.3"
+    "4.4.2": "2.2.4"
+    "4.5.1": "3.4"
+    "4.7.1": "2.7"
+    "4.7.2": "2.7.3"
+    "4.9.3": "1.5"
+  transitions_to: volume_II_chapter_5

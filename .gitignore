@@ -1,0 +1,44 @@
+# LaTeX
+latex/*.aux
+latex/*.bbl
+latex/*.blg
+latex/*.fdb_latexmk
+latex/*.fls
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.synctex.gz
+latex/*.pdf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Build artifacts
+_build/
+
+# Local installers / binaries
+*.exe
+*.msi
+
+# Office / binary drafts (keep LaTeX/text as source of truth)
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+# Local media captures
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+
+# Optional local archives
+*.zip
+*.7z
+*.rar

@@ -1,0 +1,25 @@
+# §1.0.1 Scope and role of Chapter 1 — author outline (LOCKED input)
+
+## 1. Audience
+- Advanced graduate students, doctoral researchers, practicing scientists, engineers
+- Fields: electromagnetics, optics, antennas, wave physics, applied mathematics
+- Prerequisites: Maxwell equations, vector calculus, linear algebra, PDEs, classical EM
+- Develops angular structure from first principles: rigorous + physically unified
+
+## 2. Volume I (Ch. 1–4) — monograph context
+- Vol. I: physical, mathematical, operator-theoretic foundations
+- Topics across Vol. I (not all in Ch. 1): conservation/AM transport; rotation/gauge; measurement;
+  radiation operators; Green functions; eigenfields; VSH; realizability; truncation
+- Objective: what angular structure is admissible, realizable, observable before mechanisms/apps
+- Vol. II (Ch. 5+): radiation mechanisms, arrays, apertures, metasurfaces, propagation, matter — cite only here
+
+## 3. Angular structure (one idea for Ch. 1 intro)
+- Complete organization of a field w.r.t. direction, rotational symmetry, AM content, angular spectrum — Maxwell-governed
+
+## 4. Chapter 1 only — deferred to Ch. 2–4
+- No: operator theory, Green mappings, Hilbert space, SO(3)/AM operators, VSH, completeness/normalization,
+  truncation/realizability/scaling (Ch. 4)
+- Ch. 1: physical principles, conservation, symmetry, gauge, observability
+
+## 5. Notation
+- exp(-j omega t) phasors; SI; symbols defined at first formal appearance

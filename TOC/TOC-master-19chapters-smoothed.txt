@@ -1,0 +1,1071 @@
+# MASTER TOC — SMOOTHED (19 Chapters)
+# Angular Structure in Electromagnetic Fields
+# exp(-j ω t), SI | Recursion-free forward architecture
+# Volume I = Chapters 1–4 (see volume-I-ch01-04-smoothed.txt for full subsection detail)
+
+# ═══════════════════════════════════════════════════════════════════
+# VOLUME I — FOUNDATIONS (Chapters 1–4)
+# Full subsection listing: volume-I-ch01-04-smoothed.txt
+# ═══════════════════════════════════════════════════════════════════
+
+Chapter 1 — Foundations of Angular Electromagnetic Structure
+Chapter 2 — Maxwell Operators and Radiation Mappings
+Chapter 3 — Angular Momentum Eigenfields and Representation Theory
+Chapter 4 — Source Realizability and Spectral Truncation
+
+# ═══════════════════════════════════════════════════════════════════
+# VOLUME II — SOURCES, STRUCTURES, AND PROPAGATION (Chapters 5–12)
+# ═══════════════════════════════════════════════════════════════════
+
+Chapter 5 — Canonical Radiation Mechanisms
+
+5.0 Introduction
+5.0.1 From realizability constraints to radiation physics
+5.0.2 Retardation, symmetry, and angular content
+5.0.3 Continuity with Volume I
+
+5.1 Fundamental Radiation Principles
+5.1.1 Accelerated sources and radiation formation
+5.1.2 Energy transport, reaction, and recoil
+5.1.3 Symmetry breaking and directivity
+5.1.4 Radiation conditions for angular-momentum flux
+
+5.2 Elementary Sources
+5.2.1 Electric and magnetic dipoles
+5.2.2 Near, intermediate, and far fields
+5.2.3 Flux via the Maxwell stress tensor
+5.2.4 Coordinate and representation dependence
+
+5.3 Superposition and Interference
+5.3.1 Linearity and cross terms
+5.3.2 Interference and angular pattern formation
+5.3.3 Limits of superposition-based structuring
+
+5.4 Dipolar Mechanisms
+5.4.1 Single dipole and symmetry
+5.4.2 Isolated dipoles and orbital flux
+5.4.3 Minimal composite sources
+5.4.4 Geometry, phase, and retardation
+
+5.5 Rotationally Structured Sources
+5.5.1 Circular and helical currents
+5.5.2 Discrete-to-continuous limits
+5.5.3 Azimuthal phase and spectral coupling
+5.5.4 Coupling to eigenfield bases
+
+5.6 Continuous Sources and Apertures
+5.6.1 Surface and volume currents
+5.6.2 Radiation integrals for continuous sources
+5.6.3 Aperture spectra and finite-aperture limits
+
+5.7 Near-Field and Radiative Regimes
+5.7.1 Reactive structure near sources
+5.7.2 Evanescent and propagating components
+5.7.3 Radiative selection in the far field
+
+5.8 Generation, Conversion, and Accessibility
+5.8.1 Generation versus redistribution
+5.8.2 Incident-field dependence
+5.8.3 Geometric accessibility limits
+
+5.9 Scaling and Asymptotics
+5.9.1 Source size and maximum angular order
+5.9.2 Frequency scaling
+5.9.3 Dipole and continuous-source limits
+
+5.10 Examples
+5.10.1 Single-dipole orbital-flux null result
+5.10.2 Two-source minimal mechanism
+5.10.3 Circular current distribution
+5.10.4 Aperture redistribution
+
+5.11 Chapter Summary and Forward Map
+5.11.1 Results established
+5.11.2 Deferred to later chapters
+5.11.3 Bridge to Chapter 6
+
+Chapter 6 — Discrete Arrays and Circular Symmetry
+
+6.0 Introduction
+6.0.1 Arrays as realizable radiators
+6.0.2 Continuity with Chapters 1–5
+6.0.3 Discrete rotational symmetry
+
+6.1 Array Representation
+6.1.1 Element sources and excitation
+6.1.2 Element radiation and local constraints
+6.1.3 Spatial regimes
+
+6.2 Discrete Sampling of Continuous Sources
+6.2.1 Sampling of current distributions
+6.2.2 Periodicity and discrete rotation groups
+6.2.3 Spectral aliasing in angle
+
+6.3 Finite Array Radiation
+6.3.1 Superposition and collective interference
+6.3.2 Radiation integrals
+6.3.3 Power and angular-momentum flux
+6.3.4 Origin and coordinate dependence
+
+6.4 Uniform Circular Arrays
+6.4.1 Geometry and C_N symmetry
+6.4.2 Irreducible representations
+6.4.3 Breakdown of continuous rotational symmetry
+
+6.5 Angular Sampling and Aliasing
+6.5.1 Fourier series on the circle
+6.5.2 Nyquist-type limits and spectral folding
+6.5.3 Poisson summation
+
+6.6 Spectral Coupling to Eigenfields
+6.6.1 Spherical-harmonic expansions
+6.6.2 Selection rules and ℓ mod N structure
+6.6.3 Comparison with continuous rings
+
+6.7 Collective Angular Transport
+6.7.1 Stress-tensor formulation
+6.7.2 Non-additivity of element fluxes
+6.7.3 Collective redistribution
+
+6.8 Discretization Effects
+6.8.1 Leakage and mode mixing
+6.8.2 Element count and electrical size
+6.8.3 Spectral purity limits
+
+6.9 Truncation in Arrays
+6.9.1 Aperture and sampling limits
+6.9.2 Maximum accessible spectra
+
+6.10 Near-Field and Radiative Structure in Arrays
+6.10.1 Near-field angular structure
+6.10.2 Sampling-induced compression
+
+6.11 Continuous-Limit Comparison
+6.11.1 Convergence to continuous sources
+6.11.2 Irreducible discretization effects
+
+6.12 Examples
+6.12.1 Uniform circular array spectrum
+6.12.2 Sparse-sampling aliasing
+6.12.3 Maximum supported angular order
+6.12.4 Collective angular momentum
+
+6.13 Chapter Summary and Forward Map
+6.13.1 Results established
+6.13.2 Deferred to later chapters
+6.13.3 Bridge to Chapter 7
+
+Chapter 7 — Continuous Apertures, Reflectors, and Mode Conversion
+
+7.0 Introduction
+7.0.1 From discrete arrays to continuous boundaries
+7.0.2 Continuity with Chapters 1–6
+7.0.3 Finite boundaries and bandlimits
+
+7.1 Boundary-Value Problems
+7.1.1 Conducting and open surfaces
+7.1.2 Well-posedness and uniqueness
+7.1.3 Edge conditions and singularities
+7.1.4 Boundary-induced spectral restrictions
+
+7.2 Equivalence and Aperture Sources
+7.2.1 Surface equivalence principles
+7.2.2 Tangential field specification
+7.2.3 Huygens and Love equivalence
+7.2.4 Limits of equivalent sources
+
+7.3 Aperture Radiation
+7.3.1 Radiation integrals
+7.3.2 Angular spectra
+7.3.3 Energy, momentum, and angular-momentum flux
+7.3.4 Boundary integral operators
+
+7.4 Circular and Annular Apertures
+7.4.1 Geometry and azimuthal phase
+7.4.2 Eigenfield coupling and modal weights
+7.4.3 Truncation on finite apertures
+
+7.5 Reflectors as Boundary Operators
+7.5.1 Reflection operators
+7.5.2 Reciprocity and symmetry
+7.5.3 Angular-momentum preservation and mixing
+
+7.6 Axisymmetric Reflectors
+7.6.1 Parabolic and spherical geometries
+7.6.2 Boundary-mediated transport
+7.6.3 Conversion versus generation
+
+7.7 Angular Balance at Boundaries
+7.7.1 Conservation at surfaces
+7.7.2 Torque on apertures and reflectors
+7.7.3 Field–matter exchange
+
+7.8 Mode Conversion and Phase Surfaces
+7.8.1 Spiral phase and phase plates
+7.8.2 Operator representation
+7.8.3 Rank and null-space limits
+
+7.9 Near-Field and Radiative Regimes
+7.9.1 Reactive structure
+7.9.2 Evanescent decay
+7.9.3 Far-field compression
+
+7.10 Scaling and Limits
+7.10.1 Aperture diameter and frequency
+7.10.2 Comparison with discrete arrays
+
+7.11 Examples
+7.11.1 Circular aperture spectrum
+7.11.2 Reflector scattering of eigenfields
+7.11.3 Spiral phase plate as converter
+7.11.4 Annular aperture near and far fields
+
+7.12 Chapter Summary and Forward Map
+7.12.1 Results established
+7.12.2 Deferred to later chapters
+7.12.3 Bridge to Chapter 8
+
+Chapter 8 — Metasurfaces, Metamaterials, and Subwavelength Structuring
+
+8.0 Introduction
+8.0.1 From macroscopic boundaries to engineered surfaces
+8.0.2 Continuity with Chapters 1–7
+8.0.3 Subwavelength rank limits
+
+8.1 Microscopic Maxwell Theory of Inclusions
+8.1.1 Fields at inclusion scale
+8.1.2 Induced currents and constitutive response
+8.1.3 Bianisotropic interactions
+8.1.4 Passivity, causality, and energy conservation
+
+8.2 Multipole Structure
+8.2.1 Electric, magnetic, and toroidal multipoles
+8.2.2 Higher-order decay and truncation
+8.2.3 Multipole angular content
+
+8.3 Homogenization and Effective Surfaces
+8.3.1 Scale separation and averaging
+8.3.2 Surface susceptibilities and operators
+8.3.3 Breakdown at high angular gradients
+8.3.4 Periodicity and Floquet structure
+
+8.4 Generalized Sheet Transition Conditions
+8.4.1 Derivation of GSTCs
+8.4.2 Surface constitutive laws
+8.4.3 Reciprocity and passivity
+8.4.4 Operator interpretation
+
+8.5 Metasurfaces as Linear Operators
+8.5.1 Incident-to-scattered maps
+8.5.2 Compactness, rank, and null spaces
+8.5.3 Spectral filtering and redistribution
+
+8.6 Angular Transport Across Surfaces
+8.6.1 Flux and stress including surfaces
+8.6.2 Torque and conservation
+
+8.7 Spatial Dispersion and Nonlocality
+8.7.1 Origins of nonlocal response
+8.7.2 Limits of local phase control
+8.7.3 Nonlocal spectral redistribution
+
+8.8 Subwavelength Phase Engineering
+8.8.1 Local phase versus global radiation
+8.8.2 Aliasing and finite-rank control
+
+8.9 Mode Conversion Operators
+8.9.1 Conversion as linear transformation
+8.9.2 Loss and contamination limits
+
+8.10 Near-Field and Radiative Regimes
+8.10.1 Localization and evanescent structure
+8.10.2 Radiative accessibility
+
+8.11 Scaling and Finite-Rank Limits
+8.11.1 Unit-cell size and angular bandwidth
+8.11.2 Operator rank and dimensionality
+
+8.12 Fundamental Limits of Engineered Surfaces
+8.12.1 Truncation under structuring
+8.12.2 Programmability and conditioning
+
+8.13 Examples
+8.13.1 Multipole truncation
+8.13.2 Metasurface as compact operator
+8.13.3 Limits of arbitrary phase maps
+8.13.4 Torque and conservation
+
+8.14 Chapter Summary and Forward Map
+8.14.1 Results established
+8.14.2 Deferred to later chapters
+8.14.3 Bridge to Chapter 9
+
+Chapter 9 — Free-Space Propagation
+
+9.0 Introduction
+9.0.1 Propagation as field evolution
+9.0.2 Continuity with Chapters 1–8
+9.0.3 Regimes of free-space propagation
+
+9.1 Propagation as an Operator Problem
+9.1.1 Initial- and boundary-value structure
+9.1.2 Propagators on radiative Hilbert spaces
+9.1.3 Causality and energy conservation
+9.1.4 Hamiltonian structure
+
+9.2 Green Operators
+9.2.1 Dyadic Green operators
+9.2.2 Integral propagation
+9.2.3 Reciprocity
+9.2.4 Relation to Chapter 2 radiation operators
+
+9.3 Spectral Representations
+9.3.1 Plane, cylindrical, and spherical waves
+9.3.2 Angular and angular-momentum spectra
+9.3.3 Propagating and evanescent components
+
+9.4 Angular-Momentum Transport
+9.4.1 Currents and stress formulation
+9.4.2 Flux conservation
+9.4.3 Global invariants
+9.4.4 Suppression of non-propagating components
+
+9.5 Near-Field and Far-Field Evolution
+9.5.1 Reactive, Fresnel, and Fraunhofer regimes
+9.5.2 Stationary phase and asymptotics
+9.5.3 Caustics and eikonal limits
+
+9.6 Non-Paraxial Propagation
+9.6.1 Eigenfield propagation
+9.6.2 Radial evolution
+9.6.3 Limits of paraxial models
+
+9.7 Beam Divergence
+9.7.1 Definitions and second-moment measures
+9.7.2 Divergence and transverse momentum
+9.7.3 Angular-order dependence
+
+9.8 Observation and Finite Receivers
+9.8.1 Apparent redistribution
+9.8.2 Finite apertures and dimensional compression
+
+9.9 Scaling and Irreversible Constraints
+9.9.1 Wavelength and distance scaling
+9.9.2 Loss of evanescent information
+
+9.10 Paraxial Limits
+9.10.1 Emergence of paraxial theory
+9.10.2 Breakdown at high angular order
+
+9.11 Examples
+9.11.1 Conservation under propagation
+9.11.2 Order-dependent divergence
+9.11.3 Finite-receiver effects
+
+9.12 Chapter Summary and Forward Map
+9.12.1 Results established
+9.12.2 Deferred to later chapters
+9.12.3 Bridge to Chapter 10
+
+Chapter 10 — Propagation in Linear Media
+
+10.0 Introduction
+10.0.1 From free space to linear media
+10.0.2 Continuity with Chapters 1–9
+
+10.1 Maxwell Theory in Linear Media
+10.1.1 Constitutive relations
+10.1.2 Causality, passivity, and Kramers–Kronig
+10.1.3 Energy and angular momentum in media
+
+10.2 Operators in Dispersive and Inhomogeneous Media
+10.2.1 Material propagators
+10.2.2 Non-unitary evolution and dissipation
+10.2.3 Exceptional points
+
+10.3 Modal Representations
+10.3.1 Plane-wave and angular-momentum bases
+10.3.2 Biorthogonality in non-Hermitian media
+10.3.3 Preservation of angular spectra
+
+10.4 Angular Transport in Media
+10.4.1 Field–matter partitioning
+10.4.2 Spin–orbit coupling in materials
+10.4.3 Modified conservation laws
+
+10.5 Temporal Dispersion
+10.5.1 Group velocity and pulse broadening
+10.5.2 Spatiotemporal coupling
+
+10.6 Anisotropy and Symmetry Breaking
+10.6.1 Uniaxial and biaxial media
+10.6.2 Mode coupling
+10.6.3 Berry phase and geometric transport
+
+10.7 Inhomogeneous and Periodic Media
+10.7.1 Slowly varying parameters
+10.7.2 Floquet–Bloch evolution
+
+10.8 Mode Coupling and Dissipation
+10.8.1 Coupling operators
+10.8.2 Irreversible redistribution
+
+10.9 Near-Field and Radiative Regimes in Media
+10.9.1 Evanescent and radiative components
+
+10.10 Scaling with Angular Order
+10.10.1 Distortion and mixing scaling
+
+10.11 Conservation and Dimensionality
+10.11.1 Degrees of freedom under material evolution
+
+10.12 Paraxial Media Limits
+10.12.1 Validity and breakdown
+
+10.13 Examples
+10.13.1 Dispersive homogeneous media
+10.13.2 Uniaxial mode mixing
+10.13.3 Absorptive non-unitary evolution
+10.13.4 Inhomogeneous adiabatic evolution
+
+10.14 Chapter Summary and Forward Map
+10.14.1 Results established
+10.14.2 Deferred to later chapters
+10.14.3 Bridge to Chapter 11
+
+Chapter 11 — Propagation in Random Media
+
+11.0 Introduction
+11.0.1 Stochastic propagation framework
+11.0.2 Continuity with Chapters 1–10
+
+11.1 Maxwell Theory in Random Media
+11.1.1 Random constitutive parameters
+11.1.2 Ensemble and pathwise descriptions
+
+11.2 Statistical Structure
+11.2.1 Stationarity and ergodicity
+11.2.2 Correlation functions and spectra
+11.2.3 Isotropic and anisotropic turbulence
+
+11.3 Stochastic Operators
+11.3.1 Random propagators
+11.3.2 Ensemble-averaged evolution
+
+11.4 Angular Observables
+11.4.1 Pathwise versus ensemble angular momentum
+11.4.2 Statistical invariants
+
+11.5 Random Phase Screens
+11.5.1 Weak perturbation regime
+11.5.2 Coherent distortion
+
+11.6 Turbulent Mode Coupling
+11.6.1 Coupling operators
+11.6.2 Weak and strong scattering
+11.6.3 Random-matrix structure
+
+11.7 Angular Transport and Diffusion
+11.7.1 Transport in angular-momentum space
+11.7.2 Fokker–Planck and radiative-transfer limits
+
+11.8 Ensemble Evolution of Angular Spectra
+11.8.1 Broadening and loss of localization
+
+11.9 Decoherence
+11.9.1 Definition and coherence lengths
+11.9.2 Energy loss versus phase loss
+
+11.10 Scaling with Angular Order
+11.10.1 Turbulence-strength scaling
+
+11.11 Near-Field and Radiative Regimes
+11.11.1 Statistical suppression of localized structure
+
+11.12 Conservation and Dimensionality
+11.12.1 Pathwise conservation versus ensemble collapse
+
+11.13 Paraxial Turbulence Limits
+11.13.1 Validity and breakdown
+
+11.14 Examples
+11.14.1 Pathwise conservation
+11.14.2 Weak-turbulence diffusion
+11.14.3 Decoherence without absorption
+11.14.4 Finite-receiver effects
+
+11.15 Chapter Summary and Forward Map
+11.15.1 Results established
+11.15.2 Deferred to later chapters
+11.15.3 Bridge to Chapter 12
+
+Chapter 12 — Interaction with Ponderable Media
+
+12.0 Introduction
+12.0.1 From propagation to field–matter exchange
+12.0.2 Continuity with Chapters 1–11
+
+12.1 Maxwell Theory in Matter
+12.1.1 Bound sources and material variables
+12.1.2 Separation of field and mechanical degrees of freedom
+
+12.2 Energy and Work
+12.2.1 Local conservation
+12.2.2 Poynting flux and dissipation
+
+12.3 Linear Momentum and Forces
+12.3.1 Momentum density and balance
+12.3.2 Lorentz and material force densities
+
+12.4 Angular Momentum and Torque
+12.4.1 Total angular momentum in matter
+12.4.2 Torque density and exchange
+12.4.3 Spin–orbit transfer
+
+12.5 Stress-Tensor Formulation
+12.5.1 Volume and surface forces
+12.5.2 Validity regimes
+
+12.6 Microscopic to Macroscopic Limits
+12.6.1 Lorentz microscopic forces
+12.6.2 Averaging and continuum limits
+
+12.7 Abraham–Minkowski Partitioning
+12.7.1 Momentum partitioning
+12.7.2 Torque and conservation
+
+12.8 Interfaces and Localization
+12.8.1 Surface forces and torques
+12.8.2 Exchange at boundaries
+
+12.9 Material Excitation
+12.9.1 Multipolar excitation
+12.9.2 Symmetry-selective coupling
+
+12.10 Symmetry and Reciprocity
+12.10.1 Selection rules
+12.10.2 Nonreciprocal matter
+
+12.11 Dissipation and Irreversibility
+12.11.1 Absorption and entropy production
+
+12.12 Transient Interaction
+12.12.1 Pulsed and time-dependent fields
+
+12.13 Efficiency and Scaling
+12.13.1 Torque efficiency versus angular order
+
+12.14 Back-Action and Recoil
+12.14.1 Reaction on sources
+
+12.15 Canonical Scenarios
+12.15.1 Small particles
+12.15.2 Extended bodies
+12.15.3 Absorbing continua
+
+12.16 Conservation and Exchange Limits
+12.16.1 Conditions for net angular exchange
+
+12.17 Interaction and Observability
+12.17.1 Signatures and measurement bridges
+
+12.18 Examples
+12.18.1 Torque on an absorbing body
+12.18.2 Torque-free symmetric coupling
+12.18.3 Efficiency scaling
+12.18.4 Transient exchange
+
+12.19 Chapter Summary and Forward Map
+12.19.1 Results established
+12.19.2 Deferred to later chapters
+12.19.3 Bridge to Chapter 13
+
+# ═══════════════════════════════════════════════════════════════════
+# VOLUME III — MEASUREMENT, SYSTEMS, SYNTHESIS (Chapters 13–19)
+# ═══════════════════════════════════════════════════════════════════
+
+Chapter 13 — Detection, Measurement, and Estimation
+
+13.0 Introduction
+13.0.1 Measurement as finite-dimensional inference
+13.0.2 Continuity with Chapters 1–12
+
+13.1 Measurement Principles
+13.1.1 Physical measurements versus decompositions
+13.1.2 Observables and gauge invariance
+13.1.3 Finite space–time support
+
+13.2 Detector Models
+13.2.1 Sensors as linear operators
+13.2.2 Bandwidth, noise, and saturation
+
+13.3 Measurement Operators
+13.3.1 Projection onto finite subspaces
+13.3.2 Singular-value structure
+13.3.3 Conditioning and stability
+
+13.4 Sampling and Aperture Limits
+13.4.1 Spatial sampling
+13.4.2 Angular aliasing
+13.4.3 Observable dimensionality
+
+13.5 Near-Field and Far-Field Measurement
+13.5.1 Probing regimes
+13.5.2 Complementarity of reactive and radiative data
+
+13.6 Spectral Reconstruction
+13.6.1 Expansion in angular-momentum bases
+13.6.2 Error, bias, and ill-conditioning
+
+13.7 Noise and Detectability
+13.7.1 Signal-to-noise for angular spectra
+13.7.2 Order-dependent detectability
+
+13.8 Inverse Problems
+13.8.1 Forward models
+13.8.2 Non-uniqueness and regularization
+13.8.3 Identifiability limits
+
+13.9 Estimation Theory
+13.9.1 Estimators and performance
+13.9.2 Fisher information and Cramér–Rao bounds
+
+13.10 Mode Sorting
+13.10.1 Sorting as a fixed linear operator
+13.10.2 Imperfect orthogonality and rank
+
+13.11 Fundamental Observation Limits
+13.11.1 Dimensional reduction by measurement
+13.11.2 Non-observation versus physical absence
+
+13.12 Paraxial Detection Limits
+13.12.1 Validity and breakdown
+
+13.13 Examples
+13.13.1 Finite-aperture reconstruction
+13.13.2 Fisher bounds
+13.13.3 Detector-induced redistribution
+
+13.14 Chapter Summary and Forward Map
+13.14.1 Results established
+13.14.2 Deferred to later chapters
+13.14.3 Bridge to Chapter 14
+
+Chapter 14 — Information, Degrees of Freedom, and Capacity Limits
+
+14.0 Introduction
+14.0.1 Physical dimensionality of electromagnetic states
+14.0.2 Continuity with Chapters 1–13
+
+14.1 Information and Distinguishability
+14.1.1 Field configurations as physical states
+14.1.2 Orthogonality and observability
+
+14.2 Electromagnetic Degrees of Freedom
+14.2.1 Source, radiative, and observable DOF
+14.2.2 Geometric mediation
+
+14.3 Hilbert-Space Structure
+14.3.1 Energy norms and inner products
+14.3.2 Finite apertures and subspaces
+
+14.4 Operator Chains
+14.4.1 Source-to-detector maps
+14.4.2 Rank and singular-value decomposition
+
+14.5 Bandlimitation
+14.5.1 Spatial and angular bandwidth
+14.5.2 Prolate concentration and effective rank
+
+14.6 Basis Invariance
+14.6.1 Angular versus plane-wave bases
+14.6.2 Rank invariance
+
+14.7 Propagation and Information Transport
+14.7.1 Unitary and non-unitary evolution
+14.7.2 Decoherence and accessibility
+
+14.8 Detection and Extraction
+14.8.1 Measurement rank reduction
+14.8.2 Fisher information and coding limits
+
+14.9 Evanescent Information
+14.9.1 Near-field structure
+14.9.2 Distance-dependent accessibility
+
+14.10 Capacity Structure
+14.10.1 Finite rank and multiplexing
+14.10.2 Enumeration versus capacity
+
+14.11 Scaling Laws
+14.11.1 Aperture, wavelength, and distance
+
+14.12 Relation to Shannon Theory
+14.12.1 Geometry before probability
+14.12.2 Emergence of Shannon descriptions
+
+14.13 Geometry-Limited Information
+14.13.1 Operator rank over representation choice
+
+14.14 Examples
+14.14.1 Finite-aperture channel SVD
+14.14.2 Basis invariance
+14.14.3 Distance conditioning
+14.14.4 Fixed-rank multiplexing
+
+14.15 Chapter Summary and Forward Map
+14.15.1 Results established
+14.15.2 Deferred to later chapters
+14.15.3 Bridge to Chapter 15
+
+Chapter 15 — Communication Systems
+
+15.0 Introduction
+15.0.1 Communication as an operator system
+15.0.2 Continuity with Chapters 9–14
+
+15.1 Electromagnetic Communication
+15.1.1 Messages versus field states
+15.1.2 Distinguishability under finite measurement
+
+15.2 Degrees of Freedom in Links
+15.2.1 Cascaded rank restriction
+15.2.2 Communicable subspaces
+
+15.3 End-to-End Operators
+15.3.1 Operator chains and eigenchannels
+15.3.2 Mutual information geometry
+
+15.4 Angular Encoding
+15.4.1 Encoding versus basis choice
+15.4.2 Orthogonality and invariance
+
+15.5 Space–Time–Bandwidth Coupling
+15.5.1 Joint representations
+15.5.2 Spatiotemporal trade-offs
+
+15.6 Far-Field Communication
+15.6.1 Bandwidth and divergence limits
+15.6.2 Equivalence with plane-wave multiplexing
+
+15.7 Near-Field Communication
+15.7.1 Evanescent and reactive regimes
+15.7.2 Distance scaling
+
+15.8 Multiuser Systems
+15.8.1 Subspace allocation
+15.8.2 Interference structure
+
+15.9 Communication Through Media
+15.9.1 Material and turbulent channels
+
+15.10 Receivers and Measurement
+15.10.1 Sampling and mode sorting
+15.10.2 Estimation-limited performance
+
+15.11 Failure Mechanisms
+15.11.1 Range, noise, and turbulence limits
+
+15.12 Operating Regimes
+15.12.1 Conditioning-favorable and adverse regimes
+
+15.13 Fundamental Dimensionality Limits
+15.13.1 Free-space, media, and surface-modified links
+
+15.14 Relation to Shannon Theory
+15.14.1 Pre-log structure from electromagnetics
+
+15.15 Geometry-Limited Communication
+15.15.1 Labels versus dimensions
+
+15.16 Examples
+15.16.1 Link singular-value structure
+15.16.2 Order-dependent SNR collapse
+15.16.3 Multiuser comparison with MIMO
+
+15.17 Chapter Summary and Forward Map
+15.17.1 Results established
+15.17.2 Deferred to later chapters
+15.17.3 Bridge to Chapter 16
+
+Chapter 16 — Sensing, Radar, and Scientific Applications
+
+16.0 Introduction
+16.0.1 Sensing as physical inference
+16.0.2 Continuity with Chapters 11–15
+
+16.1 Inference and Information
+16.1.1 Observables versus parameters
+16.1.2 Detectability and identifiability
+
+16.2 Taxonomy of Sensing Problems
+16.2.1 Detection, estimation, and imaging
+
+16.3 Scattering Under Structured Illumination
+16.3.1 Targets as scattering operators
+16.3.2 Selection rules and symmetry matching
+
+16.4 Radar Cross Section
+16.4.1 Structured illumination
+16.4.2 Resolution versus detectability
+
+16.5 Resolution and Identifiability
+16.5.1 Bandlimits and diffraction
+16.5.2 Sub-wavelength parameters
+
+16.6 Inverse Scattering
+16.6.1 Forward models and null spaces
+16.6.2 Basis independence of null spaces
+
+16.7 Parameter Estimation
+16.7.1 Fisher information redistribution
+16.7.2 Cramér–Rao geometry
+
+16.8 Radar Diversity
+16.8.1 Angular versus spatial diversity
+
+16.9 Imaging and Tomography
+16.9.1 Structured probing
+16.9.2 Conditioning limits
+
+16.10 Scientific Measurements
+16.10.1 Torque and chirality probing
+
+16.11 Near-Field Sensing
+16.11.1 Evanescent sensitivity
+16.11.2 Distance limits
+
+16.12 Clutter and Multi-Target Environments
+16.12.1 Mode coupling and cross-talk
+
+16.13 Failure Mechanisms
+16.13.1 Noise, divergence, and turbulence
+
+16.14 Fundamental Inferential Limits
+16.14.1 Bandlimited inference structure
+
+16.15 Conditional Advantages of Structuring
+16.15.1 Symmetry matching
+16.15.2 Limits of enhancement
+
+16.16 Geometry-Limited Inference
+16.16.1 Estimation versus communication
+
+16.17 Examples
+16.17.1 Fisher redistribution
+16.17.2 RCS versus detectability
+16.17.3 Persistent null spaces
+16.17.4 Near-field sensitivity without capacity gain
+
+16.18 Chapter Summary and Forward Map
+16.18.1 Results established
+16.18.2 Deferred to later chapters
+16.18.3 Bridge to Chapter 17
+
+Chapter 17 — Astrophysical and Remote Sensing
+
+17.0 Introduction
+17.0.1 Passive observation versus engineered transmission
+17.0.2 Continuity with Chapters 11–16
+
+17.1 Natural Fields
+17.1.1 Angular spectra of natural radiation
+17.1.2 Correlation functions
+17.1.3 Statistical operators
+17.1.4 Admissibility constraints
+
+17.2 Broadband and Partial Coherence
+17.2.1 Spectral averaging
+17.2.2 Temporal and spatial coherence
+
+17.3 Emergence in Nature
+17.3.1 Rotating and asymmetric sources
+17.3.2 Scattering and turbulence
+
+17.4 Long-Range Propagation
+17.4.1 Multipath and coherence loss
+
+17.5 Diagnostics of Source Symmetry
+17.5.1 Symmetry–statistics mapping
+17.5.2 Degeneracies
+
+17.6 Remote Sensing with Scattering
+17.6.1 Rough surfaces and plasmas
+17.6.2 Anisotropy signatures
+
+17.7 Statistical Observation
+17.7.1 Ensemble spectra
+17.7.2 Invariants under propagation
+
+17.8 Inverse Problems
+17.8.1 Non-uniqueness
+17.8.2 Priors and auxiliary data
+
+17.9 Estimation and Noise
+17.9.1 Bias, variance, and SNR scaling
+
+17.10 Noise-Dominated Regimes
+17.10.1 Detectability thresholds
+
+17.11 Instrument Geometry
+17.11.1 Finite apertures and sampling bias
+
+17.12 Reference Frames
+17.12.1 Observer and source frames
+
+17.13 Comparison with Conventional Observables
+17.13.1 Polarization and coherence
+
+17.14 Canonical Scenarios
+17.14.1 Astrophysical emitters
+17.14.2 Atmospheric propagation
+17.14.3 Planetary radar
+
+17.15 Observability Limits
+17.15.1 Finite dimensionality under passive observation
+
+17.16 Relation to Engineered Systems
+17.16.1 Diagnostic versus communication roles
+
+17.17 Admissible Interpretation
+17.17.1 What angular statistics can and cannot reveal
+
+17.18 Examples
+17.18.1 Broadband correlation degradation
+17.18.2 Rotation–scattering degeneracy
+17.18.3 Noise limits on high-order statistics
+
+17.19 Chapter Summary and Forward Map
+17.19.1 Results established
+17.19.2 Deferred to later chapters
+17.19.3 Bridge to Chapter 18
+
+Chapter 18 — Limits, Judgment, and Physical Meaning
+
+18.0 Introduction
+18.0.1 Interpretation under Maxwell theory
+18.0.2 Continuity with Chapters 1–17
+
+18.1 Physical Limits
+18.1.1 Mathematical versus physical limits
+18.1.2 Geometry-induced constraints
+
+18.2 Hierarchy of Results
+18.2.1 Field, operator, measurement, and information layers
+
+18.3 Monograph Assumptions
+18.3.1 Linearity, passivity, causality, finiteness
+
+18.4 Beyond the Present Framework
+18.4.1 Nonlinearity, gain, time variance, quantum extensions
+
+18.5 Existence, Realizability, Observability, Inferability
+18.5.1 Four categories of admissibility
+18.5.2 Consequences of misclassification
+
+18.6 Angular Momentum Reinterpreted
+18.6.1 Symmetry generator versus observable
+18.6.2 Canonical versus measurable content
+
+18.7 Modes, Bases, and Representations
+18.7.1 Physical reality versus labels
+18.7.2 Over-counting and degeneracy
+
+18.8 Degrees of Freedom Under Observation
+18.8.1 Irrecoverable suppression
+
+18.9 Misinterpretation in Communication Claims
+18.9.1 Enumeration versus dimensionality
+
+18.10 Conditional Sensing Advantages
+18.10.1 Conditioning versus information gain
+
+18.11 Trade-Off Structures
+18.11.1 Structure versus robustness, range, and detectability
+
+18.12 Canonical Synthesis Theorem
+18.12.1 Statement, proof outline, and consequences
+
+18.13 Valid Uses of Angular Structuring
+18.13.1 Design, conditioning, and fundamental measurement
+
+18.14 Tasks Unchanged by Structuring
+18.14.1 Rank, resolution, and relabeling limits
+
+18.15 Historical Fragmentation
+18.15.1 Need for unified Maxwellian interpretation
+
+18.16 Physically Admissible Interpretation
+18.16.1 Conservation, geometry, and observability
+
+18.17 Judgment Problems
+18.17.1 Realizability versus conditioning claims
+
+18.18 Monograph Synthesis
+18.18.1 Global synthesis across Chapters 1–18
+18.18.2 Bridge to Chapter 19
+
+Chapter 19 — Open Problems and Future Directions
+
+19.0 Introduction
+19.0.1 Scope conditions for extensions
+19.0.2 Dependence on Chapters 1–18
+
+19.1 Open versus Closed Problems
+19.1.1 Physics-closed versus open questions
+19.1.2 Engineering difficulty versus fundamental limits
+
+19.2 Problems Closed Under Present Assumptions
+19.2.1 Far-field dimensionality
+19.2.2 Bandlimited resolution
+
+19.3 Open Problems in Classical Maxwell Theory
+19.3.1 Optimal aperture fields
+19.3.2 Conditioning-optimal representations
+19.3.3 Disordered-media propagation
+19.3.4 Finite-sample regimes
+
+19.4 Mathematical Open Problems
+19.4.1 Truncated Maxwell operators
+19.4.2 Non-normal evolution
+19.4.3 Multi-scale effective theories
+
+19.5 Beyond Maxwellian Structure
+19.5.1 Nonlinearity, gain, time variance, non-reciprocity
+
+19.6 Nonlinear Electrodynamics
+19.6.1 Open questions under nonlinearity
+
+19.7 Quantization
+19.7.1 Classical dimensionality under quantization
+19.7.2 Quantum regimes requiring re-derivation
+
+19.8 Near-Field Frontiers
+19.8.1 Evanescent structure and active control
+
+19.9 Experimental Open Problems
+19.9.1 Phase control, torque measurement, high-order stability
+
+19.10 Interpretive Consistency
+19.10.1 Auditing future claims
+
+19.11 Physics, Geometry, and Representation
+19.11.1 Fields versus labels
+
+19.12 Admissible Research Directions
+19.12.1 Design within rank limits
+
+19.13 Outlook
+19.13.1 Constraint-preserving extensions
+
+19.14 Assumption Hierarchy
+19.14.1 Maintained, relaxed, and re-derived structures
+
+19.15 Research Audits
+19.15.1 Classification of dimensionality claims
+
+19.16 Final Synthesis
+19.16.1 Unified Maxwellian outlook
+19.16.2 Organizing principles for future work
+
+# END MASTER TOC

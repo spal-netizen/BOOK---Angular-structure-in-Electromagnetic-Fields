@@ -1,0 +1,24 @@
+% Build: latexmk -pdf main.tex  (from latex/ directory)
+\input{preamble}
+
+\title{Angular Structure in Electromagnetic Fields\\[0.5em]
+  \large Volume I: Chapters 1--4}
+\author{[Author Name]}
+\date{\today}
+
+\begin{document}
+\maketitle
+\input{frontmatter}
+
+\include{ch01}
+\include{ch02}
+\include{ch03}
+\include{ch04}
+
+\backmatter
+
+\appendix
+\chapter{Notation Summary}
+% Condensed table from 00-NOTATION.md
+
+\end{document}

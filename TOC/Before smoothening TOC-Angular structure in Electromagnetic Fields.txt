@@ -1,0 +1,1812 @@
+Chapter 1 — Foundations of Angular Electromagnetic Structure
+
+1.0 Foundational Perspective and Governing Principles
+1.0.1 Scope and Structural Role of the Chapter
+1.0.2 Angular Structure as a Consequence of Maxwellian Symmetry and Boundary Conditions
+1.0.3 Foundational Assumptions, Finite-Energy Admissibility, and Domain of Validity
+
+1.1 Maxwell Electrodynamics and Electromagnetic Conservation Laws
+1.1.1 Maxwell Equations in Differential and Integral Form and Constitutive Closure in Vacuum
+1.1.2 Sources, Boundary Conditions, and Physical Admissibility
+1.1.3 Initial-Value, Boundary-Value, Uniqueness, and Solution Admissibility Structure
+1.1.4 Energy, Linear Momentum, and Electromagnetic Stress
+1.1.5 Angular Momentum Conservation and Torque Balance
+
+1.2 Angular Structure in Electromagnetic Fields
+1.2.1 Angular Dependence and Angular Momentum
+1.2.2 Amplitude, Phase, Polarization, and Energy-Flow Topological Structure
+1.2.3 Necessary Conditions for Angular-Momentum Transport
+1.2.4 Reactive and Radiative Angular Structure
+
+1.3 Rotational Symmetry, Covariance, and Observer Independence
+1.3.1 Coordinate Transformations, Active/Passive Rotations, and Rotational Symmetry
+1.3.2 Tensorial, Dyadic, and Transformation Structure of Electromagnetic Quantities
+1.3.3 Origin Dependence, Translational Effects, and Observer Covariance
+1.3.4 Physical Invariants, Total Angular Momentum Invariance, and Frame-Independent Observables of Angular Electromagnetic Structure
+
+1.4 Gauge Structure and Physical Observables
+1.4.1 Electromagnetic Potentials and Gauge Transformations
+1.4.2 Gauge Dependence of Local Electromagnetic Quantities
+1.4.3 Gauge-Invariant Electromagnetic Observables, Helicity, Dual Symmetry, and Conserved Electromagnetic Structures
+1.4.4 Operational Meaning of Gauge-Invariant Quantities
+1.4.5 Limits of Local Spin–Orbital Decompositions and Interpretations
+
+1.5 Physical Interpretation and Measurement of Angular Electromagnetic Quantities
+1.5.1 Field–Matter Interaction and Measurement
+1.5.2 Torque, Momentum-Flux, and Stress-Tensor Measurements
+1.5.3 Modal Projections, Representation Dependence, Measurement Accessibility, and Projection Limits
+1.5.4 Observable Quantities Versus Inferred Quantities, Detector Dependence, and Finite Observability
+
+1.6 Foundational Examples and Counterexamples
+1.6.1 Angular Momentum Conservation in Radiation
+1.6.2 Angular Phase Structure Without True Angular-Momentum Transport
+1.6.3 Gauge Dependence of Local Angular Densities
+1.6.4 Reactive Versus Radiative Angular Structure
+
+1.7 Structural Summary and Chapter Inheritance
+1.7.1 Foundational Results Established in Chapter 1
+1.7.2 Concepts Deferred to Later Chapters
+1.7.3 Transition to Radiation Operators, Spectral Theory, and Electromagnetic Representation Structure
+
+Chapter 2 — Maxwell Operators and Radiation Mappings
+
+2.0 Operator Formulation and Radiation Mapping of Electromagnetic Fields
+2.0.1 Radiation as a Mapping Between Sources and Fields
+2.0.2 Maxwell Equations in Operator Form
+2.0.3 Relation to the Foundations Established in Chapter 1
+
+2.1 Functional Spaces and Maxwell Operators
+2.1.1 Function Spaces of Sources, Fields, and Distributions
+2.1.2 Linear Operators, Domains, Codomains, and Adjoint Structure
+2.1.3 Boundedness, Compactness, Unboundedness, Rank Deficiency, and Spectral Compression
+2.1.4 Self-Adjointness, Operator Closures, and Physical Admissibility
+
+2.2 Maxwell Operators in Time and Frequency Domains
+2.2.1 Time-Domain Maxwell Evolution Structure
+2.2.2 Frequency-Domain Maxwell Operators
+2.2.3 Linear Evolution, Time–Frequency Equivalence, Causality, and Propagation Structure
+2.2.4 Propagating, Evanescent, and Non-Propagating Field Subspaces
+
+2.3 Green Functions and Electromagnetic Inversion
+2.3.1 Scalar, Vector, and Dyadic Green Functions and Singular Operators
+2.3.2 Singularities, Generalized Functions, Distributional Sources, Regularization, and Distributional Structure
+2.3.3 Retardation, Radiation Causality, and Covariant Propagation
+2.3.4 Inversion Structure and Causal Solvability of Maxwell Theory
+
+2.4 Radiation Conditions and Uniqueness
+2.4.1 Sommerfeld Radiation Condition
+2.4.2 Outgoing-Wave Structure and Elimination of Incoming Solutions
+2.4.3 Uniqueness of Radiative Fields
+2.4.4 Consequences for Source Reconstruction
+
+2.5 Radiation Integrals and Source-to-Field Mappings
+2.5.1 Integral Source-to-Field Representation of Radiated Fields
+2.5.2 Spatial Regimes and Asymptotic Structure of Radiation Operators
+2.5.3 Energy Conservation, Power Flow, and Operator Norms
+2.5.4 Radiative, Evanescent, and Non-Propagating Components
+
+2.6 Spectral Structure of Radiation Operators
+2.6.1 Eigenfunctions, Continuous Spectra, Spectral Decomposition, and Modal Structure
+2.6.2 Rotational Symmetry, Spectral Degeneracy, and Representation Structure
+2.6.3 Compactness, Rank Deficiency, Fredholm Structure, and Solvability Conditions
+2.6.4 Geometric Restrictions on Radiative Spectral Support
+
+2.7 Null Spaces and Non-Radiating Sources
+2.7.1 Null Spaces of Radiation Operators
+2.7.2 Non-Radiating and Non-Propagating Current Configurations
+2.7.3 Evanescent Subspaces, Information Loss, and Non-Reconstructability
+2.7.4 Consequences for Angular Spectral Accessibility and Representability
+
+2.8 Reciprocity, Symmetry, Self-Adjointness, and Radiative Coupling
+2.8.1 Lorentz Reciprocity, Operator Symmetry, and Bilinear Structure
+2.8.2 Orthogonality, Coupling, and Symmetry of Radiative Modes
+2.8.3 Reciprocity Constraints on Radiation and Reception
+
+2.9 Radiation Operators and Angular Spectral Structure
+2.9.1 Action of Radiation Operators on Angular Spectra
+2.9.2 Retained, Suppressed, and Filtered Angular Components
+2.9.3 Near–Far Spectral Transformation and Evanescent Suppression
+2.9.4 Dimensional Reduction, Spectral Filtering, and Far-Field Angular Accessibility
+
+2.10 Foundational Examples and Operator-Level Problems
+2.10.1 Compactness of Radiation Operators
+2.10.2 Non-Radiating Source Configurations
+2.10.3 Evanescent Suppression in Near-to-Far Transformations
+2.10.4 Radiation of Angularly Structured Source States
+
+2.11 Structural Summary and Chapter Inheritance
+2.11.1 Radiation-Operator Structures Established in Chapter 2
+2.11.2 Concepts Deferred to Later Spectral and Representation Chapters
+2.11.3 Transition to Angular Momentum Eigenfields, Spectral Structure, and Representation Theory
+
+Chapter 3 — Angular Momentum Eigenfields and Representation Theory
+
+3.0 Spectral Representation and Electromagnetic Eigenfields of Radiative Maxwell Fields
+3.0.1 Symmetry, Operators, and Electromagnetic Representations
+3.0.2 Eigenfield Expansions, Radiative Field Spaces, and Covariant Field Structure
+3.0.3 Relation to Chapters 1 and 2
+
+3.1 Hilbert Spaces and Spectral Structure of Maxwell Fields
+3.1.1 Finite-Energy Radiative Maxwell Field Spaces
+3.1.2 Inner Products, Orthogonality, Completeness, and Resolution Structure
+3.1.3 Generalized Eigenfunctions and Continuous Spectra
+3.1.4 Distributional Structure, Distributional Normalization, Generalized Eigenfunctions, and Rigged Hilbert Spaces
+
+3.2 Angular Momentum Operators and Electromagnetic Representations
+3.2.1 Total Angular Momentum Operators on Maxwell Fields
+3.2.2 Commutation Structure, Simultaneous Diagonalization Conditions, and Eigenfields
+3.2.3 SO(3) Representations, Rotational Symmetry, and Degeneracy Structure
+3.2.4 Wigner Rotations, Angular Transformations, Tensorial Coupling, and Irreducible Representation Structure
+3.2.5 Helicity, Polarization, Dual Symmetry, and Electromagnetic Representation Structure
+
+3.3 Vector Helmholtz Theory and Separation of Variables
+3.3.1 Reduction to Vector Helmholtz Form
+3.3.2 Spherical Coordinate Separation and Angular Structure
+3.3.3 Radial Functions, Outgoing-Wave Conditions, Radiative Admissibility, and Regularity
+3.3.4 Debye Potentials, Scalar Generating Functions, and Representation Construction
+
+3.4 Vector Spherical Harmonics and Electromagnetic Eigenfields
+3.4.1 Scalar and Vector Spherical Harmonics and Angular Basis Structure
+3.4.2 Toroidal, Poloidal, Radial, and Divergence-Free Structures
+3.4.3 Orthogonality, Completeness, and Resolution of Identity
+3.4.4 Construction of Angular Momentum Eigenfields
+3.4.5 Degeneracy, Representation Coupling, and Angular Momentum Structure
+
+3.5 Normalization and Spectral Representation
+3.5.1 Energy, Flux, and Finite-Volume Normalization
+3.5.2 Continuous-Spectrum and Distributional Normalization
+3.5.3 Spectral Density, Density of States, and Representation Multiplicity
+3.5.4 Geometric and Spectral Consequences of Normalization Choices
+
+3.6 Completeness, Restricted Spectral Support, and Symmetry Breaking
+3.6.1 Completeness in Infinite Domains
+3.6.2 Spectral Restrictions, Truncation, and Loss of Completeness Under Finite Support
+3.6.3 Boundary-Induced Symmetry Breaking and Mode Mixing
+3.6.4 Representation Constraints on Accessible Radiative Angular Structure
+
+3.7 Continuous, Discrete, and Boundary-Constrained Angular Spectra
+3.7.1 Angular Spectra in Unbounded Space
+3.7.2 Quantization Through Boundary Constraints
+3.7.3 Integer, Non-Integer, and Boundary-Constrained Angular Structure
+3.7.4 Phase Singularities, Representation Dependence, and Limits of Topological Interpretation
+
+3.8 Relation Between Electromagnetic Representation Bases
+3.8.1 Plane-Wave and Fourier Representations
+3.8.2 Cylindrical, Parabolic, and Alternative Coordinate Bases
+3.8.3 Change-of-Basis Transformations and Representation Equivalence
+3.8.4 Representation Dependence of Angular Momentum and “OAM” Modes
+
+3.9 Physical Interpretation, Gauge-Invariant Meaning, and Limits of Eigenfield Representations
+3.9.1 Gauge-Invariant Interpretation of Electromagnetic Eigenfields
+3.9.2 Conserved, Gauge-Invariant, and Representation-Dependent Quantities
+3.9.3 Limits of Scalar, Paraxial, and Reduced-Symmetry Approximations
+3.9.4 Observable Electromagnetic Structure Versus Representation Artifacts
+
+3.10 Foundational Examples and Spectral Problems
+3.10.1 Construction of Free-Space Angular Momentum Eigenfields
+3.10.2 Orthogonality and Completeness of Vector Spherical Harmonics
+3.10.3 Continuous-Spectrum Normalization and Mode Counting
+3.10.4 Symmetry Breaking and Mode Coupling
+
+3.11 Structural Summary and Chapter Inheritance
+3.11.1 Spectral and Representation Structures Established in Chapter 3
+3.11.2 Concepts Deferred to Radiation, Aperture, and Truncation Chapters
+3.11.3 Transition to Source Realizability, Spectral Truncation, and Accessible Angular Structure
+
+Chapter 4 — Source Realizability and Spectral Truncation
+
+4.0 Finite Geometry, Radiative Accessibility, and Spectral Realizability
+4.0.1 Realizability and Accessibility Limits in Electromagnetic Radiation
+4.0.2 Finite Geometry as a Spectral, Dimensional, and Accessibility Constraint
+4.0.3 Relation to the Operator and Representation Structures of Chapters 1–3
+
+4.1 Admissible Electromagnetic Sources
+4.1.1 Impressed Currents, Sources, and Electromagnetic Excitation
+4.1.2 Finite Energy, Passivity, Causality, and Spatial Support
+4.1.3 Distributional Sources, Generalized Functions, and Physical Admissibility
+4.1.4 Realizable Source Spaces, Radiative Support, Accessibility, and Support Constraints
+
+4.2 Equivalence Principles and Aperture Representations
+4.2.1 Volume–Surface Equivalence Principles and Source Transformations
+4.2.2 Apertures as Equivalent Surface Radiating Sources
+4.2.3 Boundary Conditions, Tangential Continuity, and Field Structure
+4.2.4 Radiative Support Restrictions and Limits of Equivalent-Source Representations
+4.3 Source Spaces and Radiation Operators
+4.3.1 Finite-Support Source Spaces and Compact Spatial Domains
+4.3.2 Compactness and Spectral Compression Induced by Finite Geometry
+4.3.3 Source-to-Radiation-to-Field Operator Chains
+4.3.4 Singular Values, Rank Deficiency, and Radiative Accessibility
+4.4 Finite Geometry and Angular Spectral Restrictions
+4.4.1 Spatial Localization and Fourier–Angular Duality
+4.4.2 Evanescent and Propagating Angular Components
+4.4.3 Suppression and Asymptotic Decay of High-Order Angular Structure
+4.4.4 Finite-Support Restrictions on Radiative Spectral Support
+4.5 Coupling to Angular Momentum Eigenfields
+4.5.1 Eigenfield Expansions and Representation of Radiated Fields
+4.5.2 Coupling Integrals, Selection Rules, and Spectral Accessibility
+4.5.3 Dependence on Source Geometry and Aperture Size
+4.5.4 Orthogonality, Accessibility, Modal Weighting, Representation Dependence, and Coupling Strength
+
+4.6 Angular-Momentum Truncation, Singular-Value Decay, and Effective Dimensionality
+4.6.1 Maximum Supported Angular Structure and Spectral Accessibility
+4.6.2 Scaling Laws and Asymptotics for Angular Spectral Truncation
+4.6.3 Asymptotic Decay of High-Order Coupling
+4.6.4 Singular-Value Decay, Effective Rank, and Electromagnetic Dimensionality
+
+4.7 Null Spaces, Accessibility, and Reconstruction Limits
+4.7.1 Non-Radiating, Unreachable, Inaccessible, and Null-Space Eigenfields
+4.7.2 Reactive Structure, Accessible Radiation Subspaces, and Evanescent Accessibility
+4.7.3 Limits of Angular Synthesis, Reconstruction, and Inversion
+4.7.4 Spatial Localization Versus Angular Resolution
+
+4.8 Scaling Laws and Spectral Concentration
+4.8.1 Aperture Size, Frequency, and Supported Electromagnetic Mode Count
+4.8.2 High- and Low-Frequency Asymptotic Scaling Regimes
+4.8.3 Spectral Concentration and Finite-Domain Spatial Localization
+4.8.4 Landau–Pollak–Slepian Concentration, Kolmogorov n-Width, and Electromagnetic Dimensionality Limits
+
+4.9 Physical Meaning of Realizability and Accessibility Limits
+4.9.1 Finite Geometry as the Origin of Radiative Dimensionality Constraints
+4.9.2 Why Phase Engineering Cannot Eliminate Spectral Truncation
+4.9.3 Observable and Measurable Manifestations of Spectral Accessibility Limits
+4.9.4 Consequences for Electromagnetic Radiation, Synthesis, and Measurement Systems
+
+4.10 Foundational Examples and Truncation Problems
+4.10.1 Maximum Angular Momentum Supported by a Finite Aperture
+4.10.2 Construction of Non-Accessible Eigenfields
+4.10.3 Near-Field Structure and Far-Field Spectral Truncation
+4.10.4 Scaling of Electromagnetic Mode Count with Geometry and Frequency
+
+4.11 Structural Summary and Chapter Inheritance
+4.11.1 Realizability, Accessibility, and Truncation Structures Established in Chapter 4
+4.11.2 Concepts Deferred to Radiation, Aperture, and Implementation Chapters
+4.11.3 Transition to Radiation Mechanisms, Physical Radiators, and Spectral Realization
+
+Chapter 5 — Canonical Radiation Mechanisms
+
+5.0 Radiation Formation and Angular Electromagnetic Structure
+5.0.1 Transition from Realizability Constraints to Radiation Mechanisms
+5.0.2 Radiation Formation, Retardation, and Angular Structure in Maxwell Electrodynamics
+5.0.3 Relation to the Foundational Structures of Chapters 1–4
+
+5.1 Fundamental Principles of Electromagnetic Radiation
+5.1.1 Accelerated Sources, Retardation, and Radiation Formation
+5.1.2 Radiative Energy Transport, Phase Evolution, Radiation Reaction, Angular-Momentum Recoil, and Angular Structure
+5.1.3 Symmetry Breaking and Directional Radiation
+5.1.4 Radiation Conditions for Angular-Momentum Transport
+
+5.2 Elementary Radiating Sources
+5.2.1 Electric and Magnetic Dipole Radiation as Fundamental Radiative Sources
+5.2.2 Exact Near-, Intermediate-, and Far-Field Structure
+5.2.3 Energy, Momentum, and Angular Momentum Flux via Electromagnetic Stress
+5.2.4 Coordinate Dependence of Radiation Representations
+
+5.3 Superposition and Interference in Radiation
+5.3.1 Linearity and Superposition Structure of Maxwell Fields
+5.3.2 Interference, Cross Terms, and Radiative Energy Redistribution
+5.3.3 Formation of Angular Electromagnetic Structure Through Interference
+5.3.4 Limits of Superposition-Based Angular Structuring and Accessibility
+
+5.4 Canonical Dipolar Radiation Mechanisms
+5.4.1 Single-Dipole Radiation and Symmetry Restrictions
+5.4.2 Absence of Orbital Angular-Momentum Flux in Isolated Dipoles
+5.4.3 Minimal Composite Sources and Interference-Induced Angular Structure
+5.4.4 Dependence on Source Geometry, Separation, Phase, and Retardation
+
+5.5 Rotationally Structured and Helical Source Distributions
+5.5.1 Circular and Helical Source Configurations
+5.5.2 Discrete-to-Continuous Source and Aperture Transitions
+5.5.3 Azimuthal Phase Progression, Angular Spectra, and Spectral Coupling
+5.5.4 Coupling to Angular Momentum Eigenfield Representations
+5.5.5 Consistency with Spectral Truncation Constraints
+
+5.6 Continuous Sources and Aperture Radiation
+5.6.1 Surface and Volume Current Distributions
+5.6.2 Radiation Integrals and Retarded Potentials for Continuous Sources
+5.6.3 Aperture Radiation and Angular Spectra
+5.6.4 Angular Momentum Content and Spectral Structure of Aperture Fields
+5.6.5 Finite-Aperture Spectral Restrictions
+
+5.7 Reactive and Radiative Angular Structure
+5.7.1 Reactive Angular Structure Near Radiating Sources
+5.7.2 Propagating, Evanescent, and Non-Propagating Angular Components
+5.7.3 Radiative Selection of Angular Spectra
+5.7.4 Asymptotic Suppression of Reactive Angular Structure
+
+5.8 Generation, Conversion, Redistribution, and Accessibility of Angular Structure
+5.8.1 Angular-Momentum Generation Versus Redistribution
+5.8.2 Dependence on Incident, Source, and Interference Field Structure
+5.8.3 Accessibility Constraints on Angular Radiation Formation
+5.8.4 Geometric Restrictions on Canonical Radiation Mechanisms
+
+5.9 Scaling Laws and Asymptotic Limits
+5.9.1 Source Size and Maximum Supported Angular Structure
+5.9.2 Frequency Dependence and Asymptotic Scaling
+5.9.3 Small-Source, Dipolar, and Continuous-Source Limits
+5.9.4 Observable Consequences of Canonical Radiation Constraints
+
+5.10 Foundational Examples
+5.10.1 Vanishing Orbital Angular-Momentum Radiation from a Single Dipole
+5.10.2 Two-Source Interference as a Minimal Angular-Momentum Mechanism
+5.10.3 Angular Spectra of Continuous Circular Current Distributions
+5.10.4 Aperture-Induced Redistribution of Angular Radiation Structure
+
+5.11 Structural Summary and Chapter Inheritance
+5.11.1 Radiation Mechanisms Established in Chapter 5
+5.11.2 Concepts Deferred to Antenna, Aperture, and Engineered Radiation Implementations
+5.11.3 Transition to Discrete Arrays, Realizable Radiators, and Structured Apertures
+
+Chapter 6 — Discrete Arrays and Circular Symmetry
+
+6.0 Discrete Sampling and Array Radiation
+6.0.1 Discrete Arrays as Realizable Radiating Structures
+6.0.2 Inheritance of Radiation and Truncation Structures from Chapters 1–5
+6.0.3 Circular Symmetry, Cyclic Groups, and Discrete Rotational Sampling
+     
+6.1 Electromagnetic Representation of Discrete Arrays
+6.1.1 Array Elements as Localized Current and Radiating Sources
+6.1.2 Polarization, Orientation, Phase, and Element Excitation
+6.1.3 Exact Radiation Fields of Discrete Elements
+6.1.4 Spatial Radiation Regimes and Element-Level Angular Constraints
+
+6.2 Discrete Sampling of Continuous Angular Sources
+6.2.1 Discrete Sources as Sampled Continuous Current Distributions
+6.2.2 Angular Sampling and Breakdown of Continuous Symmetry
+6.2.3 Periodicity, Sampling Interval, and Discrete Rotational Structure
+6.2.4 Angular Spectral Redistribution Under Sampling
+
+6.3 Radiation from Finite Discrete Arrays
+6.3.1 Superposition and Interference of Element Fields
+6.3.2 Exact Radiation Integrals for Discrete Sources
+6.3.3 Power, Momentum, and Angular Momentum Flux via Interference
+6.3.4 Origin Dependence, Coordinate Dependence, and Collective Radiation Structure
+
+6.4 Uniform Circular Arrays and Cyclic Symmetry
+6.4.1 Geometry and Parameterization of Uniform Circular Arrays
+6.4.2 Cyclic Symmetry Groups C_N\ and Discrete Rotations
+6.4.3 Irreducible Representation Structure of Discrete Circular Symmetry
+6.4.4 Replacement of Continuous Rotational Symmetry by Discrete C_NStructure
+
+6.5 Angular Sampling Theory, Spectral Aliasing, and Spectral Folding
+6.5.1 Angular Fourier Series Structure of Continuous Rings
+6.5.2 Discrete Azimuthal Sampling
+6.5.3 Periodicity and Aliasing in Angular Spectra
+6.5.4 Nyquist-Type Limits, Spectral Folding, and Angular Aliasing
+6.5.5 Poisson Summation and Angular Spectral Replication
+
+6.6 Spectral Coupling of Array Radiation
+6.6.1 Expansion in Spherical Angular Momentum Eigenfield Bases
+6.6.2 Coupling Integrals and Array Selection Rules
+6.6.3 Periodic Angular Spectra Under \ell\mathrm{\hairsp} mod\mathrm{\hairsp} NDiscrete Symmetry
+6.6.4 Comparison with Continuous Circular Sources
+
+6.7 Collective Angular Momentum Transport and Redistribution in Arrays
+6.7.1 Stress-Tensor Formulation for Discrete Arrays
+6.7.2 Cross-Element Interference, Cross Terms, and Collective Radiation
+6.7.3 Non-Additivity of Element-Level Angular Momentum Flux
+6.7.4 Collective Angular Redistribution in Array Radiation
+
+6.8 Discretization Effects and Spectral Distortion
+6.8.1 Spectral Leakage, Modal Leakage, and Mode Mixing
+6.8.2 Dependence on Element Count, Electrical Size, and Sampling Density
+6.8.3 Angular Spectral Contamination, Purity Limits, and Spectral Distortion
+6.8.4 Distortion Induced by Finite Sampling
+
+6.9 Truncation and Accessibility Limits in Discrete Arrays
+6.9.1 Aperture and Sampling-Induced Spectral Restrictions
+6.9.2 Element-Induced Limits on Angular Spectral Structure
+6.9.3 Combined Aperture and Sampling Truncation Bounds
+6.9.4 Maximum Accessible Angular Spectra in Discrete Arrays
+
+6.10 Reactive and Radiative Structure in Array Fields
+6.10.1 Near-Field Angular Momentum Structure in Arrays
+6.10.2 Non-Propagating and Radiative Angular Components
+6.10.3 Sampling-Induced Angular Spectral Compression
+6.10.4 Observable Consequences of Discrete Array Restrictions
+
+6.11 Scaling Laws and Asymptotic Limits
+6.11.1 Element Count and Supported Angular Spectra
+6.11.2 Radius-to-Wavelength Scaling
+6.11.3 Dense- and Sparse-Sampling Asymptotic Limits
+6.11.4 High-Order Angular Structure Under Finite Sampling
+
+6.12 Continuous-Limit Comparison and Physical Implications
+6.12.1 Convergence Toward Continuous Circular Sources
+6.12.2 Irreducible Spectral Effects of Discretization
+6.12.3 Sampling-Induced Spectral Compression
+6.12.4 Physical and Spectral Limits of Discrete Rotational Radiation
+
+6.13 Foundational Examples
+6.13.1 Angular Radiation Spectrum of a Uniform Circular Array
+6.13.2 Angular Spectral Aliasing in Sparse Circular Sampling
+6.13.3 Maximum Supported Angular Structure in Finite Arrays
+6.13.4 Collective Origin of Array-Level Angular Momentum
+
+6.14 Structural Summary and Chapter Inheritance
+6.14.1 Discrete Sampling Structures Established in Chapter 6
+6.14.2 Concepts Deferred to Advanced Array and Aperture Geometries
+6.14.3 Transition to Continuous Apertures, Reflector Systems, and Structured Radiators
+
+Chapter 7 — Continuous Apertures, Reflectors, and Mode Conversion
+
+7.0 Continuous Boundaries and Radiative Angular Structure
+7.0.1 Transition from Discrete Arrays to Continuous Boundaries
+7.0.2 Boundary-Operator Structures Inherited from Chapters 1–6
+7.0.3 Finite Boundaries and Restricted Angular Spectral Support
+
+7.1 Maxwell Boundary-Value Problems for Continuous Radiators
+7.1.1 Boundary Conditions at Conducting and Open Surfaces
+7.1.2 Well-Posedness, Uniqueness, and Exterior Radiation Problems
+7.1.3 Edge Conditions, Boundary Singularities, Field Regularity, and Boundary-Mediated Angular Redistribution
+7.1.4 Boundary-Induced Angular Spectral Restrictions
+
+7.2 Continuous Apertures as Equivalent Radiating Sources
+7.2.1 Surface Equivalence and Aperture Source Representations
+7.2.2 Tangential Field Specification and Admissibility
+7.2.1 Surface Equivalence and Aperture Source Representations
+7.2.4 Huygens and Love Equivalence Principles in Angular Radiation Theory
+7.2.5 Aperture-Induced Restrictions on Angular Radiation Structure
+
+7.3 Radiation from Continuous Apertures
+7.3.1 Exact Radiation Integrals for Surface Currents
+7.3.2 Angular Spectrum and Spatial Radiation Representations
+7.3.3 Energy, Momentum, and Angular Momentum Flux
+7.3.4 Boundary Integral Operators and Their Spectral Structure
+7.3.5 Coordinate, Origin, and Boundary Dependence
+
+7.4 Circular and Annular Apertures with Azimuthal Structure
+7.4.1 Geometrical Structure and Parameterization
+7.4.2 Azimuthally Structured and Phase-Modified Aperture Fields
+7.4.3 Coupling to Angular Momentum Eigenfields
+7.4.4 Modal Weight Distributions, Spectral Accessibility, and Spectral Truncation
+7.4.5 Comparison with Continuous Circular Sources
+
+7.5 Truncation, Angular Bandlimitation, and Spectral Accessibility in Continuous Apertures
+7.5.1 Finite Support and Angular Bandlimitation
+7.5.2 Asymptotic Decay and Suppression of High-Order Angular Structure
+7.5.3 Scaling Laws for Accessible Angular Spectra
+7.5.4 Effective Spectral Truncation in Continuous Aperture Radiation
+
+7.6 Reflectors as Boundary Operators
+7.6.1 Reflecting Surfaces as Maxwell Operators
+7.6.2 Incident-to-Scattered-to-Radiated Field Transformations
+7.6.3 Reciprocity, Self-Adjointness, Symmetry, and Operator Structure
+7.6.4 Preservation and Mixing of Angular Momentum
+7.6.5 Mode-Count Preservation, Spectral Constraints, and Accessibility
+
+7.7 Axisymmetric Reflectors and Angular Transport
+7.7.1 Parabolic and Spherical Reflector Geometries and Boundary Conditions
+7.7.2 Boundary-Mediated Angular Momentum Transport
+7.7.3 Angular Redistribution and Spectral Mixing Under Reflection
+7.9.4 Conversion, Redistribution, Versus Generation of Angular Structure
+
+7.8 Angular Momentum Balance and Mechanical Interaction
+7.8.1 Angular Momentum Conservation at Boundaries
+7.8.2 Torque on Apertures and Reflecting Surfaces
+7.8.3 Exchange Between Electromagnetic Fields and Matter
+7.8.4 Conservation Constraints on Boundary-Mediated Transport
+
+7.9 Mode Conversion, Phase Modification, and Boundary Operators
+7.9.1 Spiral Phase Elements, Phase Plates, and Phase-Modifying Boundaries
+7.9.2 Operator Representations of Mode Conversion
+7.9.3 Spectral Redistribution, Null Spaces, Rank Constraints, and Conversion Limits
+7.9.4 Conversion Versus Generation of Angular Structure
+
+7.10 Evanescent and Radiative Structure in Continuous Apertures
+7.10.1 Reactive Angular Structure Near Apertures
+7.10.2 Evanescent Angular Components, Spectral Decay, and Reactive Suppression
+7.10.3 Aperture-Induced Suppression and Compression of Fine Angular Structure
+7.10.4 Observable Consequences of Angular Spectral Compression
+
+7.11 Scaling Laws and Boundary-Induced Limits
+7.11.1 Aperture Diameter and Supported Angular Spectral Support
+7.11.2 Frequency Dependence and High-Frequency Asymptotics
+7.11.3 Smoothness, Boundary Geometry, and Angular Spectral Restriction
+7.11.4 Comparison with Discrete Arrays
+
+7.12 Foundational Examples
+7.12.1 Angular Radiation Spectrum of a Finite Circular Aperture
+7.12.2 Reflection of Angular Momentum Eigenfields from Axisymmetric Reflectors
+7.12.3 Spiral Phase Surfaces as Linear Mode-Converting Operators
+7.12.4 Near-Field and Far-Field Angular Structure in Annular Apertures
+
+7.13 Structural Summary and Chapter Inheritance
+7.13.1 Continuous-Boundary Structures Established in Chapter 7
+7.13.2 Concepts Deferred to Metasurfaces, Subwavelength Structuring, and Engineered Boundary Operators
+7.13.3 Transition to Structured Electromagnetic Surfaces and Subwavelength Boundary Engineering
+
+Chapter 8 — Metasurfaces, Metamaterials, and Subwavelength Structuring
+
+8.0 Subwavelength Electromagnetic Structuring and Radiative Spectral Support
+8.0.1 Transition from Continuous Boundaries to Artificial Electromagnetic Media
+8.0.2 Surface-Operator Structures Inherited from Chapters 1–7
+8.0.3 Finite Radiative Support Under Subwavelength Structuring
+
+8.1 Microscopic Maxwell Theory of Subwavelength Scatterers
+8.1.1 Maxwell Equations and Fields at the Inclusion Scale
+8.1.2 Induced Currents, Polarization, and Magnetization Responses
+8.1.3 Electric, Magnetic, Magnetoelectric, and Bianisotropic Interactions
+8.1.4 Passivity, Causality, and Energy Conservation
+8.1.5 Microscopic-Structure-Induced Restrictions on Angular Spectral Support
+
+8.2 Multipole Expansion and Structure of Subwavelength Scatterers
+8.2.1 Electric, Magnetic, and Toroidal Multipole Moments
+8.2.2 Higher-Order Multipoles, Asymptotic Decay, and Scaling Laws
+8.2.3 Angular Momentum Content of Multipolar Radiation
+8.2.4 Multipole Truncation, Spectral Accessibility, and Angular Restrictions
+
+8.3 Homogenization and Effective Electromagnetic Surfaces
+8.3.1 Scale Separation, Averaging, and Effective Electromagnetic Structure
+8.3.2 Effective Surface Susceptibilities, Constitutive Descriptions, and Surface Operators
+8.3.3 Breakdown of Homogenization at High Angular Gradients
+8.3.4 Floquet–Bloch Structure, Periodicity, and Spectral Replication
+8.3.5 Effective-Medium Limits on Angular Spectral Redistribution
+
+8.4 Generalized Sheet Transition Conditions (GSTCs) and Surface Operators
+8.4.1 Derivation of GSTCs from Maxwell Theory
+8.4.2 Electric, Magnetic, Magnetoelectric, and Bianisotropic Surface Responses
+8.4.3 Reciprocity, Passivity, Causality, and Admissibility Conditions
+8.4.4 Operator Interpretation of Electromagnetic Surfaces
+8.4.5 Huygens Surfaces and Equivalent Surface Radiation Operators
+
+8.5 Metasurfaces as Linear Operators on Radiative Fields
+8.5.1 Incident-to-Scattered-to-Radiated Field Transformations
+8.5.2 Compactness, Finite Rank, and Spectral Accessibility
+8.5.3 Null Spaces and Unreachable Angular Eigenfields
+8.5.4 Preservation, Redistribution, and Filtering of Angular Spectra
+8.5.5 Comparison with Apertures and Reflectors
+
+8.6 Angular Momentum Transport Through Structured Surfaces
+8.6.1 Angular Momentum Flux Across Electromagnetic Surfaces
+8.6.2 Electromagnetic Stress Tensor Including Surface Contributions
+8.6.3 Mechanical Torque and Field–Matter Exchange
+8.6.4 Global Conservation and Redistribution of Angular Momentum
+
+8.7 Spatial Dispersion, Nonlocality, and Electromagnetic Response
+8.7.1 Origin of Spatial Dispersion and Nonlocality
+8.7.2 Nonlocal Response Functions, Spatial Coupling, and Angular Structure
+8.7.3 Limits of Local Phase Control
+8.7.4 Nonlocality and Preservation of Finite Angular Spectral Support
+8.7.5 Angular Redistribution Induced by Spatial Dispersion
+
+8.8 Subwavelength Phase Engineering and Spectral Limits
+8.8.1 Local Phase Profiles Versus Global Radiation Structure
+8.8.2 Angular Sampling, Aliasing, Spectral Folding, and Spectral Mixing
+8.8.3 Finite-Rank Restrictions on Arbitrary Angular Structuring
+8.8.4 Finite-Rank Limits of Subwavelength Angular Control
+
+8.9 Redistribution Operators, Spectral Filtering, and Mode Conversion
+8.9.1 Mode Conversion as an Operator Transformation
+8.9.2 Spectral Structure and Rank of Metasurface Operators
+8.9.3 Redistribution Versus Generation of Angular Momentum
+8.9.4 Loss, Angular Redistribution, Spectral Contamination, and Conversion Limits
+
+8.10 Localized and Radiative Angular Structure in Metasurfaces
+8.10.1 Near-Field Localization, Evanescent Fields, and Angular Components
+8.10.2 Suppression and Decay of Localized Angular Structure
+8.10.3 Radiative Accessibility and Spectral Compression Under Subwavelength Localization
+8.10.4 Observable Consequences of Angular Spectral Compression
+
+8.11 Scaling Laws and Finite-Rank Constraints
+8.11.1 Unit-Cell Size, Spatial Sampling, and Angular Bandwidth
+8.11.2 Aperture Size and Supported Angular Spectra
+8.11.3 Multipole Order and Angular Resolution
+8.11.4 Operator Rank, Null Spaces, and Electromagnetic Dimensionality
+8.11.5 Comparison with Discrete and Continuous Realizations
+
+8.12 Physical and Operator-Theoretic Limits of Structured Electromagnetic Surfaces
+8.12.1 Preservation of Truncation Constraints Under Surface Structuring
+8.12.2 Programmability and Accessibility Under Finite Operator Rank
+8.12.3 Structural Complexity, Operator Conditioning, and Stability
+8.12.4 Observable Limits of Subwavelength Angular Control
+
+8.13 Foundational Examples
+8.13.1 Multipole Truncation in a Subwavelength Scatterer
+8.13.2 Metasurfaces as Compact Operators on Angular Eigenfields
+8.13.3 Limits of Arbitrary Phase Structuring
+8.13.4 Angular Momentum Conservation and Mechanical Torque in Metasurfaces
+
+8.14 Structural Summary and Chapter Inheritance
+8.14.1 Surface-Operator Structures Established in Chapter 8
+8.14.2 Concepts Deferred to Propagation, Scattering, and Media Chapters
+8.14.3 Transition to Free-Space Propagation, Transport, and Structured Media
+
+Chapter 9 — Free-Space Propagation of Angularly Structured Electromagnetic Fields
+
+9.0 Free-Space Propagation and Angular Transport
+9.0.1 Propagation as Geometric Evolution of Electromagnetic Structure
+9.0.2 Propagator Structures Inherited from Chapters 1–8
+9.0.3 Scope and Physical Regimes of Free-Space Propagation
+
+9.1 Maxwell Propagation as an Operator Problem
+9.1.1 Initial-Value and Boundary-Value Structure in Free Space
+9.1.2 Maxwell Propagators on Radiative Hilbert Spaces
+9.1.3 Causality, Retardation, and Support
+9.1.4 Energy Conservation and Unitary Evolution
+9.1.5 Hamiltonian and Symplectic Structure of Maxwell Propagation
+
+9.2 Green Operators and Electromagnetic Propagators
+9.2.1 Scalar, Vector, and Dyadic Green Operators
+9.2.2 Integral Representations of Electromagnetic Propagation
+9.2.3 Reciprocity and Symmetry of Propagators
+9.2.4 Relation to Radiation Operators of Chapter 2
+
+9.3 Spectral Representations of Free-Space Propagation
+9.3.1 Plane-, Cylindrical-, and Spherical-Wave Expansions
+9.3.2 Angular Spectrum and Angular-Momentum Spectrum
+9.3.3 Representation Independence of Propagation Observables
+9.3.4 Propagating and Evanescent Spectral Components
+
+9.4 Angular Momentum Transport and Propagation Invariants
+9.4.1 Propagation of Angular Momentum Currents
+9.4.2 Stress-Tensor Formulation of Angular Transport
+9.4.3 Flux Conservation Through Arbitrary Surfaces
+9.4.4 Global Propagation Invariants
+9.4.5 Irreversible Suppression of Non-Propagating Components
+
+9.5 Near-Field and Far-Field Evolution
+9.5.1 Reactive, Fresnel, and Fraunhofer Regimes
+9.5.2 Transition from Localized to Radiative Angular Structure
+9.5.3 Stationary-Phase and Asymptotic Propagation Structure
+9.5.4 Caustics, Singularities, and Geometric Evolution
+9.5.5 Eikonal and Geometric-Optics Limits
+
+9.6 Exact Non-Paraxial Propagation Models
+9.6.1 Spherical and Cylindrical Angular Momentum Eigenfields
+9.6.2 Radial Evolution of Non-Paraxial Fields
+9.6.3 Comparison Between Representation Bases
+9.6.4 Limits of Paraxial Laguerre–Gaussian Models
+
+9.7 Beam Divergence and Angular Spreading
+9.7.1 Definitions of Electromagnetic Beam Divergence
+9.7.2 Second-Moment and Angular-Spread Measures
+9.7.3 Divergence and Transverse Momentum Structure
+9.7.4 Preservation of Angular Spectral Structure Under Expansion
+
+9.8 Angular-Order Dependence of Free-Space Divergence
+9.8.1 Radial Scaling Laws with Angular Order
+9.8.2 Physical Origin of High-Order Angular Spreading
+9.8.3 Exact Maxwellian Scaling Relations
+9.8.4 Asymptotic Limits of Divergence Suppression
+9.8.5 Propagation-Induced Angular Dilution
+
+9.9 Redistribution, Stability, and Finite Observation Effects
+9.9.1 Radial Redistribution of Propagating Energy
+9.9.2 Conservation of Angular Momentum Under Spatial Evolution
+9.9.3 Receiver-Induced Apparent Angular Redistribution
+9.9.4 Finite Observation Apertures and Apparent Instability
+9.9.5 Transport-Theoretic Interpretation of Propagation Measurements
+
+9.10 Propagation Geometry and Observable Dimensionality
+9.10.1 Hilbert-Space Geometry Under Free-Space Propagation
+9.10.2 Preservation of Modal Orthogonality
+9.10.3 Loss of Spatial Localization Under Propagation
+9.10.4 Observation-Induced Dimensional Compression
+9.10.5 Reciprocity and Information Preservation
+
+9.11 Scaling Laws and Irreversible Constraints
+9.11.1 Wavelength and Distance Scaling
+9.11.2 Angular-Order Scaling of Propagation Structure
+9.11.3 Preservation of Propagation-Operator Dimensionality
+9.11.4 Irreversible Loss of Evanescent Information
+9.11.5 Comparison with Plane-Wave Propagation
+
+9.12 Relation to Paraxial and Approximate Theories
+9.12.1 Emergence of Paraxial Models as Limiting Cases
+9.12.2 Breakdown of Paraxial Approximations at High Angular Order
+9.12.3 Valid Asymptotic Regimes of Approximate Propagation
+9.12.4 Non-Paraxial Scope of the Present Formulation
+
+9.13 Foundational Examples
+9.13.1 Angular Momentum Conservation Under Free-Space Propagation
+9.13.2 Angular-Order Dependence of Beam Divergence
+9.13.3 Apparent Mode Redistribution Due to Finite Receivers
+9.13.4 Preservation of Propagation-Operator Dimensionality
+
+9.14 Structural Summary and Chapter Inheritance
+9.14.1 Propagation Structures Established in Chapter 9
+9.14.2 Concepts Deferred to Propagation in Media
+9.14.3 Transition to Electromagnetic Media and Scattering
+
+Chapter 10 — Propagation in Linear Media: Dispersion, Anisotropy, and Inhomogeneity
+
+10.0 Materially Modified Electromagnetic Propagation
+10.0.1 Transition from Free Space to Linear Media
+10.0.2 Constitutive and Propagation Structures Inherited from Chapters 1–9
+10.0.3 Scope and Physical Regimes of Linear-Media Propagation
+
+10.1 Maxwell Electrodynamics in Linear Media
+10.1.1 Constitutive Relations in Time and Frequency Domains
+10.1.2 Susceptibility Tensors and Material Response
+10.1.3 Causality, Passivity, and Kramers–Kronig Structure
+10.1.4 Energy, Momentum, and Angular Momentum in Media
+10.1.5 Dynamical Evolution Under Linear Constitutive Response
+
+10.2 Operator Formulation of Propagation in Media
+10.2.1 Maxwell Operators in Dispersive and Inhomogeneous Media
+10.2.2 Evolution Operators and Material Propagators
+10.2.3 Loss of Self-Adjointness and Non-Unitary Evolution
+10.2.4 Angular Transport Under Dissipative Maxwell Evolution
+10.2.5 Exceptional Points, Spectral Coalescence, and Non-Normal Dynamics
+
+10.3 Spectral and Modal Representations in Linear Media
+10.3.1 Plane-Wave and Angular-Momentum Representations
+10.3.2 Biorthogonality and Completeness in Non-Hermitian Media
+10.3.3 Propagating and Evanescent Spectral Components
+10.3.4 Conditions for Preservation of Angular Spectral Structure
+
+10.4 Angular Momentum Transport in Linear Media
+10.4.1 Field–Matter Partition of Angular Momentum
+10.4.2 Medium-Assisted Angular Transport
+10.4.3 Spin–Orbit Coupling Induced by Material Response
+10.4.4 Modified Conservation Laws and Propagation Invariants
+10.4.5 Mechanical Torque and Field–Matter Exchange
+
+10.5 Temporal Dispersion and Spatiotemporal Evolution
+10.5.1 Frequency-Dependent Phase and Group Propagation
+10.5.2 Pulse Broadening and Angular Chirp
+10.5.3 Spatiotemporal Coupling of Angular Modes
+10.5.4 Dispersion-Induced Angular Dephasing
+10.5.5 Angular Transport Under Temporally Dispersive Evolution
+
+10.6 Anisotropy, Symmetry Breaking, and Geometric Evolution
+10.6.1 Classification of Anisotropic Media
+10.6.2 Breakdown of Rotational Symmetry
+10.6.3 Angular-Mode Coupling Mechanisms
+10.6.4 Exact Material Examples: Uniaxial and Biaxial Media
+10.6.5 Berry Phase and Geometric Angular Transport
+10.6.6 Angular Redistribution Under Material Symmetry Breaking
+
+10.7 Inhomogeneous and Periodic Media
+10.7.1 Spatially Varying Constitutive Parameters
+10.7.2 Adiabatic and Non-Adiabatic Evolution
+10.7.3 Angular Redistribution and Spectral Transfer
+10.7.4 Geometric-Optics Interpretation of Material Evolution
+10.7.5 Floquet–Bloch Evolution in Periodic Media
+
+10.8 Mode Coupling and Angular Spectral Evolution
+10.8.1 Mode-Coupling Operators in Linear Media
+10.8.2 Selection Rules for Angular-Mode Mixing
+10.8.3 Weak and Strong Coupling Regimes
+10.8.4 Conditions for Angular Spectral Preservation
+10.8.5 Irreversible Angular Redistribution in Dissipative Media
+
+10.9 Reactive, Evanescent, and Radiative Structure in Media
+10.9.1 Evanescent and Reactive Angular Components
+10.9.2 Radiative Angular Structure Supported by Linear Media
+10.9.3 Materially Induced Suppression of Angular Components
+10.9.4 Observable Angular Redistribution in Media
+
+10.10 Angular-Order Sensitivity and Scaling Laws
+10.10.1 Angular-Order Dependence of Material Sensitivity
+10.10.2 Scaling of Distortion and Mixing with Angular Order
+10.10.3 Wavelength and Material-Contrast Scaling
+10.10.4 Comparison with Free-Space Propagation
+10.10.5 Dynamical Consequences of High-Order Angular Evolution
+
+10.11 Conservation Structure and Dimensional Evolution
+10.11.1 Conservation of Angular Spectral Degrees of Freedom
+10.11.2 Irreversibility of Materially Induced Redistribution
+10.11.3 Aperture-Limited Observation in Linear Media
+10.11.4 Evolution of Observable Electromagnetic Dimensionality
+
+10.12 Relation to Approximate and Paraxial Media Models
+10.12.1 Emergence of Paraxial Media Approximations
+10.12.2 Breakdown at High Angular Order
+10.12.3 Valid Regimes of Approximate Material Evolution
+10.12.4 Non-Paraxial Scope of the Present Formulation
+
+10.13 Foundational Examples
+10.13.1 Angular-Momentum Preservation in Homogeneous Dispersive Media
+10.13.2 Angular-Mode Mixing in Uniaxial Anisotropic Media
+10.13.3 Non-Unitary Evolution in Absorptive Media
+10.13.4 Adiabatic and Non-Adiabatic Evolution in Inhomogeneous Media
+
+10.14 Structural Summary and Chapter Inheritance
+10.14.1 Material-Propagation Structures Established in Chapter 10
+10.14.2 Concepts Deferred to Random and Guided Media
+10.14.3 Transition to Stochastic and Turbulent Propagation
+
+Chapter 11 — Propagation in Random Media: Turbulence, Scattering, and Decoherence
+
+11.0 Stochastic Evolution of Angular Electromagnetic Structure
+11.0.1 Transition from Deterministic to Stochastic Propagation
+11.0.2 Stochastic-Transport Structures Inherited from Chapters 1–10
+11.0.3 Scope and Statistical Framework of Random Propagation
+
+11.1 Maxwell Electrodynamics in Random Media
+11.1.1 Random Constitutive Parameters in Space and Time
+11.1.2 Stochastic Maxwell Initial-Value Problems
+11.1.3 Existence and Uniqueness for Individual Realizations
+11.1.4 Ensemble and Pathwise Descriptions of Electromagnetic Evolution
+11.1.5 Statistical Evolution Under Random Constitutive Structure
+
+11.2 Statistical Structure of Random Media
+11.2.1 Stationarity, Ergodicity, and Random Electromagnetic Fields
+11.2.2 Correlation Functions and Structure Functions
+11.2.3 Power Spectral Densities and Statistical Symmetry
+11.2.4 Isotropic and Anisotropic Randomness
+11.2.5 Ensemble Symmetry and Angular Transport Structure
+
+11.3 Operator Formulation of Random Propagation
+11.3.1 Random Maxwell Operators and Stochastic Propagators
+11.3.2 Ensemble-Averaged Evolution Operators
+11.3.3 Breakdown of Deterministic Maxwell Evolution Under Randomness
+11.3.4 Statistical Evolution of Angular Spectra
+11.3.5 Pathwise and Ensemble Propagation Structures
+
+11.4 Angular Momentum Observables in Random Media
+11.4.1 Angular Structure Within Individual Realizations
+11.4.2 Ensemble-Averaged Angular Momentum
+11.4.3 Variance and Higher-Order Angular Statistics
+11.4.4 Pathwise Conservation Under Random Maxwell Evolution
+11.4.5 Ensemble-Preserved Quantities and Statistical Invariants
+
+11.5 Random Phase Perturbations and Angular Distortion
+11.5.1 Random Phase Screens from Maxwell Theory
+11.5.2 Coherent Distortion Without Strong Mode Mixing
+11.5.3 Angular Structure Under Weak Random Perturbations
+11.5.4 Ensemble Angular Evolution Under Random Phase Distortion
+
+11.6 Turbulence-Induced Angular-Mode Coupling
+11.6.1 Angular-Mode Coupling Operators in Random Media
+11.6.2 Selection Rules from Statistical Symmetry
+11.6.3 Weak- and Strong-Scattering Regimes
+11.6.4 Random-Matrix Structure of Angular Coupling Operators
+11.6.5 Ensemble Angular Redistribution Under Turbulent Evolution
+
+11.7 Stochastic Angular Transport and Diffusion
+11.7.1 Angular-Momentum Space as a Transport Domain
+11.7.2 Single- and Multiple-Scattering Transport Operators
+11.7.3 Diffusive and Non-Diffusive Angular Evolution
+11.7.4 Breakdown of Angular Spectral Locality
+11.7.5 Fokker–Planck and Kinetic Descriptions of Angular Transport
+11.7.6 Radiative-Transfer Limits of Stochastic Propagation
+
+11.8 Statistical Evolution of Angular Spectra
+11.8.1 Ensemble Evolution in Angular-Momentum Space
+11.8.2 Spectral Broadening and Angular Diffusion
+11.8.3 Ensemble Loss of Angular Localization
+11.8.4 Statistical Observability of Evolving Angular Spectra
+
+11.9 Decoherence of Angularly Structured Electromagnetic Fields
+11.9.1 Definition of Electromagnetic Decoherence
+11.9.2 Loss of Inter-Mode Phase Correlation
+11.9.3 Distinction Between Energy Loss and Coherence Loss
+11.9.4 Decoherence Lengths and Characteristic Scales
+11.9.5 Statistical Breakdown of Angular Coherence
+
+11.10 Angular-Order Sensitivity and Scaling Laws
+11.10.1 Angular-Order Dependence of Random Distortion
+11.10.2 Scaling of Mode Coupling and Decoherence
+11.10.3 Wavelength and Turbulence-Strength Scaling
+11.10.4 Comparison with Plane-Wave Statistical Transport
+11.10.5 High-Order Angular Sensitivity Under Stochastic Evolution
+
+11.11 Reactive, Evanescent, and Radiative Structure in Random Media
+11.11.1 Randomization of Evanescent Angular Components
+11.11.2 Statistical Suppression of Localized Angular Structure
+11.11.3 Distance-Dependent Angular Observables
+11.11.4 Ensemble Redistribution of Radiative Angular Structure
+
+11.12 Conservation Structure and Dimensional Evolution
+11.12.1 Pathwise Conservation Under Random Evolution
+11.12.2 Statistical Redistribution Without Dimensional Expansion
+11.12.3 Ensemble Observation Limits and Finite Receivers
+11.12.4 Statistical Collapse of Observable Angular Dimensionality
+11.12.5 Distinction Between Ensemble Statistics and Physical Realizations
+
+11.13 Relation to Approximate and Paraxial Turbulence Models
+11.13.1 Emergence of Paraxial Turbulence Approximations
+11.13.2 Breakdown at High Angular Order
+11.13.3 Valid Statistical Regimes of Approximate Models
+11.13.4 Non-Paraxial Scope of the Present Formulation
+
+11.14 Foundational Examples
+11.14.1 Pathwise Conservation of Angular Momentum in Random Media
+11.14.2 Angular Diffusion Under Weak Turbulence
+11.14.3 Decoherence Without Energy Loss
+11.14.4 Finite-Receiver Effects Under Turbulent Propagation
+
+11.15 Structural Summary and Chapter Inheritance
+11.15.1 Stochastic-Transport Structures Established in Chapter 11
+11.15.2 Concepts Deferred to Sensing and Communication Systems
+11.15.3 Transition to Guided Propagation and Constrained Geometries
+
+Chapter 12 — Interaction of Angularly Structured Electromagnetic Fields with Ponderable Media
+
+12.0 Electromagnetic Interaction and Mechanical Exchange
+12.0.1 Transition from Propagation to Field–Matter Interaction
+12.0.2 Constitutive Evolution Versus Dynamical Exchange
+12.0.3 Interaction Structures Inherited from Chapters 1–11
+12.0.4 Scope and Physical Assumptions of Classical Interaction Theory
+
+12.1 Maxwell Electrodynamics in Ponderable Media
+12.1.1 Maxwell Equations with Free and Bound Sources
+12.1.2 Polarization, Magnetization, and Material Variables
+12.1.3 Separation of Electromagnetic and Mechanical Degrees of Freedom
+12.1.4 Dynamical Constraints on Field–Matter Interaction
+
+12.2 Energy Conservation and Electromagnetic Work
+12.2.1 Local Energy Conservation in Material Media
+12.2.2 Poynting Flux and Electromagnetic Power Flow
+12.2.3 Mechanical Work, Dissipation, and Energy Conversion
+12.2.4 Interaction-Induced Energy Redistribution
+
+12.3 Linear Momentum Conservation and Electromagnetic Forces
+12.3.1 Electromagnetic Momentum Density in Matter
+12.3.2 Field–Matter Momentum Balance
+12.3.3 Lorentz and Material Force Densities
+12.3.4 Forces in Angularly Structured Electromagnetic Fields
+12.3.5 Dependence on Gradients, Circulation, and Material Inhomogeneity
+
+12.4 Angular Momentum Conservation and Torque Exchange
+12.4.1 Total Angular Momentum Density in Matter
+12.4.2 Angular Momentum Flux and Stress Moments
+12.4.3 Local Torque Density and Mechanical Exchange
+12.4.4 Spin, Orbital, and Total Angular Momentum Transfer
+12.4.5 Conditions for Vanishing Net Torque
+
+12.5 Stress Tensor Formulation of Electromagnetic Interaction
+12.5.1 Maxwell Stress Tensors in Material Media
+12.5.2 Volume and Surface Force Representations
+12.5.3 Torque as the Moment of Electromagnetic Stress
+12.5.4 Validity Regimes and Interpretation of Stress Formulations
+
+12.6 Microscopic Origins and Macroscopic Interaction Limits
+12.6.1 Lorentz Forces on Microscopic Charges and Currents
+12.6.2 Averaging Procedures and Macroscopic Electrodynamics
+12.6.3 Emergence of Continuum Stress Descriptions
+12.6.4 Limits of Point-Particle Interaction Intuition
+
+12.7 Abraham–Minkowski Partitioning and Conservation Structure
+12.7.1 Electromagnetic Momentum Partitioning in Matter
+12.7.2 Stress-Tensor Formulations and Angular Momentum Balance
+12.7.3 Field–Matter Torque Exchange
+12.7.4 Conservation Invariants Under Momentum Partitioning
+
+12.8 Interfaces, Boundaries, and Localization of Interaction
+12.8.1 Material Interfaces and Electromagnetic Discontinuities
+12.8.2 Surface Force and Torque Densities
+12.8.3 Localization of Angular Exchange at Boundaries
+12.8.4 Absence of Net Exchange in Infinite Homogeneous Media
+
+12.9 Excitation of Material Degrees of Freedom
+12.9.1 Dipolar and Multipolar Excitation Mechanisms
+12.9.2 Rotational and Orientational Material Response
+12.9.3 Collective Mechanical Excitation
+12.9.4 Symmetry-Selective Coupling Under Angular Electromagnetic Structure
+12.9.5 Preservation of Material Dynamical State Spaces
+
+12.10 Symmetry, Reciprocity, and Interaction Selection Rules
+12.10.1 Rotational Symmetry and Angular Exchange
+12.10.2 Reciprocity Constraints on Electromagnetic Interaction
+12.10.3 Time-Reversal Symmetry and Mechanical Response
+12.10.4 Nonreciprocal Matter and Reciprocity Breaking
+12.10.5 Chirality, Handedness, and Symmetry-Matched Coupling
+
+12.11 Dissipation, Absorption, and Irreversible Exchange
+12.11.1 Absorption of Electromagnetic Angular Momentum
+12.11.2 Conversion into Heat and Mechanical Motion
+12.11.3 Entropy Production and Irreversibility
+12.11.4 Dissipative Limits of Angular Momentum Exchange
+
+12.12 Transient and Time-Dependent Interaction
+12.12.1 Impulsive and Steady-State Torque Regimes
+12.12.2 Pulsed Angularly Structured Electromagnetic Fields
+12.12.3 Time-Dependent Conservation Laws
+12.12.4 Breakdown of Time-Harmonic Interaction Models
+
+12.13 Interaction Efficiency and Scaling Laws
+12.13.1 Absorbed Power and Mechanical Torque Efficiency
+12.13.2 Angular-Order Dependence of Interaction Efficiency
+12.13.3 Scaling Limits for High-Order Angular Structure
+12.13.4 Interaction Complexity and Mechanical Accessibility
+
+12.14 Back-Action, Reaction, and Mechanical Recoil
+12.14.1 Reaction Forces on Electromagnetic Sources
+12.14.2 Linear and Angular Momentum Recoil
+12.14.3 Consistency of Field–Matter Exchange
+12.14.4 Excluded Dynamical Contributions and Scope Limits
+
+12.15 Canonical Interaction Scenarios
+12.15.1 Small Particles in Angularly Structured Fields
+12.15.2 Extended Bodies Under Angular Momentum Flux
+12.15.3 Continuous Absorbing Media
+12.15.4 Symmetry-Matched Scatterers and Torque Exchange
+
+12.16 Conservation Structure and Mechanical Exchange Limits
+12.16.1 Boundary and Dissipative Requirements for Net Angular Exchange
+12.16.2 Stress-Mediated Nature of Electromagnetic Mechanical Action
+12.16.3 Conservation Structure of Electromagnetic Interaction
+12.16.4 Preservation of Electromagnetic State-Space Dimensionality
+
+12.17 Interaction, Observation, and Physical Accessibility
+12.17.1 Interaction-Induced Electromagnetic Signatures
+12.17.2 Interaction-Driven Material Observability
+12.17.3 Observation Limits Under Interaction Constraints
+12.17.4 Interaction as the Dynamical Bridge Between Symmetry and Observation
+
+12.18 Foundational Examples
+12.18.1 Torque on a Finite Absorbing Body in an Angularly Structured Field
+12.18.2 Torque-Free Interaction Under Symmetric Lossless Coupling
+12.18.3 Scaling of Mechanical Efficiency with Angular Order
+12.18.4 Transient Angular Momentum Exchange from Pulsed Fields
+
+12.19 Structural Summary and Chapter Inheritance
+12.19.1 Interaction Structures Established in Chapter 12
+12.19.2 Concepts Deferred to Guided Systems and Communication Theory
+12.19.3 Transition to Guided Electromagnetic Structures
+
+Chapter 13 — Detection, Measurement, and Estimation of Angular Momentum Content
+
+13.0 Electromagnetic Measurement as a Finite-Dimensional Inference Problem
+13.0.1 Detector-Induced Limits on Electromagnetic Observability
+13.0.2 Measurement Structures Inherited from Chapters 1–12
+13.0.3 Scope and Foundational Constraints of Electromagnetic Measurement
+
+13.1 Measurement Principles for Classical Electromagnetic Fields
+13.1.1 Physical Measurements Versus Mathematical Decompositions
+13.1.2 Electromagnetic Observables and Measurable Quantities
+13.1.3 Local Densities Versus Integrated Measurements
+13.1.4 Finite Space–Time Support and Electromagnetic Observability
+13.1.5 Gauge-Invariant Measurement Quantities
+
+13.2 Detector Modeling from Maxwell Theory
+13.2.1 Sensors as Linear Space–Time Operators
+13.2.2 Impulse Responses and Transfer Functions
+13.2.3 Bandwidth, Dynamic Range, and Saturation
+13.2.4 Noise Injection at the Detector Level
+13.2.5 Observable Angular Structure Under Finite Sensor Operators
+
+13.3 Measurement Operators and Finite-Dimensional Restriction
+13.3.1 Measurement as Projection onto Finite Electromagnetic Subspaces
+13.3.2 Orthogonality Under Finite Observation Domains
+13.3.3 Non-Ideal Restriction and Apparent Angular Redistribution
+13.3.4 Singular-Value Structure of Measurement Operators
+13.3.5 Observable and Suppressed Electromagnetic Subspaces
+13.3.6 Conditioning and Stability of Angular Reconstruction
+
+13.4 Finite Apertures, Sampling, and Spectral Truncation
+13.4.1 Spatial Sampling of Electromagnetic Vector Fields
+13.4.2 Nyquist-Type Limits in Angular Space
+13.4.3 Angular Aliasing and Spectral Folding
+13.4.4 Aperture-Limited Reduction of Observable Dimensionality
+
+13.5 Near-Field and Far-Field Measurement Regimes
+13.5.1 Near-Field Probing of Angular Structure
+13.5.2 Reactive and Radiative Measurement Contributions
+13.5.3 Far-Field Angular Spectrum Measurements
+13.5.4 Complementarity Between Reactive and Radiative Observation
+
+13.6 Angular Spectral Reconstruction from Measured Data
+13.6.1 Expansion in Angular Momentum Bases
+13.6.2 Discrete and Continuous Angular Decompositions
+13.6.3 Reconstruction Error, Bias, and Stability
+13.6.4 Ill-Conditioning at High Angular Order
+
+13.7 Noise, Uncertainty, and Detectability
+13.7.1 Thermal, Electronic, and Background Noise
+13.7.2 Noise Evolution Under Finite Measurement Operators
+13.7.3 Signal-to-Noise Ratios for Angular Spectra
+13.7.4 Noise-Limited Angular Resolution
+13.7.5 Angular-Order Dependence of Detectability
+
+13.8 Angular Momentum Measurement as an Inverse Problem
+13.8.1 Forward Electromagnetic Measurement Models
+13.8.2 Inverse Reconstruction of Angular Spectra
+13.8.3 Non-Uniqueness and Ill-Posedness
+13.8.4 Regularization and Physical Constraints
+13.8.5 Identifiability Limits Under Finite Observation
+
+13.9 Estimation Theory for Angular Electromagnetic Structure
+13.9.1 Estimators for Angular Spectral Content
+13.9.2 Bias, Variance, and Consistency
+13.9.3 Finite-Sample Effects and Stability
+13.9.4 Fisher Information and Estimation Geometry
+13.9.5 Cramér–Rao Bounds for Angular Estimation
+
+13.10 Mode Sorting and Structured Measurement Operators
+13.10.1 Mode Sorting as a Fixed Linear Measurement Operator
+13.10.2 Projection, Filtering, and Finite-Dimensional Restriction
+13.10.3 Loss, Imperfect Orthogonality, and Angular Redistribution
+13.10.4 Information Preservation and Operator Rank
+
+13.11 Fundamental Observation Limits
+13.11.1 Measurement as Electromagnetic Dimensional Reduction
+13.11.2 Irrecoverability of Truncated Angular Components
+13.11.3 Distinction Between Non-Observation and Physical Absence
+13.11.4 Geometry-Limited Electromagnetic Observability
+13.11.5 Preservation of Measurement-Operator Rank Under Processing
+
+13.12 Relation to Approximate and Paraxial Detection Models
+13.12.1 Emergence of Paraxial Detection Models
+13.12.2 Breakdown at High Angular Order
+13.12.3 Valid Regimes of Approximate Measurement Models
+13.12.4 Non-Paraxial Scope of the Present Formulation
+
+13.13 Foundational Examples
+13.13.1 Finite-Aperture Limits on Angular Spectral Reconstruction
+13.13.2 Fisher-Information Bounds for Angular Estimation
+13.13.3 Detector-Induced Angular Redistribution Under Finite Observation
+13.13.4 Information-Dimensionality Preservation Under Mode Sorting
+
+13.14 Structural Summary and Chapter Inheritance
+13.14.1 Measurement Structures Established in Chapter 13
+13.14.2 Concepts Deferred to Communication and Sensing Systems
+13.14.3 Transition to Guided Electromagnetic Propagation and Modal Systems
+
+Chapter 14 — Information, Degrees of Freedom, and Fundamental Capacity Limits
+
+14.0 Electromagnetic Information and Physical Dimensionality
+14.0.1 Physical Preconditions for Electromagnetic Information Theory
+14.0.2 Information Structures Inherited from Chapters 1–13
+14.0.3 Scope and Fundamental Constraints on Electromagnetic Information
+
+14.1 Information and Distinguishability in Classical Electromagnetics
+14.1.1 Electromagnetic Field Configurations as Physical States
+14.1.2 Distinguishability, Orthogonality, and Observable Structure
+14.1.3 Information as Measurement-Resolved Electromagnetic Structure
+14.1.4 Electromagnetic Labels Versus Independent Information Dimensions
+
+14.2 Electromagnetic Degrees of Freedom
+14.2.1 Source, Radiative, and Observable Degrees of Freedom
+14.2.2 Non-Equivalence of Source and Observable Dimensionality
+14.2.3 Geometric Mediation of Electromagnetic Dimensionality
+14.2.4 Finite-Dimensional Restriction of Electromagnetic Field Spaces
+
+14.3 Hilbert-Space Structure of Electromagnetic Information
+14.3.1 Radiative Field Spaces and Energy Norms
+14.3.2 Inner Products, Orthogonality, and Basis Independence
+14.3.3 Finite Apertures and Restricted Electromagnetic Subspaces
+14.3.4 Dimensionality and Representation Independence
+
+14.4 Radiation, Propagation, and Measurement as an Operator Chain
+14.4.1 Source-to-Field-to-Detector Mappings
+14.4.2 Compactness, Rank Limitation, and Observable Structure
+14.4.3 Singular-Value Decomposition of Electromagnetic Channels
+14.4.4 Singular Spectra and Effective Electromagnetic Dimensionality
+
+14.5 Spatial and Angular Bandlimitation
+14.5.1 Finite Apertures and Transverse Electromagnetic Bandwidth
+14.5.2 Angular Bandlimitation and Spectral Truncation
+14.5.3 Scaling of Mode Count with Electrical Size
+14.5.4 Equivalence of Angular and Plane-Wave Dimensionality
+14.5.5 Prolate Spheroidal Concentration and Effective Rank
+
+14.6 Basis Transformations and Dimensional Invariance
+14.6.1 Angular, Plane-Wave, and Alternative Electromagnetic Bases
+14.6.2 Basis Transformations in Finite Electromagnetic Subspaces
+14.6.3 Rank Invariance Under Basis Change
+14.6.4 Degeneracy, Relabeling, and Representation Equivalence
+
+14.7 Propagation and Electromagnetic Information Transport
+14.7.1 Free-Space Propagation as Unitary Redistribution
+14.7.2 Divergence, Conditioning, and Effective Rank
+14.7.3 Propagation in Linear and Random Media
+14.7.4 Decoherence, Mode Mixing, and Information Accessibility
+14.7.5 Preservation and Redistribution of Communication Dimensionality
+
+14.8 Detection, Estimation, and Information Extraction
+14.8.1 Measurement Operators and Rank Reduction
+14.8.2 Fisher Information and Effective Degrees of Freedom
+14.8.3 Estimation-Limited Communication Structure
+14.8.4 Coding and Reconstruction Under Finite Electromagnetic Rank
+
+14.9 Near-Field and Evanescent Electromagnetic Information
+14.9.1 Near-Field Enhancement of Electromagnetic Structure
+14.9.2 Evanescent Degrees of Freedom and Localization
+14.9.3 Distance-Dependent Evolution of Evanescent Structure
+14.9.4 Communication Limits of Evanescent Electromagnetic Fields
+
+14.10 Fundamental Capacity Structure of Electromagnetic Channels
+14.10.1 Finite Electromagnetic Operator Rank and Capacity
+14.10.2 Aperture-Limited Communication Dimensionality
+14.10.3 Multiplexing Under Fixed Electromagnetic Rank
+14.10.4 Distinction Between Angular Enumeration and Information Capacity
+14.10.5 Consequences for Structured Electromagnetic Communication Architectures
+
+14.11 Scaling Laws for Electromagnetic Information
+14.11.1 Aperture Size and Wavelength Scaling
+14.11.2 Distance Scaling and Conditioning
+14.11.3 Angular-Order Scaling Reinterpreted
+14.11.4 Effective Rank and Observable Dimensionality Scaling
+
+14.12 Relation to Shannon Theory and Probabilistic Information Models
+14.12.1 Electromagnetic Structure Prior to Probabilistic Communication Theory
+14.12.2 Emergence of Shannon Descriptions from Electromagnetic Dimensionality
+14.12.3 Geometric Determination of Communication State Spaces
+14.12.4 Limits of Purely Symbolic Channel Enumeration
+
+14.13 Geometry-Limited Electromagnetic Information Structure
+14.13.1 Geometry as the Determinant of Observable Dimensionality
+14.13.2 Basis Independence of Communication Dimensionality
+14.13.3 Dominance of Operator Rank Over Representation Strategy
+14.13.4 Fundamental Limits of Structured Electromagnetic Communication
+
+14.14 Foundational Examples
+14.14.1 Singular-Value Structure of a Finite Aperture Electromagnetic Channel
+14.14.2 Rank Invariance Under Angular and Plane-Wave Basis Transformations
+14.14.3 Distance-Dependent Conditioning of High-Order Angular Channels
+14.14.4 Multiplexing Under Fixed Electromagnetic Operator Rank
+
+14.15 Structural Summary and Chapter Inheritance
+14.15.1 Information Structures Established in Chapter 14
+14.15.2 Concepts Deferred to Guided and System-Level Communication Chapters
+14.15.3 Transition to Guided Electromagnetic Systems and Waveguides
+
+Chapter 15 — Angularly Structured Fields in Communication Systems
+
+15.0 Electromagnetic Communication as an Operator System
+15.0.1 Angular Structure and Finite Electromagnetic State Spaces
+15.0.2 Communication Structures Inherited from Chapters 9–14
+15.0.3 Scope and Physical Constraints of Electromagnetic Communication
+
+15.1 Communication with Electromagnetic Fields
+15.1.1 Messages Versus Electromagnetic Field Configurations
+15.1.2 Communicable Observables and Physical State Evolution
+15.1.3 Distinguishability Under Finite Measurement
+15.1.4 Physical Determination of Communication Dimensionality
+15.1.5 Observable Electromagnetic State Evolution Prior to Modulation
+
+15.2 Degrees of Freedom in Electromagnetic Communication
+15.2.1 Source, Radiative, and Measurable Degrees of Freedom
+15.2.2 Cascaded Electromagnetic Restriction and Communication Rank
+15.2.3 Finite Observation and Effective Communication Dimensionality
+15.2.4 Geometric Determination of Communicable Subspaces
+
+15.3 End-to-End Electromagnetic Communication Operators
+15.3.1 Source-to-Radiation-to-Detection Operator Chains
+15.3.2 Cascaded Operator Rank and Rank-Limiting Subsystems
+15.3.3 Singular-Value Structure of Communication Channels
+15.3.4 Mutual Information and Electromagnetic Eigenchannels
+15.3.5 Conditioning and Usable Communication Subspaces
+
+15.4 Encoding Information in Angular Structure
+15.4.1 Angular Encoding Versus Basis Choice
+15.4.2 Angular Indices as Coordinates in Finite Electromagnetic Spaces
+15.4.3 Orthogonality Under Ideal and Physical Conditions
+15.4.4 Dimensional Invariance Under Angular Basis Transformations
+
+15.5 Space–Time–Bandwidth Coupling in Electromagnetic Communication
+15.5.1 Temporal Bandwidth as a Degree-of-Freedom Constraint
+15.5.2 Joint Space–Time Electromagnetic Representations
+15.5.3 Temporal Evolution Under Angular Encoding
+15.5.4 Spatiotemporal Trade-Offs and Hidden-Bandwidth Limits
+
+15.6 Far-Field Communication with Angularly Structured Fields
+15.6.1 Aperture-Limited Spatial Bandwidth
+15.6.2 Angular-Order Divergence and Power Dilution
+15.6.3 Signal-to-Noise Degradation at High Angular Order
+15.6.4 Equivalence with Plane-Wave Multiplexing
+
+15.7 Near-Field and Reactive Electromagnetic Communication
+15.7.1 Evanescent Information and Reactive Structure
+15.7.2 Localization Versus Information Transport
+15.7.3 Distance Scaling in Reactive Communication Regimes
+15.7.4 Distance-Limited Communication Dimensionality
+
+15.8 Multiuser and Multiplexed Electromagnetic Communication
+15.8.1 Multiuser Communication as Subspace Allocation
+15.8.2 Angular Orthogonality and Physical Independence
+15.8.3 Interference After Electromagnetic Propagation
+15.8.4 Communication Under Shared Electromagnetic State Spaces
+
+15.9 Communication Through Linear and Random Media
+15.9.1 Angular Redistribution and Communication Rank
+15.9.2 Decoherence and Effective Dimensionality Reduction
+15.9.3 Angular-Order Fragility Under Material and Random Transport
+15.9.4 Communication Constraints Under Electromagnetic Propagation Media
+
+15.10 Receiver Architectures and Measurement Constraints
+15.10.1 Finite Apertures and Electromagnetic Sampling
+15.10.2 Mode Sorting and Full-Field Detection
+15.10.3 Measurement-Induced Reduction of Communication Dimensionality
+15.10.4 Estimation-Limited Communication Performance
+
+15.11 End-to-End Communication Failure Mechanisms
+15.11.1 Divergence-Limited Communication Range
+15.11.2 Noise-Limited Angular Detectability
+15.11.3 Turbulence-Limited Communication Dimensionality
+15.11.4 Cascaded Trade-Offs in Electromagnetic Communication Architectures
+
+15.12 Communication Regimes Under Angular Electromagnetic Encoding
+15.12.1 Numerical Conditioning Improvements
+15.12.2 Interference Management Through Basis Selection
+15.12.3 Basis-Indifferent Communication Regimes
+15.12.4 Adverse Angular Conditioning Regimes
+
+15.13 Fundamental Communication-Dimensionality Limits
+15.13.1 Free-Space Communication Dimensionality
+15.13.2 Communication Through Linear and Random Media
+15.13.3 Surface-Modified Electromagnetic Communication
+15.13.4 Finite Measurement and Detection Constraints
+15.13.5 Preservation of Electromagnetic Communication Rank
+
+15.14 Relation to Shannon Theory
+15.14.1 Electromagnetic State Spaces Prior to Probabilistic Models
+15.14.2 Emergence of Shannon Capacity from Electromagnetic Operators
+15.14.3 Geometric Determination of Communication Pre-Log Structure
+15.14.4 Limits of Symbolic Basis Enumeration
+
+15.15 Geometry-Limited Electromagnetic Communication Structure
+15.15.1 Basis Labels and Communication Dimensionality
+15.15.2 Geometric Dominance in Communication Systems
+15.15.3 Angular Momentum as a Representation of Electromagnetic State Spaces
+15.15.4 Fundamental Limits of Structured Electromagnetic Communication
+
+15.16 Foundational Examples
+15.16.1 End-to-End Singular-Value Structure of an Angular Communication Link
+15.16.2 Angular-Order Signal-to-Noise Collapse Under Fixed Power
+15.16.3 Multiuser Angular Communication Versus Conventional MU-MIMO
+15.16.4 Irrecoverability of Lost Communication Dimensionality Under Finite Observation
+
+15.17 Structural Summary and Chapter Inheritance
+15.17.1 Communication Structures Established in Chapter 15
+15.17.2 Concepts Deferred to Guided and Constrained Electromagnetic Systems
+15.17.3 Transition to Guided-Wave and Waveguide Electromagnetic Structures
+
+Chapter 16 — Sensing, Radar, and Scientific Applications of Angularly Structured Fields
+
+16.0 Electromagnetic Sensing as a Physical Inference Problem
+16.0.1 Inferential Ambiguities in Structured Electromagnetic Sensing
+16.0.2 Inferential Structures Inherited from Chapters 11–15
+16.0.3 Scope and Physical Constraints of Electromagnetic Sensing
+
+16.1 Information and Inference in Electromagnetic Sensing
+16.1.1 Physical Observables Versus Inferred Parameters
+16.1.2 Detectability, Estimability, and Identifiability
+16.1.3 Information as Distinguishability Under Measurement
+16.1.4 Electromagnetic Labels Versus Inferential Information
+
+16.2 Taxonomy of Electromagnetic Sensing Problems
+16.2.1 Detection Problems
+16.2.2 Parameter Estimation Problems
+16.2.3 Imaging and Reconstruction Problems
+16.2.4 Distinct Inferential Structures Across Sensing Regimes
+
+16.3 Scattering Theory Under Angularly Structured Illumination
+16.3.1 Targets as Linear Electromagnetic Scattering Operators
+16.3.2 Angular Momentum Exchange and Selection Rules
+16.3.3 Symmetry Matching Between Fields and Targets
+16.3.4 Coupling Selectivity Under Angular Electromagnetic Structure
+
+16.4 Radar Cross Section and Angular Sensitivity
+16.4.1 Radar Cross Section Under Structured Illumination
+16.4.2 Angular-Order-Dependent Scattering Modulation
+16.4.3 Detectability Versus Spatial Resolution
+16.4.4 Scattering Modulation Versus Information Dimensionality
+
+16.5 Resolution, Identifiability, and Electromagnetic Bandlimitation
+16.5.1 Aperture-Induced Spatial Bandlimits
+16.5.2 Diffraction-Limited Electromagnetic Identifiability
+16.5.3 Identifiable Parameters Below the Resolution Scale
+16.5.4 Conditioning Improvements Under Diffraction-Limited Inference
+
+16.6 Inverse Scattering and Electromagnetic Null Spaces
+16.6.1 Forward Scattering Operators
+16.6.2 Null Spaces and Non-Observable Structures
+16.6.3 Basis Choice and Inverse-Problem Conditioning
+16.6.4 Basis Transformations and Persistence of Null Spaces
+
+16.7 Parameter Estimation with Angularly Structured Fields
+16.7.1 Redistribution of Fisher Information Under Angular Encoding
+16.7.2 Angular-Order Sensitivity and Conditioning
+16.7.3 Trade-Offs with Noise, Divergence, and Decoherence
+16.7.4 Inferential Regimes of Improved Electromagnetic Conditioning
+16.7.5 Cramér–Rao Geometry and Estimator Structure
+
+16.8 Radar Systems and Angular Diversity
+16.8.1 Angular Diversity Versus Spatial Diversity
+16.8.2 Diversity Under Fixed Electromagnetic Dimensionality
+16.8.3 Practical Conditioning Improvements
+16.8.4 Range and Signal-to-Noise Constraints
+
+16.9 Imaging and Tomography with Angular Structure
+16.9.1 Angular Probing Versus Spatial Sampling
+16.9.2 Imaging Under Structured Electromagnetic Illumination
+16.9.3 Numerical Conditioning Under Fixed Electromagnetic Dimensionality
+16.9.4 Limits of Angularly Structured Electromagnetic Imaging
+
+16.10 Scientific Measurements and Fundamental Probing
+16.10.1 Angular Momentum Transfer and Mechanical Torque
+16.10.2 Metrological Limits of Torque Detection
+16.10.3 Probing Chirality and Rotational Symmetry
+16.10.4 Scaling with Aperture, Wavelength, and Angular Order
+
+16.11 Near-Field and Reactive-Field Sensing
+16.11.1 Evanescent Sensitivity Enhancement
+16.11.2 Localization Without Long-Range Transport
+16.11.3 Distance-Limited Observability of Near-Field Enhancement
+16.11.4 Reactive-Field Constraints on Electromagnetic Inference
+
+16.12 Multi-Target and Cluttered Electromagnetic Environments
+16.12.1 Mode Coupling in Complex Scattering Environments
+16.12.2 Angular Selectivity and Cross-Talk
+16.12.3 Instability of High-Order Angular Selectivity
+16.12.4 Clutter-Induced Conditioning Degradation
+
+16.13 End-to-End Failure Mechanisms in Electromagnetic Sensing
+16.13.1 Noise-Limited Angular Sensitivity
+16.13.2 Divergence-Limited Interaction
+16.13.3 Turbulence-Limited Coherence
+16.13.4 Stability Limits of High-Order Angular Sensing
+
+16.14 Fundamental Inferential Limits of Electromagnetic Sensing
+16.14.1 Bandlimited Structure of Electromagnetic Resolution
+16.14.2 Finite Electromagnetic Dimensionality Under Structured Illumination
+16.14.3 Inferential Conditioning Versus Communication Dimensionality
+16.14.4 Preservation of Electromagnetic Information Rank
+
+16.15 Inferential Advantages Under Angular Electromagnetic Structuring
+16.15.1 Symmetry-Matched Electromagnetic Probing
+16.15.2 Conditioning Improvements in Inverse Problems
+16.15.3 Robustness in Specialized Estimation Tasks
+16.15.4 Limits of Inferential Enhancement
+
+16.16 Geometry-Limited Structure of Electromagnetic Inference
+16.16.1 Why Estimation Is Distinct from Communication
+16.16.2 Sensitivity Redistribution Under Angular Structuring
+16.16.3 Geometry-Limited Electromagnetic Inference
+16.16.4 Fundamental Limits of Structured Electromagnetic Sensing
+
+16.17 Foundational Examples
+16.17.1 Fisher-Information Redistribution Under Structured Illumination
+16.17.2 Radar Cross-Section Modulation Versus Detectability
+16.17.3 Inverse Scattering and Persistence of Electromagnetic Null Spaces
+16.17.4 Near-Field Sensitivity Enhancement Without Capacity Gain
+
+16.18 Structural Summary and Chapter Inheritance
+16.18.1 Inferential Structures Established in Chapter 16
+16.18.2 Concepts Deferred to Emerging and Advanced Electromagnetic Systems
+16.18.3 Transition to Advanced Electromagnetic Frontiers and Open Problems
+
+Chapter 17 — Astrophysical and Remote Sensing with Angularly Structured Electromagnetic Fields
+
+17.0 Observational Electromagnetics and Passive Angular Inference
+17.0.1 Distinction Between Engineered Transmission and Observational Probing
+17.0.2 Observational Structures Inherited from Chapters 11–16
+17.0.3 Scope and Constraints of Passive Electromagnetic Observation
+17.0.4 Angular Electromagnetic Structure as an Emergent Observational Observable
+
+17.1 Foundations of Angular Structure in Natural Electromagnetic Fields
+17.1.1 Angular Spectral Representations of Natural Electromagnetic Fields
+17.1.2 Angular Correlation and Coherence Functions
+17.1.3 Statistical Operator Definitions of Angular Momentum Content
+17.1.4 Angular Labels Versus Observable Angular Statistics
+17.1.5 Physical Admissibility of Natural Angular Spectra
+
+17.2 Broadband, Incoherent, and Partially Coherent Radiation
+17.2.1 Spectral Averaging of Angular Observables
+17.2.2 Bandwidth-Induced Collapse of Angular Resolution
+17.2.3 Temporal Coherence and Angular Observability
+17.2.4 Limits of Monochromatic and Instantaneous-Phase Descriptions
+17.2.5 Spatial Coherence Formation and Angular Correlation Recovery
+
+17.3 Natural Emergence of Angular Electromagnetic Structure
+17.3.1 Rotating and Asymmetric Natural Emitters
+17.3.2 Extended Incoherent Sources and Collective Angular Statistics
+17.3.3 Scattering-Induced Angular Correlations
+17.3.4 Turbulence-, Vorticity-, and Rotation-Induced Angular Structure
+17.3.5 Finite-Energy and Realizability Constraints on Natural Angular Fields
+
+17.4 Long-Range Propagation Through Natural Media
+17.4.1 Stratified and Inhomogeneous Propagation Environments
+17.4.2 Cumulative Scattering and Multipath Effects
+17.4.3 Redistribution of Angular Structure During Propagation
+17.4.4 Loss of Phase Coherence and Angular Localization
+17.4.5 Propagation-Induced Modification Without Dimensionality Increase
+
+17.5 Angular Structure as a Diagnostic of Source Symmetry
+17.5.1 Mapping Between Source Symmetry and Angular Statistics
+17.5.2 Degeneracies Among Rotation, Geometry, and Scattering
+17.5.3 Conditions Under Which Angular Observables Carry Information
+17.5.4 Limits of Source Reconstruction from Angular Statistics Alone
+
+17.6 Scattering-Based Remote Sensing with Angular Structure
+17.6.1 Scattering from Rough Surfaces, Aerosols, and Plasmas
+17.6.2 Angular Redistribution Under Anisotropy and Surface Roughness
+17.6.3 Sensitivity to Vorticity and Rotational Structure
+17.6.4 Structural Signatures Versus Volumetric Reconstruction
+
+17.7 Statistical Structure of Angular Electromagnetic Observation
+17.7.1 Ensemble-Averaged Angular Spectra
+17.7.2 Angular Correlation and Coherence Functions
+17.7.3 Stability and Robustness of Angular Observables
+17.7.4 Statistical Invariants Under Propagation and Observation
+
+17.8 Inverse Problems, Degeneracy, and Non-Uniqueness
+17.8.1 Many-to-One Mapping Between Physical Systems and Angular Observables
+17.8.2 Ill-Posedness of Angular Electromagnetic Inversion
+17.8.3 Auxiliary Observables and Prior Constraints
+17.8.4 Non-Uniqueness of General Angular Reconstruction
+17.8.5 Reduction of Hypothesis Spaces Without Guaranteed Uniqueness
+
+17.9 Estimation and Noise Sensitivity of Angular Observables
+17.9.1 Estimation of Angular Statistics from Finite Observations
+17.9.2 Noise-Induced Bias and Variance
+17.9.3 Signal-to-Noise Scaling with Aperture and Integration Time
+17.9.4 Statistical Recoverability of Angular Observables
+
+17.10 Noise-Dominated Observation Regimes
+17.10.1 Detectability Thresholds for Angular Observables
+17.10.2 Collapse of High-Order Angular Statistics Under Noise
+17.10.3 Fundamental Limits in Low-SNR Angular Observation
+17.10.4 Statistical Unrecoverability of Weak Angular Structure
+
+17.11 Instrumentation Geometry and Finite Observation
+17.11.1 Finite-Aperture Observation Effects
+17.11.2 Partial Angular Sampling and Projection Bias
+17.11.3 Coordinate Dependence of Angular Inference
+17.11.4 Restricted Observation Versus Complete Angular Eigenstructure
+
+17.12 Reference Frames and Observational Geometry
+17.12.1 Observer-Defined Reference Axes
+17.12.2 Transformations Between Source and Detector Frames
+17.12.3 Frame Dependence of Angular Momentum Attribution
+17.12.4 Geometric Ambiguities in Angular Interpretation
+
+17.13 Comparison with Conventional Electromagnetic Observables
+17.13.1 Angular Structure Versus Polarization
+17.13.2 Angular Structure Versus Spatial Coherence
+17.13.3 Complementarity, Redundancy, and Observational Trade-Offs
+17.13.4 Distinct Inferential Roles of Electromagnetic Observables
+
+17.14 Canonical Astrophysical and Remote-Sensing Scenarios
+17.14.1 Rotating Astrophysical Emitters
+17.14.2 Turbulent Atmospheric and Ionospheric Propagation
+17.14.3 Planetary Radar Scattering
+17.14.4 Astronomical Scattering Environments
+
+17.15 Fundamental Observability Limits in Angular Electromagnetic Probing
+17.15.1 Finite Electromagnetic Dimensionality Under Passive Observation
+17.15.2 Resolution and Information Limits Under Finite Observation
+17.15.3 Conservation and Causal Structure of Astrophysical Observation
+17.15.4 Limits of Angularly Structured Electromagnetic Inference
+
+17.16 Relation to Communication and Sensing Systems
+17.16.1 Observational Inference Versus Engineered Multiplexing
+17.16.2 Consistency with Communication-Dimensionality Theory
+17.16.3 Passive Observation Under Finite Electromagnetic Rank
+17.16.4 Distinction Between Diagnostic and Communication Roles of Angular Structure
+
+17.17 Physically Admissible Interpretation of Angular Electromagnetic Observables
+17.17.1 What Angular Structure Can Reveal
+17.17.2 What Angular Structure Cannot Reveal
+17.17.3 Angular Electromagnetic Structure as a Diagnostic Observable
+17.17.4 Absence of Additional Electromagnetic Dimensionality from Angular Labeling
+
+17.18 Foundational Examples
+17.18.1 Angular Correlation Degradation in Broadband Astrophysical Radiation
+17.18.2 Degeneracy Between Source Rotation and Scattering Geometry
+17.18.3 Noise-Limited Detectability of High-Order Angular Statistics
+17.18.4 Projection Bias from Finite-Aperture Observation
+
+17.19 Structural Summary and Chapter Inheritance
+17.19.1 Observational Structures Established in Chapter 17
+17.19.2 Concepts Deferred to Emerging Frontiers and Open Problems
+17.19.3 Transition to Outlook, Synthesis, and Future Directions
+
+Chapter 18 — Limits, Judgment, and the Physical Meaning of Angularly Structured Fields
+
+18.0 Physical Interpretation Under Maxwellian Electrodynamics
+18.0.1 Necessity of Physically Admissible Interpretation
+18.0.2 Interpretive Structures Inherited from Chapters 1–17
+18.0.3 Scope and Role of Proven Electromagnetic Constraints
+
+18.1 Physical Limits in Electromagnetics
+18.1.1 Mathematical Limits Versus Physical Limits
+18.1.2 Absolute, Conditional, and Apparent Limits
+18.1.3 Geometry-Induced Electromagnetic Constraints
+18.1.4 Physical Limits Versus Engineering Trade-Offs
+
+18.2 Hierarchy of Established Electromagnetic Results
+18.2.1 Field-Theoretic Results
+18.2.2 Operator-Theoretic Results
+18.2.3 Measurement- and Estimation-Theoretic Results
+18.2.4 Information- and Communication-Theoretic Results
+18.2.5 Hierarchy of Validity Across Electromagnetic Frameworks
+
+18.3 Assumptions Underlying the Present Electromagnetic Framework
+18.3.1 Linearity of Maxwell Electrodynamics
+18.3.2 Passivity, Causality, and Reciprocity
+18.3.3 Finite Apertures and Finite Bandwidth
+18.3.4 Classical Electromagnetic Fields and Measurements
+
+18.4 Physical Regimes Beyond the Present Framework
+18.4.1 Nonlinear Electromagnetic Regimes
+18.4.2 Active and Gain-Assisted Media
+18.4.3 Time-Variant and Non-Stationary Systems
+18.4.4 Quantum Extensions Beyond Classical Electromagnetic Dimensionality
+
+18.5 Existence, Realizability, Observability, and Inferability
+18.5.1 Fields That Cannot Exist
+18.5.2 Fields That Exist but Cannot Be Generated
+18.5.3 Fields That Exist but Cannot Be Measured
+18.5.4 Inferability Under Finite Electromagnetic Observation
+18.5.5 Consequences of Category Misclassification
+18.5.6 Hierarchical Consistency Under Finite Electromagnetic Dimensionality
+
+18.6 Angular Momentum Reinterpreted
+18.6.1 Angular Momentum as a Symmetry Generator
+18.6.2 Conservation Structure Under Rotational Symmetry
+18.6.3 Canonical Versus Observable Angular Momentum
+18.6.4 Angular Symmetry Structure Versus Communication Dimensionality
+
+18.7 Modes, Bases, and Representation Dependence
+18.7.1 Basis Choice and Physical Reality
+18.7.2 Degeneracy, Relabeling, and Over-Counting
+18.7.3 Apparent Distinctiveness of Angular Representations
+18.7.4 Lessons from Alternative Complete Electromagnetic Bases
+
+18.8 Electromagnetic Degrees of Freedom Under Finite Observability
+18.8.1 Source, Field, and Measurement Degrees of Freedom
+18.8.2 Fundamental Restrictions on Each Dimensional Layer
+18.8.3 Irrecoverability of Suppressed Electromagnetic Dimensionality
+18.8.4 Finite Geometry as the Origin of Observability Limits
+
+18.9 Sources of Misinterpretation in Electromagnetic Communication
+18.9.1 Information-Theoretic Formalism Without Electromagnetic Constraints
+18.9.2 Mode Enumeration Versus Channel Dimensionality
+18.9.3 Neglect of Propagation and Measurement Restrictions
+18.9.4 Structural Origins of Persistent Dimensionality Misinterpretations
+
+18.10 Conditional Validity of Sensing Improvements
+18.10.1 Conditioning Versus Information Gain
+18.10.2 Symmetry Matching and Inferential Advantage
+18.10.3 Inferential Conditioning Under Fixed Electromagnetic Dimensionality
+18.10.4 Limits of Angularly Structured Sensing Enhancement
+
+18.11 Trade-Off Structures in Angular Electromagnetic Fields
+18.11.1 Structure Versus Robustness
+18.11.2 Structure Versus Range
+18.11.3 Structure Versus Detectability
+18.11.4 Trade-Off Intensification at High Angular Order
+
+18.12 Canonical Synthesis Theorem
+18.12.1 Statement of the Canonical Synthesis Theorem
+18.12.2 Proof by Aggregation of Prior Electromagnetic Results
+18.12.3 Consequences for Communication and Sensing Dimensionality
+18.12.4 Interpretation Under Finite Electromagnetic Geometry
+
+18.13 What Angularly Structured Electromagnetic Fields Are Useful For
+18.13.1 Symmetry-Aware Electromagnetic Design
+18.13.2 Numerical Conditioning and Inverse Problems
+18.13.3 Fundamental Measurements and Scientific Probing
+18.13.4 Structured Electromagnetic Interaction and Selectivity
+
+18.14 Electromagnetic Tasks Unaltered by Angular Structuring
+18.14.1 Communication Dimensionality Beyond Finite Electromagnetic Rank
+18.14.2 Creation of Additional Electromagnetic State Dimensions
+18.14.3 Diffraction-Limited Electromagnetic Resolution Structure
+18.14.4 Limits of Angular Basis Relabeling
+
+18.15 Historical Fragmentation and Conceptual Separation
+18.15.1 Fragmentation Across Electromagnetic Communities
+18.15.2 Separation Between Operator Theory and Applications
+18.15.3 Confusion Between Mathematical Formalism and Physical Interpretation
+18.15.4 Need for Unified Maxwellian Interpretation
+
+18.16 Physically Admissible Interpretation of Angular Electromagnetic Structure
+18.16.1 Angular Structure as Symmetry-Organized Electromagnetic Representation
+18.16.2 Governing Role of Conservation Laws and Finite Geometry
+18.16.3 Measurement-Limited Electromagnetic Observability
+18.16.4 Physical Meaning of Angular Electromagnetic Structure
+
+18.17 Foundational Judgment and Interpretation Problems
+18.17.1 Mathematical Admissibility Without Physical Realizability
+18.17.2 Conditioning Gain Versus Degree-of-Freedom Gain
+18.17.3 Operator-Theoretic Reformulation of Angular Communication Claims
+18.17.4 Physical Consequences of Departing from Classical Maxwellian Structure
+
+18.18 Structural Summary and Monograph-Level Synthesis
+18.18.1 Interpretive Structures Established in Chapter 18
+18.18.2 Global Maxwellian Synthesis Across Chapters 1–18
+18.18.3 Transition to Final Outlook and Open Electromagnetic Frontiers
+
+Chapter 19 — Open Problems and Future Directions of Angularly Structured Electromagnetic Fields
+
+19.0 Scope Conditions for Future Electromagnetic Research
+19.0.1 Risks of Ill-Posed Speculative Extensions
+19.0.2 Logical Dependence on Chapters 1–18
+19.0.3 Scope Conditions for Physically Admissible Extensions
+
+19.1 Open and Closed Problems in Angular Electromagnetics
+19.1.1 Physics-Closed Versus Physics-Open Questions
+19.1.2 Mathematical Open Problems Versus Maxwellianly Closed Problems
+19.1.3 Engineering Difficulty Versus Fundamental Limitation
+19.1.4 Role of Terminology in Electromagnetic Interpretation
+
+19.2 Problems Closed Under Present Maxwellian Assumptions
+19.2.1 Far-Field Communication Dimensionality Under Linear Maxwell Propagation
+19.2.2 Dimensionality Under Basis and Geometry Transformations
+19.2.3 Bandlimited Electromagnetic Resolution Structure
+19.2.4 Passive Electromagnetic Media Under Finite-Dimensional Maxwellian Structure
+
+19.3 Open Problems Within Classical Maxwell Theory
+19.3.1 Optimal Finite-Aperture Electromagnetic Field Design
+19.3.2 Conditioning-Optimal Angular Representations
+19.3.3 Robust Angular Structure in Strongly Inhomogeneous Media
+19.3.4 Finite-Distance and Finite-Sample Electromagnetic Regimes
+19.3.5 Stability of Structured Electromagnetic Observation Under Realistic Constraints
+
+19.4 Mathematical Open Problems in Angular Electromagnetics
+19.4.1 Spectral Theory of Truncated Maxwell Operators
+19.4.2 Angular Structure in Strongly Disordered Media
+19.4.3 Sharp Finite-Sample Estimation Bounds
+19.4.4 Non-Normal Maxwell Operators and Spectral Evolution
+19.4.5 Effective Electromagnetic Theories Across Spatial Scales
+
+19.5 Physical Regimes Beyond Established Maxwellian Structure
+19.5.1 Nonlinear Electromagnetic Regimes
+19.5.2 Gain-Assisted and Active Electromagnetic Media
+19.5.3 Time-Variant and Non-Stationary Systems
+19.5.4 Non-Reciprocal and Non-Hermitian Electromagnetics
+19.5.5 Breakdown and Persistence of Classical Maxwellian Approximations
+
+19.6 Nonlinear Electromagnetics and Angular Structure
+19.6.1 Consequences of Linearity in Earlier Chapters
+19.6.2 Nonlinear Redistribution of Angular Electromagnetic Structure
+19.6.3 Nonlinearity Under Finite Electromagnetic Observability
+19.6.4 Genuine Open Questions in Nonlinear Angular Electrodynamics
+
+19.7 Quantization and Angular Electromagnetic Structure
+19.7.1 Quantized Angular Momentum Under Electromagnetic Quantization
+19.7.2 Persistence of Classical Dimensionality Under Quantization
+19.7.3 Quantum Regimes Beyond Classical Maxwellian Closure
+19.7.4 Necessity of Re-Establishing Dimensionality Under Quantization
+
+19.8 Near-Field and Subwavelength Electromagnetic Frontiers
+19.8.1 Evanescent Electromagnetic Structure Under Subwavelength Observation
+19.8.2 Active Near-Field Control and Manipulation
+19.8.3 Distance Scaling Under Near-Field Electromagnetic Evolution
+19.8.4 Open Questions in Reactive Electromagnetic Structuring
+
+19.9 Experimental Open Problems
+19.9.1 Large-Aperture Phase and Coherence Control
+19.9.2 Precision Torque and Angular Momentum Transfer
+19.9.3 Angular Spectral Localization and Stability Limits
+19.9.4 Measurement Stability in High-Order Angular Regimes
+
+19.10 Interpretive Consistency in Future Electromagnetic Extensions
+19.10.1 Typical Assumption Violations
+19.10.2 Indicators of Representation-Dependent Misclassification
+19.10.3 Electromagnetic Consistency Analysis for Future Claims
+19.10.4 Distinguishing Physical Extensions from Representation Reinterpretations
+
+19.11 Physics, Geometry, and Representation
+19.11.1 Fields Versus Labels
+19.11.2 Geometry Versus Encoding
+19.11.3 Risks of Representation-Dependent Language
+19.11.4 Persistence of Geometric Electromagnetic Constraints
+
+19.12 Physically Admissible Future Research Directions
+19.12.1 Designing Within Finite Electromagnetic Rank Limits
+19.12.2 Angular Structuring for Inferential Conditioning
+19.12.3 Geometric Determination of Electromagnetic Dimensionality
+19.12.4 Constraint-Preserving Electromagnetic Innovation
+
+19.13 Outlook Under Constraint-Preserving Extensions
+19.13.1 Future Developments Under Explicit Maxwellian Assumptions
+19.13.2 Extensions Requiring Modified Physical Assumptions
+19.13.3 Preservation of Established Electromagnetic Dimensionality Results
+19.13.4 Physically Disciplined Future Electromagnetic Research
+
+19.14 Assumptions and Maxwellian Validity Structure
+19.14.1 Assumptions Maintained Throughout the Monograph
+19.14.2 Assumptions Explicitly Relaxed in Speculative Extensions
+19.14.3 Structures Requiring Re-Derivation Under Assumption Changes
+19.14.4 Validity Hierarchy of Maxwellian Electromagnetic Results
+
+19.15 Foundational Research Audits and Classification Problems
+19.15.1 Classification of Claimed Electromagnetic Dimensionality Extensions
+19.15.2 Distinguishing Open and Closed Electromagnetic Problems
+19.15.3 Reformulation of Quantum Angular Claims in Classical Operator Language
+19.15.4 Construction of Physically Admissible Electromagnetic Research Programs
+
+19.16 Final Monograph Synthesis and Outlook
+19.16.1 Unified Maxwellian Interpretation of Angular Electromagnetic Structure
+19.16.2 Finite Geometry, Conservation, and Observability as Organizing Principles
+19.16.3 Angular Electromagnetic Structure as Symmetry-Organized Field Representation
+19.16.4 Outlook for Future Electromagnetic Theory and Applications
+ 
