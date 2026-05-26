@@ -6,84 +6,152 @@
 \section{Introduction and Scope}
 \label{sec:ch10}
 
+Chapter~\ref{ch:01} introduces the conceptual framework used throughout the
+monograph. The aim at this stage is to place the central question in clear
+mathematical and physical terms before proceeding to detailed operator and
+spectral developments. Section~\ref{sec:ch101} describes the scope and role of
+the chapter, Section~\ref{sec:ch102} presents angular structure as a consequence
+of Maxwell dynamics under symmetry and boundary conditions, and
+Section~\ref{sec:ch103} specifies the admissibility class and validity domain
+for the results that follow. This sequence provides a coherent foundation for
+reading the subsequent derivations with appropriate assumptions and
+interpretation.
+
 
 \subsection{Scope and role of Chapter 1}
 \label{sec:ch101}
 % TOC tag: [HOME]
 
-This monograph is addressed to advanced graduate students, doctoral researchers,
-practicing scientists, and professional engineers in electromagnetics, optics,
-antennas, wave physics, applied mathematics, and related disciplines.
-The reader is assumed to be familiar with Maxwell's equations, vector calculus,
-linear algebra, differential equations, and classical electromagnetic theory.
-The development nevertheless proceeds from first principles in a manner that is
-mathematically rigorous and physically unified: angular structure is not taken
-as an application-specific adjunct to antenna or beam theory, but as a
-consequence of Maxwellian field dynamics, symmetry, and observability.
+This monograph is written for advanced graduate students, doctoral researchers,
+and practicing scientists or engineers who already command Maxwell theory and
+vector analysis, and who require a proof-structured treatment of angular
+electromagnetic organization \cite{jackson1999,harrington2001,collin2001}. The
+chapter mandate is not to compile device narratives; it is to establish the
+physical and mathematical language under which later statements are judged
+admissible, realizable, and observable.
 
-The work is organized in three volumes.
-Volume~I (Chapters~1--4) establishes the theoretical foundations developed in
-the present chapter and carried through realizability and spectral truncation.
-Volume~II (from Chapter~5 onward) applies these foundations to physically
-realizable systems---radiation mechanisms, discrete and continuous radiators,
-engineered surfaces, propagation in homogeneous and random media, and
-field--matter interaction---without re-deriving the operator and spectral
-framework laid down here.
-Volume~III treats measurement, information, sensing, and the physical
-interpretation of angular structure in communication and observation.
-Forward references to later volumes name topics only; their proofs and
-operators appear in the chapters cited in the Chapter Summary
-(Section~\ref{sec:ch17}).
+Chapter~\ref{ch:01} has a precise foundational function within Volume~I. It
+establishes, in one place, the statements that subsequent chapters will invoke
+without re-derivation: Maxwellian field structure in the adopted phasor
+convention and SI system, conservation relations for energy and momentum
+transport, and the distinction between representational descriptors and
+operational observables. The chapter is therefore not an orientation survey; it
+is the formal base from which later operator and spectral developments are read.
 
-\paragraph{Role of Chapter~1 within Volume~I.}
-Chapter~1 has a deliberately restricted mandate.
-It introduces the \emph{physical and conceptual} language in which the remainder
-of Volume~I, and ultimately the monograph, is written: what is meant by angular
-structure, which conservation laws constrain it, how rotations and gauges affect
-its definition, and which quantities are in principle measurable.
-The chapter does \emph{not} construct the operator-theoretic or spectral apparatus
-that Chapters~2--4 provide.
-Accordingly, the reader should not expect in this chapter a development of
-radiation operators, Green-function mappings, Hilbert-space formulations,
-\(\mathrm{SO}(3)\) eigenfield theory, vector spherical harmonics, completeness and
-normalization of angular bases, or the truncation and realizability limits
-associated with finite sources and apertures.
-Those structures are forward-linked here only to preserve a single, forward-moving
-logical order; their formal definitions and proofs begin in
-Sections~\ref{sec:ch21}--\ref{sec:ch411} of Volume~I.
+The assumptions adopted here are classical and explicit. The analysis remains
+within Maxwell electrodynamics with admissible sources, admissible boundary
+data, and the time convention \(\exp(-\jj\omega t)\). The intended reader is
+expected to possess graduate-level preparation, yet the exposition remains
+derivationally complete at each theorem-bearing step so that inferential
+continuity is preserved and technical conclusions are traceable to stated
+premises.
 
-\paragraph{Angular structure in the sense of this monograph.}
-Throughout the text, \emph{angular structure} denotes the complete organization
-of an electromagnetic field with respect to spatial direction, rotational
-symmetry, angular-momentum content, and angular spectral composition, as
-governed by Maxwell's equations and by the boundary conditions and measurement
-contexts that select observable subspaces of the field.
-Chapter~\ref{ch:01} makes this definition operative at the level of conservation
-laws and symmetry; the spectral and operator realizations follow in later
-chapters.
+Its scope boundary is equally deliberate. This chapter does not construct the
+full operator-domain program developed in Chapter~2, the eigenfield
+representation machinery developed in Chapter~3, or the finite-geometry
+realizability limits developed in Chapter~4. Those subjects are treated at
+their designated proof homes and then inherited forward by reference, in
+accordance with the forward progression architecture of the manuscript.
 
-\paragraph{Notation and conventions.}
-Unless otherwise stated, time-harmonic fields use the phasor convention
-\(\exp(-\mathrm{j}\omega t)\), and all quantities are expressed in SI units.
-Symbols for fields, sources, operators, and angular harmonics are introduced at
-their first formal appearance; the consolidated tables appear in the front matter
-and in Appendix notation summaries as the manuscript permits.
-Details of the phasor map, units, and label conventions are fixed in the project
-notation specification and are not repeated in subsequent chapters except where
-amendment is explicitly noted.
+Within these limits, the chapter clarifies the working meaning of angular
+electromagnetic structure: directional organization, rotational covariance, and
+angular-momentum content are interpreted through conservation-governed field
+quantities and measurement procedures, rather than through nomenclature based on
+phase pattern alone.
 
-The following section explains why angular structure arises from Maxwellian
-symmetry and boundary conditions rather than from a postulated mode catalogue.
+This scope statement leads directly to Section~\ref{sec:ch102}, where the
+origin of angular structure is developed from Maxwell symmetry and boundary
+constraints.
 
 
 \subsection{Angular structure from Maxwell symmetry and boundary conditions}
 \label{sec:ch102}
 % TOC tag: [HOME]
 
+Angular structure is introduced here through Maxwell boundary-value dynamics
+rather than through an a priori catalogue of modal labels
+\cite{jackson1999,harrington2001}. Let \(\Omega\subset\mathbb{R}^3\) denote the
+analysis region, \(\Gamma=\partial\Omega\) its boundary, \(\chi\) the
+constitutive descriptor of the medium model, and \(\Jimp\) the impressed
+electric current density. Under these declarations, the phasor fields are
+written as
+\begin{equation}
+\label{eq:ch1.maxwell-map}
+(\E,\H)=\mathcal{M}_{\Omega,\Gamma,\chi}\!\left[\Jimp\right],
+\end{equation}
+where \(\mathcal{M}_{\Omega,\Gamma,\chi}\) denotes the Maxwell map from
+admissible source data to admissible field pairs. Equation
+\eqref{eq:ch1.maxwell-map} assigns angular organization to the image structure
+of a constrained operator, not to coordinate naming conventions. Physically,
+Eq.~\eqref{eq:ch1.maxwell-map} places angular behavior within the same causal
+framework that governs electromagnetic transport and exchange
+\cite{jackson1999,collin2001}.
+
+To separate transport observables from representation coordinates, define
+\begin{equation}
+\label{eq:ch1.angular-observable-map}
+\mathcal{A}(\E,\H)=\big(\rho_J,\Phi_J,\Sigma\big),
+\end{equation}
+where \(\rho_J\) denotes an angular-momentum density observable, \(\Phi_J\)
+denotes angular-momentum flux across a specified surface, and \(\Sigma\) denotes
+chosen angular representation coefficients. Equation
+\eqref{eq:ch1.angular-observable-map} distinguishes three non-equivalent levels
+of description: local storage through \(\rho_J\), transported content through
+\(\Phi_J\), and representational decomposition through \(\Sigma\). The
+operational interpretation follows directly from
+Eq.~\eqref{eq:ch1.angular-observable-map}: phase structure alone is not taken as
+evidence of transported angular momentum unless flux and conservation accounting
+support that conclusion \cite{jackson1999,harrington2001}.
+
+The symmetry consequence can now be stated in compact form. When the effective
+Maxwell map commutes with active rotational action, rotationally adapted field
+structure is preserved; when this commutation is broken by geometry,
+constitutive anisotropy, or boundary restriction, angular coupling and spectral
+redistribution appear as structural consequences \cite{harrington2001,collin2001}.
+In Chapter~\ref{ch:01}, this result is established at principle level; rigorous
+operator proofs and representation-level elaboration are deferred to their HOME
+developments in later chapters.
+
 
 \subsection{Assumptions, finite-energy admissibility, and domain of validity}
 \label{sec:ch103}
 % TOC tag: [HOME]
+
+The present chapter is formulated on an admissible finite-energy field class.
+For the declared analysis region \(\Omega\subset\mathbb{R}^3\), the working
+condition is
+\begin{equation}
+\label{eq:ch1.energy-class}
+\int_{\Omega}\!\left(\E^*\!\cdot\E+\H^*\!\cdot\H\right)\,dV<\infty,
+\end{equation}
+where \((\cdot)^*\) denotes complex conjugation, and \(dV\) is the volume
+element on \(\Omega\). Equation~\eqref{eq:ch1.energy-class} identifies the
+function class in which field inner products, norm-based estimates, and later
+projection arguments are mathematically well-posed. At the level of physical
+interpretation, Eq.~\eqref{eq:ch1.energy-class} excludes infinite-energy
+idealizations from the admissible state space and thereby enforces realizable
+electromagnetic modeling \cite{jackson1999,collin2001}.
+
+The accompanying assumptions are fixed throughout Chapter~\ref{ch:01}: SI unit
+normalization, phasor convention \(\exp(-\jj\omega t)\) with \(\omega>0\), and
+linear local constitutive closure unless an explicit exception is introduced in
+a later HOME section. Every symbol is defined at first appearance and used in
+the notation regime locked for Volume~I.
+
+The validity boundary is therefore explicit and non-ambiguous. Strongly
+nonlinear response, active gain media, rapidly time-varying constitutive laws,
+and quantum-field corrections are outside the theorem scope of this chapter.
+Such regimes are referenced only where their formal treatment is assigned in the
+forward map \cite{harrington2001,jackson1999}. This admissibility statement
+completes Subsection~\ref{sec:ch103} and provides the closure required for the
+Section~\ref{sec:ch10} bridge that follows.
+
+\paragraph{Section 1.0 summary and bridge.}
+Section~\ref{sec:ch10} has now fixed the scope, clarified the physical origin
+of angular structure, and declared the admissibility regime under which
+subsequent claims are meaningful. With this framework in place, the chapter
+proceeds to Section~\ref{sec:ch11}, where Maxwell equations and conservation
+laws are developed as the first formal backbone of the monograph.
 
 
 \section{Maxwell Theory and Conservation Laws}

@@ -9,8 +9,8 @@ meta:
   status: LOCKED
   locked_date: 2026-05-25
   total_chapters: 19
-  total_subsections_v22: 815
-  authoritative_toc: TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt
+  total_subsections_v3: 815
+  authoritative_toc: TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt
   ownership_reference: TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt
   criterion: >
     Entire TOC drafted forward-only; every mathematical and physical detail

@@ -9,6 +9,18 @@ Every drafted subsection in all 19 chapters shall follow this exact order.
 5. Boundary of validity: where the derivation stops being valid.
 6. Forward link: one sentence that motivates the next subsection.
 
+Section-first drafting order (mandatory):
+For each section (`X.0`, `X.1`, `X.2`, ...), drafting sequence is:
+1) section-level introductory framing paragraph(s),
+2) subsection drafting in TOC order (`X.y.1`, `X.y.2`, ...),
+3) section-level summative bridge paragraph(s).
+Directly starting from a subsection without section framing is non-compliant.
+
+Depth floor requirement:
+Each subsection must begin from accessible initial mathematical understanding for the target graduate reader, then build to substantial mathematical depth with explicit intermediate steps.
+Global quality requirement:
+All chapter drafts must reflect classical monograph standards of depth, density, formal construction, and page-level appearance expected at Harrington/Pozar/Collin/Balanis/Jackson/Griffiths level.
+
 ## Hard constraints
 
 - No bullet-list exposition in manuscript body text.
@@ -18,6 +30,11 @@ Every drafted subsection in all 19 chapters shall follow this exact order.
 - Every subsection must contain at least one explicit sentence stating what is newly established in that subsection.
 - Opening and closing paragraphs of each subsection must be uniquely framed; repeated opening/closing templates across subsections are disallowed.
 - For Volume I chapters, each parent section (`X.0`, `X.1`, `X.2`, ...) must include an introductory framing paragraph and a summative framing paragraph around its subsection body.
+- Every equation variable, parameter, operator symbol, and domain qualifier must be explicitly defined before or at first use.
+- Every major equation must be explained twice: first in mathematical-function terms (operator/algebraic role), then in detailed physical terms (field meaning, measurable consequence, and regime relevance).
+- Equation-explanation sentence construction must remain varied across subsections; repetitive explanatory templates are disallowed.
+- Equation and reference numbering must be chapter-wise and strictly increasing through subsection flow within each chapter.
+- Prose style is globally locked to Version A classical monograph tone: professional, measured, authoritative, and reader-friendly; avoid directive/command-style diction.
 
 ## Depth normalization rule
 
@@ -27,5 +44,12 @@ Depth variance is controlled by requiring all non-introductory subsections to in
 - one proof chain (or proof sketch if and only if full proof is in appendix with explicit pointer),
 - one interpretation paragraph,
 - one validity paragraph.
+
+Additional mandatory depth checks:
+
+- one explicit variable-definition pass for all symbols introduced in the subsection,
+- one mathematical explanation paragraph for each major equation block,
+- one physical explanation paragraph for each major equation block.
+- one explicit check that opening/closing framing and equation-explanation prose are stylistically distinct from neighboring subsections.
 
 No chapter is allowed to drift into narrative-only treatment for core technical sections.

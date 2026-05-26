@@ -1,0 +1,1296 @@
+# ===============================================================================
+# ULTIMATE TOC VERSION-3 (strict forward-only redraft)
+# Source: TOC-master-19chapters-ULTIMATE-FINAL.txt
+# Policy: zero re-derivation; inherited back-reference only; HOME/USE/DEFER preserved.
+# ===============================================================================
+
+# ===============================================================================
+# ULTIMATE FINAL TOC - Angular Structure in Electromagnetic Fields (19 Chapters)
+# Purpose: forward-only monograph flow with explicit HOME/USE ownership.
+# Conventions: exp(-j*omega*t), SI, no recursive re-derivation.
+# Tag key: [HOME] proof/definition exists only here; [USE x.y] cite-only inheritance.
+# ===============================================================================
+
+Chapter 1 - Foundations: Maxwell Structure, Symmetry, Gauge, Observability
+1.0 Scope, admissibility assumptions, and roadmap [HOME]
+1.0.1 Scope boundary and admissibility assumptions for Scope, admissibility assumptions, and roadmap [HOME]
+1.0.2 Inherited prerequisites and resolved back-references for Scope, admissibility assumptions, and roadmap [HOME]
+1.0.3 Forward roadmap from Scope, admissibility assumptions, and roadmap into proof-bearing subsections [HOME]
+
+1.1 Maxwell equations, constitutive closure, and well-posedness [HOME]
+1.1.1 Axiomatic frame for Maxwell equations, constitutive closure, and well-posedness under Foundations: Maxwell Structure, Symmetry, Gauge, Observability [HOME]
+1.1.2 Construction pathway for Maxwell equations, constitutive closure, and well-posedness using inherited prior results only [HOME]
+1.1.3 Regime interpretation for Maxwell equations, constitutive closure, and well-posedness with explicit validity limits [HOME]
+1.1.4 Later-use inheritance pointer from Maxwell equations, constitutive closure, and well-posedness to downstream sections and chapters [HOME]
+
+1.2 Conservation laws: energy, momentum, angular momentum [HOME]
+1.2.1 Governing statement for Conservation laws: energy, momentum, angular momentum under Foundations: Maxwell Structure, Symmetry, Gauge, Observability [HOME]
+1.2.2 Analytical development for Conservation laws: energy, momentum, angular momentum using inherited prior results only [HOME]
+1.2.3 Measurement-facing meaning for Conservation laws: energy, momentum, angular momentum with explicit validity limits [HOME]
+1.2.4 Continuation criterion from Conservation laws: energy, momentum, angular momentum to downstream sections and chapters [HOME]
+
+1.3 Rotational covariance, origin dependence, and invariants [HOME]
+1.3.1 Foundational specification for Rotational covariance, origin dependence, and invariants under Foundations: Maxwell Structure, Symmetry, Gauge, Observability [HOME]
+1.3.2 Theorem route for Rotational covariance, origin dependence, and invariants using inherited prior results only [HOME]
+1.3.3 Constraint interpretation for Rotational covariance, origin dependence, and invariants with explicit validity limits [HOME]
+1.3.4 Forward inheritance link from Rotational covariance, origin dependence, and invariants to downstream sections and chapters [HOME]
+
+1.4 Gauge structure, helicity, and spin-orbit interpretive limits [HOME]
+1.4.1 Formal setup for Gauge structure, helicity, and spin-orbit interpretive limits under Foundations: Maxwell Structure, Symmetry, Gauge, Observability [HOME]
+1.4.2 Reduction sequence for Gauge structure, helicity, and spin-orbit interpretive limits using inherited prior results only [HOME]
+1.4.3 Phenomenological reading for Gauge structure, helicity, and spin-orbit interpretive limits with explicit validity limits [HOME]
+1.4.4 Dependency continuation from Gauge structure, helicity, and spin-orbit interpretive limits to downstream sections and chapters [HOME]
+
+1.5 Measurement observables and finite observability constraints [HOME]
+1.5.1 Constitutive declaration for Measurement observables and finite observability constraints under Foundations: Maxwell Structure, Symmetry, Gauge, Observability [HOME]
+1.5.2 Operator derivation for Measurement observables and finite observability constraints using inherited prior results only [HOME]
+1.5.3 Physical meaning for Measurement observables and finite observability constraints with explicit validity limits [HOME]
+1.5.4 Next-step consequence from Measurement observables and finite observability constraints to downstream sections and chapters [HOME]
+
+1.6 Foundational worked problems and counterexamples [FIG+PROB][USE 1.1-1.5]
+1.6.1 Canonical benchmark on Foundational worked problems and counterexamples: complete mathematics and closure checks [FIG+PROB][USE 1.1-1.5]
+1.6.2 Boundary-regime benchmark on Foundational worked problems and counterexamples: asymptotic behavior and admissibility [FIG+PROB][USE 1.1-1.5]
+1.6.3 Reconstruction or conditioning benchmark on Foundational worked problems and counterexamples: inherited operator use [FIG+PROB][USE 1.1-1.5]
+1.6.4 Physical-significance benchmark on Foundational worked problems and counterexamples: measurable consequences only [FIG+PROB][USE 1.1-1.5]
+
+1.7 Chapter synthesis and forward map [DEFER]
+1.7.1 Established outcomes consolidated for this chapter [DEFER]
+1.7.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+1.7.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 2 - Maxwell Operators, Green Mappings, and Radiation
+2.0 Transition: field laws to operators [USE 1.1,1.2]
+2.0.1 Scope boundary and admissibility assumptions for Transition: field laws to operators [USE 1.1,1.2]
+2.0.2 Inherited prerequisites and resolved back-references for Transition: field laws to operators [USE 1.1,1.2]
+2.0.3 Forward roadmap from Transition: field laws to operators into proof-bearing subsections [USE 1.1,1.2]
+
+2.1 Function spaces, domains, closures, adjoints [HOME]
+2.1.1 Problem-space declaration for Function spaces, domains, closures, adjoints under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.1.2 Proof architecture for Function spaces, domains, closures, adjoints using inherited prior results only [HOME]
+2.1.3 Validity boundary for Function spaces, domains, closures, adjoints with explicit validity limits [HOME]
+2.1.4 Downstream analytical handoff from Function spaces, domains, closures, adjoints to downstream sections and chapters [HOME]
+
+2.2 Time/frequency Maxwell evolution and subspace splitting [HOME]
+2.2.1 Axiomatic frame for Time/frequency Maxwell evolution and subspace splitting under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.2.2 Construction pathway for Time/frequency Maxwell evolution and subspace splitting using inherited prior results only [HOME]
+2.2.3 Regime interpretation for Time/frequency Maxwell evolution and subspace splitting with explicit validity limits [HOME]
+2.2.4 Later-use inheritance pointer from Time/frequency Maxwell evolution and subspace splitting to downstream sections and chapters [HOME]
+
+2.3 Green operators, singular structure, inversion [HOME]
+2.3.1 Governing statement for Green operators, singular structure, inversion under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.3.2 Analytical development for Green operators, singular structure, inversion using inherited prior results only [HOME]
+2.3.3 Measurement-facing meaning for Green operators, singular structure, inversion with explicit validity limits [HOME]
+2.3.4 Continuation criterion from Green operators, singular structure, inversion to downstream sections and chapters [HOME]
+
+2.4 Radiation condition and uniqueness theorem [HOME]
+2.4.1 Foundational specification for Radiation condition and uniqueness theorem under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.4.2 Theorem route for Radiation condition and uniqueness theorem using inherited prior results only [HOME]
+2.4.3 Constraint interpretation for Radiation condition and uniqueness theorem with explicit validity limits [HOME]
+2.4.4 Forward inheritance link from Radiation condition and uniqueness theorem to downstream sections and chapters [HOME]
+
+2.5 Source-to-field integrals and asymptotic regimes [HOME]
+2.5.1 Formal setup for Source-to-field integrals and asymptotic regimes under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.5.2 Reduction sequence for Source-to-field integrals and asymptotic regimes using inherited prior results only [HOME]
+2.5.3 Phenomenological reading for Source-to-field integrals and asymptotic regimes with explicit validity limits [HOME]
+2.5.4 Dependency continuation from Source-to-field integrals and asymptotic regimes to downstream sections and chapters [HOME]
+
+2.6 Fredholm/spectral structure of radiation operators [HOME]
+2.6.1 Constitutive declaration for Fredholm/spectral structure of radiation operators under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.6.2 Operator derivation for Fredholm/spectral structure of radiation operators using inherited prior results only [HOME]
+2.6.3 Physical meaning for Fredholm/spectral structure of radiation operators with explicit validity limits [HOME]
+2.6.4 Next-step consequence from Fredholm/spectral structure of radiation operators to downstream sections and chapters [HOME]
+
+2.7 Null spaces and non-radiating configurations [HOME]
+2.7.1 Operator-level setup for Null spaces and non-radiating configurations under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.7.2 Spectral development for Null spaces and non-radiating configurations using inherited prior results only [HOME]
+2.7.3 Interpretive scope for Null spaces and non-radiating configurations with explicit validity limits [HOME]
+2.7.4 Bridge to subsequent machinery from Null spaces and non-radiating configurations to downstream sections and chapters [HOME]
+
+2.8 Reciprocity and bilinear coupling structure [HOME]
+2.8.1 Admissibility map for Reciprocity and bilinear coupling structure under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.8.2 Derivation chain for Reciprocity and bilinear coupling structure using inherited prior results only [HOME]
+2.8.3 Observable consequence map for Reciprocity and bilinear coupling structure with explicit validity limits [HOME]
+2.8.4 Carry-forward implication from Reciprocity and bilinear coupling structure to downstream sections and chapters [HOME]
+
+2.9 Action on angular spectra and far-field accessibility [HOME]
+2.9.1 Problem-space declaration for Action on angular spectra and far-field accessibility under Maxwell Operators, Green Mappings, and Radiation [HOME]
+2.9.2 Proof architecture for Action on angular spectra and far-field accessibility using inherited prior results only [HOME]
+2.9.3 Validity boundary for Action on angular spectra and far-field accessibility with explicit validity limits [HOME]
+2.9.4 Downstream analytical handoff from Action on angular spectra and far-field accessibility to downstream sections and chapters [HOME]
+
+2.10 Operator worked problems [FIG+PROB][USE 2.1-2.9]
+2.10.1 Canonical benchmark on Operator worked problems: complete mathematics and closure checks [FIG+PROB][USE 2.1-2.9]
+2.10.2 Boundary-regime benchmark on Operator worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 2.1-2.9]
+2.10.3 Reconstruction or conditioning benchmark on Operator worked problems: inherited operator use [FIG+PROB][USE 2.1-2.9]
+2.10.4 Physical-significance benchmark on Operator worked problems: measurable consequences only [FIG+PROB][USE 2.1-2.9]
+
+2.11 Chapter synthesis and forward map [DEFER]
+2.11.1 Established outcomes consolidated for this chapter [DEFER]
+2.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+2.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 3 - Angular-Momentum Eigenfields and Representations
+3.0 Transition: operators to eigenfield representations [USE 2.1-2.9]
+3.0.1 Scope boundary and admissibility assumptions for Transition: operators to eigenfield representations [USE 2.1-2.9]
+3.0.2 Inherited prerequisites and resolved back-references for Transition: operators to eigenfield representations [USE 2.1-2.9]
+3.0.3 Forward roadmap from Transition: operators to eigenfield representations into proof-bearing subsections [USE 2.1-2.9]
+
+3.1 Hilbert/rigged-Hilbert framework for radiative fields [HOME]
+3.1.1 Admissibility map for Hilbert/rigged-Hilbert framework for radiative fields under Angular-Momentum Eigenfields and Representations [HOME]
+3.1.2 Derivation chain for Hilbert/rigged-Hilbert framework for radiative fields using inherited prior results only [HOME]
+3.1.3 Observable consequence map for Hilbert/rigged-Hilbert framework for radiative fields with explicit validity limits [HOME]
+3.1.4 Carry-forward implication from Hilbert/rigged-Hilbert framework for radiative fields to downstream sections and chapters [HOME]
+
+3.2 J operators, commutation, SO(3), Wigner structure [HOME]
+3.2.1 Problem-space declaration for J operators, commutation, SO(3), Wigner structure under Angular-Momentum Eigenfields and Representations [HOME]
+3.2.2 Proof architecture for J operators, commutation, SO(3), Wigner structure using inherited prior results only [HOME]
+3.2.3 Validity boundary for J operators, commutation, SO(3), Wigner structure with explicit validity limits [HOME]
+3.2.4 Downstream analytical handoff from J operators, commutation, SO(3), Wigner structure to downstream sections and chapters [HOME]
+
+3.3 Vector Helmholtz separation and Debye construction [HOME]
+3.3.1 Axiomatic frame for Vector Helmholtz separation and Debye construction under Angular-Momentum Eigenfields and Representations [HOME]
+3.3.2 Construction pathway for Vector Helmholtz separation and Debye construction using inherited prior results only [HOME]
+3.3.3 Regime interpretation for Vector Helmholtz separation and Debye construction with explicit validity limits [HOME]
+3.3.4 Later-use inheritance pointer from Vector Helmholtz separation and Debye construction to downstream sections and chapters [HOME]
+
+3.4 VSH definitions, orthogonality, completeness, eigenfield construction [HOME]
+3.4.1 Governing statement for VSH definitions, orthogonality, completeness, eigenfield construction under Angular-Momentum Eigenfields and Representations [HOME]
+3.4.2 Analytical development for VSH definitions, orthogonality, completeness, eigenfield construction using inherited prior results only [HOME]
+3.4.3 Measurement-facing meaning for VSH definitions, orthogonality, completeness, eigenfield construction with explicit validity limits [HOME]
+3.4.4 Continuation criterion from VSH definitions, orthogonality, completeness, eigenfield construction to downstream sections and chapters [HOME]
+
+3.5 Normalization, density of states, multiplicity [HOME]
+3.5.1 Foundational specification for Normalization, density of states, multiplicity under Angular-Momentum Eigenfields and Representations [HOME]
+3.5.2 Theorem route for Normalization, density of states, multiplicity using inherited prior results only [HOME]
+3.5.3 Constraint interpretation for Normalization, density of states, multiplicity with explicit validity limits [HOME]
+3.5.4 Forward inheritance link from Normalization, density of states, multiplicity to downstream sections and chapters [HOME]
+
+3.6 Completeness loss, truncation, symmetry breaking [HOME]
+3.6.1 Formal setup for Completeness loss, truncation, symmetry breaking under Angular-Momentum Eigenfields and Representations [HOME]
+3.6.2 Reduction sequence for Completeness loss, truncation, symmetry breaking using inherited prior results only [HOME]
+3.6.3 Phenomenological reading for Completeness loss, truncation, symmetry breaking with explicit validity limits [HOME]
+3.6.4 Dependency continuation from Completeness loss, truncation, symmetry breaking to downstream sections and chapters [HOME]
+
+3.7 Discrete/continuous angular spectra under constraints [HOME]
+3.7.1 Constitutive declaration for Discrete/continuous angular spectra under constraints under Angular-Momentum Eigenfields and Representations [HOME]
+3.7.2 Operator derivation for Discrete/continuous angular spectra under constraints using inherited prior results only [HOME]
+3.7.3 Physical meaning for Discrete/continuous angular spectra under constraints with explicit validity limits [HOME]
+3.7.4 Next-step consequence from Discrete/continuous angular spectra under constraints to downstream sections and chapters [HOME]
+
+3.8 Basis transformations and representation equivalence [HOME]
+3.8.1 Operator-level setup for Basis transformations and representation equivalence under Angular-Momentum Eigenfields and Representations [HOME]
+3.8.2 Spectral development for Basis transformations and representation equivalence using inherited prior results only [HOME]
+3.8.3 Interpretive scope for Basis transformations and representation equivalence with explicit validity limits [HOME]
+3.8.4 Bridge to subsequent machinery from Basis transformations and representation equivalence to downstream sections and chapters [HOME]
+
+3.9 Gauge-invariant interpretation and approximation limits [USE 1.4][HOME]
+3.9.1 Admissibility map for Gauge-invariant interpretation and approximation limits under Angular-Momentum Eigenfields and Representations [USE 1.4][HOME]
+3.9.2 Derivation chain for Gauge-invariant interpretation and approximation limits using inherited prior results only [USE 1.4][HOME]
+3.9.3 Observable consequence map for Gauge-invariant interpretation and approximation limits with explicit validity limits [USE 1.4][HOME]
+3.9.4 Carry-forward implication from Gauge-invariant interpretation and approximation limits to downstream sections and chapters [USE 1.4][HOME]
+
+3.10 Representation worked problems [FIG+PROB][USE 3.1-3.9]
+3.10.1 Canonical benchmark on Representation worked problems: complete mathematics and closure checks [FIG+PROB][USE 3.1-3.9]
+3.10.2 Boundary-regime benchmark on Representation worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 3.1-3.9]
+3.10.3 Reconstruction or conditioning benchmark on Representation worked problems: inherited operator use [FIG+PROB][USE 3.1-3.9]
+3.10.4 Physical-significance benchmark on Representation worked problems: measurable consequences only [FIG+PROB][USE 3.1-3.9]
+
+3.11 Chapter synthesis and forward map [DEFER]
+3.11.1 Established outcomes consolidated for this chapter [DEFER]
+3.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+3.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 4 - Realizability, Truncation, and Effective Electromagnetic Dimension
+4.0 Transition: finite geometry as primary constraint [USE 2.6,3.6]
+4.0.1 Scope boundary and admissibility assumptions for Transition: finite geometry as primary constraint [USE 2.6,3.6]
+4.0.2 Inherited prerequisites and resolved back-references for Transition: finite geometry as primary constraint [USE 2.6,3.6]
+4.0.3 Forward roadmap from Transition: finite geometry as primary constraint into proof-bearing subsections [USE 2.6,3.6]
+
+4.1 Admissible source spaces and support constraints [HOME]
+4.1.1 Operator-level setup for Admissible source spaces and support constraints under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.1.2 Spectral development for Admissible source spaces and support constraints using inherited prior results only [HOME]
+4.1.3 Interpretive scope for Admissible source spaces and support constraints with explicit validity limits [HOME]
+4.1.4 Bridge to subsequent machinery from Admissible source spaces and support constraints to downstream sections and chapters [HOME]
+
+4.2 Equivalence principles and aperture source models [HOME]
+4.2.1 Admissibility map for Equivalence principles and aperture source models under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.2.2 Derivation chain for Equivalence principles and aperture source models using inherited prior results only [HOME]
+4.2.3 Observable consequence map for Equivalence principles and aperture source models with explicit validity limits [HOME]
+4.2.4 Carry-forward implication from Equivalence principles and aperture source models to downstream sections and chapters [HOME]
+
+4.3 Source-radiation-field chains and singular values [HOME]
+4.3.1 Problem-space declaration for Source-radiation-field chains and singular values under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.3.2 Proof architecture for Source-radiation-field chains and singular values using inherited prior results only [HOME]
+4.3.3 Validity boundary for Source-radiation-field chains and singular values with explicit validity limits [HOME]
+4.3.4 Downstream analytical handoff from Source-radiation-field chains and singular values to downstream sections and chapters [HOME]
+
+4.4 Finite-support spectral restrictions and asymptotics [HOME]
+4.4.1 Axiomatic frame for Finite-support spectral restrictions and asymptotics under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.4.2 Construction pathway for Finite-support spectral restrictions and asymptotics using inherited prior results only [HOME]
+4.4.3 Regime interpretation for Finite-support spectral restrictions and asymptotics with explicit validity limits [HOME]
+4.4.4 Later-use inheritance pointer from Finite-support spectral restrictions and asymptotics to downstream sections and chapters [HOME]
+
+4.5 Coupling to angular eigenfields under finite geometry [USE 3.4][HOME]
+4.5.1 Governing statement for Coupling to angular eigenfields under finite geometry under Realizability, Truncation, and Effective Electromagnetic Dimension [USE 3.4][HOME]
+4.5.2 Analytical development for Coupling to angular eigenfields under finite geometry using inherited prior results only [USE 3.4][HOME]
+4.5.3 Measurement-facing meaning for Coupling to angular eigenfields under finite geometry with explicit validity limits [USE 3.4][HOME]
+4.5.4 Continuation criterion from Coupling to angular eigenfields under finite geometry to downstream sections and chapters [USE 3.4][HOME]
+
+4.6 Truncation scaling, effective rank, dimensionality limits [HOME]
+4.6.1 Foundational specification for Truncation scaling, effective rank, dimensionality limits under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.6.2 Theorem route for Truncation scaling, effective rank, dimensionality limits using inherited prior results only [HOME]
+4.6.3 Constraint interpretation for Truncation scaling, effective rank, dimensionality limits with explicit validity limits [HOME]
+4.6.4 Forward inheritance link from Truncation scaling, effective rank, dimensionality limits to downstream sections and chapters [HOME]
+
+4.7 Inversion/reconstruction limits and inaccessible subspaces [HOME]
+4.7.1 Formal setup for Inversion/reconstruction limits and inaccessible subspaces under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.7.2 Reduction sequence for Inversion/reconstruction limits and inaccessible subspaces using inherited prior results only [HOME]
+4.7.3 Phenomenological reading for Inversion/reconstruction limits and inaccessible subspaces with explicit validity limits [HOME]
+4.7.4 Dependency continuation from Inversion/reconstruction limits and inaccessible subspaces to downstream sections and chapters [HOME]
+
+4.8 Concentration theory and n-width bounds [HOME]
+4.8.1 Constitutive declaration for Concentration theory and n-width bounds under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.8.2 Operator derivation for Concentration theory and n-width bounds using inherited prior results only [HOME]
+4.8.3 Physical meaning for Concentration theory and n-width bounds with explicit validity limits [HOME]
+4.8.4 Next-step consequence from Concentration theory and n-width bounds to downstream sections and chapters [HOME]
+
+4.9 Physical meaning of realizability/accessibility limits [HOME]
+4.9.1 Operator-level setup for Physical meaning of realizability/accessibility limits under Realizability, Truncation, and Effective Electromagnetic Dimension [HOME]
+4.9.2 Spectral development for Physical meaning of realizability/accessibility limits using inherited prior results only [HOME]
+4.9.3 Interpretive scope for Physical meaning of realizability/accessibility limits with explicit validity limits [HOME]
+4.9.4 Bridge to subsequent machinery from Physical meaning of realizability/accessibility limits to downstream sections and chapters [HOME]
+
+4.10 Realizability worked problems [FIG+PROB][USE 4.1-4.9]
+4.10.1 Canonical benchmark on Realizability worked problems: complete mathematics and closure checks [FIG+PROB][USE 4.1-4.9]
+4.10.2 Boundary-regime benchmark on Realizability worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 4.1-4.9]
+4.10.3 Reconstruction or conditioning benchmark on Realizability worked problems: inherited operator use [FIG+PROB][USE 4.1-4.9]
+4.10.4 Physical-significance benchmark on Realizability worked problems: measurable consequences only [FIG+PROB][USE 4.1-4.9]
+
+4.11 Chapter synthesis and forward map [DEFER]
+4.11.1 Established outcomes consolidated for this chapter [DEFER]
+4.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+4.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 5 - Canonical Radiation Mechanisms and Angular Formation
+5.0 Transition: realizability to physical radiators [USE 4.1-4.9]
+5.0.1 Scope boundary and admissibility assumptions for Transition: realizability to physical radiators [USE 4.1-4.9]
+5.0.2 Inherited prerequisites and resolved back-references for Transition: realizability to physical radiators [USE 4.1-4.9]
+5.0.3 Forward roadmap from Transition: realizability to physical radiators into proof-bearing subsections [USE 4.1-4.9]
+
+5.1 Retardation, acceleration, and radiation formation [HOME]
+5.1.1 Constitutive declaration for Retardation, acceleration, and radiation formation under Canonical Radiation Mechanisms and Angular Formation [HOME]
+5.1.2 Operator derivation for Retardation, acceleration, and radiation formation using inherited prior results only [HOME]
+5.1.3 Physical meaning for Retardation, acceleration, and radiation formation with explicit validity limits [HOME]
+5.1.4 Next-step consequence from Retardation, acceleration, and radiation formation to downstream sections and chapters [HOME]
+
+5.2 Dipole/multipole canonical source mechanisms [HOME]
+5.2.1 Operator-level setup for Dipole/multipole canonical source mechanisms under Canonical Radiation Mechanisms and Angular Formation [HOME]
+5.2.2 Spectral development for Dipole/multipole canonical source mechanisms using inherited prior results only [HOME]
+5.2.3 Interpretive scope for Dipole/multipole canonical source mechanisms with explicit validity limits [HOME]
+5.2.4 Bridge to subsequent machinery from Dipole/multipole canonical source mechanisms to downstream sections and chapters [HOME]
+
+5.3 Interference and emergence of angular structure [HOME]
+5.3.1 Admissibility map for Interference and emergence of angular structure under Canonical Radiation Mechanisms and Angular Formation [HOME]
+5.3.2 Derivation chain for Interference and emergence of angular structure using inherited prior results only [HOME]
+5.3.3 Observable consequence map for Interference and emergence of angular structure with explicit validity limits [HOME]
+5.3.4 Carry-forward implication from Interference and emergence of angular structure to downstream sections and chapters [HOME]
+
+5.4 Circular/helical source distributions [HOME]
+5.4.1 Problem-space declaration for Circular/helical source distributions under Canonical Radiation Mechanisms and Angular Formation [HOME]
+5.4.2 Proof architecture for Circular/helical source distributions using inherited prior results only [HOME]
+5.4.3 Validity boundary for Circular/helical source distributions with explicit validity limits [HOME]
+5.4.4 Downstream analytical handoff from Circular/helical source distributions to downstream sections and chapters [HOME]
+
+5.5 Continuous current and aperture radiation structure [HOME]
+5.5.1 Axiomatic frame for Continuous current and aperture radiation structure under Canonical Radiation Mechanisms and Angular Formation [HOME]
+5.5.2 Construction pathway for Continuous current and aperture radiation structure using inherited prior results only [HOME]
+5.5.3 Regime interpretation for Continuous current and aperture radiation structure with explicit validity limits [HOME]
+5.5.4 Later-use inheritance pointer from Continuous current and aperture radiation structure to downstream sections and chapters [HOME]
+
+5.6 Reactive-radiative partition and asymptotic selection [USE 2.2,4.4][HOME]
+5.6.1 Governing statement for Reactive-radiative partition and asymptotic selection under Canonical Radiation Mechanisms and Angular Formation [USE 2.2,4.4][HOME]
+5.6.2 Analytical development for Reactive-radiative partition and asymptotic selection using inherited prior results only [USE 2.2,4.4][HOME]
+5.6.3 Measurement-facing meaning for Reactive-radiative partition and asymptotic selection with explicit validity limits [USE 2.2,4.4][HOME]
+5.6.4 Continuation criterion from Reactive-radiative partition and asymptotic selection to downstream sections and chapters [USE 2.2,4.4][HOME]
+
+5.7 Generation versus redistribution criteria [HOME]
+5.7.1 Foundational specification for Generation versus redistribution criteria under Canonical Radiation Mechanisms and Angular Formation [HOME]
+5.7.2 Theorem route for Generation versus redistribution criteria using inherited prior results only [HOME]
+5.7.3 Constraint interpretation for Generation versus redistribution criteria with explicit validity limits [HOME]
+5.7.4 Forward inheritance link from Generation versus redistribution criteria to downstream sections and chapters [HOME]
+
+5.8 Scaling laws for canonical radiators [HOME]
+5.8.1 Formal setup for Scaling laws for canonical radiators under Canonical Radiation Mechanisms and Angular Formation [HOME]
+5.8.2 Reduction sequence for Scaling laws for canonical radiators using inherited prior results only [HOME]
+5.8.3 Phenomenological reading for Scaling laws for canonical radiators with explicit validity limits [HOME]
+5.8.4 Dependency continuation from Scaling laws for canonical radiators to downstream sections and chapters [HOME]
+
+5.9 Radiation-mechanism worked problems [FIG+PROB][USE 5.1-5.8]
+5.9.1 Canonical benchmark on Radiation-mechanism worked problems: complete mathematics and closure checks [FIG+PROB][USE 5.1-5.8]
+5.9.2 Boundary-regime benchmark on Radiation-mechanism worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 5.1-5.8]
+5.9.3 Reconstruction or conditioning benchmark on Radiation-mechanism worked problems: inherited operator use [FIG+PROB][USE 5.1-5.8]
+5.9.4 Physical-significance benchmark on Radiation-mechanism worked problems: measurable consequences only [FIG+PROB][USE 5.1-5.8]
+
+5.10 Chapter synthesis and forward map [DEFER]
+5.10.1 Established outcomes consolidated for this chapter [DEFER]
+5.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+5.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 6 - Discrete Arrays, Sampling, and Cyclic Symmetry
+6.0 Transition: canonical radiators to discrete realizations [USE 5.1-5.8]
+6.0.1 Scope boundary and admissibility assumptions for Transition: canonical radiators to discrete realizations [USE 5.1-5.8]
+6.0.2 Inherited prerequisites and resolved back-references for Transition: canonical radiators to discrete realizations [USE 5.1-5.8]
+6.0.3 Forward roadmap from Transition: canonical radiators to discrete realizations into proof-bearing subsections [USE 5.1-5.8]
+
+6.1 Electromagnetic element models and excitation spaces [HOME]
+6.1.1 Formal setup for Electromagnetic element models and excitation spaces under Discrete Arrays, Sampling, and Cyclic Symmetry [HOME]
+6.1.2 Reduction sequence for Electromagnetic element models and excitation spaces using inherited prior results only [HOME]
+6.1.3 Phenomenological reading for Electromagnetic element models and excitation spaces with explicit validity limits [HOME]
+6.1.4 Dependency continuation from Electromagnetic element models and excitation spaces to downstream sections and chapters [HOME]
+
+6.2 Angular sampling of continuous sources [HOME]
+6.2.1 Constitutive declaration for Angular sampling of continuous sources under Discrete Arrays, Sampling, and Cyclic Symmetry [HOME]
+6.2.2 Operator derivation for Angular sampling of continuous sources using inherited prior results only [HOME]
+6.2.3 Physical meaning for Angular sampling of continuous sources with explicit validity limits [HOME]
+6.2.4 Next-step consequence from Angular sampling of continuous sources to downstream sections and chapters [HOME]
+
+6.3 Finite-array interference and collective flux [HOME]
+6.3.1 Operator-level setup for Finite-array interference and collective flux under Discrete Arrays, Sampling, and Cyclic Symmetry [HOME]
+6.3.2 Spectral development for Finite-array interference and collective flux using inherited prior results only [HOME]
+6.3.3 Interpretive scope for Finite-array interference and collective flux with explicit validity limits [HOME]
+6.3.4 Bridge to subsequent machinery from Finite-array interference and collective flux to downstream sections and chapters [HOME]
+
+6.4 Circular arrays and C_N representation structure [HOME]
+6.4.1 Admissibility map for Circular arrays and C_N representation structure under Discrete Arrays, Sampling, and Cyclic Symmetry [HOME]
+6.4.2 Derivation chain for Circular arrays and C_N representation structure using inherited prior results only [HOME]
+6.4.3 Observable consequence map for Circular arrays and C_N representation structure with explicit validity limits [HOME]
+6.4.4 Carry-forward implication from Circular arrays and C_N representation structure to downstream sections and chapters [HOME]
+
+6.5 Aliasing, spectral folding, and Nyquist-type limits [HOME]
+6.5.1 Problem-space declaration for Aliasing, spectral folding, and Nyquist-type limits under Discrete Arrays, Sampling, and Cyclic Symmetry [HOME]
+6.5.2 Proof architecture for Aliasing, spectral folding, and Nyquist-type limits using inherited prior results only [HOME]
+6.5.3 Validity boundary for Aliasing, spectral folding, and Nyquist-type limits with explicit validity limits [HOME]
+6.5.4 Downstream analytical handoff from Aliasing, spectral folding, and Nyquist-type limits to downstream sections and chapters [HOME]
+
+6.6 Coupling/selection rules in eigenfield bases [USE 3.4][HOME]
+6.6.1 Axiomatic frame for Coupling/selection rules in eigenfield bases under Discrete Arrays, Sampling, and Cyclic Symmetry [USE 3.4][HOME]
+6.6.2 Construction pathway for Coupling/selection rules in eigenfield bases using inherited prior results only [USE 3.4][HOME]
+6.6.3 Regime interpretation for Coupling/selection rules in eigenfield bases with explicit validity limits [USE 3.4][HOME]
+6.6.4 Later-use inheritance pointer from Coupling/selection rules in eigenfield bases to downstream sections and chapters [USE 3.4][HOME]
+
+6.7 Collective transport and non-additivity [HOME]
+6.7.1 Governing statement for Collective transport and non-additivity under Discrete Arrays, Sampling, and Cyclic Symmetry [HOME]
+6.7.2 Analytical development for Collective transport and non-additivity using inherited prior results only [HOME]
+6.7.3 Measurement-facing meaning for Collective transport and non-additivity with explicit validity limits [HOME]
+6.7.4 Continuation criterion from Collective transport and non-additivity to downstream sections and chapters [HOME]
+
+6.8 Distortion, leakage, and purity limits [HOME]
+6.8.1 Foundational specification for Distortion, leakage, and purity limits under Discrete Arrays, Sampling, and Cyclic Symmetry [HOME]
+6.8.2 Theorem route for Distortion, leakage, and purity limits using inherited prior results only [HOME]
+6.8.3 Constraint interpretation for Distortion, leakage, and purity limits with explicit validity limits [HOME]
+6.8.4 Forward inheritance link from Distortion, leakage, and purity limits to downstream sections and chapters [HOME]
+
+6.9 Joint truncation bounds from aperture plus sampling [USE 4.6][HOME]
+6.9.1 Formal setup for Joint truncation bounds from aperture plus sampling under Discrete Arrays, Sampling, and Cyclic Symmetry [USE 4.6][HOME]
+6.9.2 Reduction sequence for Joint truncation bounds from aperture plus sampling using inherited prior results only [USE 4.6][HOME]
+6.9.3 Phenomenological reading for Joint truncation bounds from aperture plus sampling with explicit validity limits [USE 4.6][HOME]
+6.9.4 Dependency continuation from Joint truncation bounds from aperture plus sampling to downstream sections and chapters [USE 4.6][HOME]
+
+6.10 Array worked problems [FIG+PROB][USE 6.1-6.9]
+6.10.1 Canonical benchmark on Array worked problems: complete mathematics and closure checks [FIG+PROB][USE 6.1-6.9]
+6.10.2 Boundary-regime benchmark on Array worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 6.1-6.9]
+6.10.3 Reconstruction or conditioning benchmark on Array worked problems: inherited operator use [FIG+PROB][USE 6.1-6.9]
+6.10.4 Physical-significance benchmark on Array worked problems: measurable consequences only [FIG+PROB][USE 6.1-6.9]
+
+6.11 Chapter synthesis and forward map [DEFER]
+6.11.1 Established outcomes consolidated for this chapter [DEFER]
+6.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+6.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 7 - Continuous Apertures, Reflectors, Boundary Conversion
+7.0 Transition: discrete to continuous boundaries [USE 6.5,6.9]
+7.0.1 Scope boundary and admissibility assumptions for Transition: discrete to continuous boundaries [USE 6.5,6.9]
+7.0.2 Inherited prerequisites and resolved back-references for Transition: discrete to continuous boundaries [USE 6.5,6.9]
+7.0.3 Forward roadmap from Transition: discrete to continuous boundaries into proof-bearing subsections [USE 6.5,6.9]
+
+7.1 Boundary-value formulation and exterior well-posedness [HOME]
+7.1.1 Foundational specification for Boundary-value formulation and exterior well-posedness under Continuous Apertures, Reflectors, Boundary Conversion [HOME]
+7.1.2 Theorem route for Boundary-value formulation and exterior well-posedness using inherited prior results only [HOME]
+7.1.3 Constraint interpretation for Boundary-value formulation and exterior well-posedness with explicit validity limits [HOME]
+7.1.4 Forward inheritance link from Boundary-value formulation and exterior well-posedness to downstream sections and chapters [HOME]
+
+7.2 Aperture equivalent-source formulations [HOME]
+7.2.1 Formal setup for Aperture equivalent-source formulations under Continuous Apertures, Reflectors, Boundary Conversion [HOME]
+7.2.2 Reduction sequence for Aperture equivalent-source formulations using inherited prior results only [HOME]
+7.2.3 Phenomenological reading for Aperture equivalent-source formulations with explicit validity limits [HOME]
+7.2.4 Dependency continuation from Aperture equivalent-source formulations to downstream sections and chapters [HOME]
+
+7.3 Surface integral operators and spectral structure [HOME]
+7.3.1 Constitutive declaration for Surface integral operators and spectral structure under Continuous Apertures, Reflectors, Boundary Conversion [HOME]
+7.3.2 Operator derivation for Surface integral operators and spectral structure using inherited prior results only [HOME]
+7.3.3 Physical meaning for Surface integral operators and spectral structure with explicit validity limits [HOME]
+7.3.4 Next-step consequence from Surface integral operators and spectral structure to downstream sections and chapters [HOME]
+
+7.4 Circular/annular apertures with azimuthal structure [HOME]
+7.4.1 Operator-level setup for Circular/annular apertures with azimuthal structure under Continuous Apertures, Reflectors, Boundary Conversion [HOME]
+7.4.2 Spectral development for Circular/annular apertures with azimuthal structure using inherited prior results only [HOME]
+7.4.3 Interpretive scope for Circular/annular apertures with azimuthal structure with explicit validity limits [HOME]
+7.4.4 Bridge to subsequent machinery from Circular/annular apertures with azimuthal structure to downstream sections and chapters [HOME]
+
+7.5 Continuous-aperture bandlimitation and truncation [USE 4.6][HOME]
+7.5.1 Admissibility map for Continuous-aperture bandlimitation and truncation under Continuous Apertures, Reflectors, Boundary Conversion [USE 4.6][HOME]
+7.5.2 Derivation chain for Continuous-aperture bandlimitation and truncation using inherited prior results only [USE 4.6][HOME]
+7.5.3 Observable consequence map for Continuous-aperture bandlimitation and truncation with explicit validity limits [USE 4.6][HOME]
+7.5.4 Carry-forward implication from Continuous-aperture bandlimitation and truncation to downstream sections and chapters [USE 4.6][HOME]
+
+7.6 Reflectors as boundary operators [HOME]
+7.6.1 Problem-space declaration for Reflectors as boundary operators under Continuous Apertures, Reflectors, Boundary Conversion [HOME]
+7.6.2 Proof architecture for Reflectors as boundary operators using inherited prior results only [HOME]
+7.6.3 Validity boundary for Reflectors as boundary operators with explicit validity limits [HOME]
+7.6.4 Downstream analytical handoff from Reflectors as boundary operators to downstream sections and chapters [HOME]
+
+7.7 Axisymmetric transport; conversion versus generation [HOME]
+7.7.1 Axiomatic frame for Axisymmetric transport; conversion versus generation under Continuous Apertures, Reflectors, Boundary Conversion [HOME]
+7.7.2 Construction pathway for Axisymmetric transport; conversion versus generation using inherited prior results only [HOME]
+7.7.3 Regime interpretation for Axisymmetric transport; conversion versus generation with explicit validity limits [HOME]
+7.7.4 Later-use inheritance pointer from Axisymmetric transport; conversion versus generation to downstream sections and chapters [HOME]
+
+7.8 Stress-tensor torque at boundaries [USE 1.2,12.4][HOME]
+7.8.1 Governing statement for Stress-tensor torque at boundaries under Continuous Apertures, Reflectors, Boundary Conversion [USE 1.2,12.4][HOME]
+7.8.2 Analytical development for Stress-tensor torque at boundaries using inherited prior results only [USE 1.2,12.4][HOME]
+7.8.3 Measurement-facing meaning for Stress-tensor torque at boundaries with explicit validity limits [USE 1.2,12.4][HOME]
+7.8.4 Continuation criterion from Stress-tensor torque at boundaries to downstream sections and chapters [USE 1.2,12.4][HOME]
+
+7.9 Phase surfaces and operator-level mode conversion [USE 7.7][HOME]
+7.9.1 Foundational specification for Phase surfaces and operator-level mode conversion under Continuous Apertures, Reflectors, Boundary Conversion [USE 7.7][HOME]
+7.9.2 Theorem route for Phase surfaces and operator-level mode conversion using inherited prior results only [USE 7.7][HOME]
+7.9.3 Constraint interpretation for Phase surfaces and operator-level mode conversion with explicit validity limits [USE 7.7][HOME]
+7.9.4 Forward inheritance link from Phase surfaces and operator-level mode conversion to downstream sections and chapters [USE 7.7][HOME]
+
+7.10 Boundary worked problems [FIG+PROB][USE 7.1-7.9]
+7.10.1 Canonical benchmark on Boundary worked problems: complete mathematics and closure checks [FIG+PROB][USE 7.1-7.9]
+7.10.2 Boundary-regime benchmark on Boundary worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 7.1-7.9]
+7.10.3 Reconstruction or conditioning benchmark on Boundary worked problems: inherited operator use [FIG+PROB][USE 7.1-7.9]
+7.10.4 Physical-significance benchmark on Boundary worked problems: measurable consequences only [FIG+PROB][USE 7.1-7.9]
+
+7.11 Chapter synthesis and forward map [DEFER]
+7.11.1 Established outcomes consolidated for this chapter [DEFER]
+7.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+7.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 8 - Metasurfaces, Metamaterials, and Subwavelength Operators
+8.0 Transition: boundary optics to structured surfaces [USE 7.6-7.9]
+8.0.1 Scope boundary and admissibility assumptions for Transition: boundary optics to structured surfaces [USE 7.6-7.9]
+8.0.2 Inherited prerequisites and resolved back-references for Transition: boundary optics to structured surfaces [USE 7.6-7.9]
+8.0.3 Forward roadmap from Transition: boundary optics to structured surfaces into proof-bearing subsections [USE 7.6-7.9]
+
+8.1 Microscopic Maxwell description of inclusions [HOME]
+8.1.1 Governing statement for Microscopic Maxwell description of inclusions under Metasurfaces, Metamaterials, and Subwavelength Operators [HOME]
+8.1.2 Analytical development for Microscopic Maxwell description of inclusions using inherited prior results only [HOME]
+8.1.3 Measurement-facing meaning for Microscopic Maxwell description of inclusions with explicit validity limits [HOME]
+8.1.4 Continuation criterion from Microscopic Maxwell description of inclusions to downstream sections and chapters [HOME]
+
+8.2 Multipole hierarchy and angular truncation [HOME]
+8.2.1 Foundational specification for Multipole hierarchy and angular truncation under Metasurfaces, Metamaterials, and Subwavelength Operators [HOME]
+8.2.2 Theorem route for Multipole hierarchy and angular truncation using inherited prior results only [HOME]
+8.2.3 Constraint interpretation for Multipole hierarchy and angular truncation with explicit validity limits [HOME]
+8.2.4 Forward inheritance link from Multipole hierarchy and angular truncation to downstream sections and chapters [HOME]
+
+8.3 Homogenization and breakdown regimes [HOME]
+8.3.1 Formal setup for Homogenization and breakdown regimes under Metasurfaces, Metamaterials, and Subwavelength Operators [HOME]
+8.3.2 Reduction sequence for Homogenization and breakdown regimes using inherited prior results only [HOME]
+8.3.3 Phenomenological reading for Homogenization and breakdown regimes with explicit validity limits [HOME]
+8.3.4 Dependency continuation from Homogenization and breakdown regimes to downstream sections and chapters [HOME]
+
+8.4 GSTC derivation and admissibility constraints [HOME]
+8.4.1 Constitutive declaration for GSTC derivation and admissibility constraints under Metasurfaces, Metamaterials, and Subwavelength Operators [HOME]
+8.4.2 Operator derivation for GSTC derivation and admissibility constraints using inherited prior results only [HOME]
+8.4.3 Physical meaning for GSTC derivation and admissibility constraints with explicit validity limits [HOME]
+8.4.4 Next-step consequence from GSTC derivation and admissibility constraints to downstream sections and chapters [HOME]
+
+8.5 Metasurfaces as finite-rank operators [HOME]
+8.5.1 Operator-level setup for Metasurfaces as finite-rank operators under Metasurfaces, Metamaterials, and Subwavelength Operators [HOME]
+8.5.2 Spectral development for Metasurfaces as finite-rank operators using inherited prior results only [HOME]
+8.5.3 Interpretive scope for Metasurfaces as finite-rank operators with explicit validity limits [HOME]
+8.5.4 Bridge to subsequent machinery from Metasurfaces as finite-rank operators to downstream sections and chapters [HOME]
+
+8.6 Angular transport and field-matter torque [USE 12.4][HOME]
+8.6.1 Admissibility map for Angular transport and field-matter torque under Metasurfaces, Metamaterials, and Subwavelength Operators [USE 12.4][HOME]
+8.6.2 Derivation chain for Angular transport and field-matter torque using inherited prior results only [USE 12.4][HOME]
+8.6.3 Observable consequence map for Angular transport and field-matter torque with explicit validity limits [USE 12.4][HOME]
+8.6.4 Carry-forward implication from Angular transport and field-matter torque to downstream sections and chapters [USE 12.4][HOME]
+
+8.7 Spatial dispersion, nonlocality, control limits [HOME]
+8.7.1 Problem-space declaration for Spatial dispersion, nonlocality, control limits under Metasurfaces, Metamaterials, and Subwavelength Operators [HOME]
+8.7.2 Proof architecture for Spatial dispersion, nonlocality, control limits using inherited prior results only [HOME]
+8.7.3 Validity boundary for Spatial dispersion, nonlocality, control limits with explicit validity limits [HOME]
+8.7.4 Downstream analytical handoff from Spatial dispersion, nonlocality, control limits to downstream sections and chapters [HOME]
+
+8.8 Phase engineering under rank/causality constraints [USE 8.5][HOME]
+8.8.1 Axiomatic frame for Phase engineering under rank/causality constraints under Metasurfaces, Metamaterials, and Subwavelength Operators [USE 8.5][HOME]
+8.8.2 Construction pathway for Phase engineering under rank/causality constraints using inherited prior results only [USE 8.5][HOME]
+8.8.3 Regime interpretation for Phase engineering under rank/causality constraints with explicit validity limits [USE 8.5][HOME]
+8.8.4 Later-use inheritance pointer from Phase engineering under rank/causality constraints to downstream sections and chapters [USE 8.5][HOME]
+
+8.9 Conversion versus generation under surface operators [USE 7.7][HOME]
+8.9.1 Governing statement for Conversion versus generation under surface operators under Metasurfaces, Metamaterials, and Subwavelength Operators [USE 7.7][HOME]
+8.9.2 Analytical development for Conversion versus generation under surface operators using inherited prior results only [USE 7.7][HOME]
+8.9.3 Measurement-facing meaning for Conversion versus generation under surface operators with explicit validity limits [USE 7.7][HOME]
+8.9.4 Continuation criterion from Conversion versus generation under surface operators to downstream sections and chapters [USE 7.7][HOME]
+
+8.10 Metasurface worked problems [FIG+PROB][USE 8.1-8.9]
+8.10.1 Canonical benchmark on Metasurface worked problems: complete mathematics and closure checks [FIG+PROB][USE 8.1-8.9]
+8.10.2 Boundary-regime benchmark on Metasurface worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 8.1-8.9]
+8.10.3 Reconstruction or conditioning benchmark on Metasurface worked problems: inherited operator use [FIG+PROB][USE 8.1-8.9]
+8.10.4 Physical-significance benchmark on Metasurface worked problems: measurable consequences only [FIG+PROB][USE 8.1-8.9]
+
+8.11 Chapter synthesis and forward map [DEFER]
+8.11.1 Established outcomes consolidated for this chapter [DEFER]
+8.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+8.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 9 - Free-Space Propagation, Transport, Invariants
+9.0 Transition: radiation synthesis to propagation [USE 2.5,2.9,5.6]
+9.0.1 Scope boundary and admissibility assumptions for Transition: radiation synthesis to propagation [USE 2.5,2.9,5.6]
+9.0.2 Inherited prerequisites and resolved back-references for Transition: radiation synthesis to propagation [USE 2.5,2.9,5.6]
+9.0.3 Forward roadmap from Transition: radiation synthesis to propagation into proof-bearing subsections [USE 2.5,2.9,5.6]
+
+9.1 Maxwell propagators and conservation-preserving evolution [HOME]
+9.1.1 Axiomatic frame for Maxwell propagators and conservation-preserving evolution under Free-Space Propagation, Transport, Invariants [HOME]
+9.1.2 Construction pathway for Maxwell propagators and conservation-preserving evolution using inherited prior results only [HOME]
+9.1.3 Regime interpretation for Maxwell propagators and conservation-preserving evolution with explicit validity limits [HOME]
+9.1.4 Later-use inheritance pointer from Maxwell propagators and conservation-preserving evolution to downstream sections and chapters [HOME]
+
+9.2 Green propagators and integral transport maps [HOME]
+9.2.1 Governing statement for Green propagators and integral transport maps under Free-Space Propagation, Transport, Invariants [HOME]
+9.2.2 Analytical development for Green propagators and integral transport maps using inherited prior results only [HOME]
+9.2.3 Measurement-facing meaning for Green propagators and integral transport maps with explicit validity limits [HOME]
+9.2.4 Continuation criterion from Green propagators and integral transport maps to downstream sections and chapters [HOME]
+
+9.3 Spectral propagation and basis-independent observables [HOME]
+9.3.1 Foundational specification for Spectral propagation and basis-independent observables under Free-Space Propagation, Transport, Invariants [HOME]
+9.3.2 Theorem route for Spectral propagation and basis-independent observables using inherited prior results only [HOME]
+9.3.3 Constraint interpretation for Spectral propagation and basis-independent observables with explicit validity limits [HOME]
+9.3.4 Forward inheritance link from Spectral propagation and basis-independent observables to downstream sections and chapters [HOME]
+
+9.4 Angular-momentum currents and transport invariants [HOME]
+9.4.1 Formal setup for Angular-momentum currents and transport invariants under Free-Space Propagation, Transport, Invariants [HOME]
+9.4.2 Reduction sequence for Angular-momentum currents and transport invariants using inherited prior results only [HOME]
+9.4.3 Phenomenological reading for Angular-momentum currents and transport invariants with explicit validity limits [HOME]
+9.4.4 Dependency continuation from Angular-momentum currents and transport invariants to downstream sections and chapters [HOME]
+
+9.5 Near-to-far asymptotic evolution [HOME]
+9.5.1 Constitutive declaration for Near-to-far asymptotic evolution under Free-Space Propagation, Transport, Invariants [HOME]
+9.5.2 Operator derivation for Near-to-far asymptotic evolution using inherited prior results only [HOME]
+9.5.3 Physical meaning for Near-to-far asymptotic evolution with explicit validity limits [HOME]
+9.5.4 Next-step consequence from Near-to-far asymptotic evolution to downstream sections and chapters [HOME]
+
+9.6 Exact non-paraxial models and paraxial limit [HOME]
+9.6.1 Operator-level setup for Exact non-paraxial models and paraxial limit under Free-Space Propagation, Transport, Invariants [HOME]
+9.6.2 Spectral development for Exact non-paraxial models and paraxial limit using inherited prior results only [HOME]
+9.6.3 Interpretive scope for Exact non-paraxial models and paraxial limit with explicit validity limits [HOME]
+9.6.4 Bridge to subsequent machinery from Exact non-paraxial models and paraxial limit to downstream sections and chapters [HOME]
+
+9.7 Divergence and angular-order scaling [HOME]
+9.7.1 Admissibility map for Divergence and angular-order scaling under Free-Space Propagation, Transport, Invariants [HOME]
+9.7.2 Derivation chain for Divergence and angular-order scaling using inherited prior results only [HOME]
+9.7.3 Observable consequence map for Divergence and angular-order scaling with explicit validity limits [HOME]
+9.7.4 Carry-forward implication from Divergence and angular-order scaling to downstream sections and chapters [HOME]
+
+9.8 Stability and finite-observation effects [HOME]
+9.8.1 Problem-space declaration for Stability and finite-observation effects under Free-Space Propagation, Transport, Invariants [HOME]
+9.8.2 Proof architecture for Stability and finite-observation effects using inherited prior results only [HOME]
+9.8.3 Validity boundary for Stability and finite-observation effects with explicit validity limits [HOME]
+9.8.4 Downstream analytical handoff from Stability and finite-observation effects to downstream sections and chapters [HOME]
+
+9.9 Propagation worked problems [FIG+PROB][USE 9.1-9.8]
+9.9.1 Canonical benchmark on Propagation worked problems: complete mathematics and closure checks [FIG+PROB][USE 9.1-9.8]
+9.9.2 Boundary-regime benchmark on Propagation worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 9.1-9.8]
+9.9.3 Reconstruction or conditioning benchmark on Propagation worked problems: inherited operator use [FIG+PROB][USE 9.1-9.8]
+9.9.4 Physical-significance benchmark on Propagation worked problems: measurable consequences only [FIG+PROB][USE 9.1-9.8]
+
+9.10 Chapter synthesis and forward map [DEFER]
+9.10.1 Established outcomes consolidated for this chapter [DEFER]
+9.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+9.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 10 - Linear Media: Dispersion, Anisotropy, Inhomogeneity
+10.0 Transition: free-space to constitutive media [USE 9.1-9.8]
+10.0.1 Scope boundary and admissibility assumptions for Transition: free-space to constitutive media [USE 9.1-9.8]
+10.0.2 Inherited prerequisites and resolved back-references for Transition: free-space to constitutive media [USE 9.1-9.8]
+10.0.3 Forward roadmap from Transition: free-space to constitutive media into proof-bearing subsections [USE 9.1-9.8]
+
+10.1 Constitutive structure, causality, passivity [HOME]
+10.1.1 Problem-space declaration for Constitutive structure, causality, passivity under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.1.2 Proof architecture for Constitutive structure, causality, passivity using inherited prior results only [HOME]
+10.1.3 Validity boundary for Constitutive structure, causality, passivity with explicit validity limits [HOME]
+10.1.4 Downstream analytical handoff from Constitutive structure, causality, passivity to downstream sections and chapters [HOME]
+
+10.2 Maxwell evolution in dissipative media [HOME]
+10.2.1 Axiomatic frame for Maxwell evolution in dissipative media under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.2.2 Construction pathway for Maxwell evolution in dissipative media using inherited prior results only [HOME]
+10.2.3 Regime interpretation for Maxwell evolution in dissipative media with explicit validity limits [HOME]
+10.2.4 Later-use inheritance pointer from Maxwell evolution in dissipative media to downstream sections and chapters [HOME]
+
+10.3 Biorthogonal spectral structure (non-Hermitian media) [HOME]
+10.3.1 Governing statement for Biorthogonal spectral structure (non-Hermitian media) under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.3.2 Analytical development for Biorthogonal spectral structure (non-Hermitian media) using inherited prior results only [HOME]
+10.3.3 Measurement-facing meaning for Biorthogonal spectral structure (non-Hermitian media) with explicit validity limits [HOME]
+10.3.4 Continuation criterion from Biorthogonal spectral structure (non-Hermitian media) to downstream sections and chapters [HOME]
+
+10.4 Field-matter transport and modified invariants [HOME]
+10.4.1 Foundational specification for Field-matter transport and modified invariants under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.4.2 Theorem route for Field-matter transport and modified invariants using inherited prior results only [HOME]
+10.4.3 Constraint interpretation for Field-matter transport and modified invariants with explicit validity limits [HOME]
+10.4.4 Forward inheritance link from Field-matter transport and modified invariants to downstream sections and chapters [HOME]
+
+10.5 Temporal dispersion and spatiotemporal coupling [HOME]
+10.5.1 Formal setup for Temporal dispersion and spatiotemporal coupling under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.5.2 Reduction sequence for Temporal dispersion and spatiotemporal coupling using inherited prior results only [HOME]
+10.5.3 Phenomenological reading for Temporal dispersion and spatiotemporal coupling with explicit validity limits [HOME]
+10.5.4 Dependency continuation from Temporal dispersion and spatiotemporal coupling to downstream sections and chapters [HOME]
+
+10.6 Anisotropy, symmetry breaking, geometric phase [HOME]
+10.6.1 Constitutive declaration for Anisotropy, symmetry breaking, geometric phase under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.6.2 Operator derivation for Anisotropy, symmetry breaking, geometric phase using inherited prior results only [HOME]
+10.6.3 Physical meaning for Anisotropy, symmetry breaking, geometric phase with explicit validity limits [HOME]
+10.6.4 Next-step consequence from Anisotropy, symmetry breaking, geometric phase to downstream sections and chapters [HOME]
+
+10.7 Inhomogeneous/periodic media transport [HOME]
+10.7.1 Operator-level setup for Inhomogeneous/periodic media transport under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.7.2 Spectral development for Inhomogeneous/periodic media transport using inherited prior results only [HOME]
+10.7.3 Interpretive scope for Inhomogeneous/periodic media transport with explicit validity limits [HOME]
+10.7.4 Bridge to subsequent machinery from Inhomogeneous/periodic media transport to downstream sections and chapters [HOME]
+
+10.8 Mode coupling, preservation conditions, irreversibility [HOME]
+10.8.1 Admissibility map for Mode coupling, preservation conditions, irreversibility under Linear Media: Dispersion, Anisotropy, Inhomogeneity [HOME]
+10.8.2 Derivation chain for Mode coupling, preservation conditions, irreversibility using inherited prior results only [HOME]
+10.8.3 Observable consequence map for Mode coupling, preservation conditions, irreversibility with explicit validity limits [HOME]
+10.8.4 Carry-forward implication from Mode coupling, preservation conditions, irreversibility to downstream sections and chapters [HOME]
+
+10.9 Linear-media worked problems [FIG+PROB][USE 10.1-10.8]
+10.9.1 Canonical benchmark on Linear-media worked problems: complete mathematics and closure checks [FIG+PROB][USE 10.1-10.8]
+10.9.2 Boundary-regime benchmark on Linear-media worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 10.1-10.8]
+10.9.3 Reconstruction or conditioning benchmark on Linear-media worked problems: inherited operator use [FIG+PROB][USE 10.1-10.8]
+10.9.4 Physical-significance benchmark on Linear-media worked problems: measurable consequences only [FIG+PROB][USE 10.1-10.8]
+
+10.10 Chapter synthesis and forward map [DEFER]
+10.10.1 Established outcomes consolidated for this chapter [DEFER]
+10.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+10.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 11 - Random Media, Turbulence, Statistical Transport
+11.0 Transition: deterministic to stochastic propagation [USE 10.1-10.8]
+11.0.1 Scope boundary and admissibility assumptions for Transition: deterministic to stochastic propagation [USE 10.1-10.8]
+11.0.2 Inherited prerequisites and resolved back-references for Transition: deterministic to stochastic propagation [USE 10.1-10.8]
+11.0.3 Forward roadmap from Transition: deterministic to stochastic propagation into proof-bearing subsections [USE 10.1-10.8]
+
+11.1 Stochastic Maxwell formulation and solution notions [HOME]
+11.1.1 Admissibility map for Stochastic Maxwell formulation and solution notions under Random Media, Turbulence, Statistical Transport [HOME]
+11.1.2 Derivation chain for Stochastic Maxwell formulation and solution notions using inherited prior results only [HOME]
+11.1.3 Observable consequence map for Stochastic Maxwell formulation and solution notions with explicit validity limits [HOME]
+11.1.4 Carry-forward implication from Stochastic Maxwell formulation and solution notions to downstream sections and chapters [HOME]
+
+11.2 Correlation/structure functions and statistical symmetry [HOME]
+11.2.1 Problem-space declaration for Correlation/structure functions and statistical symmetry under Random Media, Turbulence, Statistical Transport [HOME]
+11.2.2 Proof architecture for Correlation/structure functions and statistical symmetry using inherited prior results only [HOME]
+11.2.3 Validity boundary for Correlation/structure functions and statistical symmetry with explicit validity limits [HOME]
+11.2.4 Downstream analytical handoff from Correlation/structure functions and statistical symmetry to downstream sections and chapters [HOME]
+
+11.3 Ensemble and pathwise evolution operators [HOME]
+11.3.1 Axiomatic frame for Ensemble and pathwise evolution operators under Random Media, Turbulence, Statistical Transport [HOME]
+11.3.2 Construction pathway for Ensemble and pathwise evolution operators using inherited prior results only [HOME]
+11.3.3 Regime interpretation for Ensemble and pathwise evolution operators with explicit validity limits [HOME]
+11.3.4 Later-use inheritance pointer from Ensemble and pathwise evolution operators to downstream sections and chapters [HOME]
+
+11.4 Angular observables in random media [HOME]
+11.4.1 Governing statement for Angular observables in random media under Random Media, Turbulence, Statistical Transport [HOME]
+11.4.2 Analytical development for Angular observables in random media using inherited prior results only [HOME]
+11.4.3 Measurement-facing meaning for Angular observables in random media with explicit validity limits [HOME]
+11.4.4 Continuation criterion from Angular observables in random media to downstream sections and chapters [HOME]
+
+11.5 Weak random phase and coherence erosion [HOME]
+11.5.1 Foundational specification for Weak random phase and coherence erosion under Random Media, Turbulence, Statistical Transport [HOME]
+11.5.2 Theorem route for Weak random phase and coherence erosion using inherited prior results only [HOME]
+11.5.3 Constraint interpretation for Weak random phase and coherence erosion with explicit validity limits [HOME]
+11.5.4 Forward inheritance link from Weak random phase and coherence erosion to downstream sections and chapters [HOME]
+
+11.6 Turbulence-induced mode coupling and random-matrix form [HOME]
+11.6.1 Formal setup for Turbulence-induced mode coupling and random-matrix form under Random Media, Turbulence, Statistical Transport [HOME]
+11.6.2 Reduction sequence for Turbulence-induced mode coupling and random-matrix form using inherited prior results only [HOME]
+11.6.3 Phenomenological reading for Turbulence-induced mode coupling and random-matrix form with explicit validity limits [HOME]
+11.6.4 Dependency continuation from Turbulence-induced mode coupling and random-matrix form to downstream sections and chapters [HOME]
+
+11.7 Diffusive/kinetic/radiative-transfer limits [HOME]
+11.7.1 Constitutive declaration for Diffusive/kinetic/radiative-transfer limits under Random Media, Turbulence, Statistical Transport [HOME]
+11.7.2 Operator derivation for Diffusive/kinetic/radiative-transfer limits using inherited prior results only [HOME]
+11.7.3 Physical meaning for Diffusive/kinetic/radiative-transfer limits with explicit validity limits [HOME]
+11.7.4 Next-step consequence from Diffusive/kinetic/radiative-transfer limits to downstream sections and chapters [HOME]
+
+11.8 Decoherence, detectability collapse, scaling [HOME]
+11.8.1 Operator-level setup for Decoherence, detectability collapse, scaling under Random Media, Turbulence, Statistical Transport [HOME]
+11.8.2 Spectral development for Decoherence, detectability collapse, scaling using inherited prior results only [HOME]
+11.8.3 Interpretive scope for Decoherence, detectability collapse, scaling with explicit validity limits [HOME]
+11.8.4 Bridge to subsequent machinery from Decoherence, detectability collapse, scaling to downstream sections and chapters [HOME]
+
+11.9 Random-media worked problems [FIG+PROB][USE 11.1-11.8]
+11.9.1 Canonical benchmark on Random-media worked problems: complete mathematics and closure checks [FIG+PROB][USE 11.1-11.8]
+11.9.2 Boundary-regime benchmark on Random-media worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 11.1-11.8]
+11.9.3 Reconstruction or conditioning benchmark on Random-media worked problems: inherited operator use [FIG+PROB][USE 11.1-11.8]
+11.9.4 Physical-significance benchmark on Random-media worked problems: measurable consequences only [FIG+PROB][USE 11.1-11.8]
+
+11.10 Chapter synthesis and forward map [DEFER]
+11.10.1 Established outcomes consolidated for this chapter [DEFER]
+11.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+11.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 12 - Ponderable Media Interaction: Force, Torque, Exchange
+12.0 Transition: propagation to mechanical interaction [USE 10.4,11.8]
+12.0.1 Scope boundary and admissibility assumptions for Transition: propagation to mechanical interaction [USE 10.4,11.8]
+12.0.2 Inherited prerequisites and resolved back-references for Transition: propagation to mechanical interaction [USE 10.4,11.8]
+12.0.3 Forward roadmap from Transition: propagation to mechanical interaction into proof-bearing subsections [USE 10.4,11.8]
+
+12.1 Maxwell fields with free/bound sources [HOME]
+12.1.1 Operator-level setup for Maxwell fields with free/bound sources under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.1.2 Spectral development for Maxwell fields with free/bound sources using inherited prior results only [HOME]
+12.1.3 Interpretive scope for Maxwell fields with free/bound sources with explicit validity limits [HOME]
+12.1.4 Bridge to subsequent machinery from Maxwell fields with free/bound sources to downstream sections and chapters [HOME]
+
+12.2 Energy balance, work, dissipation [HOME]
+12.2.1 Admissibility map for Energy balance, work, dissipation under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.2.2 Derivation chain for Energy balance, work, dissipation using inherited prior results only [HOME]
+12.2.3 Observable consequence map for Energy balance, work, dissipation with explicit validity limits [HOME]
+12.2.4 Carry-forward implication from Energy balance, work, dissipation to downstream sections and chapters [HOME]
+
+12.3 Linear momentum balance and force densities [HOME]
+12.3.1 Problem-space declaration for Linear momentum balance and force densities under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.3.2 Proof architecture for Linear momentum balance and force densities using inherited prior results only [HOME]
+12.3.3 Validity boundary for Linear momentum balance and force densities with explicit validity limits [HOME]
+12.3.4 Downstream analytical handoff from Linear momentum balance and force densities to downstream sections and chapters [HOME]
+
+12.4 Angular momentum balance and torque exchange [HOME]
+12.4.1 Axiomatic frame for Angular momentum balance and torque exchange under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.4.2 Construction pathway for Angular momentum balance and torque exchange using inherited prior results only [HOME]
+12.4.3 Regime interpretation for Angular momentum balance and torque exchange with explicit validity limits [HOME]
+12.4.4 Later-use inheritance pointer from Angular momentum balance and torque exchange to downstream sections and chapters [HOME]
+
+12.5 Stress-tensor formulations and validity domains [HOME]
+12.5.1 Governing statement for Stress-tensor formulations and validity domains under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.5.2 Analytical development for Stress-tensor formulations and validity domains using inherited prior results only [HOME]
+12.5.3 Measurement-facing meaning for Stress-tensor formulations and validity domains with explicit validity limits [HOME]
+12.5.4 Continuation criterion from Stress-tensor formulations and validity domains to downstream sections and chapters [HOME]
+
+12.6 Microscopic-to-macroscopic consistency [HOME]
+12.6.1 Foundational specification for Microscopic-to-macroscopic consistency under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.6.2 Theorem route for Microscopic-to-macroscopic consistency using inherited prior results only [HOME]
+12.6.3 Constraint interpretation for Microscopic-to-macroscopic consistency with explicit validity limits [HOME]
+12.6.4 Forward inheritance link from Microscopic-to-macroscopic consistency to downstream sections and chapters [HOME]
+
+12.7 Momentum partitioning under conservation constraints [HOME]
+12.7.1 Formal setup for Momentum partitioning under conservation constraints under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.7.2 Reduction sequence for Momentum partitioning under conservation constraints using inherited prior results only [HOME]
+12.7.3 Phenomenological reading for Momentum partitioning under conservation constraints with explicit validity limits [HOME]
+12.7.4 Dependency continuation from Momentum partitioning under conservation constraints to downstream sections and chapters [HOME]
+
+12.8 Interface localization of exchange [HOME]
+12.8.1 Constitutive declaration for Interface localization of exchange under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.8.2 Operator derivation for Interface localization of exchange using inherited prior results only [HOME]
+12.8.3 Physical meaning for Interface localization of exchange with explicit validity limits [HOME]
+12.8.4 Next-step consequence from Interface localization of exchange to downstream sections and chapters [HOME]
+
+12.9 Excitation selectivity and efficiency scaling [HOME]
+12.9.1 Operator-level setup for Excitation selectivity and efficiency scaling under Ponderable Media Interaction: Force, Torque, Exchange [HOME]
+12.9.2 Spectral development for Excitation selectivity and efficiency scaling using inherited prior results only [HOME]
+12.9.3 Interpretive scope for Excitation selectivity and efficiency scaling with explicit validity limits [HOME]
+12.9.4 Bridge to subsequent machinery from Excitation selectivity and efficiency scaling to downstream sections and chapters [HOME]
+
+12.10 Interaction worked problems [FIG+PROB][USE 12.1-12.9]
+12.10.1 Canonical benchmark on Interaction worked problems: complete mathematics and closure checks [FIG+PROB][USE 12.1-12.9]
+12.10.2 Boundary-regime benchmark on Interaction worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 12.1-12.9]
+12.10.3 Reconstruction or conditioning benchmark on Interaction worked problems: inherited operator use [FIG+PROB][USE 12.1-12.9]
+12.10.4 Physical-significance benchmark on Interaction worked problems: measurable consequences only [FIG+PROB][USE 12.1-12.9]
+
+12.11 Chapter synthesis and forward map [DEFER]
+12.11.1 Established outcomes consolidated for this chapter [DEFER]
+12.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+12.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 13 - Detection, Measurement, Estimation (OWNERSHIP CHAPTER)
+13.0 Transition: interaction to inverse measurement [USE 12.1-12.9]
+13.0.1 Scope boundary and admissibility assumptions for Transition: interaction to inverse measurement [USE 12.1-12.9]
+13.0.2 Inherited prerequisites and resolved back-references for Transition: interaction to inverse measurement [USE 12.1-12.9]
+13.0.3 Forward roadmap from Transition: interaction to inverse measurement into proof-bearing subsections [USE 12.1-12.9]
+
+13.1 Measurable observables versus mathematical labels [HOME]
+13.1.1 Constitutive declaration for Measurable observables versus mathematical labels under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.1.2 Operator derivation for Measurable observables versus mathematical labels using inherited prior results only [HOME]
+13.1.3 Physical meaning for Measurable observables versus mathematical labels with explicit validity limits [HOME]
+13.1.4 Next-step consequence from Measurable observables versus mathematical labels to downstream sections and chapters [HOME]
+
+13.2 Detector operators, transfer functions, noise injection [HOME]
+13.2.1 Operator-level setup for Detector operators, transfer functions, noise injection under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.2.2 Spectral development for Detector operators, transfer functions, noise injection using inherited prior results only [HOME]
+13.2.3 Interpretive scope for Detector operators, transfer functions, noise injection with explicit validity limits [HOME]
+13.2.4 Bridge to subsequent machinery from Detector operators, transfer functions, noise injection to downstream sections and chapters [HOME]
+
+13.3 Measurement projection operators and conditioning [HOME]
+13.3.1 Admissibility map for Measurement projection operators and conditioning under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.3.2 Derivation chain for Measurement projection operators and conditioning using inherited prior results only [HOME]
+13.3.3 Observable consequence map for Measurement projection operators and conditioning with explicit validity limits [HOME]
+13.3.4 Carry-forward implication from Measurement projection operators and conditioning to downstream sections and chapters [HOME]
+
+13.4 Sampling/aperture limits on observable dimensionality [HOME]
+13.4.1 Problem-space declaration for Sampling/aperture limits on observable dimensionality under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.4.2 Proof architecture for Sampling/aperture limits on observable dimensionality using inherited prior results only [HOME]
+13.4.3 Validity boundary for Sampling/aperture limits on observable dimensionality with explicit validity limits [HOME]
+13.4.4 Downstream analytical handoff from Sampling/aperture limits on observable dimensionality to downstream sections and chapters [HOME]
+
+13.5 Near-field/far-field measurement complementarity [HOME]
+13.5.1 Axiomatic frame for Near-field/far-field measurement complementarity under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.5.2 Construction pathway for Near-field/far-field measurement complementarity using inherited prior results only [HOME]
+13.5.3 Regime interpretation for Near-field/far-field measurement complementarity with explicit validity limits [HOME]
+13.5.4 Later-use inheritance pointer from Near-field/far-field measurement complementarity to downstream sections and chapters [HOME]
+
+13.6 Reconstruction and inverse-stability limits [HOME]
+13.6.1 Governing statement for Reconstruction and inverse-stability limits under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.6.2 Analytical development for Reconstruction and inverse-stability limits using inherited prior results only [HOME]
+13.6.3 Measurement-facing meaning for Reconstruction and inverse-stability limits with explicit validity limits [HOME]
+13.6.4 Continuation criterion from Reconstruction and inverse-stability limits to downstream sections and chapters [HOME]
+
+13.7 Detectability and uncertainty laws [HOME]
+13.7.1 Foundational specification for Detectability and uncertainty laws under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.7.2 Theorem route for Detectability and uncertainty laws using inherited prior results only [HOME]
+13.7.3 Constraint interpretation for Detectability and uncertainty laws with explicit validity limits [HOME]
+13.7.4 Forward inheritance link from Detectability and uncertainty laws to downstream sections and chapters [HOME]
+
+13.8 Fisher information and Cramer-Rao bounds [HOME]
+13.8.1 Formal setup for Fisher information and Cramer-Rao bounds under Detection, Measurement, Estimation (OWNERSHIP CHAPTER) [HOME]
+13.8.2 Reduction sequence for Fisher information and Cramer-Rao bounds using inherited prior results only [HOME]
+13.8.3 Phenomenological reading for Fisher information and Cramer-Rao bounds with explicit validity limits [HOME]
+13.8.4 Dependency continuation from Fisher information and Cramer-Rao bounds to downstream sections and chapters [HOME]
+
+13.9 Measurement worked problems [FIG+PROB][USE 13.1-13.8]
+13.9.1 Canonical benchmark on Measurement worked problems: complete mathematics and closure checks [FIG+PROB][USE 13.1-13.8]
+13.9.2 Boundary-regime benchmark on Measurement worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 13.1-13.8]
+13.9.3 Reconstruction or conditioning benchmark on Measurement worked problems: inherited operator use [FIG+PROB][USE 13.1-13.8]
+13.9.4 Physical-significance benchmark on Measurement worked problems: measurable consequences only [FIG+PROB][USE 13.1-13.8]
+
+13.10 Chapter synthesis and forward map [DEFER]
+13.10.1 Established outcomes consolidated for this chapter [DEFER]
+13.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+13.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 14 - Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8)
+14.0 Transition: inference to information structure [USE 13.3,13.4,13.8]
+14.0.1 Scope boundary and admissibility assumptions for Transition: inference to information structure [USE 13.3,13.4,13.8]
+14.0.2 Inherited prerequisites and resolved back-references for Transition: inference to information structure [USE 13.3,13.4,13.8]
+14.0.3 Forward roadmap from Transition: inference to information structure into proof-bearing subsections [USE 13.3,13.4,13.8]
+
+14.1 Distinguishability and physical state-space definition [HOME]
+14.1.1 Formal setup for Distinguishability and physical state-space definition under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [HOME]
+14.1.2 Reduction sequence for Distinguishability and physical state-space definition using inherited prior results only [HOME]
+14.1.3 Phenomenological reading for Distinguishability and physical state-space definition with explicit validity limits [HOME]
+14.1.4 Dependency continuation from Distinguishability and physical state-space definition to downstream sections and chapters [HOME]
+
+14.2 Source/field/observable degrees of freedom [HOME]
+14.2.1 Constitutive declaration for Source/field/observable degrees of freedom under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [HOME]
+14.2.2 Operator derivation for Source/field/observable degrees of freedom using inherited prior results only [HOME]
+14.2.3 Physical meaning for Source/field/observable degrees of freedom with explicit validity limits [HOME]
+14.2.4 Next-step consequence from Source/field/observable degrees of freedom to downstream sections and chapters [HOME]
+
+14.3 Finite-rank channels and Hilbert geometry [HOME]
+14.3.1 Operator-level setup for Finite-rank channels and Hilbert geometry under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [HOME]
+14.3.2 Spectral development for Finite-rank channels and Hilbert geometry using inherited prior results only [HOME]
+14.3.3 Interpretive scope for Finite-rank channels and Hilbert geometry with explicit validity limits [HOME]
+14.3.4 Bridge to subsequent machinery from Finite-rank channels and Hilbert geometry to downstream sections and chapters [HOME]
+
+14.4 Source-to-detector chains and singular spectra [HOME]
+14.4.1 Admissibility map for Source-to-detector chains and singular spectra under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [HOME]
+14.4.2 Derivation chain for Source-to-detector chains and singular spectra using inherited prior results only [HOME]
+14.4.3 Observable consequence map for Source-to-detector chains and singular spectra with explicit validity limits [HOME]
+14.4.4 Carry-forward implication from Source-to-detector chains and singular spectra to downstream sections and chapters [HOME]
+
+14.5 Bandlimitation, concentration, effective rank [HOME]
+14.5.1 Problem-space declaration for Bandlimitation, concentration, effective rank under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [HOME]
+14.5.2 Proof architecture for Bandlimitation, concentration, effective rank using inherited prior results only [HOME]
+14.5.3 Validity boundary for Bandlimitation, concentration, effective rank with explicit validity limits [HOME]
+14.5.4 Downstream analytical handoff from Bandlimitation, concentration, effective rank to downstream sections and chapters [HOME]
+
+14.6 Basis invariance and relabeling non-advantage [HOME]
+14.6.1 Axiomatic frame for Basis invariance and relabeling non-advantage under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [HOME]
+14.6.2 Construction pathway for Basis invariance and relabeling non-advantage using inherited prior results only [HOME]
+14.6.3 Regime interpretation for Basis invariance and relabeling non-advantage with explicit validity limits [HOME]
+14.6.4 Later-use inheritance pointer from Basis invariance and relabeling non-advantage to downstream sections and chapters [HOME]
+
+14.7 Information accessibility under propagation/measurement [USE 9.8,13.3]
+14.7.1 Governing statement for Information accessibility under propagation/measurement under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [USE 9.8,13.3]
+14.7.2 Analytical development for Information accessibility under propagation/measurement using inherited prior results only [USE 9.8,13.3]
+14.7.3 Measurement-facing meaning for Information accessibility under propagation/measurement with explicit validity limits [USE 9.8,13.3]
+14.7.4 Continuation criterion from Information accessibility under propagation/measurement to downstream sections and chapters [USE 9.8,13.3]
+
+14.8 Capacity under fixed electromagnetic rank [HOME]
+14.8.1 Foundational specification for Capacity under fixed electromagnetic rank under Information, Degrees of Freedom, Capacity (NO REPROOF OF 13.8) [HOME]
+14.8.2 Theorem route for Capacity under fixed electromagnetic rank using inherited prior results only [HOME]
+14.8.3 Constraint interpretation for Capacity under fixed electromagnetic rank with explicit validity limits [HOME]
+14.8.4 Forward inheritance link from Capacity under fixed electromagnetic rank to downstream sections and chapters [HOME]
+
+14.9 Information worked problems [FIG+PROB][USE 14.1-14.8]
+14.9.1 Canonical benchmark on Information worked problems: complete mathematics and closure checks [FIG+PROB][USE 14.1-14.8]
+14.9.2 Boundary-regime benchmark on Information worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 14.1-14.8]
+14.9.3 Reconstruction or conditioning benchmark on Information worked problems: inherited operator use [FIG+PROB][USE 14.1-14.8]
+14.9.4 Physical-significance benchmark on Information worked problems: measurable consequences only [FIG+PROB][USE 14.1-14.8]
+
+14.10 Chapter synthesis and forward map [DEFER]
+14.10.1 Established outcomes consolidated for this chapter [DEFER]
+14.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+14.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 15 - Communication with Angularly Structured Fields (APPLICATION CHAPTER)
+15.0 Transition: information theory to communication systems [USE 14.2-14.8]
+15.0.1 Scope boundary and admissibility assumptions for Transition: information theory to communication systems [USE 14.2-14.8]
+15.0.2 Inherited prerequisites and resolved back-references for Transition: information theory to communication systems [USE 14.2-14.8]
+15.0.3 Forward roadmap from Transition: information theory to communication systems into proof-bearing subsections [USE 14.2-14.8]
+
+15.1 Message states versus physical field states [HOME]
+15.1.1 Foundational specification for Message states versus physical field states under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [HOME]
+15.1.2 Theorem route for Message states versus physical field states using inherited prior results only [HOME]
+15.1.3 Constraint interpretation for Message states versus physical field states with explicit validity limits [HOME]
+15.1.4 Forward inheritance link from Message states versus physical field states to downstream sections and chapters [HOME]
+
+15.2 Communication rank and usable subspaces [USE 14.3,14.8]
+15.2.1 Formal setup for Communication rank and usable subspaces under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [USE 14.3,14.8]
+15.2.2 Reduction sequence for Communication rank and usable subspaces using inherited prior results only [USE 14.3,14.8]
+15.2.3 Phenomenological reading for Communication rank and usable subspaces with explicit validity limits [USE 14.3,14.8]
+15.2.4 Dependency continuation from Communication rank and usable subspaces to downstream sections and chapters [USE 14.3,14.8]
+
+15.3 Eigenchannels and conditioning [USE 14.4]
+15.3.1 Constitutive declaration for Eigenchannels and conditioning under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [USE 14.4]
+15.3.2 Operator derivation for Eigenchannels and conditioning using inherited prior results only [USE 14.4]
+15.3.3 Physical meaning for Eigenchannels and conditioning with explicit validity limits [USE 14.4]
+15.3.4 Next-step consequence from Eigenchannels and conditioning to downstream sections and chapters [USE 14.4]
+
+15.4 Angular encoding under basis invariance [USE 14.6]
+15.4.1 Operator-level setup for Angular encoding under basis invariance under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [USE 14.6]
+15.4.2 Spectral development for Angular encoding under basis invariance using inherited prior results only [USE 14.6]
+15.4.3 Interpretive scope for Angular encoding under basis invariance with explicit validity limits [USE 14.6]
+15.4.4 Bridge to subsequent machinery from Angular encoding under basis invariance to downstream sections and chapters [USE 14.6]
+
+15.5 Space-time-bandwidth coupling in links [HOME]
+15.5.1 Admissibility map for Space-time-bandwidth coupling in links under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [HOME]
+15.5.2 Derivation chain for Space-time-bandwidth coupling in links using inherited prior results only [HOME]
+15.5.3 Observable consequence map for Space-time-bandwidth coupling in links with explicit validity limits [HOME]
+15.5.4 Carry-forward implication from Space-time-bandwidth coupling in links to downstream sections and chapters [HOME]
+
+15.6 Far-field limits and equivalence regimes [USE 9.7,14.8]
+15.6.1 Problem-space declaration for Far-field limits and equivalence regimes under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [USE 9.7,14.8]
+15.6.2 Proof architecture for Far-field limits and equivalence regimes using inherited prior results only [USE 9.7,14.8]
+15.6.3 Validity boundary for Far-field limits and equivalence regimes with explicit validity limits [USE 9.7,14.8]
+15.6.4 Downstream analytical handoff from Far-field limits and equivalence regimes to downstream sections and chapters [USE 9.7,14.8]
+
+15.7 Near-field/reactive communication limits [USE 9.5,14.7]
+15.7.1 Axiomatic frame for Near-field/reactive communication limits under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [USE 9.5,14.7]
+15.7.2 Construction pathway for Near-field/reactive communication limits using inherited prior results only [USE 9.5,14.7]
+15.7.3 Regime interpretation for Near-field/reactive communication limits with explicit validity limits [USE 9.5,14.7]
+15.7.4 Later-use inheritance pointer from Near-field/reactive communication limits to downstream sections and chapters [USE 9.5,14.7]
+
+15.8 Multiuser allocation and interference structure [HOME]
+15.8.1 Governing statement for Multiuser allocation and interference structure under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [HOME]
+15.8.2 Analytical development for Multiuser allocation and interference structure using inherited prior results only [HOME]
+15.8.3 Measurement-facing meaning for Multiuser allocation and interference structure with explicit validity limits [HOME]
+15.8.4 Continuation criterion from Multiuser allocation and interference structure to downstream sections and chapters [HOME]
+
+15.9 Receiver bottlenecks and measurement constraints [USE 13.2-13.4]
+15.9.1 Foundational specification for Receiver bottlenecks and measurement constraints under Communication with Angularly Structured Fields (APPLICATION CHAPTER) [USE 13.2-13.4]
+15.9.2 Theorem route for Receiver bottlenecks and measurement constraints using inherited prior results only [USE 13.2-13.4]
+15.9.3 Constraint interpretation for Receiver bottlenecks and measurement constraints with explicit validity limits [USE 13.2-13.4]
+15.9.4 Forward inheritance link from Receiver bottlenecks and measurement constraints to downstream sections and chapters [USE 13.2-13.4]
+
+15.10 Communication worked problems [FIG+PROB][USE 15.1-15.9]
+15.10.1 Canonical benchmark on Communication worked problems: complete mathematics and closure checks [FIG+PROB][USE 15.1-15.9]
+15.10.2 Boundary-regime benchmark on Communication worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 15.1-15.9]
+15.10.3 Reconstruction or conditioning benchmark on Communication worked problems: inherited operator use [FIG+PROB][USE 15.1-15.9]
+15.10.4 Physical-significance benchmark on Communication worked problems: measurable consequences only [FIG+PROB][USE 15.1-15.9]
+
+15.11 Chapter synthesis and forward map [DEFER]
+15.11.1 Established outcomes consolidated for this chapter [DEFER]
+15.11.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+15.11.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 16 - Sensing, Radar, Scientific Inference (APPLICATION CHAPTER)
+16.0 Transition: communication to scientific sensing [USE 13.1-13.8,14.8]
+16.0.1 Scope boundary and admissibility assumptions for Transition: communication to scientific sensing [USE 13.1-13.8,14.8]
+16.0.2 Inherited prerequisites and resolved back-references for Transition: communication to scientific sensing [USE 13.1-13.8,14.8]
+16.0.3 Forward roadmap from Transition: communication to scientific sensing into proof-bearing subsections [USE 13.1-13.8,14.8]
+
+16.1 Detectability, identifiability, inference taxonomy [USE 13.7][HOME]
+16.1.1 Governing statement for Detectability, identifiability, inference taxonomy under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [USE 13.7][HOME]
+16.1.2 Analytical development for Detectability, identifiability, inference taxonomy using inherited prior results only [USE 13.7][HOME]
+16.1.3 Measurement-facing meaning for Detectability, identifiability, inference taxonomy with explicit validity limits [USE 13.7][HOME]
+16.1.4 Continuation criterion from Detectability, identifiability, inference taxonomy to downstream sections and chapters [USE 13.7][HOME]
+
+16.2 Scattering operators under structured illumination [HOME]
+16.2.1 Foundational specification for Scattering operators under structured illumination under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [HOME]
+16.2.2 Theorem route for Scattering operators under structured illumination using inherited prior results only [HOME]
+16.2.3 Constraint interpretation for Scattering operators under structured illumination with explicit validity limits [HOME]
+16.2.4 Forward inheritance link from Scattering operators under structured illumination to downstream sections and chapters [HOME]
+
+16.3 Radar cross section and sensitivity structure [HOME]
+16.3.1 Formal setup for Radar cross section and sensitivity structure under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [HOME]
+16.3.2 Reduction sequence for Radar cross section and sensitivity structure using inherited prior results only [HOME]
+16.3.3 Phenomenological reading for Radar cross section and sensitivity structure with explicit validity limits [HOME]
+16.3.4 Dependency continuation from Radar cross section and sensitivity structure to downstream sections and chapters [HOME]
+
+16.4 Resolution, bandlimits, null-space persistence [USE 13.4,13.6]
+16.4.1 Constitutive declaration for Resolution, bandlimits, null-space persistence under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [USE 13.4,13.6]
+16.4.2 Operator derivation for Resolution, bandlimits, null-space persistence using inherited prior results only [USE 13.4,13.6]
+16.4.3 Physical meaning for Resolution, bandlimits, null-space persistence with explicit validity limits [USE 13.4,13.6]
+16.4.4 Next-step consequence from Resolution, bandlimits, null-space persistence to downstream sections and chapters [USE 13.4,13.6]
+
+16.5 Estimation bounds and conditioning trade-offs [USE 13.8]
+16.5.1 Operator-level setup for Estimation bounds and conditioning trade-offs under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [USE 13.8]
+16.5.2 Spectral development for Estimation bounds and conditioning trade-offs using inherited prior results only [USE 13.8]
+16.5.3 Interpretive scope for Estimation bounds and conditioning trade-offs with explicit validity limits [USE 13.8]
+16.5.4 Bridge to subsequent machinery from Estimation bounds and conditioning trade-offs to downstream sections and chapters [USE 13.8]
+
+16.6 Diversity gains versus dimensionality invariance [USE 14.2,14.6]
+16.6.1 Admissibility map for Diversity gains versus dimensionality invariance under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [USE 14.2,14.6]
+16.6.2 Derivation chain for Diversity gains versus dimensionality invariance using inherited prior results only [USE 14.2,14.6]
+16.6.3 Observable consequence map for Diversity gains versus dimensionality invariance with explicit validity limits [USE 14.2,14.6]
+16.6.4 Carry-forward implication from Diversity gains versus dimensionality invariance to downstream sections and chapters [USE 14.2,14.6]
+
+16.7 Imaging/tomography limits under finite rank [USE 14.5,14.8]
+16.7.1 Problem-space declaration for Imaging/tomography limits under finite rank under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [USE 14.5,14.8]
+16.7.2 Proof architecture for Imaging/tomography limits under finite rank using inherited prior results only [USE 14.5,14.8]
+16.7.3 Validity boundary for Imaging/tomography limits under finite rank with explicit validity limits [USE 14.5,14.8]
+16.7.4 Downstream analytical handoff from Imaging/tomography limits under finite rank to downstream sections and chapters [USE 14.5,14.8]
+
+16.8 Near-field sensing advantages and transport limits [USE 9.5,14.7]
+16.8.1 Axiomatic frame for Near-field sensing advantages and transport limits under Sensing, Radar, Scientific Inference (APPLICATION CHAPTER) [USE 9.5,14.7]
+16.8.2 Construction pathway for Near-field sensing advantages and transport limits using inherited prior results only [USE 9.5,14.7]
+16.8.3 Regime interpretation for Near-field sensing advantages and transport limits with explicit validity limits [USE 9.5,14.7]
+16.8.4 Later-use inheritance pointer from Near-field sensing advantages and transport limits to downstream sections and chapters [USE 9.5,14.7]
+
+16.9 Sensing worked problems [FIG+PROB][USE 16.1-16.8]
+16.9.1 Canonical benchmark on Sensing worked problems: complete mathematics and closure checks [FIG+PROB][USE 16.1-16.8]
+16.9.2 Boundary-regime benchmark on Sensing worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 16.1-16.8]
+16.9.3 Reconstruction or conditioning benchmark on Sensing worked problems: inherited operator use [FIG+PROB][USE 16.1-16.8]
+16.9.4 Physical-significance benchmark on Sensing worked problems: measurable consequences only [FIG+PROB][USE 16.1-16.8]
+
+16.10 Chapter synthesis and forward map [DEFER]
+16.10.1 Established outcomes consolidated for this chapter [DEFER]
+16.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+16.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 17 - Astrophysical and Remote Observation
+17.0 Transition: engineered sensing to passive observation [USE 11.2,16.1]
+17.0.1 Scope boundary and admissibility assumptions for Transition: engineered sensing to passive observation [USE 11.2,16.1]
+17.0.2 Inherited prerequisites and resolved back-references for Transition: engineered sensing to passive observation [USE 11.2,16.1]
+17.0.3 Forward roadmap from Transition: engineered sensing to passive observation into proof-bearing subsections [USE 11.2,16.1]
+
+17.1 Natural-field angular statistics and admissibility [HOME]
+17.1.1 Axiomatic frame for Natural-field angular statistics and admissibility under Astrophysical and Remote Observation [HOME]
+17.1.2 Construction pathway for Natural-field angular statistics and admissibility using inherited prior results only [HOME]
+17.1.3 Regime interpretation for Natural-field angular statistics and admissibility with explicit validity limits [HOME]
+17.1.4 Later-use inheritance pointer from Natural-field angular statistics and admissibility to downstream sections and chapters [HOME]
+
+17.2 Broadband/incoherent coherence-collapse mechanisms [HOME]
+17.2.1 Governing statement for Broadband/incoherent coherence-collapse mechanisms under Astrophysical and Remote Observation [HOME]
+17.2.2 Analytical development for Broadband/incoherent coherence-collapse mechanisms using inherited prior results only [HOME]
+17.2.3 Measurement-facing meaning for Broadband/incoherent coherence-collapse mechanisms with explicit validity limits [HOME]
+17.2.4 Continuation criterion from Broadband/incoherent coherence-collapse mechanisms to downstream sections and chapters [HOME]
+
+17.3 Natural generation pathways for angular structure [HOME]
+17.3.1 Foundational specification for Natural generation pathways for angular structure under Astrophysical and Remote Observation [HOME]
+17.3.2 Theorem route for Natural generation pathways for angular structure using inherited prior results only [HOME]
+17.3.3 Constraint interpretation for Natural generation pathways for angular structure with explicit validity limits [HOME]
+17.3.4 Forward inheritance link from Natural generation pathways for angular structure to downstream sections and chapters [HOME]
+
+17.4 Long-range propagation through natural media [USE 10.7,11.7]
+17.4.1 Formal setup for Long-range propagation through natural media under Astrophysical and Remote Observation [USE 10.7,11.7]
+17.4.2 Reduction sequence for Long-range propagation through natural media using inherited prior results only [USE 10.7,11.7]
+17.4.3 Phenomenological reading for Long-range propagation through natural media with explicit validity limits [USE 10.7,11.7]
+17.4.4 Dependency continuation from Long-range propagation through natural media to downstream sections and chapters [USE 10.7,11.7]
+
+17.5 Source-symmetry diagnostics and degeneracies [HOME]
+17.5.1 Constitutive declaration for Source-symmetry diagnostics and degeneracies under Astrophysical and Remote Observation [HOME]
+17.5.2 Operator derivation for Source-symmetry diagnostics and degeneracies using inherited prior results only [HOME]
+17.5.3 Physical meaning for Source-symmetry diagnostics and degeneracies with explicit validity limits [HOME]
+17.5.4 Next-step consequence from Source-symmetry diagnostics and degeneracies to downstream sections and chapters [HOME]
+
+17.6 Remote-scattering observables and inverse limits [HOME]
+17.6.1 Operator-level setup for Remote-scattering observables and inverse limits under Astrophysical and Remote Observation [HOME]
+17.6.2 Spectral development for Remote-scattering observables and inverse limits using inherited prior results only [HOME]
+17.6.3 Interpretive scope for Remote-scattering observables and inverse limits with explicit validity limits [HOME]
+17.6.4 Bridge to subsequent machinery from Remote-scattering observables and inverse limits to downstream sections and chapters [HOME]
+
+17.7 Noise sensitivity and projection bias [USE 13.7,13.8]
+17.7.1 Admissibility map for Noise sensitivity and projection bias under Astrophysical and Remote Observation [USE 13.7,13.8]
+17.7.2 Derivation chain for Noise sensitivity and projection bias using inherited prior results only [USE 13.7,13.8]
+17.7.3 Observable consequence map for Noise sensitivity and projection bias with explicit validity limits [USE 13.7,13.8]
+17.7.4 Carry-forward implication from Noise sensitivity and projection bias to downstream sections and chapters [USE 13.7,13.8]
+
+17.8 Frame dependence and geometric ambiguity [USE 1.3]
+17.8.1 Problem-space declaration for Frame dependence and geometric ambiguity under Astrophysical and Remote Observation [USE 1.3]
+17.8.2 Proof architecture for Frame dependence and geometric ambiguity using inherited prior results only [USE 1.3]
+17.8.3 Validity boundary for Frame dependence and geometric ambiguity with explicit validity limits [USE 1.3]
+17.8.4 Downstream analytical handoff from Frame dependence and geometric ambiguity to downstream sections and chapters [USE 1.3]
+
+17.9 Passive-observation worked problems [FIG+PROB][USE 17.1-17.8]
+17.9.1 Canonical benchmark on Passive-observation worked problems: complete mathematics and closure checks [FIG+PROB][USE 17.1-17.8]
+17.9.2 Boundary-regime benchmark on Passive-observation worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 17.1-17.8]
+17.9.3 Reconstruction or conditioning benchmark on Passive-observation worked problems: inherited operator use [FIG+PROB][USE 17.1-17.8]
+17.9.4 Physical-significance benchmark on Passive-observation worked problems: measurable consequences only [FIG+PROB][USE 17.1-17.8]
+
+17.10 Chapter synthesis and forward map [DEFER]
+17.10.1 Established outcomes consolidated for this chapter [DEFER]
+17.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+17.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 18 - Limits, Judgment, Physically Admissible Interpretation
+18.0 Purpose and validity discipline [USE 1.0,19.0]
+18.0.1 Scope boundary and admissibility assumptions for Purpose and validity discipline [USE 1.0,19.0]
+18.0.2 Inherited prerequisites and resolved back-references for Purpose and validity discipline [USE 1.0,19.0]
+18.0.3 Forward roadmap from Purpose and validity discipline into proof-bearing subsections [USE 1.0,19.0]
+
+18.1 Taxonomy of absolute/conditional/apparent limits [HOME]
+18.1.1 Problem-space declaration for Taxonomy of absolute/conditional/apparent limits under Limits, Judgment, Physically Admissible Interpretation [HOME]
+18.1.2 Proof architecture for Taxonomy of absolute/conditional/apparent limits using inherited prior results only [HOME]
+18.1.3 Validity boundary for Taxonomy of absolute/conditional/apparent limits with explicit validity limits [HOME]
+18.1.4 Downstream analytical handoff from Taxonomy of absolute/conditional/apparent limits to downstream sections and chapters [HOME]
+
+18.2 Hierarchy of proven results across theory layers [HOME]
+18.2.1 Axiomatic frame for Hierarchy of proven results across theory layers under Limits, Judgment, Physically Admissible Interpretation [HOME]
+18.2.2 Construction pathway for Hierarchy of proven results across theory layers using inherited prior results only [HOME]
+18.2.3 Regime interpretation for Hierarchy of proven results across theory layers with explicit validity limits [HOME]
+18.2.4 Later-use inheritance pointer from Hierarchy of proven results across theory layers to downstream sections and chapters [HOME]
+
+18.3 Assumption registry for monograph-valid claims [HOME]
+18.3.1 Governing statement for Assumption registry for monograph-valid claims under Limits, Judgment, Physically Admissible Interpretation [HOME]
+18.3.2 Analytical development for Assumption registry for monograph-valid claims using inherited prior results only [HOME]
+18.3.3 Measurement-facing meaning for Assumption registry for monograph-valid claims with explicit validity limits [HOME]
+18.3.4 Continuation criterion from Assumption registry for monograph-valid claims to downstream sections and chapters [HOME]
+
+18.4 Beyond-scope regimes requiring re-derivation [HOME]
+18.4.1 Foundational specification for Beyond-scope regimes requiring re-derivation under Limits, Judgment, Physically Admissible Interpretation [HOME]
+18.4.2 Theorem route for Beyond-scope regimes requiring re-derivation using inherited prior results only [HOME]
+18.4.3 Constraint interpretation for Beyond-scope regimes requiring re-derivation with explicit validity limits [HOME]
+18.4.4 Forward inheritance link from Beyond-scope regimes requiring re-derivation to downstream sections and chapters [HOME]
+
+18.5 Existence-realizability-observability-inferability hierarchy [HOME]
+18.5.1 Formal setup for Existence-realizability-observability-inferability hierarchy under Limits, Judgment, Physically Admissible Interpretation [HOME]
+18.5.2 Reduction sequence for Existence-realizability-observability-inferability hierarchy using inherited prior results only [HOME]
+18.5.3 Phenomenological reading for Existence-realizability-observability-inferability hierarchy with explicit validity limits [HOME]
+18.5.4 Dependency continuation from Existence-realizability-observability-inferability hierarchy to downstream sections and chapters [HOME]
+
+18.6 Angular momentum reinterpretation under symmetry [USE 1.2,3.2]
+18.6.1 Constitutive declaration for Angular momentum reinterpretation under symmetry under Limits, Judgment, Physically Admissible Interpretation [USE 1.2,3.2]
+18.6.2 Operator derivation for Angular momentum reinterpretation under symmetry using inherited prior results only [USE 1.2,3.2]
+18.6.3 Physical meaning for Angular momentum reinterpretation under symmetry with explicit validity limits [USE 1.2,3.2]
+18.6.4 Next-step consequence from Angular momentum reinterpretation under symmetry to downstream sections and chapters [USE 1.2,3.2]
+
+18.7 Representation dependence and over-count diagnostics [USE 14.6]
+18.7.1 Operator-level setup for Representation dependence and over-count diagnostics under Limits, Judgment, Physically Admissible Interpretation [USE 14.6]
+18.7.2 Spectral development for Representation dependence and over-count diagnostics using inherited prior results only [USE 14.6]
+18.7.3 Interpretive scope for Representation dependence and over-count diagnostics with explicit validity limits [USE 14.6]
+18.7.4 Bridge to subsequent machinery from Representation dependence and over-count diagnostics to downstream sections and chapters [USE 14.6]
+
+18.8 Canonical synthesis theorem for dimensionality claims [HOME]
+18.8.1 Admissibility map for Canonical synthesis theorem for dimensionality claims under Limits, Judgment, Physically Admissible Interpretation [HOME]
+18.8.2 Derivation chain for Canonical synthesis theorem for dimensionality claims using inherited prior results only [HOME]
+18.8.3 Observable consequence map for Canonical synthesis theorem for dimensionality claims with explicit validity limits [HOME]
+18.8.4 Carry-forward implication from Canonical synthesis theorem for dimensionality claims to downstream sections and chapters [HOME]
+
+18.9 Judgment worked problems [FIG+PROB][USE 18.1-18.8]
+18.9.1 Canonical benchmark on Judgment worked problems: complete mathematics and closure checks [FIG+PROB][USE 18.1-18.8]
+18.9.2 Boundary-regime benchmark on Judgment worked problems: asymptotic behavior and admissibility [FIG+PROB][USE 18.1-18.8]
+18.9.3 Reconstruction or conditioning benchmark on Judgment worked problems: inherited operator use [FIG+PROB][USE 18.1-18.8]
+18.9.4 Physical-significance benchmark on Judgment worked problems: measurable consequences only [FIG+PROB][USE 18.1-18.8]
+
+18.10 Chapter synthesis and forward map [DEFER]
+18.10.1 Established outcomes consolidated for this chapter [DEFER]
+18.10.2 Deferred material registry under strict HOME/USE discipline [DEFER]
+18.10.3 Forward bridge into the next chapter without re-derivation [DEFER]
+
+
+Chapter 19 - Open Problems and Constraint-Preserving Directions
+19.0 Scope conditions for future extensions [HOME]
+19.0.1 Scope boundary and admissibility assumptions for Scope conditions for future extensions [HOME]
+19.0.2 Inherited prerequisites and resolved back-references for Scope conditions for future extensions [HOME]
+19.0.3 Forward roadmap from Scope conditions for future extensions into proof-bearing subsections [HOME]
+
+19.1 Physics-closed versus physics-open classification [HOME]
+19.1.1 Admissibility map for Physics-closed versus physics-open classification under Open Problems and Constraint-Preserving Directions [HOME]
+19.1.2 Derivation chain for Physics-closed versus physics-open classification using inherited prior results only [HOME]
+19.1.3 Observable consequence map for Physics-closed versus physics-open classification with explicit validity limits [HOME]
+19.1.4 Carry-forward implication from Physics-closed versus physics-open classification to downstream sections and chapters [HOME]
+
+19.2 Open problems within classical Maxwell framework [HOME]
+19.2.1 Problem-space declaration for Open problems within classical Maxwell framework under Open Problems and Constraint-Preserving Directions [HOME]
+19.2.2 Proof architecture for Open problems within classical Maxwell framework using inherited prior results only [HOME]
+19.2.3 Validity boundary for Open problems within classical Maxwell framework with explicit validity limits [HOME]
+19.2.4 Downstream analytical handoff from Open problems within classical Maxwell framework to downstream sections and chapters [HOME]
+
+19.3 Mathematical frontiers in truncated/spectral Maxwell theory [HOME]
+19.3.1 Axiomatic frame for Mathematical frontiers in truncated/spectral Maxwell theory under Open Problems and Constraint-Preserving Directions [HOME]
+19.3.2 Construction pathway for Mathematical frontiers in truncated/spectral Maxwell theory using inherited prior results only [HOME]
+19.3.3 Regime interpretation for Mathematical frontiers in truncated/spectral Maxwell theory with explicit validity limits [HOME]
+19.3.4 Later-use inheritance pointer from Mathematical frontiers in truncated/spectral Maxwell theory to downstream sections and chapters [HOME]
+
+19.4 Beyond-linear extensions: nonlinearity, gain, time variance [HOME]
+19.4.1 Governing statement for Beyond-linear extensions: nonlinearity, gain, time variance under Open Problems and Constraint-Preserving Directions [HOME]
+19.4.2 Analytical development for Beyond-linear extensions: nonlinearity, gain, time variance using inherited prior results only [HOME]
+19.4.3 Measurement-facing meaning for Beyond-linear extensions: nonlinearity, gain, time variance with explicit validity limits [HOME]
+19.4.4 Continuation criterion from Beyond-linear extensions: nonlinearity, gain, time variance to downstream sections and chapters [HOME]
+
+19.5 Quantization transitions and re-established dimensionality [HOME]
+19.5.1 Foundational specification for Quantization transitions and re-established dimensionality under Open Problems and Constraint-Preserving Directions [HOME]
+19.5.2 Theorem route for Quantization transitions and re-established dimensionality using inherited prior results only [HOME]
+19.5.3 Constraint interpretation for Quantization transitions and re-established dimensionality with explicit validity limits [HOME]
+19.5.4 Forward inheritance link from Quantization transitions and re-established dimensionality to downstream sections and chapters [HOME]
+
+19.6 Near-field/subwavelength research frontiers [HOME]
+19.6.1 Formal setup for Near-field/subwavelength research frontiers under Open Problems and Constraint-Preserving Directions [HOME]
+19.6.2 Reduction sequence for Near-field/subwavelength research frontiers using inherited prior results only [HOME]
+19.6.3 Phenomenological reading for Near-field/subwavelength research frontiers with explicit validity limits [HOME]
+19.6.4 Dependency continuation from Near-field/subwavelength research frontiers to downstream sections and chapters [HOME]
+
+19.7 Experimental bottlenecks and validation protocols [HOME]
+19.7.1 Constitutive declaration for Experimental bottlenecks and validation protocols under Open Problems and Constraint-Preserving Directions [HOME]
+19.7.2 Operator derivation for Experimental bottlenecks and validation protocols using inherited prior results only [HOME]
+19.7.3 Physical meaning for Experimental bottlenecks and validation protocols with explicit validity limits [HOME]
+19.7.4 Next-step consequence from Experimental bottlenecks and validation protocols to downstream sections and chapters [HOME]
+
+19.8 Consistency audits for future claims [HOME]
+19.8.1 Operator-level setup for Consistency audits for future claims under Open Problems and Constraint-Preserving Directions [HOME]
+19.8.2 Spectral development for Consistency audits for future claims using inherited prior results only [HOME]
+19.8.3 Interpretive scope for Consistency audits for future claims with explicit validity limits [HOME]
+19.8.4 Bridge to subsequent machinery from Consistency audits for future claims to downstream sections and chapters [HOME]
+
+19.9 Final synthesis and outlook [USE 18.8][HOME]
+19.9.1 Admissibility map for Final synthesis and outlook under Open Problems and Constraint-Preserving Directions [USE 18.8][HOME]
+19.9.2 Derivation chain for Final synthesis and outlook using inherited prior results only [USE 18.8][HOME]
+19.9.3 Observable consequence map for Final synthesis and outlook with explicit validity limits [USE 18.8][HOME]
+19.9.4 Carry-forward implication from Final synthesis and outlook to downstream sections and chapters [USE 18.8][HOME]
+
+
+# ===============================================================================
+# Sections: 213
+# Subsections (x.y.z): 815
+# ===============================================================================

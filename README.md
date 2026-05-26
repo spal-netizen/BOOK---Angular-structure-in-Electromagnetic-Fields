@@ -24,7 +24,7 @@ Graduate monograph project: **SI units**, time convention **\(e^{-j\omega t}\)**
 | `00-FORWARD-MAP.yaml` | What each chapter may/may not repeat |
 | `TOC/volume-I-ch01-04-FINAL.txt` | Volume I legacy writing TOC (171 subs, Ch. 1-4 path) |
 | `TOC/VOLUME-I-FINAL-REVIEW.md` | Sign-off review (completeness, order, no recursion) |
-| `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` | **AUTHORITATIVE MASTER** full-book TOC for drafting |
+| `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` | **AUTHORITATIVE MASTER** full-book TOC for drafting |
 | `TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt` | Ownership-reference source for HOME/USE ancestry |
 | `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md` | One-proof ownership map across all chapters |
 | `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md` | Mandatory subsection structure contract |
@@ -66,7 +66,7 @@ End with 2 sentences linking to the next subsection.
 
 ## Governance status
 
-- Official master TOC: `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt`
+- Official master TOC: `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt`
 - Theorem ownership lock: `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md`
 - Drafting contract lock: `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`
 - Citation lock: `TOC/CITATION-CONTRACT-ULTIMATE.md`

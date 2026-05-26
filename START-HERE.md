@@ -5,7 +5,7 @@
 ## Three files to open
 
 1. `LOCK-MANIFEST.md` — what is frozen  
-2. `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` — official full-book master TOC  
+2. `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` — official full-book master TOC  
 3. `latex/ch01.tex` — where to write it (`\label{sec:ch101}` first)  
 
 ## First task
@@ -24,5 +24,6 @@
 - Subsection contract: `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`
 - Citation contract: `TOC/CITATION-CONTRACT-ULTIMATE.md`
 - No-recursion audit pass: `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md`
+- Model workflow lock: `MODEL-WORKFLOW-LOCKED.md`
 
 Full detail: `LOCK-MANIFEST.md` | `00-NOTATION.md` | `.cursor/rules/book-consistency.mdc`

@@ -70,3 +70,11 @@ rg -i "Maxwell.*differential" latex/ch0[234].tex
 2026-05-25: Added ultimate governance package with a full 19-chapter ULTIMATE FINAL TOC, theorem-home matrix, subsection drafting contract, citation contract, and no-recursion chapter audit pass. Locked for forward-only drafting and overlap suppression across Chapters 13-16.
 2026-05-25: Promoted `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` to official master TOC for full-book governance; retained ULTIMATE-FINAL as ownership reference source.
 2026-05-25: Added and locked prose-uniqueness rule (unique subsection opening/closing paragraphs) and Volume I section-framing rule (mandatory introductory and summative paragraphs for each section).
+Session marker: home end @ 2026-05-25 23:14 IST, last subsection 1.0.1
+2026-05-25: Promoted `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` to official master TOC; lock/governance references migrated from V2.2 to V3 in one pass.
+2026-05-25: Added and locked depth-and-clarity mandate: each subsection must provide substantial derivation depth, define every equation symbol at first appearance, and explain each major equation mathematically and physically.
+2026-05-25: Added and locked advanced prose/numbering rules: unique subsection opening-closing framing, non-repetitive equation-explanation sentence construction, and strict chapter-wise increasing equation/reference numbering style.
+2026-05-25: Added and locked classical-monograph quality rule for all 19 chapters: drafting must sustain legendary-level depth, density, construction, and page appearance (Harrington/Pozar/Collin/Balanis/Jackson/Griffiths standard).
+2026-05-26: Added and locked model workflow policy in `MODEL-WORKFLOW-LOCKED.md` with task-based switching and mandatory final high-rigor acceptance pass per subsection.
+2026-05-26: Added and locked section-first drafting order for all chapters: section intro framing first, subsections next, section summative bridge last.
+2026-05-26: Added and locked global drafting style: Version A classical monograph tone is mandatory for all 19 chapters (professional, measured, authoritative, reader-friendly scholarly prose).

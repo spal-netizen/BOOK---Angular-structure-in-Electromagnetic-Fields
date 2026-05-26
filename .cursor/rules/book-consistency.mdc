@@ -15,7 +15,7 @@ alwaysApply: true
 - **SI units** only.
 - Read `00-NOTATION.md`, `00-FORWARD-MAP.yaml`, and `TOC/volume-I-ch01-04-FINAL.txt` before editing any section.
 - Volume I: honor [HOME] / [USE SSx.y.z] / [DEFER] tags on every subsection line.
-- Full series outline: `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` (official master, Ch. 1–19).
+- Full series outline: `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` (official master, Ch. 1–19).
 - Every `[FIG+PROB]` subsection: Problem, schematic figure with caption, all math steps, physical meaning per step.
 
 ## Forward progression (no recursion)
@@ -31,20 +31,30 @@ alwaysApply: true
 - Prefer `\E`, `\H`, `\Jimp` macros from `latex/macros.tex`.
 - Enforce unique exposition per subsection: avoid repeated equation displays, repeated concept statements, and repeated sentence-construction templates; inherit prior content only via `\ref{...}` and targeted citation.
 - Enforce unique subsection rhetoric: opening and closing paragraphs must not reuse the same framing template across subsections.
+- Enforce substantial mathematical depth in every subsection: begin from accessible initial mathematical footing, then develop full derivation depth suitable for serious graduate/research readers.
 - Place citations exactly at the claim location and prioritize original/pioneering sources plus latest validated developments.
 - Keep figures minimal and schematic; include only when they materially improve equation-to-physics interpretation.
 - Maintain chapter-wise numbering intent for equations `(chapter.index)` and references `[chapter.index]`.
 - In chapter manuscript prose (`latex/ch*.tex`), avoid bullet-list exposition; define variables, figure levels, and captions inline within formal text.
-- Use `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` as the primary 19-chapter structure.
+- Every variable/symbol/operator in each equation must be explicitly defined at first appearance.
+- Every major equation block must include both a mathematical-function explanation and a detailed physical explanation.
+- Equation-explanation language must be stylistically varied across subsections; avoid repetitive explanatory sentence templates.
+- Enforce chapter-wise monotone numbering for equations and references (e.g., `(1.1) -> (1.2)` and `[1.1] -> [1.2]` within a chapter).
+- Use `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` as the primary 19-chapter structure.
 - Use `TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt` only as ownership-reference source when checking tag ancestry.
 - Enforce theorem ownership from `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md`: one HOME proof, all non-home chapters USE by citation only.
 - Enforce per-subsection depth contract from `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`.
 - Enforce citation placement and source pairing from `TOC/CITATION-CONTRACT-ULTIMATE.md`.
 - Run no-recursion checks from `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md` before marking chapter drafts complete.
 - In Volume I, every section (`X.0`, `X.1`, `X.2`, ...) must include an introductory framing paragraph before subsection flow and a summative framing paragraph after subsection flow.
+- Enforce section-first drafting order in all chapters: draft section-level framing first, then subsections in sequence, then section-level summative bridge.
+- Follow `MODEL-WORKFLOW-LOCKED.md` for task-based model usage; no subsection is accepted complete without final high-rigor pass.
+- Enforce locked prose style across the full book: **Version A — Classical Monograph Tone** (professional, measured, authoritative, reader-friendly scholarly flow; avoid dictation-style wording).
 
 ## Tone
 Graduate research monograph (Harrington/Collin level): precise, no survey padding, no popular OAM hype without gauge caveats from Ch. 1.
+- Across all 19 chapters, maintain classical-monograph page quality comparable to Harrington, Pozar, Collin, Balanis, Jackson, and Griffiths in depth, density, sentence construction, and scholarly appearance.
+- Default sentence register for chapter drafting is Version A classical monograph tone.
 
 ## Volume boundary
 Do not draft Ch. 5+ content in Volume I files except brief forward pointers in §4.11.2–4.11.3.

@@ -41,7 +41,15 @@ try {
     Invoke-Step -FilePath "pdflatex" -ArgumentList @("-interaction=nonstopmode", "-halt-on-error", "main.tex")
 
     foreach ($chapter in @("ch01", "ch02", "ch03", "ch04")) {
-        Invoke-Step -FilePath "bibtex" -ArgumentList @($chapter)
+        $auxPath = Join-Path $resolvedLatexDir "$chapter.aux"
+        $hasCitations = (Test-Path $auxPath) -and (Select-String -Path $auxPath -Pattern "\\citation" -Quiet)
+
+        if ($hasCitations) {
+            Invoke-Step -FilePath "bibtex" -ArgumentList @($chapter)
+        }
+        else {
+            Write-Host ">> Skipping bibtex $chapter (no citations in $chapter.aux)"
+        }
     }
 
     Invoke-Step -FilePath "pdflatex" -ArgumentList @("-interaction=nonstopmode", "-halt-on-error", "main.tex")

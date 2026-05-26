@@ -26,6 +26,7 @@
 | `TOC/VOLUME-I-FINAL-REVIEW.md` | Sign-off: complete, ordered, non-recursive |
 | `00-NOTATION.md` | SI, \(e^{-j\omega t}\), symbols, labels |
 | `00-FORWARD-MAP.yaml` | HOME / USE / DEFER rules per chapter |
+| `MODEL-WORKFLOW-LOCKED.md` | Locked model-selection workflow for drafting/rigor gates |
 | `.cursor/rules/book-consistency.mdc` | AI drafting rules |
 | `latex/preamble.tex` | Document class & packages |
 | `latex/macros.tex` | Phasor macros `\E`, `\H`, etc. |
@@ -53,8 +54,8 @@
 
 | File | Note |
 |------|------|
-| `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` | **Official master TOC** for full-book drafting (19 chapters, polished x.y.z) |
-| `TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt` | Ownership baseline used to generate V2/V2.1/V2.2 |
+| `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` | **Official master TOC** for full-book drafting (19 chapters, strict forward-only x.y.z) |
+| `TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt` | Ownership baseline used to generate V2/V2.1/V2.2/V3 |
 | `TOC/TOC-master-19chapters-definitive.txt` | Legacy full outline archive |
 | `TOC/TOC-COVERAGE-AUDIT.md` | Coverage proof vs original |
 | `TOC/PROFESSOR-STRUCTURAL-REVIEW.md` | Three-volume plan |
@@ -94,6 +95,15 @@ The following drafting constraints are now locked for this manuscript and overri
 5. Expository body text in manuscript chapters must not use bullet-list expression; variables, figure levels, and captions are introduced inline with formal prose.
 6. Every subsection must have unique opening and closing paragraphs; similarly framed openings/closings are forbidden across subsections.
 7. In Volume I, every section (`X.0`, `X.1`, `X.2`, ...) must contain introductory and summative paragraphs that frame all subsections under that section.
+8. Every subsection draft must achieve substantial mathematical depth from accessible starting assumptions to full derivation detail.
+9. Every variable and symbol in equations must be explicitly defined at first appearance.
+10. Every major equation must include both mathematical-function explanation and detailed physical explanation.
+11. Every subsection must be stylistically unique, with visibly distinct opening and closing paragraph framing.
+12. Equation-explanation prose must avoid repetitive sentence construction; descriptions must be varied, authoritative, and precise.
+13. Equation and reference numbering is chapter-wise and monotone within each chapter (e.g., `(1.1), (1.2), ...` and `[1.1], [1.2], ...`).
+14. Drafting quality for all 19 chapters must match classical monograph standards in depth, density, construction, and page appearance consistent with Harrington, Pozar, Collin, Balanis, Jackson, and Griffiths level expectations.
+15. Drafting order is section-first: for every section (`X.0`, `X.1`, `X.2`, ...), write section-level introductory framing before any subsection draft; complete subsection sequence; then write section-level summative bridge.
+16. Global prose-style lock: all manuscript drafting must follow **Version A — Classical Monograph Tone** (professional, measured, authoritative scholarly prose), avoiding directive/commanding diction and preserving reader-friendly formal flow.
 
 ---
 
@@ -101,12 +111,13 @@ The following drafting constraints are now locked for this manuscript and overri
 
 The following control files are now authoritative for all drafting after TOC redesign:
 
-- `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` (**official master TOC**)
+- `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` (**official master TOC**)
 - `TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt` (ownership reference source)
 - `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md`
 - `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`
 - `TOC/CITATION-CONTRACT-ULTIMATE.md`
 - `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md`
+- `MODEL-WORKFLOW-LOCKED.md`
 
 Enforcement requirements:
 
@@ -117,6 +128,15 @@ Enforcement requirements:
 5. No-recursion audit: run per chapter before freeze and resolve all repeated equation/claim blocks by `HOME/USE` reduction.
 6. Prose uniqueness lock: subsection openings and closings must be uniquely framed.
 7. Volume I section framing lock: every section must include introductory and summative framing paragraphs.
+8. Depth lock: each subsection must maintain substantial mathematical derivation depth.
+9. Variable-definition lock: all equation symbols must be explicitly defined.
+10. Equation-meaning lock: each major equation requires both mathematical and physical interpretation passages.
+11. Style-uniqueness lock: subsection openings/closings and equation-explanation phrasing must be non-repetitive and distinctly framed.
+12. Chapter-numbering lock: equations and references must follow chapter-wise increasing numbering conventions.
+13. Classical-monograph lock: all chapters must sustain legendary-level technical depth, density, rhetorical construction, and page-level scholarly appearance.
+14. Model-workflow lock: task-based model switching is allowed, but subsection acceptance requires final high-rigor pass per `MODEL-WORKFLOW-LOCKED.md`.
+15. Section-first lock: drafting must start at section level (not directly at first subsection), then proceed subsection-by-subsection, then close with section summary bridge.
+16. Style-tone lock: chapter prose must use Version A classical monograph tone across all 19 chapters.
 
 ---
 
