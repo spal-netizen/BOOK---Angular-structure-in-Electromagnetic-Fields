@@ -4,16 +4,16 @@
 **Baseline locked:** 2026-05-24 (`LOCK-MANIFEST.md`)  
 **Start date:** _____________ (fill when you begin §1.0.1)  
 **TOC:** `TOC/volume-I-ch01-04-FINAL.txt` — LOCKED  
-**Resume at:** §1.0.1 `[HOME]` in `latex/ch01.tex` (`sec:ch101`)
+**Resume at:** §1.1.1 `[HOME]` in `latex/ch01.tex` (`sec:ch111`)
 
 ## Current focus
 
 | Field | Value |
 |-------|--------|
 | Active chapter | 1 |
-| Active section | 1.0.1 |
+| Active section | 1.1.1 |
 | Tier | A |
-| Status | not started |
+| Status | next to draft |
 
 ## Milestone calendar
 
@@ -52,7 +52,9 @@
 | Done | Sec ID | Tier | Date | Notes |
 |------|--------|------|------|-------|
 | [x] | 1.0.1 | A | 2026-05-24 | First draft in ch01.tex; author outline saved |
-| | 1.0.2 | A | | |
+| [x] | 1.0.2 | A | 2026-05-26 | Draft completed in ch01.tex (`sec:ch102`) |
+| [x] | 1.0.3 | A | 2026-05-26 | Draft completed in ch01.tex (`sec:ch103`) |
+| | 1.1.1 | A | | Next target (`sec:ch111`) |
 
 ## Consistency checks (month 9)
 
@@ -70,7 +72,7 @@ rg -i "Maxwell.*differential" latex/ch0[234].tex
 2026-05-25: Added ultimate governance package with a full 19-chapter ULTIMATE FINAL TOC, theorem-home matrix, subsection drafting contract, citation contract, and no-recursion chapter audit pass. Locked for forward-only drafting and overlap suppression across Chapters 13-16.
 2026-05-25: Promoted `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` to official master TOC for full-book governance; retained ULTIMATE-FINAL as ownership reference source.
 2026-05-25: Added and locked prose-uniqueness rule (unique subsection opening/closing paragraphs) and Volume I section-framing rule (mandatory introductory and summative paragraphs for each section).
-Session marker: home end @ 2026-05-25 23:14 IST, last subsection 1.0.1
+Session marker: home end @ 2026-05-26, last subsection 1.0.3
 2026-05-25: Promoted `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` to official master TOC; lock/governance references migrated from V2.2 to V3 in one pass.
 2026-05-25: Added and locked depth-and-clarity mandate: each subsection must provide substantial derivation depth, define every equation symbol at first appearance, and explain each major equation mathematically and physically.
 2026-05-25: Added and locked advanced prose/numbering rules: unique subsection opening-closing framing, non-repetitive equation-explanation sentence construction, and strict chapter-wise increasing equation/reference numbering style.
