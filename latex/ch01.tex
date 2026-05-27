@@ -6,152 +6,117 @@
 \section{Introduction and Scope}
 \label{sec:ch01.0}
 
-Chapter~\ref{ch:01} introduces the conceptual framework used throughout the
-monograph. The aim at this stage is to place the central question in clear
-mathematical and physical terms before proceeding to detailed operator and
-spectral developments. Section~\ref{sec:ch01.0.1} describes the scope and role of
-the chapter, Section~\ref{sec:ch01.0.2} presents angular structure as a consequence
-of Maxwell dynamics under symmetry and boundary conditions, and
-Section~\ref{sec:ch01.0.3} specifies the admissibility class and validity domain
-for the results that follow. This sequence provides a coherent foundation for
-reading the subsequent derivations with appropriate assumptions and
-interpretation.
+Chapter~\ref{ch:01} opens the monograph by preparing a rigorous reading frame
+for all later derivations. The immediate task is not to enumerate modal families
+or applications, but to separate three layers that are frequently mixed in
+electromagnetic writing: governing field law, representation choice, and
+operationally admissible observable content. Subsection~\ref{sec:ch01.0.1}
+therefore states the chapter mandate and scope boundary,
+Subsection~\ref{sec:ch01.0.2} develops angular structure as a consequence of
+Maxwell dynamics under geometry and boundary constraints, and
+Subsection~\ref{sec:ch01.0.3} defines the admissibility domain in which later
+claims remain mathematically and physically meaningful.
 
 
 \subsection{Scope and role of Chapter 1}
 \label{sec:ch01.0.1}
 % TOC tag: [HOME]
 
-This monograph is written for advanced graduate students, doctoral researchers,
-and practicing scientists or engineers who already command Maxwell theory and
-vector analysis, and who require a proof-structured treatment of angular
-electromagnetic organization \cite{jackson1999,harrington2001,collin2001}. The
-chapter mandate is not to compile device narratives; it is to establish the
-physical and mathematical language under which later statements are judged
-admissible, realizable, and observable.
+This chapter serves advanced graduate readers and researchers who already command
+core Maxwell theory, yet require a proof-structured account in which each claim
+is explicitly tied to assumptions and inheritance logic
+\cite{jackson1999,harrington2001,collin2001}. Inside Volume~I, its role is
+architectural: it creates the inferential vocabulary used in every later chapter.
 
-Chapter~\ref{ch:01} has a precise foundational function within Volume~I. It
-establishes, in one place, the statements that subsequent chapters will invoke
-without re-derivation: Maxwellian field structure in the adopted phasor
-convention and SI system, conservation relations for energy and momentum
-transport, and the distinction between representational descriptors and
-operational observables. The chapter is therefore not an orientation survey; it
-is the formal base from which later operator and spectral developments are read.
+That vocabulary rests on four commitments. Field laws are read in one fixed sign
+convention and SI scaling; transport arguments remain conservation-governed;
+representation-level language is kept subordinate to invariant content; and
+admissibility is treated as both a mathematical and physical requirement.
+Without this discipline, downstream operator and spectral statements would become
+ambiguous in interpretation even when formally correct.
 
-The assumptions adopted here are classical and explicit. The analysis remains
-within Maxwell electrodynamics with admissible sources, admissible boundary
-data, and the time convention \(\exp(-\jj\omega t)\). The intended reader is
-expected to possess graduate-level preparation, yet the exposition remains
-derivationally complete at each theorem-bearing step so that inferential
-continuity is preserved and technical conclusions are traceable to stated
-premises.
+The scope boundary is equally strict. Chapter~\ref{ch:01} does not attempt the
+operator-domain machinery developed in Chapter~2, the angular-eigenfield
+construction of Chapter~3, or the finite-geometry accessibility limits of
+Chapter~4. Those results remain at their own HOME locations and are inherited
+forward by reference only. This partition is part of the no-recursion design and
+is therefore methodological, not stylistic.
 
-Its scope boundary is equally deliberate. This chapter does not construct the
-full operator-domain program developed in Chapter~2, the eigenfield
-representation machinery developed in Chapter~3, or the finite-geometry
-realizability limits developed in Chapter~4. Those subjects are treated at
-their designated proof homes and then inherited forward by reference, in
-accordance with the forward progression architecture of the manuscript.
-
-Within these limits, the chapter clarifies the working meaning of angular
-electromagnetic structure: directional organization, rotational covariance, and
-angular-momentum content are interpreted through conservation-governed field
-quantities and measurement procedures, rather than through nomenclature based on
-phase pattern alone.
-
-This scope statement leads directly to Section~\ref{sec:ch01.0.2}, where the
-origin of angular structure is developed from Maxwell symmetry and boundary
-constraints.
+The subsection delivers one concrete outcome: all later text in
+Chapter~\ref{ch:01} is required to distinguish field law, representation, and
+observation as non-equivalent layers.
 
 
 \subsection{Angular structure from Maxwell symmetry and boundary conditions}
 \label{sec:ch01.0.2}
 % TOC tag: [HOME]
 
-Angular structure is introduced here through Maxwell boundary-value dynamics
-rather than through an a priori catalogue of modal labels
-\cite{jackson1999,harrington2001}. Let \(\Omega\subset\mathbb{R}^3\) denote the
-analysis region, \(\Gamma=\partial\Omega\) its boundary, \(\chi\) the
-constitutive descriptor of the medium model, and \(\Jimp\) the impressed
-electric current density. Under these declarations, the phasor fields are
-written as
-\begin{equation}
-\label{eq:ch1.maxwell-map}
-(\E,\H)=\mathcal{M}_{\Omega,\Gamma,\chi}\!\left[\Jimp\right],
-\end{equation}
-where \(\mathcal{M}_{\Omega,\Gamma,\chi}\) denotes the Maxwell map from
-admissible source data to admissible field pairs. Equation
-\eqref{eq:ch1.maxwell-map} assigns angular organization to the image structure
-of a constrained operator, not to coordinate naming conventions. Physically,
-Eq.~\eqref{eq:ch1.maxwell-map} places angular behavior within the same causal
-framework that governs electromagnetic transport and exchange
-\cite{jackson1999,collin2001}.
+Angular organization is approached here through Maxwell boundary-value dynamics,
+not through a preliminary list of mode labels \cite{jackson1999,harrington2001}.
+Let \(\Omega\subset\mathbb{R}^3\) be the analysis region, \(\Gamma=\partial\Omega\)
+its boundary, \(\chi\) a constitutive model descriptor, and \(\Jimp\) the impressed
+electric current density. In this setting, the field pair \((\E,\H)\) is viewed
+as the image of a constrained Maxwell map
+\(\mathcal{M}_{\Omega,\Gamma,\chi}\!\left[\Jimp\right]\). The key consequence is
+that angular behavior belongs to operator image structure, not to coordinate
+naming alone.
 
-To separate transport observables from representation coordinates, define
-\begin{equation}
-\label{eq:ch1.angular-observable-map}
-\mathcal{A}(\E,\H)=\big(\rho_J,\Phi_J,\Sigma\big),
-\end{equation}
-where \(\rho_J\) denotes an angular-momentum density observable, \(\Phi_J\)
-denotes angular-momentum flux across a specified surface, and \(\Sigma\) denotes
-chosen angular representation coefficients. Equation
-\eqref{eq:ch1.angular-observable-map} distinguishes three non-equivalent levels
-of description: local storage through \(\rho_J\), transported content through
-\(\Phi_J\), and representational decomposition through \(\Sigma\). The
-operational interpretation follows directly from
-Eq.~\eqref{eq:ch1.angular-observable-map}: phase structure alone is not taken as
-evidence of transported angular momentum unless flux and conservation accounting
-support that conclusion \cite{jackson1999,harrington2001}.
+For interpretation, three layers must remain non-interchangeable. Local angular
+content appears at density level (\(\rho_J\)), transport through control surfaces
+appears at flux level (\(\Phi_J\)), and basis-expansion information appears at
+coefficient level (\(\Sigma\)). Phase topology embedded in \(\Sigma\) is therefore
+insufficient evidence of transported angular momentum unless \(\Phi_J\) and
+conservation accounting are simultaneously satisfied
+\cite{jackson1999,harrington2001}.
 
-The symmetry consequence can now be stated in compact form. When the effective
-Maxwell map commutes with active rotational action, rotationally adapted field
-structure is preserved; when this commutation is broken by geometry,
-constitutive anisotropy, or boundary restriction, angular coupling and spectral
-redistribution appear as structural consequences \cite{harrington2001,collin2001}.
-In Chapter~\ref{ch:01}, this result is established at principle level; rigorous
-operator proofs and representation-level elaboration are deferred to their HOME
-developments in later chapters.
+The symmetry statement governing later chapters follows from the same viewpoint.
+When Maxwell action and active rotation commute on the admissible domain,
+rotationally adapted organization survives propagation; when commutation is
+broken by geometry, boundary anisotropy, or constitutive asymmetry, coupling
+between angular channels emerges as a structural necessity
+\cite{harrington2001,collin2001}. Chapter~\ref{ch:01} introduces this principle
+at interpretation level, while rigorous operator and spectral proofs remain at
+their dedicated HOME locations in later chapters.
 
 
 \subsection{Assumptions, finite-energy admissibility, and domain of validity}
 \label{sec:ch01.0.3}
 % TOC tag: [HOME]
 
-The present chapter is formulated on an admissible finite-energy field class.
-For the declared analysis region \(\Omega\subset\mathbb{R}^3\), the working
-condition is
+The chapter is developed on a finite-energy admissible class so that inner
+products, norm estimates, and projection operations remain both mathematically
+well-posed and physically interpretable. For the analysis region
+\(\Omega\subset\mathbb{R}^3\), the principal admissibility condition is
 \begin{equation}
 \label{eq:ch1.energy-class}
 \int_{\Omega}\!\left(\E^*\!\cdot\E+\H^*\!\cdot\H\right)\,dV<\infty,
 \end{equation}
-where \((\cdot)^*\) denotes complex conjugation, and \(dV\) is the volume
-element on \(\Omega\). Equation~\eqref{eq:ch1.energy-class} identifies the
-function class in which field inner products, norm-based estimates, and later
-projection arguments are mathematically well-posed. At the level of physical
-interpretation, Eq.~\eqref{eq:ch1.energy-class} excludes infinite-energy
-idealizations from the admissible state space and thereby enforces realizable
-electromagnetic modeling \cite{jackson1999,collin2001}.
+where \((\cdot)^*\) is complex conjugation and \(dV\) is the volume measure on
+\(\Omega\). The integrand terms \(\E^*\!\cdot\E\) and \(\H^*\!\cdot\H\) capture
+electric and magnetic field-intensity contributions to norm content. As a full
+condition, Eq.~\eqref{eq:ch1.energy-class} excludes infinite-energy states whose
+presence would invalidate both measurement interpretation and operator estimates
+\cite{jackson1999,collin2001}.
 
-The accompanying assumptions are fixed throughout Chapter~\ref{ch:01}: SI unit
-normalization, phasor convention \(\exp(-\jj\omega t)\) with \(\omega>0\), and
-linear local constitutive closure unless an explicit exception is introduced in
-a later HOME section. Every symbol is defined at first appearance and used in
-the notation regime locked for Volume~I.
+This class is used together with three global assumptions throughout
+Chapter~\ref{ch:01}: SI normalization, phasor convention \(\exp(-\jj\omega t)\),
+and linear local constitutive closure unless an explicit exception appears in a
+later HOME location. These assumptions form the compatibility frame that keeps
+field law, boundary admissibility, and conservation reasoning inside one model
+family.
 
-The validity boundary is therefore explicit and non-ambiguous. Strongly
-nonlinear response, active gain media, rapidly time-varying constitutive laws,
-and quantum-field corrections are outside the theorem scope of this chapter.
-Such regimes are referenced only where their formal treatment is assigned in the
-forward map \cite{harrington2001,jackson1999}. This admissibility statement
-completes Subsection~\ref{sec:ch01.0.3} and provides the closure required for the
-Section~\ref{sec:ch01.0} bridge that follows.
+The validity boundary is explicit. Strong nonlinearity, active gain, rapid
+constitutive time modulation, and quantum-field corrections lie outside the
+scope of this chapter. They may be referenced only as forward pointers and are
+treated formally at designated later HOME chapters
+\cite{harrington2001,jackson1999}.
 
 \paragraph{Section 1.0 summary and bridge.}
-Section~\ref{sec:ch01.0} has now fixed the scope, clarified the physical origin
-of angular structure, and declared the admissibility regime under which
-subsequent claims are meaningful. With this framework in place, the chapter
-proceeds to Section~\ref{sec:ch01.1}, where Maxwell equations and conservation
-laws are developed as the first formal backbone of the monograph.
+Section~\ref{sec:ch01.0} has prepared the chapter at three coupled levels:
+mission boundary, structural origin of angular behavior, and admissibility
+domain. With that preparation complete, Section~\ref{sec:ch01.1} develops the
+Maxwell-conservation backbone that governs all subsequent angular arguments in
+Chapter~\ref{ch:01}.
 
 
 \section{Maxwell Theory and Conservation Laws}
@@ -170,32 +135,497 @@ field equations, not as independent postulates.
 \label{sec:ch01.1.1}
 % TOC tag: [HOME]
 
+The first technical requirement of Section~\ref{sec:ch01.1} is a single
+Maxwell-law statement in the adopted phasor convention, written with enough
+detail that later subsections can inherit it without re-expression. Consider a
+piecewise smooth region \(\Omega\subset\mathbb{R}^3\) with boundary
+\(\Gamma=\partial\Omega\), harmonic factor \(\exp(-\jj\omega t)\) with
+\(\omega>0\), phasor fields \(\E=\E(\mathbf{r})\) and \(\H=\H(\mathbf{r})\),
+impressed current density \(\Jimp=\Jimp(\mathbf{r})\), and free-charge density
+\(\rho=\rho(\mathbf{r})\). Vacuum parameters are \(\varepsilon_0\) and \(\mu_0\)
+in SI units \cite{jackson1999,collin2001,harrington2001}.
+
+The local field system is
+\begin{equation}
+\label{eq:ch1.maxwell-local}
+\begin{aligned}
+\curl \E&=-\jj\omega\mu_0\H, &
+\curl \H&=\Jimp+\jj\omega\varepsilon_0\E,\\
+\divg\!\left(\varepsilon_0\E\right)&=\rho, &
+\divg\!\left(\mu_0\H\right)&=0.
+\end{aligned}
+\end{equation}
+In Eq.~\eqref{eq:ch1.maxwell-local}, each operand has a distinct role.
+The curl operator \(\curl\) extracts local rotational content, while
+\(\divg\) measures local flux imbalance. The factor \(-\jj\omega\) converts time
+differentiation to harmonic algebra; \(\mu_0\H\) and \(\varepsilon_0\E\) are
+flux-scaled magnetic and electric terms; \(\Jimp\) is the externally prescribed
+source contribution. Read term by term, the first two relations govern
+circulation dynamics, and the second row imposes divergence constraints that make
+the system physically consistent.
+
+As a complete system, Eq.~\eqref{eq:ch1.maxwell-local} states that electromagnetic
+evolution and source coupling are inseparable from charge and magnetic-flux
+constraints. A direct implication appears when \(\divg\) acts on the second curl
+relation:
+\[
+\divg\Jimp-\jj\omega\rho=0.
+\]
+The first term is source-current divergence and the second is harmonic
+charge-rate term; together they enforce phasor charge continuity, preventing
+nonconservative source prescriptions.
+
+For oriented surface \(S\subset\Omega\) with boundary \(\partial S\), bounded
+volume \(V\subset\Omega\) with boundary \(\partial V\), outward unit normal
+\(\hat{\mathbf{n}}\), line element \(d\boldsymbol{\ell}\), surface element \(dS\),
+and volume element \(dV\), Stokes and divergence theorems map
+Eq.~\eqref{eq:ch1.maxwell-local} to
+\begin{equation}
+\label{eq:ch1.maxwell-integral}
+\begin{aligned}
+\oint_{\partial S}\E\cdot d\boldsymbol{\ell}
+&=-\jj\omega\mu_0\int_S\H\cdot\hat{\mathbf{n}}\,dS,\\
+\oint_{\partial S}\H\cdot d\boldsymbol{\ell}
+&=\int_S\Jimp\cdot\hat{\mathbf{n}}\,dS
++\jj\omega\varepsilon_0\int_S\E\cdot\hat{\mathbf{n}}\,dS,\\
+\int_{\partial V}\varepsilon_0\E\cdot\hat{\mathbf{n}}\,dS
+&=\int_V\rho\,dV,\qquad
+\int_{\partial V}\mu_0\H\cdot\hat{\mathbf{n}}\,dS=0.
+\end{aligned}
+\end{equation}
+Operand-level reading of Eq.~\eqref{eq:ch1.maxwell-integral} clarifies
+measurement meaning: contour integrals represent circulation response; surface
+integrals represent flux through control sets; source and charge terms quantify
+injection and storage within those sets. The full equation block gives the finite
+control-region form of the same field law, with no new physical postulate added.
+Its value is practical and interpretive: quantities appearing in each line map
+directly to measurable loops, surfaces, and enclosed volumes.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Control-set schematic for Maxwell integral balances.}
+An oriented surface \(S\) with boundary \(\partial S\) and an oriented volume \(V\)
+with boundary \(\partial V\) are drawn as two complementary measurement windows.
+Circulation responses are evaluated on \(\partial S\), flux responses on \(S\) or
+\(\partial V\), and free charge is accumulated over \(V\). The geometry makes the
+local-to-global transition in Eq.~\eqref{eq:ch1.maxwell-integral}
+transparent.}}
+\caption{Conceptual geometry linking differential Maxwell laws to circulation and flux measurements in Subsection~\ref{sec:ch01.1.1}.}
+\label{fig:ch1.maxwell-control-sets}
+\end{figure}
+
+Vacuum closure for flux variables and propagation scale is
+\begin{equation}
+\label{eq:ch1.vacuum-constitutive}
+\mathbf{D}=\varepsilon_0\E,\qquad
+\mathbf{B}=\mu_0\H,\qquad
+c=\frac{1}{\sqrt{\varepsilon_0\mu_0}},
+\end{equation}
+where \(\mathbf{D}\) is electric flux density, \(\mathbf{B}\) is magnetic flux
+density, and \(c\) is vacuum wave speed. At operand level, \(\varepsilon_0\E\)
+and \(\mu_0\H\) convert field intensities to flux densities, while
+\(1/\sqrt{\varepsilon_0\mu_0}\) sets intrinsic propagation scale.
+As a complete block, Eq.~\eqref{eq:ch1.vacuum-constitutive} closes the vacuum
+model in \((\E,\H)\) without extra constitutive operators.
+
+A familiar source-free implication (\(\Jimp=0,\rho=0\)) then appears as
+\[
+\nabla^2\E+\omega^2\mu_0\varepsilon_0\E=0,\qquad
+\nabla^2\H+\omega^2\mu_0\varepsilon_0\H=0,
+\]
+with \(\nabla^2\) the vector Laplacian. The operator \(\nabla^2\) controls spatial
+curvature, and \(\omega^2\mu_0\varepsilon_0\) supplies squared propagation scale.
+Physically, free-space fields propagate as constrained wave solutions governed by
+the same vacuum constants that set flux closure.
+
+Validity limits are explicit. Equivalence between local and integral forms
+requires regularity compatible with Stokes/divergence theorems, and
+Eq.~\eqref{eq:ch1.vacuum-constitutive} ceases to suffice for dispersive,
+anisotropic, nonlinear, nonlocal, or strongly time-varying media where
+constitutive response is operator-valued \cite{jackson1999,collin2001}.
+
+Subsection~\ref{sec:ch01.1.2} can now address source admissibility and boundary
+data on this inherited Maxwell base, with no re-expression of the governing
+equation set.
+
 
 \subsection{Sources, boundary conditions, and physical admissibility}
 \label{sec:ch01.1.2}
 % TOC tag: [HOME]
+
+With the field law fixed in Subsection~\ref{sec:ch01.1.1}, the next question is
+which source distributions and boundary data are admissible so that Maxwell
+equations represent physically realizable configurations rather than algebraic
+artifacts. Let \(\Omega\) be partitioned into subregions
+\(\Omega_1,\Omega_2,\ldots\), with interfaces
+\(\Sigma_{12}=\partial\Omega_1\cap\partial\Omega_2\). The unit normal on
+\(\Sigma_{12}\), oriented from medium 1 to medium 2, is
+\(\hat{\mathbf{n}}_{12}\). Surface electric-current density is \(\mathbf{J}_s\),
+surface free-charge density is \(\rho_s\), electric flux density in medium
+\(i\) is \(\mathbf{D}_i\), and magnetic flux density in medium \(i\) is
+\(\mathbf{B}_i\).
+
+For linear local constitutive closure, interface transmission laws are
+\begin{equation}
+\label{eq:ch1.interface-conditions}
+\begin{aligned}
+\hat{\mathbf{n}}_{12}\times(\E_2-\E_1)&=\mathbf{0},\\
+\hat{\mathbf{n}}_{12}\times(\H_2-\H_1)&=\mathbf{J}_s,\\
+\hat{\mathbf{n}}_{12}\cdot(\mathbf{D}_2-\mathbf{D}_1)&=\rho_s,\\
+\hat{\mathbf{n}}_{12}\cdot(\mathbf{B}_2-\mathbf{B}_1)&=0.
+\end{aligned}
+\end{equation}
+Each operator piece in Eq.~\eqref{eq:ch1.interface-conditions} has a specific
+function. Cross products with \(\hat{\mathbf{n}}_{12}\) isolate tangential
+discontinuities; dot products with \(\hat{\mathbf{n}}_{12}\) isolate normal-flux
+jumps. The first row enforces tangential-electric continuity in the absence of
+magnetic sheet current. The second row admits tangential-magnetic discontinuity
+only through explicit surface current \(\mathbf{J}_s\). The third row ties
+electric-flux jump to surface charge \(\rho_s\), while the fourth row preserves
+magnetic-flux solenoidality across the interface.
+
+As a complete interface block, Eq.~\eqref{eq:ch1.interface-conditions} supplies
+the geometric transmission rule that closes Maxwell dynamics across material
+transitions. Physically, it identifies which field components may jump and what
+source mechanism must account for that jump.
+
+On the outer boundary \(\Gamma=\partial\Omega\), let \(\hat{\mathbf{n}}\) be the
+outward normal, and partition
+\(\Gamma=\Gamma_{\mathrm{PEC}}\cup\Gamma_{\mathrm{PMC}}\cup\Gamma_Z\) into
+perfect-electric-conductor, perfect-magnetic-conductor, and impedance segments.
+Boundary closure classes are
+\begin{equation}
+\label{eq:ch1.outer-boundary-classes}
+\begin{aligned}
+\hat{\mathbf{n}}\times\E&=\mathbf{0}\quad &&\text{on }\Gamma_{\mathrm{PEC}},\\
+\hat{\mathbf{n}}\times\H&=\mathbf{0}\quad &&\text{on }\Gamma_{\mathrm{PMC}},\\
+\hat{\mathbf{n}}\times\E&=Z_s\,(\hat{\mathbf{n}}\times\H)\times\hat{\mathbf{n}}
+\quad &&\text{on }\Gamma_{Z},
+\end{aligned}
+\end{equation}
+where \(Z_s\) is surface impedance on \(\Gamma_Z\). Operand-wise,
+\(\hat{\mathbf{n}}\times\E\) and \(\hat{\mathbf{n}}\times\H\) extract tangential
+field components, and the double-cross term
+\((\hat{\mathbf{n}}\times\H)\times\hat{\mathbf{n}}\) reconstructs tangential
+magnetic orientation compatible with impedance coupling. As a full boundary
+statement, Eq.~\eqref{eq:ch1.outer-boundary-classes} determines which tangential
+components are suppressed or coupled by boundary material idealization.
+
+Source admissibility requires regularity, localization, and continuity
+compatibility. Let \(\Omega_s\subset\Omega\) be source support. The admissible
+source class in this chapter is
+\begin{equation}
+\label{eq:ch1.source-admissibility}
+\Jimp\in L^2(\Omega_s)^3,\qquad
+\operatorname{supp}(\Jimp)\subset\overline{\Omega_s},\qquad
+\divg\Jimp-\jj\omega\rho=0
+\ \text{(distribution sense)}.
+\end{equation}
+In Eq.~\eqref{eq:ch1.source-admissibility}, the \(L^2\) condition enforces
+finite-energy current regularity, the support constraint localizes excitation,
+and the continuity relation preserves consistency with the Maxwell balance
+established in Subsection~\ref{sec:ch01.1.1}. As a complete criterion, this block
+prevents mathematically singular source prescriptions that would violate charge
+balance or field-energy control.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Admissibility schematic for sources and boundaries.}
+Domain \(\Omega\) is partitioned into material subregions with interfaces
+\(\Sigma_{12}\), outer boundary segments
+\(\Gamma_{\mathrm{PEC}},\Gamma_{\mathrm{PMC}},\Gamma_Z\), and source support
+\(\Omega_s\). Interface jumps follow Eq.~\eqref{eq:ch1.interface-conditions},
+outer closure follows Eq.~\eqref{eq:ch1.outer-boundary-classes}, and source
+constraints follow Eq.~\eqref{eq:ch1.source-admissibility}.}}
+\caption{Conceptual partition linking interface transmission, boundary closure, and source admissibility in Subsection~\ref{sec:ch01.1.2}.}
+\label{fig:ch1.boundary-admissibility-map}
+\end{figure}
+
+The physical implication is central for the rest of Chapter~1: angular content
+cannot be interpreted independently of source support and boundary class. Even
+when local Maxwell equations are unchanged, variations in interface loading,
+impedance character, or source localization can alter how angular content is
+stored, transported, or rendered inaccessible.
+
+Validity limits are explicit. Equation~\eqref{eq:ch1.interface-conditions} and
+Eq.~\eqref{eq:ch1.outer-boundary-classes} assume piecewise smooth boundaries and
+local constitutive response; rough multiscale boundaries, strongly nonlocal
+media, or active/time-modulated interfaces require extended formulations outside
+this subsection scope \cite{jackson1999,collin2001}.
+
+Subsection~\ref{sec:ch01.1.3} can now formulate initial-boundary value structure
+and uniqueness on a complete admissibility base, without reintroducing field
+laws or boundary classes.
 
 
 \subsection{Initial-boundary value problems and uniqueness}
 \label{sec:ch01.1.3}
 % TOC tag: [HOME]
 
+With governing equations and admissibility classes already in place, the next
+structural task is to specify when a boundary-value prescription yields a single
+electromagnetic field pair rather than a family of mathematically admissible but
+physically incompatible solutions. The problem data consist of source terms
+\((\Jimp,\rho)\) on \(\Omega\), constitutive model \(\chi\), and boundary
+operators on \(\Gamma\) chosen from the classes introduced in
+Subsection~\ref{sec:ch01.1.2}. For harmonic analysis, uniqueness can be cast in
+operator language by asking whether the homogeneous problem admits only the zero
+solution.
+
+Let \((\E_1,\H_1)\) and \((\E_2,\H_2)\) be two solutions for the same data and
+define the difference fields \(\Delta\E=\E_1-\E_2\),
+\(\Delta\H=\H_1-\H_2\). Then \((\Delta\E,\Delta\H)\) satisfies the homogeneous
+Maxwell system with homogeneous boundary data. A compact uniqueness criterion is
+therefore
+\begin{equation}
+\label{eq:ch1.uniqueness-null}
+\mathcal{B}_{\chi,\Gamma}[\Delta\E,\Delta\H]=0
+\Longrightarrow
+\Delta\E=\mathbf{0},\ \Delta\H=\mathbf{0},
+\end{equation}
+where \(\mathcal{B}_{\chi,\Gamma}\) is the boundary-conditioned Maxwell operator
+induced by constitutive data \(\chi\) and boundary class \(\Gamma\).
+Operand-level reading of Eq.~\eqref{eq:ch1.uniqueness-null} is straightforward:
+the left clause expresses vanishing residual of the homogeneous operator with
+homogeneous boundary data, and the right clause requires nullity of the field
+difference. As a complete statement, Eq.~\eqref{eq:ch1.uniqueness-null} is the
+no-ambiguity condition for electromagnetic prediction under fixed admissibility
+specification.
+
+The functional mechanism behind Eq.~\eqref{eq:ch1.uniqueness-null} is expressed
+through an energy-like coercive estimate on admissible fields:
+\begin{equation}
+\label{eq:ch1.uniqueness-estimate}
+\Re\!\left\langle \mathcal{B}_{\chi,\Gamma}[\Delta\E,\Delta\H],(\Delta\E,\Delta\H)\right\rangle
+\ge c_{\chi,\Gamma}\!\left(
+\|\Delta\E\|_{L^2(\Omega)^3}^{2}+\|\Delta\H\|_{L^2(\Omega)^3}^{2}
+\right),
+\end{equation}
+with \(c_{\chi,\Gamma}>0\) the coercivity constant tied to material passivity
+and boundary dissipation/admissibility class, \(\langle\cdot,\cdot\rangle\) the
+problem-compatible sesquilinear pairing, and \(\Re(\cdot)\) the real part.
+Each operand has a precise role: the left side measures operator work on the
+difference state, while the right side controls the full field-energy norm of
+that difference. The full equation expresses that no nonzero homogeneous mode can
+persist without violating coercive positivity.
+
+The physical interpretation is central to the chapter logic. Uniqueness is not
+an abstract technical ornament; it is the statement that the model does not admit
+two different electromagnetic futures under identical source and boundary
+prescription. If this condition fails, angular-momentum transport claims become
+non-identifiable because distinct fields can satisfy the same external data. When
+it holds, later observables and invariants acquire predictive meaning.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Conceptual uniqueness map for boundary-value data.}
+The same source data \((\Jimp,\rho)\) enter domain \(\Omega\), while boundary
+class \(\Gamma\) and constitutive model \(\chi\) define operator
+\(\mathcal{B}_{\chi,\Gamma}\). Uniqueness corresponds to collapse of all
+homogeneous residual branches into the null branch only, ensuring a single
+admissible field response.}}
+\caption{Schematic interpretation of uniqueness in Subsection~\ref{sec:ch01.1.3}: fixed data produce one electromagnetic state when the homogeneous null space is trivial.}
+\label{fig:ch1.uniqueness-map}
+\end{figure}
+
+Validity limits for this subsection are explicit. The estimate
+Eq.~\eqref{eq:ch1.uniqueness-estimate} relies on passive constitutive behavior,
+boundary classes compatible with energy control, and function-space regularity
+consistent with the admissibility framework of Subsection~\ref{sec:ch01.1.2}. In
+active media, nonlocal gain-assisted interfaces, or ill-posed inverse boundary
+closures, coercivity can fail and uniqueness may be lost
+\cite{collin2001,jackson1999,harrington2001}.
+
+With uniqueness architecture established, Subsection~\ref{sec:ch01.1.4} can
+develop energy and momentum transport tensors on a solution class whose physical
+interpretation is no longer ambiguous.
+
 
 \subsection{Energy, linear momentum, and Maxwell stress tensor}
 \label{sec:ch01.1.4}
 % TOC tag: [HOME]
+
+Once existence and uniqueness are secured, transport statements become
+interpretable as physical balances rather than formal identities.
+Subsection~\ref{sec:ch01.1.4} develops the energy and linear-momentum accounting
+framework that later angular-momentum arguments inherit by reference.
+
+In phasor form with the \(\exp(-\jj\omega t)\) convention, let the complex
+Poynting vector be \(\mathbf{S}=\tfrac{1}{2}\E\times\H^*\), where
+\((\cdot)^*\) is complex conjugation. Let \(u_E=\tfrac{1}{4}\varepsilon_0\E\cdot\E^*\)
+and \(u_H=\tfrac{1}{4}\mu_0\H\cdot\H^*\) be electric and magnetic stored-energy
+densities, and let \(\Re(\cdot)\), \(\Im(\cdot)\) extract real and imaginary
+parts. The complex Poynting theorem may be written as
+\begin{equation}
+\label{eq:ch1.poynting-complex}
+\divg\mathbf{S}
+=-\frac{1}{2}\E\cdot\Jimp^*
+-\jj\omega\left(u_H-u_E\right).
+\end{equation}
+Operand-level reading of Eq.~\eqref{eq:ch1.poynting-complex} is decisive.
+The divergence operator \(\divg\) on \(\mathbf{S}\) gives net electromagnetic
+power outflow density, \(\E\cdot\Jimp^*/2\) is source-field work-rate density,
+and \(-\jj\omega(u_H-u_E)\) is reactive exchange between magnetic and electric
+storage channels. As a complete equation,
+Eq.~\eqref{eq:ch1.poynting-complex} couples power transport, source work, and
+local storage imbalance in one conservation-governed statement.
+
+Taking real and imaginary parts yields the standard interpretation split:
+\(\Re(\mathbf{S})\) controls net transported power density and
+\(\Im(\mathbf{S})\) controls reactive circulation associated with local
+near-field energy exchange. This split is essential for the chapter’s angular
+program: strong phase structure in reactive regions does not automatically imply
+far-field momentum carriage.
+
+Linear momentum flux is represented through the time-averaged Maxwell stress
+tensor. In vacuum its dyadic form is
+\begin{equation}
+\label{eq:ch1.maxwell-stress}
+\mathbf{T}
+=\frac{1}{2}\Re\!\left[
+\varepsilon_0\,\E\E^*
++\mu_0\,\H\H^*
+-\frac{1}{2}\mathbf{I}
+\left(\varepsilon_0\,\E\cdot\E^*+\mu_0\,\H\cdot\H^*\right)
+\right],
+\end{equation}
+where \(\mathbf{I}\) is the identity dyad and juxtaposition such as \(\E\E^*\)
+is dyadic product. Operand by operand, the first two dyads are directional field
+intensity contributions, while the isotropic subtraction term
+\(\tfrac{1}{2}\mathbf{I}(\cdots)\) removes trace pressure so that directional
+tractions are represented correctly. The real-part operator keeps physically
+observable time-averaged transfer.
+
+As a complete object, Eq.~\eqref{eq:ch1.maxwell-stress} maps electromagnetic
+field state to mechanical traction on material control surfaces. For unit normal
+\(\hat{\mathbf{n}}\), the traction density is
+\(\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}\), and the net force on closed
+surface \(\partial V\) is \(\mathbf{F}=\int_{\partial V}\mathbf{T}\cdot\hat{\mathbf{n}}\,dS\).
+No new numbered equation is introduced for these definitions because they are
+direct functional uses of the already-established stress tensor.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Energy-momentum control-volume schematic.}
+A volume \(V\) with boundary \(\partial V\) receives source work
+\(\E\cdot\Jimp^*/2\), exports power via \(\mathbf{S}\), and transmits linear
+momentum through boundary traction \(\mathbf{T}\cdot\hat{\mathbf{n}}\). The same
+control set therefore supports power-balance interpretation
+(Eq.~\eqref{eq:ch1.poynting-complex}) and momentum-flux interpretation
+(Eq.~\eqref{eq:ch1.maxwell-stress}).}}
+\caption{Conceptual link between power transport and linear-momentum flux in Subsection~\ref{sec:ch01.1.4}.}
+\label{fig:ch1.energy-momentum-control}
+\end{figure}
+
+The physical implication for the chapter is immediate. Angular interpretations in
+later subsections become trustworthy only when built on this energy-momentum
+backbone: reactive storage, transported power, and traction-mediated momentum
+transfer must be distinguished before any claim about directional or rotational
+field organization is accepted.
+
+Validity limits are explicit. Equations~\eqref{eq:ch1.poynting-complex} and
+\eqref{eq:ch1.maxwell-stress} are written for vacuum linear local closure and
+time-harmonic averaging. In dispersive, anisotropic, or strongly time-varying
+media, additional constitutive terms and averaging care are required before using
+the same balance form without modification \cite{jackson1999,collin2001}.
+
+Subsection~\ref{sec:ch01.1.5} can now extend this transport framework from linear
+momentum to angular momentum and torque balance.
 
 
 \subsection{Angular momentum conservation and torque balance}
 \label{sec:ch01.1.5}
 % TOC tag: [HOME]
 
+Subsection~\ref{sec:ch01.1.5} extends the energy-momentum framework of
+Subsection~\ref{sec:ch01.1.4} to rotational transport and mechanical torque. The
+goal is to identify which field quantities carry angular momentum across control
+surfaces and how boundary/material interaction converts that transport into
+observable torque.
+
+Let \(\mathbf{r}\) be position vector relative to a declared origin, let
+\(\mathbf{T}\) be the Maxwell stress tensor from
+Eq.~\eqref{eq:ch1.maxwell-stress}, and let \(\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}\)
+be traction density on boundary \(\partial V\) of control volume \(V\). The
+electromagnetic torque density about the declared origin is
+\(\boldsymbol{\tau}=\mathbf{r}\times\mathbf{f}\), where \(\mathbf{f}\) is local
+force density, and the angular-momentum flux density tensor about that origin is
+\(\mathbf{M}=\mathbf{r}\times\mathbf{T}\).
+
+Under these declarations, the local angular-momentum balance is
+\begin{equation}
+\label{eq:ch1.angular-momentum-balance}
+\frac{\partial\mathbf{j}_{\mathrm{em}}}{\partial t}
++\divg\mathbf{M}
+=-\boldsymbol{\tau}_{\mathrm{mech}},
+\end{equation}
+where \(\mathbf{j}_{\mathrm{em}}\) is electromagnetic angular-momentum density
+and \(\boldsymbol{\tau}_{\mathrm{mech}}\) is mechanical torque density transferred
+to matter. Operand-level roles are explicit: the time-derivative term measures
+local storage-rate of electromagnetic angular momentum, the divergence term
+\(\divg\mathbf{M}\) measures net angular-momentum outflow from the control set,
+and the right side is the sink/source channel that couples field transport to
+material torque.
+
+As a complete conservation law, Eq.~\eqref{eq:ch1.angular-momentum-balance}
+states that any reduction of field angular momentum in a region must appear as
+boundary flux export or mechanical torque deposition. This closes the conceptual
+gap between field-structure interpretation and measurable rotational action.
+Without this balance relation, phase-structured fields could be misread as
+carrying transport-relevant angular momentum even when no torque pathway exists.
+
+In integral form over \(V\), with \(dS\) the surface element on \(\partial V\),
+the same law implies
+\[
+\frac{d}{dt}\int_V \mathbf{j}_{\mathrm{em}}\,dV
++\int_{\partial V}\mathbf{M}\cdot\hat{\mathbf{n}}\,dS
+=-\int_V \boldsymbol{\tau}_{\mathrm{mech}}\,dV.
+\]
+This unnumbered relation is used here as direct functional reading of
+Eq.~\eqref{eq:ch1.angular-momentum-balance}, not as a new independent theorem.
+The first integral is stored angular-momentum content in the control volume, the
+surface integral is transported content across the boundary, and the right-hand
+volume integral is net mechanical torque uptake.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.92\linewidth}{
+\textbf{Torque-balance control-volume schematic.}
+A control volume \(V\) around an origin receives and emits angular-momentum flux
+\(\mathbf{M}\cdot\hat{\mathbf{n}}\) across \(\partial V\), while material torque
+\(\boldsymbol{\tau}_{\mathrm{mech}}\) accumulates inside \(V\). The bookkeeping
+connects storage, transport, and torque channels in
+Eq.~\eqref{eq:ch1.angular-momentum-balance}.}}
+\caption{Conceptual map relating angular-momentum transport to measurable torque in Subsection~\ref{sec:ch01.1.5}.}
+\label{fig:ch1.torque-balance-control}
+\end{figure}
+
+The physical implication for subsequent chapter sections is fundamental. Angular
+labels gain transport meaning only when they remain consistent with both flux and
+torque accounting. Fields with pronounced phase winding in reactive zones may
+display strong local structure yet produce negligible far-zone torque transfer.
+Conversely, radiative configurations with balanced symmetry breaking can deliver
+nonzero rotational action even when visual modal descriptors appear modest.
+
+Validity limits must be stated with equal clarity. The balance law in
+Eq.~\eqref{eq:ch1.angular-momentum-balance} presumes consistent origin
+declaration, admissible stress-tensor framework, and constitutive behavior within
+the local linear regime used in this chapter. In strongly nonlocal media, active
+metasurfaces, or regimes requiring microscopic spin-lattice exchange models,
+additional coupling terms may be necessary before torque partition is interpreted
+without ambiguity \cite{jackson1999,collin2001,harrington2001}.
+
 \paragraph{Section 1.1 summary and transition.}
-With the Maxwell-conservation backbone fixed in
-Section~\ref{sec:ch01.1}, the chapter can define angular structure without
-ambiguity about what is physically transported and what is merely representational.
-The discussion therefore advances to Section~\ref{sec:ch01.2}, where angular
-organization is formulated directly in field-theoretic terms.
+Section~\ref{sec:ch01.1} now forms a closed transport backbone. Maxwell field
+law, source-boundary admissibility, uniqueness, energy and linear-momentum
+accounting, and angular-momentum torque balance are all fixed at HOME depth. On
+this completed base, Section~\ref{sec:ch01.2} examines angular structure in
+field-theoretic terms without conflating representational appearance with
+conservation-consistent transport.
 
 
 \section{Angular Structure of Electromagnetic Fields}
