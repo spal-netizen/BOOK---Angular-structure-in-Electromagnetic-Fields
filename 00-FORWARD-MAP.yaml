@@ -15,6 +15,7 @@ tag_rules:
   USE: cite as "Section SSx.y.z" or \ref{sec:chxyz}; no re-display of equations
   DEFER: list only in section 1.7, 2.11, 3.11, 4.11
   FIG_PROB: problem + captioned schematic + all steps + physical meaning
+  FIG_SCHEMATIC: include when theorem/equation readability materially improves; must have caption, label, and explicit in-body explanation
 
 chapter_1:
   title: Foundations of Angular Electromagnetic Structure

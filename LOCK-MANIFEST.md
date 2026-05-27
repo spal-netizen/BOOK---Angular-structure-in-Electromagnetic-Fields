@@ -190,6 +190,26 @@ The following citation-governance rule is permanently locked for all sections an
 
 ---
 
+## LOCK ADDENDUM (2026-05-27 — SCHEMATIC FIGURE EMBEDDING LOCK)
+
+The following figure-governance requirement is now explicitly locked:
+
+1. Whenever a theorem statement, governing equation block, or conceptual transition would benefit readability, include a compact conceptual schematic figure in the same subsection.
+2. Every such figure must carry a proper figure environment, chapter-local label, and precise caption.
+3. Figure discussion is mandatory in running body text: explain what each key label means mathematically and what physical interpretation is intended.
+4. Figure insertion is purpose-driven; decorative figures and unlabeled sketches are disallowed.
+5. Reuse of a prior schematic is allowed only when a new regime variant is explicitly stated in text.
+
+---
+
+## LOCK ADDENDUM (2026-05-27 — ALWAYS-RECALL EXECUTION LOCK)
+
+These governance constraints are not advisory; they are always-on execution constraints.
+Every drafting/editing action must recall and apply all active locks before text generation,
+during equation exposition, and at subsection closure.
+
+---
+
 ## WRITING ORDER (locked sequence)
 
 ```

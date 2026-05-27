@@ -31,3 +31,15 @@
 - Model workflow lock: `MODEL-WORKFLOW-LOCKED.md`
 
 Full detail: `LOCK-MANIFEST.md` | `00-NOTATION.md` | `.cursor/rules/book-consistency.mdc`
+
+## Quick drafting trigger
+
+Use this one-line command before any new subsection draft:
+
+`GCHECK <subsection-id>`
+
+Example:
+
+`GCHECK 1.3.3`
+
+Meaning (expanded automatically): read/apply the five locked governance files, then draft only that subsection with strict HOME/USE, zero recursion/repetition, Version A tone, dense math+physics, explicit symbol definitions, equation-level interpretation, and schematic figure insertion when readability benefits.

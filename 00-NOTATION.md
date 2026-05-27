@@ -85,10 +85,17 @@ Radiation and coupling inner products are specialized in Chapters 2–3 (defined
 
 - LaTeX labels: `\label{sec:chMM.SSS}` for section `MM.SSS` (e.g. `sec:ch03.4.2`).
 - Theorems: `thm:chMM.name`, equations: `eq:chMM.name`.
+- Figures: `fig:chMM.name` (e.g. `fig:ch01.rotation-schema`) with chapter-local numbering in rendered output.
 - Equation numbering policy: chapter-wise `(m.n)` style (e.g. `(1.1)`, `(3.27)`).
 - Reference-numbering policy: chapter-wise `[m.n]` style (e.g. `[1.1]`, `[4.12]`) for final production formatting.
 - Citation source policy: prioritize pioneering/original literature and latest proven developments; place citations exactly where support is needed.
 - Bib keys in source remain `AuthorYear` in `latex/references.bib`; rendered chapter-wise labels are a formatting-layer requirement.
+
+## Figure readability policy
+
+- Use only compact conceptual/theorem-centric schematics when a governing equation, theorem step, or interpretation transition benefits from geometric readability.
+- Every included figure must have a precise caption, explicit labels inside the graphic, and a body-text explanation linking labels to equation symbols and physical meaning.
+- Decorative figures are disallowed.
 
 ## Forbidden without cross-reference
 

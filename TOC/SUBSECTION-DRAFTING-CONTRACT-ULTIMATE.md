@@ -41,6 +41,7 @@ All chapter drafts must reflect classical monograph standards of depth, density,
 - Review protocol is line-by-line and subsection-by-subsection; no subsection proceeds to final acceptance until line-level approval is complete.
 - Figures/diagrams are restricted to theorem-centric or concept-centric schematic forms only; decorative graphics are disallowed.
 - Every required figure must include correct level/number and caption, and must be explained explicitly in the body text for mathematical and physical interpretation.
+- When any governing equation, theorem step, or concept transition would read more clearly with geometry, a compact schematic figure is mandatory in that subsection and must be referenced explicitly in prose.
 - Repeated diagram usage across subsections is disallowed unless a new theorem variant or regime requires it and the difference is explicitly stated.
 - Narrative must flow continuously in classical scholarly form; template-like fragment transitions are disallowed.
 - Formulaic framing starters (e.g., "This subsection establishes ...", "For physical interpretation ...", "This closure has a direct ...") are disallowed in final prose.

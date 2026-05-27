@@ -84,3 +84,4 @@ Session marker: home end @ 2026-05-26, last subsection 1.0.3
 2026-05-27: Added and locked figure/diagram philosophy: only theorem-centric or concept-centric schematic figures, complete level/caption labeling, mandatory body-text explanation, and no repeated diagrams without explicit new-regime justification.
 2026-05-27: Added and locked narrative-authenticity philosophy: continuous classical scholarly flow, no formulaic framing starters, and strict subsection-to-subsection uniqueness in sentence architecture and equation narration.
 2026-05-27: Extended narrative-authenticity lock to section-head drafts (1.0...1.7 and onward): unique section introductions/bridges, no repeated staging templates, and classical non-template prose continuity.
+2026-05-27: Added and locked always-recall execution rule: all active governance constraints must be explicitly recalled and applied at every drafting/editing action.
