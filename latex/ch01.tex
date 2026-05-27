@@ -1980,26 +1980,348 @@ reconstructions.
 \label{sec:ch01.5.1}
 % TOC tag: [HOME]
 
+Measurement enters electromagnetics through interaction channels in which field
+variables exchange power, momentum, or angular momentum with material degrees of
+freedom. A precise interaction map is established here at HOME level so that
+later inference statements in Chapter~\ref{ch:01} are judged against explicit
+transfer equations rather than against representation-level descriptors.
+
+Let \(V_m\subset\Omega\) denote the material interaction region, with boundary
+\(\partial V_m\), outward unit normal \(\hat{\mathbf{n}}\), and volume element
+\(dV\). Let \(\E(\mathbf{r})\) and \(\H(\mathbf{r})\) be phasor fields under the
+\(\exp(-j\omega t)\) convention, let \(\J_c(\mathbf{r})\) be conduction-current
+density inside matter, and let \(\rho(\mathbf{r})\) be free-charge density. The
+time-averaged electromagnetic power-transfer density into matter is
+\begin{equation}
+\label{eq:ch1.material-power-density}
+p_m(\mathbf{r})=\frac{1}{2}\Re\!\left\{\E\cdot\J_c^*\right\},
+\end{equation}
+where \((\cdot)^*\) denotes complex conjugation and \(\Re\{\cdot\}\) extracts the
+real part. Operand by operand, \(\E\cdot\J_c^*\) is local field-current work-rate
+density in complex form, and the factor \(1/2\) converts phasor bilinear form to
+time average. As a complete relation,
+Eq.~\eqref{eq:ch1.material-power-density} identifies the local channel by which
+electromagnetic energy is converted into measurable material response such as
+heating or mechanical actuation \cite{jackson1999,collin2001}.
+
+Mechanical transfer is described by the cycle-averaged Lorentz-force density
+\begin{equation}
+\label{eq:ch1.material-force-density}
+\mathbf{f}_m(\mathbf{r})
+=\frac{1}{2}\Re\!\left\{
+\rho\,\E+\J_c\times\mu\,\H^*
+\right\},
+\end{equation}
+where \(\mu\) is permeability and \(\times\) is vector cross product. The first
+term \(\rho\,\E\) is electric-force density on free charge, while
+\(\J_c\times\mu\H^*\) is magnetic-force density on moving charge carriers. Taken
+together, Eq.~\eqref{eq:ch1.material-force-density} is the local force-transfer
+law linking measurable mechanical loading to field state and material current.
+
+Integrating over \(V_m\) gives net power and net force channels:
+\[
+P_m=\int_{V_m}p_m\,dV,\qquad
+\mathbf{F}_m=\int_{V_m}\mathbf{f}_m\,dV.
+\]
+These unnumbered expressions are direct integral uses of
+Eqs.~\eqref{eq:ch1.material-power-density}--\eqref{eq:ch1.material-force-density}
+and therefore do not introduce new theorem-level content. Their physical role is
+operational: they define what a calorimetric or force-sensing apparatus should
+recover in the absence of channel distortion.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Field-to-matter transfer schematic}\\[2mm]
+Input block: field state \((\E,\H)\) over interaction region \(V_m\).\\
+Channel 1: \(p_m=\frac{1}{2}\Re\{\E\cdot\J_c^*\}\) integrated to \(P_m\).\\
+Channel 2: \(\mathbf{f}_m=\frac{1}{2}\Re\{\rho\E+\J_c\times\mu\H^*\}\)
+integrated to \(\mathbf{F}_m\).\\
+Output block: measurable thermal/mechanical response under stated boundary and
+material assumptions.
+\end{minipage}}
+\caption{Conceptual map of local-to-global field-matter transfer channels in Subsection~\ref{sec:ch01.5.1}.}
+\label{fig:ch1.field-matter-transfer}
+\end{figure}
+
+Figure~\ref{fig:ch1.field-matter-transfer} clarifies the operational structure:
+measurement does not access abstract field amplitudes directly, but accesses
+material response after transfer through power and force channels. This is why a
+claim about ``observed angular structure'' remains incomplete unless the channel
+from fields to matter is specified.
+
+The validity envelope of this subsection is limited to linear local constitutive
+response, harmonic steady state, and continuum averaging scales for charge and
+current densities. Strongly nonlinear transport, discrete-particle regimes, or
+ultrafast transients require generalized models and are outside the present HOME
+establishment \cite{harrington2001,balanis2016}.
+
+The next subsection converts the stress-tensor framework from
+Subsection~\ref{sec:ch01.1.4} into explicit torque and momentum measurement
+relations.
+
 
 \subsection{Torque, momentum flux, and stress measurements}
 \label{sec:ch01.5.2}
 % TOC tag: [USE SS1.1.4]
+
+Stress-based measurement in this chapter is inherited directly from the HOME
+framework in Subsection~\ref{sec:ch01.1.4}; no re-derivation of field momentum
+balance is introduced here. The objective is strictly operational: map the
+already-established stress tensor to instrument outputs for force and torque.
+
+Let \(\mathbf{T}\) be Maxwell stress tensor from
+Eq.~\eqref{eq:ch1.maxwell-stress}, let \(S_m\) be the sensing surface around a
+test body, and let \(\hat{\mathbf{n}}\) denote outward surface normal on \(S_m\).
+The traction density is \(\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}\). For a
+declared reference origin \(\mathbf{r}_0\), measured force vector
+\(\mathbf{y}_F\), and measured torque component \(y_\tau\) about axis unit vector
+\(\hat{\mathbf{u}}_\tau\), a channel-calibrated measurement model is
+\begin{equation}
+\label{eq:ch1.stress-measurement-model}
+\mathbf{y}_F
+=\mathbf{K}_F\!\left(\int_{S_m}\mathbf{T}\cdot\hat{\mathbf{n}}\,dS\right)
++\mathbf{n}_F,\qquad
+y_\tau
+=K_\tau\!\left(
+\int_{S_m}\!\big[(\mathbf{r}-\mathbf{r}_0)\times(\mathbf{T}\cdot\hat{\mathbf{n}})\big]
+\cdot\hat{\mathbf{u}}_\tau\,dS
+\right)+n_\tau,
+\end{equation}
+where \(\mathbf{K}_F\) and \(K_\tau\) are calibration operators/scalars, and
+\(\mathbf{n}_F,n_\tau\) collect channel disturbances. The two surface integrals are
+deterministic electromagnetic load predictions inherited from
+Eq.~\eqref{eq:ch1.maxwell-stress}; calibration and disturbance terms convert that
+prediction into practical measurement channels.
+
+At mathematical level, Eq.~\eqref{eq:ch1.stress-measurement-model} composes
+field-to-traction mapping, surface integration, and instrument transfer in one
+statement. At physical level, it explains why two laboratories can report
+different torque values from the same field realization unless origin declaration,
+axis definition, and calibration normalization are matched.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Stress-to-instrument mapping for torque channels}\\[2mm]
+Surface \(S_m\) encloses the test body; traction
+\(\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}\) is integrated for force and moment.\\
+Reference origin \(\mathbf{r}_0\) and axis \(\hat{\mathbf{u}}_\tau\) define the
+reported torque component.\\
+Calibration blocks \(\mathbf{K}_F,K_\tau\) and disturbance inputs
+\(\mathbf{n}_F,n_\tau\) complete the measured outputs
+\((\mathbf{y}_F,y_\tau)\).
+\end{minipage}}
+\caption{Schematic of stress-flux integration and calibration stages used in Subsection~\ref{sec:ch01.5.2}.}
+\label{fig:ch1.stress-measurement-map}
+\end{figure}
+
+Figure~\ref{fig:ch1.stress-measurement-map} is the practical counterpart of
+Subsection~\ref{sec:ch01.1.4}: the stress tensor remains the field-theoretic HOME
+object, while this subsection fixes only how that object is sampled and reported.
+This HOME/USE separation prevents recursion while preserving experimental
+readability.
+
+The model assumes quasi-static sensor response over one cycle-average window and
+surface geometry known to sufficient precision for traction integration. Large
+vibration bandwidth, unknown moving boundaries, or unresolved near-contact fields
+can invalidate the simple calibration form in
+Eq.~\eqref{eq:ch1.stress-measurement-model} and require dynamic inverse
+identification \cite{jackson1999,harrington2001}.
+
+The section next states how modal coefficients are estimated from finite
+measurements and where those estimates become ill-conditioned.
 
 
 \subsection{Modal projections and measurement limits}
 \label{sec:ch01.5.3}
 % TOC tag: [HOME]
 
+Angular interpretation often proceeds through modal coefficients, but those
+coefficients are not primitive observables; they are reconstructions from finite
+channel data. The HOME projection model introduced below exposes the resolution
+limits imposed by finite aperture, finite bandwidth, and noise.
+
+Let \(\Gamma_m\) denote a measurement surface, let
+\(\{\mathbf{w}_q(\mathbf{r})\}_{q=1}^{Q}\) be known channel weighting functions on
+\(\Gamma_m\), and let \(y_q\) be measured channel data. For tangential electric
+field \(\E_t\), channel outputs satisfy
+\begin{equation}
+\label{eq:ch1.modal-projection-data}
+y_q=\int_{\Gamma_m}\mathbf{w}_q^*(\mathbf{r})\cdot\E_t(\mathbf{r})\,dS+n_q,
+\qquad q=1,\dots,Q,
+\end{equation}
+where \(n_q\) is measurement noise in channel \(q\). Each integral is a weighted
+projection of \(\E_t\) onto channel kernel \(\mathbf{w}_q\), so the data vector
+\(\mathbf{y}\) captures only the subspace interrogated by the chosen sensing set.
+
+Represent \(\E_t\) in a model basis \(\{\boldsymbol{\psi}_m\}_{m=1}^{M}\) with
+coefficients \(a_m\): \(\E_t\approx\sum_{m=1}^{M}a_m\boldsymbol{\psi}_m\). Then
+Eq.~\eqref{eq:ch1.modal-projection-data} becomes the finite-dimensional inverse
+system \(\mathbf{y}=G\mathbf{a}+\mathbf{n}\), where
+\(G_{qm}=\int_{\Gamma_m}\mathbf{w}_q^*\cdot\boldsymbol{\psi}_m\,dS\). A stable
+regularized estimator is
+\begin{equation}
+\label{eq:ch1.modal-regularized-estimator}
+\widehat{\mathbf{a}}_\lambda
+=\left(G^*G+\lambda I\right)^{-1}G^*\mathbf{y},
+\end{equation}
+where \(G^*\) is conjugate transpose, \(I\) is identity matrix, and \(\lambda>0\)
+is regularization parameter. Operator-wise, \(G^*G\) encodes channel sensitivity
+to basis directions, \(\lambda I\) suppresses small-singular-value amplification,
+and left multiplication by \((G^*G+\lambda I)^{-1}G^*\) yields the reconstructed
+coefficient vector.
+
+As a complete inverse relation,
+Eq.~\eqref{eq:ch1.modal-regularized-estimator} formalizes a central measurement
+fact: modal descriptions are model-dependent estimates whose reliability depends
+on channel geometry and conditioning, not on phase pattern alone. This condition
+is the section-level safeguard against over-interpreting visually appealing but
+weakly observable modal decompositions \cite{collin2001,balanis2016}.
+
+Quantitative resolution is bounded by singular-spectrum decay of \(G\). Let
+\(\sigma_{\min}^{(\mathrm{eff})}\) be the smallest retained singular value after
+truncation. Then, for perturbation \(\delta\mathbf{y}\), one obtains the
+conditioning bound
+\[
+\|\delta\widehat{\mathbf{a}}_\lambda\|_2
+\lesssim
+\frac{1}{\sigma_{\min}^{(\mathrm{eff})}+\lambda}\,\|\delta\mathbf{y}\|_2.
+\]
+This unnumbered inequality is a direct stability reading of
+Eq.~\eqref{eq:ch1.modal-regularized-estimator}: weakly observed modal directions
+amplify uncertainty unless regularization or acquisition geometry is revised.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Projection-to-estimation pipeline for modal reports}\\[2mm]
+Field on \(\Gamma_m\) \(\rightarrow\) weighted projections
+\(\{y_q\}\) via Eq.~\eqref{eq:ch1.modal-projection-data}.\\
+Data vector \(\mathbf{y}\) \(\rightarrow\) inverse block with matrix \(G\),
+regularization \(\lambda\), estimator
+\(\widehat{\mathbf{a}}_\lambda\) in Eq.~\eqref{eq:ch1.modal-regularized-estimator}.\\
+Conditioning branch: singular-value decay controls reliable modal dimension.
+\end{minipage}}
+\caption{Conceptual schematic separating measured channel space from reconstructed modal-coefficient space in Subsection~\ref{sec:ch01.5.3}.}
+\label{fig:ch1.modal-projection-pipeline}
+\end{figure}
+
+Figure~\ref{fig:ch1.modal-projection-pipeline} emphasizes the interpretive
+boundary required in this chapter: channels are measured, coefficients are
+inferred. The distinction is indispensable when angular labels are compared
+across different apertures or sensing protocols.
+
+The present derivation assumes linear measurement kernels, known basis functions,
+and perturbations small enough for first-order conditioning analysis. Model
+mismatch, nonlinear detectors, or incomplete channel characterization require
+broader uncertainty quantification than addressed here.
+
+The final subsection formulates a decision criterion that separates direct
+observables from quantities that remain inference-dependent descriptors.
+
 
 \subsection{Observables versus inferred quantities}
 \label{sec:ch01.5.4}
 % TOC tag: [HOME]
 
+The section closes by drawing a strict boundary between directly measured
+quantities and reconstructed descriptors. This boundary is indispensable for
+Chapter~\ref{ch:01}: without it, representation-level elegance can be mistaken
+for measurable electromagnetic content.
+
+Let \(\mathcal{O}_d\) denote a direct observable generated by calibrated channel
+map \(\mathcal{M}\), and let \(\mathcal{Q}_i\) denote an inferred quantity
+computed by estimator \(\mathcal{R}\) from data \(\mathbf{y}\). Using
+Eq.~\eqref{eq:ch1.operational-measurement-model}, write
+\[
+\mathcal{O}_d=\mathcal{M}[\mathcal{F}],\qquad
+\mathcal{Q}_i=\mathcal{R}[\mathbf{y}],\qquad
+\mathbf{y}=\mathcal{M}[\mathcal{F}]+\mathbf{n}.
+\]
+These unnumbered relations define roles only: \(\mathcal{O}_d\) belongs to the
+channel output space, while \(\mathcal{Q}_i\) belongs to reconstruction space.
+
+A quantity is admitted as operationally robust only if it satisfies symmetry
+admissibility from Eq.~\eqref{eq:ch1.channel-covariance} together with bounded
+uncertainty amplification. Introduce effective uncertainty gain
+\(\kappa_{\mathrm{eff}}\) and direct-channel uncertainty floor
+\(\sigma_d\), and define
+\begin{equation}
+\label{eq:ch1.observable-inference-criterion}
+\mathfrak{A}(\mathcal{Q}_i)
+=
+\frac{\mathrm{Std}[\mathcal{Q}_i]}
+{\sigma_d}
+\cdot
+\kappa_{\mathrm{eff}}.
+\end{equation}
+Operand-level meaning is explicit: \(\mathrm{Std}[\mathcal{Q}_i]\) is estimator
+uncertainty, \(\sigma_d\) is measurement-scale uncertainty of direct channels,
+and \(\kappa_{\mathrm{eff}}\) captures inversion sensitivity. As a complete
+criterion, Eq.~\eqref{eq:ch1.observable-inference-criterion} quantifies how far
+an inferred descriptor departs from direct-observable reliability.
+
+An interpretation decision is then stated by
+\begin{equation}
+\label{eq:ch1.observable-decision-rule}
+\mathfrak{A}(\mathcal{Q}_i)\le \tau_A
+\Longrightarrow
+\text{report as constrained observable surrogate},
+\qquad
+\mathfrak{A}(\mathcal{Q}_i)>\tau_A
+\Longrightarrow
+\text{report as inference-only descriptor},
+\end{equation}
+where \(\tau_A>0\) is an application-specific admissibility threshold fixed by
+protocol before analysis. The mathematical function of
+Eq.~\eqref{eq:ch1.observable-decision-rule} is classification under explicit
+uncertainty control; the physical function is to prevent modal or phase labels
+from being over-claimed as directly measured transport quantities.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Observable vs inference decision architecture}\\[2mm]
+Measured data path: \(\mathcal{F}\xrightarrow{\mathcal{M}}\mathbf{y}\).\\
+Direct report branch: \(\mathbf{y}\rightarrow \mathcal{O}_d\).\\
+Inference branch: \(\mathbf{y}\xrightarrow{\mathcal{R}}\mathcal{Q}_i\rightarrow
+\mathfrak{A}(\mathcal{Q}_i)\) via Eq.~\eqref{eq:ch1.observable-inference-criterion}.\\
+Decision gate: Eq.~\eqref{eq:ch1.observable-decision-rule} assigns
+observable-surrogate or inference-only status.
+\end{minipage}}
+\caption{Conceptual classifier separating direct observables from inference-dependent quantities in Subsection~\ref{sec:ch01.5.4}.}
+\label{fig:ch1.observable-inference-classifier}
+\end{figure}
+
+Figure~\ref{fig:ch1.observable-inference-classifier} provides the reporting logic
+required for the rest of Volume~I: every quoted angular descriptor must carry its
+classification tag, so that experimentally anchored quantities are not mixed with
+model-contingent reconstructions.
+
+The criterion assumes calibrated channels, declared thresholds, and uncertainty
+estimates consistent with the noise model of
+Eq.~\eqref{eq:ch1.operational-measurement-model}. In adversarial noise, strong
+model mismatch, or nonstationary acquisition, thresholding alone is insufficient
+and should be replaced by full Bayesian or worst-case robust inference protocols
+\cite{harrington2001,collin2001}.
+
+Section~\ref{sec:ch01.5} now closes with a complete measurement interpretation
+stack: field-matter transfer channels, stress-based torque measurement, modal
+projection limits, and an explicit observable-versus-inference decision rule.
+This stack is the acceptance filter applied to all worked cases in
+Section~\ref{sec:ch01.6}.
+
 \paragraph{Section 1.5 consolidation and handoff.}
-The measurement framework in Section~\ref{sec:ch01.5} supplies the operational
-tests that later examples must satisfy. Section~\ref{sec:ch01.6} therefore uses
-worked problems and counterexamples to demonstrate where conservation-consistent
-interpretation is sustained and where phase-only inference fails.
+The measurement architecture established in Section~\ref{sec:ch01.5} converts
+field-theoretic statements into channel-explicit reporting rules with declared
+uncertainty boundaries. Section~\ref{sec:ch01.6} now stress-tests those rules on
+worked examples and counterexamples, so that conservation-consistent angular
+claims can be separated from phase-only or inversion-fragile interpretations.
 
 
 \section{Examples and Counterexamples}
@@ -2016,26 +2338,313 @@ canonical and limiting cases.
 \label{sec:ch01.6.1}
 % TOC tag: [FIG+PROB][USE SS1.1.5]
 
+Consider a finite radiator enclosed by a closed control surface \(S_R\) in the
+radiative zone, with outward unit normal \(\hat{\mathbf{n}}\), position vector
+\(\mathbf{r}\) measured from declared origin \(\mathbf{r}_0\), and time-averaged
+Maxwell stress tensor \(\mathbf{T}\) inherited from
+Subsection~\ref{sec:ch01.1.4}. The problem is to predict measurable mechanical
+torque about axis \(\hat{\mathbf{z}}\) from radiated power and angular mode
+content, without re-deriving the conservation law already fixed in
+Subsection~\ref{sec:ch01.1.5}.
+
+For steady harmonic operation, storage variation over one cycle-average window is
+zero, so the angular-momentum balance from
+Eq.~\eqref{eq:ch1.angular-momentum-balance} reduces to a surface-flux/torque
+equation:
+\begin{equation}
+\label{eq:ch1.ex61-torque-flux}
+\tau_z^{\mathrm{mech}}
+=
+-\int_{S_R}
+\big[\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{n}})\big]
+\cdot\hat{\mathbf{z}}\,dS,
+\end{equation}
+where \(\tau_z^{\mathrm{mech}}\) is measured mechanical torque component on the
+load. The integrand is local angular-momentum flux density crossing \(S_R\),
+projected on \(\hat{\mathbf{z}}\); the surface integral is total exported
+electromagnetic angular momentum per unit time.
+
+Let \(P_{\mathrm{rad}}\) denote radiated power through \(S_R\), and define
+dimensionless angular transport factor \(\chi_J\) by
+\[
+\chi_J=\frac{\dot J_z}{P_{\mathrm{rad}}},\qquad
+\dot J_z=
+\int_{S_R}
+\big[\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{n}})\big]
+\cdot\hat{\mathbf{z}}\,dS.
+\]
+In the common single-helical-channel limit with azimuthal index \(m\in\mathbb{Z}\)
+and circular-polarization helicity \(\sigma\in\{-1,+1\}\), the channel factor is
+\(\chi_J\approx (m+\sigma)/\omega\), where \(\omega\) is angular frequency.
+Substituting into Eq.~\eqref{eq:ch1.ex61-torque-flux} yields the application law
+\begin{equation}
+\label{eq:ch1.ex61-torque-power}
+\tau_z^{\mathrm{mech}}
+\approx
+-\frac{m+\sigma}{\omega}\,P_{\mathrm{rad}}.
+\end{equation}
+Equation~\eqref{eq:ch1.ex61-torque-power} is not a new conservation theorem; it
+is a regime-specific evaluator obtained by applying the HOME conservation
+statement of Subsection~\ref{sec:ch01.1.5} to a radiative control surface.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Problem geometry: radiative angular-momentum flux to torque}\\[2mm]
+Central radiator at origin \(\mathbf{r}_0\), enclosed by far-zone control surface
+\(S_R\).\\
+Outward flux channel:
+\(\big[\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{n}})\big]\cdot\hat{\mathbf{z}}\).\\
+Mechanical load on axis \(\hat{\mathbf{z}}\) reports
+\(\tau_z^{\mathrm{mech}}\).\\
+Power monitor on \(S_R\) reports \(P_{\mathrm{rad}}\).
+\end{minipage}}
+\caption{Worked-problem schematic for Subsection~\ref{sec:ch01.6.1}: mapping radiative angular-momentum flux to measurable torque.}
+\label{fig:ch1.ex61-radiation-torque}
+\end{figure}
+
+Figure~\ref{fig:ch1.ex61-radiation-torque} expresses the full measurement chain:
+field solution \(\rightarrow\) stress-flux evaluation \(\rightarrow\) torque
+readout. The physical interpretation is immediate: once conservation holds, a
+nonzero exported angular-momentum flux must appear as opposite-sign torque on the
+radiator-load system. The measured torque therefore tests transport reality, not
+phase aesthetics \cite{jackson1999,harrington2001}.
+
+The result is valid when \(S_R\) lies in a region where radiative flux dominates
+reactive recirculation, material back-action on the source is weak over one cycle
+average, and modal leakage to uncontrolled channels is negligible. Strong
+near-field storage, multimode cross-coupling, or moving boundaries require a
+broader control model \cite{collin2001,jackson1999}.
+
+The next problem deliberately constructs a field with conspicuous phase structure
+but vanishing net angular-momentum transport, thereby testing necessity versus
+sufficiency of phase winding.
 
 \subsection{Phase structure without angular-momentum transport}
 \label{sec:ch01.6.2}
 % TOC tag: [FIG+PROB][HOME]
 
+Let a monochromatic transverse field on observation surface \(S_o\) be formed by
+superposing two equal-amplitude counter-rotating helical channels of the same
+radial envelope \(A(\rho)\), cylindrical radius \(\rho\), azimuth \(\phi\), and
+integer order \(m>0\):
+\begin{equation}
+\label{eq:ch1.ex62-counter-rotating-superposition}
+E_t(\rho,\phi)
+=
+A(\rho)e^{j m\phi}
++
+A(\rho)e^{-j m\phi}
+=
+2A(\rho)\cos(m\phi).
+\end{equation}
+Equation~\eqref{eq:ch1.ex62-counter-rotating-superposition} exhibits pronounced
+angular patterning through \(\cos(m\phi)\), including alternating lobes and nodal
+lines, so the field is phase-structured by any geometric inspection criterion.
+
+Define modal intensities \(I_+(\rho)=|A_+(\rho)|^2\) and
+\(I_-(\rho)=|A_-(\rho)|^2\) for \(+m\) and \(-m\) channels, and let
+\(\dot J_z\) denote net angular-momentum transport rate through \(S_o\). For this
+paired channel family, the transport balance is
+\begin{equation}
+\label{eq:ch1.ex62-net-am-transport}
+\dot J_z
+=
+\frac{m}{\omega}
+\int_{S_o}\!\big(I_+-I_-\big)\,dS.
+\end{equation}
+Operand interpretation is explicit: \(m/\omega\) is angular-momentum-per-energy
+scale for each channel, while \(I_+-I_-\) is signed channel imbalance. The full
+equation states that net transport depends on imbalance, not on phase pattern
+visibility.
+
+Under equal excitation \(I_+=I_-\), Eq.~\eqref{eq:ch1.ex62-net-am-transport}
+gives
+\[
+\dot J_z=0
+\quad\text{while}\quad
+E_t(\rho,\phi)=2A(\rho)\cos(m\phi)\neq 0.
+\]
+Hence phase structure is not sufficient for angular-momentum transport. This
+subsection establishes that insufficiency at HOME level and fixes a critical
+interpretation rule used throughout later chapters.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Counterexample geometry: visible phase structure, zero net transport}\\[2mm]
+Channel \(+m\): azimuthal circulation in positive sense.\\
+Channel \(-m\): azimuthal circulation in negative sense with equal intensity.\\
+Superposed field: lobe/nodal pattern in \(\phi\), but channel imbalance is zero,
+so net \(\dot J_z\) through \(S_o\) is zero.
+\end{minipage}}
+\caption{Schematic for Subsection~\ref{sec:ch01.6.2}: phase-pattern richness without net angular-momentum carriage.}
+\label{fig:ch1.ex62-phase-no-transport}
+\end{figure}
+
+Figure~\ref{fig:ch1.ex62-phase-no-transport} converts the algebra into a
+diagnostic statement: visual twisting or lobe count cannot by itself certify
+mechanical torque capability. A transport claim requires signed channel imbalance
+or equivalent flux criterion, exactly as enforced by
+Eq.~\eqref{eq:ch1.ex62-net-am-transport} \cite{jackson1999,collin2001}.
+
+The derivation presumes linear superposition, coherent channel control, and
+observation geometry that resolves channel intensities without bias. Incoherent
+mixing, polarization-selective loss, or aperture truncation can break the exact
+cancelation and produce residual transport.
+
+With a HOME counterexample now fixed, the next subsection tests an additional
+failure mode: gauge-sensitive local density narratives that survive algebraic
+manipulation but fail observability discipline.
 
 \subsection{Gauge dependence of local angular-momentum densities}
 \label{sec:ch01.6.3}
 % TOC tag: [FIG+PROB][USE SS1.4.2]
 
+Take a finite volume \(V_g\) with boundary \(\partial V_g\), outward unit normal
+\(\hat{\mathbf{n}}\), and two gauge-related potential representatives
+\((\mathbf{A},\phi)\) and \((\mathbf{A}',\phi')\). The HOME gauge-variation structure already
+established in Subsection~\ref{sec:ch01.4.2} is used here directly; no new gauge
+theorem is derived. The problem is to quantify when local angular-momentum
+density maps disagree while integrated transport observables remain unchanged.
+
+Let \(\mathbf{j}_{\mathrm{loc}}\) be a candidate local angular-momentum density
+constructed from potentials and fields, and define gauge difference
+\(\delta_\chi\mathbf{j}_{\mathrm{loc}}
+=\mathbf{j}_{\mathrm{loc}}'-\mathbf{j}_{\mathrm{loc}}\).
+Applying the inherited structure from Subsection~\ref{sec:ch01.4.2} gives
+\begin{equation}
+\label{eq:ch1.ex63-gauge-density-balance}
+\int_{V_g}\delta_\chi\mathbf{j}_{\mathrm{loc}}\,dV
+=
+\int_{\partial V_g}\mathbf{\Xi}_\chi\cdot\hat{\mathbf{n}}\,dS
++
+\int_{V_g}\mathbf{\Psi}_\chi\,dV,
+\end{equation}
+where \(\mathbf{\Xi}_\chi\) is gauge-induced flux tensor and \(\mathbf{\Psi}_\chi\)
+is residual gauge source term (notations inherited from
+Subsection~\ref{sec:ch01.4.2}). The first integral on the right is boundary
+redistribution, while the second is volumetric contamination.
+
+Under boundary/material conditions for which
+\(\int_{\partial V_g}\mathbf{\Xi}_\chi\cdot\hat{\mathbf{n}}\,dS=0\) and
+\(\int_{V_g}\mathbf{\Psi}_\chi\,dV=0\), Eq.~\eqref{eq:ch1.ex63-gauge-density-balance}
+reduces to
+\[
+\int_{V_g}\mathbf{j}_{\mathrm{loc}}'\,dV
+=
+\int_{V_g}\mathbf{j}_{\mathrm{loc}}\,dV,
+\]
+even though pointwise maps \(\mathbf{j}_{\mathrm{loc}}'(\mathbf{r})\) and
+\(\mathbf{j}_{\mathrm{loc}}(\mathbf{r})\) may differ strongly. Therefore local
+gauge-sensitive pictures are admissible only as intermediate descriptors, not as
+standalone observables.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Gauge-dependent local map versus gauge-robust integral report}\\[2mm]
+Branch 1: \((\mathbf{A},\phi)\rightarrow \mathbf{j}_{\mathrm{loc}}\).\\
+Branch 2: \((\mathbf{A}',\phi')\rightarrow \mathbf{j}_{\mathrm{loc}}'\).\\
+Difference channel:
+\(\delta_\chi\mathbf{j}_{\mathrm{loc}}\rightarrow
+\int_{\partial V_g}\mathbf{\Xi}_\chi\cdot\hat{\mathbf{n}}\,dS
++\int_{V_g}\mathbf{\Psi}_\chi\,dV\).\\
+Integral report node: equality/non-equality of
+\(\int_{V_g}\mathbf{j}_{\mathrm{loc}}\,dV\) across gauges.
+\end{minipage}}
+\caption{Worked-problem schematic for Subsection~\ref{sec:ch01.6.3}: local gauge sensitivity versus integral observability.}
+\label{fig:ch1.ex63-gauge-density}
+\end{figure}
+
+Figure~\ref{fig:ch1.ex63-gauge-density} makes the interpretation criterion
+operational: a local map may change under gauge update without violating physics,
+provided integral observables survive the gauge test. The subsection thus
+reinforces HOME/USE discipline by applying, rather than restating, the gauge
+admissibility framework of Subsection~\ref{sec:ch01.4.2}
+\cite{jackson1999,harrington2001}.
+
+The argument holds when potentials are sufficiently regular for volume/surface
+operations and when boundary conditions are declared explicitly. Topological gauge
+patching, singular gauges, or unresolved boundary currents can invalidate the
+simplified cancellation path.
+
+The final worked case compares reactive and radiative regimes directly, using the
+regime-separation principles of Subsection~\ref{sec:ch01.2.4} in measurement form.
 
 \subsection{Reactive versus radiative comparison}
 \label{sec:ch01.6.4}
 % TOC tag: [FIG+PROB][USE SS1.2.4]
 
+Let \(S_{r_1}\) and \(S_{r_2}\) be concentric spherical observation surfaces,
+with radii \(r_1<r_2\), centered on the same source. The objective is to compare
+angular-structure interpretation in a reactive-dominant surface \(S_{r_1}\) and a
+radiative-dominant surface \(S_{r_2}\), using the regime logic inherited from
+Subsection~\ref{sec:ch01.2.4}.
+
+Define active-power and reactive-power surface functionals
+\begin{equation}
+\label{eq:ch1.ex64-power-functionals}
+P(r)=\int_{S_r}\Re\!\left\{\mathbf{S}\cdot\hat{\mathbf{n}}\right\}dS,\qquad
+Q(r)=\int_{S_r}\Im\!\left\{\mathbf{S}\cdot\hat{\mathbf{n}}\right\}dS,
+\end{equation}
+where \(\mathbf{S}\) is complex Poynting vector and \(\Im\{\cdot\}\) extracts
+imaginary part. The first integral measures net exported power; the second
+measures reactive circulation associated with local storage exchange.
+
+For a torque channel about \(\hat{\mathbf{z}}\), define
+\begin{equation}
+\label{eq:ch1.ex64-torque-contrast}
+\mathcal{C}_\tau
+=
+\frac{|\tau_z(r_2)|}{|\tau_z(r_1)|+\epsilon_\tau},
+\qquad
+\epsilon_\tau>0.
+\end{equation}
+The numerator and denominator are measured torque magnitudes on outer and inner
+surfaces; \(\epsilon_\tau\) is a small regularization constant preventing division
+singularity. When \(Q(r_1)\gg P(r_1)\) and \(P(r_2)\gg |Q(r_2)|\), one typically
+obtains \(\mathcal{C}_\tau\gg 1\): near-zone angular structure is visually rich
+yet weakly transport-capable, while far-zone structure carries measurable torque.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Two-surface regime comparison problem}\\[2mm]
+Inner surface \(S_{r_1}\): reactive-dominant (\(|Q| \gg P\)).\\
+Outer surface \(S_{r_2}\): radiative-dominant (\(P \gg |Q|\)).\\
+Both surfaces evaluate \(P(r)\), \(Q(r)\), and torque channel \(\tau_z(r)\).\\
+Contrast metric \(\mathcal{C}_\tau\) compares transport efficacy across regimes.
+\end{minipage}}
+\caption{Schematic for Subsection~\ref{sec:ch01.6.4}: reactive and radiative regime comparison using power and torque channels.}
+\label{fig:ch1.ex64-reactive-radiative}
+\end{figure}
+
+Figure~\ref{fig:ch1.ex64-reactive-radiative} clarifies why Section~1.2 regime
+classification is indispensable in practice. Angular intensity or phase texture on
+\(S_{r_1}\) can be large while torque transfer remains limited, because reactive
+exchange dominates over exported power. At \(S_{r_2}\), conservation-compatible
+transport interpretation is typically restored \cite{collin2001,jackson1999}.
+
+This comparison assumes identical origin/axis declarations, stationary harmonic
+operation, and negligible environmental scattering between \(S_{r_1}\) and
+\(S_{r_2}\). Strong inhomogeneous media or multipath contamination can distort
+\(P,Q,\tau_z\) trend comparison and require full propagation compensation.
+
+The worked sequence of Section~\ref{sec:ch01.6} is therefore complete: radiation
+torque conservation, phase-only counterexample, gauge-sensitivity check, and
+reactive/radiative discrimination are all established in operational form.
 \paragraph{Section 1.6 outcome and bridge.}
-These worked cases delimit the practical scope of angular claims by enforcing
-conservation, covariance, and gauge-discipline simultaneously. The chapter can
-therefore conclude with Section~\ref{sec:ch01.7}, where established results are
-separated from deferred developments under strict forward-only ownership.
+These worked problems validate the chapter's interpretive discipline under
+explicit measurement geometry: torque follows conservation, phase structure alone
+fails sufficiency, local gauge-sensitive maps require observability screening, and
+reactive/radiative separation controls transport claims. Section~\ref{sec:ch01.7}
+can now close the chapter by separating established HOME results from deferred
+developments under strict forward-only ownership.
 
 
 \section{Chapter Summary and Forward Map}
