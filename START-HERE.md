@@ -17,6 +17,10 @@
 - Define once (`[HOME]`); later sections cite (`[USE SS…]`)  
 - No Maxwell re-derivation after §1.1.1  
 - Examples need problem + figure + caption + all steps  
+- Enforce 2026-05-27 objective lock in `LOCK-MANIFEST.md` (continuous monograph flow, zero recursion, no template prose)
+- Enforce 2026-05-27 equation pedagogy lock in `LOCK-MANIFEST.md` (define all symbols; operand-level -> full-equation -> physical implication explanation; unique framing)
+- Enforce 2026-05-27 equation-numbering lock in `LOCK-MANIFEST.md` (major equations only; no renumbered re-expression in later subsections)
+- Enforce 2026-05-27 citation lock in `LOCK-MANIFEST.md` (claim-local placement; pioneer/original + proven modern sources only)
 
 ## Locked governance for all drafting
 

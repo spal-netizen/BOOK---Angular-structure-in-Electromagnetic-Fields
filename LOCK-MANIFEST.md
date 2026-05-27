@@ -140,6 +140,56 @@ Enforcement requirements:
 
 ---
 
+## LOCK ADDENDUM (2026-05-27 — BOOK OBJECTIVE AND PROSE-FLOW LOCK)
+
+The following objective-level requirements are now explicitly locked and govern all future drafting:
+
+1. No repetition/recursion of equations, claims, concepts, narrative blocks, or listing structures across subsections, sections, or chapters; all prior content is inherited only by precise `HOME/USE` reference.
+2. No stereotype sentence templating: subsection openings, equation explanations, transitions, and closings must be rhetorically varied and non-mechanical.
+3. Manuscript prose must read as continuous scholarly monograph argumentation, not TOC-shaped AI subsection filler; each subsection must sustain natural argumentative flow with embedded physical interpretation.
+4. Every subsection must remain sufficiently descriptive to preserve reader engagement while maintaining rigorous mathematical depth and formal precision.
+5. Redrafting sequence is forward-only from current chapter position, beginning at `1.1.1` and continuing in order (`1.1.2`, `1.1.3`, `1.1.4`, `1.1.5`) without skipping.
+
+---
+
+## LOCK ADDENDUM (2026-05-27 — EQUATION PEDAGOGY AND READER-FLOW LOCK)
+
+The following subsection-level exposition protocol is now mandatory across all sections and all chapters of the full book:
+
+1. Each subsection must read as continuous, advanced scholarly monograph prose with sustained conceptual flow; scaffold-like or TOC-shaped filler narration is forbidden.
+2. Every symbol, operator, parameter, domain qualifier, geometric element, and differential element appearing in an equation must be explicitly defined in nearby manuscript prose at first use.
+3. For every major equation block, exposition order is locked:
+   (a) operand-level functional explanation (piecewise role of each operator/term),
+   (b) functional explanation of the complete equation,
+   (c) elaborated physical interpretation and implications.
+4. Wherever it materially improves comprehension, include a compact conceptual schematic figure in the subsection body with caption and direct equation linkage.
+5. Opening and closing paragraph framing must remain uniquely written across subsections; repeated sentence templates are disallowed even within the same section.
+6. Student readability is a hard quality criterion: rigorous depth is preserved, but transitions and interpretation must remain pedagogically navigable for advanced learners.
+
+---
+
+## LOCK ADDENDUM (2026-05-27 — EQUATION NUMBERING AND INHERITANCE DISCIPLINE)
+
+The following equation-governance rules are permanently locked for all chapters:
+
+1. Equation numbers are reserved for major governing relations, major theorem statements, and major derivation milestones only.
+2. Small defining expressions, range constraints, symbol declarations, and short algebraic intermediate relations must appear inline or in unnumbered display form.
+3. If an equation from any earlier subsection is needed later, reuse is by textual reference to the original label only; re-expression with a new equation number is forbidden.
+4. Subsection drafting must actively control equation-count inflation by grouping logically connected relations into compact major equation blocks.
+
+---
+
+## LOCK ADDENDUM (2026-05-27 — CITATION PLACEMENT AND SOURCE QUALITY LOCK)
+
+The following citation-governance rule is permanently locked for all sections and chapters:
+
+1. Citations must be placed exactly at the sentence location where a law, proven concept, verified statement, or nontrivial technical discussion requires support.
+2. Source selection must prioritize pioneering/original works, legendary foundational literature, and validated modern proven developments; weak or non-authoritative citation substitution is disallowed.
+3. Citation insertion is requirement-driven, not decorative: include references when technical support is needed, and avoid citation clutter where no external support is required.
+4. Every subsection drafting pass must explicitly check citation placement and source quality before acceptance.
+
+---
+
 ## WRITING ORDER (locked sequence)
 
 ```
