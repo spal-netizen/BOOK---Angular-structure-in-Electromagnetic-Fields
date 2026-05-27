@@ -32,8 +32,12 @@ alwaysApply: true
 - Enforce unique exposition per subsection: avoid repeated equation displays, repeated concept statements, and repeated sentence-construction templates; inherit prior content only via `\ref{...}` and targeted citation.
 - Enforce unique subsection rhetoric: opening and closing paragraphs must not reuse the same framing template across subsections.
 - Enforce substantial mathematical depth in every subsection: begin from accessible initial mathematical footing, then develop full derivation depth suitable for serious graduate/research readers.
+- Maintain dense mathematical development after foundational setup; never trade completeness for brevity in theorem-bearing subsections.
 - Place citations exactly at the claim location and prioritize original/pioneering sources plus latest validated developments.
 - Keep figures minimal and schematic; include only when they materially improve equation-to-physics interpretation.
+- Restrict figures to theorem-centric or concept-centric schematic diagrams with correct level labels and precise captions.
+- Require explicit body-text explanation for each included figure so diagram interpretation is mathematically and physically connected to the subsection argument.
+- Disallow repeated diagrams across subsections unless a new theorem variant/regime is being established and the distinction is stated.
 - Maintain chapter-wise numbering intent for equations `(chapter.index)` and references `[chapter.index]`.
 - In chapter manuscript prose (`latex/ch*.tex`), avoid bullet-list exposition; define variables, figure levels, and captions inline within formal text.
 - Every variable/symbol/operator in each equation must be explicitly defined at first appearance.
@@ -43,13 +47,19 @@ alwaysApply: true
 - Use `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` as the primary 19-chapter structure.
 - Use `TOC/TOC-master-19chapters-ULTIMATE-FINAL.txt` only as ownership-reference source when checking tag ancestry.
 - Enforce theorem ownership from `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md`: one HOME proof, all non-home chapters USE by citation only.
+- Treat newly established theorem-bearing results as local `HOME` outcomes for that subsection; all later mentions must be `USE` by reference unless ownership is explicitly reassigned in governance files.
 - Enforce per-subsection depth contract from `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`.
 - Enforce citation placement and source pairing from `TOC/CITATION-CONTRACT-ULTIMATE.md`.
 - Run no-recursion checks from `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md` before marking chapter drafts complete.
 - In Volume I, every section (`X.0`, `X.1`, `X.2`, ...) must include an introductory framing paragraph before subsection flow and a summative framing paragraph after subsection flow.
 - Enforce section-first drafting order in all chapters: draft section-level framing first, then subsections in sequence, then section-level summative bridge.
+- Enforce approval cadence: line-by-line user approval and subsection-by-subsection progression before starting the next subsection.
 - Follow `MODEL-WORKFLOW-LOCKED.md` for task-based model usage; no subsection is accepted complete without final high-rigor pass.
 - Enforce locked prose style across the full book: **Version A — Classical Monograph Tone** (professional, measured, authoritative, reader-friendly scholarly flow; avoid dictation-style wording).
+- Enforce continuous narrative flow in subsection prose; avoid template-fragment transitions and mechanical staging phrases.
+- Disallow formulaic framing starters in final draft prose (e.g., "This subsection establishes ...", "For physical interpretation ...", "This closure has a direct ...").
+- Vary sentence architecture and equation-explanation rhythm so prose remains indistinguishable from classical human-authored monograph writing.
+- Apply the same anti-template requirement to section-head introductions and section-closing bridge paragraphs in every chapter.
 
 ## Tone
 Graduate research monograph (Harrington/Collin level): precise, no survey padding, no popular OAM hype without gauge caveats from Ch. 1.

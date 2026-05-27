@@ -80,3 +80,7 @@ Session marker: home end @ 2026-05-26, last subsection 1.0.3
 2026-05-26: Added and locked model workflow policy in `MODEL-WORKFLOW-LOCKED.md` with task-based switching and mandatory final high-rigor acceptance pass per subsection.
 2026-05-26: Added and locked section-first drafting order for all chapters: section intro framing first, subsections next, section summative bridge last.
 2026-05-26: Added and locked global drafting style: Version A classical monograph tone is mandatory for all 19 chapters (professional, measured, authoritative, reader-friendly scholarly prose).
+2026-05-27: Added and locked depth-and-approval philosophy: dense-but-foundational mathematical development, HOME-first theorem ownership with USE-only reuse, and mandatory line-by-line approval subsection-by-subsection.
+2026-05-27: Added and locked figure/diagram philosophy: only theorem-centric or concept-centric schematic figures, complete level/caption labeling, mandatory body-text explanation, and no repeated diagrams without explicit new-regime justification.
+2026-05-27: Added and locked narrative-authenticity philosophy: continuous classical scholarly flow, no formulaic framing starters, and strict subsection-to-subsection uniqueness in sentence architecture and equation narration.
+2026-05-27: Extended narrative-authenticity lock to section-head drafts (1.0...1.7 and onward): unique section introductions/bridges, no repeated staging templates, and classical non-template prose continuity.

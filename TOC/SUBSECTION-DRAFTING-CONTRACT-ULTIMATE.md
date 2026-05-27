@@ -18,6 +18,8 @@ Directly starting from a subsection without section framing is non-compliant.
 
 Depth floor requirement:
 Each subsection must begin from accessible initial mathematical understanding for the target graduate reader, then build to substantial mathematical depth with explicit intermediate steps.
+Depth density lock:
+Mathematical development should remain dense and complete, but foundational entry points must be explicit so the derivation remains fully understandable before advancing to high-density arguments.
 Global quality requirement:
 All chapter drafts must reflect classical monograph standards of depth, density, formal construction, and page-level appearance expected at Harrington/Pozar/Collin/Balanis/Jackson/Griffiths level.
 
@@ -26,6 +28,7 @@ All chapter drafts must reflect classical monograph standards of depth, density,
 - No bullet-list exposition in manuscript body text.
 - No re-display of previously established equations unless a new limit, theorem variant, or asymptotic regime is explicitly introduced.
 - If theorem ownership belongs elsewhere, replace derivation with `USE` citation to `HOME`.
+- Any newly completed theorem-bearing derivation in the active subsection is `HOME` for that result and must be reused later only through `USE` inheritance.
 - Every variable is defined inline on first appearance.
 - Every subsection must contain at least one explicit sentence stating what is newly established in that subsection.
 - Opening and closing paragraphs of each subsection must be uniquely framed; repeated opening/closing templates across subsections are disallowed.
@@ -35,6 +38,14 @@ All chapter drafts must reflect classical monograph standards of depth, density,
 - Equation-explanation sentence construction must remain varied across subsections; repetitive explanatory templates are disallowed.
 - Equation and reference numbering must be chapter-wise and strictly increasing through subsection flow within each chapter.
 - Prose style is globally locked to Version A classical monograph tone: professional, measured, authoritative, and reader-friendly; avoid directive/command-style diction.
+- Review protocol is line-by-line and subsection-by-subsection; no subsection proceeds to final acceptance until line-level approval is complete.
+- Figures/diagrams are restricted to theorem-centric or concept-centric schematic forms only; decorative graphics are disallowed.
+- Every required figure must include correct level/number and caption, and must be explained explicitly in the body text for mathematical and physical interpretation.
+- Repeated diagram usage across subsections is disallowed unless a new theorem variant or regime requires it and the difference is explicitly stated.
+- Narrative must flow continuously in classical scholarly form; template-like fragment transitions are disallowed.
+- Formulaic framing starters (e.g., "This subsection establishes ...", "For physical interpretation ...", "This closure has a direct ...") are disallowed in final prose.
+- Equation explanations must be authoritative and varied without recurring sentence molds that reveal machine-template generation.
+- Section-level opening and closing framing paragraphs must be uniquely constructed across the chapter; repeated transition templates are disallowed.
 
 ## Depth normalization rule
 
