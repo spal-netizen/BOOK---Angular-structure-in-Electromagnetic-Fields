@@ -71,6 +71,8 @@ alwaysApply: true
 - Apply the same anti-template requirement to section-head introductions and section-closing bridge paragraphs in every chapter.
 - Ban architecture-centric prose justification in scientific narrative (no discussion of section/subsection/drafting architecture as justification).
 - Ban title-head metacommentary framing (do not explain subsection titles as prose scaffolds); justify only concepts, assumptions, and equations.
+- Enforce science-centric, student-comprehension-centric prose only in manuscript subsection bodies; explanatory text must contain mathematical/physical content, assumptions, validity, and measurement insight.
+- Prohibit governance/process vocabulary inside manuscript explanatory paragraphs (e.g., `HOME`, `USE`, TOC/process narration, drafting-pipeline commentary).
 - Always-recall lock: before and during every edit, re-apply all active governance constraints from LOCK-MANIFEST and drafting contracts.
 - Prompt shortcut lock: if user sends `GCHECK <subsection-id>`, interpret it as a mandatory command to read/apply `LOCK-MANIFEST.md`, `.cursor/rules/book-consistency.mdc`, `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`, `00-NOTATION.md`, and `00-FORWARD-MAP.yaml`, then draft only the requested subsection with all active locks.
 

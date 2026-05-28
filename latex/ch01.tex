@@ -23,101 +23,284 @@ claims remain mathematically and physically meaningful.
 \label{sec:ch01.0.1}
 % TOC tag: [HOME]
 
-This chapter serves advanced graduate readers and researchers who already command
-core Maxwell theory, yet require a proof-structured account in which each claim
-is explicitly tied to assumptions and inheritance logic
-\cite{jackson1999,harrington2001,collin2001}. Inside Volume~I, its role is
-architectural: it creates the inferential vocabulary used in every later chapter.
+Electromagnetic fields often exhibit strong azimuthal phase gradients, rotating
+interference textures, and polarization patterns that appear to carry angular
+content. Those signatures become physically meaningful only after one separates
+three questions: whether the fields satisfy Maxwell equations on the stated
+domain, whether the associated momentum flux supports angular transport, and
+whether a measurement protocol can access the claimed quantity
+\cite{jackson1999,collin2001,harrington2001}. The opening task is therefore to
+state this separation as a mathematical filter, so that descriptive structure is
+not confused with conserved transfer.
 
-That vocabulary rests on four commitments. Field laws are read in one fixed sign
-convention and SI scaling; transport arguments remain conservation-governed;
-representation-level language is kept subordinate to invariant content; and
-admissibility is treated as both a mathematical and physical requirement.
-Without this discipline, downstream operator and spectral statements would become
-ambiguous in interpretation even when formally correct.
+Let \(\Omega\subset\mathbb{R}^{3}\) denote the spatial analysis region,
+\(\Gamma=\partial\Omega\) its boundary, \(\chi\) the constitutive descriptor set,
+\(\Jimp\) the impressed electric-current density, and \(\omega>0\) the harmonic
+angular frequency under the \(\exp(-\jj\omega t)\) convention. Define the scope
+map
+\begin{equation}
+\label{eq:ch1.scope-map}
+\mathfrak{S}_{\mathrm{ch1}}:
+(\Omega,\Gamma,\chi,\Jimp,\omega)
+\longmapsto
+\big(\mathcal{L}_M,\mathcal{T}_C,\mathcal{O}_A\big),
+\end{equation}
+where \(\mathcal{L}_M\) denotes Maxwell-law consistency,
+\(\mathcal{T}_C\) denotes transport/conservation consistency, and
+\(\mathcal{O}_A\) denotes operational observability consistency. The input tuple
+specifies geometry, boundary, constitutive closure, source forcing, and temporal
+scale; the output tuple specifies the three independent constraints any angular
+statement must satisfy before it can be interpreted as physical transfer.
 
-The scope boundary is equally strict. Chapter~\ref{ch:01} does not attempt the
-operator-domain machinery developed in Chapter~2, the angular-eigenfield
-construction of Chapter~3, or the finite-geometry accessibility limits of
-Chapter~4. Those results remain at their dedicated owner locations and are inherited
-forward by reference only. This partition is part of the no-recursion design and
-is therefore methodological, not stylistic.
+The acceptance rule is encoded by
+\begin{equation}
+\label{eq:ch1.scope-admissibility-filter}
+\mathcal{A}_{\mathrm{ch1}}[\Xi]=1
+\iff
+\Xi\in\mathcal{L}_M
+\ \land\
+\Xi\in\mathcal{T}_C
+\ \land\
+\Xi\in\mathcal{O}_A,
+\end{equation}
+with \(\Xi\) any candidate angular statement and \(\land\) logical conjunction.
+Term-level interpretation is immediate: each membership test verifies one
+independent physical requirement. Full-equation interpretation: Eq.
+\eqref{eq:ch1.scope-admissibility-filter} is a three-constraint classifier acting
+on claims. Physical interpretation: azimuthal phase structure alone does not imply
+angular-momentum transport unless constitutive-domain Maxwell closure, flux
+balance, and measurement channel are simultaneously satisfied.
 
-The subsection delivers one concrete outcome: all later text in
-Chapter~\ref{ch:01} is required to distinguish field law, representation, and
-observation as non-equivalent layers.
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Scope-control schematic for Chapter~1}\\[2mm]
+Input block: geometry/material/source tuple
+\((\Omega,\Gamma,\chi,\Jimp,\omega)\).\\
+Layer 1: Maxwell-law consistency \(\mathcal{L}_M\).\\
+Layer 2: conservation/transport consistency \(\mathcal{T}_C\).\\
+Layer 3: operational observability consistency \(\mathcal{O}_A\).\\
+Output gate: statement \(\Xi\) accepted only if
+\(\mathcal{A}_{\mathrm{ch1}}[\Xi]=1\).
+\end{minipage}}
+\caption{Scope gate for angular electromagnetic statements: acceptance requires simultaneous Maxwell-law consistency, transport consistency, and operational observability.}
+\label{fig:ch1.scope-control-gate}
+\end{figure}
+
+Figure~\ref{fig:ch1.scope-control-gate} provides a geometric reading of
+Eq.~\eqref{eq:ch1.scope-admissibility-filter}: the left block fixes the physical
+problem data, the middle chain enforces law and transport constraints, and the
+right gate certifies measurable status. The schematic is analytical rather than
+decorative because each block corresponds to an explicit operand in
+Eqs.~\eqref{eq:ch1.scope-map}--\eqref{eq:ch1.scope-admissibility-filter}.
+
+Two practical consequences follow. First, local phase winding, structured
+polarization, or modal labels remain descriptive until transport and observability
+tests pass. Second, conservation statements are interpreted only for fields that
+satisfy the declared domain and constitutive closure; otherwise, apparent torque
+or angular-flow signatures may arise from incompatible boundary/source conditions
+rather than from true radiative transfer \cite{balanis2016,collin2001}.
+
+The resulting criterion is used throughout Chapter~\ref{ch:01}: if any of the
+three memberships in Eq.~\eqref{eq:ch1.scope-admissibility-filter} fails, the
+statement is retained as representation metadata and is not promoted to physical
+angular-momentum transport.
 
 
 \subsection{Angular structure from Maxwell symmetry and boundary conditions}
 \label{sec:ch01.0.2}
 % TOC tag: [HOME]
 
-Angular organization is approached here through Maxwell boundary-value dynamics,
-not through a preliminary list of mode labels \cite{jackson1999,harrington2001}.
-Let \(\Omega\subset\mathbb{R}^3\) be the analysis region, \(\Gamma=\partial\Omega\)
-its boundary, \(\chi\) a constitutive model descriptor, and \(\Jimp\) the impressed
-electric current density. In this setting, the field pair \((\E,\H)\) is viewed
-as the image of a constrained Maxwell map
-\(\mathcal{M}_{\Omega,\Gamma,\chi}\!\left[\Jimp\right]\). The key consequence is
-that angular behavior belongs to operator image structure, not to coordinate
-naming alone.
+Rotational signatures in electromagnetic fields become physically interpretable
+only when they are traced to symmetry of the Maxwell boundary-value map. A field
+can exhibit azimuthal phase winding yet fail to transport angular momentum if the
+geometry or material closure redistributes channel content before flux leaves the
+control surface \cite{jackson1999,collin2001,harrington2001}.
 
-For interpretation, three layers must remain non-interchangeable. Local angular
-content appears at density level (\(\rho_J\)), transport through control surfaces
-appears at flux level (\(\Phi_J\)), and basis-expansion information appears at
-coefficient level (\(\Sigma\)). Phase topology embedded in \(\Sigma\) is therefore
-insufficient evidence of transported angular momentum unless \(\Phi_J\) and
-conservation accounting are simultaneously satisfied
-\cite{jackson1999,harrington2001}.
+Let \(\Omega\subset\mathbb{R}^{3}\) denote the analysis region,
+\(\Gamma=\partial\Omega\) its boundary, \(\chi\) the constitutive descriptor set,
+and \(\Jimp\) the impressed electric-current density. Let
+\(\mathcal{M}_{\Omega,\Gamma,\chi}\) map admissible sources to the phasor field
+pair \((\E,\H)\). For each active spatial rotation \(R_\alpha\in\mathrm{SO}(3)\),
+parameterized by \(\alpha\), let \(\mathcal{R}_\alpha\) denote the induced action
+on source and field spaces. Rotational compatibility is imposed by
+\begin{equation}
+\label{eq:ch1.rotation-commutator-criterion}
+\left[\mathcal{R}_\alpha,\mathcal{M}_{\Omega,\Gamma,\chi}\right]\Jimp
+=\mathbf{0}
+\quad\forall\alpha\in\mathcal{I}_\alpha,
+\end{equation}
+where \([\cdot,\cdot]\) is the commutator and \(\mathcal{I}_\alpha\) is the
+rotation set admitted by the geometry. Operand interpretation:
+\(\mathcal{R}_\alpha\) carries geometric action, while
+\(\mathcal{M}_{\Omega,\Gamma,\chi}\) carries electrodynamic propagation under
+boundary/material closure. Full-equation interpretation: rotating the source
+before propagation and rotating the propagated field afterward must produce the
+same state. Physical interpretation: angular organization is dynamically inherited
+from symmetry of the full problem, not assigned by coordinate labeling alone.
 
-The symmetry statement governing later chapters follows from the same viewpoint.
-When Maxwell action and active rotation commute on the admissible domain,
-rotationally adapted organization survives propagation; when commutation is
-broken by geometry, boundary anisotropy, or constitutive asymmetry, coupling
-between angular channels emerges as a structural necessity
-\cite{harrington2001,collin2001}. Chapter~\ref{ch:01} introduces this principle
-at interpretation level, while rigorous operator and spectral proofs remain at
-their dedicated owner locations in later chapters.
+To quantify departures from perfect compatibility, define
+\(\kappa_{\mathrm{rot}}(\alpha)\) by
+\begin{equation}
+\label{eq:ch1.rotation-mismatch-index}
+\kappa_{\mathrm{rot}}(\alpha)
+=
+\frac{
+\left\|
+\left[\mathcal{R}_\alpha,\mathcal{M}_{\Omega,\Gamma,\chi}\right]\Jimp
+\right\|_{\mathcal{H}_F}
+}{
+\left\|
+\mathcal{M}_{\Omega,\Gamma,\chi}\Jimp
+\right\|_{\mathcal{H}_F}
++\epsilon_{\mathrm{rot}}
+},
+\end{equation}
+where \(\|\cdot\|_{\mathcal{H}_F}\) is the norm on field space
+\(\mathcal{H}_F\), and \(\epsilon_{\mathrm{rot}}>0\) is a regularization constant
+that prevents denominator singularity near vanishing field magnitude. The
+numerator measures non-commuting residue; the denominator scales that residue by
+field amplitude. Thus \(\kappa_{\mathrm{rot}}\) is a dimensionless mismatch index
+that reports boundary/material-induced redistribution among angular channels.
+
+Symmetry compatibility is necessary but not sufficient for transport claims. Let
+\(\Phi_J(S_c)\) denote the net angular-momentum flux through control surface
+\(S_c\). A transport-capable regime is identified by
+\[
+\kappa_{\mathrm{rot}}(\alpha)\ll 1
+\quad\text{and}\quad
+|\Phi_J(S_c)|>0
+\ \text{under declared measurement channel}.
+\]
+The first inequality enforces rotational coherence of propagation; the second
+certifies that the organized field state carries transferable angular content.
+
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Symmetry-to-transport logic for angular structure}\\[2mm]
+Input: \((\Omega,\Gamma,\chi,\Jimp)\) with rotation action \(\mathcal{R}_\alpha\).\\
+Branch A (commuting case):
+\([\mathcal{R}_\alpha,\mathcal{M}_{\Omega,\Gamma,\chi}]\Jimp=\mathbf{0}\)
+\(\Rightarrow\) rotationally coherent field organization.\\
+Branch B (non-commuting case):
+\([\mathcal{R}_\alpha,\mathcal{M}_{\Omega,\Gamma,\chi}]\Jimp\neq\mathbf{0}\)
+\(\Rightarrow\) boundary/material-induced channel mixing.\\
+Output gate: transport-valid interpretation only after flux check
+\(\Phi_J(S_c)\) in the selected measurement surface.
+\end{minipage}}
+\caption{Symmetry-to-transport logic for angular fields: commutator compatibility identifies rotational coherence, while flux verification distinguishes transferable angular momentum from descriptive phase texture.}
+\label{fig:ch1.rotation-boundary-logic}
+\end{figure}
+
+Figure~\ref{fig:ch1.rotation-boundary-logic} maps algebra to measurement. The
+commuting branch corresponds to preserved rotational channel identity; the
+non-commuting branch corresponds to channel redistribution generated by boundary or
+material structure. The output gate, expressed through \(\Phi_J(S_c)\), enforces
+that transport interpretation is attached to measurable flux rather than to visual
+phase morphology.
+
+Validity conditions are explicit. The commutator model assumes linear local
+constitutive closure and boundary regularity sufficient for well-posed Maxwell
+mapping. Strong temporal modulation, nonlocal constitutive kernels, or unresolved
+multiscale roughness can invalidate the model class in
+Eqs.~\eqref{eq:ch1.rotation-commutator-criterion} and
+\eqref{eq:ch1.rotation-mismatch-index}, in which case generalized operators and
+alternate diagnostics are required \cite{collin2001,balanis2016}.
 
 
 \subsection{Assumptions, finite-energy admissibility, and domain of validity}
 \label{sec:ch01.0.3}
 % TOC tag: [HOME]
 
-The chapter is developed on a finite-energy admissible class so that inner
-products, norm estimates, and projection operations remain both mathematically
-well-posed and physically interpretable. For the analysis region
-\(\Omega\subset\mathbb{R}^3\), the principal admissibility condition is
+Finite-energy admissibility is the minimal mathematical condition that keeps
+transport quantities, projections, and measurement models in the same functional
+class. Without this condition, manipulations of momentum or angular observables
+may remain algebraically legal while representing non-realizable fields
+\cite{jackson1999,collin2001,harrington2001}.
+
+Let \(\Omega\subset\mathbb{R}^{3}\) denote the analysis region,
+\(\Gamma=\partial\Omega\) its boundary, and \((\E,\H)\) the phasor electric and
+magnetic fields under the \(\exp(-\jj\omega t)\) convention. The baseline
+finite-energy condition is
 \begin{equation}
 \label{eq:ch1.energy-class}
 \int_{\Omega}\!\left(\E^*\!\cdot\E+\H^*\!\cdot\H\right)\,dV<\infty,
 \end{equation}
-where \((\cdot)^*\) is complex conjugation and \(dV\) is the volume measure on
-\(\Omega\). The integrand terms \(\E^*\!\cdot\E\) and \(\H^*\!\cdot\H\) capture
-electric and magnetic field-intensity contributions to norm content. As a full
-condition, Eq.~\eqref{eq:ch1.energy-class} excludes infinite-energy states whose
-presence would invalidate both measurement interpretation and operator estimates
-\cite{jackson1999,collin2001}.
+where \((\cdot)^*\) denotes complex conjugation and \(dV\) is the volume element.
+At term level, \(\E^*\!\cdot\E\) and \(\H^*\!\cdot\H\) are nonnegative electric
+and magnetic energy-density surrogates in phasor form. Full-equation meaning:
+Eq.~\eqref{eq:ch1.energy-class} places admissible states in
+\(L^2(\Omega)^3\times L^2(\Omega)^3\). Physical meaning: field states with
+divergent norm content are excluded because they do not support stable finite
+control-volume flux interpretation.
 
-This class is used together with three global assumptions throughout
-Chapter~\ref{ch:01}: SI normalization, phasor convention \(\exp(-\jj\omega t)\),
-and linear local constitutive closure unless an explicit exception appears in a
-later owner location. These assumptions form the compatibility frame that keeps
-field law, boundary admissibility, and conservation reasoning inside one model
-family.
+Energy admissibility alone is insufficient; source and boundary compatibility must
+be imposed simultaneously. Define
+\begin{equation}
+\label{eq:ch1.admissible-space}
+\mathcal{X}_{\mathrm{ch1}}(\Omega)
+=
+\left\{
+(\E,\H)\in L^2(\Omega)^3\times L^2(\Omega)^3:
+\mathcal{B}_{\Gamma,\chi}(\E,\H)=0,\ 
+\divg\Jimp-\jj\omega\rho=0
+\right\},
+\end{equation}
+where \(\mathcal{B}_{\Gamma,\chi}\) is the boundary/constitutive closure operator,
+\(\Jimp\) is impressed electric-current density, and \(\rho\) is free-charge
+density. Operand interpretation is explicit: the \(L^2\) clause controls finite
+energy; \(\mathcal{B}_{\Gamma,\chi}=0\) enforces compatibility with declared
+boundary/material class; \(\divg\Jimp-\jj\omega\rho=0\) enforces harmonic charge
+continuity for source data. Full-equation interpretation:
+Eq.~\eqref{eq:ch1.admissible-space} defines the complete state class in which
+subsequent conservation claims are read. Physical interpretation: an angular claim
+is promoted to transport status only when field norm, boundary closure, and source
+continuity are all simultaneously satisfied.
 
-The validity boundary is explicit. Strong nonlinearity, active gain, rapid
-constitutive time modulation, and quantum-field corrections lie outside the
-scope of this chapter. They may be referenced only as forward pointers and are
-treated formally at designated later chapters
-\cite{harrington2001,jackson1999}.
+\begin{figure}[t]
+\centering
+\fbox{\begin{minipage}{0.92\linewidth}
+\centering
+\textbf{Admissibility gate for Chapter~1}\\[2mm]
+Entry node: candidate field-source tuple
+\((\E,\H,\Jimp,\rho;\Omega,\Gamma,\chi)\).\\
+Gate 1: finite-energy condition from Eq.~\eqref{eq:ch1.energy-class}.\\
+Gate 2: boundary/constitutive compatibility
+\(\mathcal{B}_{\Gamma,\chi}=0\).\\
+Gate 3: harmonic continuity compatibility
+\(\divg\Jimp-\jj\omega\rho=0\).\\
+Exit node: admissible state in \(\mathcal{X}_{\mathrm{ch1}}(\Omega)\).
+\end{minipage}}
+\caption{Admissibility cascade for field-source states: finite-energy regularity, boundary/constitutive closure, and harmonic source continuity must all hold before transport interpretation is assigned.}
+\label{fig:ch1.admissibility-gate}
+\end{figure}
+
+Figure~\ref{fig:ch1.admissibility-gate} is a one-to-one geometric rendering of
+Eqs.~\eqref{eq:ch1.energy-class}--\eqref{eq:ch1.admissible-space}. Gate 1 removes
+non-square-integrable fields; Gate 2 removes states incompatible with the declared
+boundary/material model; Gate 3 removes source data violating harmonic continuity.
+Only the intersection of all three gates supports unambiguous interpretation of
+torque, momentum flux, and angular transfer diagnostics.
+
+Validity limits are explicit. The admissible class above assumes linear local
+constitutive response, classical continuum electrodynamics, and harmonic forcing on
+timescales separated from fast modulation envelopes. Strongly nonlinear media,
+active gain with saturation dynamics, nonlocal kernels, and quantum corrections are
+outside the model class of Eq.~\eqref{eq:ch1.admissible-space}; in those regimes,
+additional state variables or generalized operators are required before angular
+transport metrics can be interpreted consistently \cite{harrington2001,jackson1999}.
 
 \paragraph{Section 1.0 summary and bridge.}
-Section~\ref{sec:ch01.0} has prepared the chapter at three coupled levels:
-mission boundary, structural origin of angular behavior, and admissibility
-domain. With that preparation complete, Section~\ref{sec:ch01.1} develops the
-Maxwell-conservation backbone that governs all subsequent angular arguments in
-Chapter~\ref{ch:01}.
+The field class considered in this chapter is now fully specified: candidate
+statements must satisfy simultaneous law consistency, transport consistency, and
+operational observability; rotational interpretation is tied to symmetry of the
+boundary-value map; and admissible states are restricted by finite-energy,
+boundary/constitutive closure, and harmonic source continuity. With these
+conditions fixed, the next section develops Maxwell dynamics and conservation laws
+as quantitative constraints on measurable energy, momentum, and angular transport.
 
 
 \section{Maxwell Theory and Conservation Laws}
@@ -136,17 +319,15 @@ field equations, not as independent postulates.
 \label{sec:ch01.1.1}
 % TOC tag: [HOME]
 
-The first technical requirement of Section~\ref{sec:ch01.1} is a single
-Maxwell-law statement in the adopted phasor convention, written with enough
-detail that later subsections can inherit it without re-expression. Consider a
-piecewise smooth region \(\Omega\subset\mathbb{R}^3\) with boundary
-\(\Gamma=\partial\Omega\), harmonic factor \(\exp(-\jj\omega t)\) with
-\(\omega>0\), phasor fields \(\E=\E(\mathbf{r})\) and \(\H=\H(\mathbf{r})\),
-impressed current density \(\Jimp=\Jimp(\mathbf{r})\), and free-charge density
-\(\rho=\rho(\mathbf{r})\). Vacuum parameters are \(\varepsilon_0\) and \(\mu_0\)
-in SI units \cite{jackson1999,collin2001,harrington2001}.
+Harmonic electrodynamics in SI units is expressed with time dependence
+\(\exp(-\jj\omega t)\), \(\omega>0\), in a piecewise smooth region
+\(\Omega\subset\mathbb{R}^{3}\) with boundary \(\Gamma=\partial\Omega\). Let
+\(\E(\mathbf{r})\) and \(\H(\mathbf{r})\) denote electric and magnetic field
+phasors, \(\Jimp(\mathbf{r})\) impressed electric-current density, and
+\(\rho(\mathbf{r})\) free-charge density. Vacuum constants are \(\varepsilon_0\)
+and \(\mu_0\) \cite{jackson1999,harrington2001,collin2001}.
 
-The local field system is
+The local Maxwell system is
 \begin{equation}
 \label{eq:ch1.maxwell-local}
 \begin{aligned}
@@ -156,31 +337,32 @@ The local field system is
 \divg\!\left(\mu_0\H\right)&=0.
 \end{aligned}
 \end{equation}
-In Eq.~\eqref{eq:ch1.maxwell-local}, each operand has a distinct role.
-The curl operator \(\curl\) extracts local rotational content, while
-\(\divg\) measures local flux imbalance. The factor \(-\jj\omega\) converts time
-differentiation to harmonic algebra; \(\mu_0\H\) and \(\varepsilon_0\E\) are
-flux-scaled magnetic and electric terms; \(\Jimp\) is the externally prescribed
-source contribution. Read term by term, the first two relations govern
-circulation dynamics, and the second row imposes divergence constraints that make
-the system physically consistent.
+Term-level interpretation is direct. In the first curl equation,
+\(-\jj\omega\mu_0\H\) converts magnetic phasor content into electric circulation.
+In the second curl equation, \(\Jimp\) is the impressed source term and
+\(\jj\omega\varepsilon_0\E\) is displacement-current contribution. In the
+divergence pair, \(\divg(\varepsilon_0\E)=\rho\) enforces electric flux balance
+with free charge, while \(\divg(\mu_0\H)=0\) enforces the absence of magnetic
+charge. As a full system, Eq.~\eqref{eq:ch1.maxwell-local} couples rotational and
+flux constraints into one closed local law for vacuum harmonic fields.
 
-As a complete system, Eq.~\eqref{eq:ch1.maxwell-local} states that electromagnetic
-evolution and source coupling are inseparable from charge and magnetic-flux
-constraints. A direct implication appears when \(\divg\) acts on the second curl
-relation:
-\[
+Applying \(\divg\) to the second curl equation in
+Eq.~\eqref{eq:ch1.maxwell-local} yields the harmonic continuity relation
+\begin{equation}
+\label{eq:ch1.charge-continuity-harmonic}
 \divg\Jimp-\jj\omega\rho=0.
-\]
-The first term is source-current divergence and the second is harmonic
-charge-rate term; together they enforce phasor charge continuity, preventing
-nonconservative source prescriptions.
+\end{equation}
+Here \(\divg\Jimp\) is net current outflow density and \(\jj\omega\rho\) is the
+harmonic charge-variation term. Equation~\eqref{eq:ch1.charge-continuity-harmonic}
+is therefore the compatibility condition between source specification and local
+charge conservation; violation of this relation makes the field/source dataset
+physically inconsistent.
 
-For oriented surface \(S\subset\Omega\) with boundary \(\partial S\), bounded
-volume \(V\subset\Omega\) with boundary \(\partial V\), outward unit normal
-\(\hat{\mathbf{n}}\), line element \(d\boldsymbol{\ell}\), surface element \(dS\),
-and volume element \(dV\), Stokes and divergence theorems map
-Eq.~\eqref{eq:ch1.maxwell-local} to
+Integral forms follow from Stokes and divergence theorems. For oriented surface
+\(S\subset\Omega\) with boundary \(\partial S\), oriented volume \(V\subset\Omega\)
+with boundary \(\partial V\), outward unit normal \(\hat{\mathbf{n}}\), line
+element \(d\boldsymbol{\ell}\), area element \(dS\), and volume element \(dV\),
+the local system maps to
 \begin{equation}
 \label{eq:ch1.maxwell-integral}
 \begin{aligned}
@@ -194,85 +376,77 @@ Eq.~\eqref{eq:ch1.maxwell-local} to
 \int_{\partial V}\mu_0\H\cdot\hat{\mathbf{n}}\,dS=0.
 \end{aligned}
 \end{equation}
-Operand-level reading of Eq.~\eqref{eq:ch1.maxwell-integral} clarifies
-measurement meaning: contour integrals represent circulation response; surface
-integrals represent flux through control sets; source and charge terms quantify
-injection and storage within those sets. The full equation block gives the finite
-control-region form of the same field law, with no new physical postulate added.
-Its value is practical and interpretive: quantities appearing in each line map
-directly to measurable loops, surfaces, and enclosed volumes.
+The contour terms on \(\partial S\) represent circulation measurements, while
+surface and volume terms represent flux and accumulation over finite control sets.
+Equation~\eqref{eq:ch1.maxwell-integral} is mathematically equivalent to
+Eq.~\eqref{eq:ch1.maxwell-local} under the stated regularity assumptions; its
+physical role is to express the same law at measurement scale.
 
 \begin{figure}[t]
 \centering
 \fbox{\parbox{0.92\linewidth}{
-\textbf{Control-set schematic for Maxwell integral balances.}
-An oriented surface \(S\) with boundary \(\partial S\) and an oriented volume \(V\)
-with boundary \(\partial V\) are drawn as two complementary measurement windows.
-Circulation responses are evaluated on \(\partial S\), flux responses on \(S\) or
-\(\partial V\), and free charge is accumulated over \(V\). The geometry makes the
-local-to-global transition in Eq.~\eqref{eq:ch1.maxwell-integral}
-transparent.}}
-\caption{Conceptual geometry linking differential Maxwell laws to circulation and flux measurements in Subsection~\ref{sec:ch01.1.1}.}
+\textbf{Control-set schematic for local-to-integral Maxwell mapping.}
+One oriented surface \(S\) with boundary \(\partial S\) carries circulation
+measurements, while one oriented volume \(V\) with boundary \(\partial V\) carries
+flux and charge-accumulation measurements. The same field state is sampled through
+these complementary control sets, producing the integral balances of
+Eq.~\eqref{eq:ch1.maxwell-integral}.}}
+\caption{Control-set geometry for Maxwell balances: local differential laws and finite-set integral laws represent the same electrodynamic constraints at complementary observation scales.}
 \label{fig:ch1.maxwell-control-sets}
 \end{figure}
 
-Vacuum closure for flux variables and propagation scale is
+Figure~\ref{fig:ch1.maxwell-control-sets} visualizes that equivalence: one field
+state is sampled either through differential operators at a pointwise level or
+through control loops/surfaces/volumes at finite scale. The two descriptions
+remain consistent because they are linked by Stokes and divergence theorems.
+
+Vacuum constitutive closure for the present chapter is
 \begin{equation}
 \label{eq:ch1.vacuum-constitutive}
 \mathbf{D}=\varepsilon_0\E,\qquad
 \mathbf{B}=\mu_0\H,\qquad
 c=\frac{1}{\sqrt{\varepsilon_0\mu_0}},
 \end{equation}
-where \(\mathbf{D}\) is electric flux density, \(\mathbf{B}\) is magnetic flux
-density, and \(c\) is vacuum wave speed. At operand level, \(\varepsilon_0\E\)
-and \(\mu_0\H\) convert field intensities to flux densities, while
-\(1/\sqrt{\varepsilon_0\mu_0}\) sets intrinsic propagation scale.
-As a complete block, Eq.~\eqref{eq:ch1.vacuum-constitutive} closes the vacuum
-model in \((\E,\H)\) without extra constitutive operators.
+where \(\mathbf{D}\) and \(\mathbf{B}\) are electric and magnetic flux densities,
+and \(c\) is vacuum wave speed. The first two relations map field intensities to
+flux variables, and the third sets propagation scale from the same two constants.
+As a complete constitutive block, Eq.~\eqref{eq:ch1.vacuum-constitutive} closes
+the vacuum model and makes Eq.~\eqref{eq:ch1.maxwell-local} computationally
+evaluable without additional material operators.
 
-A familiar source-free implication (\(\Jimp=0,\rho=0\)) then appears as
+For source-free vacuum \((\Jimp=0,\rho=0)\), substitution of
+Eq.~\eqref{eq:ch1.vacuum-constitutive} into curl equations gives
 \[
 \nabla^2\E+\omega^2\mu_0\varepsilon_0\E=0,\qquad
 \nabla^2\H+\omega^2\mu_0\varepsilon_0\H=0,
 \]
-with \(\nabla^2\) the vector Laplacian. The operator \(\nabla^2\) controls spatial
-curvature, and \(\omega^2\mu_0\varepsilon_0\) supplies squared propagation scale.
-Physically, free-space fields propagate as constrained wave solutions governed by
-the same vacuum constants that set flux closure.
+with \(\nabla^2\) the vector Laplacian. The Laplacian term controls spatial
+curvature and the coefficient \(\omega^2\mu_0\varepsilon_0\) sets squared
+propagation scale. These are direct consequences of
+Eqs.~\eqref{eq:ch1.maxwell-local} and \eqref{eq:ch1.vacuum-constitutive}, and are
+left unnumbered to keep equation numbering focused on primary governing blocks.
 
-Validity limits are explicit. Equivalence between local and integral forms
-requires regularity compatible with Stokes/divergence theorems, and
-Eq.~\eqref{eq:ch1.vacuum-constitutive} ceases to suffice for dispersive,
-anisotropic, nonlinear, nonlocal, or strongly time-varying media where
-constitutive response is operator-valued \cite{jackson1999,collin2001}.
-
-Subsection~\ref{sec:ch01.1.2} can now address source admissibility and boundary
-data on this inherited Maxwell base, with no re-expression of the governing
-equation set.
+Validity limits are explicit. Equivalence between differential and integral forms
+requires regularity sufficient for Stokes and divergence theorems. The vacuum
+closure of Eq.~\eqref{eq:ch1.vacuum-constitutive} does not apply to dispersive,
+anisotropic, nonlinear, nonlocal, or strongly time-varying media, where
+constitutive response is operator-valued
+\cite{jackson1999,collin2001,balanis2016}.
 
 
 \subsection{Sources, boundary conditions, and physical admissibility}
 \label{sec:ch01.1.2}
 % TOC tag: [HOME]
 
-The Maxwell system of Subsection~\ref{sec:ch01.1.1} becomes predictive only after
-its data class is specified with sufficient analytical precision. In this chapter,
-\emph{source} means prescribed excitation through impressed electric current
-density \(\Jimp\) and free-charge density \(\rho\); \emph{boundary condition}
-means a constraint on field traces at \(\Gamma=\partial\Omega\) and at interior
-interfaces; \emph{physical admissibility} means joint regularity and compatibility
-conditions under which those data produce realizable fields rather than algebraic
-extensions without physical content \cite{jackson1999,harrington2001,collin2001}.
-
-The logical role of this subsection in Chapter~\ref{ch:01} is therefore to close
-the gap between field equations and usable problem statements. Maxwell equations
-provide evolution and constraint structure; admissible data classes decide whether
-that structure is well posed for physical interpretation. For readers transitioning
-from undergraduate training, the key point is that solution quality depends not
-only on the differential equations, but on whether source and boundary data belong
-to a mathematically compatible class. In this monograph, that compatibility is
-kept explicit because later claims on momentum transport, gauge-sensitive
-quantities, and observable/inferred separation all inherit it directly.
+Maxwell equations acquire physical predictive power only after source data and
+trace data are assigned in compatible function classes. Let \(\Jimp\) denote the
+impressed electric-current density and \(\rho\) the free-charge density in
+\(\Omega\); let boundary conditions be constraints on tangential/normal field
+traces at \(\Gamma=\partial\Omega\) and on transmission traces across interior
+interfaces. Physical admissibility then means joint regularity and compatibility of
+sources, interfaces, and outer-boundary traces, so that resulting fields remain
+interpretable within one conservation framework
+\cite{jackson1999,harrington2001,collin2001}.
 
 Let \(\Omega\subset\mathbb{R}^3\) be decomposed into piecewise smooth material
 subdomains \(\{\Omega_a\}_{a=1}^{N_\Omega}\), and let
@@ -292,17 +466,15 @@ plays two simultaneous roles: mathematically, it closes the boundary-value
 problem; physically, it represents how material termination, coating, or idealized
 wall behavior restricts admissible tangential traces.
 
-It is useful to write the same closure in domain-range form,
+The same closure can be written in operator domain-range form,
 \[
 \mathcal{B}_\Gamma:\mathcal{T}_\Gamma\to\mathcal{Y}_\Gamma,
 \]
 where \(\mathcal{T}_\Gamma\) denotes the trace space generated by admissible
 interior fields and \(\mathcal{Y}_\Gamma\) denotes the data space for boundary
-specifications. This notation does not introduce a new result; it clarifies that
-boundary conditions are operators between function spaces, not merely symbolic
-equalities. That viewpoint becomes increasingly important in Chapters~2 and 3,
-where operator domain, range, and null-space structure govern accessibility of
-angular channels.
+specifications. This representation clarifies that boundary conditions are mappings
+between spaces of traces and data, not isolated symbolic equalities; solvability
+and uniqueness depend directly on this mapping structure.
 
 Interface transmission follows from the integral Maxwell balances
 Eq.~\eqref{eq:ch1.maxwell-integral} by shrinking control loops and pillboxes
@@ -340,14 +512,14 @@ and for a vanishing pillbox,
 \quad\Rightarrow\quad
 \hat{\mathbf{n}}_{ab}\cdot(\mathbf{D}_b-\mathbf{D}_a)=\rho_{s,ab}.
 \]
-These intermediate expressions are included to make the derivational path visible
-before the compact final jump form is used in later sections.
+These limiting expressions expose the derivational path from integral balances to
+compact jump laws, and make explicit which terms survive when control sets collapse
+toward the interface.
 
-From a physical viewpoint, this interface law is the first point where geometry
-and material architecture enter as active participants in angular structure:
-continuity classes and jump channels determine which field components can carry
-transport information across partition lines, and which components are trapped,
-screened, or redirected.
+From a physical viewpoint, interface law determines how angularly structured field
+content crosses material partitions. Continuity classes and jump channels identify
+which tangential and normal components transmit transport information, and which
+components are reflected, screened, or converted into surface-supported response.
 
 Outer closure is specified by partitioning
 \(\Gamma=\Gamma_{\mathrm{PEC}}\cup\Gamma_{\mathrm{PMC}}\cup\Gamma_Z\), where
@@ -371,8 +543,8 @@ Equation~\eqref{eq:ch1.outer-boundary-classes} therefore functions as a boundary
 trace selector mathematically, and as a model of ideal reflection or finite
 surface dissipation physically.
 
-For continuity with undergraduate intuition, the three boundary classes may be
-viewed as limiting material responses on tangential fields. The PEC relation
+The three boundary classes can be read as limiting responses for tangential field
+content. The PEC relation
 suppresses tangential electric trace, the PMC relation suppresses tangential
 magnetic trace, and the impedance relation preserves both while coupling them
 through \(Z_s\). This hierarchy is not merely classificatory: it determines the
@@ -380,7 +552,7 @@ energy-exchange channel at the boundary and therefore influences which angular
 content may persist, decay, or be reflected in bounded geometries.
 
 Source admissibility is now imposed by regularity, localization, and continuity
-compatibility. Let \(\Omega_s\subseteq\Omega\) be source support. The chapter
+compatibility. Let \(\Omega_s\subseteq\Omega\) be source support. The admissible
 source class is
 \begin{equation}
 \label{eq:ch1.source-admissibility}
@@ -396,12 +568,10 @@ charge-current consistency under the adopted \(\exp(-\jj\omega t)\) phasor
 convention. Taken together, these conditions exclude non-conservative source
 prescriptions that would violate Eq.~\eqref{eq:ch1.maxwell-local}.
 
-The admissibility class also fixes an implicit domain of validity. If \(\Jimp\) is
-too singular for the assumed trace/volume framework, or if charge continuity is
-violated by prescribed data, then formal fields can be written but cannot be
-interpreted within the same conservation framework used in this chapter. For that
-reason, admissibility here is treated as part of physical modeling, not as a
-post-processing check.
+The admissibility class simultaneously fixes domain of validity. If \(\Jimp\) is
+too singular for the adopted trace/volume framework, or if continuity is violated
+by prescribed data, formal field expressions may exist but cannot be interpreted
+with the same conservation statements used for admissible states.
 
 \begin{proposition}[Global compatibility of source and boundary data]
 \label{prop:ch1.source-boundary-compatibility}
@@ -415,21 +585,19 @@ satisfy the global charge-balance identity
 \end{equation}
 \end{proposition}
 
-The proof is obtained by integrating the distributional continuity relation in
-Eq.~\eqref{eq:ch1.source-admissibility} over \(\Omega\), invoking divergence
-theorem on \(\divg\Jimp\), and using admissible boundary traces from
-Eq.~\eqref{eq:ch1.boundary-data-operator}. The integral
+Integrating the distributional continuity relation in
+Eq.~\eqref{eq:ch1.source-admissibility} over \(\Omega\), applying divergence
+theorem to \(\divg\Jimp\), and using admissible boundary traces from
+Eq.~\eqref{eq:ch1.boundary-data-operator} gives the stated identity. The integral
 \(\int_{\Gamma}\Jimp\cdot\hat{\mathbf{n}}\,dS\) is net outward impressed-current
 flux, while \(\jj\omega\int_{\Omega}\rho\,dV\) is harmonic charge-storage rate.
 Equation~\eqref{eq:ch1.global-charge-compatibility} is therefore a global
 charge-balance law on admissible data classes.
 
-In practical terms, Eq.~\eqref{eq:ch1.global-charge-compatibility} is the
-large-scale consistency test that links boundary current flux to interior charge
-storage under the fixed phasor convention. Local constitutive detail may vary
-across subdomains, but this global balance must still hold when data are
-admissible. That invariance across local complexity is exactly why this equation
-is carried as a major milestone relation in the subsection.
+Equation~\eqref{eq:ch1.global-charge-compatibility} links boundary current flux to
+interior charge storage at the whole-domain scale. Local constitutive detail may
+vary across subdomains, yet this global balance remains mandatory for any
+admissible dataset under the fixed phasor convention.
 
 \begin{figure}[t]
 \centering
@@ -443,7 +611,7 @@ Eq.~\eqref{eq:ch1.interface-conditions}, boundary traces by
 Eq.~\eqref{eq:ch1.outer-boundary-classes}, source regularity by
 Eq.~\eqref{eq:ch1.source-admissibility}, and global consistency by
 Eq.~\eqref{eq:ch1.global-charge-compatibility}.}}
-\caption{Schematic coupling of source support, interface transmission, and outer-boundary closure for admissible Maxwell data in Subsection~\ref{sec:ch01.1.2}.}
+\caption{Schematic coupling of source support, interface transmission, and outer-boundary closure for admissible Maxwell data.}
 \label{fig:ch1.source-boundary-admissibility}
 \end{figure}
 
@@ -453,13 +621,6 @@ form a single data manifold. Later transport and observable claims inherit this
 manifold directly, because angular descriptors computed from \((\E,\H)\) are
 credible only when the entire data chain is compatible.
 
-The figure is intentionally schematic rather than geometric-detailed. Its function
-is to expose dependency order: source support \(\Omega_s\) fixes where excitation
-enters, interface conditions fix how fields pass between material sectors, and
-boundary class fixes what traces are allowed to leave or return at \(\Gamma\).
-When these three layers are read together, the reader can follow why the chapter
-does not treat angular observables before establishing admissibility.
-
 The validity boundary is equally clear. The derivation assumes piecewise smooth
 interfaces, local constitutive response within each subregion, and standard trace
 theory for boundary operators. Strongly nonlocal media, rough multiscale
@@ -467,32 +628,18 @@ interfaces, active time-modulated surfaces, and stochastic boundary operators li
 outside this subsection and require expanded functional frameworks
 \cite{jackson1999,harrington2001,collin2001,balanis2016}.
 
-This explicit boundary statement is included for reader confidence: it marks the
-exact regime in which the derivation should be trusted and prevents overextension
-of conclusions to data classes not yet constructed in the monograph.
-
-This subsection establishes the HOME admissibility frame for Chapter~1 through
-Eq.~\eqref{eq:ch1.interface-conditions},
-Eq.~\eqref{eq:ch1.outer-boundary-classes},
-Eq.~\eqref{eq:ch1.source-admissibility}, and
-Proposition~\ref{prop:ch1.source-boundary-compatibility}. With source and trace
-classes fixed at this level, Subsection~\ref{sec:ch01.1.3} can address
-initial-boundary uniqueness without reopening data admissibility.
-
 
 \subsection{Initial-boundary value problems and uniqueness}
 \label{sec:ch01.1.3}
 % TOC tag: [HOME]
 
-With governing equations and admissibility classes already in place, the next
-structural task is to specify when a boundary-value prescription yields a single
-electromagnetic field pair rather than a family of mathematically admissible but
-physically incompatible solutions. The problem data consist of source terms
-\((\Jimp,\rho)\) on \(\Omega\), constitutive model \(\chi\), and boundary
-operators on \(\Gamma\) chosen from the classes introduced in
-Subsection~\ref{sec:ch01.1.2}. For harmonic analysis, uniqueness can be cast in
-operator language by asking whether the homogeneous problem admits only the zero
-solution.
+Uniqueness answers a direct physical question: can one source-boundary dataset
+produce more than one electromagnetic field state? Let the data be
+\((\Jimp,\rho)\) in \(\Omega\), constitutive descriptor set \(\chi\), and
+boundary operator class on \(\Gamma\). If two distinct fields satisfy the same
+data, any downstream prediction of momentum or angular transport loses
+identifiability. The mathematical criterion is therefore imposed on the
+homogeneous difference problem.
 
 Let \((\E_1,\H_1)\) and \((\E_2,\H_2)\) be two solutions for the same data and
 define the difference fields \(\Delta\E=\E_1-\E_2\),
@@ -505,17 +652,16 @@ therefore
 \Longrightarrow
 \Delta\E=\mathbf{0},\ \Delta\H=\mathbf{0},
 \end{equation}
-where \(\mathcal{B}_{\chi,\Gamma}\) is the boundary-conditioned Maxwell operator
-induced by constitutive data \(\chi\) and boundary class \(\Gamma\).
-Operand-level reading of Eq.~\eqref{eq:ch1.uniqueness-null} is straightforward:
-the left clause expresses vanishing residual of the homogeneous operator with
-homogeneous boundary data, and the right clause requires nullity of the field
-difference. As a complete statement, Eq.~\eqref{eq:ch1.uniqueness-null} is the
-no-ambiguity condition for electromagnetic prediction under fixed admissibility
-specification.
+where \(\mathcal{B}_{\chi,\Gamma}\) denotes the Maxwell operator with constitutive
+and boundary closure fixed by \(\chi\) and \(\Gamma\). Operand interpretation:
+the left clause imposes zero operator residual for the difference state under
+homogeneous data; the right clause forces that difference to vanish everywhere.
+Full-equation interpretation: Eq.~\eqref{eq:ch1.uniqueness-null} is a trivial-null
+space condition for the homogeneous boundary-value map. Physical interpretation:
+no hidden branch of fields is allowed once source and boundary data are fixed.
 
-The functional mechanism behind Eq.~\eqref{eq:ch1.uniqueness-null} is expressed
-through an energy-like coercive estimate on admissible fields:
+A sufficient mechanism for Eq.~\eqref{eq:ch1.uniqueness-null} is coercive control
+of the difference state:
 \begin{equation}
 \label{eq:ch1.uniqueness-estimate}
 \Re\!\left\langle \mathcal{B}_{\chi,\Gamma}[\Delta\E,\Delta\H],(\Delta\E,\Delta\H)\right\rangle
@@ -523,20 +669,13 @@ through an energy-like coercive estimate on admissible fields:
 \|\Delta\E\|_{L^2(\Omega)^3}^{2}+\|\Delta\H\|_{L^2(\Omega)^3}^{2}
 \right),
 \end{equation}
-with \(c_{\chi,\Gamma}>0\) the coercivity constant tied to material passivity
-and boundary dissipation/admissibility class, \(\langle\cdot,\cdot\rangle\) the
-problem-compatible sesquilinear pairing, and \(\Re(\cdot)\) the real part.
-Each operand has a precise role: the left side measures operator work on the
-difference state, while the right side controls the full field-energy norm of
-that difference. The full equation expresses that no nonzero homogeneous mode can
-persist without violating coercive positivity.
-
-The physical interpretation is central to the chapter logic. Uniqueness is not
-an abstract technical ornament; it is the statement that the model does not admit
-two different electromagnetic futures under identical source and boundary
-prescription. If this condition fails, angular-momentum transport claims become
-non-identifiable because distinct fields can satisfy the same external data. When
-it holds, later observables and invariants acquire predictive meaning.
+with \(c_{\chi,\Gamma}>0\) the coercivity constant, \(\langle\cdot,\cdot\rangle\)
+the problem-compatible sesquilinear pairing, and \(\Re(\cdot)\) the real part.
+The left side measures operator work on \((\Delta\E,\Delta\H)\); the right side
+lower-bounds the full \(L^2\)-energy norm of that state. If the homogeneous
+residual is zero, inequality~\eqref{eq:ch1.uniqueness-estimate} forces
+\(\Delta\E=\Delta\H=\mathbf{0}\). This is the analytical reason uniqueness and
+predictive physical interpretation coincide.
 
 \begin{figure}[t]
 \centering
@@ -547,58 +686,48 @@ class \(\Gamma\) and constitutive model \(\chi\) define operator
 \(\mathcal{B}_{\chi,\Gamma}\). Uniqueness corresponds to collapse of all
 homogeneous residual branches into the null branch only, ensuring a single
 admissible field response.}}
-\caption{Schematic interpretation of uniqueness in Subsection~\ref{sec:ch01.1.3}: fixed data produce one electromagnetic state when the homogeneous null space is trivial.}
+\caption{Uniqueness schematic: fixed source and boundary data determine a single admissible electromagnetic state when the homogeneous null space is trivial.}
 \label{fig:ch1.uniqueness-map}
 \end{figure}
 
-Validity limits for this subsection are explicit. The estimate
-Eq.~\eqref{eq:ch1.uniqueness-estimate} relies on passive constitutive behavior,
-boundary classes compatible with energy control, and function-space regularity
-consistent with the admissibility framework of Subsection~\ref{sec:ch01.1.2}. In
-active media, nonlocal gain-assisted interfaces, or ill-posed inverse boundary
-closures, coercivity can fail and uniqueness may be lost
-\cite{collin2001,jackson1999,harrington2001}.
-
-With uniqueness architecture established, Subsection~\ref{sec:ch01.1.4} can
-develop energy and momentum transport tensors on a solution class whose physical
-interpretation is no longer ambiguous.
+Validity limits are explicit. Inequality~\eqref{eq:ch1.uniqueness-estimate}
+assumes passive or energy-controlled constitutive response, boundary classes that
+do not inject uncontrolled gain, and trace regularity compatible with the
+admissible data model. In active media, strongly nonlocal gain interfaces, or
+ill-posed inverse closures, coercivity may fail and multiple solution branches can
+occur \cite{collin2001,jackson1999,harrington2001}.
 
 
 \subsection{Energy, linear momentum, and Maxwell stress tensor}
 \label{sec:ch01.1.4}
 % TOC tag: [HOME]
 
-Once existence and uniqueness are secured, transport statements become
-interpretable as physical balances rather than formal identities.
-Subsection~\ref{sec:ch01.1.4} develops the energy and linear-momentum accounting
-framework that later angular-momentum arguments inherit by reference.
-
-In phasor form with the \(\exp(-\jj\omega t)\) convention, let the complex
-Poynting vector be \(\mathbf{S}=\tfrac{1}{2}\E\times\H^*\), where
-\((\cdot)^*\) is complex conjugation. Let \(u_E=\tfrac{1}{4}\varepsilon_0\E\cdot\E^*\)
-and \(u_H=\tfrac{1}{4}\mu_0\H\cdot\H^*\) be electric and magnetic stored-energy
-densities, and let \(\Re(\cdot)\), \(\Im(\cdot)\) extract real and imaginary
-parts. The complex Poynting theorem may be written as
+Electromagnetic transport is quantified through two coupled objects: the complex
+Poynting vector for power flow and the Maxwell stress tensor for linear-momentum
+flux. In the \(\exp(-\jj\omega t)\) phasor convention, define
+\(\mathbf{S}=\tfrac{1}{2}\E\times\H^*\), where \((\cdot)^*\) is complex
+conjugation. Define stored-energy densities
+\(u_E=\tfrac{1}{4}\varepsilon_0\E\cdot\E^*\) and
+\(u_H=\tfrac{1}{4}\mu_0\H\cdot\H^*\). The complex power balance is
 \begin{equation}
 \label{eq:ch1.poynting-complex}
 \divg\mathbf{S}
 =-\frac{1}{2}\E\cdot\Jimp^*
 -\jj\omega\left(u_H-u_E\right).
 \end{equation}
-Operand-level reading of Eq.~\eqref{eq:ch1.poynting-complex} is decisive.
-The divergence operator \(\divg\) on \(\mathbf{S}\) gives net electromagnetic
-power outflow density, \(\E\cdot\Jimp^*/2\) is source-field work-rate density,
-and \(-\jj\omega(u_H-u_E)\) is reactive exchange between magnetic and electric
-storage channels. As a complete equation,
-Eq.~\eqref{eq:ch1.poynting-complex} couples power transport, source work, and
-local storage imbalance in one conservation-governed statement.
+Term-level interpretation is explicit. The divergence term gives net power outflow
+density from a differential control volume. The source term
+\(\E\cdot\Jimp^*/2\) is electromagnetic work rate on impressed current. The term
+\(-\jj\omega(u_H-u_E)\) is reactive exchange between magnetic and electric storage
+channels. Full-equation interpretation: Eq.~\eqref{eq:ch1.poynting-complex}
+couples transport, source work, and storage imbalance in one local conservation
+statement.
 
-Taking real and imaginary parts yields the standard interpretation split:
+Splitting into real and imaginary parts gives the measurement-relevant separation:
 \(\Re(\mathbf{S})\) controls net transported power density and
 \(\Im(\mathbf{S})\) controls reactive circulation associated with local
-near-field energy exchange. This split is essential for the chapter’s angular
-program: strong phase structure in reactive regions does not automatically imply
-far-field momentum carriage.
+near-field energy exchange. This distinction prevents reactive phase structure from
+being misread as long-range momentum transport.
 
 Linear momentum flux is represented through the time-averaged Maxwell stress
 tensor. In vacuum its dyadic form is
@@ -637,15 +766,15 @@ momentum through boundary traction \(\mathbf{T}\cdot\hat{\mathbf{n}}\). The same
 control set therefore supports power-balance interpretation
 (Eq.~\eqref{eq:ch1.poynting-complex}) and momentum-flux interpretation
 (Eq.~\eqref{eq:ch1.maxwell-stress}).}}
-\caption{Conceptual link between power transport and linear-momentum flux in Subsection~\ref{sec:ch01.1.4}.}
+\caption{Control-volume relation between complex power balance and linear-momentum traction flux.}
 \label{fig:ch1.energy-momentum-control}
 \end{figure}
 
-The physical implication for the chapter is immediate. Angular interpretations in
-later subsections become trustworthy only when built on this energy-momentum
-backbone: reactive storage, transported power, and traction-mediated momentum
-transfer must be distinguished before any claim about directional or rotational
-field organization is accepted.
+Figure~\ref{fig:ch1.energy-momentum-control} links the two balance channels on the
+same control set: \(\mathbf{S}\) governs energetic exchange and \(\mathbf{T}\)
+governs mechanical traction exchange. Reading them together is essential when field
+patterns exhibit strong spatial structure, because power circulation and momentum
+transfer need not be co-located.
 
 Validity limits are explicit. Equations~\eqref{eq:ch1.poynting-complex} and
 \eqref{eq:ch1.maxwell-stress} are written for vacuum linear local closure and
@@ -653,30 +782,18 @@ time-harmonic averaging. In dispersive, anisotropic, or strongly time-varying
 media, additional constitutive terms and averaging care are required before using
 the same balance form without modification \cite{jackson1999,collin2001}.
 
-Subsection~\ref{sec:ch01.1.5} can now extend this transport framework from linear
-momentum to angular momentum and torque balance.
-
 
 \subsection{Angular momentum conservation and torque balance}
 \label{sec:ch01.1.5}
 % TOC tag: [HOME]
 
-Subsection~\ref{sec:ch01.1.5} extends the energy-momentum framework of
-Subsection~\ref{sec:ch01.1.4} to rotational transport and mechanical torque. The
-goal is to identify which field quantities carry angular momentum across control
-surfaces and how boundary/material interaction converts that transport into
-observable torque.
-
-Let \(\mathbf{r}\) be position vector relative to a declared origin, let
-\(\mathbf{T}\) be the Maxwell stress tensor from
-Eq.~\eqref{eq:ch1.maxwell-stress}, and let \(\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}\)
-be traction density on boundary \(\partial V\) of control volume \(V\). The
-electromagnetic torque density about the declared origin is
-\(\boldsymbol{\tau}=\mathbf{r}\times\mathbf{f}\), where \(\mathbf{f}\) is local
-force density, and the angular-momentum flux density tensor about that origin is
-\(\mathbf{M}=\mathbf{r}\times\mathbf{T}\).
-
-Under these declarations, the local angular-momentum balance is
+Rotational transport in electromagnetic fields is quantified by balancing three
+channels: local storage of field angular momentum, flux through the control
+surface, and torque transfer to matter. Let \(\mathbf{r}\) be position vector
+relative to a declared origin, \(\mathbf{T}\) the Maxwell stress tensor from
+Eq.~\eqref{eq:ch1.maxwell-stress}, and
+\(\mathbf{M}=\mathbf{r}\times\mathbf{T}\) the angular-momentum flux tensor about
+that origin. The local balance law is
 \begin{equation}
 \label{eq:ch1.angular-momentum-balance}
 \frac{\partial\mathbf{j}_{\mathrm{em}}}{\partial t}
@@ -684,19 +801,14 @@ Under these declarations, the local angular-momentum balance is
 =-\boldsymbol{\tau}_{\mathrm{mech}},
 \end{equation}
 where \(\mathbf{j}_{\mathrm{em}}\) is electromagnetic angular-momentum density
-and \(\boldsymbol{\tau}_{\mathrm{mech}}\) is mechanical torque density transferred
-to matter. Operand-level roles are explicit: the time-derivative term measures
-local storage-rate of electromagnetic angular momentum, the divergence term
-\(\divg\mathbf{M}\) measures net angular-momentum outflow from the control set,
-and the right side is the sink/source channel that couples field transport to
-material torque.
-
-As a complete conservation law, Eq.~\eqref{eq:ch1.angular-momentum-balance}
-states that any reduction of field angular momentum in a region must appear as
-boundary flux export or mechanical torque deposition. This closes the conceptual
-gap between field-structure interpretation and measurable rotational action.
-Without this balance relation, phase-structured fields could be misread as
-carrying transport-relevant angular momentum even when no torque pathway exists.
+and \(\boldsymbol{\tau}_{\mathrm{mech}}\) is mechanical torque density delivered to
+matter. Term-level interpretation is direct: the time derivative tracks local
+storage variation, \(\divg\mathbf{M}\) tracks net outflow through the control
+boundary, and \(-\boldsymbol{\tau}_{\mathrm{mech}}\) is the exchange channel
+between field and material rotation. Full-equation interpretation:
+Eq.~\eqref{eq:ch1.angular-momentum-balance} is the rotational analog of linear
+momentum balance. Physical interpretation: rotational field structure is transport
+meaningful only when it is consistent with torque bookkeeping.
 
 In integral form over \(V\), with \(dS\) the surface element on \(\partial V\),
 the same law implies
@@ -720,16 +832,15 @@ A control volume \(V\) around an origin receives and emits angular-momentum flux
 \(\boldsymbol{\tau}_{\mathrm{mech}}\) accumulates inside \(V\). The bookkeeping
 connects storage, transport, and torque channels in
 Eq.~\eqref{eq:ch1.angular-momentum-balance}.}}
-\caption{Conceptual map relating angular-momentum transport to measurable torque in Subsection~\ref{sec:ch01.1.5}.}
+\caption{Control-volume map relating electromagnetic angular-momentum transport to measurable mechanical torque.}
 \label{fig:ch1.torque-balance-control}
 \end{figure}
 
-The physical implication for subsequent chapter sections is fundamental. Angular
-labels gain transport meaning only when they remain consistent with both flux and
-torque accounting. Fields with pronounced phase winding in reactive zones may
-display strong local structure yet produce negligible far-zone torque transfer.
-Conversely, radiative configurations with balanced symmetry breaking can deliver
-nonzero rotational action even when visual modal descriptors appear modest.
+Figure~\ref{fig:ch1.torque-balance-control} emphasizes that torque observables are
+boundary-coupled transport quantities, not visual descriptors of phase alone.
+Fields with strong near-zone phase winding can exhibit large local structure while
+yielding weak net torque transfer, whereas radiative states with moderate apparent
+patterning can deliver substantial rotational action through sustained flux.
 
 Validity limits must be stated with equal clarity. The balance law in
 Eq.~\eqref{eq:ch1.angular-momentum-balance} presumes consistent origin
@@ -740,12 +851,13 @@ additional coupling terms may be necessary before torque partition is interprete
 without ambiguity \cite{jackson1999,collin2001,harrington2001}.
 
 \paragraph{Section 1.1 summary and transition.}
-Section~\ref{sec:ch01.1} now forms a closed transport backbone. Maxwell field
-law, source-boundary admissibility, uniqueness, energy and linear-momentum
-accounting, and angular-momentum torque balance are all fixed at foundational depth. On
-this completed base, Section~\ref{sec:ch01.2} examines angular structure in
-field-theoretic terms without conflating representational appearance with
-conservation-consistent transport.
+Section~\ref{sec:ch01.1} has established the governing transport framework:
+Maxwell dynamics, admissible source-boundary data classes, uniqueness of the
+field solution, complex power balance, linear-momentum traction flux, and
+angular-momentum torque exchange. With these constraints fixed, 
+Section~\ref{sec:ch01.2} can analyze directional and phase-polarization structure
+using quantities that remain tied to measurable transport rather than to visual
+representation alone.
 
 
 \section{Angular Structure of Electromagnetic Fields}
@@ -802,48 +914,143 @@ angular-momentum flux. With \(\mathbf{M}\) from
 Eq.~\eqref{eq:ch1.angular-momentum-balance}, define
 \begin{equation}
 \label{eq:ch1.directional-am-flux}
-\mathbf{\Psi}_J(\theta,\phi;r)=r^2\,\mathbf{M}(r,\theta,\phi)\cdot\hat{\mathbf{r}}.
+\boldsymbol{\Psi}_J(\theta,\phi;r)=r^2\,\mathbf{M}(r,\theta,\phi)\cdot\hat{\mathbf{r}}.
 \end{equation}
 The contraction \(\mathbf{M}\cdot\hat{\mathbf{r}}\) selects outward angular
 transport channel-by-channel; \(r^2\) performs the same geometric conversion used
 for power flux. The pair
-\((\Pi,\mathbf{\Psi}_J)\) provides the minimum directional dataset needed to
+\((\Pi,\boldsymbol{\Psi}_J)\) provides the minimum directional dataset needed to
 disentangle energy carriage from angular-momentum carriage.
 
-For practical interpretation, consider two radiative states with
-\(P_{\mathrm{rad}}^{(1)}=P_{\mathrm{rad}}^{(2)}\) but
-\(\mathbf{\Psi}_J^{(1)}\neq\mathbf{\Psi}_J^{(2)}\) over part of \(4\pi\). Equal
-total power then coexists with unequal rotational transfer potential, so torque
-delivery, angular recoil, and receiver-coupling selectivity can differ despite
-identical scalar budgets \cite{harrington2001,collin2001}. This resolves a
-frequent misconception in which phase-rich appearance is taken as sufficient
-evidence of angular transport.
+The vector total of outward angular-momentum transport is obtained from
+\(\boldsymbol{\Psi}_J\) by
+\begin{equation}
+\label{eq:ch1.directional-am-total}
+\mathbf{J}_{\mathrm{rad}}(r)=\int_{4\pi}\boldsymbol{\Psi}_J(\theta,\phi;r)\,d\Omega,
+\end{equation}
+where \(\mathbf{J}_{\mathrm{rad}}(r)\) is net electromagnetic angular-momentum
+flux through the radius-\(r\) sphere. Equation~\eqref{eq:ch1.directional-am-total}
+plays the same projection role for rotational transport that
+Eq.~\eqref{eq:ch1.directional-power-integral} plays for energetic transport.
+Keeping both levels---direction-resolved and integrated---prevents loss of
+structure when non-axisymmetric flux channels are present.
 
-Origin declaration is also inseparable from directional angular interpretation.
-Because rotational quantities are moment-based through
-\(\mathbf{r}\times(\cdot)\), shifting the origin can redistribute directional
-content even when total transport remains fixed. Statements about directional
-angular behavior are therefore incomplete unless origin and boundary geometry are
-declared with the same precision as source assumptions.
+An equivalent control quantity that isolates rotational transfer efficiency at each
+direction is
+\begin{equation}
+\label{eq:ch1.directional-transport-ratio}
+\boldsymbol{\eta}_J(\theta,\phi;r)=
+\frac{\boldsymbol{\Psi}_J(\theta,\phi;r)}
+{\Pi(\theta,\phi;r)+\epsilon_\Pi},
+\qquad
+\epsilon_\Pi>0,
+\end{equation}
+with \(\epsilon_\Pi\) a regularization scale that avoids singular behavior near
+transport nodes \(\Pi\approx 0\). The numerator carries rotational-flux density,
+the denominator carries energetic-flux density, and the ratio therefore measures
+angular transport per unit transported power at each solid-angle channel. In
+experimental practice this quantity separates ``high-power weak-rotation'' channels
+from ``moderate-power strong-rotation'' channels that may dominate torque delivery
+at a receiver.
 
-The validity window is restricted to regimes where outward transport
-interpretation is meaningful and where surface-flux integrals are not dominated
-by near-zone reactive exchange. Reactive-radiative separation will be developed
-formally in Subsection~\ref{sec:ch01.2.4}; until then, directional claims are to
-be read as propagation-channel statements, not as generic near-field descriptors.
+Directional anisotropy can be characterized through spherical moments of
+\(\Pi\). Define energetic transport centroid vector
+\begin{equation}
+\label{eq:ch1.directional-power-centroid}
+\mathbf{c}_P(r)=
+\frac{\int_{4\pi}\hat{\mathbf{r}}\,\Pi(\theta,\phi;r)\,d\Omega}
+{\int_{4\pi}\Pi(\theta,\phi;r)\,d\Omega},
+\end{equation}
+and rotational transport centroid vector
+\begin{equation}
+\label{eq:ch1.directional-am-centroid}
+\mathbf{c}_J(r)=
+\frac{\int_{4\pi}\hat{\mathbf{r}}\,
+\left\|\boldsymbol{\Psi}_J(\theta,\phi;r)\right\|\,d\Omega}
+{\int_{4\pi}\left\|\boldsymbol{\Psi}_J(\theta,\phi;r)\right\|\,d\Omega}.
+\end{equation}
+Here \(\|\cdot\|\) is Euclidean norm in \(\mathbb{R}^3\). If
+\(\mathbf{c}_P(r)\neq\mathbf{c}_J(r)\), energy and angular transport are emitted
+preferentially into different directional sectors. That mismatch is physically
+important in antenna recoil, optical torque transfer, and asymmetric scattering,
+because the strongest energy channel need not be the strongest rotational channel.
 
-The next subsection enters amplitude, phase, and polarization structure, and does
-so on this directional-transport base so that topological description remains
-tethered to physically transferable field content.
+\begin{proposition}[Directional non-equivalence criterion]
+\label{prop:ch1.directional-nonequivalence}
+Consider two radiative states \(\mathcal{F}_1,\mathcal{F}_2\) at common radius
+\(r\), with equal total transported power,
+\(P_{\mathrm{rad}}^{(1)}(r)=P_{\mathrm{rad}}^{(2)}(r)\). If there exists a set
+\(\mathcal{U}\subset 4\pi\) of nonzero measure such that
+\(\boldsymbol{\Psi}_J^{(1)}(\theta,\phi;r)\neq
+\boldsymbol{\Psi}_J^{(2)}(\theta,\phi;r)\) on \(\mathcal{U}\), then the two states
+are rotationally non-equivalent: they can produce different torque-transfer
+responses in direction-selective interactions.
+\end{proposition}
 
+The proof is immediate from the control-volume torque identity inherited from
+Eq.~\eqref{eq:ch1.angular-momentum-balance}. Equal
+\(P_{\mathrm{rad}}\) constrains only \(\int_{4\pi}\Pi\,d\Omega\); it does not
+constrain \(\boldsymbol{\Psi}_J\) channel by channel. A direction-selective
+interaction kernel \(K(\theta,\phi)\) maps the angular flux to a measured torque
+functional
+\[
+\mathbf{T}_{\mathrm{obs}}=
+\int_{4\pi}K(\theta,\phi)\,\boldsymbol{\Psi}_J(\theta,\phi;r)\,d\Omega.
+\]
+Whenever \(\boldsymbol{\Psi}_J^{(1)}\neq\boldsymbol{\Psi}_J^{(2)}\) on a set with
+nonzero measure, one can choose physically admissible \(K\) supported on that set
+such that \(\mathbf{T}_{\mathrm{obs}}^{(1)}\neq
+\mathbf{T}_{\mathrm{obs}}^{(2)}\). Hence equal total power does not guarantee equal
+rotational transport action.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.93\linewidth}{
+\textbf{Directional transport decomposition on an observation sphere.}
+At radius \(r\), each solid-angle channel \((\theta,\phi)\) carries energetic flux
+\(\Pi(\theta,\phi;r)\) and rotational flux
+\(\boldsymbol{\Psi}_J(\theta,\phi;r)\). Integrating all channels yields
+\(P_{\mathrm{rad}}(r)\) and \(\mathbf{J}_{\mathrm{rad}}(r)\), while weighted
+channel selection models torque transfer in directional coupling experiments.}}
+\caption{Schematic relation between direction-resolved energetic transport and direction-resolved angular-momentum transport in Subsection~\ref{sec:ch01.2.1}.}
+\label{fig:ch1.directional-transport-decomposition}
+\end{figure}
+
+Figure~\ref{fig:ch1.directional-transport-decomposition} highlights the key
+interpretive structure: scalar totals are terminal integrals of a richer
+channel-resolved transport field. Inverse use of totals alone can therefore hide
+directional cancellations and compensations. Two states can produce the same
+\(P_{\mathrm{rad}}\) and even similar far-field intensity envelopes while
+maintaining sharply different \(\boldsymbol{\Psi}_J\) topology.
+
+Origin declaration remains inseparable from directional angular interpretation.
+Because angular transport is moment-based through \(\mathbf{r}\times(\cdot)\),
+translation of the origin can re-partition directional content even when conserved
+totals remain unchanged. For this reason, every directional rotational statement
+must specify the same geometric origin used in force/torque interpretation.
+
+The subsection also imposes an operational caution on phase interpretation.
+Structured phase fronts may indicate directional interference organization, yet
+transport meaning follows only from \(\Pi\) and \(\boldsymbol{\Psi}_J\), not from
+phase texture alone. This distinction suppresses a recurrent misclassification:
+phase-rich but reactive-dominated channels are sometimes treated as high angular
+carriers even when their outward \(\boldsymbol{\Psi}_J\) contribution is weak.
+
+Validity limits are explicit. The directional maps above are interpreted as
+radiative transport descriptors when the observation sphere is in a regime where
+outward flux channels are well defined and not dominated by reactive exchange.
+In strongly near-field zones, in media with pronounced nonlocal constitutive
+response, or under rapidly time-varying boundaries, additional decomposition terms
+can be required before \(\Pi\) and \(\boldsymbol{\Psi}_J\) are read as direct
+transport observables \cite{harrington2001,collin2001,jackson1999}.
 
 \subsection{Amplitude, phase, polarization, and Poynting topology}
 \label{sec:ch01.2.2}
 % TOC tag: [HOME]
 
-Directional transport maps from Subsection~\ref{sec:ch01.2.1} become physically
-informative only after resolving how amplitude, phase, and polarization are
-embedded in the complex field pair. For a local transverse chart
+Directional transport maps become diagnostically reliable only after amplitude,
+relative phase, and polarization are treated as one coupled field descriptor.
+For a local transverse basis
 \((\hat{\boldsymbol{\theta}},\hat{\boldsymbol{\phi}})\), write
 \begin{equation}
 \label{eq:ch1.transverse-components}
@@ -851,15 +1058,26 @@ embedded in the complex field pair. For a local transverse chart
 E_\theta=A_\theta e^{\jj\varphi_\theta},\quad
 E_\phi=A_\phi e^{\jj\varphi_\phi},
 \end{equation}
-where \(A_\theta,A_\phi\ge 0\) are amplitude envelopes and
-\(\varphi_\theta,\varphi_\phi\) are component phases. Equation
-\eqref{eq:ch1.transverse-components} separates magnitude and phase channels at
-operand level, which is necessary before any statement about polarization or
-topological energy flow can be considered transport-relevant.
+where \(A_\theta,A_\phi\ge 0\) are amplitudes and
+\(\varphi_\theta,\varphi_\phi\) are component phases. At operand level, the
+amplitude pair controls local intensity partition while the phase pair controls
+interference geometry. The physically active phase variable is relative phase
+\(\Delta\varphi=\varphi_\phi-\varphi_\theta\), because global phase shift leaves
+local energy transport unchanged.
 
-The physically active phase variable is relative phase,
-\(\Delta\varphi=\varphi_\phi-\varphi_\theta\), not absolute phase alone. A
-compact polarization invariant set is obtained through Stokes-type quantities:
+A compact polarization representation is generated by the local coherency matrix
+\begin{equation}
+\label{eq:ch1.coherency-matrix}
+\mathbf{J}_p=
+\begin{bmatrix}
+\langle E_\theta E_\theta^* \rangle & \langle E_\theta E_\phi^*\rangle\\
+\langle E_\phi E_\theta^*\rangle & \langle E_\phi E_\phi^*\rangle
+\end{bmatrix},
+\end{equation}
+where \(\langle\cdot\rangle\) denotes local temporal or ensemble averaging
+consistent with measurement bandwidth. Diagonal entries encode component
+intensities, off-diagonal entries encode phase-coherence coupling. Stokes-type
+invariants follow as
 \begin{equation}
 \label{eq:ch1.stokes-local}
 \begin{aligned}
@@ -869,61 +1087,117 @@ S_2&=2\Re\!\left\{E_\theta E_\phi^*\right\},\\
 S_3&=-2\Im\!\left\{E_\theta E_\phi^*\right\},
 \end{aligned}
 \end{equation}
-with \((\cdot)^*\) denoting complex conjugation and \(\Im\{\cdot\}\) imaginary
-part. In Eq.~\eqref{eq:ch1.stokes-local}, \(S_0\) measures local intensity,
-\(S_1,S_2\) encode linear-polarization bias, and \(S_3\) encodes handedness
-content. Since \(S_2,S_3\) depend on \(E_\theta E_\phi^*\), polarization state
-is phase-coupled; amplitude-only descriptions are therefore incomplete for
-angular interpretation \cite{jackson1999,balanis2016}.
+with \((\cdot)^*\) complex conjugation and \(\Im\{\cdot\}\) imaginary part.
+Equation~\eqref{eq:ch1.stokes-local} shows explicitly that handedness channel
+\(S_3\) and oblique-linear channel \(S_2\) disappear if phase coherence between
+\(E_\theta\) and \(E_\phi\) is lost.
 
-Transport interpretation enters through Poynting topology. Using
-Eq.~\eqref{eq:ch1.poynting-complex}, define time-averaged energy-flow field
+Useful ellipse parameters are obtained from Stokes invariants:
+\begin{equation}
+\label{eq:ch1.polarization-ellipse-angles}
+\psi=\frac{1}{2}\operatorname{atan2}(S_2,S_1),\qquad
+\chi=\frac{1}{2}\arcsin\!\left(\frac{S_3}{S_0+\epsilon_S}\right),
+\end{equation}
+where \(\psi\) is orientation angle, \(\chi\) ellipticity angle, and
+\(\epsilon_S>0\) prevents singular behavior near vanishing intensity. These
+parameters are local representation coordinates, not transport observables by
+themselves; transport meaning must still be tested through Poynting and
+angular-flux channels.
+
+Topological interpretation starts from phase-gradient structure. Define local
+phase gradients
+\begin{equation}
+\label{eq:ch1.local-phase-gradient}
+\mathbf{k}_{\theta}=\nabla\varphi_\theta,\qquad
+\mathbf{k}_{\phi}=\nabla\varphi_\phi,\qquad
+\Delta\mathbf{k}=\nabla\Delta\varphi.
+\end{equation}
+Here \(\mathbf{k}_{\theta}\) and \(\mathbf{k}_{\phi}\) are component wavevector
+surrogates, while \(\Delta\mathbf{k}\) measures local polarization-coupling
+phase shear. Large \(\|\Delta\mathbf{k}\|\) indicates rapid polarization-state
+rotation in space, which can reshape local flow topology without necessarily
+increasing net transported angular momentum.
+
+Transport topology is read from the time-averaged Poynting field
 \begin{equation}
 \label{eq:ch1.poynting-average}
 \mathbf{P}=\Re\!\left\{\mathbf{S}\right\},
 \end{equation}
-and local flow vorticity indicator
+and its vorticity indicator
 \begin{equation}
 \label{eq:ch1.poynting-vorticity}
 \boldsymbol{\Omega}_P=\curl \mathbf{P}.
 \end{equation}
-Equation~\eqref{eq:ch1.poynting-average} isolates transported power density,
-while Eq.~\eqref{eq:ch1.poynting-vorticity} diagnoses local circulation tendency
-of that transport field. Regions with strong \(\boldsymbol{\Omega}_P\) do not
-automatically imply net angular-momentum export; they indicate structured local
-flow geometry whose transport significance must still be tested against the
-angular flux criteria fixed earlier.
+Equation~\eqref{eq:ch1.poynting-average} isolates active transport density;
+Eq.~\eqref{eq:ch1.poynting-vorticity} measures local circulation tendency of that
+transport field. The pair \((\mathbf{P},\boldsymbol{\Omega}_P)\) identifies where
+flow lines bend, braid, or recirculate. However, local circulation does not by
+itself certify exported rotational transport; certification requires consistency
+with directional angular-flux maps from Subsection~\ref{sec:ch01.2.1}.
 
-Phase singular points, where both transverse components vanish,
+Phase-singularity loci satisfy
 \begin{equation}
 \label{eq:ch1.phase-singularity-condition}
-A_\theta=A_\phi=0,
+A_\theta=A_\phi=0.
 \end{equation}
-form topological loci around which phase winds are defined. Equation
-\eqref{eq:ch1.phase-singularity-condition} marks geometry of phase defects, but
-topological charge near such loci is not by itself a torque certificate.
-Without nonzero outward angular flux and conservation-consistent channel balance,
-singularity structure remains a representation feature rather than a guaranteed
-transport outcome \cite{harrington2001,collin2001}.
+Around an isolated singularity, define winding number
+\begin{equation}
+\label{eq:ch1.phase-winding-number}
+q=\frac{1}{2\pi}\oint_{\mathcal{C}}\nabla\arg(E_\theta+\jj E_\phi)\cdot d\boldsymbol{\ell},
+\end{equation}
+where \(\mathcal{C}\) is a closed contour excluding singular points and
+\(d\boldsymbol{\ell}\) is tangential line element. Integer \(q\) classifies phase
+topology locally. Yet \(q\neq 0\) is still a geometric statement; transport
+interpretation needs nonzero outward flux support and conservation closure.
 
-An allied implication is crucial for this monograph’s interpretive discipline.
-Two fields may share nearly identical intensity map \(S_0\) and yet carry
-different \(\Delta\varphi\), different \(S_3\), and different
-\(\boldsymbol{\Omega}_P\); their coupling to rotational observables can then
-diverge sharply despite similar scalar energy appearance. Amplitude map,
-polarization state, and flow topology must therefore be read as a coupled
-triplet when discussing angular structure.
+\begin{proposition}[Topology does not imply exported angular transport]
+\label{prop:ch1.topology-transport-separation}
+There exist fields with nontrivial local phase topology
+\((q\neq 0,\ \boldsymbol{\Omega}_P\neq\mathbf{0})\) and nontrivial polarization
+texture \((S_3\neq 0)\) for which net exported angular-momentum flux across a
+closed observation sphere vanishes.
+\end{proposition}
 
-Validity limits remain explicit. The local decomposition above presumes
-sufficient field regularity for component extraction and differentiability of
-\(\mathbf{P}\) where \(\curl\mathbf{P}\) is interpreted. In highly lossy,
-strongly inhomogeneous, or measurement-truncated settings, topology indicators
-require controlled windowing and bandwidth qualification before cross-section
-comparison.
+A constructive proof follows from counter-rotating channel superposition:
+equal-magnitude channels with opposite directional angular-flux contribution can
+preserve local phase winding and polarization handedness while canceling in the
+sphere integral of \(\boldsymbol{\Psi}_J\). Thus local topology is necessary for
+many structured states but not sufficient for net torque-capable export.
 
-With amplitude-phase-polarization-topology coupling now fixed, the next
-subsection states the necessary conditions under which this structured field
-organization results in genuine angular-momentum transport.
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.93\linewidth}{
+\textbf{Amplitude-phase-polarization-topology coupling map.}
+Local fields \((A_\theta,A_\phi,\Delta\varphi)\) set the coherency matrix and
+Stokes channels, which determine polarization ellipse parameters
+\((\psi,\chi)\). These feed local flow geometry through
+\(\mathbf{P}=\Re\{\mathbf{S}\}\) and \(\boldsymbol{\Omega}_P=\curl\mathbf{P}\).
+Directional angular transport is validated only after combining this local map
+with outward flux criteria from Subsection~\ref{sec:ch01.2.1}.}}
+\caption{Schematic dependency chain from local amplitude-phase structure to transport-relevant topology diagnostics in Subsection~\ref{sec:ch01.2.2}.}
+\label{fig:ch1.phase-polarization-topology-map}
+\end{figure}
+
+Figure~\ref{fig:ch1.phase-polarization-topology-map} clarifies dependency order:
+phase and polarization descriptors organize local geometry first; transport status
+is assigned only after flux validation. This prevents a recurrent interpretive
+shortcut in advanced structured-field literature where rich local texture is
+promoted directly to transport claims.
+
+Two states may therefore share similar intensity map \(S_0\) yet differ in
+\(\Delta\varphi\), \(S_3\), and \(\boldsymbol{\Omega}_P\), producing distinct
+coupling to rotational observables. Conversely, states with comparable
+topological markers may deliver different net torque if directional-flux
+cancellation differs. Amplitude, polarization, and flow topology must be treated
+as a coupled diagnostic triplet, then tested against exported-flux constraints.
+
+Validity limits are explicit. The decomposition above assumes local smoothness
+sufficient for component extraction, differentiability for
+\(\curl\mathbf{P}\), and measurement bandwidth wide enough to resolve
+coherency-phase coupling. In strongly lossy, highly inhomogeneous, or truncated
+aperture settings, estimated topology indicators require windowing and
+regularization before cross-section comparison is physically meaningful
+\cite{jackson1999,balanis2016,collin2001}.
 
 
 \subsection{Conditions for angular-momentum transport}
@@ -937,14 +1211,14 @@ question is therefore not whether angular patterns are visible, but whether
 those patterns survive flux accounting and can be exported through admissible
 propagation channels.
 
-Let \(\mathbf{\Psi}_J(\theta,\phi;r)\) be the directional angular-momentum flux
+Let \(\boldsymbol{\Psi}_J(\theta,\phi;r)\) be the directional angular-momentum flux
 map from Eq.~\eqref{eq:ch1.directional-am-flux}, and let
 \(\Pi(\theta,\phi;r)\) be directional power flux from
 Eq.~\eqref{eq:ch1.directional-power-density}. A necessary directional condition
 for nontrivial net transport over a chosen observation sphere is
 \begin{equation}
 \label{eq:ch1.am-net-transport-condition}
-\int_{4\pi}\mathbf{\Psi}_J(\theta,\phi;r)\,d\Omega \neq \mathbf{0}.
+\int_{4\pi}\boldsymbol{\Psi}_J(\theta,\phi;r)\,d\Omega \neq \mathbf{0}.
 \end{equation}
 Equation~\eqref{eq:ch1.am-net-transport-condition} states that local angular
 structure must accumulate into a nonzero exported balance; otherwise the pattern
@@ -982,15 +1256,97 @@ claims are tied to sectors carrying net outward power; in sectors where this
 condition fails, strong local field complexity may persist without transport
 credibility.
 
-Three criteria therefore define the transport-ready regime in this subsection:
-nonzero directional angular export
-\eqref{eq:ch1.am-net-transport-condition}, conservation-consistent control
-balance \eqref{eq:ch1.am-control-balance}, and outward propagative support
-\eqref{eq:ch1.propagative-support}. Field states violating any one criterion
-remain representation-rich but transport-incomplete. This triad prevents a
-common error in advanced OAM discourse, where topological or modal appearance is
-mistaken for torque-capable transport without flux validation
-\cite{collin2001,balanis2016}.
+The three relations above define a transport triad:
+\[
+\mathcal{C}_1:\ \text{directional angular export }
+(\eqref{eq:ch1.am-net-transport-condition}),\qquad
+\mathcal{C}_2:\ \text{control-balance consistency }
+(\eqref{eq:ch1.am-control-balance}),\qquad
+\mathcal{C}_3:\ \text{propagative support }
+(\eqref{eq:ch1.propagative-support}).
+\]
+To convert this triad into a quantitative admissibility test, introduce the
+dimensionless transport index
+\begin{equation}
+\label{eq:ch1.transport-admissibility-index}
+\Lambda_J(r)=
+\frac{\left\|\int_{4\pi}\boldsymbol{\Psi}_J(\theta,\phi;r)\,d\Omega\right\|}
+{\int_{4\pi}\Pi(\theta,\phi;r)\,d\Omega+\epsilon_\Lambda},
+\qquad \epsilon_\Lambda>0,
+\end{equation}
+where \(\|\cdot\|\) is Euclidean norm and \(\epsilon_\Lambda\) regularizes weak
+radiation windows. The numerator is net exported angular transport; the
+denominator is total exported power. Large \(\Lambda_J\) indicates high rotational
+transfer efficiency per unit outward power.
+
+Directional cancellation can be measured independently through
+\begin{equation}
+\label{eq:ch1.directional-cancellation-factor}
+\mathcal{K}_J(r)=
+\frac{
+\left\|\int_{4\pi}\boldsymbol{\Psi}_J\,d\Omega\right\|
+}{
+\int_{4\pi}\left\|\boldsymbol{\Psi}_J\right\|\,d\Omega+\epsilon_K},
+\qquad 0\le \mathcal{K}_J\le 1,\ \epsilon_K>0.
+\end{equation}
+Here \(\mathcal{K}_J\approx 1\) means directional channels add coherently toward
+net export, while \(\mathcal{K}_J\approx 0\) means local angular flux is largely
+self-canceling over solid angle. This factor prevents a common interpretive
+failure where large local \(\|\boldsymbol{\Psi}_J\|\) is mistaken for strong net
+transport despite angular cancellation.
+
+Because Eq.~\eqref{eq:ch1.am-control-balance} couples storage, flux, and mechanical
+torque, the same criterion can be written in torque-normalized form:
+\begin{equation}
+\label{eq:ch1.torque-consistency-residual}
+\mathcal{R}_\tau(V)=
+\left\|
+\frac{d}{dt}\int_V \mathbf{j}_{\mathrm{em}}\,dV
++\int_{\partial V}\mathbf{M}\cdot\hat{\mathbf{n}}\,dS
++\int_V \boldsymbol{\tau}_{\mathrm{mech}}\,dV
+\right\|,
+\end{equation}
+with \(\mathcal{R}_\tau(V)=0\) for exact conservation closure on admissible data.
+Finite \(\mathcal{R}_\tau\) in experiments quantifies mismatch from measurement
+noise, truncation, or model incompleteness.
+
+\begin{proposition}[Triad sufficiency for transport interpretation]
+\label{prop:ch1.transport-triad-sufficiency}
+Assume a harmonic field state in the admissible class of Section~\ref{sec:ch01.1},
+and suppose \(\mathcal{C}_1,\mathcal{C}_2,\mathcal{C}_3\) hold on an observation
+sphere of radius \(r\). Then angular structure descriptors in that state admit a
+transport interpretation: exported angular-momentum flux is nontrivial, consistent
+with control-volume conservation, and supported by outward energy propagation.
+\end{proposition}
+
+Proof sketch: \(\mathcal{C}_1\) excludes pure directional self-cancellation of
+angular flux; \(\mathcal{C}_3\) excludes attribution of transport to channels with
+no outward energetic support; \(\mathcal{C}_2\) enforces that exported flux closes
+against storage and torque exchange rather than remaining a representation artifact.
+Jointly, these clauses eliminate the three principal non-transport scenarios:
+topological appearance without export, export without energetic support, and export
+without conservation closure.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.93\linewidth}{
+\textbf{Transport triad decision map for angular structure.}
+Input channels are directional power flux \(\Pi\) and directional angular flux
+\(\boldsymbol{\Psi}_J\). Branch 1 tests nonzero net exported angular flux
+(\(\mathcal{C}_1\)). Branch 2 tests control-volume closure
+(\(\mathcal{C}_2\)). Branch 3 tests outward propagative support (\(\mathcal{C}_3\)).
+Only states passing all three branches are classified as transport-capable
+angular structures.}}
+\caption{Schematic of the three-condition admissibility pathway for angular-momentum transport in Subsection~\ref{sec:ch01.2.3}.}
+\label{fig:ch1.transport-triad-map}
+\end{figure}
+
+Figure~\ref{fig:ch1.transport-triad-map} emphasizes that transport qualification is
+a conjunction, not a menu. A failure in any branch demotes the state from
+transport-capable to representation-rich but transport-incomplete. This
+classification is operationally useful in both simulation and measurement, where
+complex phase and polarization fields may satisfy one or two branches but not all
+three.
 
 Origin declaration remains part of the condition set because angular moments are
 computed through \(\mathbf{r}\times(\cdot)\). Changing origin can redistribute
@@ -998,14 +1354,19 @@ directional partitions and alter modal bookkeeping; transport conclusions are
 therefore comparable only when origin and boundary geometry are fixed across the
 comparison set.
 
-In practice, these conditions define the admissible interpretation pathway for
-the rest of Chapter~\ref{ch:01}: first establish outward channel support, then
-verify conservation consistency, and only thereafter interpret directional phase
-and polarization structure as angular transport evidence.
+Practically, the decision sequence is: compute \(\boldsymbol{\Psi}_J\) and
+\(\Pi\), evaluate \(\Lambda_J\) and \(\mathcal{K}_J\), verify
+\(\mathcal{R}_\tau\) within admissible tolerance, then interpret structured
+phase/polarization signatures as transport evidence only if triad consistency is
+maintained. This ordering eliminates false positives in which vivid field texture
+is present but exported rotational action is weak or self-canceling.
 
-The remaining distinction between reactive storage and radiative export is now
-taken up explicitly in Subsection~\ref{sec:ch01.2.4}, where regime boundaries
-are formalized.
+Validity limits are explicit. The triad and derived indices above assume harmonic
+steady state, sufficiently resolved directional sampling on \(4\pi\), and
+constitutive closure in the linear local regime used in this chapter. Strongly
+time-varying boundaries, broadband pulse windows, and highly nonlocal response can
+require generalized transport operators before the same thresholds are interpreted
+without ambiguity \cite{collin2001,jackson1999,balanis2016}.
 
 
 \subsection{Reactive and radiative regimes}
@@ -1040,6 +1401,18 @@ where \(\Im\{\cdot\}\) extracts imaginary part associated with oscillatory
 electric-magnetic energy interchange over one period
 \cite{harrington2001,collin2001}.
 
+The local directional decomposition corresponding to
+Eqs.~\eqref{eq:ch1.rad-power-sphere}--\eqref{eq:ch1.reactive-flux-sphere} is
+\begin{equation}
+\label{eq:ch1.local-regime-decomposition}
+\Pi_{\mathrm{a}}(\theta,\phi;r)=r^2\Re\!\{\mathbf{S}\cdot\hat{\mathbf{r}}\},\qquad
+\Pi_{\mathrm{re}}(\theta,\phi;r)=r^2\Im\!\{\mathbf{S}\cdot\hat{\mathbf{r}}\},
+\end{equation}
+so that \(P_{\mathrm{rad}}=\int_{4\pi}\Pi_{\mathrm{a}}\,d\Omega\) and
+\(Q_{\mathrm{re}}=\int_{4\pi}\Pi_{\mathrm{re}}\,d\Omega\). This split is
+important because strong local \(\Pi_{\mathrm{re}}\) can coexist with moderate
+\(\Pi_{\mathrm{a}}\), producing rich phase topology without robust export.
+
 The regime classification used in this chapter follows from how
 \(P_{\mathrm{rad}}(r)\) and \(Q_{\mathrm{re}}(r)\) scale with observation
 radius. A transport-supporting radiative regime is identified when
@@ -1067,6 +1440,28 @@ behavior. Equation~\eqref{eq:ch1.regime-index} does not replace the asymptotic
 criterion in Eq.~\eqref{eq:ch1.radiative-regime-condition}; it operationalizes
 the same separation when measurements are restricted to finite apertures.
 
+Directional regime discrimination can be written channel-wise through
+\begin{equation}
+\label{eq:ch1.directional-regime-index}
+\chi_\Omega(r;\Delta\Omega)=
+\frac{\int_{\Delta\Omega}|\Pi_{\mathrm{re}}(\theta,\phi;r)|\,d\Omega}
+{\int_{\Delta\Omega}\Pi_{\mathrm{a}}(\theta,\phi;r)\,d\Omega+\epsilon_\Omega},
+\qquad \epsilon_\Omega>0,
+\end{equation}
+where \(\Delta\Omega\subseteq 4\pi\) is a selected directional sector. The global
+index \(\chi(r)\) can be small while some sectors remain reactive-dominant; this
+sectorized form identifies where torque-capable export is directionally credible.
+
+Reactive-to-radiative crossover radius can be estimated by
+\begin{equation}
+\label{eq:ch1.crossover-radius}
+r_c=\inf\left\{r>0:\chi(r)\le \chi_{\mathrm{th}}\right\},
+\end{equation}
+with threshold \(\chi_{\mathrm{th}}\ll 1\) chosen from measurement tolerance.
+For \(r<r_c\), reactive exchange still contaminates transport interpretation; for
+\(r\ge r_c\), exported power dominates sufficiently to treat angular channels as
+propagative in first approximation.
+
 This separation immediately refines Subsection~\ref{sec:ch01.2.3}. The
 directional transport condition of Eq.~\eqref{eq:ch1.am-net-transport-condition}
 and the control-balance requirement of Eq.~\eqref{eq:ch1.am-control-balance}
@@ -1077,6 +1472,43 @@ exportable angular momentum. The mathematical partition therefore resolves a
 common ambiguity in advanced field interpretation, namely conflating visible
 helical/azimuthal structure with radiative delivery in all regimes
 \cite{jackson1999,balanis2016}.
+
+\begin{proposition}[Regime-qualified transport interpretation]
+\label{prop:ch1.regime-qualified-transport}
+Consider an admissible field state satisfying the triad conditions of
+Subsection~\ref{sec:ch01.2.3}. If \(\chi(r)\ll 1\) and
+\(\chi_\Omega(r;\Delta\Omega)\ll 1\) on the interaction-relevant sector
+\(\Delta\Omega\), then directional angular-flux channels on that sector admit
+export interpretation. If \(\chi(r)\gg 1\) or
+\(\chi_\Omega(r;\Delta\Omega)\gg 1\), the same channels should be interpreted
+primarily as reactive storage geometry.
+\end{proposition}
+
+Proof sketch: triad conditions guarantee flux and conservation admissibility, while
+small \(\chi\)-indices suppress reactive dominance in the same channels.
+Large \(\chi\)-indices imply oscillatory energy exchange dominates active export,
+so directional angular patterns cannot be promoted to robust radiative transport
+without additional range separation.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.93\linewidth}{
+\textbf{Reactive-radiative regime map on spherical shells.}
+For increasing radius \(r\), shell-wise active transport
+\(\Pi_{\mathrm{a}}\) and reactive transport \(\Pi_{\mathrm{re}}\) are integrated to
+form \(P_{\mathrm{rad}}(r)\), \(Q_{\mathrm{re}}(r)\), and \(\chi(r)\). Sector-wise
+indices \(\chi_\Omega(r;\Delta\Omega)\) classify directional channels. The
+crossover \(r_c\) marks transition from storage-dominated interpretation to
+export-dominated interpretation.}}
+\caption{Schematic pathway for reactive-radiative classification and its impact on angular-transport interpretation in Subsection~\ref{sec:ch01.2.4}.}
+\label{fig:ch1.reactive-radiative-map}
+\end{figure}
+
+Figure~\ref{fig:ch1.reactive-radiative-map} summarizes the regime logic: the same
+phase and polarization pattern can move from storage-diagnostic status to
+transport-diagnostic status as \(r\) crosses into export-dominated shells. This is
+the mechanism behind many apparent contradictions in structured-field experiments
+performed at different stand-off distances.
 
 The validity boundary of this subsection is explicit. The scalar index
 \(\chi(r)\) and the limits in Eq.~\eqref{eq:ch1.radiative-regime-condition}
@@ -1092,60 +1524,72 @@ treat rotational covariance without conflating coordinate effects with near-fiel
 storage effects.
 
 \paragraph{Section 1.2 synthesis and bridge.}
-Section~\ref{sec:ch01.2} identifies the conditions under which angular features
-correspond to transport-capable electromagnetic content. This clarification
-prepares the covariance analysis in Section~\ref{sec:ch01.3}, where rotational
-actions and tensor structure are treated explicitly.
+Section~\ref{sec:ch01.2} has established a complete interpretation chain from
+direction-resolved power and angular-flux channels to phase-polarization topology
+and reactive-radiative regime qualification. Angular signatures are therefore
+admitted as transport evidence only after flux export, conservation closure, and
+regime consistency are satisfied. With this transport-qualified foundation fixed,
+Section~\ref{sec:ch01.3} can formulate rotational covariance statements without
+mixing coordinate transformation effects with storage-dominated field structure.
 
 
 \section{Rotations, Tensors, and Covariance}
 \label{sec:ch01.3}
 
-Section~\ref{sec:ch01.3} places angular discourse in the language of coordinate
-transformations and invariant statements. The objective is to ensure that claims
-about angular behavior remain physically interpretable under frame changes,
-origin shifts, and tensorial reformulation, thereby preventing coordinate
-artifacts from entering theorem-level conclusions.
+Section~\ref{sec:ch01.3} formulates angular-field statements under explicit
+rotation and translation actions, tensor transformation rules, and invariant
+observable criteria. The section-level objective is to separate physical transfer
+content from coordinate-dependent representation, so that subsequent gauge
+analysis inherits only frame-consistent quantities and not chart artifacts.
 
 
 \subsection{Active and passive rotations}
 \label{sec:ch01.3.1}
 % TOC tag: [HOME]
 
-Rotational analysis in this chapter pivots on a distinction that is simple to
-state yet easy to violate in advanced calculations: rotating the field itself is
-not the same operation as rotating only the coordinate chart used to describe
-that field. The difference is the first safeguard against attributing
-representation changes to physics.
+Rotational statements in electromagnetics become reliable only after one separates
+two operations that are often conflated: rotating the physical field pattern
+itself, and rotating only the coordinate chart used to represent that pattern.
+The first operation changes geometric placement of field features in space; the
+second operation relabels components without changing geometry. Any claim that
+ignores this distinction risks assigning physical meaning to a representation
+artifact \cite{jackson1999,harrington2001}.
 
-Let \(R\in\mathrm{SO}(3)\) be a proper rotation, with \(R^\top R=I\),
-\(\det R=1\), and \(I\) the \(3\times3\) identity matrix. For the phasor electric
-field \(\E(\mathbf{r})\) at position \(\mathbf{r}\in\mathbb{R}^3\), active action
-is
+Let \(R\in\mathrm{SO}(3)\) be a proper rotation with \(R^\top R=I\),
+\(\det R=1\), and \(I\) the \(3\times3\) identity. For phasor field
+\(\E(\mathbf{r})\), active action is
 \begin{equation}
 \label{eq:ch1.active-rotation-action}
 \big(\mathcal{A}_R\E\big)(\mathbf{r})=R\,\E\!\left(R^{-1}\mathbf{r}\right),
 \end{equation}
-where \(\mathcal{A}_R\) is the active-rotation operator. The argument
-\(R^{-1}\mathbf{r}\) performs geometric pullback to the pre-rotation point, while
-left multiplication by \(R\) rotates the vector components themselves. Equation
-\eqref{eq:ch1.active-rotation-action} therefore captures rigid pattern
-reorientation in physical space \cite{jackson1999,harrington2001}.
+where \(\mathcal{A}_R\) is active-rotation operator. The pullback
+\(R^{-1}\mathbf{r}\) selects the pre-rotation sampling point and left
+multiplication by \(R\) rotates vector components. At term level, these two
+ingredients encode orbit relocation and component reorientation simultaneously.
 
-The passive counterpart keeps the physical configuration fixed and changes only
-the coordinate description:
+Passive action keeps the physical field fixed and rotates the representation frame:
 \begin{equation}
 \label{eq:ch1.passive-rotation-action}
 \big(\mathcal{P}_R\E\big)(\mathbf{r})=R^{-1}\,\E\!\left(R\mathbf{r}\right),
 \end{equation}
-with \(\mathcal{P}_R\) the passive-rotation operator. Active and passive
-descriptions are connected exactly by
+with \(\mathcal{P}_R\) the passive-rotation operator. Active and passive channels
+are linked by
 \begin{equation}
 \label{eq:ch1.active-passive-duality}
 \mathcal{A}_R=\mathcal{P}_{R^{-1}}.
 \end{equation}
-The algebra in Eq.~\eqref{eq:ch1.active-passive-duality} asserts that either
-description is valid if inverse group elements are paired correctly.
+Equation~\eqref{eq:ch1.active-passive-duality} is the algebraic closure condition:
+either representation route is valid provided inverse group elements are paired
+correctly.
+
+The rotational group structure is explicit under composition:
+\begin{equation}
+\label{eq:ch1.rotation-group-action}
+\mathcal{A}_{R_1}\mathcal{A}_{R_2}=\mathcal{A}_{R_1R_2},\qquad
+\mathcal{P}_{R_1}\mathcal{P}_{R_2}=\mathcal{P}_{R_1R_2},
+\end{equation}
+for \(R_1,R_2\in\mathrm{SO}(3)\). This relation ensures that multi-step rotation
+operations on fields remain consistent with the underlying Lie-group product.
 
 \begin{figure}[t]
 \centering
@@ -1163,31 +1607,41 @@ Consistency statement: B and C encode the same geometry through inverse group ac
 \label{fig:ch1.active-passive-rotation}
 \end{figure}
 
-Figure~\ref{fig:ch1.active-passive-rotation} gives the interpretation layer for
-the three equations above. The A\(\rightarrow\)B arrow corresponds to genuine
-physical reorientation; the A\(\rightarrow\)C arrow corresponds to relabeling of
-components at fixed geometry. The duality relation states that these two routes
-must agree when the inverse action is used in the passive channel.
+Figure~\ref{fig:ch1.active-passive-rotation} summarizes the geometry-to-components
+logic. Route A\(\rightarrow\)B is physical reorientation; route A\(\rightarrow\)C
+is coordinate relabeling. The two routes are equivalent only when inverse group
+actions are paired as in Eq.~\eqref{eq:ch1.active-passive-duality}.
 
-Observable balance provides the physical verification. With \(\mathbf{S}\) the
-complex Poynting vector from Eq.~\eqref{eq:ch1.poynting-complex},
-\(\hat{\mathbf{n}}\) the unit outward normal on sphere \(S_r\) of radius \(r\),
-and \(dS\) the surface element, emitted active power remains invariant:
+Physical observables provide the non-negotiable check. With \(\mathbf{S}\) the
+complex Poynting vector, \(\hat{\mathbf{n}}\) outward unit normal on sphere
+\(S_r\), and \(dS\) surface element, active transported power is invariant:
 \begin{equation}
 \label{eq:ch1.rotation-power-invariance}
 \int_{S_r}\Re\!\left\{\mathbf{S}_R\cdot\hat{\mathbf{n}}\right\}\,dS
 =
 \int_{S_r}\Re\!\left\{\mathbf{S}\cdot\hat{\mathbf{n}}\right\}\,dS.
 \end{equation}
-Here \(\mathbf{S}_R\) is the transformed complex Poynting field and
-\(\Re\{\cdot\}\) extracts active transport contribution. Equation
-\eqref{eq:ch1.rotation-power-invariance} prevents a common interpretive error:
-directional redistribution under rotation is admissible, but net radiative export
-cannot be changed by rigid frame action, in agreement with
-Eq.~\eqref{eq:ch1.radiative-regime-condition} \cite{collin2001,balanis2016}.
+Here \(\mathbf{S}_R\) is transformed Poynting field and \(\Re\{\cdot\}\) extracts
+active transport. Equation~\eqref{eq:ch1.rotation-power-invariance} states that
+rigid rotation can redistribute directional channels but cannot change total
+radiative export.
 
-For generator-level structure, consider a small angle \(\delta\varphi\) about
-unit axis \(\hat{\mathbf{u}}\), \(\|\hat{\mathbf{u}}\|=1\):
+The same principle applies to angular-momentum flux. Let
+\(\boldsymbol{\Psi}_J\) be directional angular-flux map from
+Eq.~\eqref{eq:ch1.directional-am-flux}. The magnitude of net exported rotational
+flux remains invariant under rigid rotation:
+\begin{equation}
+\label{eq:ch1.rotation-am-invariance}
+\left\|\int_{4\pi}\boldsymbol{\Psi}_{J,R}(\theta,\phi;r)\,d\Omega\right\|
+=
+\left\|\int_{4\pi}\boldsymbol{\Psi}_{J}(\theta,\phi;r)\,d\Omega\right\|,
+\end{equation}
+where \(\boldsymbol{\Psi}_{J,R}\) is the rotated directional map. This equality
+supports a key interpretive rule: coordinate orientation may alter component form,
+yet transport-capable rotational content is preserved under rigid frame action.
+
+For generator-level analysis, consider small angle \(\delta\varphi\) about unit
+axis \(\hat{\mathbf{u}}\), \(\|\hat{\mathbf{u}}\|=1\):
 \begin{equation}
 \label{eq:ch1.infinitesimal-active-rotation}
 \big(\mathcal{A}_{\delta\varphi}\E\big)(\mathbf{r})
@@ -1197,19 +1651,42 @@ unit axis \(\hat{\mathbf{u}}\), \(\|\hat{\mathbf{u}}\|=1\):
 -\big(\hat{\mathbf{u}}\times\mathbf{r}\big)\cdot\nabla\E(\mathbf{r})\right]
 +O(\delta\varphi^2),
 \end{equation}
-where \(\nabla\E\) denotes componentwise spatial derivative and
-\(O(\delta\varphi^2)\) collects second-order terms. The first correction rotates
-local orientation at fixed point; the second shifts sampling location along the
-rotation orbit. Their coexistence explains why local polarization change alone is
-insufficient to represent rotational action on fields.
+with \(\nabla\E\) componentwise spatial derivative. The first correction term is
+spin-like local vector reorientation; the second is orbital-like spatial
+re-sampling along rotation orbits. Their coexistence explains why polarization
+change alone is insufficient to encode full rotational action on fields.
 
-The derivation above is valid for rigid Euclidean rotations in orthonormal frames.
-Non-rigid deformations, curvilinear manifolds with connection terms, and
-orientation-dependent constitutive manifolds require extensions deferred later.
+Define infinitesimal generator \(\mathcal{J}_{\hat{\mathbf{u}}}\) by
+\(\mathcal{A}_{\delta\varphi}=I+\delta\varphi\,\mathcal{J}_{\hat{\mathbf{u}}}
++O(\delta\varphi^2)\), then
+\begin{equation}
+\label{eq:ch1.rotation-generator-split}
+\mathcal{J}_{\hat{\mathbf{u}}}\E
+=
+\hat{\mathbf{u}}\times\E
+-\big(\hat{\mathbf{u}}\times\mathbf{r}\big)\cdot\nabla\E.
+\end{equation}
+Equation~\eqref{eq:ch1.rotation-generator-split} gives the exact local split used
+later when discussing decomposition ambiguities in gauge-sensitive contexts.
 
-With active-passive structure fixed at foundational level and interpreted through
-Fig.~\ref{fig:ch1.active-passive-rotation}, the next subsection formalizes the
-transformation rules for vectors, second-rank tensors, and dyadic maps.
+\begin{proposition}[Observable equivalence under active-passive duality]
+\label{prop:ch1.active-passive-observable-equivalence}
+For any rigid rotation \(R\in\mathrm{SO}(3)\), active and passive descriptions
+related by Eq.~\eqref{eq:ch1.active-passive-duality} yield identical values for
+frame-invariant scalar observables built from admissible flux integrals.
+\end{proposition}
+
+Proof sketch: Eq.~\eqref{eq:ch1.active-passive-duality} establishes equivalence of
+field representations under inverse group pairing. Scalar observables are formed by
+invariant contractions and measure-preserving integration over rotated manifolds;
+hence their numerical values are unchanged by the representation channel.
+
+Validity limits are explicit. The derivations above assume rigid Euclidean
+rotations, orthonormal frames, and constitutive classes where transport observables
+are well-defined under the Chapter~1 admissibility framework. Non-rigid
+deformations, curvilinear manifolds requiring connection terms, and orientation-
+dependent constitutive operators require extended covariance machinery developed
+later.
 
 
 \subsection{Transformation of vectors, tensors, and dyads}
@@ -1246,6 +1723,28 @@ input index \(q\to j\). In physical terms, this law guarantees that the Maxwell
 stress tensor from Eq.~\eqref{eq:ch1.maxwell-stress} rotates as a geometric flux
 object rather than as a fixed numerical table \cite{jackson1999,collin2001}.
 
+Tensor invariants remain unchanged under Eq.~\eqref{eq:ch1.tensor-rotation-rule}.
+For trace and Frobenius norm one has
+\begin{equation}
+\label{eq:ch1.tensor-invariant-trace}
+\operatorname{tr}(\mathbf{T}')=\operatorname{tr}(\mathbf{T}),\qquad
+\|\mathbf{T}'\|_F=\|\mathbf{T}\|_F,
+\end{equation}
+because \(\operatorname{tr}(R\mathbf{T}R^\top)=\operatorname{tr}(\mathbf{T})\) and
+orthogonality of \(R\) preserves inner products. This invariant layer is the
+mathematical reason why scalar observables extracted from stress tensors do not
+depend on orientation of the orthonormal frame.
+
+Eigenstructure transforms covariantly as well. If
+\(\mathbf{T}\mathbf{q}_k=\lambda_k\mathbf{q}_k\), then
+\begin{equation}
+\label{eq:ch1.stress-eigen-covariance}
+\mathbf{T}'(R\mathbf{q}_k)=\lambda_k(R\mathbf{q}_k),
+\end{equation}
+so eigenvalues \(\lambda_k\) are rotation-invariant and eigenvectors rotate with
+the frame. Physically, principal stress magnitudes are objective, while principal
+directions are frame-relative orientations of the same geometric axes.
+
 Dyadic maps obey the same conjugation pattern. If \(\mathbf{D}\) maps
 \(\mathbf{u}\) to \(\mathbf{w}\) through \(\mathbf{w}=\mathbf{D}\cdot\mathbf{u}\),
 then
@@ -1259,19 +1758,38 @@ with \(\mathbf{u}'=R\mathbf{u}\). The first relation transforms the operator, an
 the second confirms equivariance of the input-output chain under the same group
 action.
 
+For rank-one dyads \(\mathbf{D}=\mathbf{a}\mathbf{b}^\top\), covariance becomes
+\begin{equation}
+\label{eq:ch1.rank1-dyad-rotation}
+\mathbf{D}'=R\mathbf{a}\,(R\mathbf{b})^\top,
+\end{equation}
+which shows directly that both generating directions rotate. This explicit form is
+useful in modal projection and polarization-coupling maps where dyads are built
+from directional basis vectors.
+
+Composition compatibility follows from group action:
+\[
+\mathbf{D}'' = R_2(R_1\mathbf{D}R_1^\top)R_2^\top
+=(R_2R_1)\mathbf{D}(R_2R_1)^\top,
+\]
+so sequential frame rotations produce the same transformed dyad as one rotation
+with product \(R_2R_1\). This relation prevents order-mismatch errors in
+multi-stage coordinate pipelines.
+
 \begin{figure}[t]
 \centering
 \fbox{\begin{minipage}{0.92\linewidth}
 \centering
-\textbf{Covariance chain for vector/tensor/dyadic transformation}\\[2mm]
-Level V (vector): \(\mathbf{v}\xrightarrow{R}\mathbf{v}'\).\\
-Level T (tensor): \(\mathbf{T}\xrightarrow{R(\cdot)R^\top}\mathbf{T}'\).\\
-Level D (dyadic map): \(\mathbf{u}\xrightarrow{\mathbf{D}}\mathbf{w}\), then
-\(\mathbf{u}'=R\mathbf{u}\xrightarrow{\mathbf{D}'}\mathbf{w}'=R\mathbf{w}\).\\[1mm]
-Traction branch: \(\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}\),
-\(\hat{\mathbf{n}}'=R\hat{\mathbf{n}}\), \(\mathbf{t}'=\mathbf{T}'\cdot\hat{\mathbf{n}}'\).
+\textbf{Covariance ladder for vectors, tensors, and dyadic maps}\\[2mm]
+Vector layer: \(\mathbf{v}\mapsto R\mathbf{v}\).\\
+Tensor layer: \(\mathbf{T}\mapsto R\mathbf{T}R^\top\), invariants
+\(\operatorname{tr}(\mathbf{T}),\|\mathbf{T}\|_F\) preserved.\\
+Dyadic layer: \(\mathbf{u}\mapsto R\mathbf{u}\), \(\mathbf{D}\mapsto R\mathbf{D}R^\top\),
+\(\mathbf{w}=\mathbf{D}\mathbf{u}\mapsto \mathbf{w}'=R\mathbf{w}\).\\[1mm]
+Traction branch: \(\mathbf{t}=\mathbf{T}\hat{\mathbf{n}}\),
+\(\hat{\mathbf{n}}'=R\hat{\mathbf{n}}\), \(\mathbf{t}'=\mathbf{T}'\hat{\mathbf{n}}'\).
 \end{minipage}}
-\caption{Schematic ladder linking Eqs.~\eqref{eq:ch1.vector-rotation-components}, \eqref{eq:ch1.tensor-rotation-rule}, and \eqref{eq:ch1.dyadic-covariance}. The traction branch indicates how tensor covariance feeds measurable surface force direction.}
+\caption{Schematic ladder linking Eqs.~\eqref{eq:ch1.vector-rotation-components}, \eqref{eq:ch1.tensor-rotation-rule}, and \eqref{eq:ch1.dyadic-covariance}; invariant and traction branches show what is preserved versus reoriented under rigid rotation.}
 \label{fig:ch1.tensor-dyadic-covariance}
 \end{figure}
 
@@ -1294,105 +1812,151 @@ Therefore the conservation results from Section~\ref{sec:ch01.1} and angular
 transport diagnostics from Section~\ref{sec:ch01.2} remain objective under rigid
 coordinate action \cite{harrington2001,balanis2016}.
 
+To formalize this objectivity, define covariance residual for any operator
+\(\mathcal{F}\) acting on field objects:
+\begin{equation}
+\label{eq:ch1.covariance-residual}
+\mathcal{R}_{\mathcal{F}}(R;X)=
+\left\|\mathcal{F}(R\cdot X)-R\cdot\mathcal{F}(X)\right\|,
+\end{equation}
+with \(X\) admissible input and \(\|\cdot\|\) a compatible norm. Exact covariance
+means \(\mathcal{R}_{\mathcal{F}}=0\). This residual is practically useful for
+numerical implementations, where discretization or interpolation can introduce
+spurious frame dependence.
+
+\begin{proposition}[Covariant map criterion]
+\label{prop:ch1.covariant-map-criterion}
+If a dyadic or tensor map satisfies conjugation law
+\(X\mapsto RXR^\top\) and acts linearly on vector slots transformed by
+\(v\mapsto Rv\), then all derived vector outputs satisfy
+\(y\mapsto Ry\), and scalar contractions built from invariant inner products are
+frame-independent.
+\end{proposition}
+
+Proof sketch: linearity plus conjugation yields equivariance of each slot by direct
+substitution. Scalar contractions then cancel paired \(R,R^\top\) factors through
+orthogonality, leaving values unchanged.
+
 The derivation is restricted to orthonormal Euclidean frames and proper rotations.
 Improper transformations, curvilinear coordinates with connection coefficients,
 and material manifolds with intrinsic anisotropic geometry are beyond the present
 scope.
-
-With vector, tensor, and dyadic covariance fixed and visually consolidated in
-Fig.~\ref{fig:ch1.tensor-dyadic-covariance}, the next subsection isolates origin
-dependence from genuine translational covariance in angular measures.
 
 
 \subsection{Origin dependence and translational covariance}
 \label{sec:ch01.3.3}
 % TOC tag: [HOME]
 
-Origin choice enters angular diagnostics through the explicit position factor in
-moment definitions. If that dependence is not separated from genuine transport,
-coordinate bookkeeping can be mistaken for physics. The objective of this
-subsection is to derive the exact origin-shift law and then extract a translation
-covariant observable core.
+Angular momentum contains an explicit moment arm, so translation of the origin can
+change its reported value even when the physical field configuration is unchanged.
+The key task is to separate this extrinsic shift from the transport-carrying
+content that should remain comparable across coordinate choices.
 
-Let \(O\) be a reference origin and let \(O'\) be shifted by vector
-\(\mathbf{a}\in\mathbb{R}^3\), so that \(\mathbf{r}'=\mathbf{r}-\mathbf{a}\),
-where \(\mathbf{r}\) and \(\mathbf{r}'\) are position vectors relative to \(O\)
-and \(O'\), respectively. Let \(\mathbf{p}_{\mathrm{em}}(\mathbf{r})\) be
-electromagnetic linear-momentum density. Consistent with
-Eq.~\eqref{eq:ch1.poynting-average}, one may use
-\(\mathbf{p}_{\mathrm{em}}=\mathbf{P}/c^2\), with \(\mathbf{P}\) the active
-Poynting vector and \(c\) light speed in the medium approximation used here.
-Define total angular momentum in volume \(V\) by
+Let \(O\) be a reference origin and \(O'=O+\mathbf{a}\) a translated origin with
+\(\mathbf{a}\in\mathbb{R}^3\). Then \(\mathbf{r}'=\mathbf{r}-\mathbf{a}\), where
+\(\mathbf{r}\) and \(\mathbf{r}'\) are position vectors measured from \(O\) and
+\(O'\), respectively. Let \(\mathbf{p}_{\mathrm{em}}(\mathbf{r})\) denote
+electromagnetic linear-momentum density. In the present phasor framework one may
+use \(\mathbf{p}_{\mathrm{em}}=\mathbf{P}/c^2\), with \(\mathbf{P}\) from
+Eq.~\eqref{eq:ch1.poynting-average} and \(c\) the effective propagation speed.
+Define
 \begin{equation}
 \label{eq:ch1.origin-angular-definition}
 \mathbf{J}_O=\int_V \mathbf{r}\times\mathbf{p}_{\mathrm{em}}\,dV,
 \qquad
 \mathbf{J}_{O'}=\int_V \mathbf{r}'\times\mathbf{p}_{\mathrm{em}}\,dV.
 \end{equation}
-The cross product \(\mathbf{r}\times\mathbf{p}_{\mathrm{em}}\) gives local moment
-arm times momentum density; integration accumulates total angular content in the
-chosen control region.
+The cross product \(\mathbf{r}\times\mathbf{p}_{\mathrm{em}}\) is local moment arm
+times momentum density; volume integration accumulates total angular content.
 
-Substituting \(\mathbf{r}'=\mathbf{r}-\mathbf{a}\) into
-Eq.~\eqref{eq:ch1.origin-angular-definition} yields
+Substitution of \(\mathbf{r}'=\mathbf{r}-\mathbf{a}\) into
+Eq.~\eqref{eq:ch1.origin-angular-definition} gives
 \begin{equation}
 \label{eq:ch1.origin-shift-law}
 \mathbf{J}_{O'}=\mathbf{J}_O-\mathbf{a}\times\mathbf{P}_{\mathrm{tot}},
 \qquad
 \mathbf{P}_{\mathrm{tot}}=\int_V \mathbf{p}_{\mathrm{em}}\,dV.
 \end{equation}
-Equation~\eqref{eq:ch1.origin-shift-law} is the central result: origin shift
-adds an extrinsic term determined by total linear momentum
-\(\mathbf{P}_{\mathrm{tot}}\). Mathematically, this is affine covariance of
-angular moments; physically, it means identical fields may report different
-\(\mathbf{J}\) values when origins differ, even though transport content is
-unchanged.
+Equation~\eqref{eq:ch1.origin-shift-law} is affine covariance: translation adds an
+extrinsic term controlled by total linear momentum. Thus two observers using
+different origins can report different \(\mathbf{J}\) for the same field state
+without any change in physical transport dynamics.
+
+The same shift law appears at flux level. If \(\mathbf{M}_O\) is angular-momentum
+flux tensor about origin \(O\), then for translated origin \(O'\),
+\begin{equation}
+\label{eq:ch1.origin-shift-flux-law}
+\mathbf{M}_{O'}=\mathbf{M}_O-\mathbf{a}\times\mathbf{T},
+\end{equation}
+where \(\mathbf{T}\) is Maxwell stress tensor from
+Eq.~\eqref{eq:ch1.maxwell-stress}. This relation shows that origin dependence is
+present not only in integrated moments but already in local flux representation.
 
 \begin{figure}[t]
 \centering
 \fbox{\begin{minipage}{0.92\linewidth}
 \centering
 \textbf{Origin-shift decomposition of angular momentum}\\[2mm]
-Frame A: origin \(O\), moment \(\mathbf{J}_O\).\\
-Frame B: origin \(O'=O+\mathbf{a}\), moment \(\mathbf{J}_{O'}\).\\
-Link term: \(-\mathbf{a}\times\mathbf{P}_{\mathrm{tot}}\) from
-Eq.~\eqref{eq:ch1.origin-shift-law}.\\
-Invariant core: intrinsic part after removal of extrinsic translation term.
+Frame A: origin \(O\), moment \(\mathbf{J}_O\), flux tensor \(\mathbf{M}_O\).\\
+Frame B: origin \(O'=O+\mathbf{a}\), moment \(\mathbf{J}_{O'}\), flux tensor
+\(\mathbf{M}_{O'}\).\\
+Link terms: \(-\mathbf{a}\times\mathbf{P}_{\mathrm{tot}}\) and
+\(-\mathbf{a}\times\mathbf{T}\).\\
+Intrinsic core: transport content after extrinsic translation terms are removed.
 \end{minipage}}
-\caption{Conceptual map of origin dependence: total angular momentum changes by an extrinsic translation term while intrinsic content remains covariant.}
+\caption{Conceptual map of translational affine shifts: total and local angular representations change by extrinsic translation terms while intrinsic transport content remains comparable.}
 \label{fig:ch1.origin-shift-map}
 \end{figure}
 
-Figure~\ref{fig:ch1.origin-shift-map} clarifies the interpretation of
-Eq.~\eqref{eq:ch1.origin-shift-law}: moving the origin does not alter field
-dynamics; it alters the lever arm. Consequently, comparison across experiments or
-simulations is meaningful only when the same origin protocol is enforced or when
-extrinsic translation contribution is removed.
+Figure~\ref{fig:ch1.origin-shift-map} makes the interpretation explicit: origin
+translation changes lever-arm bookkeeping, not the underlying field transport. Any
+cross-experiment comparison therefore requires either a shared origin protocol or
+explicit removal of the translation term.
 
-A translation-covariant intrinsic observable is obtained by referencing a declared
-centroid \(\mathbf{r}_c\) of the measurement protocol:
+A translation-covariant intrinsic observable is obtained by subtracting a declared
+reference point \(\mathbf{r}_c\):
 \begin{equation}
 \label{eq:ch1.intrinsic-angular-observable}
 \mathbf{J}_{\mathrm{int}}
 =
 \mathbf{J}_O-\mathbf{r}_c\times\mathbf{P}_{\mathrm{tot}}.
 \end{equation}
-If both origin and centroid are shifted by \(\mathbf{a}\), then
-\(\mathbf{J}_{\mathrm{int}}\) remains unchanged by direct substitution of
-Eq.~\eqref{eq:ch1.origin-shift-law}. Operationally,
-Eq.~\eqref{eq:ch1.intrinsic-angular-observable} gives a report format compatible
-with channel definitions in later sections and consistent with the objectivity
-tests developed in Section~\ref{sec:ch01.3}.
+If origin and reference are translated together by \(\mathbf{a}\), then
+\(\mathbf{J}_{\mathrm{int}}\) is unchanged by Eq.~\eqref{eq:ch1.origin-shift-law}.
+This definition provides a reporting channel compatible with directional transport
+criteria from Section~\ref{sec:ch01.2}.
 
-The derivation assumes finite momentum integral, regular control boundaries, and
-rigid Euclidean translations. Open systems with unresolved momentum flux at
-infinity, or media with nonlocal constitutive coupling, require extended flux
-closure before Eq.~\eqref{eq:ch1.origin-shift-law} can be applied without
-qualification.
+Define translation residual for measurement consistency:
+\begin{equation}
+\label{eq:ch1.translation-consistency-residual}
+\mathcal{R}_{\mathrm{tr}}=
+\left\|
+\mathbf{J}_{O'}-\mathbf{J}_O+\mathbf{a}\times\mathbf{P}_{\mathrm{tot}}
+\right\|.
+\end{equation}
+Exact affine covariance implies \(\mathcal{R}_{\mathrm{tr}}=0\). In practice,
+nonzero residual quantifies truncation, sampling error, or incomplete momentum
+closure in finite-aperture measurements.
 
-With origin dependence isolated and intrinsic observable form fixed, the final
-subsection of Section~\ref{sec:ch01.3} can state frame-independent observability
-criteria without conflating translation artifacts with physical angular content.
+\begin{proposition}[Origin-comparable angular reporting criterion]
+\label{prop:ch1.origin-comparable-criterion}
+Two datasets referenced to origins \(O_1\) and \(O_2\) are directly comparable in
+angular transport only if either (i) they use the same declared origin protocol,
+or (ii) both are converted to a common intrinsic observable form
+\(\mathbf{J}_{\mathrm{int}}\) with consistent reference point definition.
+\end{proposition}
+
+Proof sketch: Eq.~\eqref{eq:ch1.origin-shift-law} introduces an additive term
+depending on \(\mathbf{a}\times\mathbf{P}_{\mathrm{tot}}\). Without common-origin
+or intrinsic correction, this additive term contaminates cross-dataset differences,
+mixing bookkeeping shift with physical transport variation.
+
+Validity limits are explicit. The derivation assumes finite momentum integrals,
+regular control boundaries, and rigid Euclidean translations. Open systems with
+unresolved flux at infinity, strongly nonlocal constitutive response, or
+time-varying boundary injection require extended flux closure before
+Eqs.~\eqref{eq:ch1.origin-shift-law}--\eqref{eq:ch1.translation-consistency-residual}
+are applied without qualification.
 
 
 \subsection{Invariants and frame-independent observables}
@@ -1441,6 +2005,28 @@ Eq.~\eqref{eq:ch1.scalar-observable-invariance}. For the Maxwell stress tensor
 from Eq.~\eqref{eq:ch1.maxwell-stress}, this means that scalar summaries of
 mechanical loading remain frame-independent even when component entries change.
 
+To include higher-order structural checks, define
+\begin{equation}
+\label{eq:ch1.tensor-third-invariant}
+I_3(\mathbf{T})=\det(\mathbf{T}),
+\end{equation}
+which is also invariant under proper rotations because
+\(\det(R\mathbf{T}R^\top)=\det(R)\det(\mathbf{T})\det(R^\top)=\det(\mathbf{T})\).
+The triplet \((I_1,I_2,I_3)\) therefore provides a complete scalar signature for
+the characteristic polynomial of \(\mathbf{T}\) in three dimensions.
+
+\begin{equation}
+\label{eq:ch1.observable-frame-residual}
+\Delta_{\mathcal{I}}(R;\mathcal{F})=
+\left|\mathcal{I}[\mathcal{A}_R\mathcal{F}]-\mathcal{I}[\mathcal{F}]\right|,
+\qquad
+\Delta_{\mathbf{Q}}(R;\mathcal{F})=
+\left\|\mathbf{Q}[\mathcal{A}_R\mathcal{F}]-R\mathbf{Q}[\mathcal{F}]\right\|.
+\end{equation}
+These residuals vanish for exact invariance/covariance and are useful in
+computational verification where discrete approximations can inject weak frame
+dependence.
+
 \begin{figure}[t]
 \centering
 \fbox{\begin{minipage}{0.92\linewidth}
@@ -1467,14 +2053,14 @@ to basis choice. The diagram is not decorative: it encodes the admissibility
 filter used before interpreting angular signatures as transport evidence.
 
 For Chapter~\ref{ch:01}, this filter is applied to the directional
-angular-momentum map \(\mathbf{\Psi}_J\) from
+angular-momentum map \(\boldsymbol{\Psi}_J\) from
 Eq.~\eqref{eq:ch1.directional-am-flux} and directional active power density
 \(\Pi\) from Eq.~\eqref{eq:ch1.directional-power-density}. Define the
 dimensionless sector index over \(\Delta\Omega\subseteq 4\pi\):
 \begin{equation}
 \label{eq:ch1.objective-sector-index}
 \Gamma_J(\Delta\Omega;r)=
-\frac{\left\|\int_{\Delta\Omega}\mathbf{\Psi}_J(\theta,\phi;r)\,d\Omega\right\|}
+\frac{\left\|\int_{\Delta\Omega}\boldsymbol{\Psi}_J(\theta,\phi;r)\,d\Omega\right\|}
 {\int_{\Delta\Omega}\Pi(\theta,\phi;r)\,d\Omega+\epsilon_\Pi},
 \end{equation}
 where \(\|\cdot\|\) is Euclidean norm and \(\epsilon_\Pi>0\) is a small
@@ -1485,21 +2071,44 @@ transformed fields satisfy Eqs.~\eqref{eq:ch1.scalar-observable-invariance} and
 \(\Gamma_J\) separates genuine geometry-supported transport strength from
 frame-dependent component bookkeeping \cite{harrington2001,collin2001}.
 
+Define an observability admissibility map
+\begin{equation}
+\label{eq:ch1.observability-admissibility-map}
+\mathcal{O}_{\mathrm{adm}}[\mathcal{F}]
+=
+\Big\{\mathcal{X}:\Delta_{\mathcal{X}}(R;\mathcal{F})=0,\ \forall R\in\mathrm{SO}(3)\Big\},
+\end{equation}
+where \(\mathcal{X}\) ranges over scalar, vector, and tensor reports with
+corresponding residual definition \(\Delta_{\mathcal{X}}\). This map formalizes
+the subsection rule: only objects in \(\mathcal{O}_{\mathrm{adm}}\) are promoted
+to frame-independent observable status.
+
+\begin{proposition}[Frame-objective transport index criterion]
+\label{prop:ch1.frame-objective-index}
+If \(\Pi\) and \(\boldsymbol{\Psi}_J\) satisfy scalar/vector covariance
+requirements induced by Eqs.~\eqref{eq:ch1.scalar-observable-invariance} and
+\eqref{eq:ch1.vector-observable-covariance}, then
+\(\Gamma_J(\Delta\Omega;r)\) in Eq.~\eqref{eq:ch1.objective-sector-index} is
+frame-objective for fixed physical sector definition.
+\end{proposition}
+
+Proof sketch: under rigid rotation, the numerator vector integral rotates
+covariantly while its norm is invariant; denominator is scalar rotationally
+invariant active-power integral over the same physical sector. Their ratio is
+therefore unchanged.
+
 The validity range is restricted to proper rotations in Euclidean space and to
 observable constructions built from gauge-robust field quantities. Gauge-dependent
 local decompositions and non-Euclidean coordinate manifolds require additional
 care that is deferred to Section~\ref{sec:ch01.4}.
 
-Section~\ref{sec:ch01.3} is now complete in substance: covariance machinery,
-origin sensitivity, and invariant observables are jointly in place to prevent
-coordinate artifacts from entering subsequent gauge discussions.
-
 \paragraph{Section 1.3 closure and forward link.}
-After Section~\ref{sec:ch01.3}, rotational covariance and frame-invariant
-interpretation are established as mandatory constraints on admissible angular
-claims. The chapter next addresses gauge structure in
-Section~\ref{sec:ch01.4}, where representational freedom and physical
-observables are separated with explicit care.
+Section~\ref{sec:ch01.3} has fixed the frame-consistency conditions for angular
+electromagnetic interpretation: rigid-rotation action laws, tensor/dyadic
+covariance, affine origin-shift structure of angular moments, and invariant
+observable tests are now mutually consistent. With this covariance closure in
+place, Section~\ref{sec:ch01.4} can analyze gauge transformations while preserving
+the separation between representational freedom and measurable field content.
 
 
 \section{Gauge Structure and Physical Observables}

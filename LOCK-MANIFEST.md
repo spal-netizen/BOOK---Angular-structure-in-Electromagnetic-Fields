@@ -260,9 +260,20 @@ New instructions are refinements of this set and do not silently remove essentia
 9. Citation mandate: perform robust source search in relevant scientific literature; cite at claim/equation/discussion point of need; prioritize pioneering/original and validated modern sources; keep chapter-wise increasing reference numbering.
 10. Figure mandate: chapter-wise increasing figure numbering; use conceptual schematic figures whenever new/complex concepts benefit readability; every figure must have label, caption, and in-body explanation; decorative figures are disallowed.
 11. Prose bans: architecture-centric justification prose is forbidden; title-head metacommentary is forbidden; justification is allowed only for concepts, equations, assumptions, domains, and physics reasoning.
-12. Global expansion target: 3-5 PDF pages per subsection; restart point for controlled redrafting is Section `1.0` onward.
+12. Manuscript prose in chapter text must be science-centric and student-comprehension-centric only; governance/process vocabulary (e.g., HOME/USE tags, TOC/process narration, section-architecture commentary) is forbidden inside explanatory paragraph bodies.
+13. Global expansion target: 3-5 PDF pages per subsection; restart point for controlled redrafting is Section `1.0` onward.
 
 This addendum resolves interpretation conflicts in earlier text: subsection forward links are optional and no longer mandatory as a hard compliance criterion.
+
+---
+
+## LOCK ADDENDUM (2026-05-28 — SCIENCE-CENTRIC PROSE PRIORITY LOCK)
+
+The following prose-governance requirement is now permanently locked for all chapter drafting:
+
+1. Every paragraph in manuscript subsections must be constructed around mathematical statements, physical meaning, assumptions, validity, measurement implications, and reader-learning clarity only.
+2. Governance tags/ownership language (`HOME`, `USE`, drafting-process remarks, TOC-centric explanations) must not appear as explanatory narrative content in subsection bodies.
+3. Paragraph openings, transitions, and closings must present substantive scientific information and pedagogical interpretation, not process commentary.
 
 ---
 

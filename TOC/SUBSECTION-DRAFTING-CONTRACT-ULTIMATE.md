@@ -50,6 +50,8 @@ All chapter drafts must reflect classical monograph standards of depth, density,
 - Formulaic framing starters (e.g., "This subsection establishes ...", "For physical interpretation ...", "This closure has a direct ...") are disallowed in final prose.
 - Architecture-centric prose justification is disallowed (no narrative about drafting/section/subsection architecture as scientific explanation).
 - Title-head metacommentary is disallowed; justification language must target concepts, assumptions, equations, and physical interpretation only.
+- Science-centric clarity lock: paragraph bodies must be built from mathematics, physics, assumptions, validity limits, and measurement meaning only.
+- Governance/process wording lock: avoid explanatory body-text usage of ownership/process vocabulary (e.g., `HOME`, `USE`, TOC-process remarks, drafting workflow commentary).
 - Equation explanations must be authoritative and varied without recurring sentence molds that reveal machine-template generation.
 - Section-level opening and closing framing paragraphs must be uniquely constructed across the chapter; repeated transition templates are disallowed.
 - Cumulative governance policy is active: new GCHECK instructions refine this contract and must be merged without removing essential prior locks.
