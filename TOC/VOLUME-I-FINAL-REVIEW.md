@@ -98,7 +98,7 @@
 
 ## 5. [FIG+PROB] obligation (all 16 example subsections)
 
-Each requires: **Problem statement | Schematic figure + caption | Full derivation | Physical interpretation | One forward link.**
+Each requires: **Problem statement | Schematic figure + caption | Full derivation | Physical interpretation | Unique technical closure (forward link optional).**
 
 | Section | Topic |
 |---------|--------|

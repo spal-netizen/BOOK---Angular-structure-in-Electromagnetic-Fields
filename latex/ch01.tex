@@ -2,6 +2,7 @@
 % Do not add Ch 2+ content to this file
 \chapter{Foundations of Angular Electromagnetic Structure}
 \label{ch:01}
+\setcounter{section}{-1}
 
 \section{Introduction and Scope}
 \label{sec:ch01.0}
@@ -38,7 +39,7 @@ ambiguous in interpretation even when formally correct.
 The scope boundary is equally strict. Chapter~\ref{ch:01} does not attempt the
 operator-domain machinery developed in Chapter~2, the angular-eigenfield
 construction of Chapter~3, or the finite-geometry accessibility limits of
-Chapter~4. Those results remain at their own HOME locations and are inherited
+Chapter~4. Those results remain at their dedicated owner locations and are inherited
 forward by reference only. This partition is part of the no-recursion design and
 is therefore methodological, not stylistic.
 
@@ -76,7 +77,7 @@ broken by geometry, boundary anisotropy, or constitutive asymmetry, coupling
 between angular channels emerges as a structural necessity
 \cite{harrington2001,collin2001}. Chapter~\ref{ch:01} introduces this principle
 at interpretation level, while rigorous operator and spectral proofs remain at
-their dedicated HOME locations in later chapters.
+their dedicated owner locations in later chapters.
 
 
 \subsection{Assumptions, finite-energy admissibility, and domain of validity}
@@ -101,14 +102,14 @@ presence would invalidate both measurement interpretation and operator estimates
 This class is used together with three global assumptions throughout
 Chapter~\ref{ch:01}: SI normalization, phasor convention \(\exp(-\jj\omega t)\),
 and linear local constitutive closure unless an explicit exception appears in a
-later HOME location. These assumptions form the compatibility frame that keeps
+later owner location. These assumptions form the compatibility frame that keeps
 field law, boundary admissibility, and conservation reasoning inside one model
 family.
 
 The validity boundary is explicit. Strong nonlinearity, active gain, rapid
 constitutive time modulation, and quantum-field corrections lie outside the
 scope of this chapter. They may be referenced only as forward pointers and are
-treated formally at designated later HOME chapters
+treated formally at designated later chapters
 \cite{harrington2001,jackson1999}.
 
 \paragraph{Section 1.0 summary and bridge.}
@@ -254,110 +255,229 @@ equation set.
 \label{sec:ch01.1.2}
 % TOC tag: [HOME]
 
-With the field law fixed in Subsection~\ref{sec:ch01.1.1}, the next question is
-which source distributions and boundary data are admissible so that Maxwell
-equations represent physically realizable configurations rather than algebraic
-artifacts. Let \(\Omega\) be partitioned into subregions
-\(\Omega_1,\Omega_2,\ldots\), with interfaces
-\(\Sigma_{12}=\partial\Omega_1\cap\partial\Omega_2\). The unit normal on
-\(\Sigma_{12}\), oriented from medium 1 to medium 2, is
-\(\hat{\mathbf{n}}_{12}\). Surface electric-current density is \(\mathbf{J}_s\),
-surface free-charge density is \(\rho_s\), electric flux density in medium
-\(i\) is \(\mathbf{D}_i\), and magnetic flux density in medium \(i\) is
-\(\mathbf{B}_i\).
+The Maxwell system of Subsection~\ref{sec:ch01.1.1} becomes predictive only after
+its data class is specified with sufficient analytical precision. In this chapter,
+\emph{source} means prescribed excitation through impressed electric current
+density \(\Jimp\) and free-charge density \(\rho\); \emph{boundary condition}
+means a constraint on field traces at \(\Gamma=\partial\Omega\) and at interior
+interfaces; \emph{physical admissibility} means joint regularity and compatibility
+conditions under which those data produce realizable fields rather than algebraic
+extensions without physical content \cite{jackson1999,harrington2001,collin2001}.
 
-For linear local constitutive closure, interface transmission laws are
+The logical role of this subsection in Chapter~\ref{ch:01} is therefore to close
+the gap between field equations and usable problem statements. Maxwell equations
+provide evolution and constraint structure; admissible data classes decide whether
+that structure is well posed for physical interpretation. For readers transitioning
+from undergraduate training, the key point is that solution quality depends not
+only on the differential equations, but on whether source and boundary data belong
+to a mathematically compatible class. In this monograph, that compatibility is
+kept explicit because later claims on momentum transport, gauge-sensitive
+quantities, and observable/inferred separation all inherit it directly.
+
+Let \(\Omega\subset\mathbb{R}^3\) be decomposed into piecewise smooth material
+subdomains \(\{\Omega_a\}_{a=1}^{N_\Omega}\), and let
+\(\Sigma_{ab}=\partial\Omega_a\cap\partial\Omega_b\) be an interface with unit
+normal \(\hat{\mathbf{n}}_{ab}\) directed from \(\Omega_a\) to \(\Omega_b\). Let
+\(\mathbf{D}_a\) and \(\mathbf{B}_a\) denote electric and magnetic flux-density
+phasors in \(\Omega_a\), \(\mathbf{J}_{s,ab}\) the electric surface-current
+density on \(\Sigma_{ab}\), and \(\rho_{s,ab}\) the free surface-charge density
+on \(\Sigma_{ab}\). On \(\Gamma\), data closure is represented by a boundary
+operator \(\mathcal{B}_\Gamma\) acting on the boundary traces of \((\E,\H)\):
+\begin{equation}
+\label{eq:ch1.boundary-data-operator}
+\mathcal{B}_\Gamma[\E,\H]=\mathbf{g}_\Gamma,
+\end{equation}
+where \(\mathbf{g}_\Gamma\) is prescribed boundary data. Equation~\eqref{eq:ch1.boundary-data-operator}
+plays two simultaneous roles: mathematically, it closes the boundary-value
+problem; physically, it represents how material termination, coating, or idealized
+wall behavior restricts admissible tangential traces.
+
+It is useful to write the same closure in domain-range form,
+\[
+\mathcal{B}_\Gamma:\mathcal{T}_\Gamma\to\mathcal{Y}_\Gamma,
+\]
+where \(\mathcal{T}_\Gamma\) denotes the trace space generated by admissible
+interior fields and \(\mathcal{Y}_\Gamma\) denotes the data space for boundary
+specifications. This notation does not introduce a new result; it clarifies that
+boundary conditions are operators between function spaces, not merely symbolic
+equalities. That viewpoint becomes increasingly important in Chapters~2 and 3,
+where operator domain, range, and null-space structure govern accessibility of
+angular channels.
+
+Interface transmission follows from the integral Maxwell balances
+Eq.~\eqref{eq:ch1.maxwell-integral} by shrinking control loops and pillboxes
+across \(\Sigma_{ab}\). For piecewise smooth interfaces and no impressed magnetic
+sheet current, one obtains
 \begin{equation}
 \label{eq:ch1.interface-conditions}
 \begin{aligned}
-\hat{\mathbf{n}}_{12}\times(\E_2-\E_1)&=\mathbf{0},\\
-\hat{\mathbf{n}}_{12}\times(\H_2-\H_1)&=\mathbf{J}_s,\\
-\hat{\mathbf{n}}_{12}\cdot(\mathbf{D}_2-\mathbf{D}_1)&=\rho_s,\\
-\hat{\mathbf{n}}_{12}\cdot(\mathbf{B}_2-\mathbf{B}_1)&=0.
+\hat{\mathbf{n}}_{ab}\times(\E_b-\E_a)&=\mathbf{0},\\
+\hat{\mathbf{n}}_{ab}\times(\H_b-\H_a)&=\mathbf{J}_{s,ab},\\
+\hat{\mathbf{n}}_{ab}\cdot(\mathbf{D}_b-\mathbf{D}_a)&=\rho_{s,ab},\\
+\hat{\mathbf{n}}_{ab}\cdot(\mathbf{B}_b-\mathbf{B}_a)&=0.
 \end{aligned}
 \end{equation}
-Each operator piece in Eq.~\eqref{eq:ch1.interface-conditions} has a specific
-function. Cross products with \(\hat{\mathbf{n}}_{12}\) isolate tangential
-discontinuities; dot products with \(\hat{\mathbf{n}}_{12}\) isolate normal-flux
-jumps. The first row enforces tangential-electric continuity in the absence of
-magnetic sheet current. The second row admits tangential-magnetic discontinuity
-only through explicit surface current \(\mathbf{J}_s\). The third row ties
-electric-flux jump to surface charge \(\rho_s\), while the fourth row preserves
-magnetic-flux solenoidality across the interface.
+The analytical structure is explicit. The cross product with \(\hat{\mathbf{n}}_{ab}\)
+extracts tangential jumps; the dot product extracts normal-flux jumps. The second
+row ties tangential-\(\H\) discontinuity to \(\mathbf{J}_{s,ab}\), and the third
+row ties normal-\(\mathbf{D}\) discontinuity to \(\rho_{s,ab}\). Read as a block,
+Eq.~\eqref{eq:ch1.interface-conditions} is the transmission law that keeps the
+field pair consistent with Maxwell constraints while allowing physically necessary
+jump mechanisms.
 
-As a complete interface block, Eq.~\eqref{eq:ch1.interface-conditions} supplies
-the geometric transmission rule that closes Maxwell dynamics across material
-transitions. Physically, it identifies which field components may jump and what
-source mechanism must account for that jump.
+Intermediate limiting relations leading to Eq.~\eqref{eq:ch1.interface-conditions}
+can be read from control-set shrinkage in Eq.~\eqref{eq:ch1.maxwell-integral}:
+for a vanishing loop straddling \(\Sigma_{ab}\),
+\[
+\lim_{\delta\to 0}\oint_{\partial S_\delta}\E\cdot d\boldsymbol{\ell}=0
+\quad\Rightarrow\quad
+\hat{\mathbf{n}}_{ab}\times(\E_b-\E_a)=\mathbf{0},
+\]
+and for a vanishing pillbox,
+\[
+\lim_{\delta\to 0}\int_{\partial V_\delta}\mathbf{D}\cdot\hat{\mathbf{n}}\,dS
+=\rho_{s,ab}
+\quad\Rightarrow\quad
+\hat{\mathbf{n}}_{ab}\cdot(\mathbf{D}_b-\mathbf{D}_a)=\rho_{s,ab}.
+\]
+These intermediate expressions are included to make the derivational path visible
+before the compact final jump form is used in later sections.
 
-On the outer boundary \(\Gamma=\partial\Omega\), let \(\hat{\mathbf{n}}\) be the
-outward normal, and partition
-\(\Gamma=\Gamma_{\mathrm{PEC}}\cup\Gamma_{\mathrm{PMC}}\cup\Gamma_Z\) into
-perfect-electric-conductor, perfect-magnetic-conductor, and impedance segments.
-Boundary closure classes are
+From a physical viewpoint, this interface law is the first point where geometry
+and material architecture enter as active participants in angular structure:
+continuity classes and jump channels determine which field components can carry
+transport information across partition lines, and which components are trapped,
+screened, or redirected.
+
+Outer closure is specified by partitioning
+\(\Gamma=\Gamma_{\mathrm{PEC}}\cup\Gamma_{\mathrm{PMC}}\cup\Gamma_Z\), where
+\(\Gamma_{\mathrm{PEC}}\) is perfect-electric-conductor boundary,
+\(\Gamma_{\mathrm{PMC}}\) is perfect-magnetic-conductor boundary, and \(\Gamma_Z\)
+is an impedance boundary with surface impedance \(Z_s\):
 \begin{equation}
 \label{eq:ch1.outer-boundary-classes}
 \begin{aligned}
 \hat{\mathbf{n}}\times\E&=\mathbf{0}\quad &&\text{on }\Gamma_{\mathrm{PEC}},\\
 \hat{\mathbf{n}}\times\H&=\mathbf{0}\quad &&\text{on }\Gamma_{\mathrm{PMC}},\\
 \hat{\mathbf{n}}\times\E&=Z_s\,(\hat{\mathbf{n}}\times\H)\times\hat{\mathbf{n}}
-\quad &&\text{on }\Gamma_{Z},
+\quad &&\text{on }\Gamma_Z,
 \end{aligned}
 \end{equation}
-where \(Z_s\) is surface impedance on \(\Gamma_Z\). Operand-wise,
-\(\hat{\mathbf{n}}\times\E\) and \(\hat{\mathbf{n}}\times\H\) extract tangential
-field components, and the double-cross term
-\((\hat{\mathbf{n}}\times\H)\times\hat{\mathbf{n}}\) reconstructs tangential
-magnetic orientation compatible with impedance coupling. As a full boundary
-statement, Eq.~\eqref{eq:ch1.outer-boundary-classes} determines which tangential
-components are suppressed or coupled by boundary material idealization.
+with \(\hat{\mathbf{n}}\) the outward unit normal on \(\Gamma\). Here
+\(\hat{\mathbf{n}}\times\E\) and \(\hat{\mathbf{n}}\times\H\) are tangential
+electric and magnetic traces, while \((\hat{\mathbf{n}}\times\H)\times\hat{\mathbf{n}}\)
+reorients tangential magnetic content into the impedance-coupled direction.
+Equation~\eqref{eq:ch1.outer-boundary-classes} therefore functions as a boundary
+trace selector mathematically, and as a model of ideal reflection or finite
+surface dissipation physically.
 
-Source admissibility requires regularity, localization, and continuity
-compatibility. Let \(\Omega_s\subset\Omega\) be source support. The admissible
-source class in this chapter is
+For continuity with undergraduate intuition, the three boundary classes may be
+viewed as limiting material responses on tangential fields. The PEC relation
+suppresses tangential electric trace, the PMC relation suppresses tangential
+magnetic trace, and the impedance relation preserves both while coupling them
+through \(Z_s\). This hierarchy is not merely classificatory: it determines the
+energy-exchange channel at the boundary and therefore influences which angular
+content may persist, decay, or be reflected in bounded geometries.
+
+Source admissibility is now imposed by regularity, localization, and continuity
+compatibility. Let \(\Omega_s\subseteq\Omega\) be source support. The chapter
+source class is
 \begin{equation}
 \label{eq:ch1.source-admissibility}
 \Jimp\in L^2(\Omega_s)^3,\qquad
-\operatorname{supp}(\Jimp)\subset\overline{\Omega_s},\qquad
+\operatorname{supp}(\Jimp)\subseteq\overline{\Omega_s},\qquad
 \divg\Jimp-\jj\omega\rho=0
-\ \text{(distribution sense)}.
+\ \text{in }\mathcal{D}'(\Omega).
 \end{equation}
-In Eq.~\eqref{eq:ch1.source-admissibility}, the \(L^2\) condition enforces
-finite-energy current regularity, the support constraint localizes excitation,
-and the continuity relation preserves consistency with the Maxwell balance
-established in Subsection~\ref{sec:ch01.1.1}. As a complete criterion, this block
-prevents mathematically singular source prescriptions that would violate charge
-balance or field-energy control.
+The first term in Eq.~\eqref{eq:ch1.source-admissibility} enforces finite source
+energy in the local \(L^2\)-sense; the support condition enforces spatial
+localization of excitation; the distributional continuity relation enforces
+charge-current consistency under the adopted \(\exp(-\jj\omega t)\) phasor
+convention. Taken together, these conditions exclude non-conservative source
+prescriptions that would violate Eq.~\eqref{eq:ch1.maxwell-local}.
+
+The admissibility class also fixes an implicit domain of validity. If \(\Jimp\) is
+too singular for the assumed trace/volume framework, or if charge continuity is
+violated by prescribed data, then formal fields can be written but cannot be
+interpreted within the same conservation framework used in this chapter. For that
+reason, admissibility here is treated as part of physical modeling, not as a
+post-processing check.
+
+\begin{proposition}[Global compatibility of source and boundary data]
+\label{prop:ch1.source-boundary-compatibility}
+Assume Eq.~\eqref{eq:ch1.source-admissibility} and the boundary operator
+constraint Eq.~\eqref{eq:ch1.boundary-data-operator}. Then admissible data must
+satisfy the global charge-balance identity
+\begin{equation}
+\label{eq:ch1.global-charge-compatibility}
+\int_{\Omega}\!\left(\divg\Jimp-\jj\omega\rho\right)\,dV
+=\int_{\Gamma}\!\Jimp\cdot\hat{\mathbf{n}}\,dS-\jj\omega\int_{\Omega}\rho\,dV=0.
+\end{equation}
+\end{proposition}
+
+The proof is obtained by integrating the distributional continuity relation in
+Eq.~\eqref{eq:ch1.source-admissibility} over \(\Omega\), invoking divergence
+theorem on \(\divg\Jimp\), and using admissible boundary traces from
+Eq.~\eqref{eq:ch1.boundary-data-operator}. The integral
+\(\int_{\Gamma}\Jimp\cdot\hat{\mathbf{n}}\,dS\) is net outward impressed-current
+flux, while \(\jj\omega\int_{\Omega}\rho\,dV\) is harmonic charge-storage rate.
+Equation~\eqref{eq:ch1.global-charge-compatibility} is therefore a global
+charge-balance law on admissible data classes.
+
+In practical terms, Eq.~\eqref{eq:ch1.global-charge-compatibility} is the
+large-scale consistency test that links boundary current flux to interior charge
+storage under the fixed phasor convention. Local constitutive detail may vary
+across subdomains, but this global balance must still hold when data are
+admissible. That invariance across local complexity is exactly why this equation
+is carried as a major milestone relation in the subsection.
 
 \begin{figure}[t]
 \centering
-\fbox{\parbox{0.92\linewidth}{
-\textbf{Admissibility schematic for sources and boundaries.}
-Domain \(\Omega\) is partitioned into material subregions with interfaces
-\(\Sigma_{12}\), outer boundary segments
-\(\Gamma_{\mathrm{PEC}},\Gamma_{\mathrm{PMC}},\Gamma_Z\), and source support
-\(\Omega_s\). Interface jumps follow Eq.~\eqref{eq:ch1.interface-conditions},
-outer closure follows Eq.~\eqref{eq:ch1.outer-boundary-classes}, and source
-constraints follow Eq.~\eqref{eq:ch1.source-admissibility}.}}
-\caption{Conceptual partition linking interface transmission, boundary closure, and source admissibility in Subsection~\ref{sec:ch01.1.2}.}
-\label{fig:ch1.boundary-admissibility-map}
+\fbox{\parbox{0.94\linewidth}{
+\textbf{Interface-boundary-source admissibility map.}
+The domain \(\Omega\) is shown with subregions \(\Omega_a,\Omega_b\), interface
+\(\Sigma_{ab}\), and exterior boundary partition
+\(\Gamma_{\mathrm{PEC}}\cup\Gamma_{\mathrm{PMC}}\cup\Gamma_Z\). Source support
+\(\Omega_s\) occupies a compact subset. Interface jumps are constrained by
+Eq.~\eqref{eq:ch1.interface-conditions}, boundary traces by
+Eq.~\eqref{eq:ch1.outer-boundary-classes}, source regularity by
+Eq.~\eqref{eq:ch1.source-admissibility}, and global consistency by
+Eq.~\eqref{eq:ch1.global-charge-compatibility}.}}
+\caption{Schematic coupling of source support, interface transmission, and outer-boundary closure for admissible Maxwell data in Subsection~\ref{sec:ch01.1.2}.}
+\label{fig:ch1.source-boundary-admissibility}
 \end{figure}
 
-The physical implication is central for the rest of Chapter~1: angular content
-cannot be interpreted independently of source support and boundary class. Even
-when local Maxwell equations are unchanged, variations in interface loading,
-impedance character, or source localization can alter how angular content is
-stored, transported, or rendered inaccessible.
+Figure~\ref{fig:ch1.source-boundary-admissibility} highlights the coupled nature
+of admissibility: source support, interface transmission, and exterior trace class
+form a single data manifold. Later transport and observable claims inherit this
+manifold directly, because angular descriptors computed from \((\E,\H)\) are
+credible only when the entire data chain is compatible.
 
-Validity limits are explicit. Equation~\eqref{eq:ch1.interface-conditions} and
-Eq.~\eqref{eq:ch1.outer-boundary-classes} assume piecewise smooth boundaries and
-local constitutive response; rough multiscale boundaries, strongly nonlocal
-media, or active/time-modulated interfaces require extended formulations outside
-this subsection scope \cite{jackson1999,collin2001}.
+The figure is intentionally schematic rather than geometric-detailed. Its function
+is to expose dependency order: source support \(\Omega_s\) fixes where excitation
+enters, interface conditions fix how fields pass between material sectors, and
+boundary class fixes what traces are allowed to leave or return at \(\Gamma\).
+When these three layers are read together, the reader can follow why the chapter
+does not treat angular observables before establishing admissibility.
 
-Subsection~\ref{sec:ch01.1.3} can now formulate initial-boundary value structure
-and uniqueness on a complete admissibility base, without reintroducing field
-laws or boundary classes.
+The validity boundary is equally clear. The derivation assumes piecewise smooth
+interfaces, local constitutive response within each subregion, and standard trace
+theory for boundary operators. Strongly nonlocal media, rough multiscale
+interfaces, active time-modulated surfaces, and stochastic boundary operators lie
+outside this subsection and require expanded functional frameworks
+\cite{jackson1999,harrington2001,collin2001,balanis2016}.
+
+This explicit boundary statement is included for reader confidence: it marks the
+exact regime in which the derivation should be trusted and prevents overextension
+of conclusions to data classes not yet constructed in the monograph.
+
+This subsection establishes the HOME admissibility frame for Chapter~1 through
+Eq.~\eqref{eq:ch1.interface-conditions},
+Eq.~\eqref{eq:ch1.outer-boundary-classes},
+Eq.~\eqref{eq:ch1.source-admissibility}, and
+Proposition~\ref{prop:ch1.source-boundary-compatibility}. With source and trace
+classes fixed at this level, Subsection~\ref{sec:ch01.1.3} can address
+initial-boundary uniqueness without reopening data admissibility.
 
 
 \subsection{Initial-boundary value problems and uniqueness}
@@ -622,7 +742,7 @@ without ambiguity \cite{jackson1999,collin2001,harrington2001}.
 \paragraph{Section 1.1 summary and transition.}
 Section~\ref{sec:ch01.1} now forms a closed transport backbone. Maxwell field
 law, source-boundary admissibility, uniqueness, energy and linear-momentum
-accounting, and angular-momentum torque balance are all fixed at HOME depth. On
+accounting, and angular-momentum torque balance are all fixed at foundational depth. On
 this completed base, Section~\ref{sec:ch01.2} examines angular structure in
 field-theoretic terms without conflating representational appearance with
 conservation-consistent transport.
@@ -967,7 +1087,7 @@ Chapter~\ref{ch:01}. Within the stated assumptions, however, the
 reactive-radiative distinction is sufficient to prevent regime-mixing errors in
 all later angular-structure arguments.
 
-With regime separation now fixed at HOME level, Section~\ref{sec:ch01.3} can
+With regime separation now fixed at foundational level, Section~\ref{sec:ch01.3} can
 treat rotational covariance without conflating coordinate effects with near-field
 storage effects.
 
@@ -1083,11 +1203,11 @@ local orientation at fixed point; the second shifts sampling location along the
 rotation orbit. Their coexistence explains why local polarization change alone is
 insufficient to represent rotational action on fields.
 
-This subsection is valid for rigid Euclidean rotations in orthonormal frames.
+The derivation above is valid for rigid Euclidean rotations in orthonormal frames.
 Non-rigid deformations, curvilinear manifolds with connection terms, and
 orientation-dependent constitutive manifolds require extensions deferred later.
 
-With active-passive structure fixed at HOME level and interpreted through
+With active-passive structure fixed at foundational level and interpreted through
 Fig.~\ref{fig:ch1.active-passive-rotation}, the next subsection formalizes the
 transformation rules for vectors, second-rank tensors, and dyadic maps.
 
@@ -1221,7 +1341,7 @@ Eq.~\eqref{eq:ch1.origin-angular-definition} yields
 \qquad
 \mathbf{P}_{\mathrm{tot}}=\int_V \mathbf{p}_{\mathrm{em}}\,dV.
 \end{equation}
-Equation~\eqref{eq:ch1.origin-shift-law} is the central HOME result: origin shift
+Equation~\eqref{eq:ch1.origin-shift-law} is the central result: origin shift
 adds an extrinsic term determined by total linear momentum
 \(\mathbf{P}_{\mathrm{tot}}\). Mathematically, this is affine covariance of
 angular moments; physically, it means identical fields may report different
@@ -1281,7 +1401,7 @@ criteria without conflating translation artifacts with physical angular content.
 
 Physical interpretation remains stable across coordinate changes only when the
 reported quantity is either invariant as a scalar or covariant in a way that
-preserves its geometric class. This subsection establishes an operational test
+preserves its geometric class. The analysis below establishes an operational test
 for that distinction and ties it to the angular-transport diagnostics already
 introduced in Section~\ref{sec:ch01.2}.
 
@@ -1401,14 +1521,14 @@ extra layer of physics: the measurable fields are unchanged under an entire clas
 of potential transformations. Establishing that class is essential before any
 frame-independent observable is interpreted in Section~\ref{sec:ch01.4}.
 
-Let \(\A(\mathbf{r})\) denote vector potential, \(\phi(\mathbf{r})\) scalar
-potential, \(\E(\mathbf{r})\) electric phasor field, and \(\B(\mathbf{r})\)
+Let \(\mathbf{A}(\mathbf{r})\) denote vector potential, \(\phi(\mathbf{r})\) scalar
+potential, \(\E(\mathbf{r})\) electric phasor field, and \(\mathbf{B}(\mathbf{r})\)
 magnetic flux density, with \(j=\sqrt{-1}\), angular frequency \(\omega>0\), and
-phasor sign convention fixed by `00-NOTATION.md`. Their defining relations are
+phasor sign convention fixed for this chapter. Their defining relations are
 \begin{equation}
 \label{eq:ch1.potential-field-relations}
-\B=\nabla\times\A,\qquad
-\E=-\nabla\phi+j\omega\A,
+\mathbf{B}=\nabla\times\mathbf{A},\qquad
+\E=-\nabla\phi+j\omega\mathbf{A},
 \end{equation}
 where \(\nabla\times\) is curl and \(\nabla\) is gradient. The first relation
 builds magnetic solenoidality into representation form; the second separates
@@ -1421,12 +1541,12 @@ Gauge freedom is generated by any sufficiently smooth scalar gauge function
 \(\chi(\mathbf{r})\), producing
 \begin{equation}
 \label{eq:ch1.gauge-transform}
-\A'=\A+\nabla\chi,\qquad
+\mathbf{A}'=\mathbf{A}+\nabla\chi,\qquad
 \phi'=\phi-j\omega\chi.
 \end{equation}
 The operand role is explicit: \(\nabla\chi\) alters only longitudinal potential
 content, while \(-j\omega\chi\) offsets scalar potential so that reconstructed
-\(\E\) and \(\B\) from Eq.~\eqref{eq:ch1.potential-field-relations} remain
+\(\E\) and \(\mathbf{B}\) from Eq.~\eqref{eq:ch1.potential-field-relations} remain
 unchanged. Physically, Eq.~\eqref{eq:ch1.gauge-transform} identifies an
 equivalence orbit of potential descriptions for a single electromagnetic state.
 
@@ -1435,13 +1555,13 @@ equivalence orbit of potential descriptions for a single electromagnetic state.
 \fbox{\begin{minipage}{0.92\linewidth}
 \centering
 \textbf{Gauge-orbit and observable pipeline for one field state}\\[2mm]
-Layer 1 (representation): nodes \((\A,\phi)\), \((\A',\phi')\), \((\A'',\phi'')\).\\
+Layer 1 (representation): nodes \((\mathbf{A},\phi)\), \((\mathbf{A}',\phi')\), \((\mathbf{A}'',\phi'')\).\\
 Links on Layer 1: gauge updates by \(\chi_1,\chi_2,\ldots\) from
 Eq.~\eqref{eq:ch1.gauge-transform}.\\
-Layer 2 (physical): single node \((\E,\B)\) obtained from
+Layer 2 (physical): single node \((\E,\mathbf{B})\) obtained from
 Eq.~\eqref{eq:ch1.potential-field-relations}.\\
 Layer 3 (reporting): scalar observable \(\mathcal{I}\) satisfying
-\(\mathcal{I}[\A,\phi]=\mathcal{I}[\A',\phi']\).
+\(\mathcal{I}[\mathbf{A},\phi]=\mathcal{I}[\mathbf{A}',\phi']\).
 \end{minipage}}
 \caption{Conceptual schematic linking gauge-equivalent potential representations to one physical field state and to a frame/gauge-independent reporting scalar.}
 \label{fig:ch1.gauge-orbit}
@@ -1457,17 +1577,17 @@ To convert orbit language into a testable criterion, define a scalar reporting
 functional \(\mathcal{I}\) on potential pairs. Gauge admissibility requires
 \begin{equation}
 \label{eq:ch1.gauge-observable-invariance}
-\mathcal{I}[\A',\phi']=\mathcal{I}[\A,\phi]
+\mathcal{I}[\mathbf{A}',\phi']=\mathcal{I}[\mathbf{A},\phi]
 \quad\text{for all }\chi\text{ used in Eq.~\eqref{eq:ch1.gauge-transform}}.
 \end{equation}
-Equation~\eqref{eq:ch1.gauge-observable-invariance} is a HOME-level criterion in
+Equation~\eqref{eq:ch1.gauge-observable-invariance} is a chapter-level criterion in
 this chapter: any local density that fails it may still be mathematically useful,
 but cannot be promoted to gauge-robust observable status.
 
 Representation closure is obtained by imposing Lorenz gauge,
 \begin{equation}
 \label{eq:ch1.lorenz-gauge-phasor}
-\nabla\cdot\A-j\omega\mu\varepsilon\,\phi=0,
+\nabla\cdot\mathbf{A}-j\omega\mu\varepsilon\,\phi=0,
 \end{equation}
 where \(\nabla\cdot\) is divergence, \(\mu\) is permeability, and \(\varepsilon\)
 is permittivity. The divergence term suppresses unconstrained longitudinal
@@ -1522,7 +1642,7 @@ Eq.~\eqref{eq:ch1.gauge-transform} generally induces
 \end{equation}
 where \(\mathbf{\Xi}_\chi\) is a gauge-generated flux tensor and
 \(\mathbf{\Psi}_\chi\) is a residual gauge source term. Equation
-\eqref{eq:ch1.local-density-gauge-shift} is the HOME diagnostic of this
+\eqref{eq:ch1.local-density-gauge-shift} is the core diagnostic of this
 subsection: local density objectivity fails whenever either term is nonzero.
 
 The roles of the two terms are distinct. The divergence contribution
@@ -1619,11 +1739,11 @@ magnetic fields, and let \(\mathcal{F}\) denote the field state. A scalar report
 observables only if they satisfy
 \begin{equation}
 \label{eq:ch1.observable-admissibility-triad}
-\mathcal{O}_s[\A',\phi']=\mathcal{O}_s[\A,\phi],\qquad
+\mathcal{O}_s[\mathbf{A}',\phi']=\mathcal{O}_s[\mathbf{A},\phi],\qquad
 \mathcal{O}_s[\mathcal{A}_R\mathcal{F}]=\mathcal{O}_s[\mathcal{F}],\qquad
 \mathbf{O}_v[\mathcal{A}_R\mathcal{F}]=R\,\mathbf{O}_v[\mathcal{F}],
 \end{equation}
-where \((\A,\phi)\to(\A',\phi')\) follows Eq.~\eqref{eq:ch1.gauge-transform},
+where \((\mathbf{A},\phi)\to(\mathbf{A}',\phi')\) follows Eq.~\eqref{eq:ch1.gauge-transform},
 \(\mathcal{A}_R\) is the active rotation from
 Eq.~\eqref{eq:ch1.active-rotation-action}, and \(R\in\mathrm{SO}(3)\). The first
 condition enforces gauge robustness, the second scalar objectivity, and the third
@@ -1723,12 +1843,12 @@ scale, so \(\mathcal{H}_n\) expresses handedness content relative to local field
 strength. As a normalized pseudoscalar built from admissible ingredients, it is
 suited for cross-configuration comparison without coordinate-basis bias.
 
-This subsection assumes linear isotropic constitutive response and source-free
+The argument in this subsection assumes linear isotropic constitutive response and source-free
 domain conditions required for exact dual symmetry. Material loss, anisotropy,
 magnetoelectric coupling, and strong dispersion break or deform the symmetry and
 therefore modify Eq.~\eqref{eq:ch1.helicity-balance}.
 
-With gauge-invariant observables and dual-helicity structure now fixed at HOME
+With gauge-invariant observables and dual-helicity structure now fixed at foundational
 level, the chapter can proceed to operational definitions that connect these
 quantities to measurable channels.
 
@@ -1739,7 +1859,7 @@ quantities to measurable channels.
 
 After gauge/frame admissibility is fixed, the next question is operational: by
 what measurement map does an admissible field quantity become an observable
-number with uncertainty and reproducibility constraints? This subsection defines
+number with uncertainty and reproducibility constraints? The present analysis defines
 that map in a form that can be used consistently throughout Chapters~1--4.
 
 Let \(\mathcal{F}\) denote an admissible field state and
@@ -1772,13 +1892,13 @@ an expression may remain mathematically elegant yet experimentally undefined.
 
 Gauge and frame robustness must survive the measurement map itself. If
 \(\mathcal{F}'=\mathcal{A}_R\mathcal{F}\) is a rotated state and
-\((\A',\phi')\) is a gauge-equivalent potential representative, operational
+\((\mathbf{A}',\phi')\) is a gauge-equivalent potential representative, operational
 admissibility requires
 \begin{equation}
 \label{eq:ch1.channel-covariance}
 \mathcal{M}_\alpha[\mathcal{F}']=\mathcal{T}_\alpha(R)\,\mathcal{M}_\alpha[\mathcal{F}],
 \qquad
-\mathcal{M}_\alpha[\A',\phi']=\mathcal{M}_\alpha[\A,\phi],
+\mathcal{M}_\alpha[\mathbf{A}',\phi']=\mathcal{M}_\alpha[\mathbf{A},\phi],
 \end{equation}
 where \(\mathcal{T}_\alpha(R)\) is the known channel transformation law under
 rotation. The first identity is channel covariance; the second is channel gauge
@@ -1834,7 +1954,7 @@ so that \(\mathcal{R}\) is stable. Strongly nonlinear sensor transfer, unknown
 cross-coupling, or incomplete channel models require extended inverse methods
 beyond Chapter~\ref{ch:01}.
 
-Operational definition is now fixed at HOME level: an observable is a
+Operational definition is now fixed at foundational level: an observable is a
 symmetry-admissible quantity with a stable, channel-explicit reconstruction rule.
 The next subsection uses this foundation to delimit where local spin-orbit
 decompositions remain interpretive aids rather than direct observables.
@@ -1847,7 +1967,7 @@ decompositions remain interpretive aids rather than direct observables.
 Local spin-orbit decomposition is mathematically instructive but operationally
 fragile: different admissible representation choices can redistribute local
 ``spin-like'' and ``orbital-like'' densities without changing any measurable total.
-This subsection establishes the precise boundary between decomposition utility and
+The derivation in this subsection establishes the precise boundary between decomposition utility and
 observable legitimacy.
 
 Let \(\mathbf{j}_{\mathrm{em}}(\mathbf{r})\) denote electromagnetic
@@ -1873,7 +1993,7 @@ unique at point level: superpotential terms can move content between
 \(\mathbf{l}_{\mathrm{loc}}\) and \(\mathbf{s}_{\mathrm{loc}}\) while preserving
 \(\mathbf{j}_{\mathrm{em}}\).
 
-Under a gauge update \((\A,\phi)\to(\A',\phi')\) from
+Under a gauge update \((\mathbf{A},\phi)\to(\mathbf{A}',\phi')\) from
 Eq.~\eqref{eq:ch1.gauge-transform}, the local pair transforms as
 \begin{equation}
 \label{eq:ch1.spin-orbit-gauge-redistribution}
@@ -1982,22 +2102,22 @@ reconstructions.
 
 Measurement enters electromagnetics through interaction channels in which field
 variables exchange power, momentum, or angular momentum with material degrees of
-freedom. A precise interaction map is established here at HOME level so that
+freedom. A precise interaction map is established here at foundational level so that
 later inference statements in Chapter~\ref{ch:01} are judged against explicit
 transfer equations rather than against representation-level descriptors.
 
 Let \(V_m\subset\Omega\) denote the material interaction region, with boundary
 \(\partial V_m\), outward unit normal \(\hat{\mathbf{n}}\), and volume element
 \(dV\). Let \(\E(\mathbf{r})\) and \(\H(\mathbf{r})\) be phasor fields under the
-\(\exp(-j\omega t)\) convention, let \(\J_c(\mathbf{r})\) be conduction-current
+\(\exp(-j\omega t)\) convention, let \(\mathbf{J}_c(\mathbf{r})\) be conduction-current
 density inside matter, and let \(\rho(\mathbf{r})\) be free-charge density. The
 time-averaged electromagnetic power-transfer density into matter is
 \begin{equation}
 \label{eq:ch1.material-power-density}
-p_m(\mathbf{r})=\frac{1}{2}\Re\!\left\{\E\cdot\J_c^*\right\},
+p_m(\mathbf{r})=\frac{1}{2}\Re\!\left\{\E\cdot\mathbf{J}_c^*\right\},
 \end{equation}
 where \((\cdot)^*\) denotes complex conjugation and \(\Re\{\cdot\}\) extracts the
-real part. Operand by operand, \(\E\cdot\J_c^*\) is local field-current work-rate
+real part. Operand by operand, \(\E\cdot\mathbf{J}_c^*\) is local field-current work-rate
 density in complex form, and the factor \(1/2\) converts phasor bilinear form to
 time average. As a complete relation,
 Eq.~\eqref{eq:ch1.material-power-density} identifies the local channel by which
@@ -2009,12 +2129,12 @@ Mechanical transfer is described by the cycle-averaged Lorentz-force density
 \label{eq:ch1.material-force-density}
 \mathbf{f}_m(\mathbf{r})
 =\frac{1}{2}\Re\!\left\{
-\rho\,\E+\J_c\times\mu\,\H^*
+\rho\,\E+\mathbf{J}_c\times\mu\,\H^*
 \right\},
 \end{equation}
 where \(\mu\) is permeability and \(\times\) is vector cross product. The first
 term \(\rho\,\E\) is electric-force density on free charge, while
-\(\J_c\times\mu\H^*\) is magnetic-force density on moving charge carriers. Taken
+\(\mathbf{J}_c\times\mu\H^*\) is magnetic-force density on moving charge carriers. Taken
 together, Eq.~\eqref{eq:ch1.material-force-density} is the local force-transfer
 law linking measurable mechanical loading to field state and material current.
 
@@ -2035,8 +2155,8 @@ recover in the absence of channel distortion.
 \centering
 \textbf{Field-to-matter transfer schematic}\\[2mm]
 Input block: field state \((\E,\H)\) over interaction region \(V_m\).\\
-Channel 1: \(p_m=\frac{1}{2}\Re\{\E\cdot\J_c^*\}\) integrated to \(P_m\).\\
-Channel 2: \(\mathbf{f}_m=\frac{1}{2}\Re\{\rho\E+\J_c\times\mu\H^*\}\)
+Channel 1: \(p_m=\frac{1}{2}\Re\{\E\cdot\mathbf{J}_c^*\}\) integrated to \(P_m\).\\
+Channel 2: \(\mathbf{f}_m=\frac{1}{2}\Re\{\rho\E+\mathbf{J}_c\times\mu\H^*\}\)
 integrated to \(\mathbf{F}_m\).\\
 Output block: measurable thermal/mechanical response under stated boundary and
 material assumptions.
@@ -2054,7 +2174,7 @@ from fields to matter is specified.
 The validity envelope of this subsection is limited to linear local constitutive
 response, harmonic steady state, and continuum averaging scales for charge and
 current densities. Strongly nonlinear transport, discrete-particle regimes, or
-ultrafast transients require generalized models and are outside the present HOME
+ultrafast transients require generalized models and are outside the present foundational
 establishment \cite{harrington2001,balanis2016}.
 
 The next subsection converts the stress-tensor framework from
@@ -2066,7 +2186,7 @@ relations.
 \label{sec:ch01.5.2}
 % TOC tag: [USE SS1.1.4]
 
-Stress-based measurement in this chapter is inherited directly from the HOME
+Stress-based measurement in this chapter is inherited directly from the owner
 framework in Subsection~\ref{sec:ch01.1.4}; no re-derivation of field momentum
 balance is introduced here. The objective is strictly operational: map the
 already-established stress tensor to instrument outputs for force and torque.
@@ -2119,9 +2239,9 @@ Calibration blocks \(\mathbf{K}_F,K_\tau\) and disturbance inputs
 \end{figure}
 
 Figure~\ref{fig:ch1.stress-measurement-map} is the practical counterpart of
-Subsection~\ref{sec:ch01.1.4}: the stress tensor remains the field-theoretic HOME
+Subsection~\ref{sec:ch01.1.4}: the stress tensor remains the field-theoretic
 object, while this subsection fixes only how that object is sampled and reported.
-This HOME/USE separation prevents recursion while preserving experimental
+This reference-only inheritance discipline prevents recursion while preserving experimental
 readability.
 
 The model assumes quasi-static sensor response over one cycle-average window and
@@ -2141,7 +2261,7 @@ measurements and where those estimates become ill-conditioned.
 
 Angular interpretation often proceeds through modal coefficients, but those
 coefficients are not primitive observables; they are reconstructions from finite
-channel data. The HOME projection model introduced below exposes the resolution
+channel data. The projection model introduced below exposes the resolution
 limits imposed by finite aperture, finite bandwidth, and noise.
 
 Let \(\Gamma_m\) denote a measurement surface, let
@@ -2268,13 +2388,14 @@ an inferred descriptor departs from direct-observable reliability.
 An interpretation decision is then stated by
 \begin{equation}
 \label{eq:ch1.observable-decision-rule}
+\begin{aligned}
 \mathfrak{A}(\mathcal{Q}_i)\le \tau_A
-\Longrightarrow
-\text{report as constrained observable surrogate},
-\qquad
+&\Longrightarrow
+\text{report as constrained observable surrogate},\\
 \mathfrak{A}(\mathcal{Q}_i)>\tau_A
-\Longrightarrow
-\text{report as inference-only descriptor},
+&\Longrightarrow
+\text{report as inference-only descriptor}.
+\end{aligned}
 \end{equation}
 where \(\tau_A>0\) is an application-specific admissibility threshold fixed by
 protocol before analysis. The mathematical function of
@@ -2384,7 +2505,7 @@ Substituting into Eq.~\eqref{eq:ch1.ex61-torque-flux} yields the application law
 -\frac{m+\sigma}{\omega}\,P_{\mathrm{rad}}.
 \end{equation}
 Equation~\eqref{eq:ch1.ex61-torque-power} is not a new conservation theorem; it
-is a regime-specific evaluator obtained by applying the HOME conservation
+is a regime-specific evaluator obtained by applying the conservation
 statement of Subsection~\ref{sec:ch01.1.5} to a radiative control surface.
 
 \begin{figure}[t]
@@ -2467,7 +2588,7 @@ gives
 E_t(\rho,\phi)=2A(\rho)\cos(m\phi)\neq 0.
 \]
 Hence phase structure is not sufficient for angular-momentum transport. This
-subsection establishes that insufficiency at HOME level and fixes a critical
+subsection establishes that insufficiency at foundational level and fixes a critical
 interpretation rule used throughout later chapters.
 
 \begin{figure}[t]
@@ -2495,7 +2616,7 @@ observation geometry that resolves channel intensities without bias. Incoherent
 mixing, polarization-selective loss, or aperture truncation can break the exact
 cancelation and produce residual transport.
 
-With a HOME counterexample now fixed, the next subsection tests an additional
+With this counterexample now fixed, the next subsection tests an additional
 failure mode: gauge-sensitive local density narratives that survive algebraic
 manipulation but fail observability discipline.
 
@@ -2505,7 +2626,7 @@ manipulation but fail observability discipline.
 
 Take a finite volume \(V_g\) with boundary \(\partial V_g\), outward unit normal
 \(\hat{\mathbf{n}}\), and two gauge-related potential representatives
-\((\mathbf{A},\phi)\) and \((\mathbf{A}',\phi')\). The HOME gauge-variation structure already
+\((\mathbf{A},\phi)\) and \((\mathbf{A}',\phi')\). The gauge-variation structure already
 established in Subsection~\ref{sec:ch01.4.2} is used here directly; no new gauge
 theorem is derived. The problem is to quantify when local angular-momentum
 density maps disagree while integrated transport observables remain unchanged.
@@ -2563,7 +2684,7 @@ Integral report node: equality/non-equality of
 Figure~\ref{fig:ch1.ex63-gauge-density} makes the interpretation criterion
 operational: a local map may change under gauge update without violating physics,
 provided integral observables survive the gauge test. The subsection thus
-reinforces HOME/USE discipline by applying, rather than restating, the gauge
+reinforces non-recursive inheritance discipline by applying, rather than restating, the gauge
 admissibility framework of Subsection~\ref{sec:ch01.4.2}
 \cite{jackson1999,harrington2001}.
 
@@ -2643,7 +2764,7 @@ These worked problems validate the chapter's interpretive discipline under
 explicit measurement geometry: torque follows conservation, phase structure alone
 fails sufficiency, local gauge-sensitive maps require observability screening, and
 reactive/radiative separation controls transport claims. Section~\ref{sec:ch01.7}
-can now close the chapter by separating established HOME results from deferred
+can now close the chapter by separating established results from deferred
 developments under strict forward-only ownership.
 
 
@@ -2651,7 +2772,7 @@ developments under strict forward-only ownership.
 \label{sec:ch01.7}
 
 Section~\ref{sec:ch01.7} records the chapter's established outcomes, lists only
-those concepts formally deferred to later HOME locations, and defines the exact
+those concepts formally deferred to later owner locations, and defines the exact
 inheritance boundary into Chapter~2. No new theorem content is introduced here;
 the function of this section is architectural closure of Chapter~\ref{ch:01}.
 
@@ -2660,18 +2781,105 @@ the function of this section is architectural closure of Chapter~\ref{ch:01}.
 \label{sec:ch01.7.1}
 % TOC tag: [DEFER]
 
+Chapter~\ref{ch:01} closes with a fully established foundational framework for angular
+electromagnetic analysis in which conservation, covariance, gauge discipline, and
+measurement admissibility are no longer separate themes but a single coherent
+interpretive framework. The established core begins at the Maxwell and
+constitutive layer in Section~\ref{sec:ch01.1}, where local field equations,
+boundary admissibility, and momentum-transfer channels were fixed as the
+non-negotiable physical substrate for all later angular statements.
+
+The chapter then defined angular structure in transport-relevant form in
+Section~\ref{sec:ch01.2}. Directional content, phase/polarization topology,
+transport conditions, and reactive-radiative regime separation were established in
+mutual dependence rather than as isolated descriptors, thereby preventing
+phase-rich patterns from being misreported as torque-capable transport when
+outward-channel or conservation checks fail.
+
+Rotational and translational rigor was established in Section~\ref{sec:ch01.3} by
+fixing active-passive rotation duality, tensor/dyadic covariance, origin-shift
+law, and frame-objectivity criteria. This block removes coordinate artifacts from
+the chapter's admissible statement space: any claim intended for inheritance must
+survive the symmetry tests formalized in that section.
+
+Gauge structure was then resolved in Section~\ref{sec:ch01.4} by distinguishing
+representation freedom from observable content. Potential transformations, local
+density gauge sensitivity, dual-helicity admissibility, operational channel
+definitions, and limits of local spin-orbit decomposition together established a
+strict criterion: expressive decompositions are acceptable as analysis tools only
+when they pass gauge/frame observability gates.
+
+Section~\ref{sec:ch01.5} converted this theoretical framework into measurable
+channel language, and Section~\ref{sec:ch01.6} tested the framework through
+problem-level cases designed to expose failure modes as well as successes.
+Consequently, Chapter~\ref{ch:01} now contributes a verified set of inherited
+results rather than a narrative overview. Those results are complete for Volume~I
+entry and are intended to be used by exact reference, not by re-derivation, in
+all subsequent chapters.
 
 \subsection{Concepts deferred to Chapters 2-4 and Volume II}
 \label{sec:ch01.7.2}
 % TOC tag: [DEFER]
 
+No additional theorem is introduced in this subsection; its sole function is to
+declare deferred ownership boundaries so later chapters advance without recursion.
+The operator-domain and radiation-mapping formalism required for rigorous
+source-to-field transformations is deferred to Chapter~2 owner locations, where
+functional spaces, dyadic Green operators, spectral structure, and non-radiating
+subspaces are derived once with full operator-level precision.
+
+Representation-theoretic closure of angular eigenfields is deferred to
+Chapter~3 owner locations. In particular, Hilbert/rigged-space formalization,
+\(\mathrm{SO}(3)\)-linked angular momentum representation structure, and the
+complete vector-spherical-harmonic eigenbasis machinery are not recast here;
+Chapter~\ref{ch:01} provides only the admissibility and interpretation constraints
+needed to prevent misuse when those tools are introduced.
+
+Source realizability, finite-aperture truncation, and operator-chain limits are
+deferred to Chapter~4 owner locations, where spectral truncation and physical
+recoverability are treated with explicit SVD-level structure and realizability
+constraints. The present chapter intentionally stops short of those derivations to
+preserve one-proof ownership and avoid forward leakage of proofs.
+
+Higher-order statistical transport, inverse-information limits, and modality
+selection in complex environments are deferred beyond Volume~I by design. Their
+mathematical prerequisites depend on the operator and representation layers that
+Chapter~\ref{ch:01} does not own. This boundary is methodological, not editorial:
+it preserves proof integrity and keeps Chapter~\ref{ch:01} as a stable foundation
+for inheritance rather than a compressed survey of later theory.
 
 \subsection{Bridge to Chapter 2}
 \label{sec:ch01.7.3}
 % TOC tag: [DEFER]
 
+Chapter~2 begins from a closed foundation, not from a restart. The inheritance
+contract is explicit: Maxwell-conservation structure from
+Section~\ref{sec:ch01.1}, transport admissibility from
+Section~\ref{sec:ch01.2}, covariance and origin discipline from
+Section~\ref{sec:ch01.3}, gauge-observability boundaries from
+Section~\ref{sec:ch01.4}, and operational measurement interpretation from
+Sections~\ref{sec:ch01.5}--\ref{sec:ch01.6} are all carried forward by reference.
+
+The immediate consequence is that Chapter~2 can state operator domains and
+radiation mappings without re-deriving Chapter~1 laws. When Chapter~2 introduces
+source-to-field operators, uniqueness classes, and Green-function actions, those
+developments are interpreted through the Chapter~1 admissibility filter already
+established: conservation consistency, covariance robustness, and gauge-screened
+observable relevance are prerequisites, not optional commentary.
+
+This bridge also fixes reading order for rigorous use. A Chapter~2 derivation is
+accepted for onward inheritance only if its assumptions remain compatible with the
+Chapter~1 boundary/validity structure. Conversely, when Chapter~2 yields new primary
+results, Chapter~1 statements remain unchanged and continue to function as prior
+constraints. The flow is strictly forward: Chapter~1 constrains Chapter~2
+interpretation; Chapter~2 extends Chapter~1 analytic reach.
+
+Accordingly, the transition into Chapter~2 is not thematic but structural.
+Chapter~\ref{ch:01} has completed the epistemic filtering layer; Chapter~2 now
+develops operator machinery on top of that layer, preserving one-proof ownership
+and non-recursive progression across the remainder of Volume~I.
 \paragraph{Section 1.7 terminal summary.}
-Chapter~\ref{ch:01} now stands as the sole HOME foundation for the core
+Chapter~\ref{ch:01} now stands as the sole foundational basis for the core
 Maxwell-conservation-gauge-observability structure used by subsequent chapters.
 Chapter~2 inherits this base by reference and develops operator-domain and
 radiation-mapping machinery without recursive re-derivation.

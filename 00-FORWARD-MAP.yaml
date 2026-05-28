@@ -9,6 +9,9 @@ meta:
   subsections: 171
   authoritative_toc: TOC/volume-I-ch01-04-FINAL.txt
   review: TOC/VOLUME-I-FINAL-REVIEW.md
+  gcheck_policy: cumulative_updates_refine_existing_locks
+  drafting_flow: strict_forward_with_line_by_line_approval
+  subsection_bridge: optional_not_mandatory
 
 tag_rules:
   HOME: define and prove once; never repeat in body

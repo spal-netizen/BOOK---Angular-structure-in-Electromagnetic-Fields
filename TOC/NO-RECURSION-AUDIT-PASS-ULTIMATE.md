@@ -15,7 +15,7 @@ Run this audit after drafting each chapter and again at volume freeze.
 2. Confirm no theorem proof appears outside its `HOME` chapter.
 3. Confirm repeated equations are either referenced or explicitly marked as new limits/variants.
 4. Confirm each subsection introduces one unique technical establishment sentence.
-5. Confirm forward links are present and not recycled sentence templates.
+5. Confirm subsection closures are unique and not recycled sentence templates (forward links optional).
 6. Confirm deferred concepts appear only in chapter synthesis/forward-map sections.
 7. Confirm subsection opening paragraphs are not similarly framed across neighboring or sibling subsections.
 8. Confirm subsection closing paragraphs are not similarly framed across neighboring or sibling subsections.

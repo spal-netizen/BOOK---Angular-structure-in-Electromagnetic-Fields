@@ -123,7 +123,7 @@ Enforcement requirements:
 
 1. One-proof ownership: every theorem family has one `HOME`; all other uses are cite-only.
 2. Cross-chapter overlap removal: Chapters 13-16 inherit Fisher/CRB, rank, detectability, and conditioning results per theorem-home map; no re-proofs outside owners.
-3. Depth normalization: each core subsection includes statement, assumptions, derivation/proof, interpretation, validity boundary, and forward link.
+3. Depth normalization: each core subsection includes statement, assumptions, derivation/proof, interpretation, and validity boundary.
 4. Citation governance: chapter-wise pioneering plus modern validated citation pair at claim sentence location.
 5. No-recursion audit: run per chapter before freeze and resolve all repeated equation/claim blocks by `HOME/USE` reduction.
 6. Prose uniqueness lock: subsection openings and closings must be uniquely framed.
@@ -207,6 +207,62 @@ The following figure-governance requirement is now explicitly locked:
 These governance constraints are not advisory; they are always-on execution constraints.
 Every drafting/editing action must recall and apply all active locks before text generation,
 during equation exposition, and at subsection closure.
+
+---
+
+## LOCK ADDENDUM (2026-05-27 — CHAPTER 1 CONTROLLED DEPTH-EXPANSION LOCK)
+
+The Chapter 1 depth-expansion execution blueprint is now locked and mandatory:
+
+- `TOC/CH01-CONTROLLED-DEPTH-EXPANSION-PLAN.md`
+
+Enforcement requirements:
+
+1. Every Chapter 1 subsection redraft must follow the controlled depth-expansion protocol in this file.
+2. Subsection-level target length is locked at 3-5 PDF pages unless explicitly overridden by user approval.
+3. Each subsection heading term must receive explicit conceptual narration (definition, objective relevance, and relation to subsection objective).
+4. Equation exposition must include operand-level mathematical role, full-equation function, and physical interpretation.
+5. Schematic figures must be inserted whenever readability materially improves theorem/equation/concept flow.
+6. Chapter 1 page-growth target remains locked at 80-100 pages through technical depth expansion, not layout inflation.
+7. Execution order for immediate depth growth is locked as: `1.1.2 -> 1.1.3 -> 1.1.4 -> 1.1.5`, then strict forward sequence.
+
+---
+
+## LOCK ADDENDUM (2026-05-28 — READER-CLARITY, FIGURE-DENSITY, AND PROSE-BAN LOCK)
+
+The following drafting requirements are now permanently locked for all chapters and all subsections:
+
+1. Baseline narration style is locked to senior scholarly professor tone with reader-friendly conceptual continuity.
+2. Every subsection must include expanded foundational math-and-physics narration from basic-level entry assumptions up to major governing equations.
+3. Intermediate relations (small equations/expressions, valid domains, variable ranges, and assumptions) must be included when they materially improve understanding of major equations.
+4. Conceptual schematic figures are encouraged at higher frequency when they improve engagement and clarity; each figure must include correct label and caption and must be explained in running prose.
+5. Architecture-centric prose justification is banned in section/subsection text: do not justify manuscript architecture, drafting architecture, or subsection-title architecture inside scientific narrative.
+6. Title-head explanation prose is banned as a framing device; subsection writing must proceed directly through concept/equation reasoning rather than metacommentary on title wording.
+7. Justification is allowed only for physical concepts, mathematical formulations, assumptions, domains, and equation logic.
+8. Chapter rhythm lock: maintain consistent classical monograph cadence, depth density, and explanatory continuity in the style of legendary advanced EM texts.
+9. Section restart lock: redrafting restart point is Section `1.0` onward, in strict forward order, under all active locks.
+
+---
+
+## LOCK ADDENDUM (2026-05-28 — GCHECK CANONICAL CUMULATIVE SET)
+
+The following GCHECK protocol is the active cumulative governance set for all future drafting and editing actions.
+New instructions are refinements of this set and do not silently remove essential prior locks.
+
+1. Cumulative update policy: treat new instructions as updates/refinements, not replacements of essential old rules.
+2. Core governance read-before-draft is mandatory: `LOCK-MANIFEST.md`, `.cursor/rules/book-consistency.mdc`, `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`, `00-NOTATION.md`, and `00-FORWARD-MAP.yaml`.
+3. Strict forward drafting with line-by-line approval; no subsection skipping.
+4. Version A classical monograph tone is mandatory: senior scholarly professor voice, reader-friendly continuity, smooth formal subject-centric narrative flow.
+5. Strict no-recursion/no-repetition across subsections, sections, and chapters for equations, concepts, narrative sentences, and templates; inherit by explicit reference only.
+6. Section-first structure is mandatory: section intro, subsection sequence, section summary; subsection-level bridge text is not mandatory.
+7. Depth mandate: dense, sufficient, foundational math+physics from undergraduate-level assumptions to major equations.
+8. Equation pedagogy mandate: define all symbols at first use; include intermediate expressions where needed; explain each major equation at term-level, full-equation level, and physical-meaning level; keep chapter-wise increasing equation numbering.
+9. Citation mandate: perform robust source search in relevant scientific literature; cite at claim/equation/discussion point of need; prioritize pioneering/original and validated modern sources; keep chapter-wise increasing reference numbering.
+10. Figure mandate: chapter-wise increasing figure numbering; use conceptual schematic figures whenever new/complex concepts benefit readability; every figure must have label, caption, and in-body explanation; decorative figures are disallowed.
+11. Prose bans: architecture-centric justification prose is forbidden; title-head metacommentary is forbidden; justification is allowed only for concepts, equations, assumptions, domains, and physics reasoning.
+12. Global expansion target: 3-5 PDF pages per subsection; restart point for controlled redrafting is Section `1.0` onward.
+
+This addendum resolves interpretation conflicts in earlier text: subsection forward links are optional and no longer mandatory as a hard compliance criterion.
 
 ---
 

@@ -96,6 +96,13 @@ Radiation and coupling inner products are specialized in Chapters 2–3 (defined
 - Use only compact conceptual/theorem-centric schematics when a governing equation, theorem step, or interpretation transition benefits from geometric readability.
 - Every included figure must have a precise caption, explicit labels inside the graphic, and a body-text explanation linking labels to equation symbols and physical meaning.
 - Decorative figures are disallowed.
+- Figure numbering follows chapter-wise monotone order in rendered output (e.g., Fig. 1.1, 1.2, ... within Chapter 1).
+
+## Equation pedagogy baseline (locked)
+
+- Every symbol, operator, parameter, and domain qualifier in each major equation must be defined at first use in nearby prose.
+- Major equation discussion must include term-level mathematical role, full-equation function, and physical interpretation.
+- Intermediate expressions and assumption/domain clarifications should be included whenever needed for reader clarity.
 
 ## Forbidden without cross-reference
 

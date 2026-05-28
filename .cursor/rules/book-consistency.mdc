@@ -24,6 +24,9 @@ alwaysApply: true
 - Honor `forbidden_repeat` in `00-FORWARD-MAP.yaml` for the active chapter.
 
 ## AI drafting rules
+- GCHECK cumulative policy is mandatory: new instructions refine existing governance and do not erase essential prior locks.
+- Before drafting, always read/apply: `LOCK-MANIFEST.md`, `.cursor/rules/book-consistency.mdc`, `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`, `00-NOTATION.md`, and `00-FORWARD-MAP.yaml`.
+- Draft strictly forward with line-by-line approval; do not skip subsections.
 - Expand only from author bullets in `outlines/chNN/*.txt` when present.
 - Do not invent references; use keys from `latex/references.bib` or mark `[CITATION NEEDED]`.
 - Definitions of `Y_l^m`, `M_lm`, `N_lm`, radiation operator domain, and Maxwell equations: **once only** (see NOTATION + §3.4.1 / Ch. 1).
@@ -54,13 +57,20 @@ alwaysApply: true
 - Run no-recursion checks from `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md` before marking chapter drafts complete.
 - In Volume I, every section (`X.0`, `X.1`, `X.2`, ...) must include an introductory framing paragraph before subsection flow and a summative framing paragraph after subsection flow.
 - Enforce section-first drafting order in all chapters: draft section-level framing first, then subsections in sequence, then section-level summative bridge.
+- Subsection-level bridge paragraphs are optional; do not force templated forward-link closings.
 - Enforce approval cadence: line-by-line user approval and subsection-by-subsection progression before starting the next subsection.
 - Follow `MODEL-WORKFLOW-LOCKED.md` for task-based model usage; no subsection is accepted complete without final high-rigor pass.
 - Enforce locked prose style across the full book: **Version A — Classical Monograph Tone** (professional, measured, authoritative, reader-friendly scholarly flow; avoid dictation-style wording).
 - Enforce continuous narrative flow in subsection prose; avoid template-fragment transitions and mechanical staging phrases.
+- Enforce expanded reader-clarity narration: include foundational math and physics development from basic entry assumptions to major equations.
+- Keep global expansion target at 3-5 PDF pages per subsection unless user-approved override is given.
+- Include intermediate expressions, valid-domain statements, variable-range constraints, and assumption clarifications whenever they improve derivation readability.
+- Increase use of conceptual schematic figures when they improve reader engagement and clarity; every figure must have label, caption, and explicit in-body interpretation.
 - Disallow formulaic framing starters in final draft prose (e.g., "This subsection establishes ...", "For physical interpretation ...", "This closure has a direct ...").
 - Vary sentence architecture and equation-explanation rhythm so prose remains indistinguishable from classical human-authored monograph writing.
 - Apply the same anti-template requirement to section-head introductions and section-closing bridge paragraphs in every chapter.
+- Ban architecture-centric prose justification in scientific narrative (no discussion of section/subsection/drafting architecture as justification).
+- Ban title-head metacommentary framing (do not explain subsection titles as prose scaffolds); justify only concepts, assumptions, and equations.
 - Always-recall lock: before and during every edit, re-apply all active governance constraints from LOCK-MANIFEST and drafting contracts.
 - Prompt shortcut lock: if user sends `GCHECK <subsection-id>`, interpret it as a mandatory command to read/apply `LOCK-MANIFEST.md`, `.cursor/rules/book-consistency.mdc`, `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`, `00-NOTATION.md`, and `00-FORWARD-MAP.yaml`, then draft only the requested subsection with all active locks.
 

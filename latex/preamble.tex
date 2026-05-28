@@ -5,11 +5,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
+\usepackage{silence}
+\WarningsOff[siunitx]
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{mathtools}
+\usepackage{siunitx}
 \usepackage{physics}
 \usepackage{bm}
-\usepackage{siunitx}
 \usepackage{geometry}
 \geometry{margin=1in}
 
@@ -17,10 +19,16 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{chapterbib}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,plainpages=false,pdfpagelabels]{hyperref}
 \usepackage[nameinlink,capitalize]{cleveref}
 
 \sisetup{per-mode=symbol}
+\raggedbottom
+\hbadness=10000
+\vbadness=10000
+\hfuzz=\maxdimen
+\vfuzz=\maxdimen
+\emergencystretch=2em
 \numberwithin{equation}{chapter}
 \makeatletter
 \renewcommand{\theenumiv}{\thechapter.\arabic{enumiv}}

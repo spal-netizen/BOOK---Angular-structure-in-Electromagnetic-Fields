@@ -21,6 +21,7 @@
 - Enforce 2026-05-27 equation pedagogy lock in `LOCK-MANIFEST.md` (define all symbols; operand-level -> full-equation -> physical implication explanation; unique framing)
 - Enforce 2026-05-27 equation-numbering lock in `LOCK-MANIFEST.md` (major equations only; no renumbered re-expression in later subsections)
 - Enforce 2026-05-27 citation lock in `LOCK-MANIFEST.md` (claim-local placement; pioneer/original + proven modern sources only)
+- Enforce 2026-05-28 reader-clarity lock in `LOCK-MANIFEST.md` (deeper foundational narration, richer intermediate math steps, figure density for clarity, no architecture-centric/title-head prose justification)
 
 ## Locked governance for all drafting
 
@@ -29,6 +30,7 @@
 - Citation contract: `TOC/CITATION-CONTRACT-ULTIMATE.md`
 - No-recursion audit pass: `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md`
 - Model workflow lock: `MODEL-WORKFLOW-LOCKED.md`
+- Chapter 1 controlled depth-expansion lock: `TOC/CH01-CONTROLLED-DEPTH-EXPANSION-PLAN.md`
 
 Full detail: `LOCK-MANIFEST.md` | `00-NOTATION.md` | `.cursor/rules/book-consistency.mdc`
 
@@ -42,4 +44,4 @@ Example:
 
 `GCHECK 1.3.3`
 
-Meaning (expanded automatically): read/apply the five locked governance files, then draft only that subsection with strict HOME/USE, zero recursion/repetition, Version A tone, dense math+physics, explicit symbol definitions, equation-level interpretation, and schematic figure insertion when readability benefits.
+Meaning (expanded automatically): apply the active cumulative GCHECK set: read the five core governance files; draft strictly forward with line-by-line approval; enforce Version A tone; enforce zero recursion/repetition with HOME/USE inheritance only; keep section-first structure (subsection bridge optional); deliver dense foundational math+physics with explicit symbol definitions and intermediate steps; explain major equations at term-level/full-equation/physical levels; place robust claim-local citations with pioneering + validated modern sources and chapter-wise numbering; use chapter-wise numbered conceptual schematic figures with label+caption+in-body explanation when readability benefits; enforce prose bans on architecture-centric justification and title-head metacommentary; target 3-5 pages per subsection; restart controlled redrafting from Section 1.0 onward.
