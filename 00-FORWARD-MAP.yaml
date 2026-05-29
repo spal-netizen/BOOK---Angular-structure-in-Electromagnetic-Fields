@@ -12,6 +12,10 @@ meta:
   gcheck_policy: cumulative_updates_refine_existing_locks
   drafting_flow: strict_forward_with_line_by_line_approval
   subsection_bridge: optional_not_mandatory
+  heading_component_expansion: mandatory_student_friendly_expert_rigor
+  default_subsection_depth_target: approximately_five_pdf_pages
+  citation_placement: sentence_local_for_law_theorem_proven_reasoning
+  citation_priority_order: seminal_then_classical_then_validated_modern
 
 tag_rules:
   HOME: define and prove once; never repeat in body

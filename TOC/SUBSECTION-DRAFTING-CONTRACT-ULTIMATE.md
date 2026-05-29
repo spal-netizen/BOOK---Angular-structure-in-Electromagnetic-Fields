@@ -55,6 +55,10 @@ All chapter drafts must reflect classical monograph standards of depth, density,
 - Equation explanations must be authoritative and varied without recurring sentence molds that reveal machine-template generation.
 - Section-level opening and closing framing paragraphs must be uniquely constructed across the chapter; repeated transition templates are disallowed.
 - Cumulative governance policy is active: new GCHECK instructions refine this contract and must be merged without removing essential prior locks.
+- Every subsection heading term/component is mandatory content scope: each component must be explicitly explained in mathematically precise, student-comprehensible scholarly prose.
+- Depth target lock (default): develop subsection content to approximately five book-format pages through real derivation and interpretation density, unless the author explicitly requests another target.
+- Citation location lock: place citations directly at each law/theorem/proven statement/reasoning sentence that needs support.
+- Citation source-order lock: prefer originator/seminal/pioneering references first, then classical canonical monographs, then validated modern literature.
 
 ## Depth normalization rule
 

@@ -89,6 +89,7 @@ Radiation and coupling inner products are specialized in Chapters 2–3 (defined
 - Equation numbering policy: chapter-wise `(m.n)` style (e.g. `(1.1)`, `(3.27)`).
 - Reference-numbering policy: chapter-wise `[m.n]` style (e.g. `[1.1]`, `[4.12]`) for final production formatting.
 - Citation source policy: prioritize pioneering/original literature and latest proven developments; place citations exactly where support is needed.
+- Citation-order lock: for laws, theorems, proven concepts, and nontrivial technical reasoning, cite originator/seminal sources first, then classical authoritative monographs, then validated modern contributions.
 - Bib keys in source remain `AuthorYear` in `latex/references.bib`; rendered chapter-wise labels are a formatting-layer requirement.
 
 ## Figure readability policy
@@ -103,6 +104,7 @@ Radiation and coupling inner products are specialized in Chapters 2–3 (defined
 - Every symbol, operator, parameter, and domain qualifier in each major equation must be defined at first use in nearby prose.
 - Major equation discussion must include term-level mathematical role, full-equation function, and physical interpretation.
 - Intermediate expressions and assumption/domain clarifications should be included whenever needed for reader clarity.
+- Subsection-heading-component clarity lock: each technical component appearing in a subsection title must be explicitly defined and explained in rigorous but student-friendly scholarly prose within that subsection.
 
 ## Forbidden without cross-reference
 

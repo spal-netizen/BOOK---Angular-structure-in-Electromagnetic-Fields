@@ -277,6 +277,18 @@ The following prose-governance requirement is now permanently locked for all cha
 
 ---
 
+## LOCK ADDENDUM (2026-05-29 — SUBSECTION-HEAD EXPLANATION + SEMINAL-FIRST CITATION LOCK)
+
+The following requirements are permanently locked and mandatory for every subsection drafting pass:
+
+1. Every semantic component named in a subsection heading must be explicitly and sufficiently explained in running prose with student-friendly clarity while preserving expert-level scholarly rigor and Version A classical monograph tone.
+2. Subsection depth is measured by scientific completeness, not visual padding: heading-component unpacking, full derivation chains, and physical interpretation must be expanded until book-format depth reaches approximately five pages unless explicitly changed by the author.
+3. Citation placement remains sentence-local and proof-local: any law, theorem, established reasoning chain, or detailed technical discussion must carry support exactly where the claim is made.
+4. Source-order policy is mandatory: cite originator/seminal/pioneering literature first, then foundational legendary monographs, then validated modern developments where needed.
+5. Citation substitution with weaker secondary sources is non-compliant when seminal or canonical sources are available.
+
+---
+
 ## WRITING ORDER (locked sequence)
 
 ```
