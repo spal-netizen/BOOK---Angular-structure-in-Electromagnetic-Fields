@@ -2,6 +2,17 @@
 
 Run this audit after drafting each chapter and again at volume freeze.
 
+**GCHECK master (zero deviation):** `TOC/GCHECK-MASTER-CUMULATIVE.md` — read before every audit pass.
+
+## Chapter completion log
+
+| Chapter | Status | Audit date | Notes |
+|---------|--------|------------|-------|
+| 1 | **PASS — LOCKED** | 2026-05-29 | 32 subsections; TOC sign-off `CH01-TOC-SIGNOFF-LOCK.md`; manuscript complete |
+| 2 | **TOC LOCKED** | 2026-05-29 | 45 subsections; `CH02-TOC-AUDIT-FLOW-LOCK.md`; ready for drafting |
+| 3 | **TOC LOCKED** | 2026-05-29 | 48 subsections; `CH03-TOC-AUDIT-FLOW-LOCK.md`; scaffold synced |
+| 4 | pending | — | — |
+
 ## Audit objectives
 
 - detect repeated equation blocks,

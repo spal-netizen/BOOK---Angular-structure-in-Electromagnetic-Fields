@@ -26,6 +26,15 @@ tag_rules:
 
 chapter_1:
   title: Foundations of Angular Electromagnetic Structure
+  status: UNLOCKED_FORENSIC_EDIT
+  forensic_edit: TOC/CH01-FORENSIC-EDIT-PROGRAM-LOCK.md
+  forensic_edit_start: 2026-06-06
+  toc_signoff: TOC/CH01-TOC-SIGNOFF-LOCK.md
+  toc_signed_off: 2026-05-29
+  audit_date: 2026-05-29
+  pdf_pages_body: ~104
+  pdf_total_main: 131
+  subsections: 32
   establishes:
     - "1.1.1 maxwell_si_phasor"
     - "1.1.4 stress_tensor_energy_momentum"
@@ -38,10 +47,41 @@ chapter_1:
   forbidden_repeat: []
   inheritance: "1.7"
   examples: "1.6"
+  audit_notes:
+    - "Maxwell HOME §1.1.1; angular balance HOME §1.1.5; transport criteria §1.2.3–1.2.4"
+    - "No re-display of eq:ch1.maxwell-local outside §1.1.1; Ch.2+ USE by ref only"
+    - "Seminal citations only in Ch.1 body; architecture jargon removed from prose"
+    - "100 numbered equations; 68 TikZ schematic figures (ch01-tikz-styles.tex); bibliography ch01.bbl"
+  figure_audit:
+    status: COMPLETE_LOCKED
+    date: 2026-05-29
+    policy: all Ch.1 figures TikZ; shared styles in latex/ch01-tikz-styles.tex; labels external/no-overlap
+    labels: "fig:ch1.* concept maps; fig:ch1.wp-* worked-problem setups; fig:ch1.ex6* FIG+PROB"
+    tikz: "preamble.tex + ch01-tikz-styles.tex; 68/68 figures TikZ; layout polish AUTHOR-DEFERRED"
 
 chapter_2:
   title: Maxwell Operators and Radiation Mappings
+  status: COMPLETE_LOCKED
+  manuscript_signoff: TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md
+  locked_date: 2026-05-31
+  audit_fix_pass: 2026-05-31
+  toc_audit: TOC/CH02-TOC-AUDIT-FLOW-LOCK.md
+  toc_locked: 2026-05-29
+  subsections: 45
+  gcheck_master_locked: 2026-05-29
+  governance_locked: 2026-05-31
+  session_save: TOC/CH02-SESSION-SAVE-LOCK.md
+  session_save_date: 2026-05-31
+  next_subsection: "3.0.1"
+  drafted_through: "2.11.3"
+  pdf_pages_main: 293
+  build_status: exit_0
+  drafting_status: "CHAPTER_2_COMPLETE_LOCKED"
+  fresh_restart: TOC/CH02-FRESH-RESTART-LOCK.md
+  gcheck_master: TOC/GCHECK-MASTER-CUMULATIVE.md
+  zero_deviation: true
   establishes:
+    - "2.0 radiation_mapping_operator_form"
     - "2.1 function_spaces_operators"
     - "2.2 time_frequency_maxwell"
     - "2.3 dyadic_green_functions"
@@ -59,13 +99,33 @@ chapter_2:
   inheritance: "2.11"
   examples: "2.10"
   use_map:
-    "2.5.3": "1.1.4"
-    "2.5.4": "2.2.4"
+    "2.1.1": "1.0.3,1.1.2"
+    "2.1.4": "1.0.3"
+    "2.2.4": "1.2.4"
+    "2.4.1": "1.1.2"
+    "2.4.3": "1.1.3"
+    "2.5.3": "1.1.4,1.1.5,1.2.3"
+    "2.5.4": "1.2.4,2.2.4"
     "2.6.2": "1.3"
+    "2.6.3": "2.1.3"
+    "2.9.4": "1.2.1,1.2.3"
+    "2.10.4": "1.2.2"
+  supplies_chapter_3:
+    - "2.1.1 function_spaces"
+    - "2.2.2 helmholtz_operator"
+    - "2.4 sommerfeld_uniqueness"
+    - "2.5.1 radiation_integrals"
+    - "2.6.1 spectral_decomposition"
+    - "2.9 angular_spectrum_filter"
 
 chapter_3:
   title: Angular Momentum Eigenfields and Representation Theory
+  status: TOC_LOCKED_READY
+  toc_audit: TOC/CH03-TOC-AUDIT-FLOW-LOCK.md
+  toc_locked: 2026-05-29
+  subsections: 48
   establishes:
+    - "3.0 representation_bridge"
     - "3.1 hilbert_rigged"
     - "3.2 angular_momentum_SO3_Wigner"
     - "3.3 vector_helmholtz_debye"
@@ -75,7 +135,7 @@ chapter_3:
     - "3.7 discrete_continuous_spectra"
     - "3.8 basis_transformations"
     - "3.9 paraxial_limits"
-  requires: [chapter_2]
+  requires: [chapter_1, chapter_2]
   forbidden_repeat:
     - sommerfeld_full_proof
     - green_function_construction
@@ -83,10 +143,37 @@ chapter_3:
   inheritance: "3.11"
   examples: "3.10"
   use_map:
+    "3.0.2": "2.5.1,2.6.1"
+    "3.1.1": "2.1.1"
+    "3.1.2": "2.8.2"
+    "3.1.3": "2.6.1"
+    "3.2.1": "1.2.1,2.9.4"
+    "3.2.3": "1.3,2.6.2"
+    "3.2.4": "1.3.1"
     "3.2.5": "1.4.3"
+    "3.3.1": "2.2.2"
     "3.3.3": "2.4"
+    "3.4.3": "2.8.2"
+    "3.4.4": "3.2.2,3.3.4"
+    "3.4.5": "2.6.2"
+    "3.5.1": "2.5.3"
+    "3.5.2": "3.1.3"
+    "3.6.1": "3.4.3"
+    "3.7.1": "2.9.1,2.9.4"
+    "3.7.2": "3.6.3"
+    "3.7.4": "1.2.2"
+    "3.8.1": "2.9.1"
+    "3.8.3": "3.4,3.8.1,3.8.2"
+    "3.8.4": "1.4.5"
     "3.9.1": "1.4"
     "3.9.2": "1.4.3"
+    "3.9.4": "1.5.4"
+  supplies_chapter_4:
+    - "3.4 VSH_basis"
+    - "3.5 normalization"
+    - "3.6 truncation_symmetry_breaking"
+    - "3.7 angular_spectra"
+    - "3.8 basis_transformations"
 
 chapter_4:
   title: Source Realizability and Spectral Truncation
@@ -108,12 +195,21 @@ chapter_4:
   inheritance: "4.11"
   examples: "4.10"
   use_map:
+    "4.0.2": "3.6.2"
     "4.1.3": "2.3.2"
     "4.2.3": "1.1.2"
     "4.3.2": "2.1.3"
+    "4.4.1": "3.8.1,2.9.1"
     "4.4.2": "2.2.4"
+    "4.4.3": "3.6.2"
     "4.5.1": "3.4"
+    "4.5.2": "3.4.5,3.2.3"
+    "4.5.4": "3.5.4"
+    "4.6.1": "3.7.2"
+    "4.6.3": "3.5.3"
     "4.7.1": "2.7"
     "4.7.2": "2.7.3"
+    "4.7.4": "3.8.4,3.6.4"
     "4.9.3": "1.5"
+    "4.10.1": "3.7.2,3.4"
   transitions_to: volume_II_chapter_5

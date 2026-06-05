@@ -120,3 +120,17 @@ Each requires: **Problem statement | Schematic figure + caption | Full derivatio
 | Ready to begin §1.0.1 drafting | **Yes** |
 
 **Begin writing from:** `volume-I-ch01-04-FINAL.txt` and `00-NOTATION.md`.
+
+---
+
+## 7. Addendum (2026-05-29) — Chapter 2 TOC flow audit
+
+Pre-drafting audit (`TOC/CH02-TOC-AUDIT-FLOW-LOCK.md`) confirmed **45** Ch. 2 subsections unchanged; applied USE back-links from Ch. 1. **Ready for `GCHECK 2.0.1`.**
+
+## 8. Addendum (2026-05-29) — Chapter 1 TOC sign-off
+
+Formal sign-off (`TOC/CH01-TOC-SIGNOFF-LOCK.md`): **32/32** TOC ↔ manuscript match; **no TOC amendments** required; manuscript complete and locked.
+
+## 9. Addendum (2026-05-29) — Chapter 3 TOC flow audit
+
+Pre-drafting audit (`TOC/CH03-TOC-AUDIT-FLOW-LOCK.md`) confirmed **48** Ch. 3 subsections unchanged; applied USE links from Ch. 1–2 and Ch. 4 back-links. Scaffold `latex/ch03.tex` synced. **Ready for future `GCHECK 3.0.1`** after Ch. 2 complete.

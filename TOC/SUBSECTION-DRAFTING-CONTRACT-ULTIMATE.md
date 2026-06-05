@@ -77,3 +77,14 @@ Additional mandatory depth checks:
 - one explicit check that opening/closing framing and equation-explanation prose are stylistically distinct from neighboring subsections.
 
 No chapter is allowed to drift into narrative-only treatment for core technical sections.
+
+## Chapter 1 completion lock (2026-05-29)
+
+- `latex/ch01.tex` audited and **LOCKED**; all 32 subsections satisfy this contract.
+- Manuscript prose bans architecture vocabulary: `gate`, `contract`, `filter`, `ownership`, title-head metacommentary.
+- Citations in Ch. 1 body: seminal/pioneer keys only (see `00-NOTATION.md` and `TOC/CITATION-CONTRACT-ULTIMATE.md` § Ch. 1).
+- **Figures:** all **68** Ch.~1 figures are TikZ (`ch01-tikz-styles.tex`); caption + label + in-body interpretation mandatory; **visual layout polish AUTHOR-DEFERRED**.
+- **Zero-deviation master:** `TOC/GCHECK-MASTER-CUMULATIVE.md` — applies to Ch. 2+ with same rigor.
+- **New concepts:** any new law, theorem, proven construct, or allied technical idea must occupy its TOC HOME subsection; if unassigned, add subsection/section to TOC + forward map before drafting.
+- **Unique prose:** opening/closing paragraphs and equation-explanation rhythm must differ across sibling subsections even when physics is analogous.
+- Next drafting: Chapter 2 §2.0.1 **after user confirms** GCHECK governance review (`START-HERE.md`).

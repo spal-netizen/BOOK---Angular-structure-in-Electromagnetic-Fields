@@ -2,14 +2,17 @@
 \newcommand{\jj}{\mathrm{j}}
 \newcommand{\eim}{\mathrm{e}^{-\jj\omega t}}
 
-% Phasor fields (underlined)
-\newcommand{\E}{\underline{\mathbf{E}}}
-\renewcommand{\H}{\underline{\mathbf{H}}}
-\newcommand{\Jimp}{\underline{\mathbf{J}}_{\mathrm{imp}}}
+% Phasor fields — bold spatial vectors (Jackson/Harrington/Stratton convention).
+% Harmonic time dependence exp(-j omega t) is stated in prose; no underline marker.
+\newcommand{\E}{\mathbf{E}}
+\renewcommand{\H}{\mathbf{H}}
+\newcommand{\Jimp}{\mathbf{J}_{\mathrm{imp}}}
 
 % Common operators
 \renewcommand{\curl}{\nabla\times}
 \newcommand{\divg}{\nabla\cdot}
+\newcommand{\HCurl}{\mathcal{H}_{\curl}}
+\newcommand{\Hdiv}{\mathcal{H}_{\mathrm{div}}}
 \renewcommand{\grad}{\nabla}
 
 % Units (siunitx)

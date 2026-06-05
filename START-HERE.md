@@ -1,48 +1,180 @@
-# Start Here — Volume I (Fresh Session)
+# Start Here — Volume I
+
+
 
 **Baseline locked:** 2026-05-24  
 
-## Three files to open
+**Chapter 1 locked:** 2026-05-29  
 
-1. `LOCK-MANIFEST.md` — what is frozen  
-2. `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` — official full-book master TOC  
-3. `latex/ch01.tex` — where to write it (`\label{sec:ch101}` first)  
+**Chapter 2 locked:** 2026-05-31  
 
-## First task
+**Summer break:** 2026-05-31 → **return Friday 2026-06-06**  
 
-**§1.0.1 Scope and role of Chapter 1** `[HOME]`
+**Governance sync locked:** 2026-05-31  
+
+
+
+---
+
+
+
+## Physical review (before break)
+
+
+
+| Item | Location |
+
+|------|----------|
+
+| **Print this PDF** | `review/Volume-I-Physical-Review-2026-05-31.pdf` |
+
+| Page map + checklist | `review/README-PHYSICAL-REVIEW.md` |
+
+| Margin notes template | `review/author-margin-notes-TEMPLATE.md` |
+
+| Live build (same content) | `latex/main.pdf` — **293 pages**, exit 0 |
+
+
+
+**Review scope:** Ch. 1 + Ch. 2 only (locked manuscript). Ch. 3–4 are scaffolds — skip for content review.
+
+
+
+---
+
+
+
+## Resume (Ch. 3 — after return, Friday 2026-06-06)
+
+
+
+| Item | Value |
+
+|------|--------|
+
+| Manuscript | `latex/ch02.tex` — **Ch. 2 LOCKED** (§2.0–§2.11); `latex/ch03.tex` scaffold |
+
+| Next subsection | **§3.0.1** Symmetry, operators, and representations |
+
+| PDF | `latex/main.pdf` — **293 pages** (build exit 0) |
+
+| Sign-off | `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` |
+
+
+
+**Copy-paste command:**
+
+
+
+```text
+
+GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT
+
+```
+
+
+
+---
+
+
+
+## Three files to open first
+
+
+
+1. `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 lock authority  
+
+2. `TOC/GCHECK-MASTER-CUMULATIVE.md` — zero-deviation checklist  
+
+3. `latex/ch03.tex` — write at `\label{sec:ch301}` (§3.0.1)  
+
+
+
+Chapter 1: `latex/ch01.tex` — **COMPLETE_LOCKED** (figure layout polish only, author-deferred).  
+
+Chapter 2: `latex/ch02.tex` — **COMPLETE_LOCKED** — no prose edits without unlock.
+
+
+
+---
+
+
 
 ## Rules (one line each)
 
-- Define once (`[HOME]`); later sections cite (`[USE SS…]`)  
-- No Maxwell re-derivation after §1.1.1  
-- Examples need problem + figure + caption + all steps  
-- Enforce 2026-05-27 objective lock in `LOCK-MANIFEST.md` (continuous monograph flow, zero recursion, no template prose)
-- Enforce 2026-05-27 equation pedagogy lock in `LOCK-MANIFEST.md` (define all symbols; operand-level -> full-equation -> physical implication explanation; unique framing)
-- Enforce 2026-05-27 equation-numbering lock in `LOCK-MANIFEST.md` (major equations only; no renumbered re-expression in later subsections)
-- Enforce 2026-05-27 citation lock in `LOCK-MANIFEST.md` (claim-local placement; pioneer/original + proven modern sources only)
-- Enforce 2026-05-28 reader-clarity lock in `LOCK-MANIFEST.md` (deeper foundational narration, richer intermediate math steps, figure density for clarity, no architecture-centric/title-head prose justification)
-- Enforce 2026-05-28 science-centric prose lock in `LOCK-MANIFEST.md` (paragraphs must be science+student-learning centric; no HOME/USE/TOC/process wording in explanatory body text)
 
-## Locked governance for all drafting
 
-- Theorem ownership map: `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md`
-- Subsection contract: `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md`
-- Citation contract: `TOC/CITATION-CONTRACT-ULTIMATE.md`
-- No-recursion audit pass: `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md`
-- Model workflow lock: `MODEL-WORKFLOW-LOCKED.md`
-- Chapter 1 controlled depth-expansion lock: `TOC/CH01-CONTROLLED-DEPTH-EXPANSION-PLAN.md`
+- **Zero deviation:** full GCHECK read-set before every draft  
 
-Full detail: `LOCK-MANIFEST.md` | `00-NOTATION.md` | `.cursor/rules/book-consistency.mdc`
+- Define once (`[HOME]`); later sections cite (`[USE SS…]` / `\ref`)  
 
-## Quick drafting trigger
+- **Ch. 2 forbidden repeats:** full Maxwell derivation, gauge introduction, angular-momentum conservation proof (`00-FORWARD-MAP.yaml`)  
 
-Use this one-line command before any new subsection draft:
+- **Depth:** ≥ 5 PDF pages per subsection (`CH2-FRESH MIN-5PP`)  
 
-`GCHECK <subsection-id>`
+- **Review:** chapter-end audit only (author)  
 
-Example:
+- **Session end:** Save All → confirm `TOC/END-OF-SESSION-PROTOCOL-LOCK.md`  
 
-`GCHECK 1.3.3`
 
-Meaning (expanded automatically): apply the active cumulative GCHECK set: read the five core governance files; draft strictly forward with line-by-line approval; enforce Version A tone; enforce zero recursion/repetition with HOME/USE inheritance only; keep section-first structure (subsection bridge optional); deliver dense foundational math+physics with explicit symbol definitions and intermediate steps; explain major equations at term-level/full-equation/physical levels; place robust claim-local citations with pioneering + validated modern sources and chapter-wise numbering; use chapter-wise numbered conceptual schematic figures with label+caption+in-body explanation when readability benefits; enforce prose bans on architecture-centric justification and title-head metacommentary; enforce science-centric and student-understanding-centric paragraph construction with no governance/process wording in explanatory body text; target 3-5 pages per subsection; restart controlled redrafting from Section 1.0 onward.
+
+---
+
+
+
+## Locked governance (priority order)
+
+
+
+| # | File |
+
+|---|------|
+
+| 1 | `TOC/GCHECK-MASTER-CUMULATIVE.md` |
+
+| 2 | `LOCK-MANIFEST.md` |
+
+| 3 | `.cursor/rules/book-consistency.mdc` |
+
+| 4 | `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md` |
+
+| 5 | `TOC/CITATION-CONTRACT-ULTIMATE.md` |
+
+| 6 | `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md` |
+
+| 7 | `00-NOTATION.md` |
+
+| 8 | `00-FORWARD-MAP.yaml` |
+
+| 9 | `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md` |
+
+| 10 | `MODEL-WORKFLOW-LOCKED.md` |
+
+
+
+TOC line authority: `TOC/volume-I-ch01-04-FINAL.txt`
+
+
+
+Ch. 2 workflow locks: `TOC/CH02-FRESH-RESTART-LOCK.md`, `TOC/CH02-SESSION-SAVE-LOCK.md`
+
+
+
+---
+
+
+
+## Build
+
+
+
+```powershell
+
+powershell -ExecutionPolicy Bypass -File .\scripts\Build-VolumeI-ChapterBib.ps1
+
+```
+
+
+
+Output: `latex/main.pdf` (local; gitignored).
+

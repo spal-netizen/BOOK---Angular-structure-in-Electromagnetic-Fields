@@ -34,3 +34,23 @@ A subsection fails citation review if any of the following occurs:
 - only modern secondary literature is cited for a classical foundational claim,
 - only pioneering literature is cited for a modern implementation-limited claim,
 - citation appears away from the sentence that actually needs support.
+
+---
+
+## Chapter 1 locked citation set (body text, 2026-05-29)
+
+Chapter 1 running citations use **seminal/pioneering keys only** (no textbook keys in body cites):
+
+| Key | Role in Ch. 1 |
+|-----|----------------|
+| `maxwell1873` | Maxwell equations, field laws |
+| `poynting1884` | Energy transport |
+| `stratton1941` | Canonical EM formulation context |
+| `belinfante1940` | Symmetric stress tensor / spin-orbit split |
+| `beth1936` | Optical torque / spin angular momentum |
+| `allen1992` | Orbital angular momentum of light (with gauge caveats from §1.4) |
+| `chu1948` | Absorbing boundary / admittance |
+| `abraham1910` | Momentum density (Abraham form) |
+| `minkowski1908` | Momentum density (Minkowski form) |
+
+Chapter 2+ follows the same **seminal → classical → validated modern** hierarchy with keys appropriate to operator/radiation content; Ch. 1 keys are **USE by reference** only — do not re-cite as if re-establishing HOME results.

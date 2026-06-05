@@ -1,0 +1,61 @@
+% Chapter 1 TikZ — two-tier legibility lock (GCHECK 2026-05-29)
+% Tier A (BLOCK): flow / concept maps — stacked ch1box, symbols only on canvas
+% Tier B (GEO): worked-problem geometry — canvas + margin ch1keybox annotations
+
+\usetikzlibrary{positioning,calc}
+
+\tikzset{
+  ch1fig/.style={
+    every node/.style={font=\small},
+    >=Latex,
+    line cap=round,
+    line join=round,
+    node distance=9mm and 11mm
+  },
+  ch1geo/.style={
+    every node/.style={font=\small},
+    >=Latex,
+    line cap=round,
+    line join=round
+  },
+  ch1axis/.style={->, very thick, black!80},
+  ch1shell/.style={very thick, draw=red!70!black},
+  ch1shellB/.style={very thick, draw=blue!70!black},
+  ch1shellO/.style={very thick, draw=orange!85!black},
+  ch1box/.style={
+    draw=black!70, thick, rounded corners=3pt,
+    minimum height=9mm, minimum width=26mm,
+    align=center, inner sep=4pt, font=\small
+  },
+  ch1flow/.style={->, thick, gray!70!black},
+  ch1src/.style={fill=black, circle, inner sep=2pt},
+  ch1oncanvas/.style={
+    font=\small, align=center,
+    inner sep=2pt, outer sep=3pt,
+    fill=white, fill opacity=0.98,
+    draw=black!12, rounded corners=1pt
+  },
+  ch1lblout/.style={
+    font=\small, align=center,
+    inner sep=3pt, outer sep=3pt,
+    fill=white, fill opacity=0.98,
+    draw=black!15, rounded corners=1pt
+  },
+  ch1keybox/.style={
+    draw=black!55, thick, rounded corners=3pt,
+    minimum height=8mm, align=center,
+    inner sep=4pt, outer sep=2pt,
+    font=\footnotesize
+  }
+}
+
+% Tier A — vertical block / concept maps
+\newcommand{\ChOneFigBlock}[1]{%
+  \adjustbox{max width=0.94\linewidth, max height=0.44\textheight, center}{#1}%
+}
+% Tier B — geometry / worked-problem schematics
+\newcommand{\ChOneFigGeo}[1]{%
+  \adjustbox{max width=0.92\linewidth, max height=0.34\textheight, center}{#1}%
+}
+% Legacy alias (defaults to geo — prefer explicit tier macro in new edits)
+\newcommand{\ChOneFigResize}[1]{\ChOneFigGeo{#1}}

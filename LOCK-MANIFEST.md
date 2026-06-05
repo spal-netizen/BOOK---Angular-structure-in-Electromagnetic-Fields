@@ -8,13 +8,13 @@
 
 ## START HERE (when you return)
 
-1. Read this file (`LOCK-MANIFEST.md`) — 2 minutes  
-2. Read `00-NOTATION.md` — conventions are **locked**  
-3. Open `TOC/volume-I-ch01-04-FINAL.txt` — find §**1.0.1** `[HOME]`  
-4. Write bullets in `outlines/ch01/1.0.1.txt`  
-5. Draft prose only in `latex/ch01.tex` at `\label{sec:ch101}`  
+1. Read `START-HERE.md` — resume pointer (1 min)  
+2. Read `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 **LOCKED** (2026-05-31)  
+3. Read `00-NOTATION.md` — conventions + Ch. 2 operator symbols **locked**  
+4. Open `latex/ch03.tex` — resume at `\label{sec:ch301}` (§3.0.1)  
+5. Run full GCHECK read-set per `TOC/GCHECK-MASTER-CUMULATIVE.md` §1  
 
-**Do not use:** any `*-smoothed.txt` TOC file.
+**Resume command:** `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT`
 
 ---
 
@@ -30,6 +30,7 @@
 | `.cursor/rules/book-consistency.mdc` | AI drafting rules |
 | `latex/preamble.tex` | Document class & packages |
 | `latex/macros.tex` | Phasor macros `\E`, `\H`, etc. |
+| `latex/ch01-tikz-styles.tex` | Shared TikZ styles for all Ch.~1 figures |
 | `latex/main.tex` | Build entry point |
 | `latex/frontmatter.tex` | Title, TOC, preface shell |
 | `latex/references.bib` | Starter bibliography |
@@ -292,11 +293,141 @@ The following requirements are permanently locked and mandatory for every subsec
 ## WRITING ORDER (locked sequence)
 
 ```
-SS1.0.1 -> SS1.0.2 -> SS1.0.3 -> SS1.1.1 -> ... -> SS1.7.3
-then Chapter 2, etc.
+Chapter 1: SS1.0.1 -> ... -> SS1.7.3   [COMPLETE AND LOCKED — 2026-05-29]
+Chapter 2: SS2.0.1 -> ... -> SS2.11.3   [NEXT — after user confirms GCHECK lock]
 ```
 
-Do not skip ahead to Ch. 2 until §1.7 is drafted.
+Chapter 1 manuscript is frozen except author-directed figure layout fixes. Do not reopen Ch. 1 theory/equations without explicit unlock in `progress.md`.
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — ZERO-DEVIATION + GCHECK MASTER + CH.2 GATE)
+
+**Status:** Governance updated for Ch. 1 closure and Ch. 2 entry; **Ch. 2 drafting gated on user review** of updated GCHECK files.
+
+| Item | Value |
+|------|--------|
+| GCHECK master | `TOC/GCHECK-MASTER-CUMULATIVE.md` — **LOCKED 2026-05-29** (canonical zero-deviation checklist) |
+| Zero deviation | No TOC skip; no equation/concept re-display; no template prose; full symbol definitions; seminal-first citations; unique framing even for similar cases |
+| New concepts | New law/theorem/allied construct → assigned HOME subsection or new TOC subsection/section before drafting |
+| Ch. 1 figures | 68 TikZ complete; **visual layout polish AUTHOR-DEFERRED** |
+| Build | `latex/main.pdf` — **131 pages** (2026-05-29) |
+| Ch. 2 first target | §2.0.1 in `latex/ch02.tex` — **AUTHORIZED** via locked GCHECK master |
+
+**User action:** Send `GCHECK 2.0.1` (or confirm in chat) to begin Chapter 2 drafting.
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 2 TOC FLOW AUDIT LOCKED)
+
+**Status:** Chapter 2 TOC **audited, updated, and locked** before drafting.
+
+| Item | Value |
+|------|--------|
+| Audit document | `TOC/CH02-TOC-AUDIT-FLOW-LOCK.md` |
+| Authoritative TOC | `TOC/volume-I-ch01-04-FINAL.txt` (Ch. 2 block + minimal Ch. 3 USE back-links) |
+| Scaffold | `latex/ch02.tex` — tags synced; §2.11 label `sec:ch211` |
+| Subsections | 45 (unchanged) |
+| Key amendments | Ch. 1 USE links on §2.1, §2.2.4, §2.4, §2.5.3–§2.5.4, §2.9.4; §2.5.3 expanded for momentum/AM flux; §2.9.1 plane-wave angular spectrum |
+
+**Next:** `GCHECK 2.0.1` → draft §2.0.1 in `latex/ch02.tex`.
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 1 TOC SIGN-OFF)
+
+**Status:** Chapter 1 TOC **signed off and locked** — no amendments required.
+
+| Item | Value |
+|------|--------|
+| Sign-off document | `TOC/CH01-TOC-SIGNOFF-LOCK.md` |
+| Subsections | 32/32 TOC ↔ manuscript match |
+| Decision | **No TOC changes** — manuscript complete |
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 3 TOC FLOW AUDIT LOCKED)
+
+**Status:** Chapter 3 TOC **audited, updated, and locked** (pre-drafting).
+
+| Item | Value |
+|------|--------|
+| Audit document | `TOC/CH03-TOC-AUDIT-FLOW-LOCK.md` |
+| Authoritative TOC | `TOC/volume-I-ch01-04-FINAL.txt` (Ch. 3 block + minimal Ch. 4 USE back-links) |
+| Scaffold | `latex/ch03.tex` — all tags synced; §3.11 label `sec:ch311` |
+| Subsections | 48 (unchanged) |
+| Key amendments | Ch. 2 + Ch. 1 USE links on §3.1–§3.9; §3.11 `[DEFER]`; Ch. 4 back-links on §4.0.2, §4.4–§4.7, §4.10.1 |
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 1 FINAL AUDIT COMPLETE)
+
+**Status:** Chapter 1 manuscript **COMPLETE AND LOCKED** for Volume I forward progression.
+
+| Item | Value |
+|------|--------|
+| File | `latex/ch01.tex` |
+| Subsections | 32/32 (§1.0.1–§1.7.3) |
+| PDF body | Ch. 1 ~104 pp; total `main.pdf` per latest build (see `progress.md`) |
+| Equations | ~100 labeled `eq:ch1.*` |
+| Figures | 68 TikZ (`fig:ch1.*`); visual layout polish **AUTHOR-DEFERRED** |
+| Audit date | 2026-05-29 |
+
+Final audit resolutions:
+
+1. **No recursion:** Maxwell (`eq:ch1.maxwell-local`), stress tensor, angular balance, plane-wave template, transport criteria, and gauge/helicity definitions owned once; later sections cite by `\ref` only.
+2. **Prose de-architected:** running text purged of `gate`, `contract`, `filter`, `ownership`, title-head metacommentary; `\mathcal{D}_*` symbols retained as mathematical indices only.
+3. **Citations:** Ch. 1 body uses seminal/pioneer keys only (`maxwell1873`, `poynting1884`, `stratton1941`, `belinfante1940`, `beth1936`, `allen1992`, `chu1948`, `abraham1910`, `minkowski1908`); textbook keys removed from body cites.
+4. **§1.7 symbols aligned:** `\mathcal{D}_{\mathrm{org}}` consistent with `tab:ch1.admissibility-corollaries`; `\mathcal{R}_{\mathrm{ch1}}` defined in §1.7.1.
+5. **Build:** `scripts/Build-VolumeI-ChapterBib.ps1` → `latex/main.pdf` (**131 pages**, 2026-05-29).
+
+**Next authorized drafting target:** Chapter 2, Section 2.0 / §2.0.1 per `TOC/volume-I-ch01-04-FINAL.txt`.
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 1 FIGURE COMPLETION)
+
+**Status:** All Chapter 1 worked-problem and concept schematics **COMPLETE AND LOCKED**.
+
+| Item | Value |
+|------|--------|
+| Total figures | 68 (`fig:ch1.*`) |
+| Concept/theorem schematics | 21 (§1.0–§1.5, §1.6 closing maps) |
+| Worked-problem setup figures | 47 new `fig:ch1.wp-*` + 1 reused `fig:ch1.gauge-orbit` |
+| Coverage | 48/48 `\paragraph{Worked problem:...}` blocks have figure within 15 lines |
+| Format | **All 68 figures TikZ** (`latex/ch01-tikz-styles.tex`, `ch1fig` style); zero `\fbox` remaining; §1.6 FIG+PROB included |
+| §1.6 FIG+PROB | `fig:ch1.ex61`–`fig:ch1.ex64` retained as subsection anchors |
+
+Enforcement: every new Ch.~1 figure requires GCHECK read-before-edit; TikZ via `ch01-tikz-styles.tex`; caption + label + in-body interpretation mandatory; no label–geometry overlap.
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 1 TWO-TIER FIGURE LEGIBILITY)
+
+**Status:** All 68 Ch.~1 figures refactored under **two-tier** policy (2026-05-29).
+
+| Tier | Count | Macro | Rule |
+|------|------:|-------|------|
+| **A — BLOCK** | 13 | `\ChOneFigBlock{...}` | Concept/flow maps; symbols in `ch1box`; no `\eqref` in TikZ |
+| **B — GEO** | 55 | `\ChOneFigGeo{...}` | Geometry/wp schematics; canvas symbols via `ch1oncanvas`; annotations via margin `ch1keybox` |
+
+| Item | Value |
+|------|--------|
+| Styles | `latex/ch01-tikz-styles.tex`: `ch1oncanvas`, `ch1keybox`, split resize macros |
+| BLOCK resize | `max width=0.94\linewidth`, `max height=0.44\textheight` |
+| GEO resize | `max width=0.92\linewidth`, `max height=0.34\textheight` |
+| Batch scripts | `scripts/Refactor-Ch01-Figure-Legibility.ps1`, `Apply-Ch01-Geo-Margin*.ps1` |
+| Equations in TikZ | Stripped (`\eqref` belongs in caption / coloured-block key prose) |
+
+Enforcement: new Ch.~1 figures must declare tier (BLOCK vs GEO), use tier macro, keep canvas uncluttered, rebuild `main.pdf`.
+
+**Author note (2026-05-29):** Figure **content** (coverage, captions, labels, in-body interpretation) is locked; **visual spacing/overlap polish** is deferred to author manual pass — do not batch-refactor figures without explicit author request.
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 1 FIGURE LEGIBILITY, superseded tier detail)
+
+**Status:** Superseded by two-tier addendum above; retained for audit trail.
 
 ---
 
@@ -317,4 +448,113 @@ To change **locked** TOC or notation:
 
 ---
 
-*Baseline locked. Safe to take a break. Resume at §1.0.1.*
+*Baseline locked. Safe to take a break. Resume at **§2.6.1** (`GCHECK REFRESH DRAFT 2.6.1 — CH2-FRESH MIN-5PP ZERO-REPEAT`).*
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 2 SESSION SAVE)
+
+**Status:** Ch. 2 drafting **IN PROGRESS** — session saved end of day.
+
+| Item | Value |
+|------|--------|
+| Session lock | `TOC/CH02-SESSION-SAVE-LOCK.md` |
+| Manuscript | `latex/ch02.tex` — §2.0 intro + §2.0.1 + §2.0.2 drafted |
+| Next draft | **§2.0.3** Continuity with Chapter 1 |
+| Build | `main.pdf` — **143 pages** (exit 0, 2026-05-29) |
+| Review cadence | **Chapter-end audit only** (author); agent uses `GCHECK DRAFT NEXT — CH2-CONTINUOUS ZERO-REPEAT` |
+| Ch. 1 | **Do not edit** prose/equations without unlock |
+
+Resume: read `TOC/CH02-SESSION-SAVE-LOCK.md` → full GCHECK stack → draft §2.0.3 forward.
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — END-OF-SESSION PROTOCOL)
+
+**Status:** **LOCKED** — mandatory save/close procedure for all sessions.
+
+| Item | Value |
+|------|--------|
+| Protocol file | `TOC/END-OF-SESSION-PROTOCOL-LOCK.md` |
+| Author close | **File → Save All** → confirm disk checklist → close Cursor |
+| Agent close | Sync locks + remind author Save All (agent cannot close IDE) |
+| On-disk state | `latex/ch02.tex`, `latex/main.pdf`, session locks, governance sync (see protocol §3) |
+
+**Ch. 2 session:** **FRESH RESTART** — begin `GCHECK REFRESH DRAFT 2.0 — CH2-FRESH MIN-5PP ZERO-REPEAT`. See `TOC/CH02-FRESH-RESTART-LOCK.md`.
+
+---
+
+## LOCK ADDENDUM (2026-05-31 — CHAPTER 2 SESSION SAVE)
+
+**Status:** Ch. 2 drafting **IN PROGRESS** — session saved for break.
+
+| Item | Value |
+|------|--------|
+| Session lock | `TOC/CH02-SESSION-SAVE-LOCK.md` |
+| Manuscript | `latex/ch02.tex` — through **§2.6 intro** |
+| Next draft | **§2.6.1** Eigenfunctions and spectral decomposition `[HOME]` |
+| Build | `latex/main.pdf` — **219 pages** (exit 0, 2026-05-31) |
+| Forward map | `00-FORWARD-MAP.yaml` → `next_subsection: "2.6.1"` |
+
+Resume: read `TOC/CH02-SESSION-SAVE-LOCK.md` → full GCHECK stack → `GCHECK REFRESH DRAFT 2.6.1 — CH2-FRESH MIN-5PP ZERO-REPEAT`.
+
+---
+
+## LOCK ADDENDUM (2026-05-31 — GOVERNANCE SYNC LOCK)
+
+**Status:** **LOCKED** — all governance files synced to Ch. 2 manuscript checkpoint.
+
+| Item | Value |
+|------|--------|
+| Lock date | 2026-05-31 |
+| Session lock | `TOC/CH02-SESSION-SAVE-LOCK.md` |
+| Forward map | `00-FORWARD-MAP.yaml` → `next_subsection: "2.6.1"` |
+| Progress tracker | `progress.md` |
+| GCHECK master | `TOC/GCHECK-MASTER-CUMULATIVE.md` §4 updated |
+| Fresh restart | `TOC/CH02-FRESH-RESTART-LOCK.md` §5 updated |
+| Start pointer | `START-HERE.md` |
+| Manuscript drafted through | **§2.6 intro** (`sec:ch26`) |
+| Build | `latex/main.pdf` — **219 pages** (exit 0) |
+| Ch. 1 | **COMPLETE_LOCKED** — no prose edits without unlock |
+
+**Author close:** File → Save All → close Cursor (see `TOC/END-OF-SESSION-PROTOCOL-LOCK.md`).
+
+---
+
+## LOCK ADDENDUM (2026-05-31 — SUMMER BREAK / PHYSICAL REVIEW)
+
+**Status:** **LOCKED** — Ch. 1–2 manuscript frozen; physical review pack prepared; resume Ch. 3 **2026-06-06**.
+
+| Item | Value |
+|------|--------|
+| Break | 5 days from 2026-05-31 |
+| Return | **Friday 2026-06-06** |
+| Review PDF | `review/Volume-I-Physical-Review-2026-05-31.pdf` (293 pp) |
+| Review guide | `review/README-PHYSICAL-REVIEW.md` |
+| Notes template | `review/author-margin-notes-TEMPLATE.md` |
+| Build verified | `latex/main.pdf` — exit 0, 2026-05-31 |
+| Ch. 1–2 | **COMPLETE_LOCKED** — margin notes only until unlock |
+| Next draft | **§3.0.1** after return |
+
+**Resume command (2026-06-06):** `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT`
+
+---
+
+## LOCK ADDENDUM (2026-05-31 — CHAPTER 2 COMPLETE AND LOCKED)
+
+**Status:** Chapter 2 manuscript **COMPLETE AND LOCKED** — audit-fix pass signed off; Ch. 3 drafting authorized.
+
+| Item | Value |
+|------|--------|
+| Sign-off lock | `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` |
+| Manuscript | `latex/ch02.tex` — **45/45 subsections** (§2.0.1–§2.11.3) |
+| Audit-fix pass | **COMPLETE** (P0–P3) |
+| Build | `latex/main.pdf` — **293 pages** (exit 0) |
+| Forward map | `00-FORWARD-MAP.yaml` → `status: COMPLETE_LOCKED`; `next_subsection: "3.0.1"` |
+| Ch. 1 | **COMPLETE_LOCKED** — no prose edits without unlock |
+| Ch. 2 | **COMPLETE_LOCKED** — no prose/equation edits without unlock |
+| Next draft | **§3.0.1** Symmetry, operators, and representations |
+
+**Resume command:** `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT`
+
+*Baseline locked. Ch. 2 locked. Resume Chapter 3 at §3.0.1.*

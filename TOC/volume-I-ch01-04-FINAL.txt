@@ -1,5 +1,6 @@
-# ===============================================================================
-# *** LOCKED 2026-05-24 — DO NOT EDIT WITHOUT UNLOCK (see LOCK-MANIFEST.md) ***
+# Ch. 1 TOC signed off 2026-05-29 — see TOC/CH01-TOC-SIGNOFF-LOCK.md
+# Ch. 2 TOC amended 2026-05-29 — see TOC/CH02-TOC-AUDIT-FLOW-LOCK.md
+# Ch. 3 TOC amended 2026-05-29 — see TOC/CH03-TOC-AUDIT-FLOW-LOCK.md (+ minimal Ch. 4 USE back-links)
 # VOLUME I - FINAL TOC (Chapters 1-4) - AUTHORITATIVE FOR WRITING
 # Angular Structure in Electromagnetic Fields
 # exp(-j*omega*t) | SI | 171 subsections | Zero body-text recursion
@@ -9,6 +10,7 @@
 # ===============================================================================
 
 Chapter 1 - Foundations of Angular Electromagnetic Structure
+#   LOCKED 2026-05-29 — TOC/manuscript sign-off; see TOC/CH01-TOC-SIGNOFF-LOCK.md; no amendments
 
 1.0 Introduction and Scope
 #   No new definitions. Maps reader into Volume I.
@@ -68,157 +70,175 @@ Chapter 1 - Foundations of Angular Electromagnetic Structure
 
 # -------------------------------------------------------------------------------
 Chapter 2 - Maxwell Operators and Radiation Mappings
+# *** AUDIT INCORPORATED 2026-05-29 | TOC/CH02-TOC-AUDIT-FLOW-LOCK.md | status: LOCKED ***
+# Verify: each line below must match this checklist (tags + titles are the audit deliverable).
+#   [A1] 2.0.1-2.0.2 [HOME]; 2.0.3 narrative (no tag); 2.11.1-2.11.3 [DEFER]
+#   [A2] 2.1.1 [USE SS1.0.3][USE SS1.1.2]; 2.1.4 [USE SS1.0.3]
+#   [A3] 2.2.4 [USE SS1.2.4]; 2.4.1 [USE SS1.1.2]; 2.4.3 [USE SS1.1.3]
+#   [A4] 2.5.3 title expanded + [USE SS1.1.4][USE SS1.1.5][USE SS1.2.3]
+#   [A5] 2.5.4 [USE SS1.2.4][USE SS2.2.4]; 2.9.4 [USE SS1.2.1][USE SS1.2.3]
+#   [A6] 2.9.1 title = "Plane-wave angular spectrum and radiation operators"
+#   [A7] 2.10.4 [USE SS1.2.2]; scaffold mirror: latex/ch02.tex (% TOC tag: lines)
+#   BRIDGE IN: §1.7.3 admissibility chain (R_ch1); operator-domain formalism deferred from Ch.1
+#   BRIDGE OUT: §2.11.3 → Ch.3 Hilbert + J operators + VSH on radiation operators (§2.5–§2.9)
 
 2.0 Introduction
-#   Narrative bridge from Chapter 1; no [USE] tags
-2.0.1 Radiation as a source-to-field mapping
-2.0.2 Maxwell equations in operator form
+#   Narrative bridge from Chapter 1; establishes radiation-map viewpoint; no [USE] tags on 2.0.x
+2.0.1 Radiation as a source-to-field mapping [HOME]
+2.0.2 Maxwell equations in operator form [HOME]
 2.0.3 Continuity with Chapter 1
+#   Narrative import of R_ch1, D_J, D_org, D_g, D_op by reference; cites §1.7.1–§1.7.3 in prose
 
 2.1 Function Spaces and Maxwell Operators
-#   MATH: Hilbert/Banach spaces for fields; domain, range, adjoint
-2.1.1 Spaces for sources, fields, and distributions [HOME]
+#   MATH: Hilbert/Banach spaces for fields; domain, range, adjoint; inherits §1.0.3, §1.1.2 source admissibility
+2.1.1 Spaces for sources, fields, and distributions [HOME][USE SS1.0.3][USE SS1.1.2]
 2.1.2 Linear operators: domain, range, and adjoint [HOME]
 2.1.3 Boundedness, compactness, rank deficiency, spectral compression [HOME]
-2.1.4 Self-adjointness, closures, and admissibility [HOME]
+2.1.4 Self-adjointness, closures, and admissibility [HOME][USE SS1.0.3]
 
 2.2 Time- and Frequency-Domain Maxwell Operators
-#   MATH: time-harmonic reduction; propagating/evanescent subspaces
+#   MATH: time-harmonic reduction; Helmholtz operator HOME here; propagating/evanescent split; links §1.2.4
 2.2.1 Time-domain evolution [HOME]
 2.2.2 Frequency-domain Maxwell operators [HOME]
+#   Establishes curl-curl / Helmholtz operator form; full separation deferred to §3.3
 2.2.3 Causality and time-frequency equivalence [HOME]
-2.2.4 Propagating, evanescent, and non-propagating subspaces [HOME]
+2.2.4 Propagating, evanescent, and non-propagating subspaces [HOME][USE SS1.2.4]
 
 2.3 Green Functions and Electromagnetic Inversion
-#   MATH: scalar/vector/dyadic Green functions; retardation; distributions
+#   MATH: scalar/vector/dyadic Green functions; retardation; distributions; feeds §2.5 radiation integrals
 2.3.1 Scalar, vector, and dyadic Green functions [HOME]
 2.3.2 Singularities, distributions, and regularization [HOME]
 2.3.3 Retardation and causal propagation [HOME]
 2.3.4 Inversion and solvability [HOME]
 
 2.4 Radiation Conditions and Uniqueness
-#   MATH: Sommerfeld condition; uniqueness theorem
-2.4.1 Sommerfeld radiation condition [HOME]
+#   MATH: Sommerfeld condition; extends §1.1.3 uniqueness to unbounded radiative exterior
+2.4.1 Sommerfeld radiation condition [HOME][USE SS1.1.2]
 2.4.2 Outgoing-wave selection [HOME]
-2.4.3 Uniqueness of radiative solutions [HOME]
+2.4.3 Uniqueness of radiative solutions [HOME][USE SS1.1.3]
 2.4.4 Implications for source reconstruction [HOME]
 
 2.5 Radiation Integrals and Source-to-Field Mappings
-#   MATH: radiation integrals; near/intermediate/far; operator norms
+#   MATH: radiation integrals; near/intermediate/far; flux operators at radiative boundary
 2.5.1 Source-to-field integral representations [HOME]
 2.5.2 Near, intermediate, and far regimes [HOME]
-2.5.3 Energy, power, and operator norms [USE SS1.1.4]
-2.5.4 Radiative and non-radiative components [USE SS2.2.4]
+2.5.3 Energy, momentum, angular-momentum flux, power, and operator norms [USE SS1.1.4][USE SS1.1.5][USE SS1.2.3]
+2.5.4 Radiative and non-radiative components [USE SS1.2.4][USE SS2.2.4]
 
 2.6 Spectral Theory of Radiation Operators
-#   MATH: spectral decomposition; Fredholm structure
+#   MATH: abstract spectral/Fredholm structure; concrete VSH eigenbasis deferred to §3.4
 2.6.1 Eigenfunctions and spectral decomposition [HOME]
 2.6.2 Rotational symmetry and spectral degeneracy [USE SS1.3]
 2.6.3 Fredholm structure and solvability [USE SS2.1.3][HOME]
 2.6.4 Geometric constraints on radiative spectra [HOME]
 
 2.7 Non-Radiating Sources and Null Spaces
-#   MATH: null space of radiation operator; NR currents
+#   MATH: null space of radiation operator; NR currents; Ch.4 USE §2.7 without redefining
 2.7.1 Null spaces of radiation operators [HOME]
 2.7.2 Non-radiating current configurations [HOME]
 2.7.3 Evanescent subspaces and non-reconstructability [HOME]
 2.7.4 Consequences for angular spectra [HOME]
 
 2.8 Reciprocity and Radiative Coupling
-#   MATH: Lorentz reciprocity; bilinear form; mode orthogonality
+#   MATH: Lorentz reciprocity; bilinear form; mode orthogonality preview for §3.4.3
 2.8.1 Lorentz reciprocity in operator form [HOME]
 2.8.2 Orthogonality and coupling of radiative modes [HOME]
 2.8.3 Reciprocity in radiation and reception [HOME]
 
 2.9 Action of Radiation Operators on Angular Spectra
-#   MATH: angular spectrum filter; near-to-far map
-2.9.1 Radiation operators in angular representation [HOME]
+#   MATH: plane-wave angular spectrum; radiation operator filter; near-to-far map; basis change HOME in §3.8
+2.9.1 Plane-wave angular spectrum and radiation operators [HOME]
 2.9.2 Retained, suppressed, and filtered components [HOME]
 2.9.3 Near-to-far transformation [HOME]
-2.9.4 Far-field angular accessibility [HOME]
+2.9.4 Far-field angular accessibility [HOME][USE SS1.2.1][USE SS1.2.3]
 
 2.10 Examples [FIG+PROB]
 2.10.1 Compactness of radiation operators [FIG+PROB][USE SS2.1.3]
 2.10.2 Non-radiating source configurations [FIG+PROB][USE SS2.7.2]
 2.10.3 Evanescent suppression in the far field [FIG+PROB][USE SS2.9.3]
-2.10.4 Radiation from structured source states [FIG+PROB][HOME]
+2.10.4 Radiation from structured source states [FIG+PROB][HOME][USE SS1.2.2]
 
 2.11 Chapter Summary and Forward Map
+#   Sole [DEFER] block in Chapter 2; §2.11.3 must export §2.5–§2.9 to Ch.3
 2.11.1 Results established in Chapter 2 [DEFER]
 2.11.2 Concepts deferred to Chapters 3-4 and Volume II [DEFER]
 2.11.3 Bridge to Chapter 3 [DEFER]
 
 # -------------------------------------------------------------------------------
 Chapter 3 - Angular Momentum Eigenfields and Representation Theory
+#   BRIDGE IN: §2.11.3 radiation operators, spectral skeleton, angular-spectrum filter
+#   BRIDGE OUT: §3.11.3 → Ch.4 eigenfield coupling (§4.5), truncation (§4.6–§4.7)
 
 3.0 Introduction
-3.0.1 Symmetry, operators, and representations
-3.0.2 Eigenfield expansions of radiative fields
+#   Narrative bridge; no [USE] tags on 3.0.3
+3.0.1 Symmetry, operators, and representations [HOME]
+3.0.2 Eigenfield expansions of radiative fields [USE SS2.5.1][USE SS2.6.1]
 3.0.3 Continuity with Chapters 1 and 2
+#   Narrative import of R_ch1 and Ch.2 operator exports by reference
 
 3.1 Hilbert-Space Framework for Radiative Fields
-#   MATH: energy norm; completeness; rigged Hilbert space
-3.1.1 Finite-energy radiative field spaces [HOME]
-3.1.2 Inner products, orthogonality, and completeness [HOME]
-3.1.3 Continuous spectra and generalized eigenfunctions [HOME]
+#   MATH: energy norm; completeness; rigged Hilbert space; extends §2.1 function spaces
+3.1.1 Finite-energy radiative field spaces [HOME][USE SS2.1.1]
+3.1.2 Inner products, orthogonality, and completeness [HOME][USE SS2.8.2]
+3.1.3 Continuous spectra and generalized eigenfunctions [HOME][USE SS2.6.1]
 3.1.4 Rigged Hilbert spaces and distributional modes [HOME]
 
 3.2 Angular Momentum Operators and SO(3)
-#   MATH: J operator; commutation; Wigner D-matrices; helicity
-3.2.1 Total angular momentum on Maxwell fields [HOME]
+#   MATH: J operator; commutation; Wigner D-matrices; helicity; inherits §1.2–§1.3, §2.9.4
+3.2.1 Total angular momentum on Maxwell fields [HOME][USE SS1.2.1][USE SS2.9.4]
 3.2.2 Commutation and simultaneous eigenfields [HOME]
-3.2.3 SO(3) representations and degeneracy [HOME]
-3.2.4 Wigner rotations and irreducible coupling [HOME]
+3.2.3 SO(3) representations and degeneracy [HOME][USE SS1.3][USE SS2.6.2]
+3.2.4 Wigner rotations and irreducible coupling [HOME][USE SS1.3.1]
 3.2.5 Helicity, polarization, and dual symmetry [USE SS1.4.3][HOME]
 
 3.3 Vector Helmholtz Theory and Separation of Variables
-#   MATH: vector Helmholtz; Debye potentials; radial functions
-3.3.1 Reduction to the vector Helmholtz equation [HOME]
+#   MATH: vector Helmholtz; Debye potentials; radial functions; Helmholtz operator from §2.2.2
+3.3.1 Reduction to the vector Helmholtz equation [HOME][USE SS2.2.2]
 3.3.2 Separation in spherical coordinates [HOME]
 3.3.3 Radial functions and outgoing-wave admissibility [USE SS2.4]
 3.3.4 Debye potentials and generating functions [HOME]
 
 3.4 Vector Spherical Harmonics and Eigenfields
-#   MATH: Y_l^m, M_l^m, N_l^m DEFINITIONS; orthogonality; eigenfield construction
+#   MATH: Y_l^m, M_l^m, N_l^m DEFINITIONS (single HOME); orthogonality; eigenfield construction
 3.4.1 Scalar and vector spherical harmonics (definitions) [HOME]
 3.4.2 Toroidal, poloidal, and divergence-free structure [HOME]
-3.4.3 Orthogonality, completeness, resolution of identity [HOME]
-3.4.4 Construction of angular-momentum eigenfields [HOME]
-3.4.5 Degeneracy and representation coupling [HOME]
+3.4.3 Orthogonality, completeness, resolution of identity [HOME][USE SS2.8.2]
+3.4.4 Construction of angular-momentum eigenfields [HOME][USE SS3.2.2][USE SS3.3.4]
+3.4.5 Degeneracy and representation coupling [HOME][USE SS2.6.2]
 
 3.5 Normalization and Spectral Density
-#   MATH: flux/energy normalization; continuous-spectrum measure
-3.5.1 Energy and flux normalization [HOME]
-3.5.2 Continuous-spectrum normalization [HOME]
+#   MATH: flux/energy normalization; continuous-spectrum measure; inherits §2.5.3 flux norms
+3.5.1 Energy and flux normalization [HOME][USE SS2.5.3]
+3.5.2 Continuous-spectrum normalization [HOME][USE SS3.1.3]
 3.5.3 Density of states and multiplicity [HOME]
 3.5.4 Consequences of normalization choice [HOME]
 
 3.6 Completeness, Truncation, and Symmetry Breaking
-#   MATH: completeness on R^3; finite-support loss of completeness
-3.6.1 Completeness in unbounded domains [HOME]
+#   MATH: completeness on R^3; finite-support loss of completeness; feeds Ch.4 §4.6
+3.6.1 Completeness in unbounded domains [HOME][USE SS3.4.3]
 3.6.2 Truncation and loss of completeness [HOME]
 3.6.3 Boundary-induced mode mixing [HOME]
 3.6.4 Accessible structure under broken symmetry [HOME]
 
 3.7 Discrete and Continuous Angular Spectra
-#   MATH: continuous l on R^3; discrete l under boundaries; phase vortices
-3.7.1 Angular spectra in unbounded space [HOME]
-3.7.2 Quantization from boundary constraints [HOME]
+#   MATH: continuous l on R^3; discrete l under boundaries; inherits §2.9 angular filter
+3.7.1 Angular spectra in unbounded space [HOME][USE SS2.9.1][USE SS2.9.4]
+3.7.2 Quantization from boundary constraints [HOME][USE SS3.6.3]
 3.7.3 Integer and non-integer angular indices [HOME]
-3.7.4 Phase singularities and topological limits [HOME]
+3.7.4 Phase singularities and topological limits [HOME][USE SS1.2.2]
 
 3.8 Change of Representation Basis
-#   MATH: plane-wave, cylindrical, parabolic; basis transformation matrices
-3.8.1 Plane-wave and Fourier representations [HOME]
+#   MATH: plane-wave, cylindrical, parabolic; basis transformation; extends §2.9.1 operator view
+3.8.1 Plane-wave and Fourier representations [HOME][USE SS2.9.1]
 3.8.2 Cylindrical and parabolic bases [HOME]
-3.8.3 Equivalence transformations [HOME]
-3.8.4 Representation dependence of OAM modes [HOME]
+3.8.3 Equivalence transformations [HOME][USE SS3.4][USE SS3.8.1][USE SS3.8.2]
+3.8.4 Representation dependence of OAM modes [HOME][USE SS1.4.5]
 
 3.9 Gauge-Invariant Interpretation and Approximation Limits
 3.9.1 Gauge-invariant meaning of eigenfields [USE SS1.4]
 3.9.2 Conserved versus representation-dependent quantities [USE SS1.4.3]
 3.9.3 Scalar and paraxial limits [HOME]
-3.9.4 Observables versus representation artifacts [HOME]
+3.9.4 Observables versus representation artifacts [HOME][USE SS1.5.4]
 
 3.10 Examples [FIG+PROB]
 3.10.1 Free-space angular-momentum eigenfields [FIG+PROB][USE SS3.4.4]
@@ -227,6 +247,7 @@ Chapter 3 - Angular Momentum Eigenfields and Representation Theory
 3.10.4 Symmetry breaking and mode coupling [FIG+PROB][USE SS3.6.3]
 
 3.11 Chapter Summary and Forward Map
+#   Sole [DEFER] block in Chapter 3; §3.11.3 exports §3.4–§3.9 to Ch.4
 3.11.1 Results established in Chapter 3 [DEFER]
 3.11.2 Concepts deferred to Chapter 4 and Volume II [DEFER]
 3.11.3 Bridge to Chapter 4 [DEFER]
@@ -236,7 +257,7 @@ Chapter 4 - Source Realizability and Spectral Truncation
 
 4.0 Introduction
 4.0.1 Realizability and accessibility limits
-4.0.2 Finite geometry as a spectral constraint
+4.0.2 Finite geometry as a spectral constraint [USE SS3.6.2]
 4.0.3 Continuity with Chapters 1-3
 
 4.1 Admissible Electromagnetic Sources
@@ -261,31 +282,31 @@ Chapter 4 - Source Realizability and Spectral Truncation
 4.3.4 Singular values and radiative rank [HOME]
 
 4.4 Localization and Angular Bandlimits
-#   MATH: Fourier-angular duality; evanescent/propagating split
-4.4.1 Spatial localization and Fourier-angular duality [HOME]
+#   MATH: Fourier-angular duality; evanescent/propagating split; inherits §3.8 plane-wave basis
+4.4.1 Spatial localization and Fourier-angular duality [HOME][USE SS3.8.1][USE SS2.9.1]
 4.4.2 Evanescent and propagating components [USE SS2.2.4]
-4.4.3 Decay of high-order angular content [HOME]
+4.4.3 Decay of high-order angular content [HOME][USE SS3.6.2]
 4.4.4 Finite-support spectral restrictions [HOME]
 
 4.5 Coupling to Angular-Momentum Eigenfields
 #   MATH: coupling integrals; selection rules; modal weights
 4.5.1 Eigenfield expansions of radiated fields [USE SS3.4]
-4.5.2 Coupling integrals and selection rules [HOME]
+4.5.2 Coupling integrals and selection rules [HOME][USE SS3.4.5][USE SS3.2.3]
 4.5.3 Dependence on geometry and aperture size [HOME]
-4.5.4 Modal weights and coupling strength [HOME]
+4.5.4 Modal weights and coupling strength [HOME][USE SS3.5.4]
 
 4.6 Truncation and Effective Dimension
 #   MATH: max supported l; SV decay; effective EM dimension
-4.6.1 Maximum supported angular order [HOME]
+4.6.1 Maximum supported angular order [HOME][USE SS3.7.2]
 4.6.2 Scaling laws for spectral truncation [HOME]
-4.6.3 Decay of high-order coupling [HOME]
+4.6.3 Decay of high-order coupling [HOME][USE SS3.5.3]
 4.6.4 Effective rank and electromagnetic dimension [HOME]
 
 4.7 Null Spaces, Accessibility, and Reconstruction
 4.7.1 Non-radiating and unreachable modes [USE SS2.7]
 4.7.2 Reactive subspaces and evanescent accessibility [USE SS2.7.3][HOME]
 4.7.3 Synthesis, reconstruction, and inversion limits [HOME]
-4.7.4 Localization versus angular resolution [HOME]
+4.7.4 Localization versus angular resolution [HOME][USE SS3.8.4][USE SS3.6.4]
 
 4.8 Scaling Laws and Spectral Concentration
 #   MATH: LPS concentration; Kolmogorov n-width; mode-count scaling
@@ -301,7 +322,7 @@ Chapter 4 - Source Realizability and Spectral Truncation
 4.9.4 Implications for radiation and measurement [DEFER to Vol.II Ch.5+]
 
 4.10 Examples [FIG+PROB]
-4.10.1 Maximum angular momentum of a finite aperture [FIG+PROB][HOME]
+4.10.1 Maximum angular momentum of a finite aperture [FIG+PROB][HOME][USE SS3.7.2][USE SS3.4]
 4.10.2 Construction of non-accessible eigenfields [FIG+PROB][USE SS2.7]
 4.10.3 Near-field versus far-field truncation [FIG+PROB][USE SS2.9.3]
 4.10.4 Mode-count scaling with geometry and frequency [FIG+PROB][USE SS4.8]

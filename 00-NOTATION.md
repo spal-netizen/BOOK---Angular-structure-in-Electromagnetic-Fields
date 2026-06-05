@@ -1,6 +1,9 @@
 # Notation and Conventions — Volume I
 
 **Status:** LOCKED — 2026-05-24 (see `LOCK-MANIFEST.md`)  
+**Chapter 1 audit:** COMPLETE AND LOCKED — 2026-05-29 (final no-recursion pass, seminal citations only in body)  
+**Chapter 1 figures:** COMPLETE AND LOCKED — 2026-05-29 (**all 68 figures TikZ** via `ch01-tikz-styles.tex`; caption + in-body interpretation mandatory; **visual layout polish AUTHOR-DEFERRED**)  
+**Chapter 2 audit:** COMPLETE AND LOCKED — 2026-05-31 (45/45 subsections; operator ledger; DOF diagnostic suite; see `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md`)  
 **Changes:** require entry in `LOCK-MANIFEST.md` unlock policy before editing.
 
 ## Time dependence
@@ -36,20 +39,22 @@ Material relations (linear, local, isotropic unless stated):
 ## Maxwell equations (frequency domain, vacuum regions)
 
 \[
-\nabla\times\underline{\mathbf{E}} = -j\omega\mu_0\underline{\mathbf{H}}, \qquad
-\nabla\times\underline{\mathbf{H}} = j\omega\varepsilon_0\underline{\mathbf{E}} + \underline{\mathbf{J}}_{\mathrm{imp}},
+\nabla\times\mathbf{E} = -j\omega\mu_0\mathbf{H}, \qquad
+\nabla\times\mathbf{H} = j\omega\varepsilon_0\mathbf{E} + \mathbf{J}_{\mathrm{imp}},
 \]
 \[
-\nabla\cdot(\varepsilon_0\underline{\mathbf{E}}) = \rho, \qquad
-\nabla\cdot(\mu_0\underline{\mathbf{H}}) = 0 .
+\nabla\cdot(\varepsilon_0\mathbf{E}) = \rho, \qquad
+\nabla\cdot(\mu_0\mathbf{H}) = 0 .
 \]
+
+Phasor fields \(\mathbf{E},\mathbf{H}\) are written in **bold** without underlines, consistent with Jackson, Harrington, and Stratton. Time dependence \(\exp(-j\omega t)\) is fixed once per section and not repeated on every symbol.
 
 ## Field and source symbols
 
 | Symbol | Meaning |
 |--------|---------|
-| \(\underline{\mathbf{E}}, \underline{\mathbf{H}}\) | Phasor electric and magnetic fields |
-| \(\underline{\mathbf{J}}_{\mathrm{imp}}\) | Impressed electric current density |
+| \(\mathbf{E}, \mathbf{H}\) | Phasor electric and magnetic fields (bold spatial vectors; harmonic \(\exp(-j\omega t)\) stated in prose) |
+| \(\mathbf{J}_{\mathrm{imp}}\) | Impressed electric current density (phasor) |
 | \(\rho\) | Charge density |
 | \(\underline{\mathbf{A}}, \phi\) | Vector and scalar potentials (Lorenz gauge unless noted) |
 
@@ -70,6 +75,21 @@ Underlined symbols denote phasors; time-domain vectors are **not** underlined.
 | \(\mathcal{G}\) | Dyadic Green function operator |
 | \(\dagger\) | Adjoint (with appropriate inner product) |
 
+### Chapter 2 operator symbols (locked with Table 2.1 in §2.0.3)
+
+| Symbol | Domain → range | Effective definition / note |
+|--------|----------------|----------------------------|
+| \(\mathcal{S}_\omega\) | \(\mathcal{J}_\Omega\to\mathcal{F}_\Omega\) | Maxwell source-to-field closure; not transport-default |
+| \(\Pi_{\mathrm{prop}},\Pi_{\mathrm{ev}},\Pi_{\mathrm{non}}\) | \(\mathcal{F}_\Omega\to\mathcal{F}_\Omega\) | Spectral split; formal until Ch. 3 §3.1.3 |
+| \(\Pi_{\mathrm{rad}}\) | \(\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{rad}}\) | **From §2.2.4 onward:** \(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\) |
+| \(\mathcal{R}_\omega\) | \(\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}\) | Radiation map; \(\ker\mathcal{R}_\omega\) infinite |
+| \(\Lambda_{\mathrm{nf}}\) | \(\mathcal{J}_\Omega\to a(\widehat{\mathbf{k}})\) | Near-to-far angular amplitude |
+| \(\Lambda_{\mathrm{rad}},\mathcal{M}_\omega\) | \(\mathcal{J}_\Omega\to\) observables | Far readout; finite rank when aperture-limited |
+| \(a,a_{\mathrm{ret}},a_{\mathrm{sup}},a_{\mathrm{acc}},a_{\mathrm{obs}}\) | on \(S^{2}\) | Stages of angular content (retained, suppressed, accessible, observed) |
+| \(\mathcal{D}_{J,\mathrm{reg}},\mathcal{D}_{\mathrm{ch2}}\) | flags | Regime and chapter inheritance gates |
+
+Do not overload these symbols in Chapters 3–4; harmonic relabeling in Ch. 3 must preserve composition order.
+
 ## Inner products
 
 Finite-energy fields on domain \(\Omega\):
@@ -86,10 +106,12 @@ Radiation and coupling inner products are specialized in Chapters 2–3 (defined
 - LaTeX labels: `\label{sec:chMM.SSS}` for section `MM.SSS` (e.g. `sec:ch03.4.2`).
 - Theorems: `thm:chMM.name`, equations: `eq:chMM.name`.
 - Figures: `fig:chMM.name` (e.g. `fig:ch01.rotation-schema`) with chapter-local numbering in rendered output.
+- **Worked-problem figure labels (Ch. 1):** `fig:ch1.wp-<slug>` immediately after each `\paragraph{Worked problem:...}`; must include labeled geometry/variables, caption, and one in-body `Figure~\ref{...}` interpretation sentence.
 - Equation numbering policy: chapter-wise `(m.n)` style (e.g. `(1.1)`, `(3.27)`).
 - Reference-numbering policy: chapter-wise `[m.n]` style (e.g. `[1.1]`, `[4.12]`) for final production formatting.
 - Citation source policy: prioritize pioneering/original literature and latest proven developments; place citations exactly where support is needed.
 - Citation-order lock: for laws, theorems, proven concepts, and nontrivial technical reasoning, cite originator/seminal sources first, then classical authoritative monographs, then validated modern contributions.
+- **Chapter 1 body lock (2026-05-29):** manuscript prose uses seminal/pioneer keys only (`maxwell1873`, `poynting1884`, `stratton1941`, `belinfante1940`, `beth1936`, `allen1992`, `chu1948`, `abraham1910`, `minkowski1908`); architecture jargon (`gate`, `contract`, `filter`, `ownership`) is banned in running text.
 - Bib keys in source remain `AuthorYear` in `latex/references.bib`; rendered chapter-wise labels are a formatting-layer requirement.
 
 ## Figure readability policy
@@ -97,6 +119,7 @@ Radiation and coupling inner products are specialized in Chapters 2–3 (defined
 - Use only compact conceptual/theorem-centric schematics when a governing equation, theorem step, or interpretation transition benefits from geometric readability.
 - Every included figure must have a precise caption, explicit labels inside the graphic, and a body-text explanation linking labels to equation symbols and physical meaning.
 - Decorative figures are disallowed.
+- **TikZ policy (Volume I):** enabled in `latex/preamble.tex`; **`latex/ch01-tikz-styles.tex`** defines shared styles (`ch1fig`, `ch1box`, `ch1lblout`, …); **all 68 Chapter~1 figures are TikZ** (concept maps, `fig:ch1.wp-*`, `fig:ch1.ex6*`); labels use `ch1lblout` / external positioning to prevent overlap with geometry.
 - Figure numbering follows chapter-wise monotone order in rendered output (e.g., Fig. 1.1, 1.2, ... within Chapter 1).
 
 ## Equation pedagogy baseline (locked)

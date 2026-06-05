@@ -2,18 +2,25 @@
 
 **Conventions:** \(e^{-j\omega t}\), SI | **Target:** publisher-ready Vol. I in 12 months  
 **Baseline locked:** 2026-05-24 (`LOCK-MANIFEST.md`)  
-**Start date:** _____________ (fill when you begin §1.0.1)  
+**Chapter 1 locked:** 2026-05-29  
+**Chapter 2 locked:** 2026-05-31  
 **TOC:** `TOC/volume-I-ch01-04-FINAL.txt` — LOCKED  
-**Resume at:** §1.1.1 `[HOME]` in `latex/ch01.tex` (`sec:ch111`)
+**GCHECK master:** `TOC/GCHECK-MASTER-CUMULATIVE.md`  
+**Governance locked:** 2026-05-31 (`LOCK-MANIFEST.md` addendum)  
+**Resume at:** **§3.0.1** Symmetry, operators, and representations (Chapter 3)
 
 ## Current focus
 
 | Field | Value |
 |-------|--------|
-| Active chapter | 1 |
-| Active section | 1.1.1 |
+| Active chapter | **3** |
+| Active section | **3.0** Introduction; next **§3.0.1** |
 | Tier | A |
-| Status | next to draft |
+| Status | **Ch. 2 COMPLETE AND LOCKED**; Ch. 3 scaffold — resume **§3.0.1** |
+| Master command | `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT` |
+| PDF | **293 pages** (post Ch. 2 lock build) |
+| Depth | **≥ 5 PDF pages** per subsection |
+| Review cadence | **Chapter-end only** |
 
 ## Milestone calendar
 
@@ -32,15 +39,10 @@
 | 11 | 41–44 | Peer review (2–3 readers) | Comment resolution |
 | 12 | 45–48 | Publisher proposal + polish | Submitted manuscript |
 
-## Weekly pace (aggressive)
-
-- **5 subsections/week** average (Tier A/B) with your math review on each.
-- **1 inheritance section/month** when finishing a chapter (§1.7, §2.11, §3.11, §4.11).
-
 ## Chapter checklist
 
-- [ ] Ch. 1 — Foundations (§1.7 locked)
-- [ ] Ch. 2 — Operators (§2.11 locked)
+- [x] Ch. 1 — Foundations (§1.7 locked; 32/32 subsections; 68 figures; **131 pp** `main.pdf`)
+- [x] Ch. 2 — Operators (§2.11 locked; 45/45 subsections; **293 pp** `main.pdf`; sign-off 2026-05-31)
 - [ ] Ch. 3 — Eigenfields (§3.11 locked) ← sample for publisher
 - [ ] Ch. 4 — Realizability (§4.11 locked)
 - [ ] Cross-volume forward map to Ch. 5 frozen in §4.11.2
@@ -51,10 +53,41 @@
 
 | Done | Sec ID | Tier | Date | Notes |
 |------|--------|------|------|-------|
-| [x] | 1.0.1 | A | 2026-05-24 | First draft in ch01.tex; author outline saved |
-| [x] | 1.0.2 | A | 2026-05-26 | Draft completed in ch01.tex (`sec:ch102`) |
-| [x] | 1.0.3 | A | 2026-05-26 | Draft completed in ch01.tex (`sec:ch103`) |
-| | 1.1.1 | A | | Next target (`sec:ch111`) |
+| [x] | 1.0.1–1.7.3 | A | 2026-05-29 | Ch. 1 **COMPLETE AND LOCKED**; no-recursion PASS |
+| [x] | 2.0.0–2.0.2 | A | 2026-05-29 | §2.0 framing + §2.0.1–§2.0.2 HOME in ch02.tex; session save lock |
+| [x] | 2.2.4 | A | 2026-05-29 | Propagating/evanescent/non-propagating HOME; eqs (2.128)–(2.141); §2.2 bridge |
+| [x] | 2.3 intro | A | 2026-05-29 | Green-function roadmap fig; resolvent→kernel framing; §2.3.1–§2.3.4 preview |
+| [x] | 2.3.1 | A | 2026-05-29 | Scalar/vector/dyadic HOME; free-space kernels; eqs (2.142)–(2.155); fig pipeline |
+| [x] | 2.3.2 | A | 2026-05-29 | Singularities/distributions/regularization HOME; finite-part/MoM self-term; fig split |
+| [x] | 2.3.3 | A | 2026-05-29 | Retarded/causal propagation HOME; light-cone fig; kernel Laplace theorem |
+| [x] | 2.3.4 | A | 2026-05-29 | Multi-region inversion/solvability HOME; §2.3 summative bridge |
+| [x] | 2.4 intro | A | 2026-05-29 | Radiation/uniqueness roadmap fig; Sommerfeld→reconstruction preview |
+| [x] | 2.4.1 | A | 2026-05-29 | Sommerfeld HOME; USE §1.1.2; far-zone fig; Silver–Müller link |
+| [x] | 2.4.2 | A | 2026-05-29 | Outgoing selector $\mathcal{O}_{\mathrm{out}}$ HOME; completes rad-projection |
+| [x] | 2.4.3–2.4.4 | A | 2026-05-29 | Exterior uniqueness + source reconstruction; §2.4 summative bridge |
+| [x] | 2.5 intro–2.5.4 | A | 2026-05-29 | Radiation integrals HOME chain; USE §1.2.4/§2.2.4 rad/NR split; §2.5 bridge |
+| [x] | 2.6 intro | A | 2026-05-31 | Spectral/Fredholm roadmap; discrete/continuous preview; fig spectral-theory-roadmap |
+| [x] | 2.6.1 | A | 2026-05-31 | HOME eigenpairs + `thm:ch2.radiation-spectral-decomposition`; fig radiation-spectral-decomposition |
+| [x] | 2.6.2 | A | 2026-05-31 | USE §1.3; `thm:ch2.rotation-spectral-degeneracy`; fig rotation-spectral-covariance |
+| [x] | 2.6.3 | A | 2026-05-31 | USE §2.1.3; `thm:ch2.radiation-fredholm-structure`; fig fredholm-radiation-pipeline |
+| [x] | 2.6.4 | A | 2026-05-31 | HOME `thm:ch2.geometric-spectral-constraints`; §2.6 summative bridge |
+| [x] | 2.7 intro | A | 2026-05-31 | `eq:ch2.section27-nullspace-chain`; `fig:ch2.nullspace-roadmap` |
+| [x] | 2.7.1 | A | 2026-05-31 | HOME `thm:ch2.radiation-nullspace-structure`; `fig:ch2.radiation-nullspace-pipeline` |
+| [x] | 2.7.2 | A | 2026-05-31 | HOME `thm:ch2.canonical-nr-current-families`; `fig:ch2.nr-current-configurations` |
+| [x] | 2.7.3 | A | 2026-05-31 | HOME `thm:ch2.evanescent-nonreconstructability`; `fig:ch2.evanescent-nonreconstruct-pipeline` |
+| [x] | 2.7.4 | A | 2026-05-31 | HOME `thm:ch2.angular-spectrum-null-consequences`; §2.7 summative bridge; `fig:ch2.angular-spectrum-null-pipeline` |
+| [x] | 2.8 intro | A | 2026-05-31 | `eq:ch2.section28-reciprocity-chain`; preview eqs for §2.8.1–§2.8.3; `fig:ch2.reciprocity-roadmap` |
+| [x] | 2.8.1 | A | 2026-05-31 | HOME `thm:ch2.lorentz-reciprocity-operator`; dyadic swap proof; `fig:ch2.lorentz-reciprocity-pipeline` |
+| [x] | 2.8.2 | A | 2026-05-31 | HOME `thm:ch2.radiation-modal-orthogonality-coupling`; modal coupling eqs; `fig:ch2.modal-coupling-pipeline` |
+| [x] | 2.8.3 | A | 2026-05-31 | HOME `thm:ch2.radiation-reception-reciprocity`; §2.8 summative bridge; `fig:ch2.transmit-receive-pipeline` |
+| [x] | 2.9 intro | A | 2026-05-31 | `eq:ch2.section29-angular-spectrum-chain`; preview eqs §2.9.1–§2.9.4; `fig:ch2.angular-spectrum-action-roadmap` |
+| [x] | 2.9.1 | A | 2026-05-31 | HOME plane-wave spectrum + radiation operator action; `thm:ch2.plane-wave-radiation-operator-action`; `fig:ch2.plane-wave-radiation-pipeline` |
+| [x] | 2.9.2 | A | 2026-05-31 | HOME retained/suppressed/filtered partition; `thm:ch2.angular-component-partition`; `fig:ch2.retained-suppressed-filter-pipeline` |
+| [x] | 2.9.3 | A | 2026-05-31 | HOME near-to-far transform; `thm:ch2.near-to-far-transformation`; `fig:ch2.near-to-far-pipeline` |
+| [x] | 2.9.4 | A | 2026-05-31 | HOME far-field accessibility; USE §1.2.1/§1.2.3; `thm:ch2.far-angular-accessibility`; `fig:ch2.far-angular-accessibility-pipeline` |
+| [x] | 2.10.1 | A | 2026-05-31 | FIG+PROB compactness; USE §2.1.3; `fig:ch2.wp-compact-radiation-probes`; eqs `ex-compact-*` |
+| [x] | 2.10.2 | A | 2026-05-31 | FIG+PROB NR sources; USE §2.7.2; `fig:ch2.wp-nr-superposition-invisibility`; eqs `ex-nr-*` |
+| [x] | 2.10.3–2.11.3 | A | 2026-05-31 | §2.10 DOF suite + §2.11 inheritance; **Ch. 2 LOCKED** |
 
 ## Consistency checks (month 9)
 
@@ -68,22 +101,35 @@ rg -i "Maxwell.*differential" latex/ch0[234].tex
 
 ## Lock change log
 
-2026-05-25: Added strict monograph drafting constraints requested by author. The lock update enforces zero-recursion prose/equation policy, chapter-wise equation and reference numbering intent, minimal schematic-only figures, inline variable/figure definition style, no bullet-list exposition in manuscript body, and citation placement from pioneering plus latest validated sources.
-2026-05-25: Added ultimate governance package with a full 19-chapter ULTIMATE FINAL TOC, theorem-home matrix, subsection drafting contract, citation contract, and no-recursion chapter audit pass. Locked for forward-only drafting and overlap suppression across Chapters 13-16.
-2026-05-25: Promoted `TOC/TOC-master-19chapters-ULTIMATE-V2.2-editorial-polish.txt` to official master TOC for full-book governance; retained ULTIMATE-FINAL as ownership reference source.
-2026-05-25: Added and locked prose-uniqueness rule (unique subsection opening/closing paragraphs) and Volume I section-framing rule (mandatory introductory and summative paragraphs for each section).
-Session marker: home end @ 2026-05-26, last subsection 1.0.3
-2026-05-25: Promoted `TOC/TOC-master-19chapters-ULTIMATE-V3-forward-only.txt` to official master TOC; lock/governance references migrated from V2.2 to V3 in one pass.
-2026-05-25: Added and locked depth-and-clarity mandate: each subsection must provide substantial derivation depth, define every equation symbol at first appearance, and explain each major equation mathematically and physically.
-2026-05-25: Added and locked advanced prose/numbering rules: unique subsection opening-closing framing, non-repetitive equation-explanation sentence construction, and strict chapter-wise increasing equation/reference numbering style.
-2026-05-25: Added and locked classical-monograph quality rule for all 19 chapters: drafting must sustain legendary-level depth, density, construction, and page appearance (Harrington/Pozar/Collin/Balanis/Jackson/Griffiths standard).
-2026-05-26: Added and locked model workflow policy in `MODEL-WORKFLOW-LOCKED.md` with task-based switching and mandatory final high-rigor acceptance pass per subsection.
-2026-05-26: Added and locked section-first drafting order for all chapters: section intro framing first, subsections next, section summative bridge last.
-2026-05-26: Added and locked global drafting style: Version A classical monograph tone is mandatory for all 19 chapters (professional, measured, authoritative, reader-friendly scholarly prose).
-2026-05-27: Added and locked depth-and-approval philosophy: dense-but-foundational mathematical development, HOME-first theorem ownership with USE-only reuse, and mandatory line-by-line approval subsection-by-subsection.
-2026-05-27: Added and locked figure/diagram philosophy: only theorem-centric or concept-centric schematic figures, complete level/caption labeling, mandatory body-text explanation, and no repeated diagrams without explicit new-regime justification.
-2026-05-27: Added and locked narrative-authenticity philosophy: continuous classical scholarly flow, no formulaic framing starters, and strict subsection-to-subsection uniqueness in sentence architecture and equation narration.
-2026-05-27: Extended narrative-authenticity lock to section-head drafts (1.0...1.7 and onward): unique section introductions/bridges, no repeated staging templates, and classical non-template prose continuity.
-2026-05-27: Added and locked always-recall execution rule: all active governance constraints must be explicitly recalled and applied at every drafting/editing action.
-2026-05-28: Added and locked reader-clarity and prose-ban governance: expanded foundational math/physics narration, richer intermediate derivation steps, increased conceptual schematic figure usage for engagement/clarity, explicit ban on architecture-centric/title-head metacommentary in scientific prose, and restart drafting sequence from Section 1.0 onward.
-2026-05-28: Audited and locked GCHECK canonical cumulative set across governance files: cumulative-update policy, strict forward+line-by-line drafting, no-recursion inheritance discipline, section-first with optional subsection bridges, dense foundational equation pedagogy, chapter-wise equation/reference/figure numbering, stronger citation and figure mandates, prose bans, and 3-5 page subsection expansion target from Section 1.0 restart.
+2026-05-31: **Physical review pack** — `review/Volume-I-Physical-Review-2026-05-31.pdf` (293 pp); summer break → return **2026-06-06**; Ch. 3 §3.0.1 next.
+2026-05-31: **Ch. 2 COMPLETE AND LOCKED** — `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md`; audit pass; 45/45 subsections; PDF **293 pp**; resume **Ch. 3 §3.0.1**.
+2026-05-31: **Ch. 2 DRAFT COMPLETE** — §2.10.4 structured sources + §2.11 inheritance; resume **Ch. 3 §3.0.1**; PDF **291 pp**.
+2026-05-31: **§2.10.4 drafted** — FIG+PROB structured sources HOME; USE §1.2.2; PDF **291 pp**.
+2026-05-31: **§2.10.3 drafted** — FIG+PROB evanescent far suppression; USE §2.9.3; resume **§2.10.4**; PDF **287 pp**.
+2026-05-31: **§2.10.1 drafted** — FIG+PROB compactness; USE §2.1.3; resume **§2.10.2**; PDF **281 pp**.
+2026-05-31: **§2.9.4 drafted + §2.9 complete** — far-field accessibility HOME; resume **§2.10.1**; PDF **279 pp**.
+2026-05-31: **§2.9.3 drafted** — near-to-far HOME operator map; resume **§2.9.4**; PDF **275 pp**.
+2026-05-31: **§2.9.2 drafted** — retained/suppressed/filtered HOME partition; resume **§2.9.3**; PDF **273 pp**.
+2026-05-31: **§2.9.1 drafted** — plane-wave angular spectrum HOME + radiation operator action; resume **§2.9.2**; PDF **269 pp**.
+2026-05-31: **§2.9 intro drafted** — angular-spectrum chain + roadmap fig; resume **§2.9.1**; PDF **265 pp**.
+2026-05-31: **§2.8.3 drafted + §2.8 complete** — summative bridge; resume **§2.9**; PDF **263 pp**.
+2026-05-31: **§2.8.2 drafted** — `thm:ch2.radiation-modal-orthogonality-coupling`; resume **§2.8.3**; PDF **259 pp**.
+2026-05-31: **§2.8.1 drafted** — `thm:ch2.lorentz-reciprocity-operator`; dyadic swap HOME proof; resume **§2.8.2**; PDF **255 pp**.
+2026-05-31: **§2.8 intro drafted** — reciprocity chain + roadmap fig; resume **§2.8.1**; PDF **251 pp**.
+2026-05-31: **§2.7.4 drafted + §2.7 complete** — summative bridge; resume **§2.8**; PDF **249 pp**.
+2026-05-31: **§2.7.3 drafted** — `thm:ch2.evanescent-nonreconstructability`; resume **§2.7.4**; PDF **245 pp**.
+2026-05-31: **§2.7.2 drafted** — `thm:ch2.canonical-nr-current-families`; resume **§2.7.3**; PDF **243 pp**.
+2026-05-31: **§2.7.1 drafted** — `thm:ch2.radiation-nullspace-structure`; resume **§2.7.2**; PDF **239 pp**.
+2026-05-31: **§2.7 intro drafted** — null-space chain; resume **§2.7.1**; PDF **235 pp**.
+2026-05-31: **§2.6.4 drafted** — `thm:ch2.geometric-spectral-constraints`; §2.6 summative bridge; resume **§2.7**; PDF **231 pp**.
+2026-05-31: **GOVERNANCE SYNC LOCKED** — `LOCK-MANIFEST.md`, `00-FORWARD-MAP.yaml`, `START-HERE.md`, `TOC/GCHECK-MASTER-CUMULATIVE.md` §4, `TOC/CH02-FRESH-RESTART-LOCK.md` §5, `TOC/END-OF-SESSION-PROTOCOL-LOCK.md` §3; resume **§2.6.1**; PDF **219 pp**.
+2026-05-31: **Ch. 2 session save** — `TOC/CH02-SESSION-SAVE-LOCK.md`; drafted through §2.6 intro.
+2026-05-29: **Ch. 2 FRESH RESTART LOCKED** — from §2.0; `GCHECK REFRESH DRAFT … CH2-FRESH MIN-5PP ZERO-REPEAT`; `TOC/CH02-FRESH-RESTART-LOCK.md`.
+2026-05-29: **End-of-session protocol LOCKED** — `TOC/END-OF-SESSION-PROTOCOL-LOCK.md` (Save All → close Cursor).
+2026-05-29: **Ch. 1 TOC SIGNED OFF** — `TOC/CH01-TOC-SIGNOFF-LOCK.md`; 32/32; no amendments.
+2026-05-29: **Ch. 3 TOC flow audit LOCKED** — `TOC/CH03-TOC-AUDIT-FLOW-LOCK.md`; FINAL.txt + ch03.tex + ch04 back-links synced.
+2026-05-29: **Ch. 2 TOC flow audit LOCKED** — `TOC/CH02-TOC-AUDIT-FLOW-LOCK.md`.
+2026-05-29: Ch.~1 figure legibility pass — two-tier BLOCK/GEO; batch scripts; author deferred further layout polish.
+2026-05-29: Ch.~1 final audit — seminal cites only; prose de-architected; §1.7 symbols aligned.
+2026-05-28: GCHECK canonical cumulative set locked across governance files.
+2026-05-27–2026-05-26: See prior entries in git history / LOCK-MANIFEST addenda.
