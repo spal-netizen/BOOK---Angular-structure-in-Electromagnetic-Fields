@@ -33,6 +33,7 @@ Verify that Chapter 2's locked manuscript:
 |------|--------|
 | `latex/ch02.tex` | **COMPLETE AND LOCKED** (2026-05-31) |
 | Audit-fix pass | **COMPLETE** — master DOF partition, operator survival table, §2.11 ledger/validity tables |
+| Forensic remediation | **COMPLETE** (2026-05-29) — sign audit, thesis headline, prose governance, accessibility triad |
 | Build | `scripts/Build-VolumeI-ChapterBib.ps1` → **exit 0** |
 | PDF | `latex/main.pdf` — **293 pages** |
 | §2.11 inheritance | `eq:ch2.inheritance-admissibility`, bridge map to Ch. 3 |

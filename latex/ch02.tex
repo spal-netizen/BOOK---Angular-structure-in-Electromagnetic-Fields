@@ -1,4 +1,7 @@
 ﻿% LOCKED SCAFFOLD - Volume I FINAL TOC - Chapter 2 only
+% Accessibility audit remediation 2026-05-29: Radiative Accessibility Principle,
+% accessibility hierarchy, master synthesis figure, realizability foreshadowing
+% Forensic remediation pass 2026-05-29: sign audit, thesis headline, prose governance
 % TOC authority: TOC/volume-I-ch01-04-FINAL.txt (Ch.2 block locked 2026-05-29)
 % Flow audit: TOC/CH02-TOC-AUDIT-FLOW-LOCK.md
 % Do not add Ch 3+ content to this file
@@ -8,6 +11,29 @@
 
 \section{Introduction}
 \label{sec:ch20}
+
+\paragraph{Central thesis.}
+Radiation is not merely propagation. At fixed frequency it acts as a
+\emph{structure-selective transformation}: impressed sources generate many
+Maxwell-admissible field degrees of freedom, yet only a qualified outgoing
+subset survives the radiation map \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\)
+and reaches far-zone observables. Reactive storage, evanescent sheets, source
+nullity, aperture rank limits, and geometric suppression progressively remove
+\emph{inaccessible} content---a partition made explicit in
+Eq.~\eqref{eq:ch2.dof-partition-master} of Section~\ref{sec:ch210}
+\cite{stratton1941,harrington2001,devaney2004}. Volume~I treats that filtering as
+physics, not post-processing: what fails export cannot carry the transport or
+measurement claims inherited from Chapter~\ref{ch:01}.
+
+\begin{principle}[Radiative Accessibility Principle]
+\label{prin:ch2.radiative-accessibility}
+Maxwell propagation does not preserve all electromagnetic structure. Radiation acts
+as a structure-selective transformation that progressively suppresses electromagnetic
+degrees of freedom that cannot be exported from the source region. Observable
+electromagnetic structure is therefore not a complete representation of the source
+manifold but rather a filtered image produced by the combined action of Maxwell
+evolution, radiation selection, and measurement accessibility.
+\end{principle}
 
 Chapter~\ref{ch:01} closed with an inheritance ledger: which field-law results,
 transport screens, gauge lemmas, and measurement contracts later chapters may
@@ -36,7 +62,7 @@ is re-derived here---they are the inputs on which operator domains and radiation
 integrals are built \cite{stratton1941}.
 
 Section~\ref{sec:ch20} states that program before the technical subsections
-begin. Subsection~\ref{sec:ch201} gives the first HOME for the source-to-field
+begin. Subsection~\ref{sec:ch201} gives the first definitive account of the source-to-field
 and radiation maps in frequency domain; Subsection~\ref{sec:ch202} packages the
 harmonic Maxwell system as a closed boundary-value operator without reopening the
 local derivations of Section~\ref{sec:ch01.1.1}; and Subsection~\ref{sec:ch203}
@@ -70,7 +96,7 @@ Section~\ref{sec:ch01.1.2} are mapped, through Maxwell closure, to a field pair
 the object that may carry far-zone power and angular flux
 (Eq.~\eqref{eq:ch1.maxwell-local} and Sections~\ref{sec:ch01.1.4}--\ref{sec:ch01.1.5}
 remain the inherited metering laws) \cite{stratton1941,harrington2001}. The
-subsection establishes the first HOME in Volume~I for that two-step composition:
+subsection establishes the first Volume~I account of that two-step composition:
 a harmonic \emph{solution map} and a \emph{radiation map} acting on admissible
 sources at fixed angular frequency \(\omega>0\) under the \(\exp(-\jj\omega t)\)
 convention locked in Chapter~\ref{ch:01}.
@@ -166,13 +192,19 @@ Section~\ref{sec:ch24}). Define the \emph{outgoing selector}
 \qquad
 \mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp].
 \end{equation}
-Equation~\eqref{eq:ch2.radiation-operator-def} is the first formal Volume~I home
-for \(\mathcal{R}_\omega\) \cite{stratton1941}. Until Subsection~\ref{sec:ch224}
-refines \(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\) in
-Eq.~\eqref{eq:ch2.rad-projection-composition}, the symbol \(\Pi_{\mathrm{rad}}\) denotes
-the outgoing radiative selector abstractly: every far-zone or transport claim before
-§2.2.4 must be read as provisional pending spectral refinement
-\cite{stratton1941,harrington2001}. Transport admissibility in
+Equation~\eqref{eq:ch2.radiation-operator-def} is the first formal Volume~I
+definition of \(\mathcal{R}_\omega\) \cite{stratton1941}.
+
+\medskip
+\noindent\fbox{\parbox{0.97\linewidth}{%
+\textbf{Provisional \(\Pi_{\mathrm{rad}}\) (until Subsection~\ref{sec:ch224}).}
+Until Eq.~\eqref{eq:ch2.rad-projection-composition} locks
+\(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\), treat
+\(\Pi_{\mathrm{rad}}\) as an abstract outgoing selector---not a spatial window.
+Every far-zone or transport claim before Subsection~\ref{sec:ch224} is provisional
+pending spectral refinement \cite{stratton1941,harrington2001}.%
+}}
+\medskip Transport admissibility in
 Sections~\ref{sec:ch01.2.3}--\ref{sec:ch01.2.4} applies to
 \(\mathcal{R}_\omega[\Jimp]\), not to arbitrary components of
 \(\mathcal{S}_\omega[\Jimp]\). Angular labels attached before selection can
@@ -254,9 +286,9 @@ P_{\mathrm{rad}}(R)
 =
 \Re\oint_{S_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS.
 \end{equation}
-Equation~\eqref{eq:ch2.radiated-power-screen} does not introduce a new flux law; it
-specifies which field pair enters the surface integral when the observable is
-radiative. For \(\mathcal{R}_\omega[\Jimp]\), \(P_{\mathrm{rad}}(R)\) becomes
+Equation~\eqref{eq:ch2.radiated-power-screen} inherits the Poynting law of
+Section~\ref{sec:ch01.1.4} and specifies which field pair enters the surface integral
+when the observable is radiative. For \(\mathcal{R}_\omega[\Jimp]\), \(P_{\mathrm{rad}}(R)\) becomes
 \(R\)-independent beyond the reactive shell and equals the power carried by
 \(\operatorname{ran}\mathcal{R}_\omega\) \cite{poynting1884,stratton1941}. Angular
 momentum budgets from Section~\ref{sec:ch01.1.5} attach to the same radiative
@@ -431,7 +463,10 @@ Radiation in Maxwell theory is the image of admissible impressed sources under
 \(\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\). Volume~I attaches every angular
 descriptor downstream to that image, meters it with inherited flux laws, and screens
 it with the transport and observability constraints established in
-Chapter~\ref{ch:01}.
+Chapter~\ref{ch:01}. The operator maps introduced here constrain which field content
+reaches the radiative range; Chapter~\ref{ch:04} will determine which of those
+radiative images admit finite-source realizations under spectral truncation and
+geometry-limited accessibility.
 
 \subsection{Maxwell equations in operator form}
 \label{sec:ch202}
@@ -551,7 +586,7 @@ such that
 Perfect conductors impose \(\hat{\mathbf{n}}\times\E=\mathbf{0}\); radiation and
 Leontovich closures encode outgoing or dissipative relations on
 \(\gamma_\Gamma[\mathbf{u}_\omega]\). The operator \(\mathcal{L}_\omega\) is the
-Chapter~\ref{ch:02} home for this coupled system \cite{harrington2001}.
+Chapter~\ref{ch:02} authoritative account of this coupled system \cite{harrington2001}.
 
 Equation~\eqref{eq:ch2.maxwell-solution-map} is the resolvent relation
 \begin{equation}
@@ -804,7 +839,11 @@ Eqs.~\eqref{eq:ch2.maxwell-energy-form}--\eqref{eq:ch2.maxwell-weak-form} supply
 variational access; and Eq.~\eqref{eq:ch2.maxwell-radiation-composition} places
 Eq.~\eqref{eq:ch2.radiation-operator-def} on the correct branch of
 \(\mathcal{L}_\omega^{-1}\). Function-space, Green, and time--frequency refinements
-follow in Sections~\ref{sec:ch21}--\ref{sec:ch23}.
+follow in Sections~\ref{sec:ch21}--\ref{sec:ch23}. Harmonic Maxwell closure fixes the
+resolvent branch on which radiation acts; realizability of impressed patterns---whether
+a target far-zone state is \(\mathcal{R}_\omega[\Jimp]\) for admissible
+\(\Jimp\)---is analyzed explicitly in Chapter~\ref{ch:04} through finite geometry
+and effective angular dimension.
 
 \subsection{Continuity with Chapter 1}
 \label{sec:ch203}
@@ -1083,6 +1122,12 @@ measurement composition; Sections~\ref{sec:ch25}--\ref{sec:ch29} develop flux
 integrals and angular-spectrum actions on that object, always subject to the inherited
 report class \cite{harrington2001}.
 
+The operator framework developed throughout Chapter~\ref{ch:02} may be viewed as a
+preliminary \emph{Accessibility Theory of Electromagnetic Structure}. Its purpose is
+to distinguish mathematically admissible electromagnetic content from physically
+accessible electromagnetic content and to identify the transformations that separate
+existence, radiation, and observation.
+
 \paragraph{Worked illustration (admissibility failure before operators).}
 Suppose \(\Jimp\) is a numerically specified filament current with
 \(\divg\Jimp\neq-\jj\omega\rho\) because charge density was set to zero
@@ -1143,6 +1188,61 @@ $\mathcal{D}_{J,\mathrm{reg}},\mathcal{D}_{\mathrm{ch2}}$ & flags & Regime and c
 \end{tabular}
 \end{table}
 
+The provisional split \(\Pi_{\mathrm{prop}},\Pi_{\mathrm{ev}},\Pi_{\mathrm{non}}\)
+earns permanent notation because no single radiation report can be posed without
+separating propagating export, evanescent storage, and non-propagating sectors;
+\(\Lambda_{\mathrm{nf}}\) names the near-to-far amplitude law on which angular
+spectra in Section~\ref{sec:ch29} depend; and
+\(\Lambda_{\mathrm{rad}},\mathcal{M}_\omega\) encode the finite-rank measurement
+maps without which aperture-limited observability cannot be stated as an operator
+identity \cite{stratton1941,harrington2001}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 12mm]
+  \node[ch1box, minimum width=42mm] (src) {Source Space\\$\mathcal{J}_\Omega$};
+  \node[ch1box, below=9mm of src, minimum width=42mm] (adm) {Maxwell-Admissible\\Field Space};
+  \node[ch1box, below=9mm of adm, minimum width=42mm] (rad) {Radiative Field Space\\$\mathcal{F}_{\mathrm{rad}}$};
+  \node[ch1box, below=9mm of rad, minimum width=42mm] (acc) {Accessible Measurement\\Space};
+  \node[ch1box, below=9mm of acc, minimum width=42mm] (obs) {Observable Space};
+  \draw[ch1flow] (src) -- (adm) -- (rad) -- (acc) -- (obs);
+\end{tikzpicture}%
+}
+\caption{Hierarchy of electromagnetic accessibility: each downward transition applies
+additional physical constraints and generally reduces recoverable information.
+Existence, radiation, accessibility, and observation are distinct stages rather than
+equivalent descriptions of the same electromagnetic state.}
+\label{fig:ch2.accessibility-hierarchy}
+\end{figure}
+
+Figure~\ref{fig:ch2.accessibility-hierarchy} restates
+Principle~\ref{prin:ch2.radiative-accessibility} in pipeline form. Each transition in
+the hierarchy imposes additional physical constraints and generally reduces accessible
+information. Existence, radiation, accessibility, and observation therefore represent
+distinct stages rather than equivalent descriptions of electromagnetic structure.
+Observable quantities should be interpreted as the terminal image of this hierarchy
+rather than as complete representations of the underlying source manifold.
+
+The accessibility interpretation advanced in this subsection resolves a persistent
+category error in radiation theory. Laboratory observers typically report quantities at
+the terminal end of Eq.~\eqref{eq:ch2.continuity-composition-law}: a voltage, a
+pattern coefficient, or a flux estimate produced after Maxwell closure, outgoing
+selection, and finite instrument rank have already acted. Those readings are not
+faithful portraits of the impressed source manifold \(\mathcal{J}_\Omega\); they are
+compressed images whose angular content has survived radiation selection and
+measurement null spaces. Existence---the full Maxwell-admissible field generated by
+\(\mathcal{S}_\omega\)---therefore precedes export---the subspace reached by
+\(\mathcal{R}_\omega\)---which in turn precedes observability---the finite-rank output
+of \(\Lambda_{\mathrm{lab}}\) in
+Eq.~\eqref{eq:ch2.operational-measurement-chain}. Chapter~\ref{ch:04} will ask which
+compressed images remain realizable by finite geometry;
+Principle~\ref{prin:ch1.rep-physics} already separated representation from physics in
+Chapter~\ref{ch:01}; Chapter~\ref{ch:02} supplies the operator layer that makes those
+distinctions computable. Radiation is structure-selective in exactly this sense: it is
+not merely propagation through free space, but a progressive filter whose terminal
+readings inherit only the angular organization that survived export and measurement.
+
 \paragraph{Closing summary.}
 Continuity with Chapter~\ref{ch:01} means that
 Eqs.~\eqref{eq:ch2.inheritance-operator-domain},
@@ -1165,6 +1265,35 @@ angular-spectrum operators---each subsection importing prior results only by
 reference and honoring the composition law of
 Eq.~\eqref{eq:ch2.continuity-composition-law}.
 
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=6mm and 10mm]
+  \node[ch1box, minimum width=36mm] (s0) {Admissible\\Sources};
+  \node[ch1box, below=7mm of s0, minimum width=36mm] (s1) {Maxwell\\Closure};
+  \node[ch1box, below=7mm of s1, minimum width=36mm] (s2) {Field\\Manifold};
+  \node[ch1box, below=7mm of s2, minimum width=36mm] (s3) {Radiation\\Selection};
+  \node[ch1box, below=7mm of s3, minimum width=36mm] (s4) {Accessible\\Structure};
+  \node[ch1box, below=7mm of s4, minimum width=36mm] (s5) {Measurement\\Operator};
+  \node[ch1box, below=7mm of s5, minimum width=36mm] (s6) {Observable\\Structure};
+  \draw[ch1flow] (s0) -- (s1) -- (s2) -- (s3) -- (s4) -- (s5) -- (s6);
+  \node[ch1lblout, right=20mm of s2, text width=28mm, align=left] {Null Spaces\\Spectral Compression\\Finite Geometry};
+  \node[ch1lblout, right=20mm of s5, text width=28mm, align=left] {Finite Apertures\\Rank Deficiency\\Source Equivalence};
+\end{tikzpicture}%
+}
+\caption{Master synthesis pipeline for Chapter~\ref{ch:02}: impressed sources traverse
+Maxwell closure and radiation selection before finite measurement maps produce
+observable structure. Side labels name the principal loss mechanisms acting between
+stages.}
+\label{fig:ch2.master-synthesis-pipeline}
+\end{figure}
+
+Figure~\ref{fig:ch2.master-synthesis-pipeline} is the chapter-level synthesis of
+Figure~\ref{fig:ch2.source-radiation-pipeline},
+Figure~\ref{fig:ch2.ch1-continuity-stack}, and
+Figure~\ref{fig:ch2.accessibility-hierarchy}. Every subsequent section refines one
+stage or one side-label constraint without altering the downward composition order.
+
 \section{Function Spaces and Maxwell Operators}
 \label{sec:ch21}
 
@@ -1185,8 +1314,8 @@ spectral theory in Sections~\ref{sec:ch26}--\ref{sec:ch29}
 The finite-energy criterion of Eq.~\eqref{eq:ch1.energy-class} and the admissible
 state class Eq.~\eqref{eq:ch1.admissible-space} from
 Subsection~\ref{sec:ch01.0.3} remain the physical floor. Section~\ref{sec:ch21}
-does not weaken or replace them; it embeds them in spaces where curl, divergence,
-and tangential trace maps are closed operations. Subsection~\ref{sec:ch01.1.2}
+preserves them and embeds them in spaces where curl, divergence, and tangential
+trace maps are closed operations. Subsection~\ref{sec:ch01.1.2}
 fixed source tuples, boundary operators, and charge continuity for impressed data;
 Subsection~\ref{sec:ch211} refines the corresponding distribution and trace spaces
 without re-opening those proofs \cite{stratton1941}. The guiding constraint from
@@ -1302,11 +1431,16 @@ radiation, and spectral sections that follow.
 \label{sec:ch211}
 % TOC tag: [HOME][USE SS1.0.3][USE SS1.1.2]
 
-Subsections~\ref{sec:ch201}--\ref{sec:ch202} declared minimal spaces
-\(\mathcal{F}_\Omega\) and \(\mathcal{J}_\Omega\) adequate to \emph{name} the maps
-\(\mathcal{S}_\omega\), \(\mathcal{R}_\omega\), and \(\mathcal{L}_\omega\).
-Subsection~\ref{sec:ch211} supplies the Sobolev, trace, and distributional
-structure those declarations presuppose. Finite-energy admissibility from
+Method-of-moments and finite-element antenna models represent impressed currents on
+surface patches and volume filaments, then test Maxwell's equations with localized basis
+functions \cite{harrington2001,stratton1941}. That workflow requires square-integrable
+\(\curl\) fields, well-defined tangential traces on conductors and apertures, and
+distributional extensions when sources collapse to sheets---precisely the analytic gaps that
+naive \(L^{2}\) current models leave open. Subsections~\ref{sec:ch201}--\ref{sec:ch202}
+declared minimal spaces \(\mathcal{F}_\Omega\) and \(\mathcal{J}_\Omega\) adequate to
+\emph{name} the maps \(\mathcal{S}_\omega\), \(\mathcal{R}_\omega\), and
+\(\mathcal{L}_\omega\); Subsection~\ref{sec:ch211} supplies the Sobolev, trace, and
+distributional structure those declarations presuppose. Finite-energy admissibility from
 Subsection~\ref{sec:ch01.0.3} and the source--boundary tuple of
 Subsection~\ref{sec:ch01.1.2} remain authoritative; the present subsection embeds
 them in spaces where \(\curl\), \(\divg\), and tangential restriction are
@@ -1649,8 +1783,7 @@ class through impedance closure in Subsection~\ref{sec:ch214}
 \cite{stratton1941,harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch211} establishes the Chapter~\ref{ch:02} HOME for Sobolev
-field spaces Eqs.~\eqref{eq:ch2.hcurl-space}--\eqref{eq:ch2.maxwell-product-space},
+Sobolev field spaces Eqs.~\eqref{eq:ch2.hcurl-space}--\eqref{eq:ch2.maxwell-product-space},
 refined source space Eq.~\eqref{eq:ch2.source-space-refined}, trace and interface
 classes Eqs.~\eqref{eq:ch2.trace-space-definition}--\eqref{eq:ch2.interface-trace-space},
 and the admissible field domain Eq.~\eqref{eq:ch2.admissible-field-space} that
@@ -1669,7 +1802,7 @@ domains, ranges, and adjoints \cite{stratton1941,harrington2001}. The volume
 operator \(\mathcal{M}_\omega\), boundary operator \(\mathcal{B}_\Gamma\), composite
 \(\mathcal{L}_\omega\), and solution map \(\mathcal{S}_\omega\) introduced in
 Subsections~\ref{sec:ch201}--\ref{sec:ch202} are not re-defined; their
-function-analytic structure is recorded here as the Chapter~\ref{ch:02} HOME for
+function-analytic structure is recorded here as the definitive construction of
 domain--range--adjoint formalism. Weak and energy forms of
 Eqs.~\eqref{eq:ch2.maxwell-weak-form} and
 \eqref{eq:ch2.maxwell-adjoint-pairing} supply the duality pairings below and are
@@ -1956,8 +2089,7 @@ therefore a comparison of different operators, not of different discretizations 
 one operator \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch212} establishes the Chapter~\ref{ch:02} HOME for operator
-domains and ranges Eqs.~\eqref{eq:ch2.volume-operator-domain-range}--\eqref{eq:ch2.composite-operator-domain},
+Operator domains and ranges Eqs.~\eqref{eq:ch2.volume-operator-domain-range}--\eqref{eq:ch2.composite-operator-domain},
 the solution and radiation chain
 Eqs.~\eqref{eq:ch2.solution-operator-domain}--\eqref{eq:ch2.radiation-operator-composition},
 adjoint templates Eqs.~\eqref{eq:ch2.volume-adjoint-definition}--\eqref{eq:ch2.composite-adjoint-block},
@@ -1975,7 +2107,7 @@ deficiency of observation maps, and the spectral-compression viewpoint that
 Section~\ref{sec:ch26} develops for radiation operators
 \cite{stratton1941,harrington2001}. Fredholm index computation and complete
 spectral decomposition remain in Sections~\ref{sec:ch263} and~\ref{sec:ch261};
-here the Chapter~\ref{ch:02} HOME establishes the operator-theoretic lemmas those
+here the constructive development establishes the operator-theoretic lemmas those
 sections invoke by reference.
 
 A linear operator \(T:\mathcal{X}\to\mathcal{Y}\) between Hilbert spaces is
@@ -2053,7 +2185,9 @@ Figure~\ref{fig:ch2.compact-embedding-schematic} restates
 Eq.~\eqref{eq:ch2.embedding-chain}. Rellich-type compactness for
 \(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) on bounded domains implies
 that bounded sequences in \(\HCurl\) have \(L^{2}\)-convergent subsequences
-\cite{stratton1941}. An operator \(K:\mathcal{X}\to\mathcal{Y}\) is
+\cite{stratton1941}. Finite geometry cannot export arbitrarily fine angular complexity;
+propagation therefore acts as a compression mechanism on electromagnetic structure.
+An operator \(K:\mathcal{X}\to\mathcal{Y}\) is
 \emph{compact} if bounded sets in \(\mathcal{X}\) map to relatively compact sets
 in \(\mathcal{Y}\):
 \begin{equation}
@@ -2106,6 +2240,8 @@ infinite-dimensional \cite{stratton1941,harrington2001}. Equation
 \eqref{eq:ch2.observation-null-space} is the operator form of the measurement
 screening in Section~\ref{sec:ch01.5}: finite modal sets cannot resolve all
 angular content. Rank deficiency is structural, not a discretization artifact alone.
+Finite geometry cannot export arbitrarily fine angular complexity; propagation
+therefore acts as a compression mechanism on electromagnetic structure.
 
 \begin{figure}[t]
 \centering
@@ -2179,7 +2315,9 @@ with \(K_{\mathrm{cpt}}\) from Eq.~\eqref{eq:ch2.green-compact-split} and
 \(C\) independent of impressed data on bounded \(\mathcal{J}_\Omega\)
 \cite{harrington2001}. Physically, Eq.~\eqref{eq:ch2.compression-error-bound}
 states that truncating modal content beyond the \((N+1)\)st singular value cannot
-be recovered by any rank-\(N\) surrogate operator.
+be recovered by any rank-\(N\) surrogate operator. Finite geometry cannot export
+arbitrarily fine angular complexity; propagation therefore acts as a compression
+mechanism on electromagnetic structure.
 
 Rank deficiency of \(\mathcal{R}_\omega\) itself is distinct from observation rank
 deficiency. Non-radiating sources satisfy
@@ -2238,8 +2376,7 @@ Subsection~\ref{sec:ch213} only records that compression templates differ by
 domain class.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch213} establishes the Chapter~\ref{ch:02} HOME for
-boundedness Eq.~\eqref{eq:ch2.operator-boundedness} and resolvent bounds
+Boundedness Eq.~\eqref{eq:ch2.operator-boundedness} and resolvent bounds
 Eq.~\eqref{eq:ch2.resolvent-bounded}, compact operators and Green splits
 Eqs.~\eqref{eq:ch2.compact-operator-def}--\eqref{eq:ch2.green-compact-split},
 finite-rank observation Eqs.~\eqref{eq:ch2.finite-rank-observation}--\eqref{eq:ch2.observation-null-space},
@@ -2342,7 +2479,7 @@ defined, the Friedrichs extension supplies a self-adjoint realization:
 \end{equation}
 the closure of \(\mathcal{L}_\omega\) on the energy domain of
 \(\mathfrak{a}_\omega\) \cite{stratton1941}. Equation
-\eqref{eq:ch2.friedrichs-extension} is the Chapter~\ref{ch:02} HOME for
+\eqref{eq:ch2.friedrichs-extension} is the locked definition for for
 self-adjoint Maxwell truncations on bounded domains. Exterior outgoing problems
 use a different closure template: restrict to the outgoing subspace selected in
 Section~\ref{sec:ch243} rather than applying Eq.~\eqref{eq:ch2.friedrichs-extension}
@@ -2471,8 +2608,7 @@ Section~\ref{sec:ch01.1.4} then lose their sign-definite interpretation
 post-processing fields alone.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch214} establishes the Chapter~\ref{ch:02} HOME for coercivity
-on the cavity quotient Eq.~\eqref{eq:ch2.coercivity-quotient}, passive impedance
+Coercivity on the cavity quotient Eq.~\eqref{eq:ch2.coercivity-quotient}, passive impedance
 symmetry Eq.~\eqref{eq:ch2.passive-impedance-class}, Friedrichs closure
 Eq.~\eqref{eq:ch2.friedrichs-extension}, Lax--Milgram well-posedness
 Eq.~\eqref{eq:ch2.lax-milgram-wellposed}, and admissibility embedding
@@ -2489,7 +2625,10 @@ Section~\ref{sec:ch22} applies the same spaces to time--frequency Maxwell
 equivalences and propagating-versus-evanescent splits; Green-function inverses in
 Section~\ref{sec:ch23} and outgoing selection in Section~\ref{sec:ch24} inherit
 \(\mathcal{D}(\mathcal{L}_\omega)\) and \(\mathcal{F}_\Omega\) as fixed input
-classes \cite{stratton1941,harrington2001}.
+classes \cite{stratton1941,harrington2001}. Function-space and spectral apparatus
+established here quantifies rank loss and compression; Chapter~\ref{ch:04} completes
+the forward map by stating which operator outputs survive finite source support and
+manufacturable geometry.
 
 \section{Time- and Frequency-Domain Maxwell Operators}
 \label{sec:ch22}
@@ -2508,7 +2647,7 @@ Harmonic Maxwell theory in Section~\ref{sec:ch20} treated \(\omega>0\) as a fixe
 parameter. Time-domain formulations restore the full operator pencil
 \(\partial/\partial t\) and clarify why frequency-domain solvers implement causal
 limits when inversion is performed correctly. Subsection~\ref{sec:ch221} gives the
-Chapter~\ref{ch:02} HOME for time-domain evolution on the same admissible classes
+Chapter~\ref{ch:02} account of time-domain evolution on the same admissible classes
 as Eq.~\eqref{eq:ch2.admissible-field-space}. Subsection~\ref{sec:ch222} packages
 frequency-domain Maxwell and curl--curl Helmholtz operators without re-displaying
 Eq.~\eqref{eq:ch1.maxwell-local}; full modal separation of vector fields is deferred
@@ -2584,7 +2723,7 @@ Section~\ref{sec:ch23}.
 
 Section~\ref{sec:ch21} fixed harmonic operator domains for
 \(\mathcal{L}_\omega\) and \(\mathcal{S}_\omega\). Subsection~\ref{sec:ch221}
-gives the Chapter~\ref{ch:02} HOME for \emph{time-domain} Maxwell evolution: the
+supplies the definitive account of \emph{time-domain} Maxwell evolution: the
 first-order hyperbolic system, the evolution operator that maps initial and impressed
 data to field trajectories, and the causal support constraints that harmonic solvers
 must inherit \cite{stratton1941,harrington2001}. Local Maxwell balances remain those
@@ -2831,8 +2970,7 @@ harmonic superposition over the entire time axis \cite{stratton1941}. Operator
 identity, not mesh resolution, is the failure mode.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch221} establishes the Chapter~\ref{ch:02} HOME for the
-time-domain state Eq.~\eqref{eq:ch2.time-state-vector}, evolution system
+The time-domain state Eq.~\eqref{eq:ch2.time-state-vector}, evolution system
 Eq.~\eqref{eq:ch2.time-maxwell-evolution}, IBVP packaging
 Eq.~\eqref{eq:ch2.time-ibvp-package}, semigroup and Duhamel forms
 Eqs.~\eqref{eq:ch2.time-semigroup-definition}--\eqref{eq:ch2.time-evolution-forced},
@@ -2848,7 +2986,7 @@ evolution under the bridge Eq.~\eqref{eq:ch2.time-to-frequency-bridge}.
 
 Subsection~\ref{sec:ch221} fixed time-domain evolution and the bridge
 Eq.~\eqref{eq:ch2.time-to-frequency-bridge}. Subsection~\ref{sec:ch222} gives the
-Chapter~\ref{ch:02} HOME for harmonic Maxwell operators and curl--curl Helmholtz
+Chapter~\ref{ch:02} account of harmonic Maxwell operators and curl--curl Helmholtz
 symbols on the spaces of Section~\ref{sec:ch21} \cite{stratton1941,harrington2001}.
 The first-order system Eq.~\eqref{eq:ch1.maxwell-operator-block} and composite
 \(\mathcal{L}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} are
@@ -3004,7 +3142,7 @@ is
 \mathcal{W}_{E,\omega}^{(\varepsilon,\mu)}\mathcal{G}_{E,\omega}=\mathrm{id}
 \end{equation}
 on the physical resolvent branch selected by \(\mathcal{B}_\Gamma\); explicit
-\(\mathcal{G}_{E,\omega}\) construction is Section~\ref{sec:ch23} HOME
+\(\mathcal{G}_{E,\omega}\) construction is developed in Section~\ref{sec:ch23}
 \cite{harrington2001,stratton1941}. Composition with the full map yields
 \begin{equation}
 \label{eq:ch2.frequency-solution-composition}
@@ -3078,8 +3216,7 @@ failure is structural: first-order closure cannot be dropped when impedance coup
 both tangential components.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch222} establishes the Chapter~\ref{ch:02} HOME for harmonic
-residual packaging Eq.~\eqref{eq:ch2.harmonic-maxwell-residual}, electric and magnetic
+Harmonic residual packaging Eq.~\eqref{eq:ch2.harmonic-maxwell-residual}, electric and magnetic
 Helmholtz operators Eqs.~\eqref{eq:ch2.electric-helmholtz-domain},
 \eqref{eq:ch2.magnetic-wave-operator}, material-weighted symbols
 Eqs.~\eqref{eq:ch2.material-helmholtz-electric}--\eqref{eq:ch2.material-helmholtz-magnetic},
@@ -3093,7 +3230,7 @@ Subsection~\ref{sec:ch223} proves causality and time--frequency equivalence for
 % TOC tag: [HOME]
 
 Subsections~\ref{sec:ch221}--\ref{sec:ch222} fixed time-domain evolution and harmonic
-operators. Subsection~\ref{sec:ch223} gives the Chapter~\ref{ch:02} HOME proof that
+operators. Subsection~\ref{sec:ch223} supplies the definitive proof that
 \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\) are the frequency-domain images of
 causal time-domain maps when impressed data, media, and boundary class are held fixed
 \cite{stratton1941,harrington2001}. The retarded preview
@@ -3211,7 +3348,7 @@ where \(\underline{\mathbf{j}}\) is the phasor of
 \(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)=\Re\{\underline{\mathbf{j}}(\mathbf{r})e^{-\jj\omega t}\}\)
 and \(\widetilde{\mathbf{F}}\) is the Laplace forcing induced by
 \(\widetilde{\mathbf{j}}\) \cite{stratton1941}. Equation
-\eqref{eq:ch2.harmonic-equivalence-theorem} is the Chapter~\ref{ch:02} HOME
+\eqref{eq:ch2.harmonic-equivalence-theorem} is the authoritative account of
 statement that frequency-domain solvers implement causal time-domain maps when
 Eqs.~\eqref{eq:ch2.equivalence-assumptions} hold. Violating (i)--(iii) breaks
 Eq.~\eqref{eq:ch2.harmonic-equivalence-theorem} even if
@@ -3309,8 +3446,7 @@ open configuration. Causality cannot repair branch mismatch
 \cite{stratton1941,harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch223} establishes the Chapter~\ref{ch:02} HOME for causal operator
-support Eqs.~\eqref{eq:ch2.causal-operator-support}--\eqref{eq:ch2.retarded-kernel-support},
+Causal operator support Eqs.~\eqref{eq:ch2.causal-operator-support}--\eqref{eq:ch2.retarded-kernel-support},
 Laplace--resolvent equivalence Eqs.~\eqref{eq:ch2.laplace-maxwell-resolvent}--\eqref{eq:ch2.resolvent-green-equivalence},
 equivalence assumptions Eq.~\eqref{eq:ch2.equivalence-assumptions}, harmonic theorem
 Eq.~\eqref{eq:ch2.harmonic-equivalence-theorem}, radiation inheritance
@@ -3323,7 +3459,7 @@ Section~\ref{sec:ch01.2.4}.
 % TOC tag: [HOME][USE SS1.2.4]
 
 Subsections~\ref{sec:ch221}--\ref{sec:ch223} fixed evolution, harmonic operators,
-and causality. Subsection~\ref{sec:ch224} gives the Chapter~\ref{ch:02} HOME for
+and causality. Subsection~\ref{sec:ch224} supplies the definitive for
 spectral partitions into propagating, evanescent, and non-propagating subspaces in
 operator form \cite{stratton1941,harrington2001}. Reactive versus radiative regime
 criteria, \(\chi(r)\), and \(\mathcal{D}_{J,\mathrm{reg}}\) remain those of
@@ -3505,7 +3641,7 @@ Causality from Subsection~\ref{sec:ch223} ensures retarded support but does not,
 by itself, promote evanescent content into \(\mathcal{F}_{\mathrm{rad}}\).
 
 \medskip
-\noindent\textbf{Effective definition (locked from §2.2.4 onward).}
+\noindent\textbf{Effective definition (locked from Subsection~\ref{sec:ch224} onward).}
 For all \(r>r_{\min}(a,\lambda_0)\) and every transport, flux, near-to-far, and angular-spectrum
 statement in Sections~\ref{sec:ch25}--\ref{sec:ch210},
 \begin{equation*}
@@ -3565,7 +3701,7 @@ e^{-\jj(k_x x+k_y y+k_z(k_t) z)}\,dk_x\,dk_y,
 with \(k_z(k_t)\) from Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split}
 \cite{stratton1941}. Equation~\eqref{eq:ch2.angular-spectrum-preview} is the
 Chapter~\ref{ch:02} spectral template for Section~\ref{sec:ch29}; full radiation
-operator action on angular spectra is HOME there. Subsection~\ref{sec:ch224} only
+operator action on angular spectra is developed there. Subsection~\ref{sec:ch224} only
 defines the propagating/evanescent partition induced by
 Eq.~\eqref{eq:ch2.dispersion-relation} \cite{harrington2001}.
 
@@ -3643,8 +3779,7 @@ in the exterior half-space does Eq.~\eqref{eq:ch2.regime-operator-screen} permit
 transport reporting \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch224} establishes the Chapter~\ref{ch:02} HOME for dispersion
-split Eqs.~\eqref{eq:ch2.dispersion-relation}--\eqref{eq:ch2.longitudinal-wavenumber-split},
+Dispersion split Eqs.~\eqref{eq:ch2.dispersion-relation}--\eqref{eq:ch2.longitudinal-wavenumber-split},
 evanescent decay Eq.~\eqref{eq:ch2.evanescent-decay-rate}, transverse gate
 Eq.~\eqref{eq:ch2.transverse-polarization-constraint}, spectral projectors
 Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra},
@@ -3699,7 +3834,7 @@ identities evaluate once domains and branch selection are fixed
 abstract matrix inverse but a retarded or outgoing-truncated resolvent on
 \(\mathcal{D}(\mathcal{L}_\omega)\subset\mathcal{U}_\omega\).
 
-Subsection~\ref{sec:ch231} owns the Chapter~\ref{ch:02} HOME for scalar, vector, and
+Subsection~\ref{sec:ch231} owns the constructive development of scalar, vector, and
 dyadic Green function definitions in harmonic Maxwell theory. The scalar kernel
 \(G(\mathbf{r},\mathbf{r}')\) satisfies \((\nabla^2+k_0^2)G=-\delta(\mathbf{r}-\mathbf{r}')\)
 with boundary conditions inherited from \(\mathcal{B}_\Gamma\); the electric dyadic
@@ -3755,7 +3890,7 @@ currents in \(\mathcal{J}_\Omega\) are often surface-supported or filamentary, s
 field evaluation requires distributional interpretation of the convolution
 \(\int \mathcal{G}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,dV'\)
 \cite{stratton1941,jackson1999}. Subsection~\ref{sec:ch232} supplies the Chapter~\ref{ch:02}
-HOME for principal-value and finite-part prescriptions, for extraction of singular
+account for principal-value and finite-part prescriptions, for extraction of singular
 static terms from dynamic kernels, and for the self-term corrections that distinguish
 raw Green evaluation from Galerkin-tested impedance entries \cite{harrington2001}.
 Section~\ref{sec:ch23} does not substitute mesh-refinement heuristics for those
@@ -3856,7 +3991,7 @@ of \(\mathcal{G}_{E,\omega}\) \cite{stratton1941,harrington2001,jackson1999}.
 
 Section~\ref{sec:ch23} declared that Green kernels realize the resolvent
 Eq.~\eqref{eq:ch2.resolvent-operator}. Subsection~\ref{sec:ch231} gives the
-Chapter~\ref{ch:02} HOME definitions for scalar, vector, and dyadic Green functions
+Chapter~\ref{ch:02} authoritative definitions for scalar, vector, and dyadic Green functions
 that implement \(\mathcal{G}_{E,\omega}\) previewed in
 Eq.~\eqref{eq:ch2.helmholtz-solution-operator} and connect to the radiation integral
 preview Eq.~\eqref{eq:ch2.radiation-integral-preview}
@@ -3976,17 +4111,17 @@ source aligned with a Cartesian unit vector at \(\mathbf{r}'\)
 \label{eq:ch2.electric-dyadic-convolution}
 \E(\mathbf{r})
 =
-\jj\omega\mu_0
+-\jj\omega\mu_0
 \int_{\Omega}
 \overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
 \;+\;\E_{\mathrm{hom}}(\mathbf{r}),
 \end{equation}
 where \(\E_{\mathrm{hom}}\) is the homogeneous solution fixed by \(\mathcal{B}_\Gamma\)
 \cite{stratton1941}. Equation~\eqref{eq:ch2.electric-dyadic-convolution} is the
-Chapter~\ref{ch:02} HOME realization of the preview
+Chapter~\ref{ch:02} authoritative realization of the preview
 Eq.~\eqref{eq:ch2.radiation-integral-preview} with outgoing dyad
 \(\boldsymbol{\Gamma}=\overline{\mathbf{G}}_{E}\) on the physical branch
-\cite{harrington2001}. The prefactor \(\jj\omega\mu_0\) matches the locked phasor
+\cite{harrington2001}. The prefactor \(-\jj\omega\mu_0\) matches the locked phasor
 convention and the forcing map Eq.~\eqref{eq:ch2.helmholtz-forcing-map}.
 
 The integral operator \(\mathcal{G}_{E,\omega}\) of
@@ -4159,8 +4294,7 @@ the finite-part prescription; Subsection~\ref{sec:ch231} only identifies the ker
 \(\overline{\mathbf{G}}_{E,0}\) as the continuum target.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch231} establishes the Chapter~\ref{ch:02} HOME for scalar
-Helmholtz Eqs.~\eqref{eq:ch2.scalar-helmholtz-green-pde}--\eqref{eq:ch2.free-space-scalar-green},
+Scalar Helmholtz kernels Eqs.~\eqref{eq:ch2.scalar-helmholtz-green-pde}--\eqref{eq:ch2.free-space-scalar-green},
 Lorenz reduction Eq.~\eqref{eq:ch2.lorenz-field-from-potential}, dyadic defining
 operator Eq.~\eqref{eq:ch2.dyadic-green-defining-operator}, electric convolution
 Eqs.~\eqref{eq:ch2.electric-dyadic-convolution}--\eqref{eq:ch2.solution-map-dyadic-realization},
@@ -4179,7 +4313,7 @@ Subsection~\ref{sec:ch231} defined scalar and dyadic Green kernels that satisfy
 Eqs.~\eqref{eq:ch2.scalar-helmholtz-green-pde} and~\eqref{eq:ch2.dyadic-green-defining-operator}
 for \(\mathbf{r}\neq\mathbf{r}'\) and deferred coincidence evaluation to the present
 subsection \cite{stratton1941,harrington2001,jackson1999}. Subsection~\ref{sec:ch232}
-gives the Chapter~\ref{ch:02} HOME for distributional convolutions, principal-value
+supplies the definitive account of distributional convolutions, principal-value
 and finite-part prescriptions, static--dynamic kernel splits, and self-term
 regularization that make Eq.~\eqref{eq:ch2.electric-dyadic-convolution} well-defined
 on \(\Jimp\in\mathcal{J}_\Omega\) including sheet and filamentary support. The
@@ -4294,7 +4428,7 @@ solution operator split is
 \qquad
 \mathcal{G}_{\mathrm{sing}}[\Jimp]
 =
-\jj\omega\mu_0\int_{\Omega}
+-\jj\omega\mu_0\int_{\Omega}
 \overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r',
 \end{equation}
 with \(\mathcal{K}_{\mathrm{cpt}}\) compact on bounded \(\Omega\) when
@@ -4313,7 +4447,7 @@ by duality: for all smooth compactly supported test fields \(\boldsymbol{\phi}\)
 \label{eq:ch2.distributional-dyadic-pairing}
 \langle\E,\boldsymbol{\phi}\rangle_{\Omega}
 =
-\jj\omega\mu_0
+-\jj\omega\mu_0
 \sum_{ab}\int_{\Sigma_{ab}}\int_{\Omega}
 \mathbf{J}_{s,ab}(\mathbf{r}')
 \cdot\overline{\mathbf{G}}_{E}^{\mathsf{T}}(\mathbf{r}',\mathbf{r})\cdot\boldsymbol{\phi}(\mathbf{r})\,d^{3}r\,dS',
@@ -4335,7 +4469,7 @@ approaching the support, define the principal-value convolution
 \label{eq:ch2.principal-value-convolution}
 \E(\mathbf{r})
 =
-\jj\omega\mu_0\,\mathrm{p.v.}\int_{\Omega}
+-\jj\omega\mu_0\,\mathrm{p.v.}\int_{\Omega}
 \overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r',
 \end{equation}
 as the limit of integrals over \(\Omega\setminus B_{\varepsilon}(\mathbf{r})\) as
@@ -4348,7 +4482,7 @@ the singular expansion explicitly:
 \label{eq:ch2.finite-part-convolution}
 \E(\mathbf{r})
 =
-\jj\omega\mu_0\lim_{\varepsilon\to 0}
+-\jj\omega\mu_0\lim_{\varepsilon\to 0}
 \left[
 \int_{\Omega\setminus B_{\varepsilon}(\mathbf{r})}
 \overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
@@ -4359,7 +4493,7 @@ the singular expansion explicitly:
 \end{equation}
 provided \(\Jimp\) is smooth enough on the patch that the limit exists
 \cite{harrington2001}. Equation~\eqref{eq:ch2.finite-part-convolution} is the
-Chapter~\ref{ch:02} HOME prescription for on-surface field evaluation; it differs
+Chapter~\ref{ch:02} authoritative prescription for on-surface field evaluation; it differs
 from Eq.~\eqref{eq:ch2.principal-value-convolution} by the explicit analytic
 subtraction of \(\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}\), not by numerical
 mesh refinement alone \cite{stratton1941}. Mathematically, the finite part is the
@@ -4374,7 +4508,7 @@ Eq.~\eqref{eq:ch2.electric-dyadic-convolution} by Galerkin entries
 \label{eq:ch2.mom-dyadic-entry}
 Z_{mn}
 =
-\jj\omega\mu_0\int_{\Omega_m}\int_{\Omega_n}
+-\jj\omega\mu_0\int_{\Omega_m}\int_{\Omega_n}
 \mathbf{f}_m(\mathbf{r})\cdot
 \overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot
 \mathbf{f}_n(\mathbf{r}')\,d^{3}r\,d^{3}r',
@@ -4386,7 +4520,7 @@ for basis functions \(\mathbf{f}_m,\mathbf{f}_n\) on patches \(\Omega_m,\Omega_n
 \label{eq:ch2.mom-self-term-regularized}
 Z_{mm}^{\mathrm{(reg)}}
 =
-\jj\omega\mu_0\int_{\Omega_m}\int_{\Omega_m}
+-\jj\omega\mu_0\int_{\Omega_m}\int_{\Omega_m}
 \mathbf{f}_m(\mathbf{r})\cdot
 \overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}(\mathbf{r},\mathbf{r}')\cdot
 \mathbf{f}_m(\mathbf{r}')\,d^{3}r\,d^{3}r'
@@ -4479,8 +4613,7 @@ with the jump conditions imported from Eq.~\eqref{eq:ch1.interface-conditions}
 common source of incorrect boundary-element tangential fields \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch232} establishes the Chapter~\ref{ch:02} HOME for singular
-expansion Eq.~\eqref{eq:ch2.dyadic-singular-expansion}, static limit
+Singular-kernel expansion Eq.~\eqref{eq:ch2.dyadic-singular-expansion}, static limit
 Eq.~\eqref{eq:ch2.static-dyadic-limit}, kernel split
 Eqs.~\eqref{eq:ch2.kernel-singular-regular-split}--\eqref{eq:ch2.solution-singular-compact-split},
 distributional pairing Eq.~\eqref{eq:ch2.distributional-dyadic-pairing},
@@ -4498,7 +4631,7 @@ uses the regularized convolution on composite domains.
 
 Subsections~\ref{sec:ch231}--\ref{sec:ch232} defined harmonic Green kernels and their
 regularized convolutions on \(\Jimp\in\mathcal{J}_\Omega\). Subsection~\ref{sec:ch233}
-gives the Chapter~\ref{ch:02} HOME for \emph{retarded} time-domain Green operators,
+supplies the definitive account of \emph{retarded} time-domain Green operators,
 their causal support, and the kernel-level upgrade of the resolvent equivalence
 Eq.~\eqref{eq:ch2.resolvent-green-equivalence} and harmonic theorem
 Eq.~\eqref{eq:ch2.harmonic-equivalence-theorem} from Subsection~\ref{sec:ch223}
@@ -4755,8 +4888,7 @@ support Eq.~\eqref{eq:ch2.retarded-dyadic-support} still confines influences to
 \(t\ge R/c_0\), independent of bandwidth \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch233} establishes the Chapter~\ref{ch:02} HOME for retarded scalar
-wave operator Eq.~\eqref{eq:ch2.retarded-scalar-wave-operator}, causal scalar kernel
+Retarded scalar wave operator Eq.~\eqref{eq:ch2.retarded-scalar-wave-operator}, causal scalar kernel
 Eq.~\eqref{eq:ch2.retarded-scalar-green-time}, dyadic convolution
 Eqs.~\eqref{eq:ch2.retarded-dyadic-convolution}--\eqref{eq:ch2.retarded-dyadic-support},
 light-cone arrival Eq.~\eqref{eq:ch2.light-cone-arrival-time}, Laplace link
@@ -4772,7 +4904,7 @@ addresses constructive inversion and solvability on composite domains.
 
 Subsections~\ref{sec:ch231}--\ref{sec:ch233} defined harmonic and retarded Green
 kernels, their regularized convolutions, and causal Laplace links. Subsection~\ref{sec:ch234}
-gives the Chapter~\ref{ch:02} HOME for constructive inversion and solvability on
+supplies the definitive account of constructive inversion and solvability on
 single- and multi-region domains with interface data from
 Eq.~\eqref{eq:ch1.interface-conditions} \cite{stratton1941,harrington2001}. Weak
 well-posedness on bounded quotients through
@@ -4867,7 +4999,7 @@ where \(\mathbf{x}_j\) collects tangential field or equivalent surface currents 
 patch boundaries, \(\mathcal{K}_{jk}\) are dyadic layer potentials generated by
 \(\overline{\mathbf{G}}_{E}^{(k)}\), and \(\mathbf{b}_j\) encodes impressed sources
 and outer \(\mathcal{B}_\Gamma\) data \cite{harrington2001,stratton1941}. Equation
-\eqref{eq:ch2.multi-region-inversion-system} is the Chapter~\ref{ch:02} HOME
+\eqref{eq:ch2.multi-region-inversion-system} is the constructive development of
 statement of multi-region solvability: invertibility of the block operator is the
 Green-function analogue of Eq.~\eqref{eq:ch2.lax-milgram-wellposed} on composite
 domains \cite{stratton1941}.
@@ -4987,8 +5119,8 @@ Eq.~\eqref{eq:ch2.multi-region-inversion-system}, respectively:
 \end{equation}
 when basis functions match trace spaces and self-terms implement
 Eq.~\eqref{eq:ch2.mom-self-term-regularized} \cite{harrington2001,stratton1941}.
-Equation~\eqref{eq:ch2.discrete-green-equivalence} is not a separate physics; it is
-the matrix form of the same inversion problem. Ill-conditioning near
+Equation~\eqref{eq:ch2.discrete-green-equivalence} restates the same inversion problem
+in matrix form. Ill-conditioning near
 Eq.~\eqref{eq:ch2.resolvent-pole-cavity} mirrors practical difficulty at cavity
 modes and near-spurious resonances in open-region formulations
 \cite{harrington2001}.
@@ -5021,8 +5153,7 @@ that is not Eq.~\eqref{eq:ch2.green-bvp-equivalence} for the closed problem
 \cite{stratton1941,harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch234} establishes the Chapter~\ref{ch:02} HOME for composite
-decomposition Eq.~\eqref{eq:ch2.composite-domain-decomposition}, patch inversion
+Composite-domain decomposition Eq.~\eqref{eq:ch2.composite-domain-decomposition}, patch inversion
 Eq.~\eqref{eq:ch2.patchwise-dyadic-inversion}, interface coupling
 Eq.~\eqref{eq:ch2.interface-dyadic-continuity}, multi-region system
 Eq.~\eqref{eq:ch2.multi-region-inversion-system}, Green--BVP equivalence
@@ -5041,7 +5172,10 @@ Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis}; radiation integrals in
 Section~\ref{sec:ch25} evaluate far-zone observables from the propagating subspace
 qualified by Eq.~\eqref{eq:ch2.regime-operator-screen}; spectral and Fredholm
 consequences of Eq.~\eqref{eq:ch2.green-compact-split} continue in
-Section~\ref{sec:ch263} \cite{stratton1941,harrington2001,jackson1999}.
+Section~\ref{sec:ch263} \cite{stratton1941,harrington2001,jackson1999}. Green-function
+inversion recovers field states from sources under declared closure; whether a desired
+angular pattern is source-realizable remains a Chapter~\ref{ch:04} question tying
+spectral truncation to finite impressed currents.
 
 \section{Radiation Conditions and Uniqueness}
 \label{sec:ch24}
@@ -5063,7 +5197,7 @@ and Eqs.~\eqref{eq:ch1.uniqueness-difference-system}--\eqref{eq:ch1.uniqueness-e
 without re-opening those proofs \cite{stratton1941}. Local Maxwell derivations,
 gauge structure, and flux integral definitions remain in Chapter~\ref{ch:01}.
 
-The problem addressed here is branch degeneracy. On a bounded domain with passive
+Exterior Maxwell problems admit multiple square-integrable branches until an outgoing selector is fixed. On a bounded domain with passive
 \(\mathcal{B}_\Gamma\), Eq.~\eqref{eq:ch2.lax-milgram-wellposed} and cavity quotients
 Eq.~\eqref{eq:ch2.coercivity-quotient} from Subsection~\ref{sec:ch214} fix
 \(\mathcal{S}_\omega\) up to discrete resonances Eq.~\eqref{eq:ch2.cavity-resonance-failure}.
@@ -5102,7 +5236,7 @@ identifiability.}
 \end{figure}
 
 Figure~\ref{fig:ch2.radiation-uniqueness-roadmap} orders the four subsections.
-Subsection~\ref{sec:ch241} gives the Chapter~\ref{ch:02} HOME for the Sommerfeld
+Subsection~\ref{sec:ch241} supplies the definitive account of the Sommerfeld
 radiation condition and its link to Eqs.~\eqref{eq:ch1.outer-boundary-classes} and
 \(\Pi_{\mathrm{prop}}\) from Subsection~\ref{sec:ch224} \cite{stratton1941}. Subsection
 ~\ref{sec:ch242} packages outgoing-wave selection as an operator gate on
@@ -5191,7 +5325,7 @@ propagating subspace \cite{stratton1941,harrington2001,jackson1999}.
 
 Section~\ref{sec:ch24} identified outgoing branch selection as the missing closure
 for exterior Green inversion Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis}.
-Subsection~\ref{sec:ch241} gives the Chapter~\ref{ch:02} HOME for the Sommerfeld
+Subsection~\ref{sec:ch241} supplies the definitive account of the Sommerfeld
 radiation condition and its operator embedding on \(\mathcal{F}_\Omega\)
 \cite{stratton1941,harrington2001,jackson1999}. Outer-boundary taxonomy and the
 outgoing-trace preview Eq.~\eqref{eq:ch1.radiation-trace-condition} from
@@ -5432,8 +5566,7 @@ Eq.~\eqref{eq:ch2.regime-operator-screen} conflates truncation error with angula
 transport \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch241} establishes the Chapter~\ref{ch:02} HOME for scalar
-Sommerfeld asymptotic Eq.~\eqref{eq:ch2.sommerfeld-scalar-asymptotic}, vector
+Scalar Sommerfeld asymptotic Eq.~\eqref{eq:ch2.sommerfeld-scalar-asymptotic}, vector
 condition Eq.~\eqref{eq:ch2.sommerfeld-field-condition}, impedance ratio
 Eq.~\eqref{eq:ch2.sommerfeld-impedance-ratio}, far-zone transverse radiation
 Eq.~\eqref{eq:ch2.far-zone-transverse-radiation}, dyadic asymptotic
@@ -5452,7 +5585,7 @@ uniqueness on \(\mathcal{F}_{\mathrm{SF}}\).
 
 Subsection~\ref{sec:ch241} fixed Sommerfeld asymptotics and the outgoing function class
 Eq.~\eqref{eq:ch2.sommerfeld-outgoing-class}. Subsection~\ref{sec:ch242} gives the
-Chapter~\ref{ch:02} HOME for the \emph{outgoing-wave selector}
+Chapter~\ref{ch:02} account of the \emph{outgoing-wave selector}
 \(\mathcal{O}_{\mathrm{out}}\) that implements that closure as an operator on
 \(\mathcal{F}_\Omega\), on harmonic Green kernels, and on the resolvent branch of
 \(\mathcal{L}_\omega^{-1}\) \cite{stratton1941,harrington2001,jackson1999}. The
@@ -5491,7 +5624,7 @@ where \(\mathbf{u}_{\mathrm{out}}\) is the unique member of
 \(\mathcal{F}_{\mathrm{SF}}\) whose propagating spectral content matches the outgoing
 \(k_z\) branch of Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split} and whose
 incoming content is annihilated \cite{stratton1941,harrington2001}. Equation
-\eqref{eq:ch2.outgoing-selector-def} is the Chapter~\ref{ch:02} HOME operator
+\eqref{eq:ch2.outgoing-selector-def} is the locked definition for operator
 realization of Sommerfeld closure: it acts \emph{before} far-zone measurement and
 \emph{after} volume closure by \(\mathcal{L}_\omega\), selecting the physical
 resolvent branch assumed in Eq.~\eqref{eq:ch2.resolvent-green-equivalence}
@@ -5596,7 +5729,7 @@ understood on \(\mathcal{D}(\mathcal{L}_\omega)\) with outgoing \(\mathcal{B}_\G
 \mathcal{S}_\omega[\Jimp]
 =
 \mathcal{O}_{\mathrm{out}}\,
-\Big(\jj\omega\mu_0\int_{\Omega}
+\Big(-\jj\omega\mu_0\int_{\Omega}
 \overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
 \;+\;\E_{\mathrm{hom}}\Big),
 \end{equation}
@@ -5622,7 +5755,7 @@ On propagating content,
 \Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega,
 \end{equation}
 restating Eqs.~\eqref{eq:ch2.rad-projection-composition} and~\eqref{eq:ch2.radiation-operator-def}
-with the Chapter~\ref{ch:02} HOME definition of \(\mathcal{O}_{\mathrm{out}}\)
+with the locked definition of \(\mathcal{O}_{\mathrm{out}}\)
 \cite{stratton1941,harrington2001}. Radiative subspace
 \(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}\) consists of fields
 with nonzero far-zone transverse amplitude Eq.~\eqref{eq:ch2.far-zone-transverse-radiation};
@@ -5682,8 +5815,7 @@ Eq.~\eqref{eq:ch2.outgoing-resolvent-selection} may superpose both sheets
 \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch242} establishes the Chapter~\ref{ch:02} HOME for outgoing
-selector Eqs.~\eqref{eq:ch2.outgoing-selector-def}--\eqref{eq:ch2.outgoing-idempotency},
+Outgoing selector Eqs.~\eqref{eq:ch2.outgoing-selector-def}--\eqref{eq:ch2.outgoing-idempotency},
 spectral gate Eq.~\eqref{eq:ch2.outgoing-plane-wave-gate}, outgoing Green branch
 Eq.~\eqref{eq:ch2.outgoing-green-branch}, resolvent and solution selection
 Eqs.~\eqref{eq:ch2.outgoing-resolvent-selection}--\eqref{eq:ch2.outgoing-solution-operator},
@@ -5699,7 +5831,7 @@ reconstruction identifiability.
 
 Subsections~\ref{sec:ch241}--\ref{sec:ch242} fixed Sommerfeld closure and the outgoing
 selector \(\mathcal{O}_{\mathrm{out}}\). Subsection~\ref{sec:ch243} gives the
-Chapter~\ref{ch:02} HOME proof that exterior radiative solutions are unique on the
+Chapter~\ref{ch:02} authoritative proof that exterior radiative solutions are unique on the
 outgoing branch, upgrading the hypothesis
 Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis} to Theorem~\ref{thm:ch2.exterior-radiative-uniqueness}
 \cite{stratton1941,harrington2001,jackson1999}. The difference-field reduction
@@ -5881,7 +6013,7 @@ Equivalently,
 \mathbf{u}_\omega=\mathbf{0},
 \end{equation}
 which upgrades Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis} to the Chapter~\ref{ch:02}
-HOME uniqueness statement \cite{stratton1941,harrington2001}.
+definitive uniqueness statement \cite{stratton1941,harrington2001}.
 \end{theorem}
 \begin{proof}
 Let \(\mathbf{u}_\Delta\) be the difference of two outgoing solutions. Then
@@ -6056,8 +6188,7 @@ Eq.~\eqref{eq:ch2.silver-muller-trace-approx} improve the closure but still requ
 \(R\gg\lambda_0\) for uniqueness in practice \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch243} establishes the Chapter~\ref{ch:02} HOME proof of exterior
-radiative uniqueness Theorem~\ref{thm:ch2.exterior-radiative-uniqueness} via
+Exterior radiative uniqueness Theorem~\ref{thm:ch2.exterior-radiative-uniqueness} follows from
 Eqs.~\eqref{eq:ch2.exterior-difference-system}--\eqref{eq:ch2.exterior-uniqueness-theorem},
 flux identities Eqs.~\eqref{eq:ch2.exterior-flux-identity}--\eqref{eq:ch2.exterior-sommerfeld-flux-limit},
 Lemma~\ref{lem:ch2.zero-flux-difference}, resolvent injectivity
@@ -6075,7 +6206,7 @@ source reconstruction, \(\ker\mathcal{R}_\omega\), and observability limits.
 
 Theorem~\ref{thm:ch2.exterior-radiative-uniqueness} fixes uniqueness of
 \(\mathcal{S}_\omega[\Jimp]\) on the outgoing branch. Subsection~\ref{sec:ch244}
-records the Chapter~\ref{ch:02} HOME consequences for \emph{inverse} source problems:
+records the inverse-source consequences for \emph{inverse} source problems:
 field uniqueness does not imply source identifiability, the forward radiation map
 \(\mathcal{R}_\omega\) is generally non-injective, and finite observation channels
 compress rank further \cite{stratton1941,harrington2001}. Observation null-space
@@ -6393,8 +6524,7 @@ Eq.~\eqref{eq:ch2.regime-operator-screen} must precede angular-transport claims 
 reconstructed sources \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch244} establishes the Chapter~\ref{ch:02} HOME reconstruction
-record via field/source split
+Field/source split
 Eqs.~\eqref{eq:ch2.field-source-uniqueness-split}--\eqref{eq:ch2.field-uniqueness-forward},
 forward map Eq.~\eqref{eq:ch2.radiation-forward-map}, null-space preview
 Eq.~\eqref{eq:ch2.ker-R-omega-preview}, observation composition
@@ -6432,6 +6562,9 @@ null-space classification \cite{stratton1941}. Regime qualification
 Eq.~\eqref{eq:ch2.regime-operator-screen} and transport gate
 Eq.~\eqref{eq:ch2.transport-qualified-radiation} remain mandatory before
 angular-transport claims on operator outputs \cite{stratton1941,harrington2001}.
+Outgoing-wave selection fixes the exterior resolvent branch assumed throughout radiation
+integrals; realizability limits---which accessible modes finite geometry can
+excite---are deferred to Chapter~\ref{ch:04}.
 
 \section{Radiation Integrals and Source-to-Field Mappings}
 \label{sec:ch25}
@@ -6449,12 +6582,12 @@ the radiative--non-radiative partition aligned with propagation projectors from
 Subsection~\ref{sec:ch224} \cite{stratton1941,jackson1999}. Poynting flux, momentum
 budgets, and transport indices from Subsections~\ref{sec:ch01.1.4},~\ref{sec:ch01.1.5},
 and~\ref{sec:ch01.2.3} are presupposed; Section~\ref{sec:ch25} restates them as operator
-evaluations on \(\mathcal{R}_\omega[\Jimp]\) without re-opening their HOME proofs in
+evaluations on \(\mathcal{R}_\omega[\Jimp]\) without re-opening their definitive proofs in
 Chapter~\ref{ch:01} \cite{stratton1941}. Dyadic kernel construction and Sommerfeld closure
 remain in Sections~\ref{sec:ch23}--\ref{sec:ch24}; vector spherical harmonic separation
 belongs to Chapter~\ref{ch:03}.
 
-The problem addressed here is \emph{observable evaluation} after closure. Green convolution
+Once outgoing closure is fixed, antenna engineers need field and pattern values at prescribed observation points, not merely existence of a solution. Green convolution
 Eq.~\eqref{eq:ch2.electric-dyadic-convolution} and outgoing solution operator
 Eq.~\eqref{eq:ch2.outgoing-solution-operator} return field pairs on
 \(\mathcal{F}_\Omega\); laboratory and far-zone claims attach to
@@ -6513,7 +6646,7 @@ Eq.~\eqref{eq:ch2.outgoing-green-branch} and curl taken in the observation varia
 \(\mathbf{r}\) \cite{stratton1941,jackson1999}. Equation
 \eqref{eq:ch2.radiation-integral-outgoing-upgrade} upgrades
 Eq.~\eqref{eq:ch2.radiation-integral-preview} after Sections~\ref{sec:ch23}--\ref{sec:ch24};
-Subsection~\ref{sec:ch251} gives the Chapter~\ref{ch:02} HOME for magnetic couplings,
+Subsection~\ref{sec:ch251} supplies the definitive account of magnetic couplings,
 scalar-potential routes, and equivalent surface formulations that reduce to the same
 \(\mathcal{R}_\omega\) image \cite{harrington2001}. Near coincidence
 \(\mathbf{r}\to\Omega_s\) requires regularization from Subsection~\ref{sec:ch232}; Section~\ref{sec:ch25}
@@ -6543,7 +6676,7 @@ radiative--non-radiative split (Subsection~\ref{sec:ch254}).}
 \end{figure}
 
 Figure~\ref{fig:ch2.radiation-integrals-roadmap} orders the four subsections.
-Subsection~\ref{sec:ch251} owns the Chapter~\ref{ch:02} HOME for source-to-field integral
+Subsection~\ref{sec:ch251} owns the constructive development of source-to-field integral
 representations that realize \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\) on the
 outgoing branch, including magnetic current couplings and Huygens-equivalent surface
 forms when they avoid duplicating Subsection~\ref{sec:ch231} kernel tabulations
@@ -6574,7 +6707,7 @@ Equations~\eqref{eq:ch2.distance-regime-preview} are scale labels, not sharp cut
 reactive and radiative terms coexist in the near zone, and intermediate zones require
 explicit asymptotic bookkeeping before Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade}
 reduces to transverse \(1/r\) radiation \cite{harrington2001}. Subsection~\ref{sec:ch252}
-states the Chapter~\ref{ch:02} HOME for field magnitude scalings and for the observation
+states the Chapter~\ref{ch:02} account of field magnitude scalings and for the observation
 surfaces on which each regime is valid \cite{stratton1941}. Pattern and gain definitions
 used in antenna theory attach only after the far-zone reduction in
 Eq.~\eqref{eq:ch2.far-zone-transverse-radiation} \cite{harrington2001,jackson1999}.
@@ -6697,7 +6830,7 @@ structure on the same integral operators \cite{stratton1941,harrington2001,jacks
 
 Section~\ref{sec:ch25} upgraded the radiation preview
 Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade} on the outgoing dyad branch.
-Subsection~\ref{sec:ch251} gives the Chapter~\ref{ch:02} HOME for the full family of
+Subsection~\ref{sec:ch251} supplies the definitive account of the full family of
 source-to-field integral representations that realize \(\mathcal{S}_\omega\) and
 \(\mathcal{R}_\omega\) on admissible domains after Sections~\ref{sec:ch23}--\ref{sec:ch24}
 \cite{stratton1941,harrington2001,jackson1999}. Scalar, vector, and dyadic kernels from
@@ -6726,7 +6859,7 @@ The primary volume representation is
 \label{eq:ch2.outgoing-electric-volume-integral}
 \E(\mathbf{r})
 =
-\jj\omega\mu_0
+-\jj\omega\mu_0
 \int_{\Omega_s}
 \overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
 \;+\;\E_{\mathrm{hom}}(\mathbf{r}),
@@ -6740,12 +6873,12 @@ The primary volume representation is
 for \(\mathbf{r}\notin\Omega_s\) on simply connected observation regions
 \cite{stratton1941,harrington2001}. Equations
 \eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.outgoing-magnetic-from-curl-integral}
-are the Subsection~\ref{sec:ch251} HOME specialization of
+are the Subsection~\ref{sec:ch251} specialization of
 Eqs.~\eqref{eq:ch2.electric-dyadic-convolution}--\eqref{eq:ch2.magnetic-from-electric-dyad}
 with outgoing dyads and exterior observation \cite{stratton1941}. They coincide with
 Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade} when
 \(\E_{\mathrm{hom}}=\mathbf{0}\) and \(\curl\) is taken in \(\mathbf{r}\)
-\cite{harrington2001}. The prefactor \(\jj\omega\mu_0\) matches
+\cite{harrington2001}. The prefactor \(-\jj\omega\mu_0\) matches
 Eq.~\eqref{eq:ch2.helmholtz-forcing-map} and the locked phasor axis
 \cite{stratton1941}.
 
@@ -6784,7 +6917,7 @@ Superposition gives the coupled volume representation
 \begin{aligned}
 \E(\mathbf{r})
 &=
-\jj\omega\mu_0\!\int_{\Omega_s}\!
+-\jj\omega\mu_0\!\int_{\Omega_s}\!
 \overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
 -\frac{1}{\jj\omega\varepsilon_0}\,\curl\H^{(\mathrm{mag})}(\mathbf{r})
 +\E_{\mathrm{hom}}(\mathbf{r}),\\[4pt]
@@ -6838,7 +6971,7 @@ includes a scalar-potential gradient driven by \(\rho\):
 \label{eq:ch2.charge-augmented-electric-integral}
 \E(\mathbf{r})
 =
-\jj\omega\mu_0\!\int_{\Omega_s}\!
+-\jj\omega\mu_0\!\int_{\Omega_s}\!
 \overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
 -\grad\!\int_{\Omega_s} G_\omega^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\,
 \frac{\rho(\mathbf{r}')}{\varepsilon_0}\,d^{3}r'
@@ -6864,7 +6997,7 @@ Huygens representation is
 \label{eq:ch2.huygens-equivalent-integral}
 \E(\mathbf{r})
 =
-\jj\omega\mu_0\!\int_{\Gamma_{\mathrm{eq}}}\!
+-\jj\omega\mu_0\!\int_{\Gamma_{\mathrm{eq}}}\!
 \overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot
 \mathbf{J}_{s,\mathrm{eq}}(\mathbf{r}')\,dS'
 +\int_{\Gamma_{\mathrm{eq}}}\!
@@ -6885,7 +7018,7 @@ Huygens representation is
 for \(\mathbf{r}\) outside the closed surface bounded by \(\Gamma_{\mathrm{eq}}\)
 \cite{stratton1941,harrington2001}. Equations
 \eqref{eq:ch2.huygens-equivalent-integral}--\eqref{eq:ch2.huygens-magnetic-integral} are
-the Subsection~\ref{sec:ch251} HOME surface form of the same outgoing propagation operator;
+the Subsection~\ref{sec:ch251} surface form of the same outgoing propagation operator;
 \(\nabla'\) acts on the source coordinate \(\mathbf{r}'\) \cite{stratton1941}. Tangential
 field matching
 \begin{equation}
@@ -7028,8 +7161,7 @@ Theorem~\ref{thm:ch2.source-to-field-integral}, not a mesh-specific heuristic
 \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch251} establishes the Chapter~\ref{ch:02} HOME for outgoing electric
-volume integral Eqs.~\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.outgoing-magnetic-from-curl-integral},
+Outgoing electric volume integral Eqs.~\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.outgoing-magnetic-from-curl-integral},
 magnetic dual Eqs.~\eqref{eq:ch2.outgoing-magnetic-volume-integral}--\eqref{eq:ch2.outgoing-electric-from-curl-magnetic},
 combined system Eq.~\eqref{eq:ch2.combined-impressed-source-integral}, charge augmentation
 Eq.~\eqref{eq:ch2.charge-augmented-electric-integral}, Huygens surface integrals
@@ -7046,7 +7178,7 @@ near, intermediate, and far asymptotics of these integrals.
 % TOC tag: [HOME]
 
 Subsection~\ref{sec:ch251} fixed outgoing source-to-field integrals on the physical branch.
-Subsection~\ref{sec:ch252} gives the Chapter~\ref{ch:02} HOME for near, intermediate, and
+Subsection~\ref{sec:ch252} supplies the definitive account of near, intermediate, and
 far distance regimes: field-magnitude scalings, far-zone reduction of
 Eqs.~\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.combined-impressed-source-integral},
 Fresnel--Fraunhofer transition scales, and power-flux convergence on large spheres
@@ -7071,7 +7203,7 @@ Eq.~\eqref{eq:ch2.free-space-dyadic-green} are presupposed without re-tabulation
 geometry but not on \(r\) in the asymptotic limits stated \cite{harrington2001}.
 
 \paragraph{Regime definitions.}
-The Chapter~\ref{ch:02} HOME regime partition is
+The locked regime partition is
 \begin{equation}
 \label{eq:ch2.distance-regime-definitions}
 \begin{aligned}
@@ -7194,7 +7326,7 @@ e^{-\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}\,d^{3}r',
 with \(\hat{\mathbf{r}}=\mathbf{r}/r\) and the transversality constraint enforced by
 \(\overline{\mathbf{G}}_{\infty}\) in Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic}
 \cite{stratton1941,jackson1999,harrington2001}. Equation
-\eqref{eq:ch2.far-field-integral-reduction} is the Subsection~\ref{sec:ch252} HOME
+\eqref{eq:ch2.far-field-integral-reduction} is the Subsection~\ref{sec:ch252} definitive account of
 specialization of Eq.~\eqref{eq:ch2.far-zone-transverse-radiation}; the amplitude integral
 Eq.~\eqref{eq:ch2.far-field-amplitude-integral} is the vector radiation integral used in
 antenna far-field post-processing \cite{harrington2001}. Magnetic field in the far zone
@@ -7317,8 +7449,7 @@ combines measurement noise with violation of Eq.~\eqref{eq:ch2.distance-regime-d
 \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch252} establishes the Chapter~\ref{ch:02} HOME for regime definitions
-Eq.~\eqref{eq:ch2.distance-regime-definitions}, near-zone scaling
+Distance-regime definitions Eq.~\eqref{eq:ch2.distance-regime-definitions}, near-zone scaling
 Eq.~\eqref{eq:ch2.near-zone-field-scaling}, intermediate balance
 Eq.~\eqref{eq:ch2.intermediate-zone-balance}, Fresnel parameter
 Eq.~\eqref{eq:ch2.fresnel-parameter}, far-field reduction
@@ -7344,7 +7475,7 @@ Poynting balance Eq.~\eqref{eq:ch1.poynting-complex}, Maxwell stress
 Eq.~\eqref{eq:ch1.maxwell-stress}, angular balance
 Eqs.~\eqref{eq:ch1.angular-momentum-balance}--\eqref{eq:ch1.angular-balance-integral}, and
 transport indices Eqs.~\eqref{eq:ch1.transport-admissibility-index}--\eqref{eq:ch1.transport-qualified-decision}
-are presupposed; their HOME proofs remain in Chapter~\ref{ch:01} \cite{stratton1941}. The
+are presupposed; their definitive proofs remain in Chapter~\ref{ch:01} \cite{stratton1941}. The
 present subsection packages those functionals as operators on
 \(\mathcal{F}_{\mathrm{rad}}\) reached through
 Eq.~\eqref{eq:ch2.integral-radiation-map} after regime qualification
@@ -7640,7 +7771,7 @@ radiative branch \cite{harrington2001,stratton1941}. Pattern reports from near-z
 reactive structure with export \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch253} records the Chapter~\ref{ch:02} operator evaluation of flux
+Flux meters are evaluated operator-theoretically through
 meters Eqs.~\eqref{eq:ch2.poynting-functional-radiative}--\eqref{eq:ch2.angular-momentum-flux-vector},
 far-zone power and momentum Eqs.~\eqref{eq:ch2.far-zone-power-from-pattern}--\eqref{eq:ch2.far-zone-momentum-flux},
 transport triad Eq.~\eqref{eq:ch2.transport-triad-on-R}, radiation norms
@@ -7915,7 +8046,7 @@ Transport claims require radiative superposition, not reactive interference
 (Section~\ref{sec:ch01.6.4}) \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch254} records the Chapter~\ref{ch:02} operator split via
+The radiative--non-radiative operator split proceeds via
 Eqs.~\eqref{eq:ch2.integral-spectral-decomposition}--\eqref{eq:ch2.nonpropagating-component-def},
 radiative/non-radiative definitions
 Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def},
@@ -7971,7 +8102,7 @@ spectral analysis acts \cite{stratton1941}. Rotation and covariance rules from
 Section~\ref{sec:ch01.3} enter where degeneracy is classified; they are not re-derived
 \cite{stratton1941}.
 
-The problem addressed here is modal resolution under outgoing closure. On bounded
+Radiation from finite sources decomposes into exporting modes only after outgoing selection and compactness enter jointly. On bounded
 cavities, Rellich compactness Eq.~\eqref{eq:ch2.embedding-chain} yields accumulating
 discrete eigenvalues and Eq.~\eqref{eq:ch2.spectral-compression-operator} truncates
 interior resonances \cite{stratton1941,harrington2001}. On exterior domains with
@@ -8040,7 +8171,7 @@ Section~\ref{sec:ch272} \cite{stratton1941}.
 \paragraph{Modal eigenvalue template (preview).}
 On a declared spectral family \(\{\psi_n\}\subset\mathcal{F}_{\mathrm{rad}}\) with
 associated one-dimensional projectors \(P_n\), Subsection~\ref{sec:ch261} develops the
-Chapter~\ref{ch:02} HOME eigenvalue law
+Chapter~\ref{ch:02} authoritative eigenvalue law
 \begin{equation}
 \label{eq:ch2.modal-eigenvalue-equation-preview}
 \mathcal{R}_\omega[\Jimp^{(n)}]=\lambda_n\,\mathbf{u}_n,
@@ -8118,7 +8249,7 @@ radiative spectra (Subsection~\ref{sec:ch264}).}
 \end{figure}
 
 Figure~\ref{fig:ch2.spectral-theory-roadmap} orders the four subsections.
-Subsection~\ref{sec:ch261} gives the Chapter~\ref{ch:02} HOME for eigenfunctions and
+Subsection~\ref{sec:ch261} supplies the definitive account of eigenfunctions and
 spectral decomposition of radiation operators on outgoing subspaces, upgrading
 Eqs.~\eqref{eq:ch2.spectral-compression-operator}--\eqref{eq:ch2.modal-eigenvalue-equation-preview}
 from templates to constructive statements compatible with
@@ -8148,7 +8279,7 @@ with \(K\) compact on the graph domain of impressed sources and \(\dagger\) deno
 adjoint on declared pairings Eq.~\eqref{eq:ch2.dual-source-pairing}
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.spectral-solvability-preview}
 specializes Eq.~\eqref{eq:ch2.fredholm-split} to export maps; index computation and
-cokernel characterization are HOME in Subsection~\ref{sec:ch263}, not repeated from
+cokernel characterization are developed in Subsection~\ref{sec:ch263}, not repeated from
 Subsection~\ref{sec:ch213} \cite{stratton1941}. Rank composition
 Eq.~\eqref{eq:ch2.rank-composition-law} and observation null space
 Eq.~\eqref{eq:ch2.observation-null-space} remain compositional constraints on any
@@ -8294,7 +8425,7 @@ Section~\ref{sec:ch28} compose additional structure on the same modal coordinate
 
 Section~\ref{sec:ch26} previewed spectral organization of \(\mathcal{R}_\omega\) through
 Eqs.~\eqref{eq:ch2.section26-spectral-chain}--\eqref{eq:ch2.spectral-resolution-composition}.
-Subsection~\ref{sec:ch261} gives the Chapter~\ref{ch:02} HOME for eigenpairs, modal
+Subsection~\ref{sec:ch261} supplies the definitive account of eigenpairs, modal
 projectors, and spectral expansions of radiation operators on outgoing subspaces after
 Sections~\ref{sec:ch23}--\ref{sec:ch25} \cite{stratton1941,harrington2001,jackson1999}.
 Propagation projectors Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent}
@@ -8336,7 +8467,7 @@ where \(\|\cdot\|_{\mathcal{U}}\) is the field energy norm
 Eq.~\eqref{eq:ch2.field-energy-norm} on \(\mathcal{F}_{\mathrm{rad}}\)
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.radiation-eigenpair-def}
 upgrades preview Eq.~\eqref{eq:ch2.modal-eigenvalue-equation-preview} to a normalized
-HOME definition: \(\lambda_n\) measures export gain of mode \(n\) relative to unit radiative
+locked definition: \(\lambda_n\) measures export gain of mode \(n\) relative to unit radiative
 energy, and \(\ker\mathcal{R}_\omega\) corresponds to \(\lambda_n=0\) with
 \(\mathcal{S}_\omega[\Jimp^{(n)}]\neq\mathbf{0}\) through
 Eq.~\eqref{eq:ch2.ker-R-omega-preview} \cite{stratton1941}. Eigenpairs are defined on the
@@ -8437,7 +8568,7 @@ gives
 \sum_{n\in\mathcal{N}_{\mathrm{rad}}}
 \lambda_n\,c_n[\mathfrak{D}]\,\mathbf{u}_n,
 \end{equation}
-the Subsection~\ref{sec:ch261} HOME restatement of compression operator
+the Subsection~\ref{sec:ch261} restatement of compression operator
 Eq.~\eqref{eq:ch2.spectral-compression-operator} with explicit eigenvalues and normalized
 modes \cite{stratton1941}. Truncation to \(|\mathcal{N}|\le N\) yields
 \(\mathcal{R}_\omega^{(N)}\) from Eq.~\eqref{eq:ch2.spectral-compression-operator}; error
@@ -8541,7 +8672,7 @@ a_\sigma(\hat{\mathbf{k}})\,
 \end{equation}
 with amplitudes \(a_\sigma\) determined by \(\mathcal{S}_\omega[\mathfrak{D}]\) through
 Eq.~\eqref{eq:ch2.source-modal-amplitude} in the rigged limit \cite{stratton1941}. Rigged
-Hilbert space completion and measure normalization are HOME in Chapter~\ref{ch:03}
+Hilbert space completion and measure normalization are developed in Chapter~\ref{ch:03}
 Subsection~\ref{sec:ch313}; Subsection~\ref{sec:ch261} records the operator target
 Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} compatible with far-zone reduction
 \cite{harrington2001}.
@@ -8561,7 +8692,7 @@ Eq.~\eqref{eq:ch2.far-field-amplitude-integral}. Then the far pattern of
 \end{equation}
 with convergence in mean-square on \(S^{2}\) when the modal sum converges in
 \(\mathcal{U}\) \cite{stratton1941,jackson1999,harrington2001}. Equation
-\eqref{eq:ch2.spectral-far-pattern-expansion} is the Subsection~\ref{sec:ch261} HOME upgrade
+\eqref{eq:ch2.spectral-far-pattern-expansion} is the Subsection~\ref{sec:ch261} upgrade
 of preview Eq.~\eqref{eq:ch2.far-pattern-modal-preview}; explicit \(\mathbf{f}_n\) in vector
 harmonic form belong to Chapter~\ref{ch:03} \cite{stratton1941}.
 \end{proposition}
@@ -8651,8 +8782,7 @@ zero \cite{stratton1941}. Complete \(\ker\mathcal{R}_\omega\) classification bel
 Section~\ref{sec:ch272} \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch261} establishes the Chapter~\ref{ch:02} HOME for radiation eigenpairs
-Eq.~\eqref{eq:ch2.radiation-eigenpair-def}, modal projectors
+Radiation eigenpairs Eq.~\eqref{eq:ch2.radiation-eigenpair-def}, modal projectors
 Eq.~\eqref{eq:ch2.modal-projector-def}, source amplitudes
 Eq.~\eqref{eq:ch2.source-modal-amplitude}, spectral expansions
 Eqs.~\eqref{eq:ch2.radiation-spectral-expansion}--\eqref{eq:ch2.radiation-map-modal-sum},
@@ -8837,7 +8967,7 @@ irreducible representations of \(\mathrm{SO}(3)\) on \(L^{2}(S^{2})\) have dimen
 \(2\ell+1\); Eq.~\eqref{eq:ch2.spectral-degeneracy-multiplicity} records that count on
 \(\mathcal{F}_{\mathrm{rad}}\) once outgoing transversality and
 Eq.~\eqref{eq:ch2.rad-null-on-evanescent} are imposed \cite{jackson1999}. Detailed
-construction of \(\mathcal{H}_\ell\) is HOME in Chapter~\ref{ch:03}
+construction of \(\mathcal{H}_\ell\) is developed in Chapter~\ref{ch:03}
 \cite{harrington2001}.
 \end{proof}
 
@@ -8973,12 +9103,16 @@ Subsection~\ref{sec:ch264} records geometric constraints beyond rotational symme
 \label{sec:ch263}
 % TOC tag: [USE SS2.1.3][HOME]
 
-Subsections~\ref{sec:ch261}--\ref{sec:ch262} fixed radiation eigenmodes, spectral
-expansions, and rotational degeneracy on \(\mathcal{F}_{\mathrm{rad}}\). Subsection
-~\ref{sec:ch263} gives the Chapter~\ref{ch:02} HOME for Fredholm structure, index,
-and solvability of radiation-related inversions
+Finite measurement arrays---sparse far-field samples, partial spherical scans, or
+port voltages---recover only a finite number of radiation degrees of freedom from impressed
+currents \cite{harrington2001,stratton1941}. That \emph{identifiability budget} is not an
+instrument detail: it is encoded in the Fredholm index and solvability of
 \(\mathcal{R}_\omega[\Jimp]=\mathbf{g}\) and finite-rank observations
-\(\mathcal{O}_{\mathrm{meas}}\mathcal{R}_\omega[\Jimp]=\mathbf{b}\), importing
+\(\mathcal{O}_{\mathrm{meas}}\mathcal{R}_\omega[\Jimp]=\mathbf{b}\). Subsections
+~\ref{sec:ch261}--\ref{sec:ch262} fixed radiation eigenmodes, spectral expansions, and
+rotational degeneracy on \(\mathcal{F}_{\mathrm{rad}}\); Subsection~\ref{sec:ch263}
+develops Fredholm structure, index, and solvability of radiation-related inversions,
+importing
 compactness Eq.~\eqref{eq:ch2.compact-operator-def}, Green split
 Eq.~\eqref{eq:ch2.green-compact-split}, Fredholm split preview
 Eq.~\eqref{eq:ch2.fredholm-split}, finite-rank observation
@@ -9191,7 +9325,9 @@ Eq.~\eqref{eq:ch2.radiation-solvability-criterion} \cite{stratton1941}. On exter
 continuous angular spectra Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} imply
 infinite-dimensional cokernel constraints in principle; finite apertures replace them with
 rank-\(N\) projections through Eq.~\eqref{eq:ch2.observation-fredholm-composition}
-\cite{harrington2001,jackson1999}. Proposition~\ref{prop:ch2.far-pattern-from-modes} expresses
+\cite{harrington2001,jackson1999}. Finite geometry cannot export arbitrarily fine angular
+complexity; propagation therefore acts as a compression mechanism on electromagnetic
+structure. Proposition~\ref{prop:ch2.far-pattern-from-modes} expresses
 \(\mathbf{g}\) through \(\mathbf{f}_n\); solvability requires consistency of measured
 coefficients with Eq.~\eqref{eq:ch2.modal-particular-solution} on exporting modes only
 \cite{stratton1941}.
@@ -9247,8 +9383,7 @@ Eq.~\eqref{eq:ch2.reconstruction-rank-cap} adds a separate finite-rank cap
 \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch263} establishes the Chapter~\ref{ch:02} HOME for Fredholm decomposition
-Eq.~\eqref{eq:ch2.radiation-fredholm-decomposition}, index
+Fredholm decomposition Eq.~\eqref{eq:ch2.radiation-fredholm-decomposition}, index
 Eq.~\eqref{eq:ch2.radiation-fredholm-index-def}, solvability
 Eq.~\eqref{eq:ch2.radiation-solvability-criterion}, Theorem
 ~\ref{thm:ch2.radiation-fredholm-structure}, modal reduction
@@ -9265,7 +9400,7 @@ classifies \(\ker\mathcal{R}_\omega\) in source space \cite{stratton1941}.
 
 Subsections~\ref{sec:ch261}--\ref{sec:ch263} fixed radiation eigenmodes, rotational
 degeneracy, and Fredholm solvability on \(\mathcal{R}_\omega\). Subsection~\ref{sec:ch264}
-gives the Chapter~\ref{ch:02} HOME for geometric constraints---support, boundary class,
+supplies the definitive account of geometric constraints---support, boundary class,
 material symmetry, and parity---that annihilate or restrict modal coefficients in
 Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} independently of observation rank and
 Fredholm index \cite{stratton1941,harrington2001,jackson1999}. Preview
@@ -9303,7 +9438,7 @@ Define a bounded operator \(\mathcal{C}_{\mathrm{geo}}\) on modal amplitudes by
 \end{equation}
 where \(\Gamma_{nm}\) encodes how geometry and boundary class map modal sectors under
 \(G_{\mathrm{geo}}\) \cite{stratton1941,harrington2001}. Equation
-\eqref{eq:ch2.geometric-symmetry-operator-def} is the Subsection~\ref{sec:ch264} HOME
+\eqref{eq:ch2.geometric-symmetry-operator-def} is the Subsection~\ref{sec:ch264} constructive account of
 realization of preview Eq.~\eqref{eq:ch2.geometric-spectrum-constraint-preview}: when
 \(\mathcal{C}_{\mathrm{geo}}\mathbf{e}_n=\mathbf{0}\) for a unit vector \(\mathbf{e}_n\),
 mode \(n\) is \emph{geometrically forbidden} even if \(\lambda_n\neq 0\) and
@@ -9518,8 +9653,7 @@ Eq.~\eqref{eq:ch2.compression-error-bound} and from \(\ker\mathcal{R}_\omega\)
 \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch264} establishes the Chapter~\ref{ch:02} HOME for geometric symmetry
-operator Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def}, support condition
+Geometric symmetry operator Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def}, support condition
 Eq.~\eqref{eq:ch2.support-spectral-support-condition}, boundary/image constraint
 Eq.~\eqref{eq:ch2.boundary-image-constraint}, parity rule
 Eq.~\eqref{eq:ch2.parity-selection-rule}, annihilation Theorem
@@ -9551,9 +9685,18 @@ angular-transport claims throughout Volume~I must compose with
 Eq.~\eqref{eq:ch2.section26-spectral-chain},
 Eq.~\eqref{eq:ch2.constraint-composition-law}, and regime gate
 Eq.~\eqref{eq:ch2.regime-operator-screen}, not with unconstrained modal labels on raw
-\(\mathcal{S}_\omega[\Jimp]\) \cite{stratton1941,harrington2001}.
+\(\mathcal{S}_\omega[\Jimp]\) \cite{stratton1941,harrington2001}. Spectral
+decomposition organizes which radiative modes propagate and which geometric sectors
+remain accessible; Chapter~\ref{ch:04} determines which eigenstructures finite
+sources can actually realize after truncation.
+
 \section{Non-Radiating Sources and Null Spaces}
 \label{sec:ch27}
+
+Non-radiating sources demonstrate a fundamental distinction between electromagnetic
+existence and electromagnetic observability. The absence of radiated signatures does
+not imply the absence of electromagnetic structure. Instead, it identifies source
+configurations whose field content remains inaccessible to far-zone observation.
 
 Section~\ref{sec:ch26} closed the spectral chain
 Eq.~\eqref{eq:ch2.section26-spectral-chain}: radiation eigenmodes, rotational degeneracy,
@@ -9573,7 +9716,21 @@ coupled modes belong to Section~\ref{sec:ch28}; plane-wave angular-spectrum acti
 Section~\ref{sec:ch29}; explicit harmonic bases to Chapter~\ref{ch:03}
 \cite{harrington2001}.
 
-The problem addressed here is \emph{invisibility at the radiation map}. Field-level
+\paragraph{Nullity, accessibility, and realizability.}
+Three deficits are often merged in inverse problems and structured-beam reporting
+\cite{devaney2004,marengo2000,bleszynski1996}. \emph{Nullity} is source-side membership in
+\(\ker\mathcal{R}_\omega\): far data cannot detect additions satisfying
+Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} \cite{reed1950,stratton1941}.
+\emph{Accessibility} is field-side: which directions in the angular spectrum survive
+geometric, transport, and regime gates even when \(\mathcal{R}_\omega[\Jimp]\neq\mathbf{0}\)
+\cite{harrington2001}. \emph{Realizability}---whether a target pattern is
+\(\mathcal{R}_\omega[\Jimp]\) for some admissible \(\Jimp\)---is not decided by accessibility
+alone; Chapter~\ref{ch:04} owns realizability proofs while Section~\ref{sec:ch27} supplies the
+forward null-space taxonomy that constrains every claim \cite{colton1992,stratton1941}.
+Subsection~\ref{sec:ch274} develops the triad in full; the present section builds the operator
+null-space machinery it presupposes.
+
+A source may store reactive energy nearby yet export no far-zone power---the radiation map annihilates whole families of impressed currents. Field-level
 uniqueness after outgoing closure (Theorem~\ref{thm:ch2.exterior-radiative-uniqueness}) does
 not imply source identifiability: many admissible \(\Jimp\in\mathcal{J}_\Omega\) can share
 the same \(\mathcal{R}_\omega[\Jimp]\) through Eq.~\eqref{eq:ch2.ker-R-omega-preview}
@@ -9660,7 +9817,7 @@ structural statements on \(\ker\mathcal{R}_\omega\) and \(\ker\mathcal{R}_\omega
 with admissibility Eq.~\eqref{eq:ch2.source-admissibility} enforced throughout
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.radiation-nullspace-structure-preview}
 does not re-define Eq.~\eqref{eq:ch2.ker-R-omega-preview}; it records the Chapter~\ref{ch:02}
-HOME target for operator-theoretic characterization, dimensionality, and pairing with cokernel
+primary target for operator-theoretic characterization, dimensionality, and pairing with cokernel
 directions obstructing inversion Eq.~\eqref{eq:ch2.spectral-solvability-preview}
 \cite{stratton1941}. Modal sectors with \(\lambda_n=0\) in
 Eq.~\eqref{eq:ch2.spectral-resolution-composition} supply a finite-dimensional \emph{slice}
@@ -9755,7 +9912,7 @@ Eq.~\eqref{eq:ch2.ker-R-omega-preview} \cite{harrington2001}.
 \end{figure}
 
 Figure~\ref{fig:ch2.nullspace-roadmap} orders the four subsections.
-Subsection~\ref{sec:ch271} gives the Chapter~\ref{ch:02} HOME for structural properties of
+Subsection~\ref{sec:ch271} supplies the definitive account of structural properties of
 \(\ker\mathcal{R}_\omega\), adjoint null spaces, and their relation to spectral
 \(\lambda_n=0\) sectors Eq.~\eqref{eq:ch2.spectral-resolution-composition}, upgrading
 Eq.~\eqref{eq:ch2.ker-R-omega-preview} without repeating Fredholm proofs from
@@ -9878,7 +10035,7 @@ source coordinates \cite{stratton1941,harrington2001,jackson1999}.
 
 Section~\ref{sec:ch27} previewed source-side invisibility through
 Eqs.~\eqref{eq:ch2.section27-nullspace-chain}--\eqref{eq:ch2.radiation-nullspace-structure-preview}.
-Subsection~\ref{sec:ch271} gives the Chapter~\ref{ch:02} HOME for structural properties of
+Subsection~\ref{sec:ch271} supplies the definitive account of structural properties of
 \(\ker\mathcal{R}_\omega\), adjoint null spaces, cokernel pairings, and modal null sectors,
 upgrading preview Eq.~\eqref{eq:ch2.ker-R-omega-preview} from Subsection~\ref{sec:ch244} to
 constructive operator-theoretic statements compatible with Fredholm structure Theorem
@@ -9904,7 +10061,7 @@ Eqs.~\eqref{eq:ch2.dual-source-pairing} and~\eqref{eq:ch2.maxwell-adjoint-pairin
 \cite{stratton1941}. Regime gate Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
 reports on any recovered radiative component \cite{harrington2001}.
 
-\paragraph{Radiation null space (HOME definition).}
+\paragraph{Radiation null space (locked definition).}
 The \emph{radiation null space} is the source-side kernel
 \begin{equation}
 \label{eq:ch2.radiation-nullspace-def}
@@ -9918,7 +10075,7 @@ The \emph{radiation null space} is the source-side kernel
 \end{equation}
 equivalently \(\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]=\mathbf{0}\) on the outgoing
 branch \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.radiation-nullspace-def}
-is the Subsection~\ref{sec:ch271} HOME upgrade of preview
+is the Subsection~\ref{sec:ch271} upgrade of preview
 Eq.~\eqref{eq:ch2.ker-R-omega-preview}: admissibility is explicit, and membership is
 defined on \(\mathcal{J}_\Omega\) rather than on formal test directions
 \cite{stratton1941}. Elements of \(\ker\mathcal{R}_\omega\) produce no qualified far-zone
@@ -10210,8 +10367,7 @@ such modes with an exporting source leaves far-zone patterns unchanged while alt
 families beyond single eigenmodes \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch271} establishes the Chapter~\ref{ch:02} HOME for radiation null space
-Eq.~\eqref{eq:ch2.radiation-nullspace-def}, adjoint kernel
+Radiation null space Eq.~\eqref{eq:ch2.radiation-nullspace-def}, adjoint kernel
 Eq.~\eqref{eq:ch2.radiation-adjoint-nullspace}, cokernel
 Eq.~\eqref{eq:ch2.radiation-cokernel-def}, Fredholm alternative
 Eq.~\eqref{eq:ch2.fredholm-nullspace-alternative}, modal null sector
@@ -10234,7 +10390,7 @@ Subsection~\ref{sec:ch271} fixed operator null-space structure through
 Eq.~\eqref{eq:ch2.radiation-nullspace-def}, Theorem~\ref{thm:ch2.radiation-nullspace-structure},
 and modal null sector Eqs.~\eqref{eq:ch2.modal-null-index-set}--\eqref{eq:ch2.modal-null-sector-reduction}
 \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch272} gives the Chapter~\ref{ch:02}
-HOME for \emph{constructive} non-radiating impressed-current configurations---admissible
+ definitive account of \emph{constructive} non-radiating impressed-current configurations---admissible
 \(\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega\) with \(\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\neq\mathbf{0}\)---
 upgrading preview Eq.~\eqref{eq:ch2.nr-current-template-preview} from Section~\ref{sec:ch27}
 \cite{stratton1941,harrington2001,jackson1999}. Radiation integrals, Huygens surface forms
@@ -10258,7 +10414,7 @@ Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}. Regime gate
 Eq.~\eqref{eq:ch2.regime-component-gate} governs whether near-zone reactive content may be
 reported as transport data \cite{harrington2001}.
 
-\paragraph{Non-radiating current (HOME definition).}
+\paragraph{Non-radiating current (locked definition).}
 A \emph{non-radiating current configuration} is an admissible impressed current
 \begin{equation}
 \label{eq:ch2.nr-current-def}
@@ -10270,7 +10426,7 @@ with radiative component \(\mathbf{u}_{\mathrm{rad}}=\mathbf{0}\) and non-radiat
 \(\mathbf{u}_{\mathrm{nr}}=\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) from
 Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def}
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.nr-current-def} is the Subsection
-~\ref{sec:ch272} HOME upgrade of preview Eq.~\eqref{eq:ch2.nr-current-template-preview} and
+~\ref{sec:ch272} upgrade of preview Eq.~\eqref{eq:ch2.nr-current-template-preview} and
 restates Eq.~\eqref{eq:ch2.null-radiation-preview} with explicit admissibility: far-zone export
 vanishes through Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade}, while near-zone fields
 may remain substantial Proposition~\ref{prop:ch2.null-kernel-field-image}
@@ -10350,7 +10506,7 @@ non-radiating distributions satisfy Eq.~\eqref{eq:ch2.equivalent-source-ambiguit
 \ \text{on}\ \Gamma_{\mathrm{eq}},
 \end{equation}
 with \(\hat{\mathbf{n}}\) the outward normal \cite{stratton1941,harrington2001}. Equation
-\eqref{eq:ch2.nr-surface-tangential-null} is the Subsection~\ref{sec:ch272} HOME realization of
+\eqref{eq:ch2.nr-surface-tangential-null} is the Subsection~\ref{sec:ch272} constructive realization of
 Huygens equivalence ambiguity: exterior fields on \(\mathcal{F}_{\mathrm{SF}}\) are fixed by
 Theorem~\ref{thm:ch2.exterior-radiative-uniqueness}, but equivalent surface currents are unique
 only up to additions in Eq.~\eqref{eq:ch2.nr-surface-tangential-null}
@@ -10560,8 +10716,7 @@ changes \(\mathbf{u}_{\mathrm{nr}}\) but not \(a_n\) for \(\lambda_n\neq 0\)
 harmonic bases in Chapter~\ref{ch:03} \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch272} establishes the Chapter~\ref{ch:02} HOME for non-radiating current
-definition Eq.~\eqref{eq:ch2.nr-current-def}, admissibility
+Non-radiating current definition Eq.~\eqref{eq:ch2.nr-current-def}, admissibility
 Eq.~\eqref{eq:ch2.nr-current-admissibility-law}, canonical families
 Eqs.~\eqref{eq:ch2.nr-loop-cancellation}--\eqref{eq:ch2.nr-modal-eigenrealization},
 Theorem~\ref{thm:ch2.canonical-nr-current-families} with superposition law
@@ -10578,7 +10733,7 @@ Subsection~\ref{sec:ch273} develops evanescent subspaces and non-reconstructabil
 
 Subsections~\ref{sec:ch271}--\ref{sec:ch272} fixed \(\ker\mathcal{R}_\omega\) and canonical
 non-radiating impressed currents Eq.~\eqref{eq:ch2.nr-current-def}. Subsection~\ref{sec:ch273}
-gives the Chapter~\ref{ch:02} HOME for evanescent subspaces, their overlap with non-radiating
+supplies the definitive account of evanescent subspaces, their overlap with non-radiating
 source content, and reconstructability limits under finite observation rank---upgrading preview
 Eq.~\eqref{eq:ch2.evanescent-nonreconstruct-preview} from Section~\ref{sec:ch27}
 \cite{stratton1941,harrington2001}. Propagation projectors
@@ -10603,7 +10758,7 @@ Eq.~\eqref{eq:ch2.reconstruction-observation-map} is finite rank with
 \cite{stratton1941}. Regime gate Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
 reports on any recovered radiative component \cite{harrington2001}.
 
-\paragraph{Evanescent subspace (HOME definition).}
+\paragraph{Evanescent subspace (locked definition).}
 On the spectral completion \(\widehat{\mathcal{F}}_\Omega\), the \emph{evanescent subspace} is
 \begin{equation}
 \label{eq:ch2.evanescent-subspace-def}
@@ -10616,7 +10771,7 @@ On the spectral completion \(\widehat{\mathcal{F}}_\Omega\), the \emph{evanescen
 \end{equation}
 with \(\Pi_{\mathrm{ev}}\) from Eq.~\eqref{eq:ch2.spectral-projectors}
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.evanescent-subspace-def} is the
-Subsection~\ref{sec:ch273} HOME field-side label for modes with imaginary longitudinal
+Subsection~\ref{sec:ch273} field-side label for modes with imaginary longitudinal
 wavenumber Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split} and decay rate
 Eq.~\eqref{eq:ch2.evanescent-decay-rate} \cite{stratton1941}. The companion
 \emph{non-propagating} subspace combines evanescent and below-cutoff content through
@@ -10695,7 +10850,7 @@ Define the \emph{non-reconstructable set} at observation rank \(N\):
 \end{equation}
 equivalently the kernel of Eq.~\eqref{eq:ch2.inverse-source-equation} for generic
 \(\mathbf{y}\) \cite{stratton1941,harrington2001}. Equation
-\eqref{eq:ch2.nonreconstruct-observation-kernel} is the Subsection~\ref{sec:ch273} HOME
+\eqref{eq:ch2.nonreconstruct-observation-kernel} is the Subsection~\ref{sec:ch273} constructive account of
 reconstructability label: sources in \(\mathcal{K}_{\mathrm{nrec}}(N)\) are invisible to the
 declared measurement bank regardless of near-zone \(|\E|\) \cite{stratton1941}. Rank bound
 \begin{equation}
@@ -10917,8 +11072,7 @@ whether the storage is evanescent in free space or non-propagating in a guide
 \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch273} establishes the Chapter~\ref{ch:02} HOME for evanescent subspace
-Eq.~\eqref{eq:ch2.evanescent-subspace-def}, source overlap
+Evanescent subspace Eq.~\eqref{eq:ch2.evanescent-subspace-def}, source overlap
 Eq.~\eqref{eq:ch2.evanescent-source-overlap}, non-export law
 Eq.~\eqref{eq:ch2.evanescent-nonexport-law}, radiation/measurement split
 Eq.~\eqref{eq:ch2.radiation-vs-measurement-nullity-split}, non-reconstructable kernel
@@ -10939,7 +11093,7 @@ reconstructability budget \cite{stratton1941}.
 Subsections~\ref{sec:ch271}--\ref{sec:ch273} fixed \(\ker\mathcal{R}_\omega\), canonical
 non-radiating currents Eq.~\eqref{eq:ch2.nr-current-def}, and evanescent non-reconstructability
 Theorem~\ref{thm:ch2.evanescent-nonreconstructability}. Subsection~\ref{sec:ch274} gives the
-Chapter~\ref{ch:02} HOME for how null-space, evanescent, and measurement deficits propagate to
+Chapter~\ref{ch:02} account of how null-space, evanescent, and measurement deficits propagate to
 continuous angular spectra Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}---upgrading
 preview Eq.~\eqref{eq:ch2.angular-spectrum-null-preview} from Section~\ref{sec:ch27}
 \cite{stratton1941,harrington2001,jackson1999}. Discrete far-pattern expansion
@@ -10965,7 +11119,7 @@ Eq.~\eqref{eq:ch2.nonreconstruct-observation-kernel} are presupposed
 \cite{harrington2001}. Regime gate Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
 claims on any retained angular content \cite{stratton1941}.
 
-\paragraph{Angular spectrum under radiation nullity (HOME statement).}
+\paragraph{Angular spectrum under radiation nullity).}
 Let \(a(\widehat{\mathbf{k}})\) denote the scalar angular spectrum obtained from
 Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} on the outgoing transverse sheet
 \cite{stratton1941,harrington2001}. For \(\Jimp\in\ker\mathcal{R}_\omega\),
@@ -10977,7 +11131,7 @@ a(\widehat{\mathbf{k}})=0
 \end{equation}
 equivalently \(\E_0(\theta,\phi)=\mathbf{0}\) in Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion}
 \cite{stratton1941,jackson1999}. Equation~\eqref{eq:ch2.angular-spectrum-nullspace-law} is the
-Subsection~\ref{sec:ch274} HOME upgrade of the first clause of preview
+Subsection~\ref{sec:ch274} upgrade of the first clause of preview
 Eq.~\eqref{eq:ch2.angular-spectrum-null-preview}: null-space membership annihilates the entire
 far-zone angular measure, not merely selected harmonics
 \cite{harrington2001,stratton1941}. Near-zone reactive content in
@@ -11236,8 +11390,7 @@ problems require continuous measures Eq.~\eqref{eq:ch2.exterior-continuous-spect
 not finite cavity truncation \cite{jackson1999,stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch274} establishes the Chapter~\ref{ch:02} HOME for angular null-space law
-Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law}, suppressed sheet
+Angular null-space law Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law}, suppressed sheet
 Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def}, NR invariance
 Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance}, evanescent decoupling
 Eq.~\eqref{eq:ch2.evanescent-angular-decoupling}, observation rank
@@ -11271,7 +11424,11 @@ angular-transport claims throughout Volume~I must compose with
 Eq.~\eqref{eq:ch2.section27-nullspace-chain},
 Eq.~\eqref{eq:ch2.angular-spectrum-composition-law}, and regime gate
 Eq.~\eqref{eq:ch2.regime-operator-screen}, not with raw \(\mathcal{S}_\omega[\Jimp]\) or
-unqualified near-zone reactive content \cite{stratton1941,harrington2001}.
+unqualified near-zone reactive content \cite{stratton1941,harrington2001}. Source
+null spaces explain what far-zone observation cannot detect; realizability---whether
+accessible angular content is generable by finite \(\Jimp\)---is decided in
+Chapter~\ref{ch:04} alongside source equivalence and effective rank.
+
 \section{Reciprocity and Radiative Coupling}
 \label{sec:ch28}
 
@@ -11293,7 +11450,7 @@ completeness belong to Chapter~\ref{ch:03} Subsection~\ref{sec:ch343}; continuou
 normalization belongs to Subsection~\ref{sec:ch352} by reference to
 Subsection~\ref{sec:ch282} \cite{harrington2001}.
 
-The problem addressed here is \emph{bilinear symmetry} of radiation maps under source--probe
+Exchange of impressed source and measurement probe must leave bilinear radiation observables invariant on reciprocal media. Bilinear symmetry of radiation maps under source--probe
 interchange. Spectral decomposition Theorem~\ref{thm:ch2.radiation-spectral-decomposition}
 and biorthogonality Eq.~\eqref{eq:ch2.radiation-biorthogonality} from Subsection
 ~\ref{sec:ch261} fixed modal coordinates on \(\mathcal{F}_{\mathrm{rad}}\); null-space
@@ -11346,7 +11503,7 @@ Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolv
 incoming sheets are excluded from \(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001}.
 
 \paragraph{Lorentz reciprocity (preview).}
-Subsection~\ref{sec:ch281} gives the Chapter~\ref{ch:02} HOME operator statement: for
+Subsection~\ref{sec:ch281} supplies the definitive operator statement: for
 admissible source pairs \((\Jimp^{(1)},\Jimp^{(2)})\) and induced fields
 \((\mathbf{u}_1,\mathbf{u}_2)\),
 \begin{equation}
@@ -11381,7 +11538,7 @@ C_{mn}
 with \(\widetilde{\mathbf{u}}_m\) adjoint modes tied to
 Eq.~\eqref{eq:ch2.radiation-biorthogonality} \cite{stratton1941,harrington2001}. Equation
 \eqref{eq:ch2.modal-orthogonality-preview} is the Section~\ref{sec:ch28} target for
-Subsection~\ref{sec:ch282} HOME orthogonality and coupling on \(\mathcal{F}_{\mathrm{rad}}\);
+Subsection~\ref{sec:ch282} orthogonality and coupling on \(\mathcal{F}_{\mathrm{rad}}\);
 explicit vector harmonic normalization belongs to Chapter~\ref{ch:03}
 \cite{stratton1941}. Modes with \(\lambda_n=0\) lie in null sectors
 Eq.~\eqref{eq:ch2.modal-null-index-set}; reciprocity constraints apply on exporting modes
@@ -11447,7 +11604,7 @@ measures export overlap, not raw near-zone reactive overlap
 \end{figure}
 
 Figure~\ref{fig:ch2.reciprocity-roadmap} orders the three subsections.
-Subsection~\ref{sec:ch281} gives the Chapter~\ref{ch:02} HOME for Lorentz reciprocity on
+Subsection~\ref{sec:ch281} supplies the definitive account of Lorentz reciprocity on
 \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\), upgrading
 Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} and adjoint pairing
 Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} to constructive statements on declared domains
@@ -11473,7 +11630,7 @@ Eq.~\eqref{eq:ch2.measurement-nullspace-composition} may break full reciprocity 
 Eq.~\eqref{eq:ch2.angular-accessibility-sector} \cite{harrington2001}.
 
 Several constructions deliberately remain outside Section~\ref{sec:ch28}. Vector spherical
-harmonic orthogonality and completeness are HOME in Chapter~\ref{ch:03} with USE of
+harmonic orthogonality and completeness are developed in Chapter~\ref{ch:03} with USE of
 Subsection~\ref{sec:ch282}; Subsection~\ref{sec:ch282} records operator-level orthogonality
 without re-tabulating \(Y_\ell^m\) \cite{stratton1941,harrington2001}. Non-radiating catalogs
 remain in Section~\ref{sec:ch27}; angular-spectrum operators in Section~\ref{sec:ch29}
@@ -11530,7 +11687,7 @@ same modal coordinates \cite{stratton1941,harrington2001,jackson1999}.
 
 Section~\ref{sec:ch28} previewed bilinear exchange symmetry through
 Eqs.~\eqref{eq:ch2.section28-reciprocity-chain}--\eqref{eq:ch2.lorentz-reciprocity-preview}.
-Subsection~\ref{sec:ch281} gives the Chapter~\ref{ch:02} HOME for Lorentz reciprocity on
+Subsection~\ref{sec:ch281} supplies the definitive account of Lorentz reciprocity on
 \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\), including the full proof of dyadic swap
 Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} deferred from Subsection~\ref{sec:ch231}
 \cite{stratton1941,harrington2001,jackson1999}. Maxwell adjoint pairing
@@ -11728,7 +11885,7 @@ Eq.~\eqref{eq:ch2.regime-component-gate} must still be satisfied before interpre
 Eq.~\eqref{eq:ch2.radiation-map-reciprocity} as a transport channel
 \cite{harrington2001}.
 
-\begin{proposition}[Dyadic reciprocity swap (HOME proof)]
+\begin{proposition}[Dyadic reciprocity swap)]
 \label{prop:ch2.dyadic-reciprocity-home}
 Under Eq.~\eqref{eq:ch2.reciprocal-medium-class} with outgoing closure, the electric dyad
 \(\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}\) in
@@ -11836,8 +11993,7 @@ material data, or inconsistent \(\mathcal{B}_\Gamma\) between transmit and recei
 \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch281} establishes the Chapter~\ref{ch:02} HOME for reciprocal medium class
-Eq.~\eqref{eq:ch2.reciprocal-medium-class}, volume Lorentz identity
+Reciprocal medium class Eq.~\eqref{eq:ch2.reciprocal-medium-class}, volume Lorentz identity
 Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity}, operator reciprocity
 Eq.~\eqref{eq:ch2.lorentz-reciprocity-operator}, dyadic swap
 Proposition~\ref{prop:ch2.dyadic-reciprocity-home} upgrading
@@ -11857,7 +12013,7 @@ Subsection~\ref{sec:ch281} established Lorentz reciprocity on \(\mathcal{S}_\ome
 \(\mathcal{R}_\omega\) through Theorem~\ref{thm:ch2.lorentz-reciprocity-operator} and
 radiation reciprocity Eq.~\eqref{eq:ch2.radiation-map-reciprocity}
 \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch282} gives the Chapter~\ref{ch:02}
-HOME for orthogonality and coupling of radiative modes on the spectral coordinates fixed in
+ definitive account of orthogonality and coupling of radiative modes on the spectral coordinates fixed in
 Subsection~\ref{sec:ch261}, upgrading preview
 Eqs.~\eqref{eq:ch2.modal-orthogonality-preview} and~\eqref{eq:ch2.radiative-coupling-bilinear-preview}
 \cite{stratton1941}. Radiation eigenpairs Eq.~\eqref{eq:ch2.radiation-eigenpair-def}, modal
@@ -11887,7 +12043,7 @@ Eq.~\eqref{eq:ch2.radiation-biorthogonality} and coincide with \(\mathbf{u}_n\) 
 \cite{stratton1941,harrington2001}. Regime gate Eq.~\eqref{eq:ch2.regime-operator-screen}
 governs transport interpretation of coupling reports \cite{harrington2001}.
 
-\paragraph{Radiation-modal orthogonality (HOME).}
+\paragraph{Radiation-modal orthogonality}
 On the orthonormal family of Theorem~\ref{thm:ch2.radiation-spectral-decomposition},
 \begin{equation}
 \label{eq:ch2.radiation-modal-orthogonality}
@@ -11899,7 +12055,7 @@ m,n\in\mathcal{N}_{\mathrm{rad}},
 \end{equation}
 with \(\|\mathbf{u}_n\|_{\mathcal{U}}=1\) already enforced in
 Eq.~\eqref{eq:ch2.radiation-eigenpair-def} \cite{stratton1941,harrington2001}.
-Equation~\eqref{eq:ch2.radiation-modal-orthogonality} is the Subsection~\ref{sec:ch282} HOME
+Equation~\eqref{eq:ch2.radiation-modal-orthogonality} is the Subsection~\ref{sec:ch282} locked definition of
 upgrade of the first line of preview Eq.~\eqref{eq:ch2.modal-orthogonality-preview}; it
 specializes projector orthogonality \(P_m P_n=\delta_{mn}P_n\) from
 Eq.~\eqref{eq:ch2.modal-projector-def} to the chosen orthonormal basis
@@ -11924,7 +12080,7 @@ m,n\in\mathcal{N}_{\mathrm{rad}},
 \end{equation}
 with adjoint modes from Eq.~\eqref{eq:ch2.radiation-biorthogonality}
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.modal-coupling-coefficient} is the
-Subsection~\ref{sec:ch282} HOME upgrade of the second line of preview
+Subsection~\ref{sec:ch282} upgrade of the second line of preview
 Eq.~\eqref{eq:ch2.modal-orthogonality-preview}. When
 Eq.~\eqref{eq:ch2.radiation-biorthogonality} holds,
 \begin{equation}
@@ -11939,7 +12095,7 @@ physically, orthogonal radiation modes do not co-excite one another through
 \(\mathcal{R}_\omega\) when sources align with eigenpairs---cross-talk appears only from
 superpositions or degenerate subspaces \cite{harrington2001,jackson1999}.
 
-\paragraph{Radiative coupling bilinear form (HOME).}
+\paragraph{Radiative coupling bilinear form}
 For arbitrary admissible \(\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega\), define
 \begin{equation}
 \label{eq:ch2.radiative-coupling-bilinear}
@@ -12204,8 +12360,7 @@ recoverable coupling entries independently of modal orthogonality
 \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch282} establishes the Chapter~\ref{ch:02} HOME for radiation-modal
-orthogonality Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}, coupling coefficients
+Radiation-modal orthogonality Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}, coupling coefficients
 Eqs.~\eqref{eq:ch2.modal-coupling-coefficient}--\eqref{eq:ch2.modal-coupling-diagonal},
 radiative bilinear coupling Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} with symmetry
 Eq.~\eqref{eq:ch2.coupling-bilinear-symmetry}, modal sum formulas
@@ -12227,7 +12382,7 @@ Subsections~\ref{sec:ch281}--\ref{sec:ch282} established Lorentz reciprocity The
 Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}, and modal orthogonality Theorem
 ~\ref{thm:ch2.radiation-modal-orthogonality-coupling} on \(\mathcal{F}_{\mathrm{rad}}\)
 \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch283} gives the Chapter~\ref{ch:02}
-HOME for reciprocity in radiation and reception: transmit--receive operator interchange,
+ definitive account of reciprocity in radiation and reception: transmit--receive operator interchange,
 two-port coupling symmetry, and measurement-qualified reciprocity on
 \(\operatorname{ran}\mathcal{R}_\omega\), upgrading preview
 Eq.~\eqref{eq:ch2.transmit-receive-swap-preview} \cite{stratton1941,jackson1999}. Observation
@@ -12273,7 +12428,7 @@ at port \(B\) is \(\Jimp^{\mathrm{(rx)}}\mapsto\mathcal{M}_A[\Jimp^{\mathrm{(rx)
 \(\mathcal{R}_\omega[\Jimp]\); physically, reciprocity constrains their interchange when
 hardware and media are reciprocal \cite{stratton1941}.
 
-\paragraph{Transmit--receive reciprocity (HOME).}
+\paragraph{Transmit--receive reciprocity}
 Under Theorem~\ref{thm:ch2.lorentz-reciprocity-operator} and self-adjoint port functionals
 \(\mathcal{O}_{\mathrm{meas}}^{(P)}\) on \(\mathcal{F}_{\mathrm{rad}}\),
 \begin{equation}
@@ -12493,8 +12648,7 @@ impedance obeys Eq.~\eqref{eq:ch2.reciprocal-impedance-matrix} in the symmetric 
 through Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch283} establishes the Chapter~\ref{ch:02} HOME for port operators
-Eq.~\eqref{eq:ch2.port-radiation-reception-operator}, transmit--receive reciprocity
+Port operators Eq.~\eqref{eq:ch2.port-radiation-reception-operator}, transmit--receive reciprocity
 Eq.~\eqref{eq:ch2.transmit-receive-reciprocity}, port coupling bilinear
 Eq.~\eqref{eq:ch2.port-coupling-bilinear}, reciprocal impedance symmetry
 Eq.~\eqref{eq:ch2.reciprocal-impedance-matrix}, modal port expansions
@@ -12543,13 +12697,13 @@ near-zone fields map to far-zone angular amplitudes \(a(\widehat{\mathbf{k}})\)
 \cite{stratton1941,harrington2001}. Preview expansion
 Eq.~\eqref{eq:ch2.angular-spectrum-preview} from Subsection~\ref{sec:ch224} named the lateral
 spectral template; Section~\ref{sec:ch29} upgrades radiation-operator action on angular spectra to
-HOME statements compatible with outgoing gate Eq.~\eqref{eq:ch2.outgoing-plane-wave-gate} and
+ locked statements compatible with outgoing gate Eq.~\eqref{eq:ch2.outgoing-plane-wave-gate} and
 far amplitude Eq.~\eqref{eq:ch2.far-field-amplitude-integral} \cite{stratton1941}. Explicit
-basis change to vector harmonics is HOME in Chapter~\ref{ch:03} Subsection~\ref{sec:ch381}; harmonic
+basis change to vector harmonics is developed in Chapter~\ref{ch:03} Subsection~\ref{sec:ch381}; harmonic
 normalization belongs to Subsection~\ref{sec:ch352} with USE of Subsection~\ref{sec:ch282}
 \cite{harrington2001}.
 
-The problem addressed here is \emph{filtering} of angular content by the radiation pipeline.
+Not every near-field harmonic projects to a measurable far-zone direction; the radiation operator acts as an angular filter on source spectra.
 Spectral decomposition Theorem~\ref{thm:ch2.radiation-spectral-decomposition} and continuous
 representation Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} from Subsection
 ~\ref{sec:ch261} fixed modal and plane-wave coordinates on \(\mathcal{F}_{\mathrm{rad}}\);
@@ -12608,7 +12762,7 @@ incoming sheets remain excluded from \(\mathcal{F}_{\mathrm{rad}}\)
 \cite{harrington2001,stratton1941}.
 
 \paragraph{Plane-wave angular spectrum and radiation operators (preview).}
-Subsection~\ref{sec:ch291} gives the Chapter~\ref{ch:02} HOME for plane-wave angular spectra
+Subsection~\ref{sec:ch291} supplies the definitive account of plane-wave angular spectra
 and the action of \(\mathcal{R}_\omega\circ\Pi_{\mathrm{prop}}\) on spectral coefficients:
 \begin{equation}
 \label{eq:ch2.plane-wave-radiation-operator-preview}
@@ -12641,7 +12795,7 @@ a_{\mathrm{filt}}=\mathcal{O}_{\mathrm{meas}}[a],
 using accessible sector Eq.~\eqref{eq:ch2.angular-accessibility-sector} and suppressed sheet
 Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} from Subsection~\ref{sec:ch274}
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.retained-suppressed-filter-preview}
-is the Section~\ref{sec:ch29} target for Subsection~\ref{sec:ch292} HOME partition; geometric
+is the Section~\ref{sec:ch29} target for Subsection~\ref{sec:ch292} partition; geometric
 constraints Theorem~\ref{thm:ch2.geometric-spectral-constraints} and observation rank
 Eq.~\eqref{eq:ch2.angular-spectrum-observation-rank} compose independently with
 Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} \cite{stratton1941}. Null modes annihilate
@@ -12681,7 +12835,7 @@ a(\widehat{\mathbf{k}})\ \text{observable after}\ \mathcal{M}_\omega
 upgrading Proposition~\ref{prop:ch2.angular-accessibility-preview} and composing with
 Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} \cite{stratton1941}. Equation
 \eqref{eq:ch2.far-angular-accessibility-preview} is the Section~\ref{sec:ch29} closure target;
-explicit plane-wave filters and measurement screens are HOME in Subsection~\ref{sec:ch294}
+explicit plane-wave filters and measurement screens are developed in Subsection~\ref{sec:ch294}
 \cite{harrington2001}. Reciprocity Theorem~\ref{thm:ch2.radiation-reception-reciprocity} constrains
 coupling on \(\mathcal{K}_{\mathrm{acc}}\) but does not enlarge it \cite{stratton1941}.
 
@@ -12708,7 +12862,7 @@ far-field angular accessibility (Subsection~\ref{sec:ch294}).}
 \end{figure}
 
 Figure~\ref{fig:ch2.angular-spectrum-action-roadmap} orders the four subsections.
-Subsection~\ref{sec:ch291} gives the Chapter~\ref{ch:02} HOME for plane-wave expansions and
+Subsection~\ref{sec:ch291} supplies the definitive account of plane-wave expansions and
 radiation-operator action upgrading Eq.~\eqref{eq:ch2.plane-wave-radiation-operator-preview},
 importing Eq.~\eqref{eq:ch2.outgoing-plane-wave-gate} by reference
 \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch292} develops retained, suppressed, and
@@ -12736,12 +12890,12 @@ coordinates Eq.~\eqref{eq:ch2.radiation-map-modal-sum} and plane-wave coordinate
 Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} describe the same
 \(\operatorname{ran}\mathcal{R}_\omega\) on exterior domains; Section~\ref{sec:ch29} fixes
 plane-wave-side filters, while Chapter~\ref{ch:03} Subsection~\ref{sec:ch381} supplies basis
-change HOME \cite{stratton1941,harrington2001,jackson1999}. Finite-rank observation
+change law \cite{stratton1941,harrington2001,jackson1999}. Finite-rank observation
 Eq.~\eqref{eq:ch2.reconstruction-rank-cap} may remove angular content even when
 \(a(\widehat{\mathbf{k}})\neq 0\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.
 
 Several constructions deliberately remain outside Section~\ref{sec:ch29}. Vector spherical
-harmonic completeness and normalization are HOME in Chapter~\ref{ch:03}; Section~\ref{sec:ch29}
+harmonic completeness and normalization are developed in Chapter~\ref{ch:03}; Section~\ref{sec:ch29}
 records operator-level plane-wave action without tabulating \(Y_\ell^m\)
 \cite{stratton1941,harrington2001}. Non-radiating catalogs remain in Section~\ref{sec:ch27};
 reciprocity constraints remain in Section~\ref{sec:ch28} \cite{stratton1941}. Section~\ref{sec:ch29}
@@ -12798,7 +12952,7 @@ same angular coordinates \cite{stratton1941,harrington2001,jackson1999}.
 
 Section~\ref{sec:ch29} previewed angular-spectrum action through
 Eqs.~\eqref{eq:ch2.section29-angular-spectrum-chain}--\eqref{eq:ch2.plane-wave-radiation-operator-preview}.
-Subsection~\ref{sec:ch291} gives the Chapter~\ref{ch:02} HOME for plane-wave angular spectra
+Subsection~\ref{sec:ch291} supplies the definitive account of plane-wave angular spectra
 and the action of \(\mathcal{R}_\omega\), \(\Pi_{\mathrm{rad}}\), and outgoing selection on
 lateral spectral coefficients \cite{stratton1941,harrington2001,jackson1999}. Dispersion split
 Eqs.~\eqref{eq:ch2.dispersion-relation}--\eqref{eq:ch2.longitudinal-wavenumber-split},
@@ -12825,7 +12979,7 @@ Eq.~\eqref{eq:ch2.transverse-polarization-constraint} on each spectral sheet
 \cite{stratton1941,harrington2001}. Regime gate Eq.~\eqref{eq:ch2.regime-operator-screen} governs
 transport interpretation of spectral outputs \cite{harrington2001}.
 
-\paragraph{Plane-wave angular spectrum (HOME).}
+\paragraph{Plane-wave angular spectrum}
 On a plane \(z=z_0\) in an outgoing admissible region, define the \emph{lateral angular spectrum}
 of \(\E\) by
 \begin{equation}
@@ -12876,7 +13030,7 @@ Eq.~\eqref{eq:ch2.plane-wave-angular-spectrum-def} on admissible traces. Define 
 \end{equation}
 with \(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\) from
 Eq.~\eqref{eq:ch2.rad-projection-composition} \cite{stratton1941,harrington2001}. Equation
-\eqref{eq:ch2.radiative-lateral-spectrum-def} is the Subsection~\ref{sec:ch291} HOME upgrade of
+\eqref{eq:ch2.radiative-lateral-spectrum-def} is the Subsection~\ref{sec:ch291} upgrade of
 preview Eq.~\eqref{eq:ch2.plane-wave-radiation-operator-preview}: radiation selection precedes
 lateral transformation \cite{stratton1941}. Applying \(\mathcal{F}_{\mathrm{lat}}\) to raw
 \(\mathcal{S}_\omega[\Jimp]\) without \(\Pi_{\mathrm{rad}}\) mixes reactive evanescent sheets
@@ -13069,8 +13223,7 @@ spectral content Theorem~\ref{thm:ch2.far-field-approximation} \cite{stratton194
 Subsection~\ref{sec:ch293} develops the near-to-far map explicitly \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch291} establishes the Chapter~\ref{ch:02} HOME for plane-wave angular
-spectrum Eqs.~\eqref{eq:ch2.plane-wave-angular-spectrum-def}--\eqref{eq:ch2.plane-wave-z-propagation},
+Plane-wave angular spectrum Eqs.~\eqref{eq:ch2.plane-wave-angular-spectrum-def}--\eqref{eq:ch2.plane-wave-z-propagation},
 radiative lateral spectrum Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def}, angular-spectrum
 radiation operator Eq.~\eqref{eq:ch2.plane-wave-radiation-operator}, evanescent null law
 Eq.~\eqref{eq:ch2.evanescent-angular-null-law}, Theorem
@@ -13089,7 +13242,7 @@ Eq.~\eqref{eq:ch2.retained-suppressed-filter-preview} and linked it to accessibl
 Eq.~\eqref{eq:ch2.angular-accessibility-sector} and suppressed sheet
 Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} from Subsection~\ref{sec:ch274}
 \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch292} gives the Chapter~\ref{ch:02}
-HOME for retained, suppressed, and observation-filtered angular components on the outgoing
+ definitive account of retained, suppressed, and observation-filtered angular components on the outgoing
 branch established in Subsection~\ref{sec:ch291}. Plane-wave lateral spectra
 Eqs.~\eqref{eq:ch2.radiative-lateral-spectrum-def}--\eqref{eq:ch2.plane-wave-radiation-operator},
 evanescent null law Eq.~\eqref{eq:ch2.evanescent-angular-null-law}, angular budget
@@ -13117,7 +13270,7 @@ Eq.~\eqref{eq:ch2.reconstruction-observation-map} is presupposed; regime gate
 Eq.~\eqref{eq:ch2.regime-operator-screen} qualifies transport interpretation of any reported
 component \cite{harrington2001,stratton1941}.
 
-\paragraph{Retained angular amplitude (HOME).}
+\paragraph{Retained angular amplitude}
 Define the \emph{retained angular amplitude} as the exportable content supported on the
 accessible sheet:
 \begin{equation}
@@ -13137,7 +13290,7 @@ a(\widehat{\mathbf{k}}),
 with \(a(\widehat{\mathbf{k}})\) from
 Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} after
 Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} \cite{stratton1941,harrington2001}.
-Equation~\eqref{eq:ch2.retained-angular-amplitude-def} is the Subsection~\ref{sec:ch292} HOME
+Equation~\eqref{eq:ch2.retained-angular-amplitude-def} is the Subsection~\ref{sec:ch292} locked definition of
 upgrade of the retained factor in preview
 Eq.~\eqref{eq:ch2.retained-suppressed-filter-preview}: only directions not annihilated by
 \(\mathcal{C}_{\mathrm{geo}}\) Proposition~\ref{prop:ch2.angular-accessibility-preview} carry
@@ -13148,7 +13301,7 @@ selection \cite{harrington2001,jackson1999}. Null-space additions
 Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} leave \(a_{\mathrm{ret}}\) unchanged
 \cite{stratton1941}.
 
-\paragraph{Suppressed angular amplitude (HOME).}
+\paragraph{Suppressed angular amplitude}
 Define the \emph{suppressed angular amplitude} as the complementary sheet content:
 \begin{equation}
 \label{eq:ch2.suppressed-angular-amplitude-def}
@@ -13173,7 +13326,7 @@ Evanescent lateral content Eq.~\eqref{eq:ch2.evanescent-angular-null-law} does n
 \(a_{\mathrm{sup}}\) on export: \(\Pi_{\mathrm{ev}}\) is removed before angular readout
 \cite{stratton1941}.
 
-\paragraph{Filtered angular amplitude (HOME).}
+\paragraph{Filtered angular amplitude}
 Laboratory observation applies a finite-rank screen to far-zone angular content. Define the
 \emph{filtered angular amplitude} by
 \begin{equation}
@@ -13199,7 +13352,7 @@ Eq.~\eqref{eq:ch2.observation-null-space} \cite{stratton1941,harrington2001}. Ph
 it may vanish on subsets of \(\mathcal{K}_{\mathrm{acc}}\) where \(a_{\mathrm{ret}}\) is nonzero
 \cite{harrington2001}.
 
-\paragraph{Angular component partition (HOME).}
+\paragraph{Angular component partition}
 Combining Eqs.~\eqref{eq:ch2.retained-angular-amplitude-def}--\eqref{eq:ch2.filtered-angular-amplitude-def}
 yields the Chapter~\ref{ch:02} partition
 \begin{equation}
@@ -13217,7 +13370,7 @@ a_{\mathrm{filt}}
 with \(a_{\mathrm{ret}}\) and \(a_{\mathrm{sup}}\) supported on disjoint sheets
 \(\mathcal{K}_{\mathrm{acc}}\) and \(\mathcal{K}_{\mathrm{sup}}\)
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.angular-component-partition} upgrades
-preview Eq.~\eqref{eq:ch2.retained-suppressed-filter-preview} to explicit HOME definitions and
+preview Eq.~\eqref{eq:ch2.retained-suppressed-filter-preview} to explicit locked definitions and
 inserts the measurement projector \(\mathcal{P}_{\mathrm{meas}}\). The first line is an angular
 decomposition of export; the second line states that observation acts on the sum after radiation
 selection, not on raw near spectra \cite{stratton1941}. Budget
@@ -13455,8 +13608,7 @@ Eq.~\eqref{eq:ch2.evanescent-angular-null-law} before angular partition
 violates regime gate Eq.~\eqref{eq:ch2.regime-component-gate} \cite{harrington2001}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch292} establishes the Chapter~\ref{ch:02} HOME for retained angular amplitude
-Eq.~\eqref{eq:ch2.retained-angular-amplitude-def}, suppressed angular amplitude
+Retained angular amplitude Eq.~\eqref{eq:ch2.retained-angular-amplitude-def}, suppressed angular amplitude
 Eq.~\eqref{eq:ch2.suppressed-angular-amplitude-def}, filtered angular amplitude
 Eq.~\eqref{eq:ch2.filtered-angular-amplitude-def}, full partition
 Eq.~\eqref{eq:ch2.angular-component-partition}, lateral counterparts
@@ -13476,7 +13628,7 @@ Eq.~\eqref{eq:ch2.near-to-far-transform-preview} and tied it to far-zone reducti
 Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
 and Theorem~\ref{thm:ch2.far-field-approximation} from Subsection~\ref{sec:ch252}
 \cite{stratton1941,jackson1999,harrington2001}. Subsection~\ref{sec:ch293} gives the
-Chapter~\ref{ch:02} HOME for the operator that extracts far angular amplitudes
+Chapter~\ref{ch:02} account of the operator that extracts far angular amplitudes
 \(a(\widehat{\mathbf{k}})\) from radiative fields after
 Subsections~\ref{sec:ch291}--\ref{sec:ch292}. Plane-wave lateral spectra
 Eqs.~\eqref{eq:ch2.radiative-lateral-spectrum-def}--\eqref{eq:ch2.plane-wave-radiation-operator},
@@ -13499,7 +13651,7 @@ for source support radius \(a\) \cite{stratton1941,jackson1999,harrington2001}. 
 Eq.~\eqref{eq:ch2.regime-operator-screen} is presupposed before interpreting any near-to-far
 output as transport \cite{harrington2001}.
 
-\paragraph{Far-zone extractor (HOME).}
+\paragraph{Far-zone extractor}
 On observation shells \(S_r=\{|\mathbf{r}|=r\}\), define the \emph{far-zone extractor}
 \(\mathcal{H}_{\mathrm{ff}}\) by the transverse \(e^{-\jj k_0 r}/r\) coefficient in direction
 \(\widehat{\mathbf{k}}\):
@@ -13514,7 +13666,7 @@ r\,e^{\jj k_0 r}\,
 \end{equation}
 with \(\E\) the electric phasor in \(\mathbf{u}_\omega=(\E,\H)\) and transversality enforced by
 the double cross product \cite{stratton1941,jackson1999,harrington2001}. Equation
-\eqref{eq:ch2.far-zone-extractor-def} is the Subsection~\ref{sec:ch293} HOME specification of the
+\eqref{eq:ch2.far-zone-extractor-def} is the Subsection~\ref{sec:ch293} definitive specification of the
 extractor previewed in Eq.~\eqref{eq:ch2.near-to-far-transform-preview}: it isolates the
 outgoing radiative envelope compatible with Eq.~\eqref{eq:ch2.far-field-integral-reduction}
 \cite{stratton1941}. Mathematically, \(\mathcal{H}_{\mathrm{ff}}\) is a linear functional on
@@ -13524,7 +13676,7 @@ shell traces; physically, it is the standard far-field post-processor that remov
 \(\mathcal{S}_\omega[\Jimp]\) Eq.~\eqref{eq:ch2.observation-shell-regime-map}
 \cite{stratton1941}.
 
-\paragraph{Near-to-far transformation (HOME).}
+\paragraph{Near-to-far transformation}
 Define the \emph{near-to-far transformation} on admissible sources by
 \begin{equation}
 \label{eq:ch2.near-to-far-transform-def}
@@ -13812,8 +13964,7 @@ Adding \(\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega\) changes near traces bu
 without \(\mathcal{R}_\omega\) cannot detect the invisible addition \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch293} establishes the Chapter~\ref{ch:02} HOME for far-zone extractor
-Eq.~\eqref{eq:ch2.far-zone-extractor-def}, near-to-far transformation
+Far-zone extractor Eq.~\eqref{eq:ch2.far-zone-extractor-def}, near-to-far transformation
 Eq.~\eqref{eq:ch2.near-to-far-transform-def}, operator composition
 Eq.~\eqref{eq:ch2.near-to-far-operator-composition}, lateral link
 Eq.~\eqref{eq:ch2.near-to-far-lateral-link}, evanescent null
@@ -13832,7 +13983,7 @@ Section~\ref{sec:ch29} previewed far-field angular accessibility through
 Eq.~\eqref{eq:ch2.far-angular-accessibility-preview} and required USE of directional
 observables from Section~\ref{sec:ch01.2.1} and transport criteria from
 Section~\ref{sec:ch01.2.3} \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch294}
-gives the Chapter~\ref{ch:02} HOME closure for which directions on \(S^{2}\) carry
+supplies the definitive closure for which directions on \(S^{2}\) carry
 qualified, observable far-zone angular content after Subsections~\ref{sec:ch291}--\ref{sec:ch293}.
 Near-to-far map Eq.~\eqref{eq:ch2.near-to-far-transform-def}, angular partition
 Eq.~\eqref{eq:ch2.angular-component-partition}, accessible sector
@@ -13856,7 +14007,7 @@ Eqs.~\eqref{eq:ch2.angular-accessibility-sector}--\eqref{eq:ch2.suppressed-angul
 \cite{stratton1941}. Finite-rank measurement \(\mathcal{M}_\omega\) from
 Eq.~\eqref{eq:ch2.reconstruction-observation-map} is presupposed \cite{harrington2001}.
 
-\paragraph{Far-field accessibility criterion (HOME).}
+\paragraph{Far-field accessibility criterion}
 Define \emph{far-field angular accessibility} by
 \begin{equation}
 \label{eq:ch2.far-angular-accessibility-def}
@@ -13904,7 +14055,7 @@ Eq.~\eqref{eq:ch2.angular-accessibility-operator}:
 \cite{harrington2001,stratton1941}. Null additions leave \(a_{\mathrm{acc}}\) unchanged through
 Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} \cite{stratton1941}.
 
-\paragraph{Plane-wave accessibility filter (HOME).}
+\paragraph{Plane-wave accessibility filter}
 On lateral coordinates, define the \emph{plane-wave accessibility filter} by
 \begin{equation}
 \label{eq:ch2.plane-wave-accessibility-filter}
@@ -13917,7 +14068,7 @@ On lateral coordinates, define the \emph{plane-wave accessibility filter} by
 \end{equation}
 with \(\widetilde{\E}_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def}
 \cite{stratton1941,harrington2001,jackson1999}. Equation~\eqref{eq:ch2.plane-wave-accessibility-filter}
-is the Subsection~\ref{sec:ch294} HOME plane-wave screen promised in
+is the Subsection~\ref{sec:ch294} plane-wave screen promised in
 Eq.~\eqref{eq:ch2.far-angular-accessibility-preview}: it removes geometrically forbidden
 directions on the propagating outgoing sheet without re-tabulating
 Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} \cite{stratton1941}. Evanescent sheets satisfy
@@ -13952,7 +14103,7 @@ the same sector \cite{stratton1941}. Regime gate Eq.~\eqref{eq:ch2.regime-compon
 mandatory: \(\mathcal{T}_{\mathrm{acc}}=1\) does not promote reactive near content to export
 \cite{harrington2001}.
 
-\paragraph{Angular measurement screen (HOME).}
+\paragraph{Angular measurement screen}
 After accessibility projection, finite instruments apply
 \begin{equation}
 \label{eq:ch2.angular-measurement-screen}
@@ -13968,7 +14119,7 @@ a_{\mathrm{obs}}(\widehat{\mathbf{k}})
 \end{equation}
 with \(\mathcal{P}_{\mathrm{meas}}\) from Eq.~\eqref{eq:ch2.filtered-angular-amplitude-def}
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.angular-measurement-screen} is the
-Subsection~\ref{sec:ch294} HOME measurement closure: observation rank
+Subsection~\ref{sec:ch294} measurement closure: observation rank
 Eq.~\eqref{eq:ch2.angular-spectrum-observation-rank} may strictly shrink
 \(\operatorname{supp}(a_{\mathrm{obs}})\) inside \(\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}\)
 \cite{stratton1941}. Rank cap Eq.~\eqref{eq:ch2.filtered-rank-bound} limits resolvable directions
@@ -13976,7 +14127,7 @@ independently of source nullity \cite{harrington2001}. Physically, \(a_{\mathrm{
 laboratory-accessible angular spectrum after geometry, regime, near-to-far extraction, and
 aperture \cite{stratton1941,jackson1999}.
 
-\paragraph{Accessible angular budget (HOME).}
+\paragraph{Accessible angular budget}
 Collecting Subsection~\ref{sec:ch294} constraints,
 \begin{equation}
 \label{eq:ch2.accessible-angular-budget}
@@ -14182,8 +14333,7 @@ Accessibility reports therefore cannot detect NR additions from far data alone
 \cite{stratton1941}.
 
 \paragraph{Closing summary.}
-Subsection~\ref{sec:ch294} establishes the Chapter~\ref{ch:02} HOME for far-field accessibility
-Eq.~\eqref{eq:ch2.far-angular-accessibility-def}, accessibility operator
+Far-field accessibility Eq.~\eqref{eq:ch2.far-angular-accessibility-def}, accessibility operator
 Eq.~\eqref{eq:ch2.angular-accessibility-operator}, plane-wave filter
 Eq.~\eqref{eq:ch2.plane-wave-accessibility-filter}, transport gate
 Eq.~\eqref{eq:ch2.far-angular-transport-gate} (USE Sections~\ref{sec:ch01.2.1}--\ref{sec:ch01.2.3}),
@@ -14588,7 +14738,7 @@ Eq.~\eqref{eq:ch2.near-to-far-operator-composition}, evanescent annihilation
 Eq.~\eqref{eq:ch2.near-to-far-evanescent-null}, angular null law
 Eq.~\eqref{eq:ch2.evanescent-angular-null-law}, Theorem~\ref{thm:ch2.near-to-far-transformation},
 and Propositions~\ref{prop:ch2.near-to-far-null-invariance}--\ref{prop:ch2.near-to-far-finite-shell-error}
-are presupposed; asymptotic proofs in Subsection~\ref{sec:ch252} and evanescent HOME content in
+are presupposed; asymptotic proofs in Subsection~\ref{sec:ch252} and evanescent content in
 Subsection~\ref{sec:ch273} are not repeated \cite{stratton1941}. Evanescent overlap
 Eq.~\eqref{eq:ch2.evanescent-source-overlap}, non-export law
 Eq.~\eqref{eq:ch2.evanescent-nonexport-law}, regime gate
@@ -14841,7 +14991,7 @@ evanescent-dominated near scans without duplicating the pipeline figure
 % TOC tag: [FIG+PROB][HOME][USE SS1.2.2]
 
 Subsection~\ref{sec:ch2104} activates the structured-source and topology--transport term of
-Eq.~\eqref{eq:ch2.dof-partition-master}, giving the Chapter~\ref{ch:02} HOME packaging of
+Eq.~\eqref{eq:ch2.dof-partition-master}, giving the definitive packaging of
 \emph{structured source states}---impressed currents with explicit amplitude, phase, and
 polarization organization---and illustrating their radiation through \(\mathcal{R}_\omega\),
 importing Subsection~\ref{sec:ch01.2.2} amplitude--phase--polarization--Poynting diagnostics
@@ -14856,7 +15006,7 @@ and Proposition~\ref{prop:ch1.topology-transport-separation} are cited without r
 \cite{stratton1941,belinfante1940}. Vector harmonic labeling of structured modes belongs to
 Chapter~\ref{ch:03} \cite{stratton1941}.
 
-\paragraph{Structured source state (HOME).}
+\paragraph{Structured source state}
 On compact support \(\Omega_s\Subset\Omega\), a \emph{structured source state} is an admissible
 impressed current \(\Jimp\in\mathcal{J}_\Omega\) admitting the parametric representation
 \begin{equation}
@@ -14874,7 +15024,7 @@ where \(A_n\ge 0\) are channel amplitudes, \(\Phi_n\) are spatial phase laws,
 \(\chi_n\) are nonnegative envelopes with \(\operatorname{supp}\chi_n\subseteq\Omega_s\),
 and \(\mathbf{p}_n\) are transverse polarization vectors on each channel support
 \cite{stratton1941,harrington2001}. Equation~\eqref{eq:ch2.structured-source-state-def} is the
-Subsection~\ref{sec:ch2104} HOME operator-side label for sources whose angular organization is
+Subsection~\ref{sec:ch2104} operator-side label for sources whose angular organization is
 specified before radiation selection: amplitude fixes channel weight, phase fixes interference
 geometry, and \(\mathbf{p}_n\) fixes local vector state, paralleling the field-side chain of
 Subsection~\ref{sec:ch01.2.2} \cite{stratton1941,allen1992}. The sum is understood in the
@@ -14884,7 +15034,7 @@ under gauge-equivalent reparameterizations is inherited from impressed-current e
 Eq.~\eqref{eq:ch2.source-admissibility} and does not alter \(\mathcal{R}_\omega[\Jimp]\)
 \cite{harrington2001}.
 
-\paragraph{Structured radiation coefficient (HOME).}
+\paragraph{Structured radiation coefficient}
 Define the \emph{structured radiation coefficient} of channel \(n\) in direction
 \(\widehat{\mathbf{k}}\) and polarization \(\sigma\in\{1,2\}\) by
 \begin{equation}
@@ -15177,7 +15327,7 @@ appearance, topology gates, and signed transport on the radiative branch
 \cite{belinfante1940,allen1992}. Illustrative numerics throughout Section~\ref{sec:ch210} quantify
 order-of-magnitude separations only; they must not be read as certified measurements
 \cite{hansen1988}. Qualified reporting always applies \(\mathcal{R}_\omega\) (equivalently
-\(\Pi_{\mathrm{rad}}\) after §2.2.4) before Stokes, Poynting, or angular-flux functionals, and
+\(\Pi_{\mathrm{rad}}\) after Subsection~\ref{sec:ch224}) before Stokes, Poynting, or angular-flux functionals, and
 composes with regime screen Eq.~\eqref{eq:ch2.regime-operator-screen} inherited from
 Chapter~\ref{ch:01} \cite{stratton1941,harrington2001}. Section~\ref{sec:ch02.11} records the
 Chapter~\ref{ch:02} result ledger and bridge to harmonic representation theory in
@@ -15196,7 +15346,7 @@ far suppression, and structured-source diagnostics on the maps developed in
 Sections~\ref{sec:ch20}--\ref{sec:ch29} \cite{stratton1941,jackson1999}.
 
 \subsection{Results established in Chapter 2}
-\label{sec:ch2111}
+\label{sec:ch02111}
 % TOC tag: [DEFER]
 
 Chapter~\ref{ch:02} closes the source-to-field-to-export operator chain required before
@@ -15290,7 +15440,7 @@ raw \(\mathcal{S}_\omega[\Jimp]\) Eq.~\eqref{eq:ch2.transport-qualified-radiatio
 \cite{harrington2001,stratton1941}.
 
 \subsection{Concepts deferred to Chapters 3-4 and Volume II}
-\label{sec:ch2112}
+\label{sec:ch02112}
 % TOC tag: [DEFER]
 
 No theorem is proved here. Chapter~\ref{ch:03} owns Hilbert closure, angular-momentum
@@ -15370,7 +15520,7 @@ realizability proof deferred to Ch.~4 \cite{devaney2004,colton1992} \\
 \end{table}
 
 \subsection{Bridge to Chapter 3}
-\label{sec:ch2113}
+\label{sec:ch02113}
 % TOC tag: [DEFER]
 
 Chapter~\ref{ch:03} begins from the closed operator base assembled in
@@ -15399,8 +15549,10 @@ Theorem~\ref{thm:ch2.exterior-radiative-uniqueness} from Section~\ref{sec:ch24}
 \cite{stratton1941}; continuous spectral integral
 Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}, modal far pattern
 Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion}, and Fredholm solvability from
-Sections~\ref{sec:ch261} and~\ref{sec:ch263}, awaiting concrete VSH eigenbasis in
-Chapter~\ref{ch:03} §3.4 \cite{harrington2001,stratton1941}; plane-wave operator
+Sections~\ref{sec:ch261} and~\ref{sec:ch263}, awaiting concrete vector spherical harmonic
+(VSH) eigenbasis in Chapter~\ref{ch:03} §3.4. Hansen's spherical near-field measurement
+framework and Tai's vector-harmonic synthesis supply the engineering lineage for that
+representation closure \cite{hansen1988,tai1994,harrington2001,stratton1941}; plane-wave operator
 Eq.~\eqref{eq:ch2.plane-wave-radiation-operator}, near-to-far map
 Eq.~\eqref{eq:ch2.near-to-far-transform-def}, and accessibility budget
 Eq.~\eqref{eq:ch2.accessible-angular-budget} from Section~\ref{sec:ch29}

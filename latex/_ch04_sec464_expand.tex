@@ -1,0 +1,169 @@
+\subsection{Effective rank and electromagnetic dimension}
+\label{sec:ch464}
+% TOC tag: [HOME]
+
+Radiative rank \(r_{\mathrm{rad}}(\varepsilon)\) names export directions in singular-value language. Laboratories, array spec sheets, and MIMO
+reports instead quote a single integer: the number of modes \cite{harrington2001,devaney2004}. Subsection~\ref{sec:ch464} locks that integer to
+\(d_{\mathrm{eff}}(\varepsilon)\) on \(\boldsymbol{\Gamma}_\omega\) \cite{stratton1941,hansen1988}. The philosophical closure is that
+effective dimension is not patch count, not \(\ell_{\max}\), and not channel DOS---it is the geometry-imposed synthesis dimension certified at
+tolerance \(\varepsilon\) \cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Definition~\ref{def:ch4.radiative-rank}, Eq.~\eqref{eq:ch4.gamma-SVD}, and Eq.~\eqref{eq:ch4.effective-dimension-preview}
+\cite{harrington2001,devaney2004,hansen1988}. Tolerance \(\varepsilon\) is declared jointly for synthesis and certification \cite{stratton1941}.
+
+\begin{definition}[Effective electromagnetic dimension]
+\label{def:ch4.effective-em-dimension}
+The \emph{effective electromagnetic dimension} of \((\Omega_{s},\omega,\mathcal{C})\) at tolerance \(\varepsilon\) is
+\begin{equation}
+\label{eq:ch4.effective-em-dimension}
+d_{\mathrm{eff}}(\varepsilon)
+=
+r_{\mathrm{rad}}(\varepsilon)
+=
+\#\big\{n:\ \sigma_{n}\ge\varepsilon\,\sigma_{1}\big\},
+\end{equation}
+with \(\{\sigma_{n}\}\) from Eq.~\eqref{eq:ch4.gamma-SVD} \cite{stratton1941,harrington2001,hansen1988}.
+\end{definition}
+
+Equation~\eqref{eq:ch4.effective-em-dimension} elevates the preview Eq.~\eqref{eq:ch4.effective-dimension-preview} to the Chapter~\ref{ch:04}
+name for geometry-imposed synthesis dimension \cite{devaney2004}. Mathematically, \(d_{\mathrm{eff}}\) is a discrete counting functional on
+the singular spectrum. Physically, it is the number of independent far-zone degrees of freedom a finite source can export at declared power
+resolution \(\varepsilon\) \cite{hansen1988,jackson1999}.
+
+\begin{theorem}[Dimension bounds realizability]
+\label{thm:ch4.dimension-bounds-realizability}
+\(\dim\mathcal{S}_{\mathrm{real}}(\mathcal{C})\le d_{\mathrm{eff}}(\varepsilon)\) at tolerance \(\varepsilon\), and every
+\(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) has at most \(d_{\mathrm{eff}}(\varepsilon)\) independent components above export
+threshold \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.radiative-rank} identifies \(\dim\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) with the export rank above threshold
+\cite{harrington2001}. Definition~\ref{def:ch4.effective-em-dimension} counts the same singular directions \cite{stratton1941}.
+\end{proof}
+
+\paragraph{Dimension reporting protocol.}
+Reports must state \((\varepsilon,\,k_{0}D_{s},\,\mathcal{C}\text{ gauge})\) with \(d_{\mathrm{eff}}\)
+\cite{hansen1988,stratton1941,harrington2001}.
+\begin{equation}
+\label{eq:ch4.deff-reporting}
+d_{\mathrm{eff}}(\varepsilon)=\#\{n:\sigma_{n}\ge\varepsilon\sigma_{1}\},\qquad
+\Delta d_{\mathrm{eff}}=|d_{\mathrm{eff}}^{\mathrm{(MoM)}}-d_{\mathrm{eff}}^{\mathrm{(cont)}}|.
+\end{equation}
+\begin{corollary}[Mesh gap on dimension]
+\label{cor:ch4.deff-mesh-gap}
+\(\Delta d_{\mathrm{eff}}\le\Delta r_{\mathrm{gap}}\) in Eq.~\eqref{eq:ch4.rank-gap} \cite{harrington2001,devaney2004,stratton1941}.
+\end{corollary}
+\begin{equation}
+\label{eq:ch4.deff-conservative}
+d_{\mathrm{eff}}^{\mathrm{(report)}}=\min\big(d_{\mathrm{eff}}^{\mathrm{(MoM)}},\,r_{\mathrm{rad}}^{\mathrm{(cont)}}(\varepsilon)\big).
+\end{equation}
+Equation~\eqref{eq:ch4.deff-conservative} is the conservative laboratory integer when mesh rank exceeds continuum rank
+\cite{hansen1988,harrington2001}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
+  \node[ch1box, right=11mm of svd] (rr) {$r_{\mathrm{rad}}$};
+  \node[ch1box, right=11mm of rr] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=11mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (svd) -- (rr) -- (deff) -- (sr);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch464}: effective electromagnetic dimension is radiative rank in the export gauge.}
+\label{fig:ch4.effective-em-dimension}
+\end{figure}
+
+Figure~\ref{fig:ch4.effective-em-dimension} is the reporting chain auditors expect: singular values \(\to\) radiative rank \(\to\)
+\(d_{\mathrm{eff}}\) \(\to\) realizable coefficient set \cite{hansen1988,stratton1941}.
+
+\paragraph{Worked illustration (MIMO claim).}
+A \(16\times16\) patch array claims \(256\) synthesis DOF; \(d_{\mathrm{eff}}(10^{-2})=22\) on enclosing ball at \(k_{0}a=3\)
+\cite{harrington2001,collin2001,hansen1988}. MIMO rank must be reported as \(d_{\mathrm{eff}}\), not element count \cite{devaney2004}.
+
+\paragraph{Worked illustration (mesh saturation).}
+MoM shows \(d_{\mathrm{eff}}^{\mathrm{(MoM)}}=45\) but continuum audit gives \(r_{\mathrm{rad}}(10^{-2})=38\): report \(d_{\mathrm{eff}}=38\)
+with \(\Delta d_{\mathrm{eff}}=7\) \cite{harrington2001,hansen1988}.
+
+\paragraph{Worked numerics (handset).}
+\(k_{0}D_{s}\approx1\) at sub-6\,GHz gives \(d_{\mathrm{eff}}(10^{-2})\le3\); same outline at \(28\,\mathrm{GHz}\) gives
+\(d_{\mathrm{eff}}\sim\mathcal{O}(10^{1})\)--\(\mathcal{O}(10^{2})\) per Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{jackson1999,harrington2001,collin2001}.
+
+\paragraph{Problem (dimension from MoM).}
+\textbf{Problem.} SVD of \(\mathbf{T}\) shows \(180\) singular values above \(10^{-3}\). Is \(d_{\mathrm{eff}}(10^{-3})=180\)?
+
+\textbf{Step 1.} Compare to continuum \(\boldsymbol{\Gamma}_\omega\) per Lemma~\ref{lem:ch4.rank-gap-aliasing} \cite{harrington2001}.
+
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.deff-conservative} \cite{hansen1988,devaney2004}.
+
+\textbf{Step 3.} Report \(\varepsilon\), \(k_{0}D_{s}\), and \(\Delta d_{\mathrm{eff}}\) with \(d_{\mathrm{eff}}\) \cite{stratton1941}.
+
+\textbf{Physical meaning.} \(d_{\mathrm{eff}}\) is a certified integer, not a solver output \cite{hansen1988}.
+
+\paragraph{Problem (reporting package).}
+\textbf{Problem.} What must accompany \(d_{\mathrm{eff}}=25\) in a design memo?
+
+\textbf{Step 1.} State \(\varepsilon\) and \(\sigma_{1}\) gauge \cite{hansen1988}.
+
+\textbf{Step 2.} State \(k_{0}D_{s}\) and support class \cite{jackson1999,stratton1941}.
+
+\textbf{Step 3.} Bound \(\Delta d_{\mathrm{eff}}\) and cite Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{harrington2001,devaney2004}.
+
+\textbf{Physical meaning.} Dimension without tolerance and geometry is not auditable \cite{stratton1941}.
+
+\paragraph{Problem (elements versus modes).}
+\textbf{Problem.} \(64\) elements claim \(64\) independent beams. Audit.
+
+\textbf{Step 1.} Compute \(d_{\mathrm{eff}}(10^{-2})\) by SVD \cite{harrington2001}.
+
+\textbf{Step 2.} Bound by Eq.~\eqref{eq:ch4.mode-count-area} \cite{hansen1988,collin2001}.
+
+\textbf{Step 3.} Report \(\min(N_{\mathrm{mode}},d_{\mathrm{eff}})\) streams \cite{devaney2004}.
+
+\textbf{Physical meaning.} Elements sample the aperture; \(d_{\mathrm{eff}}\) is geometry-bounded export rank \cite{stratton1941}.
+
+\paragraph{Link to \(\ell_{\mathrm{supp}}\).}
+Eq.~\eqref{eq:ch4.ell-deff-relation} shows \(d_{\mathrm{eff}}\le\sum_{\ell\le\ell_{\mathrm{supp}}}(2\ell+1)\times\#\{\text{active }\sigma\}\)
+\cite{harrington2001}. Angular ceiling and integer dimension must be reported together \cite{hansen1988,stratton1941}.
+
+\paragraph{Tolerance sweep certificate.}
+Laboratories should report \(d_{\mathrm{eff}}\) as a function of \(\varepsilon\) on fixed \((\Omega_{s},k_{0})\):
+\begin{equation}
+\label{eq:ch4.deff-epsilon-sweep}
+d_{\mathrm{eff}}(\varepsilon_{2})\le d_{\mathrm{eff}}(\varepsilon_{1})\quad\text{for }\varepsilon_{2}\ge\varepsilon_{1},
+\end{equation}
+with \(d_{\mathrm{eff}}(10^{-1})\) a coarse upper bound and \(d_{\mathrm{eff}}(10^{-3})\) a fine audit \cite{hansen1988,harrington2001,devaney2004}.
+A rank claim at unstated \(\varepsilon\) is not comparable across groups \cite{stratton1941}.
+
+\begin{theorem}[Monotone dimension under tolerance tightening]
+\label{thm:ch4.deff-monotone-epsilon}
+For fixed \((\Omega_{s},k_{0},\mathcal{C})\), \(d_{\mathrm{eff}}(\varepsilon)\) is non-increasing in \(\varepsilon\)
+\cite{harrington2001,hansen1988,stratton1941}.
+\end{theorem}
+\begin{proof}
+The index set \(\{n:\sigma_{n}\ge\varepsilon\sigma_{1}\}\) shrinks as \(\varepsilon\) increases \cite{harrington2001}.
+\end{proof}
+
+\paragraph{Worked illustration (tolerance sweep).}
+At \(k_{0}a=2.5\): \(d_{\mathrm{eff}}(10^{-1})=14\), \(d_{\mathrm{eff}}(10^{-2})=9\), \(d_{\mathrm{eff}}(10^{-3})=12\)
+\cite{hansen1988,harrington2001}. Reporting only \(d_{\mathrm{eff}}(10^{-3})=12\) without \(\varepsilon\) misstates the certified rank at
+production tolerance \(10^{-2}\) \cite{devaney2004,stratton1941}.
+
+\paragraph{Problem (tolerance mismatch).}
+\textbf{Problem.} Paper A uses \(\varepsilon=10^{-3}\); Paper B uses \(10^{-2}\) on the same hardware. Compare ranks.
+
+\textbf{Step 1.} Recompute both at common \(\varepsilon=10^{-2}\) \cite{hansen1988}.
+
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.deff-monotone-epsilon} \cite{harrington2001}.
+
+\textbf{Step 3.} Report sweep Eq.~\eqref{eq:ch4.deff-epsilon-sweep} in comparison table \cite{stratton1941,devaney2004}.
+
+\textbf{Physical meaning.} \(d_{\mathrm{eff}}\) is meaningless without paired \(\varepsilon\) \cite{hansen1988}.
+
+\paragraph{Validity.}
+Definition~\ref{def:ch4.effective-em-dimension} depends on \(\mathcal{C}\) normalization; \(\varepsilon\) must be stated with \(\sigma_{1}\)
+\cite{hansen1988,stratton1941}. Loss lowers tail decay and may increase \(d_{\mathrm{eff}}\) at fixed geometry \cite{harrington2001}. Active
+amplification changes \(\mathcal{J}_{\mathrm{real}}\) class and is outside the passive default \cite{stratton1941,devaney2004}.
+

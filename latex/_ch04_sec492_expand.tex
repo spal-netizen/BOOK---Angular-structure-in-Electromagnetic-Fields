@@ -1,0 +1,305 @@
+\subsection{Limits of phase-only engineering}
+\label{sec:ch492}
+% TOC tag: [HOME]
+
+Phase-only control explores a submanifold of \(\mathcal{J}_{\mathrm{real}}\) at fixed amplitude support \cite{stratton1941,harrington2001,devaney2004}.
+On fixed \((\Omega_{s},k_{0})\), phase rotations retune \(\mathbf{c}\) within \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) without enlarging
+\(d_{\mathrm{eff}}(\varepsilon)\), \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\), or \(N_{\mathrm{mode}}(\varepsilon)\) \cite{hansen1988,jackson1999}.
+Representation is coordinate freedom on the phase torus; realizability rank is geometry-imposed on \(\boldsymbol{\Gamma}_\omega\) \cite{stratton1941,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Proposition~\ref{prop:ch4.tangent-dimension}, Theorem~\ref{thm:ch4.geometry-rank-origin}, and Eq.~\eqref{eq:ch4.high-ell-decay}
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}. Passive linear exterior; fixed \(\mathcal{L}_{2}\) envelope on \(\Omega_{s}\); tolerance
+\(\varepsilon\in(0,1)\) in aligned flux gauge \cite{jackson1999}. Phase-only designs vary \(\phi_{n}\) on fixed \(|\widehat{J}_{n}|\) portraits
+\cite{collin2001,harrington2001}.
+
+\begin{proposition}[Phase-only rank ceiling]
+\label{prop:ch4.phase-only-ceiling}
+Phase-only optimization on fixed \(\Omega_{s}\) cannot increase \(d_{\mathrm{eff}}(\varepsilon)\), \(\ell_{\mathrm{supp}}\), or
+\(N_{\mathrm{mode}}\) \cite{stratton1941,jackson1999,hansen1988,harrington2001}. It rotates \(\mathbf{c}\) within the same export
+subspace of dimension \(\le d_{\mathrm{eff}}(\varepsilon)\) \cite{devaney2004}.
+\end{proposition}
+\begin{proof}
+Theorem~\ref{thm:ch4.geometry-rank-origin} and singular-value invariance under unitary phase gauge on fixed support \cite{stratton1941,harrington2001}.
+\(\ell_{\mathrm{supp}}\) and \(N_{\mathrm{mode}}\) are properties of \(\boldsymbol{\Gamma}_\omega\), not of phase arguments on fixed amplitude
+\cite{hansen1988,jackson1999,devaney2004}.
+\end{proof}
+
+Proposition~\ref{prop:ch4.phase-only-ceiling} closes the phase-only marketing loop: beam steering and OAM labeling by phase plates do not manufacture
+high-\(\ell\) tails forbidden by Eq.~\eqref{eq:ch4.high-ell-decay} on fixed \(a\) \cite{hansen1988,jackson1999,harrington2001}. Amplitude support must
+enlarge \(\mathcal{L}_{2}\) or \(k_{0}a\) must rise to raise \(\ell_{\mathrm{supp}}\) \cite{stratton1941,devaney2004}.
+
+\paragraph{Phase-only tangent space.}
+Phase-only designs explore a tangent space of dimension
+\begin{equation}
+\label{eq:ch4.phase-tangent-bound}
+\dim\mathcal{T}_{\phi}\le r_{\mathrm{rad}}(\varepsilon),\qquad
+\Delta d_{\mathrm{eff}}=0\ \text{under phase-only retuning},
+\end{equation}
+with \(\dim\mathcal{T}_{\phi}\ll d_{\mathrm{eff}}\) typical on fixed amplitude support per Proposition~\ref{prop:ch4.tangent-dimension}
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}. Mathematically, Eq.~\eqref{eq:ch4.phase-tangent-bound} bounds the local exploration manifold.
+Physically, it counts independent phase knobs that retune far-zone direction without creating new export channels \cite{collin2001,jackson1999}.
+
+\begin{theorem}[Phase manifold rank invariance]
+\label{thm:ch4.phase-manifold-rank}
+For \(\Jimp(\phi)\in\mathcal{J}_{\mathrm{real}}\) with fixed \(|\Jimp|\) support on \(\Omega_{s}\),
+\(\boldsymbol{\Gamma}_\omega[\Jimp(\phi)]\) lies in a fixed \(d_{\mathrm{eff}}\)-dimensional subspace of \(\mathbb{C}^{I}\) for all admissible \(\phi\)
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Phase variations are unitary rotations on coefficient charts restricted to fixed amplitude envelopes \cite{harrington2001,stratton1941}. Export singular
+values of \(\boldsymbol{\Gamma}_\omega\) depend on support and coupling, not on phase arguments alone \cite{hansen1988,devaney2004,jackson1999}.
+\end{proof}
+
+\paragraph{Amplitude--phase factorization.}
+Phase-only retuning admits
+\begin{equation}
+\label{eq:ch4.phase-amplitude-factor}
+\mathbf{c}(\phi)=\mathbf{D}(\phi)\mathbf{c}_{0},\qquad
+\mathbf{D}(\phi)\ \text{unitary on }\operatorname{span}\{\mathbf{c}_{0}\},\quad
+\ell_{\mathrm{supp}}(\phi)=\ell_{\mathrm{supp}}(0),
+\end{equation}
+fixing \(\|\widehat{c}_{\ell m}^{(\sigma)}\|\) sector envelopes while rotating phases within \(\dim\mathcal{T}_{\phi}\)
+\cite{stratton1941,hansen1988,harrington2001,jackson1999}. High-\(\ell\) tails cannot be created without amplitude support on enlarged \(\mathcal{L}_{2}\)
+\cite{devaney2004}.
+
+\begin{lemma}[Supported-order invariance under phase retune]
+\label{lem:ch4.phase-retune-invariant}
+\(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) and \(N_{\mathrm{mode}}(\varepsilon)\) are invariant under phase-only optimization on fixed \((\Omega_{s},k_{0})\)
+\cite{hansen1988,stratton1941,harrington2001,devaney2004,jackson1999}.
+\end{lemma}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (phi) {phase \(\phi\)};
+  \node[ch1box, right=11mm of phi] (tphi) {$\mathcal{T}_{\phi}$};
+  \node[ch1box, right=11mm of tphi] (c) {$\mathbf{c}$};
+  \draw[ch1flow] (phi) -- (tphi) -- (c);
+\end{tikzpicture}%
+}
+\caption{Phase-only control explores \(\mathcal{T}_{\phi}\); export rank \(d_{\mathrm{eff}}\) is fixed by geometry.}
+\label{fig:ch4.phase-tangent-manifold}
+\end{figure}
+
+Figure~\ref{fig:ch4.phase-tangent-manifold} is the phase-only honesty diagram: optimizers move on a low-dimensional torus inside a fixed-rank export cone
+\cite{stratton1941,harrington2001,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=11mm of ell] (phase) {phase-only};
+  \node[ch1box, right=11mm of phase] (flat) {unchanged};
+  \draw[ch1flow] (ell) -- (phase) -- (flat);
+\end{tikzpicture}%
+}
+\caption{Supported angular order is invariant under phase-only retuning on fixed aperture.}
+\label{fig:ch4.phase-ell-ceiling}
+\end{figure}
+
+\paragraph{Worked illustration (reflectarray).}
+A reflectarray that steers a beam without enlarging aperture rotates \(\mathbf{c}\) within \(\ell=1\)--\(\ell_{\mathrm{supp}}\) content;
+it does not manufacture high-\(\ell\) tails forbidden by Eq.~\eqref{eq:ch4.high-ell-decay} \cite{hansen1988,jackson1999,harrington2001,collin2001}.
+
+\paragraph{Worked illustration (phase-only gradient).}
+Gradient ascent on \(\dim\mathcal{T}_{\phi}=2\) parameters on a rank-\(15\) aperture achieves excellent beam alignment while \(d_{\mathrm{eff}}=15\) unchanged
+\cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+
+\paragraph{Worked illustration (OAM phase plate).}
+Phase plate claims new OAM order \(m_{\mathrm{LG}}=5\) on fixed disk: \(\ell_{\mathrm{supp}}\) before and after identical per
+Lemma~\ref{lem:ch4.phase-retune-invariant} \cite{hansen1988,harrington2001,jackson1999}.
+
+\paragraph{Worked illustration (metasurface).}
+Fixed-area metasurface retunes \(\theta_{0}\) and \(\phi_{0}\) with \(\dim\mathcal{T}_{\phi}\approx2\); tail exponent Eq.~\eqref{eq:ch4.high-ell-decay}
+unchanged \cite{stratton1941,collin2001,devaney2004}.
+
+\paragraph{Worked numerics (reflectarray).}
+\(d_{\mathrm{eff}}=15\) reflectarray with \(\dim\mathcal{T}_{\phi}=2\) steers beam in \(\theta\)--\(\phi\) only \cite{hansen1988,collin2001,harrington2001}.
+
+\paragraph{Worked numerics (phase-only OAM).}
+Claimed \(\Delta\ell_{\mathrm{supp}}=+3\) after phase-only synthesis on \(k_{0}a=1.5\): measured \(\ell_{\mathrm{supp}}\) unchanged at \(4\)
+\cite{hansen1988,jackson1999,stratton1941,devaney2004}.
+
+\paragraph{Problem (phase-only OAM claim).}
+\textbf{Problem.} Phase plate claims new OAM order without size change. Audit.
+\textbf{Step 1.} Test \(\ell_{\mathrm{supp}}\) before and after \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Test tail bound Eq.~\eqref{eq:ch4.high-ell-decay} \cite{jackson1999,devaney2004}.
+\textbf{Step 3.} Reject if only phase changed on fixed \(\mathcal{L}_{2}\) \cite{harrington2001}.
+\textbf{Physical meaning.} Phase explores a fixed-rank manifold \cite{stratton1941}.
+
+\paragraph{Problem (phase-only rank).}
+\textbf{Problem.} Can phase-only synthesis raise OAM order on fixed disk?
+\textbf{Step 1.} Test Lemma~\ref{lem:ch4.phase-retune-invariant} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.high-ell-decay} \cite{jackson1999,devaney2004}.
+\textbf{Step 3.} Reject order increase \cite{stratton1941}.
+\textbf{Physical meaning.} Phase rotates within fixed rank \cite{harrington2001,collin2001}.
+
+\paragraph{Problem (reflectarray audit).}
+\textbf{Problem.} Reflectarray claims \(d_{\mathrm{eff}}\) doubling via phase tiles. Valid?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.phase-manifold-rank} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Measure SVD rank before/after \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Reject rank-doubling claim \cite{jackson1999}.
+\textbf{Physical meaning.} Phase retunes, does not create channels \cite{collin2001}.
+
+\paragraph{Problem (tangent dimension).}
+\textbf{Problem.} How many independent phase controls on rank-\(12\) aperture?
+\textbf{Step 1.} Bound \(\dim\mathcal{T}_{\phi}\) via Eq.~\eqref{eq:ch4.phase-tangent-bound} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Compare to Proposition~\ref{prop:ch4.tangent-dimension} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Report \(\dim\mathcal{T}_{\phi}\ll d_{\mathrm{eff}}\) typically \cite{jackson1999}.
+\textbf{Physical meaning.} Phase knobs are fewer than export directions \cite{stratton1941}.
+
+\paragraph{Problem (amplitude requirement).}
+\textbf{Problem.} High-\(\ell\) tail needed; phase-only synthesis fails. Why?
+\textbf{Step 1.} Test Eq.~\eqref{eq:ch4.phase-amplitude-factor} \cite{stratton1941,hansen1988}.
+\textbf{Step 2.} Verify amplitude envelope fixed \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Require \(\mathcal{L}_{2}\) enlargement or higher \(k_{0}a\) \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Tails need amplitude support \cite{hansen1988}.
+
+\paragraph{Problem (metasurface MIMO).}
+\textbf{Problem.} Metasurface adds phase pixels; vendor claims new streams. Audit.
+\textbf{Step 1.} Apply Proposition~\ref{prop:ch4.phase-only-ceiling} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}\) and \(N_{\mathrm{mode}}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Reject stream inflation \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Pixels retune within fixed rank \cite{harrington2001}.
+
+\paragraph{Holographic phase sheets.}
+Holographic metasurfaces impose \(\mathbf{c}(\phi)=\mathbf{D}(\phi)\mathbf{c}_{0}\) with \(\mathbf{D}(\phi)\) unitary on a fixed amplitude portrait
+\cite{stratton1941,harrington2001,collin2001}. Steering and focusing are retunings within \(\dim\mathcal{T}_{\phi}\); they do not alter tail exponents or
+\(\ell_{\mathrm{supp}}\) on fixed \((\Omega_{s},k_{0})\) per Lemma~\ref{lem:ch4.phase-retune-invariant} \cite{hansen1988,jackson1999,devaney2004}.
+
+\paragraph{Phase--amplitude coupling threshold.}
+Raising \(\ell_{\mathrm{supp}}\) requires amplitude degrees of freedom that enlarge \(\mathcal{L}_{2}\) or couple new \(\ell\) sectors through feed topology
+\cite{harrington2001,stratton1941,devaney2004}. Phase-only paths satisfy \(\partial\|\widehat{c}_{\ell m}^{(\sigma)}\|/\partial\phi_{n}=0\) on fixed support
+\cite{hansen1988,jackson1999,collin2001}.
+
+\begin{corollary}[Stream count invariance under phase-only MIMO]
+\label{cor:ch4.phase-mimo-invariant}
+Deployable stream count \(N_{\mathrm{stream}}\) is invariant under phase-only retuning on fixed \((\Omega_{s},k_{0},\varepsilon)\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941,jackson1999,collin2001}.
+\end{corollary}
+
+\paragraph{Worked illustration (holographic beam).}
+Holographic sheet steers main beam \(15^{\circ}\) with \(\dim\mathcal{T}_{\phi}=2\); \(\ell_{\mathrm{supp}}\) and \(d_{\mathrm{eff}}\) unchanged
+\cite{stratton1941,collin2001,hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (transmitarray).}
+Transmitarray phase tiles rotate \(\mathbf{c}\) within rank-\(18\) subspace; vendor claim of \(\ell=10\) OAM rejected by Lemma~\ref{lem:ch4.phase-retune-invariant}
+\cite{hansen1988,jackson1999,stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (tangent versus rank).}
+Rank-\(20\) aperture, \(\dim\mathcal{T}_{\phi}=3\): \(97\%\) of export directions are unreachable by phase-only gradients per
+Eq.~\eqref{eq:ch4.phase-tangent-bound} \cite{harrington2001,stratton1941,hansen1988,devaney2004,collin2001}.
+
+\paragraph{Problem (holographic OAM).}
+\textbf{Problem.} Hologram claims \(\ell=7\) OAM on fixed \(k_{0}a=1.4\). Audit.
+\textbf{Step 1.} Test Lemma~\ref{lem:ch4.phase-retune-invariant} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.high-ell-decay} \cite{jackson1999,devaney2004}.
+\textbf{Step 3.} Reject without amplitude enlargement \cite{stratton1941,collin2001}.
+\textbf{Physical meaning.} Holograms retune, not create \(\ell\) \cite{harrington2001}.
+
+\paragraph{Problem (phase MIMO streams).}
+\textbf{Problem.} Phase-only beamforming claims \(32\) new streams. Valid?
+\textbf{Step 1.} Apply Corollary~\ref{cor:ch4.phase-mimo-invariant} \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}\) \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Reject stream inflation \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Phase cannot raise rank \cite{stratton1941}.
+
+\paragraph{Problem (phase-only versus full synthesis).}
+\textbf{Problem.} Full synthesis raises \(\ell_{\mathrm{supp}}\); phase-only does not. Explain.
+\textbf{Step 1.} Compare exploration sets \(\mathcal{T}_{\phi}\) versus \(\mathcal{T}_{\Jimp_{0}}\mathcal{J}_{\mathrm{real}}\) \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Apply Proposition~\ref{prop:ch4.tangent-dimension} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Attribute \(\ell_{\mathrm{supp}}\) gain to amplitude/coupling DOF \cite{jackson1999}.
+\textbf{Physical meaning.} Rank needs more than phase \cite{stratton1941,collin2001}.
+
+\paragraph{Phase trajectory on export sphere.}
+Phase-only optimization traces a curve on the complex export sphere of dimension \(d_{\mathrm{eff}}-1\) embedded in \(\mathbb{C}^{I}\)
+\cite{stratton1941,harrington2001,hansen1988,devaney2004}. The trajectory cannot exit \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) without amplitude or
+support enlargement \cite{jackson1999,collin2001}.
+
+\paragraph{Worked illustration (phased array).}
+\(64\)-element phased array with uniform amplitude: \(\dim\mathcal{T}_{\phi}=64\) but \(d_{\mathrm{eff}}=18\) on \(k_{0}W=3\): phase explores a submanifold
+of full rank \cite{harrington2001,collin2001,hansen1988,stratton1941,devaney2004,jackson1999}.
+
+\paragraph{Worked numerics (phase-only coverage).}
+Fraction of \(\mathbb{C}^{I}\) reachable by phase-only retuning is at most \(\dim\mathcal{T}_{\phi}/d_{\mathrm{eff}}\), typically \(\ll1\) on fixed amplitude
+support \cite{harrington2001,stratton1941,hansen1988,devaney2004,collin2001}.
+
+\paragraph{Problem (uniform amplitude array).}
+\textbf{Problem.} \(64\) phases, \(d_{\mathrm{eff}}=18\). Independent phase controls?
+\textbf{Step 1.} Bound \(\dim\mathcal{T}_{\phi}\le64\) \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Note export still rank-\(18\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Phase cannot exceed \(d_{\mathrm{eff}}\) independent channels \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Phases \(\neq\) channels \cite{harrington2001}.
+
+\paragraph{Problem (transmitarray OAM).}
+\textbf{Problem.} Transmitarray adds spiral phase; claims new \(\ell\). Audit.
+\textbf{Step 1.} Test Eq.~\eqref{eq:ch4.phase-amplitude-factor} \cite{stratton1941,hansen1988}.
+\textbf{Step 2.} Measure \(\ell_{\mathrm{supp}}\) \cite{harrington2001,jackson1999}.
+\textbf{Step 3.} Reject if amplitude support fixed \cite{devaney2004,collin2001}.
+\textbf{Physical meaning.} Spiral phase is retuning \cite{stratton1941}.
+
+\paragraph{Problem (phase coverage fraction).}
+\textbf{Problem.} Estimate reachable export fraction under phase-only control.
+\textbf{Step 1.} Compute \(\dim\mathcal{T}_{\phi}\) \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Divide by \(d_{\mathrm{eff}}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Report fraction \(\ll1\) typically \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Most export directions need amplitude DOF \cite{harrington2001}.
+
+\paragraph{Philosophical closure (retuning versus creation).}
+Phase-only engineering is powerful within \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) but powerless against geometry-imposed ceilings on
+\(d_{\mathrm{eff}}\), \(\ell_{\mathrm{supp}}\), and \(N_{\mathrm{mode}}\) \cite{stratton1941,harrington2001,jackson1999,hansen1988,devaney2004}.
+Claims that phase alone eliminates spectral truncation confuse coordinate retuning on \(\mathcal{T}_{\phi}\) with rank creation on \(\boldsymbol{\Gamma}_\omega\)
+\cite{collin2001,stratton1941}.
+
+\paragraph{Reconfigurable intelligent surfaces.}
+RIS phase tiles implement \(\mathbf{D}(\phi)\) on fixed element amplitudes; \(d_{\mathrm{eff}}\) and \(\ell_{\mathrm{supp}}\) are set by tile footprint and \(k_{0}\),
+not by tile count alone \cite{stratton1941,harrington2001,hansen1988,collin2001,jackson1999,devaney2004}. Additional tiles sample the aperture; rank rises only when
+electrical aperture grows \cite{harrington2001,stratton1941}.
+
+\paragraph{Worked illustration (RIS).}
+\(256\) RIS tiles on \(\lambda/2\) aperture: \(\dim\mathcal{T}_{\phi}=256\) but \(d_{\mathrm{eff}}=11\); phase retuning does not create twelfth channel
+\cite{harrington2001,collin2001,hansen1988,stratton1941,devaney2004,jackson1999}.
+
+\paragraph{Problem (RIS stream claim).}
+\textbf{Problem.} RIS claims rank doubling via phase reconfiguration. Audit.
+\textbf{Step 1.} Measure \(d_{\mathrm{eff}}\) before/after \(\phi\) sweep \cite{harrington2001,hansen1988}.
+\textbf{Step 2.} Apply Proposition~\ref{prop:ch4.phase-only-ceiling} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Reject rank-doubling \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} RIS retunes within fixed rank \cite{harrington2001}.
+
+\paragraph{Problem (amplitude metasurface).}
+\textbf{Problem.} Amplitude and phase both varied. Can \(\ell_{\mathrm{supp}}\) rise?
+\textbf{Step 1.} Test whether \(\mathcal{L}_{2}\) enlarged \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} If support fixed, apply Lemma~\ref{lem:ch4.phase-retune-invariant} \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Attribute \(\ell_{\mathrm{supp}}\) gain to amplitude/support change only \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Amplitude DOF can raise tails \cite{harrington2001,stratton1941}.
+
+\begin{corollary}[Phase-only cannot raise tail exponent]
+\label{cor:ch4.phase-tail-invariant}
+Tail decay exponent in Eq.~\eqref{eq:ch4.high-ell-decay} is invariant under phase-only retuning on fixed \((\Omega_{s},k_{0})\)
+\cite{hansen1988,jackson1999,stratton1941,harrington2001,devaney2004}.
+\end{corollary}
+
+\paragraph{Near-field phase hotspots.}
+Phase-only synthesis may create near-field hotspots without raising far-zone \(d_{\mathrm{eff}}\) per Theorem~\ref{thm:ch4.reactive-dominance} in
+Section~\ref{sec:ch472} \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}. Hotspots certify reactive storage, not export rank
+\cite{harrington2001,stratton1941}.
+
+\paragraph{Worked numerics (hotspot versus rank).}
+Near-field enhancement factor \(10\times\) with \(d_{\mathrm{eff}}\) unchanged on fixed \(\Omega_{s}\): reactive dominance without rank gain
+\cite{harrington2001,jackson1999,stratton1941,hansen1988,devaney2004,collin2001}.
+
+\paragraph{Problem (near-field hotspot).}
+\textbf{Problem.} Phase synthesis creates near hotspot; vendor claims rank gain. Audit.
+\textbf{Step 1.} Measure \(d_{\mathrm{eff}}\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001,hansen1988}.
+\textbf{Step 2.} Apply reactive filter from Section~\ref{sec:ch472} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Reject rank claim \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Hotspots are not channels \cite{harrington2001,stratton1941}.
+
+\paragraph{Validity.}
+Proposition~\ref{prop:ch4.phase-only-ceiling} assumes passive linear exterior and fixed amplitude support \cite{stratton1941}. Active amplification can enlarge
+effective \(\mathcal{J}_{\mathrm{real}}\) class; nonlinear phase elements require separate range analysis \cite{harrington2001,devaney2004}. Loss modifies
+phase exploration without raising \(\ell_{\mathrm{supp}}\) on fixed \(\Omega_{s}\) \cite{hansen1988,jackson1999,collin2001}.

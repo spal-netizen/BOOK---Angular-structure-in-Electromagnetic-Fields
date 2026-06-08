@@ -1,0 +1,266 @@
+\subsection{Construction of non-accessible eigenfields}
+\label{sec:ch4102}
+% TOC tag: [FIG+PROB][USE]
+
+Unreachable directions \(\mathcal{U}_{\mathrm{unreach}}\) from Eq.~\eqref{eq:ch4.unreachable-modes} are synthesis-null: no admissible \(\Jimp\in\mathcal{J}_{\mathrm{real}}\)
+radiates them, regardless of coupling magnitude \cite{stratton1941,harrington2001,devaney2004,hansen1988}. The construction below builds an explicit
+\(\mathbf{c}_{\mathrm{na}}\) on a centered dipole feed at \(k_{0}a=1\) and certifies \(\delta_{\mathrm{syn}}>0\) \cite{jackson1999}.
+
+\paragraph{Primary problem.}
+\textbf{Problem.} Construct \(\mathbf{c}_{\mathrm{na}}\in\mathcal{U}_{\mathrm{unreach}}\) for a centered dipole feed on \(B_{a}\) at \(k_{0}a=1\).
+
+\paragraph{Governing relations.}
+Presuppose Eq.~\eqref{eq:ch4.unreachable-modes}, Theorem~\ref{thm:ch4.symmetry-coupling-nulls}, and Theorem~\ref{thm:ch4.unreachable-obstruction} from
+Section~\ref{sec:ch471} \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}. Aligned flux gauge on \(\mathcal{C}\); tolerance \(\varepsilon=10^{-2}\).
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (feed) {Dipole feed};
+  \node[ch1box, right=11mm of feed] (gamma) {$\boldsymbol{\Gamma}_\omega$};
+  \node[ch1box, right=11mm of gamma] (c) {$\mathbf{c}$};
+  \node[ch1box, below=11mm of gamma] (null) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \draw[ch1flow] (feed) -- (gamma) -- (c);
+  \draw[ch1flow] (null) -- (gamma);
+\end{tikzpicture}%
+}
+\caption{Unreachable directions are orthogonal to \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\); coupling magnitude does not rescue them.}
+\label{fig:ch4.ex-unreachable-modes}
+\end{figure}
+
+Figure~\ref{fig:ch4.ex-unreachable-modes} separates structural nullity from weak coupling: \(\mathcal{U}_{\mathrm{unreach}}\) lies in \(\ker\boldsymbol{\Gamma}_\omega^{\dagger}\)
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+
+\paragraph{Primary problem data.}
+Centered dipole \(\Jimp\) on \(B_{a}\), \(k_{0}a=1\); VSH chart \(\ell\le12\); target sector \((\ell,m,\sigma)=(5,3,\mathbf{M})\) with unit coefficient
+\cite{hansen1988,jackson1999,stratton1941,harrington2001,devaney2004}. Feed symmetry annihilates coupling to odd-\(m\) and selected high-\(\ell\) sectors
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Primary derivation (construction detail).}
+Theorem~\ref{thm:ch4.symmetry-coupling-nulls} implies \(\langle\widehat{\mathbf{u}}_{53}^{(\mathbf{M})},\boldsymbol{\Gamma}_\omega\mathbf{v}\rangle=0\) for all \(\mathbf{v}\in\mathcal{J}_{\mathrm{real}}\)
+\cite{hansen1988,jackson1999,stratton1941,harrington2001,devaney2004}. Construct \(\mathbf{c}_{\mathrm{na}}=\widehat{\mathbf{u}}_{53}^{(\mathbf{M})}\) in the aligned gauge
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}. Then \(\boldsymbol{\Gamma}_\omega^{\dagger}\mathbf{c}_{\mathrm{na}}=\mathbf{0}\Rightarrow\mathbf{c}_{\mathrm{na}}\in\mathcal{U}_{\mathrm{unreach}}\)
+\cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}. MoM minimum residual equals unity per Eq.~\eqref{eq:ch4.ex-unreachable-residual}
+\cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Physical meaning.} Explicit construction proves nullity is exact \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Step 1 (symmetry nulls).}
+\textbf{Step 1.} For centered \(\Omega_{s}\), Theorem~\ref{thm:ch4.symmetry-coupling-nulls} nulls odd-\(m\) and selected high-\(\ell\) sectors on the dipole feed
+\cite{hansen1988,jackson1999,stratton1941,harrington2001}.
+\textbf{Physical meaning.} Symmetry is a coupling selection rule, not a numerical tolerance \cite{hansen1988,devaney2004}.
+
+\paragraph{Step 2 (coefficient choice).}
+\textbf{Step 2.} Choose \(\widehat{c}_{5,3}^{(\mathbf{M})}=1\) with all other chart entries zero \cite{harrington2001,stratton1941,hansen1988}.
+\textbf{Physical meaning.} Unit norm in \(\mathbb{C}^{I}\) does not imply unit export participation \cite{devaney2004,jackson1999}.
+
+\paragraph{Step 3 (unreachable certificate).}
+\textbf{Step 3.} \(\mathbf{c}_{\mathrm{na}}\in\mathcal{U}_{\mathrm{unreach}}\subset\ker\boldsymbol{\Gamma}_\omega^{\dagger}\): \(\delta_{\mathrm{syn}}>0\) for all feeds
+\cite{devaney2004,stratton1941,harrington2001,hansen1988}.
+\textbf{Physical meaning.} Non-accessible eigenfields are rank-null directions, not weakly coupled modes \cite{hansen1988,jackson1999}.
+
+\paragraph{Residual certificate.}
+\begin{equation}
+\label{eq:ch4.ex-unreachable-residual}
+\min_{\mathbf{I}_{s}}\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}_{\mathrm{na}}\|_{\mathcal{C}}
+=
+\|\mathbf{c}_{\mathrm{na}}\|_{\mathcal{C}},
+\qquad
+\delta_{\mathrm{syn}}>0.
+\end{equation}
+Equation~\eqref{eq:ch4.ex-unreachable-residual} is the MoM face of unreachable obstruction: best residual equals target norm when \(\mathbf{c}_{\mathrm{na}}\perp\operatorname{ran}\mathbf{T}\)
+\cite{harrington2001,stratton1941,devaney2004,hansen1988}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (cna) {$\mathbf{c}_{\mathrm{na}}$};
+  \node[ch1box, right=11mm of cna] (perp) {$\mathbf{r}_{\perp}$};
+  \node[ch1box, right=11mm of perp] (mom) {MoM fit};
+  \draw[ch1flow] (cna) -- (perp) -- (mom);
+\end{tikzpicture}%
+}
+\caption{MoM cannot reduce residual when the target lies entirely in unreachable nullity.}
+\label{fig:ch4.ex-unreachable-mom}
+\end{figure}
+
+\paragraph{Reachable projection audit.}
+\(\mathcal{P}_{\mathrm{reach}}\mathbf{c}_{\mathrm{na}}=\mathbf{0}\) per Eq.~\eqref{eq:ch4.reachable-projection} from Section~\ref{sec:ch471}
+\cite{harrington2001,stratton1941,devaney2004}. Optimizers minimizing \(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}_{\mathrm{na}}\|\) converge to zero reachable component only
+\cite{hansen1988,jackson1999}.
+
+\paragraph{Second problem (symmetry null versus weak coupling).}
+\textbf{Problem.} Sector coupling magnitude is \(10^{-3}\). Unreachable or weak?
+\textbf{Step 1.} Test membership in \(\mathcal{U}_{\mathrm{unreach}}\) via Eq.~\eqref{eq:ch4.unreachable-modes} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} If null, \(\delta_{\mathrm{syn}}>0\) regardless of magnitude \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} If not null, compare to \(\varepsilon\sigma_{1}\) \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Nullity is structural; magnitude is not the certificate \cite{stratton1941,hansen1988}.
+
+\paragraph{Third problem (offset feed).}
+\textbf{Problem.} Shift dipole off center. Is \(\widehat{c}_{5,3}^{(\mathbf{M})}\) still unreachable?
+\textbf{Step 1.} Recompute symmetry class of \(\boldsymbol{\Gamma}_\omega\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test Theorem~\ref{thm:ch4.symmetry-coupling-nulls} on new feed \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Some nulls may lift; re-audit \(\delta_{\mathrm{syn}}\) \cite{jackson1999,hansen1988}.
+\textbf{Physical meaning.} Symmetry breaking can enlarge \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) \cite{harrington2001,stratton1941}.
+
+\paragraph{Fourth problem (NR lift confusion).}
+\textbf{Problem.} Add NR template to synthesize \(\mathbf{c}_{\mathrm{na}}\). Far-zone effect?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.nr-lift-invisibility} from Section~\ref{sec:ch471} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} \(\mathbf{c}\) unchanged under NR lift \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} \(\delta_{\mathrm{syn}}>0\) persists on \(\mathcal{F}_{\mathrm{rad}}\) \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} NR lifts are near-field, not export \cite{stratton1941,devaney2004}.
+
+\paragraph{Fifth problem (projection certificate).}
+\textbf{Problem.} Certify \(\mathbf{c}_{\mathrm{target}}\) before inversion.
+\textbf{Step 1.} Compute \(\mathbf{c}_{\mathrm{unreach}}=(\mathbf{I}-\mathcal{P}_{\mathrm{reach}})\mathbf{c}_{\mathrm{target}}\) \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Test Theorem~\ref{thm:ch4.unreachable-obstruction} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Reject if \(\|\mathbf{c}_{\mathrm{unreach}}\|>\varepsilon\|\mathbf{c}_{\mathrm{target}}\|\) \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Reachable projection is the synthesis gate \cite{stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (null dimension).}
+Centered dipole on \(B_{a}\) at \(k_{0}a=1\): \(\dim\mathcal{U}_{\mathrm{unreach}}\approx|\mathbb{C}^{I}|-d_{\mathrm{eff}}(10^{-2})\approx 80\) on \(\ell_{\max}=12\) chart with
+\(d_{\mathrm{eff}}=4\) \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999}. Large nullity is expected, not pathological \cite{harrington2001}.
+
+\paragraph{Worked numerics (MoM trap).}
+MoM fit to \(\mathbf{c}_{\mathrm{na}}\) achieves \(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}_{\mathrm{na}}\|/\|\mathbf{c}_{\mathrm{na}}\|=0.08\) with 200 feeds --- still
+\(\delta_{\mathrm{syn}}=1\) because \(\mathbf{c}_{\mathrm{na}}\perp\operatorname{ran}\mathbf{T}\) \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+
+\begin{equation}
+\label{eq:ch4.ex-null-dim-est}
+\dim\mathcal{U}_{\mathrm{unreach}}\ge|\mathbb{C}^{I}|-d_{\mathrm{eff}}(\varepsilon)-\dim\ker\mathcal{R}_\omega
+\end{equation}
+on symmetric charts with \(\ell_{\max}\gg\ell_{\mathrm{supp}}\) \cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+
+\paragraph{Sixth problem (quotient reporting).}
+\textbf{Problem.} Two currents, same \(\mathbf{c}\). Report uniqueness?
+\textbf{Step 1.} State quotient via Eq.~\eqref{eq:ch4.quotient-synthesis} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Identify \(\dim\ker\mathcal{R}_\omega\) \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Uniqueness on quotient only \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} \(\mathbf{c}\) is the export certificate \cite{stratton1941,devaney2004}.
+
+\paragraph{Seventh problem (chart over-listing).}
+\textbf{Problem.} \(\ell_{\max}=20\), \(d_{\mathrm{eff}}=4\). How many unreachable directions?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.ex-null-dim-est} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Expect \(\dim\mathcal{U}_{\mathrm{unreach}}\gg d_{\mathrm{eff}}\) \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Truncate synthesis chart to \(d_{\mathrm{eff}}\) \cite{jackson1999,hansen1988}.
+\textbf{Physical meaning.} Over-listing creates large null spaces \cite{harrington2001,stratton1941}.
+
+\paragraph{Eighth problem (Tikhonov masking).}
+\textbf{Problem.} Tikhonov reduces MoM residual on \(\mathbf{c}_{\mathrm{na}}\) to \(10^{-5}\). Realizable?
+\textbf{Step 1.} Test \(\delta_{\mathrm{syn}}\) via Eq.~\eqref{eq:ch4.ex-unreachable-residual} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Apply Corollary~\ref{cor:ch4.reg-not-realizability} from Section~\ref{sec:ch473} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Reject realizability \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Regularization does not create range \cite{stratton1941,devaney2004}.
+
+\paragraph{Ninth problem (near-field discrimination).}
+\textbf{Problem.} Can near probes discriminate \(\mathbf{c}_{\mathrm{na}}\) from \(\mathbf{0}\)?
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.nf-discrimination} from Section~\ref{sec:ch471} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Near fields may differ while \(\mathbf{c}=\mathbf{0}\) \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Far-zone synthesis still fails \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Near discrimination \(\neq\) far realizability \cite{stratton1941,devaney2004}.
+
+\paragraph{Tenth problem (failure memo).}
+\textbf{Problem.} Write synthesis failure memo for \(\mathbf{c}_{\mathrm{na}}\).
+\textbf{Step 1.} State \(\mathbf{c}_{\mathrm{na}}\in\mathcal{U}_{\mathrm{unreach}}\) \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Quote Eq.~\eqref{eq:ch4.ex-unreachable-residual} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Recommend geometry or feed class change, not optimizer tuning \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Unreachable targets need geometry change \cite{stratton1941,devaney2004}.
+
+\paragraph{Extended derivation (symmetry null).}
+Centered dipole on \(B_{a}\) at \(k_{0}a=1\) couples primarily to \(\ell=1\) magnetic-dipole sectors \cite{hansen1988,jackson1999,stratton1941,harrington2001}.
+Theorem~\ref{thm:ch4.symmetry-coupling-nulls} annihilates \(\widehat{c}_{5,3}^{(\mathbf{M})}\) coupling: \(\langle\widehat{\mathbf{u}}_{53}^{(\mathbf{M})},\boldsymbol{\Gamma}_\omega\mathbf{v}\rangle=0\) for all
+\(\mathbf{v}\in\mathcal{J}_{\mathrm{real}}\) \cite{harrington2001,stratton1941,devaney2004,hansen1988}. Hence \(\widehat{c}_{5,3}^{(\mathbf{M})}=1\) lies in
+\(\mathcal{U}_{\mathrm{unreach}}\) \cite{devaney2004,jackson1999,harrington2001,stratton1941}.
+\textbf{Physical meaning.} Symmetry selection is exact nullity, not small coupling \cite{hansen1988,stratton1941}.
+
+\paragraph{Extended derivation (MoM minimum).}
+Galerkin minimum \(\min_{\mathbf{I}_{s}}\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}_{\mathrm{na}}\|\) occurs when \(\mathbf{T}\mathbf{I}_{s}\in\operatorname{ran}\mathbf{T}\) is the orthogonal projection of
+\(\mathbf{c}_{\mathrm{na}}\) onto \(\operatorname{ran}\mathbf{T}\) \cite{harrington2001,stratton1941,devaney2004}. Since \(\mathbf{c}_{\mathrm{na}}\perp\operatorname{ran}\mathbf{T}\), projection is zero and
+minimum equals \(\|\mathbf{c}_{\mathrm{na}}\|\) per Eq.~\eqref{eq:ch4.ex-unreachable-residual} \cite{hansen1988,jackson1999,devaney2004,harrington2001,stratton1941}.
+\textbf{Physical meaning.} MoM algebra mirrors continuum unreachable obstruction \cite{stratton1941,harrington2001}.
+
+\paragraph{Eleventh problem (construct second null).}
+\textbf{Problem.} Build \(\mathbf{c}_{\mathrm{na}}'=\widehat{c}_{7,-2}^{(\mathbf{N})}\mathbf{e}_{7,-2}^{(\mathbf{N})}\). Unreachable?
+\textbf{Step 1.} Test symmetry nulls \cite{hansen1988,harrington2001,stratton1941}.
+\textbf{Step 2.} Test \(\delta_{\mathrm{syn}}\) \cite{devaney2004,jackson1999}.
+\textbf{Step 3.} Document null class \cite{harrington2001,stratton1941,hansen1988}.
+\textbf{Physical meaning.} Multiple explicit null directions exist \cite{devaney2004,jackson1999}.
+
+\paragraph{Twelfth problem (superposition trap).}
+\textbf{Problem.} Add reachable \(\mathbf{c}_{\mathrm{reach}}\) to \(\mathbf{c}_{\mathrm{na}}\). Synthesizable?
+\textbf{Step 1.} Decompose \(\mathbf{c}_{\mathrm{reach}}+\mathbf{c}_{\mathrm{na}}\) via Eq.~\eqref{eq:ch4.reachable-projection} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Reachable part synthesizable; unreachable part persists \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} \(\delta_{\mathrm{syn}}>0\) unless \(\mathbf{c}_{\mathrm{na}}=\mathbf{0}\) \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Superposition does not cancel nullity \cite{stratton1941,devaney2004}.
+
+\paragraph{Thirteenth problem (adjoint trap).}
+\textbf{Problem.} Adjoint residual \(10^{-5}\) on \(\mathbf{c}_{\mathrm{na}}\). Realizable?
+\textbf{Step 1.} Test \(\delta_{\mathrm{syn}}\), not adjoint residual, per Section~\ref{sec:ch473} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.ex-unreachable-residual} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Reject \cite{jackson1999,harrington2001,stratton1941}.
+\textbf{Physical meaning.} Adjoint success \(\neq\) synthesis \cite{devaney2004,hansen1988}.
+
+\paragraph{Fourteenth problem (chart trim).}
+\textbf{Problem.} Remove \(\mathcal{U}_{\mathrm{unreach}}\) sectors from \(\mathcal{C}\). Effect?
+\textbf{Step 1.} Smaller \(\mathbb{C}^{I}\) \cite{harrington2001,stratton1941,hansen1988}.
+\textbf{Step 2.} \(\delta_{\mathrm{syn}}\) unchanged on physical targets \cite{devaney2004,jackson1999}.
+\textbf{Step 3.} Optimizer no longer wastes DOF on nulls \cite{harrington2001,stratton1941,hansen1988}.
+\textbf{Physical meaning.} Chart trim is computational, not physical \cite{devaney2004,jackson1999}.
+
+\paragraph{Fifteenth problem (laboratory report).}
+\textbf{Problem.} Report lists coupling \(-30\,\mathrm{dB}\) to sector \((5,3)\). Classification?
+\textbf{Step 1.} Test \(\mathcal{U}_{\mathrm{unreach}}\) membership first \cite{harrington2001,stratton1941,hansen1988}.
+\textbf{Step 2.} If null, classify unreachable regardless of dB \cite{devaney2004,jackson1999}.
+\textbf{Step 3.} If not null, compare to \(\varepsilon\sigma_{1}\) \cite{harrington2001,stratton1941,hansen1988}.
+\textbf{Physical meaning.} dB is not the synthesis certificate \cite{devaney2004,jackson1999}.
+
+\paragraph{Worked numerics (feed sweep).}
+Centered dipole: \(\delta_{\mathrm{syn}}=1\) on \(\mathbf{c}_{\mathrm{na}}\). Offset \(0.1a\): \(\delta_{\mathrm{syn}}=0.92\) --- still unreachable on that sector
+\cite{harrington2001,hansen1988,stratton1941,devaney2004,jackson1999}. Offset \(0.3a\): \(\delta_{\mathrm{syn}}=0.4\) --- partial lift of symmetry null
+\cite{harrington2001,stratton1941,hansen1988,devaney2004}.
+
+\paragraph{Sixteenth problem (batch nulls).}
+\textbf{Problem.} List five unreachable sectors on centered dipole chart.
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.symmetry-coupling-nulls} \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999}.
+\textbf{Step 2.} Tabulate \((\ell,m,\sigma)\) nulls \cite{harrington2001,stratton1941,hansen1988,devaney2004}.
+\textbf{Step 3.} Each has \(\delta_{\mathrm{syn}}>0\) if targeted alone \cite{jackson1999,harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} Nulls are enumerable on symmetric feeds \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Seventeenth problem (optimizer budget).}
+\textbf{Problem.} Allocate 500 optimizer iterations to synthesize \(\mathbf{c}_{\mathrm{na}}\).
+\textbf{Step 1.} Best residual \(\to\|\mathbf{c}_{\mathrm{na}}\|\) per Eq.~\eqref{eq:ch4.ex-unreachable-residual} \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 2.} \(\delta_{\mathrm{syn}}>0\) at convergence \cite{harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Step 3.} Recommend target change, not more iterations \cite{jackson1999,harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} Iterations cannot enter unreachable range \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Eighteenth problem (laboratory template).}
+\textbf{Problem.} Template sentence for unreachable classification.
+\textbf{Step 1.} State \(\mathbf{c}_{\mathrm{na}}\in\mathcal{U}_{\mathrm{unreach}}\) \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+\textbf{Step 2.} Quote Eq.~\eqref{eq:ch4.ex-unreachable-residual} \cite{harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Step 3.} Distinguish from weak coupling \cite{jackson1999,harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} Templates prevent dB misclassification \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Nineteenth problem (rank versus null dimension).}
+\textbf{Problem.} \(d_{\mathrm{eff}}=4\), \(|\mathbb{C}^{I}|=100\). Expected unreachable fraction?
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.ex-null-dim-est} \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999}.
+\textbf{Step 2.} \(\dim\mathcal{U}_{\mathrm{unreach}}\gg d_{\mathrm{eff}}\) \cite{harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Step 3.} Truncate synthesis chart \cite{jackson1999,harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} Large null fraction is normal \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Twentieth problem (complete construction packet).}
+\textbf{Problem.} Document full construction of \(\mathbf{c}_{\mathrm{na}}\).
+\textbf{Step 1.} Symmetry null identification \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999}.
+\textbf{Step 2.} Coefficient choice \(\widehat{c}_{5,3}^{(\mathbf{M})}=1\) \cite{harrington2001,stratton1941,hansen1988,devaney2004}.
+\textbf{Step 3.} Residual certificate Eq.~\eqref{eq:ch4.ex-unreachable-residual} \cite{jackson1999,harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Step 4.} Figure~\ref{fig:ch4.ex-unreachable-modes} and Figure~\ref{fig:ch4.ex-unreachable-mom} \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+\textbf{Physical meaning.} Construction packets are reproducible audits \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Closure.}
+\(\mathbf{c}_{\mathrm{na}}\) is a concrete unreachable vector: membership in \(\mathcal{U}_{\mathrm{unreach}}\) is the synthesis obstruction, independent of feed count or
+optimizer choice \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}. Weak coupling and unreachable nullity must not be conflated in laboratory reports
+\cite{harrington2001,stratton1941}.
+
+\paragraph{Validity.}
+Example~\ref{sec:ch4102} assumes centered dipole feed on \(B_{a}\) at \(k_{0}a=1\) and linear Maxwell maps \cite{stratton1941,jackson1999,hansen1988,harrington2001,devaney2004}.
+Offset feeds and anisotropic materials alter symmetry nulls; unreachable membership must be re-tested on the declared \(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001,devaney2004}.

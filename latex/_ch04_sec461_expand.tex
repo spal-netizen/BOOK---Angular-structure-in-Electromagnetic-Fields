@@ -1,0 +1,239 @@
+\subsection{Maximum supported angular order}
+\label{sec:ch461}
+% TOC tag: [HOME][USE SS3.7.2]
+
+Boundary quantization in Subsection~\ref{sec:ch372} replaces continuous direction spectra by countable mode sets under
+\(\Gamma_{b}\) \cite{stratton1941,harrington2001}. On open regions with compact sources, the analogous realizability question is not
+how many angular indices a listing can print, but which \(\ell\) sectors carry export gain above tolerance on
+\(\mathcal{J}_{\mathrm{real}}\) \cite{hansen1988,devaney2004}. Representation is coordinate freedom: any \(\ell_{\max}\) may be
+declared in \(\mathcal{C}\). Realizability is geometry-imposed rank: only sectors coupled through \(\boldsymbol{\Gamma}_\omega\) above
+\(\varepsilon\sigma_{1}\) participate in \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{stratton1941,harrington2001}.
+
+\paragraph{Assumptions.}
+Fix ball support \(B_{a}\) with radius \(a\), flux-normalized VSH listing \(\mathcal{C}\), and tolerance \(\varepsilon\in(0,1)\)
+\cite{stratton1941,hansen1988}. Presuppose Eq.~\eqref{eq:ch4.high-ell-decay}, Definition~\ref{def:ch4.radiative-rank}, and
+Eq.~\eqref{eq:ch4.gamma-SVD} \cite{harrington2001,devaney2004}. Narrowband phasors \(\exp(-j\omega t)\) and SI units are in force
+\cite{jackson1999}. Synthesis audits use \(\boldsymbol{\Gamma}_\omega=\mathbf{Z}\boldsymbol{\mathcal{K}}_{\mathrm{geo}}\) in the aligned
+flux gauge of Section~\ref{sec:ch34} \cite{hansen1988}.
+
+\paragraph{Maximum supported order.}
+Define the \emph{maximum supported angular order}
+\begin{equation}
+\label{eq:ch4.ell-max-supported}
+\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+=
+\max\left\{
+\ell:\ \exists\,(\ell,m,\sigma)\ \text{with}\ 
+\sigma_{(\ell,m,\sigma)}\ge\varepsilon\,\sigma_{1}
+\ \text{in Eq.~\eqref{eq:ch4.gamma-SVD}}
+\right\},
+\end{equation}
+where \(\sigma_{(\ell,m,\sigma)}\) is the singular value of \(\boldsymbol{\Gamma}_\omega\) aligned to the unit export vector
+\(\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}\) in the VSH chart \cite{harrington2001,hansen1988}. Equation~\eqref{eq:ch4.ell-max-supported}
+is the synthesis-side angular cutoff: modes with \(\ell>\ell_{\mathrm{supp}}\) lie below export threshold at \(\varepsilon\) regardless of
+listing labels or plotting resolution \cite{stratton1941,devaney2004}. Mathematically, \(\ell_{\mathrm{supp}}\) is the largest block index in
+the singular-value ordering whose leading value still exceeds \(\varepsilon\sigma_{1}\). Physically, it is the highest azimuthal order that
+can receive appreciable watts from any admissible \(\Jimp\in\mathcal{J}_{\mathrm{real}}(B_{a})\) at the declared frequency
+\cite{hansen1988,jackson1999}.
+
+\paragraph{Sector-resolved supported order.}
+Electric and magnetic sectors need not share the same ceiling on anisotropic feeds \cite{harrington2001}. Define
+\begin{equation}
+\label{eq:ch4.ell-sector-supported}
+\ell_{\mathrm{supp}}^{(\sigma)}(\varepsilon)
+=
+\max\big\{\ell:\ \exists m\ \text{with}\ \sigma_{(\ell,m,\sigma)}\ge\varepsilon\sigma_{1}\big\},
+\qquad
+\sigma\in\{\mathbf{M},\mathbf{N}\},
+\end{equation}
+and aggregate \(\ell_{\mathrm{supp}}(\varepsilon)=\max_{\sigma}\ell_{\mathrm{supp}}^{(\sigma)}(\varepsilon)\) \cite{hansen1988,stratton1941}.
+Sector splitting precedes combined OAM claims: a dominant \(\mathbf{N}\)-sector at \(\ell=5\) may coexist with a suppressed
+\(\mathbf{M}\)-sector at the same \(\ell\) on offset feeds \cite{harrington2001,devaney2004}.
+
+\begin{theorem}[Supported order versus electrical size]
+\label{thm:ch4.ell-max-scaling}
+For compact \(B_{a}\) and aligned VSH gauge,
+\begin{equation}
+\label{eq:ch4.ell-max-scaling}
+\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+\ \le\
+\ell_{\max}(\eta_{\mathrm{tail}},k_{0}a)
+\ \sim\
+k_{0}a+\mathcal{O}\!\big(\log(1/\varepsilon)\big),
+\end{equation}
+importing Eq.~\eqref{eq:ch4.ellmax-from-tail} and Eq.~\eqref{eq:ch4.high-ell-decay} \cite{hansen1988,jackson1999,stratton1941}.
+Equality holds in the isotropic ball case up to gauge constants \cite{harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+Tail envelope Eq.~\eqref{eq:ch4.high-ell-decay} bounds nonzero \(\widehat{c}_{\ell m}^{(\sigma)}\) by
+\(\exp(-\ell/k_{0}a)\) on \(B_{a}\) \cite{hansen1988,jackson1999}. Singular-value ordering of \(\boldsymbol{\Gamma}_\omega\) on VSH
+sectors identifies the largest \(\ell\) whose aligned \(\sigma_{(\ell,m,\sigma)}\) remains above \(\varepsilon\sigma_{1}\)
+\cite{stratton1941,harrington2001}. Combining the tail bound with Definition~\ref{def:ch4.radiative-rank} yields
+Eq.~\eqref{eq:ch4.ell-max-scaling} \cite{devaney2004}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.ell-max-scaling} is the open-region counterpart of Subsection~\ref{sec:ch372} quantization: geometry imposes a
+countable ceiling on \(\ell\), not merely on mesh indices \cite{stratton1941}. Phase-only metasurfaces on fixed \(a\) cannot raise
+\(\ell_{\mathrm{supp}}\) without raising \(k_{0}a\) or enlarging \(\mathcal{L}_{2}\) support \cite{devaney2004,hansen1988}. The theorem
+also explains why high-\(\ell\) OAM marketing on handset-scale apertures fails before optimization: the tail inequality is already violated
+at the coefficient level \cite{harrington2001,jackson1999}.
+
+\begin{corollary}[Listing cutoff versus supported order]
+\label{cor:ch4.listing-vs-supported}
+If \(\ell_{\max}>\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\), indices \(\ell_{\mathrm{supp}}<\ell\le\ell_{\max}\) are export-padding at
+tolerance \(\varepsilon\) \cite{hansen1988,harrington2001,devaney2004}. MoM inversion must not treat those rows as independent synthesis
+coordinates \cite{harrington2001}.
+\end{corollary}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 10mm]
+  \node[ch1box] (ka) {$k_{0}a$};
+  \node[ch1box, right=12mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=12mm of ell] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
+  \node[ch1box, right=12mm of svd] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \node[ch1box, below=11mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
+  \draw[ch1flow] (ka) -- (ell) -- (svd) -- (sr);
+  \draw[ch1flow] (tail) -- (ell);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch461}: electrical size sets \(\ell_{\mathrm{supp}}\) through tail bounds before synthesis listing; only
+sectors above \(\varepsilon\sigma_{1}\) enter \(\mathcal{S}_{\mathrm{real}}\).}
+\label{fig:ch4.ell-max-supported}
+\end{figure}
+
+Figure~\ref{fig:ch4.ell-max-supported} compresses the audit chain: \(k_{0}a\) controls tail decay, tail decay controls
+\(\ell_{\mathrm{supp}}\), and \(\ell_{\mathrm{supp}}\) controls which rows of \(\mathcal{C}\) carry realizability content
+\cite{hansen1988,stratton1941}. A listing that stops at \(\ell_{\max}\) without reporting \(\ell_{\mathrm{supp}}\) confuses coordinate
+cardinality with export rank \cite{harrington2001,devaney2004}.
+
+\paragraph{Tail-to-threshold translation.}
+Eq.~\eqref{eq:ch4.high-ell-decay} implies that sector power at \(\ell\) is suppressed by \(\exp(-2\ell/k_{0}a)\) relative to low-\(\ell\)
+sectors after flux normalization \cite{hansen1988,jackson1999}. Requiring \(\sigma_{(\ell,m,\sigma)}\ge\varepsilon\sigma_{1}\) therefore
+forces \(\ell\lesssim k_{0}a+\log(1/\varepsilon)\) \cite{stratton1941}. At \(\varepsilon=10^{-2}\) and \(k_{0}a=2\), the logarithmic
+correction adds only \(\mathcal{O}(1)\) to the linear term: \(\ell_{\mathrm{supp}}\) is dominated by electrical size, not by solver tolerance
+\cite{harrington2001,devaney2004}.
+\begin{equation}
+\label{eq:ch4.ell-supp-monotone}
+\frac{\partial\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)}{\partial(k_{0}a)}\ge0,\qquad
+\frac{\partial\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)}{\partial\varepsilon}\le0.
+\end{equation}
+Equation~\eqref{eq:ch4.ell-supp-monotone} is the monotone chain used in laboratory audits: enlarging the ball or raising frequency opens
+higher \(\ell\) sectors; tightening \(\varepsilon\) lowers \(\ell_{\mathrm{supp}}\) \cite{hansen1988,jackson1999}.
+
+\paragraph{Worked illustration (handset aperture).}
+At \(k_{0}a=2\), \(\ell_{\mathrm{supp}}(10^{-2})\approx4\)--\(6\) by Eq.~\eqref{eq:ch4.ell-max-scaling} \cite{hansen1988,jackson1999,harrington2001}.
+Marketing claims of dominant \(\ell=12\) OAM on the same aperture fail Theorem~\ref{thm:ch4.ell-max-scaling} because tail mass at
+\(\ell=12\) is \(\exp(-6)\approx0.002\) relative to \(\ell\le2\) sectors after normalization \cite{devaney2004}. The failure is
+coefficient-level, not a matter of feed tuning alone \cite{stratton1941}.
+
+\paragraph{Worked illustration (sector split on offset feed).}
+A patch displaced from the ball center may satisfy \(\ell_{\mathrm{supp}}^{(\mathbf{N})}(10^{-2})=5\) while
+\(\ell_{\mathrm{supp}}^{(\mathbf{M})}(10^{-2})=4\) at the same \(k_{0}a\) \cite{harrington2001,jackson1999,hansen1988}. Combined OAM
+reports must decompose \(\mathbf{M}\) and \(\mathbf{N}\) sectors before asserting a single dominant \(\ell\) \cite{stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (\(k_{0}a\) sweep).}
+At \(\varepsilon=10^{-2}\), representative centered-feed values are \(\ell_{\mathrm{supp}}\approx3,5,7,9\) for
+\(k_{0}a=1,1.5,2,2.5\) \cite{hansen1988,harrington2001}. Any design target with \(\ell>\ell_{\mathrm{supp}}(k_{0}a)\) is outside
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) on \(B_{a}\) before MoM or inverse design begins \cite{stratton1941,devaney2004}.
+
+\paragraph{Problem (supported order audit).}
+\textbf{Problem.} A VSH listing retains \(\ell\le15\) but \(k_{0}a=1.8\). How many \(\ell\) sectors matter at \(\varepsilon=10^{-2}\)?
+
+\textbf{Step 1.} Compute \(\ell_{\mathrm{supp}}(10^{-2},1.8)\) from Eq.~\eqref{eq:ch4.ell-max-supported} via SVD of \(\mathbf{T}\) on the
+aligned export basis \cite{harrington2001}.
+
+\textbf{Step 2.} Compare to Eq.~\eqref{eq:ch4.ell-max-scaling} for conservative analytic bound \(\ell_{\mathrm{supp}}\lesssim1.8+\log(100)\approx6\)
+\cite{hansen1988,jackson1999}.
+
+\textbf{Step 3.} Truncate design targets and MoM templates to \(\ell\le\ell_{\mathrm{supp}}\); rows \(\ell_{\mathrm{supp}}<\ell\le15\) are
+padding per Corollary~\ref{cor:ch4.listing-vs-supported} \cite{devaney2004,stratton1941}.
+
+\textbf{Physical meaning.} \(\ell_{\mathrm{supp}}\) is a geometry-imposed ceiling on exportable azimuthal order, not a plotting convenience
+\cite{hansen1988}.
+
+\paragraph{Problem (supported order versus \(\ell_{\max}\)).}
+\textbf{Problem.} \(\ell_{\max}=12\) is used in \(\mathcal{C}\) but \(\ell_{\mathrm{supp}}(10^{-2})=7\). How many rows matter?
+
+\textbf{Step 1.} Count sectors with \(\sigma_{(\ell,m,\sigma)}\ge10^{-2}\sigma_{1}\) in Eq.~\eqref{eq:ch4.gamma-SVD} \cite{harrington2001}.
+
+\textbf{Step 2.} Apply Corollary~\ref{cor:ch4.listing-vs-supported}: indices \(8\le\ell\le12\) are export-padding \cite{hansen1988,stratton1941}.
+
+\textbf{Step 3.} Truncate synthesis templates to \(\ell\le7\) and recompute \(\delta_{\mathrm{syn}}\) on the truncated target
+\cite{devaney2004}.
+
+\textbf{Physical meaning.} Supported order is an export threshold; listing width is coordinate freedom \cite{hansen1988,harrington2001}.
+
+\paragraph{Problem (OAM claim on fixed disk).}
+\textbf{Problem.} A \(0.2\,\mathrm{m}\) disk at \(30\,\mathrm{GHz}\) (\(k_{0}a\approx12.6\)) claims \(\ell=20\) dominance. Audit.
+
+\textbf{Step 1.} Compute \(\ell_{\mathrm{supp}}(10^{-2},12.6)\lesssim12.6+\log(100)\approx17\) from Eq.~\eqref{eq:ch4.ell-max-scaling}
+\cite{jackson1999,hansen1988}.
+
+\textbf{Step 2.} Test tail ratio \(\exp(-2\cdot20/12.6)\approx0.04\) for \(\ell=20\) against \(\varepsilon=10^{-2}\) \cite{hansen1988}.
+
+\textbf{Step 3.} If SVD shows \(\sigma_{(20,m,\sigma)}<10^{-2}\sigma_{1}\), reject dominance claim \cite{harrington2001,devaney2004}.
+
+\textbf{Physical meaning.} Even electrically large apertures saturate \(\ell\) through tail decay, not through listing preference
+\cite{stratton1941}.
+
+\paragraph{Gauge invariance of \(\ell_{\mathrm{supp}}\).}
+Admissible changes of \(\mathcal{C}\) that preserve flux normalization and \(\boldsymbol{\Gamma}_\omega\) leave \(\ell_{\mathrm{supp}}\)
+invariant \cite{hansen1988,stratton1941}. Changing \(\ell_{\max}\) without changing \(\boldsymbol{\Gamma}_\omega\) adds null rows to
+\(\mathbf{T}\) but does not enlarge \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{harrington2001,devaney2004}. Laboratories must
+report \(\ell_{\mathrm{supp}}\) alongside \(\ell_{\max}\) to prevent coordinate inflation in synthesis reports \cite{hansen1988}.
+
+\paragraph{Relation to \(d_{\mathrm{eff}}\).}
+Each supported \(\ell\) block contributes up to \((2\ell+1)\) sector labels, but \(d_{\mathrm{eff}}(\varepsilon)\) counts only singular
+directions above \(\varepsilon\sigma_{1}\) \cite{harrington2001,devaney2004}. Thus \(\ell_{\mathrm{supp}}\) is necessary but not sufficient
+for rank saturation: within \(\ell\le\ell_{\mathrm{supp}}\), many \((m,\sigma)\) pairs may still lie below threshold
+\cite{hansen1988,stratton1941}.
+\begin{equation}
+\label{eq:ch4.ell-deff-relation}
+d_{\mathrm{eff}}(\varepsilon)\le\sum_{\ell=0}^{\ell_{\mathrm{supp}}}(2\ell+1)\times\#\{\sigma:\sigma\text{ active}\},
+\end{equation}
+with equality only when every sector in the sum exceeds \(\varepsilon\sigma_{1}\) \cite{harrington2001}.
+
+\paragraph{MoM row audit protocol.}
+Let \(\mathbf{T}\) be the discretized export map in the aligned gauge \cite{harrington2001}. Row \( (\ell,m,\sigma)\) is \emph{synthesis-active}
+if \(\sigma_{(\ell,m,\sigma)}\ge\varepsilon\sigma_{1}\); otherwise it is \emph{padding} per Corollary~\ref{cor:ch4.listing-vs-supported}
+\cite{hansen1988,devaney2004}. The audit protocol is: (i) form \(\mathbf{T}\) on \(\mathcal{J}_{\mathrm{real}}(B_{a})\); (ii) extract
+\(\{\sigma_{(\ell,m,\sigma)}\}\); (iii) compute \(\ell_{\mathrm{supp}}\) via Eq.~\eqref{eq:ch4.ell-max-supported}; (iv) truncate templates to
+active rows only \cite{stratton1941,harrington2001}. Skipping step (iii) is the dominant source of false OAM realizability claims in numerical
+papers \cite{hansen1988,jackson1999}.
+
+\begin{theorem}[Padding rows are synthesis-invisible]
+\label{thm:ch4.padding-invisible}
+Rows with \(\sigma_{(\ell,m,\sigma)}<\varepsilon\sigma_{1}\) carry no component of \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) above
+threshold: for any \(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\), the coefficient on padding row \((\ell,m,\sigma)\) is
+\(\mathcal{O}(\varepsilon)\|\mathbf{c}\|\) in the flux gauge \cite{harrington2001,devaney2004,stratton1941}.
+\end{theorem}
+\begin{proof}
+Eckart--Young truncation at rank \(r_{\mathrm{rad}}(\varepsilon)\) discards singular directions below \(\varepsilon\sigma_{1}\)
+\cite{harrington2001}. Padding rows span those directions \cite{hansen1988,stratton1941}.
+\end{proof}
+
+\paragraph{Worked illustration (MoM padding).}
+\(\ell_{\max}=15\), \(k_{0}a=1.5\), \(\ell_{\mathrm{supp}}(10^{-2})=5\): rows with \(\ell>5\) contribute less than \(1\%\) of export power
+yet inflate \(\dim\mathbf{T}\) by a factor \(\approx3\) \cite{hansen1988,harrington2001,devaney2004}. Truncating \(\mathbf{T}\) to
+\(\ell\le5\) before inversion stabilizes \(\delta_{\mathrm{syn}}\) without changing realizable \(\mathbf{c}\) \cite{stratton1941}.
+
+\paragraph{Problem (padding strip).}
+\textbf{Problem.} After SVD, \(40\%\) of rows lie below \(\varepsilon\sigma_{1}\). Strip them?
+
+\textbf{Step 1.} Identify padding via Theorem~\ref{thm:ch4.padding-invisible} \cite{harrington2001}.
+
+\textbf{Step 2.} Rebuild \(\mathbf{T}\) on active rows only \cite{devaney2004,hansen1988}.
+
+\textbf{Step 3.} Re-certify \(\delta_{\mathrm{syn}}=0\) on truncated target \cite{stratton1941}.
+
+\textbf{Physical meaning.} Padding rows are coordinate artifacts, not synthesis degrees of freedom \cite{hansen1988}.
+
+\paragraph{Validity.}
+Eqs.~\eqref{eq:ch4.ell-max-supported}--\eqref{eq:ch4.ell-max-scaling} assume open-region ball supports, aligned VSH gauge, and linear
+narrowband Maxwell maps \cite{stratton1941,hansen1988}. Cavities require Subsection~\ref{sec:ch372} indices \((\ell,m,n_{r})\) instead of
+pure spherical orders \cite{harrington2001}. Loss lowers \(Q\) and may redistribute sector weights without promoting \(\ell>\ell_{\mathrm{supp}}\)
+on passive supports \cite{stratton1941,devaney2004}. Anisotropic media modify \(\ell_{\mathrm{supp}}^{(\sigma)}\) splits but not the
+inevitability of a ceiling at fixed \((k_{0}a,\varepsilon)\) \cite{hansen1988,harrington2001}.
+

@@ -26,15 +26,20 @@ tag_rules:
 
 chapter_1:
   title: Foundations of Angular Electromagnetic Structure
-  status: UNLOCKED_FORENSIC_EDIT
+  status: COMPLETE_LOCKED
+  manuscript_signoff: TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md
+  locked_date: 2026-06-07
   forensic_edit: TOC/CH01-FORENSIC-EDIT-PROGRAM-LOCK.md
-  forensic_edit_start: 2026-06-06
+  forensic_edit_complete: 2026-06-07
+  architectural_notebook: TOC/CH01-ARCHITECTURAL-CORRECTIONS-NOTEBOOK.md
   toc_signoff: TOC/CH01-TOC-SIGNOFF-LOCK.md
   toc_signed_off: 2026-05-29
-  audit_date: 2026-05-29
-  pdf_pages_body: ~104
-  pdf_total_main: 131
+  audit_date: 2026-06-07
+  pdf_pages_body: ~115
+  pdf_total_main: 301
   subsections: 32
+  drafting_status: CHAPTER_1_COMPLETE_LOCKED
+  build_status: exit_0
   establishes:
     - "1.1.1 maxwell_si_phasor"
     - "1.1.4 stress_tensor_energy_momentum"
@@ -50,8 +55,10 @@ chapter_1:
   audit_notes:
     - "Maxwell HOME §1.1.1; angular balance HOME §1.1.5; transport criteria §1.2.3–1.2.4"
     - "No re-display of eq:ch1.maxwell-local outside §1.1.1; Ch.2+ USE by ref only"
-    - "Seminal citations only in Ch.1 body; architecture jargon removed from prose"
-    - "100 numbered equations; 68 TikZ schematic figures (ch01-tikz-styles.tex); bibliography ch01.bbl"
+    - "Seminal citations only in Ch.1 body; governance jargon removed from prose"
+    - "Four-class taxonomy + accessibility narrative in §1.0; Ch.2 inevitability paragraph"
+    - "68 TikZ schematic figures (ch01-tikz-styles.tex); bibliography ch01.bbl"
+    - "Forensic re-lock 2026-06-07: Pass 1-7, polish, narrative elevation COMPLETE"
   figure_audit:
     status: COMPLETE_LOCKED
     date: 2026-05-29
@@ -74,7 +81,9 @@ chapter_2:
   session_save_date: 2026-05-31
   next_subsection: "3.0.1"
   drafted_through: "2.11.3"
-  pdf_pages_main: 293
+  forensic_remediation: 2026-05-29
+  physical_review_accepted: 2026-05-29
+  pdf_pages_main: 299
   build_status: exit_0
   drafting_status: "CHAPTER_2_COMPLETE_LOCKED"
   fresh_restart: TOC/CH02-FRESH-RESTART-LOCK.md
@@ -120,7 +129,65 @@ chapter_2:
 
 chapter_3:
   title: Angular Momentum Eigenfields and Representation Theory
-  status: TOC_LOCKED_READY
+  status: COMPLETE_DRAFT
+  kickoff_lock: TOC/CH03-DRAFTING-KICKOFF-LOCK.md
+  drafting_started: 2026-05-29
+  redraft_3_0_301: 2026-05-29
+  redraft_3_0_302: 2026-05-29
+  redraft_3_0_303: 2026-05-29
+  accepted_3_0_303: 2026-05-29
+  accepted_3_0_303_note: "P2 trim reciprocity/near-field dedup"
+  redraft_3_1_1: 2026-05-29
+  redraft_3_1_2: 2026-05-29
+  redraft_3_1_3: 2026-05-29
+  redraft_3_1_4: 2026-05-29
+  redraft_3_2_1: 2026-05-29
+  redraft_3_2_2: 2026-05-29
+  redraft_3_2_3: 2026-05-29
+  redraft_3_2_4: 2026-05-29
+  redraft_3_2_5: 2026-05-29
+  redraft_3_3_1: 2026-05-29
+  redraft_3_3_2: 2026-05-29
+  redraft_3_3_3: 2026-05-29
+  redraft_3_3_4: 2026-05-29
+  redraft_3_4_1: 2026-05-29
+  redraft_3_4_2: 2026-05-29
+  redraft_3_4_3: 2026-05-29
+  redraft_3_4_4: 2026-05-29
+  redraft_3_4_5: 2026-05-29
+  redraft_3_5_1: 2026-05-29
+  redraft_3_5_2: 2026-05-29
+  redraft_3_5_3: 2026-05-29
+  redraft_3_5_4: 2026-05-29
+  redraft_3_6_1: 2026-05-29
+  redraft_3_6_2: 2026-05-29
+  redraft_3_6_3: 2026-05-29
+  redraft_3_6_4: 2026-05-29
+  redraft_3_7_1: 2026-05-29
+  redraft_3_7_2: 2026-05-29
+  redraft_3_7_3: 2026-05-29
+  redraft_3_7_4: 2026-05-29
+  redraft_3_8_1: 2026-05-29
+  redraft_3_8_2: 2026-05-29
+  redraft_3_8_3: 2026-05-29
+  redraft_3_8_4: 2026-05-29
+  redraft_3_9_1: 2026-05-29
+  redraft_3_9_2: 2026-05-29
+  redraft_3_9_3: 2026-05-29
+  redraft_3_9_4: 2026-05-29
+  redraft_3_10_1: 2026-05-29
+  redraft_3_10_2: 2026-05-29
+  redraft_3_10_3: 2026-05-29
+  redraft_3_10_4: 2026-05-29
+  redraft_3_8_vocab_expansion: 2026-05-29
+  redraft_3_9_vocab_expansion: 2026-05-29
+  redraft_3_11_1: 2026-05-29
+  redraft_3_11_2: 2026-05-29
+  redraft_3_11_3: 2026-05-29
+  next_subsection: "4.0.1"
+  drafted_through: "3.11.3"
+  chapter_complete_draft: 2026-05-29
+  pdf_pages_main: 505
   toc_audit: TOC/CH03-TOC-AUDIT-FLOW-LOCK.md
   toc_locked: 2026-05-29
   subsections: 48

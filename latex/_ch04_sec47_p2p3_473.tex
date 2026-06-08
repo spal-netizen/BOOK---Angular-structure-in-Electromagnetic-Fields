@@ -1,0 +1,63 @@
+
+\paragraph{Operator-range certificate.}
+Realizability is membership in \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\):
+\begin{equation}
+\label{eq:ch4.range-certificate}
+\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})
+\iff
+\exists\,\Jimp\in\mathcal{J}_{\mathrm{real}}:\ \boldsymbol{\Gamma}_\omega[\Jimp]=\mathbf{c}
+\iff
+\mathbf{r}_{\perp}=\mathbf{0}.
+\end{equation}
+Equation~\eqref{eq:ch4.range-certificate} is the inversion gate: optimizers minimize distance to \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\);
+synthesis demands zero distance \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+
+\begin{theorem}[Discrete--continuum inversion gap]
+\label{thm:ch4.discrete-continuum-gap}
+\(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}\|_{\mathcal{C}}<\tau_{\mathrm{mom}}\) does not imply \(\delta_{\mathrm{syn}}=0\) unless
+\(\tau_{\mathrm{mom}}<\varepsilon\|\mathbf{c}\|\) and \(\mathbf{r}_{\perp}=\mathbf{0}\) in the continuum gauge \cite{harrington2001,devaney2004,stratton1941}.
+\end{theorem}
+
+\paragraph{Rank-truncated inversion.}
+Best rank-\(d_{\mathrm{eff}}\) inverse \(\mathbf{T}^{\dagger}_{d}\) achieves
+\begin{equation}
+\label{eq:ch4.rank-truncated-inverse}
+\min_{\mathbf{I}_{s}}\|\mathbf{T}_{d}\mathbf{I}_{s}-\mathcal{P}_{\mathrm{ran}}\mathbf{c}\|
+\le
+\varepsilon\sigma_{1}\|\mathbf{c}\|,
+\end{equation}
+but cannot reduce \(\|\mathbf{r}_{\perp}\|\) \cite{harrington2001,hansen1988,stratton1941}. Truncation optimizes within range; it does not create range
+\cite{devaney2004}.
+
+\paragraph{Worked illustration (optimizer trap).}
+Adjoint optimizer: residual \(10^{-5}\), \(\|\mathbf{r}_{\perp}\|/\|\mathbf{c}\|=0.12\) \cite{harrington2001,devaney2004}. Synthesis fails
+\cite{stratton1941,hansen1988}.
+
+\paragraph{Worked illustration (rank mismatch).}
+Target needs \(d_{\mathrm{eff}}=14\); inversion uses rank \(8\): error attributed to truncation, not unreachable null \cite{hansen1988,harrington2001}.
+
+\paragraph{Problem (continuum certificate).}
+\textbf{Problem.} MoM passes; certify realizability.
+\textbf{Step 1.} Lift \(\mathbf{T}\) to continuum \(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.range-certificate} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Reject if \(\mathbf{r}_{\perp}\neq0\) \cite{hansen1988}.
+\textbf{Physical meaning.} Discrete fit \(\neq\) range membership \cite{stratton1941}.
+
+\paragraph{Problem (rank truncation).}
+\textbf{Problem.} Use rank \(d_{\mathrm{eff}}\) in inversion. When valid?
+\textbf{Step 1.} Verify \(\mathbf{c}\in\operatorname{ran}\boldsymbol{\Gamma}_\omega^{(d_{\mathrm{eff}})}\) \cite{harrington2001}.
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.rank-truncated-inverse} \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Separate truncation error from \(\mathbf{r}_{\perp}\) \cite{devaney2004}.
+\textbf{Physical meaning.} Truncation is within-range approximation \cite{harrington2001}.
+
+\paragraph{Philosophical closure (inversion versus synthesis).}
+Inversion is a variational problem on \(\mathbb{C}^{I}\); synthesis is a membership problem on \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\)
+\cite{stratton1941,harrington2001,devaney2004}. Regularization, sparsity priors, and adjoint optimization change the variational landscape without
+moving unreachable components into range \cite{hansen1988}. \(\delta_{\mathrm{syn}}=0\) is the synthesis certificate; MoM residual is not
+\cite{stratton1941,harrington2001}.
+
+\begin{corollary}[Tikhonov cannot cure unreachable targets]
+\label{cor:ch4.tikhonov-unreachable}
+If \(\mathbf{r}_{\perp}\neq0\), no \(\alpha>0\) yields \(\delta_{\mathrm{reg}}=0\) in Eq.~\eqref{eq:ch4.tikhonov-synthesis-gap}
+\cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+\end{corollary}

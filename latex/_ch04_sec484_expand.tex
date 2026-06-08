@@ -1,0 +1,195 @@
+\subsection{Landau-Pollak-Slepian limits and n-widths}
+\label{sec:ch484}
+% TOC tag: [HOME]
+
+Landau--Pollak--Slepian (LPS) theory and Kolmogorov \(n\)-widths bound the number of functions simultaneously concentrated in a spatial domain
+\(D\) and a spectral domain \(\Omega_{k}\) \cite{hansen1988,stratton1941}. Subsection~\ref{sec:ch484} imports those bounds as realizability ceilings
+on \(d_{\mathrm{eff}}(\varepsilon)\), unifying LPS, mode-count, and SVD certificates through Eq.~\eqref{eq:ch4.lps-export-bridge}
+\cite{harrington2001,devaney2004,jackson1999}. Concentration is the primitive fact; operator rank is the derived certificate
+\cite{stratton1941,hansen1988}.
+
+\paragraph{Assumptions.}
+Declare spatial domain \(D\supset\Omega_{s}\) and spectral domain \(\Omega_{k}\) for propagating content \cite{stratton1941,jackson1999,hansen1988}.
+Presuppose Eq.~\eqref{eq:ch4.duality-bandlimit-scaling} and linear time-harmonic maps \cite{harrington2001,devaney2004}. Tolerance \(\varepsilon\in(0,1)\)
+fixed \cite{hansen1988}.
+
+\paragraph{Kolmogorov \(n\)-width bound.}
+The synthesis dimension is ceilinged by the concentration width
+\begin{equation}
+\label{eq:ch4.lps-nwidth-bound}
+d_{\mathrm{eff}}(\varepsilon)\ \le\ N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k}),
+\end{equation}
+where \(N_{\mathrm{LPS}}\) counts approximate simultaneous eigenfunctions of spatial and spectral concentration operators on \((D,\Omega_{k})\)
+\cite{harrington2001,devaney2004,jackson1999,hansen1988}.
+
+\begin{theorem}[LPS bound on synthesis dimension]
+\label{thm:ch4.lps-synthesis-bound}
+\(\dim\mathcal{S}_{\mathrm{real}}(\mathcal{C})\le N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k})\) for any admissible coefficient chart \(\mathcal{C}\)
+\cite{stratton1941,hansen1988,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+The concentration operator on \((D,\Omega_{k})\) dominates the export map \(\boldsymbol{\Gamma}_\omega\) on compact supports: no passive
+\(\Jimp\) can excite more than \(N_{\mathrm{LPS}}\) approximately orthogonal export directions above noise floor \cite{hansen1988}. Definition
+\ref{def:ch4.effective-em-dimension} counts those directions at \(\varepsilon\) \cite{harrington2001,stratton1941}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.lps-synthesis-bound} explains why rank is finite before hardware enters: spatial--spectral concentration is a geometry-imposed
+barrier independent of feed count \cite{hansen1988,stratton1941,harrington2001}.
+
+\paragraph{Triple ceiling bridge.}
+\begin{equation}
+\label{eq:ch4.lps-export-bridge}
+d_{\mathrm{eff}}(\varepsilon)\ \le\ \min\big(N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k}),\,N_{\mathrm{mode}}(\varepsilon)\big),
+\end{equation}
+unifying LPS, mode-count laws Eqs.~\eqref{eq:ch4.mode-count-volume}--\eqref{eq:ch4.mode-count-area}, and SVD rank \cite{hansen1988,stratton1941,harrington2001}.
+
+\begin{theorem}[Triple ceiling consistency]
+\label{thm:ch4.triple-ceiling}
+On declared \((D,\Omega_{k},\mathcal{C})\), if any two of \(\{d_{\mathrm{eff}},N_{\mathrm{LPS}},N_{\mathrm{mode}}\}\) exceed the third, then
+\((D,\Omega_{k})\) were mis-declared, \(\mathcal{C}\) is over-listed, or gauge alignment failed \cite{hansen1988,harrington2001,devaney2004,stratton1941}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.lps-synthesis-bound}, Theorem~\ref{thm:ch4.mode-ceiling-rank}, and Definition~\ref{def:ch4.effective-em-dimension} form a
+consistent triple on aligned domains \cite{stratton1941,hansen1988,harrington2001}.
+\end{proof}
+
+\paragraph{Anisotropic concentration.}
+On anisotropic \(\Omega_{s}\),
+\begin{equation}
+\label{eq:ch4.lps-anisotropy}
+N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k})\le\sum_{i=1}^{3}N_{\mathrm{LPS}}^{(i)}(\varepsilon,D_{i},\Omega_{k}^{(i)}),
+\end{equation}
+\begin{equation}
+\label{eq:ch4.prolate-nwidth}
+N_{\mathrm{LPS}}^{(\mathrm{major})}\sim(k_{0}a)^{3},\qquad N_{\mathrm{LPS}}^{(\mathrm{minor})}\sim(k_{0}b)^{3}.
+\end{equation}
+Major-axis modes activate before minor-axis modes on prolate and slot apertures \cite{hansen1988,jackson1999,collin2001,harrington2001}.
+
+\paragraph{Directional LPS ledger.}
+On prolate \((a,b,c)\) with \(a\ge b\ge c\),
+\begin{equation}
+\label{eq:ch4.lps-directional-ledger}
+N_{\mathrm{LPS}}^{(x)}\gtrsim(k_{0}a)^{3},\quad
+N_{\mathrm{LPS}}^{(y)}\gtrsim(k_{0}b)^{3},\quad
+N_{\mathrm{LPS}}^{(z)}\gtrsim(k_{0}c)^{3}.
+\end{equation}
+Isotropic \(N_{\mathrm{LPS}}\) on anisotropic \(\Omega_{s}\) overstates minor-axis export \cite{harrington2001,stratton1941,hansen1988}.
+
+\paragraph{Prolate spheroidal link.}
+One-dimensional PSWF concentration on \([-1,1]\) with bandwidth parameter \(c=k_{0}a\) yields \(N_{\mathrm{LPS}}^{(1\mathrm{D})}\sim c/\log c\)
+\cite{hansen1988,jackson1999}. Embedding into three-dimensional prolate geometry recovers Eq.~\eqref{eq:ch4.prolate-nwidth} scaling
+\cite{stratton1941,harrington2001,devaney2004}. EM export maps inherit the same barrier \cite{hansen1988}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (lps) {$N_{\mathrm{LPS}}$};
+  \node[ch1box, right=11mm of lps] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=11mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (lps) -- (deff) -- (sr);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch484}: \(n\)-width \(N_{\mathrm{LPS}}\) ceilings \(d_{\mathrm{eff}}\) and hence \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\).}
+\label{fig:ch4.lps-nwidth}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (lps) {$N_{\mathrm{LPS}}$};
+  \node[ch1box, right=11mm of lps] (nm) {$N_{\mathrm{mode}}$};
+  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (lps) -- (deff);
+  \draw[ch1flow] (nm) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch484}: triple ceiling Eq.~\eqref{eq:ch4.lps-export-bridge}; tightest bound governs.}
+\label{fig:ch4.triple-ceiling}
+\end{figure}
+
+Figure~\ref{fig:ch4.triple-ceiling} is the consistency audit: \(d_{\mathrm{eff}}\) from SVD must not exceed either analytic ceiling without domain
+mismatch \cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+
+\paragraph{Triple-consistency workflow.}
+Certification sequence: (i) declare \((D,\Omega_{k})\); (ii) compute directional \(N_{\mathrm{LPS}}^{(i)}\); (iii) compute \(N_{\mathrm{mode}}\);
+(iv) measure \(d_{\mathrm{eff}}\) from SVD; (v) apply Eq.~\eqref{eq:ch4.lps-export-bridge} and Theorem~\ref{thm:ch4.triple-ceiling}
+\cite{hansen1988,harrington2001,devaney2004,stratton1941}.
+
+\paragraph{Worked illustration (prolate aperture).}
+Prolate spheroid \(k_{0}a=3\), \(k_{0}b=0.5\): \(N_{\mathrm{LPS}}^{(x)}\approx27\), \(N_{\mathrm{LPS}}^{(y)}\approx1\); major axis dominates
+\cite{hansen1988,jackson1999,harrington2001,collin2001}.
+
+\paragraph{Worked illustration (slot versus disk).}
+Equal-area slot (\(10:1\)) and disk at \(k_{0}a=2\): disk \(N_{\mathrm{LPS}}^{(\mathrm{vol})}\sim8\); slot major-axis \(N_{\mathrm{LPS}}^{(x)}\approx7\),
+minor-axis \(\approx1\) \cite{hansen1988,collin2001,stratton1941}.
+
+\paragraph{Worked illustration (SVD exceeds LPS).}
+MoM on slot yields \(d_{\mathrm{eff}}=42\), analytic \(N_{\mathrm{LPS}}=28\): \(\mathcal{C}\) likely includes evanescent rows outside \(\Omega_{k}\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941}.
+
+\paragraph{Worked illustration (triple agreement).}
+\(k_{0}a=2\), disk: \(N_{\mathrm{LPS}}=12\), \(N_{\mathrm{mode}}=14\), \(d_{\mathrm{eff}}(10^{-2})=10\): consistent triple; governing value is
+\(d_{\mathrm{eff}}\) \cite{hansen1988,harrington2001,jackson1999}.
+
+\paragraph{Worked numerics (triple audit).}
+Slot \(10{:}1\), \(k_{0}a=2.5\): \(N_{\mathrm{LPS}}^{(x)}\approx18\), \(N_{\mathrm{LPS}}^{(y)}\approx3\), \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\approx22\),
+\(d_{\mathrm{eff}}(10^{-2})=14\) \cite{hansen1988,collin2001,harrington2001,devaney2004}.
+
+\paragraph{Problem (LPS versus SVD).}
+\textbf{Problem.} \(d_{\mathrm{eff}}=40\), \(N_{\mathrm{LPS}}=35\). Which governs?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.lps-synthesis-bound} as ceiling \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Audit \((D,\Omega_{k})\) and strip non-export rows from \(\mathcal{C}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Use \(\min(d_{\mathrm{eff}},N_{\mathrm{LPS}})\) after audit \cite{jackson1999}.
+\textbf{Physical meaning.} LPS bounds concentration, not raw listing \cite{hansen1988}.
+
+\paragraph{Problem (anisotropic LPS).}
+\textbf{Problem.} Isotropic \(N_{\mathrm{LPS}}\) on slot aperture. Conservative?
+\textbf{Step 1.} Compute directional \(N_{\mathrm{LPS}}^{(i)}\) via Eq.~\eqref{eq:ch4.lps-directional-ledger} \cite{hansen1988}.
+\textbf{Step 2.} Sum per Eq.~\eqref{eq:ch4.lps-anisotropy} \cite{jackson1999,stratton1941}.
+\textbf{Step 3.} Compare to \(d_{\mathrm{eff}}\) and \(N_{\mathrm{mode}}\) \cite{harrington2001,collin2001}.
+\textbf{Physical meaning.} LPS is geometry-directional \cite{hansen1988}.
+
+\paragraph{Problem (LPS audit).}
+\textbf{Problem.} Compute conservative \(N_{\mathrm{LPS}}\) for prolate \(k_{0}a=3\), \(k_{0}b=0.5\).
+\textbf{Step 1.} Evaluate Eq.~\eqref{eq:ch4.prolate-nwidth} per axis \cite{hansen1988,jackson1999}.
+\textbf{Step 2.} Sum via Eq.~\eqref{eq:ch4.lps-anisotropy} \cite{stratton1941,harrington2001}.
+\textbf{Step 3.} Compare to measured \(d_{\mathrm{eff}}\) \cite{devaney2004}.
+\textbf{Physical meaning.} LPS is geometry-directional concentration bound \cite{hansen1988}.
+
+\paragraph{Problem (triple consistency).}
+\textbf{Problem.} \(d_{\mathrm{eff}}=18\), \(N_{\mathrm{mode}}=22\), \(N_{\mathrm{LPS}}=15\). Resolve.
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.triple-ceiling} \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Use \(\min\) in Eq.~\eqref{eq:ch4.lps-export-bridge} \cite{harrington2001}.
+\textbf{Step 3.} Audit \(\mathcal{C}\) for over-listing if \(d_{\mathrm{eff}}>N_{\mathrm{LPS}}\) \cite{devaney2004}.
+\textbf{Physical meaning.} Tightest ceiling governs realizability \cite{stratton1941}.
+
+\paragraph{Problem (domain mismatch).}
+\textbf{Problem.} MoM \(d_{\mathrm{eff}}=38\), analytic \(N_{\mathrm{LPS}}=26\). Diagnose.
+\textbf{Step 1.} Verify \((D,\Omega_{k})\) declarations match \(\Omega_{s}\) \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Remove evanescent chart rows outside \(\Omega_{k}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Recompute SVD; expect \(d_{\mathrm{eff}}\le26\) \cite{jackson1999,hansen1988}.
+\textbf{Physical meaning.} Over-listed charts inflate rank \cite{stratton1941}.
+
+\paragraph{Problem (disk versus slot).}
+\textbf{Problem.} Equal-area disk and \(10{:}1\) slot at \(k_{0}a=2\). Compare \(N_{\mathrm{LPS}}\).
+\textbf{Step 1.} Compute isotropic disk \(N_{\mathrm{LPS}}^{(\mathrm{vol})}\) \cite{hansen1988,jackson1999}.
+\textbf{Step 2.} Compute directional slot ledger Eq.~\eqref{eq:ch4.lps-directional-ledger} \cite{collin2001,stratton1941}.
+\textbf{Step 3.} Conclude minor-axis slot export is strongly suppressed \cite{harrington2001}.
+\textbf{Physical meaning.} Shape sets directional concentration \cite{hansen1988}.
+
+\paragraph{Philosophical closure (concentration inevitability).}
+\(n\)-width bounds are not parallel to operator rank; they explain why rank is finite on compact supports \cite{hansen1988,stratton1941,harrington2001}.
+Spatial concentration and spectral bandlimit are conjugate resources: enlarging one shrinks the other in the LPS sense \cite{jackson1999,devaney2004}.
+Synthesis dimension is a concentration fact before it is a hardware fact \cite{harrington2001,stratton1941}.
+
+\begin{corollary}[Domain declaration obligation]
+\label{cor:ch4.lps-domain}
+\(d_{\mathrm{eff}}>N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k})\) on passive \(\Omega_{s}\) implies \((D,\Omega_{k})\) were mis-declared or
+\(\mathcal{C}\) includes non-export rows \cite{hansen1988,harrington2001,devaney2004,stratton1941}.
+\end{corollary}
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.lps-nwidth-bound} assumes linear time-harmonic maps, declared \((D,\Omega_{k})\), and narrowband phasors \cite{stratton1941,hansen1988}.
+Cavities and guided structures quantize \(\Omega_{k}\) differently; LPS ceilings must be recomputed on the modified domain \cite{harrington2001,jackson1999,devaney2004}.

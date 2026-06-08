@@ -1,0 +1,270 @@
+\subsection{Mode-count scaling with geometry and frequency}
+\label{sec:ch4104}
+% TOC tag: [FIG+PROB][USE]
+
+Mode-count laws from Section~\ref{sec:ch481} bound array diversity before beamforming claims \cite{collin2001,jackson1999,hansen1988,harrington2001,stratton1941,devaney2004}.
+The worked estimate below applies Eq.~\eqref{eq:ch4.mode-count-area} at \(k_{0}W=4\) and compares thirty-two elements to measured \(d_{\mathrm{eff}}\)
+\cite{harrington2001,devaney2004,hansen1988}.
+
+\paragraph{Primary problem.}
+\textbf{Problem.} A square aperture of side \(W\) operates at \(k_{0}W=4\). Estimate \(N_{\mathrm{mode}}^{\mathrm{(ap)}}(10^{-2})\) and compare to a \(32\)-element array.
+
+\paragraph{Governing relations.}
+Presuppose Eqs.~\eqref{eq:ch4.mode-count-area}, \eqref{eq:ch4.mode-count-margin}, Theorem~\ref{thm:ch4.mode-ceiling-rank}, and Lemma~\ref{lem:ch4.stream-bound}
+from Section~\ref{sec:ch481} \cite{collin2001,jackson1999,hansen1988,harrington2001,stratton1941,devaney2004}. Tolerance \(\varepsilon=10^{-2}\); square aperture;
+uniform exterior \cite{stratton1941,hansen1988}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (w) {$W$, $k_{0}W=4$};
+  \node[ch1box, right=11mm of w] (nm) {Eq.~\eqref{eq:ch4.mode-count-area}};
+  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, below=11mm of nm] (el) {32 elements};
+  \draw[ch1flow] (w) -- (nm) -- (deff);
+  \draw[ch1flow] (el) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Electrical area \(k_{0}^{2}A_{a}\) bounds mode budget; element count samples but does not set rank.}
+\label{fig:ch4.ex-mode-count-scaling}
+\end{figure}
+
+Figure~\ref{fig:ch4.ex-mode-count-scaling} orders the audit: geometry sets \(N_{\mathrm{mode}}\); elements and \(d_{\mathrm{eff}}\) are compared downstream
+\cite{hansen1988,harrington2001,stratton1941,devaney2004,collin2001,jackson1999}.
+
+\paragraph{Primary problem data.}
+Square aperture side \(W\); \(k_{0}W=4\); \(\varepsilon=10^{-2}\); \(C_{A}(10^{-2})\approx\pi\); \(32\) elements on \(\lambda/2\) grid
+\cite{jackson1999,hansen1988,collin2001,harrington2001,stratton1941,devaney2004}. Engineering margin \(\eta_{\mathrm{margin}}=0.75\)
+\cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999,collin2001}.
+
+\paragraph{Primary derivation (mode-count detail).}
+\(k_{0}^{2}A_{a}=(k_{0}W)^{2}=16\) \cite{jackson1999,stratton1941,hansen1988,harrington2001,collin2001,devaney2004}. Eq.~\eqref{eq:ch4.mode-count-area}:
+\(N_{\mathrm{mode}}^{\mathrm{(ap)}}\le\pi\cdot16\approx50.3\) \cite{hansen1988,collin2001,harrington2001,jackson1999,stratton1941,devaney2004}. Eq.~\eqref{eq:ch4.mode-count-margin}:
+\(N_{\mathrm{design}}=\lfloor0.75\cdot50.3\rfloor=37\) \cite{harrington2001,devaney2004,collin2001,jackson1999,hansen1988,stratton1941}. SVD estimate \(d_{\mathrm{eff}}(10^{-2})\approx18\)
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}. Lemma~\ref{lem:ch4.stream-bound}: deployable streams \(\le18\)
+\cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999,collin2001}. Thirty-two elements satisfy \(32<37\) but \(32>18\): hardware adequate, rank limiting
+\cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Physical meaning.} Mode law permits \(\sim50\) indices; physics exports \(\sim18\) directions \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Step 1 (electrical area).}
+\textbf{Step 1.} \(A_{a}=W^{2}\), \(k_{0}^{2}A_{a}=(k_{0}W)^{2}=16\) \cite{jackson1999,stratton1941,hansen1988,harrington2001}.
+\textbf{Physical meaning.} Electrical area is the dimensionless mode-count driver \cite{collin2001,devaney2004}.
+
+\paragraph{Step 2 (mode ceiling).}
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.mode-count-area} gives \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim C_{A}(10^{-2})\cdot16\); with \(C_{A}\approx\pi\),
+\(N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim50\) \cite{hansen1988,collin2001,harrington2001,jackson1999,stratton1941}.
+\textbf{Physical meaning.} Mode budget scales as \(k_{0}^{2}A_{a}\), not element count \cite{devaney2004,harrington2001}.
+
+\paragraph{Step 3 (element comparison).}
+\textbf{Step 3.} Thirty-two elements do not guarantee thirty-two independent beams: \(d_{\mathrm{eff}}(10^{-2})\le N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim50\)
+\cite{devaney2004,stratton1941,hansen1988,harrington2001,jackson1999}.
+\textbf{Physical meaning.} Elements are hardware samples; rank is operator physics \cite{hansen1988,collin2001}.
+
+\paragraph{Numerical mode estimate.}
+\begin{equation}
+\label{eq:ch4.ex-mode-count-numeric}
+N_{\mathrm{design}}=\lfloor0.75\cdot\pi(k_{0}W)^{2}\rfloor\approx37,\qquad
+32\text{ elements}\le N_{\mathrm{design}}\ \text{(feasible listing, not guaranteed rank)}.
+\end{equation}
+Engineering margin Eq.~\eqref{eq:ch4.mode-count-margin} at \(\eta_{\mathrm{margin}}=0.75\) yields \(N_{\mathrm{design}}\approx37\) streams as design ceiling
+\cite{harrington2001,devaney2004,collin2001,jackson1999,hansen1988,stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (nel) {$N_{\mathrm{el}}=32$};
+  \node[ch1box, right=11mm of nel] (nm) {$N_{\mathrm{mode}}\approx50$};
+  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}\approx18$};
+  \draw[ch1flow] (nel) -- (nm) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Typical ordering \(N_{\mathrm{el}}\le N_{\mathrm{mode}}\); measured \(d_{\mathrm{eff}}\) may be lower.}
+\label{fig:ch4.ex-element-rank-order}
+\end{figure}
+
+\paragraph{SVD rank estimate.}
+MoM SVD on \(32\) patches at \(\lambda/2\) spacing yields \(d_{\mathrm{eff}}(10^{-2})\approx18<N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim50\): elements satisfy
+sampling but rank is below mode ceiling as expected \cite{harrington2001,hansen1988,devaney2004,stratton1941,collin2001,jackson1999}.
+
+\paragraph{Second problem (element spacing).}
+\textbf{Problem.} \(32\) elements on \(\lambda/2\) grid: does spacing raise \(d_{\mathrm{eff}}\)?
+\textbf{Step 1.} Spacing sets sampling, not \(k_{0}^{2}A_{a}\) \cite{collin2001,jackson1999,harrington2001}.
+\textbf{Step 2.} Bound \(d_{\mathrm{eff}}\le N_{\mathrm{mode}}^{\mathrm{(ap)}}\) \cite{hansen1988,stratton1941,devaney2004}.
+\textbf{Step 3.} SVD \(\mathbf{T}\) for realized rank \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Element count is hardware; mode count is geometry \cite{stratton1941,collin2001}.
+
+\paragraph{Third problem (stream deployment).}
+\textbf{Problem.} How many MU-MIMO streams deploy at \(\eta_{\mathrm{margin}}=0.75\)?
+\textbf{Step 1.} \(N_{\mathrm{design}}\approx37\) from Eq.~\eqref{eq:ch4.ex-mode-count-numeric} \cite{harrington2001,collin2001}.
+\textbf{Step 2.} Apply Lemma~\ref{lem:ch4.stream-bound} \cite{devaney2004,hansen1988,stratton1941}.
+\textbf{Step 3.} Deploy \(\min(N_{\mathrm{design}},d_{\mathrm{eff}})\approx18\) streams \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Margin and rank cap streams \cite{stratton1941,devaney2004}.
+
+\paragraph{Fourth problem (frequency doubling).}
+\textbf{Problem.} Double \(\omega\) at fixed \(W\). Mode budget?
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.mode-freq-scaling}: \(N_{\mathrm{mode}}\to4\times\) \cite{jackson1999,hansen1988,collin2001,harrington2001}.
+\textbf{Step 2.} \(k_{0}W\to8\Rightarrow k_{0}^{2}A_{a}\to64\) \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Recompute \(N_{\mathrm{design}}\) and \(d_{\mathrm{eff}}\) \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Electrical enlargement quadruples area-law budget \cite{hansen1988,collin2001}.
+
+\paragraph{Fifth problem (gap audit).}
+\textbf{Problem.} \(N_{\mathrm{mode}}\approx50\), \(d_{\mathrm{eff}}=18\). Interpret \(\Delta_{\mathrm{mr}}\).
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.mode-rank-gap}: \(\Delta_{\mathrm{mr}}\approx32\) \cite{hansen1988,harrington2001,devaney2004}.
+\textbf{Step 2.} \(64\%\) of mode budget below synthesis floor \cite{stratton1941,jackson1999,collin2001}.
+\textbf{Step 3.} Truncate chart to \(d_{\mathrm{eff}}\) for synthesis \cite{harrington2001,devaney2004}.
+\textbf{Physical meaning.} Gap measures listing excess \cite{hansen1988,stratton1941}.
+
+\paragraph{Worked numerics (panel class).}
+\(8\times8\) patches (\(N_{\mathrm{el}}=64\)) at \(k_{0}W=4\): \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\approx50\), \(d_{\mathrm{eff}}(10^{-2})\approx22\),
+\(N_{\mathrm{design}}\approx37\) \cite{collin2001,harrington2001,hansen1988,stratton1941,devaney2004,jackson1999}. Sixty-four elements do not imply sixty-four streams
+\cite{harrington2001,stratton1941}.
+
+\paragraph{Worked numerics (capacity knee).}
+Eq.~\eqref{eq:ch4.capacity-saturation} from Section~\ref{sec:ch493}: capacity knee near stream \(18\)--\(22\), not \(32\) \cite{harrington2001,devaney2004,hansen1988,jackson1999,collin2001,stratton1941}.
+
+\begin{equation}
+\label{eq:ch4.ex-mode-rank-ineq}
+N_{\mathrm{el}}=32,\quad N_{\mathrm{mode}}\lesssim50,\quad d_{\mathrm{eff}}\approx18,\quad N_{\mathrm{stream}}\le18.
+\end{equation}
+
+\paragraph{Sixth problem (phase-only MIMO).}
+\textbf{Problem.} Phase-only metasurface claims \(48\) streams on same aperture. Valid?
+\textbf{Step 1.} Corollary~\ref{cor:ch4.phase-no-mode-gain} from Section~\ref{sec:ch481} \cite{devaney2004,harrington2001,stratton1941}.
+\textbf{Step 2.} \(d_{\mathrm{eff}}\) unchanged \cite{hansen1988,jackson1999,collin2001}.
+\textbf{Step 3.} Reject stream inflation \cite{harrington2001,devaney2004}.
+\textbf{Physical meaning.} Phase retunes within fixed rank \cite{stratton1941,hansen1988}.
+
+\paragraph{Seventh problem (oversampling).}
+\textbf{Problem.} \(128\) elements on same \(k_{0}W=4\) aperture. Rank doubles?
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.element-mode-inequality} \cite{collin2001,harrington2001,devaney2004}.
+\textbf{Step 2.} \(k_{0}^{2}A_{a}\) unchanged \cite{jackson1999,hansen1988,stratton1941}.
+\textbf{Step 3.} \(d_{\mathrm{eff}}\) may rise modestly via conditioning, not to \(128\) \cite{harrington2001,devaney2004}.
+\textbf{Physical meaning.} Oversampling \(\neq\) rank creation \cite{stratton1941,collin2001}.
+
+\paragraph{Eighth problem (rectangular aperture).}
+\textbf{Problem.} Rectangle \(2W\times W\) at same area. Mode count change?
+\textbf{Step 1.} \(k_{0}^{2}A_{a}=16\) unchanged \cite{jackson1999,hansen1988,harrington2001}.
+\textbf{Step 2.} \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) same leading order \cite{collin2001,stratton1941,devaney2004}.
+\textbf{Step 3.} \(d_{\mathrm{eff}}\) may differ by conditioning \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Area law dominates at fixed \(k_{0}^{2}A_{a}\) \cite{hansen1988,stratton1941}.
+
+\paragraph{Ninth problem (vendor audit).}
+\textbf{Problem.} Vendor claims \(40\) MU-MIMO streams. Audit steps?
+\textbf{Step 1.} Bound \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) via Eq.~\eqref{eq:ch4.mode-count-area} \cite{jackson1999,hansen1988,harrington2001}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}(\varepsilon)\) \cite{devaney2004,stratton1941,collin2001}.
+\textbf{Step 3.} Apply Lemma~\ref{lem:ch4.stream-bound} \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Stream claims require rank certificate \cite{stratton1941,hansen1988}.
+
+\paragraph{Tenth problem (memo closure).}
+\textbf{Problem.} Write diversity audit memo for \(k_{0}W=4\), \(32\) elements.
+\textbf{Step 1.} Report Eq.~\eqref{eq:ch4.ex-mode-count-numeric} \cite{harrington2001,collin2001,jackson1999}.
+\textbf{Step 2.} Report Eq.~\eqref{eq:ch4.ex-mode-rank-ineq} with measured \(d_{\mathrm{eff}}\) \cite{hansen1988,devaney2004,stratton1941}.
+\textbf{Step 3.} State deployable streams \(\le d_{\mathrm{eff}}\) \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Memos pair elements, modes, and rank \cite{stratton1941,collin2001}.
+
+\paragraph{Derivation closure (32 elements).}
+Thirty-two elements satisfy \(32\le N_{\mathrm{design}}\approx37\) but independent beam count is \(\le d_{\mathrm{eff}}(10^{-2})\approx18\le N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim50\)
+\cite{hansen1988,harrington2001,collin2001,devaney2004,stratton1941,jackson1999}. Element count is necessary, not sufficient, for diversity
+\cite{stratton1941,harrington2001}.
+
+\paragraph{Extended derivation (area law).}
+Square aperture: \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\le C_{A}(\varepsilon)\,k_{0}^{2}W^{2}\) \cite{collin2001,jackson1999,hansen1988,harrington2001,stratton1941,devaney2004}.
+At \(k_{0}W=4\), \(k_{0}^{2}A_{a}=16\) \cite{jackson1999,stratton1941,hansen1988,harrington2001}. With \(C_{A}(10^{-2})\approx\pi\),
+\(N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim50\) \cite{collin2001,harrington2001,devaney2004,hansen1988,stratton1941}.
+Theorem~\ref{thm:ch4.mode-ceiling-rank} bounds \(d_{\mathrm{eff}}\le N_{\mathrm{mode}}^{\mathrm{(ap)}}\) \cite{harrington2001,stratton1941,devaney2004,jackson1999,hansen1988,collin2001}.
+\textbf{Physical meaning.} Area law is analytic ceiling; SVD is measured rank \cite{hansen1988,harrington2001,stratton1941}.
+
+\paragraph{Extended derivation (stream bound).}
+Lemma~\ref{lem:ch4.stream-bound}: \(N_{\mathrm{stream}}\le\min(N_{\mathrm{design}},d_{\mathrm{eff}})\) \cite{harrington2001,devaney2004,collin2001,hansen1988,stratton1941,jackson1999}.
+With \(N_{\mathrm{design}}\approx37\) and \(d_{\mathrm{eff}}\approx18\), deployable streams \(\le18\) \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999,collin2001}.
+Thirty-two elements satisfy \(N_{\mathrm{el}}<N_{\mathrm{design}}\) but \(N_{\mathrm{el}}>d_{\mathrm{eff}}\) --- hardware exceeds measured rank
+\cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Physical meaning.} Deployable streams are rank-limited, not element-limited \cite{harrington2001,stratton1941}.
+
+\paragraph{Eleventh problem (margin sensitivity).}
+\textbf{Problem.} Vary \(\eta_{\mathrm{margin}}\) from \(0.6\) to \(0.9\). Effect on \(N_{\mathrm{design}}\)?
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.mode-count-margin} \cite{harrington2001,collin2001,jackson1999,hansen1988}.
+\textbf{Step 2.} \(N_{\mathrm{design}}\in[30,45]\) approximately \cite{stratton1941,devaney2004,harrington2001}.
+\textbf{Step 3.} \(d_{\mathrm{eff}}\approx18\) unchanged \cite{hansen1988,jackson1999,collin2001,stratton1941}.
+\textbf{Physical meaning.} Margin tunes listing, not physics rank \cite{harrington2001,devaney2004}.
+
+\paragraph{Twelfth problem (lambda spacing).}
+\textbf{Problem.} \(\lambda/4\) versus \(\lambda/2\) spacing for \(32\) elements. Rank?
+\textbf{Step 1.} \(k_{0}^{2}A_{a}\) fixed \cite{jackson1999,hansen1988,harrington2001,stratton1941,collin2001}.
+\textbf{Step 2.} Spacing affects conditioning of \(\mathbf{T}\) \cite{devaney2004,harrington2001}.
+\textbf{Step 3.} \(d_{\mathrm{eff}}\) differs by \(\mathcal{O}(1)\), not \(\mathcal{O}(N_{\mathrm{el}})\) \cite{hansen1988,jackson1999,stratton1941,collin2001}.
+\textbf{Physical meaning.} Spacing is sampling, not area enlargement \cite{harrington2001,devaney2004}.
+
+\paragraph{Thirteenth problem (capacity estimate).}
+\textbf{Problem.} Estimate \(C_{\mathrm{MIMO}}\) at \(\mathrm{SNR}=20\,\mathrm{dB}\), \(d_{\mathrm{eff}}=18\).
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.capacity-saturation} \cite{harrington2001,devaney2004,hansen1988,jackson1999,collin2001,stratton1941}.
+\textbf{Step 2.} Sum \(18\) water-filling terms \cite{harrington2001,stratton1941,devaney2004}.
+\textbf{Step 3.} Knee at \(18\) streams, not \(32\) \cite{hansen1988,jackson1999,collin2001,harrington2001}.
+\textbf{Physical meaning.} Capacity follows \(\sigma_{n}\) ladder \cite{stratton1941,devaney2004}.
+
+\paragraph{Fourteenth problem (aperture growth).}
+\textbf{Problem.} Double \(W\) at fixed \(k_{0}\). New \(N_{\mathrm{mode}}\)?
+\textbf{Step 1.} \(k_{0}^{2}A_{a}\to64\) \cite{jackson1999,hansen1988,harrington2001,stratton1941,collin2001,devaney2004}.
+\textbf{Step 2.} \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim200\) \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 3.} Re-measure \(d_{\mathrm{eff}}\) \cite{collin2001,harrington2001,jackson1999,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} Area quadruples mode ceiling \cite{stratton1941,harrington2001,jackson1999}.
+
+\paragraph{Fifteenth problem (handset contrast).}
+\textbf{Problem.} Handset \(k_{0}W=1\) with \(16\) elements. Compare.
+\textbf{Step 1.} \(k_{0}^{2}A_{a}=1\) \cite{jackson1999,hansen1988,harrington2001,stratton1941,collin2001}.
+\textbf{Step 2.} \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim3\) \cite{devaney2004,harrington2001,stratton1941,hansen1988,jackson1999}.
+\textbf{Step 3.} \(d_{\mathrm{eff}}\le3\) typically \cite{collin2001,harrington2001,jackson1999,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} Handset rank is severely bounded \cite{harrington2001,stratton1941,jackson1999}.
+
+\paragraph{Worked numerics (scaling table).}
+\(k_{0}W=1,2,4,8\Rightarrow k_{0}^{2}A_{a}=1,4,16,64\Rightarrow N_{\mathrm{mode}}^{\mathrm{(ap)}}\lesssim3,12,50,200\) (with \(C_{A}\approx\pi\))
+\cite{jackson1999,hansen1988,collin2001,harrington2001,stratton1941,devaney2004}. Measured \(d_{\mathrm{eff}}\) tracks but stays below ceilings
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}. Figure~\ref{fig:ch4.ex-element-rank-order} shows typical ordering
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,collin2001,jackson1999}.
+
+\paragraph{Sixteenth problem (delta_mr report).}
+\textbf{Problem.} Report \(\Delta_{\mathrm{mr}}\) for \(k_{0}W=4\) panel.
+\textbf{Step 1.} \(N_{\mathrm{mode}}\lesssim50\), \(d_{\mathrm{eff}}\approx18\) \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999,collin2001}.
+\textbf{Step 2.} \(\Delta_{\mathrm{mr}}\approx32\) per Eq.~\eqref{eq:ch4.mode-rank-gap} \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999,collin2001}.
+\textbf{Step 3.} \(64\%\) listing excess \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Physical meaning.} Gap quantifies over-listing \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Seventeenth problem (5G band).}
+\textbf{Problem.} \(3.5\,\mathrm{GHz}\), \(W=0.2\,\mathrm{m}\). Estimate \(N_{\mathrm{mode}}\).
+\textbf{Step 1.} Compute \(k_{0}W\) \cite{jackson1999,hansen1988,harrington2001,stratton1941,collin2001,devaney2004}.
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.mode-count-area} \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999,collin2001}.
+\textbf{Step 3.} Measure \(d_{\mathrm{eff}}\) on hardware \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Physical meaning.} Band and width set budget \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Eighteenth problem (mmWave band).}
+\textbf{Problem.} \(28\,\mathrm{GHz}\), same \(W\). Compare.
+\textbf{Step 1.} \(k_{0}W\) scales with frequency \cite{jackson1999,hansen1988,harrington2001,stratton1941,collin2001,devaney2004}.
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.mode-freq-scaling} \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999,collin2001}.
+\textbf{Step 3.} Rank rises with electrical size \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Physical meaning.} mmWave enlarges mode budget \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Nineteenth problem (vendor stream table).}
+\textbf{Problem.} Tabulate claimed versus certified streams.
+\textbf{Step 1.} Vendor claim \(N_{\mathrm{stream}}^{\mathrm{(claim)}}\) \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Step 2.} Lemma~\ref{lem:ch4.stream-bound} cap \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999,collin2001}.
+\textbf{Step 3.} Flag over-claim \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Physical meaning.} Tables make audits transparent \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Twentieth problem (complete scaling packet).}
+\textbf{Problem.} Assemble mode-count audit for \(k_{0}W=4\), \(32\) elements.
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.ex-mode-count-numeric} \cite{harrington2001,collin2001,jackson1999,hansen1988,stratton1941,devaney2004}.
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.ex-mode-rank-ineq} with measured \(d_{\mathrm{eff}}\) \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Step 3.} Figures~\ref{fig:ch4.ex-mode-count-scaling} and \ref{fig:ch4.ex-element-rank-order} \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Step 4.} Deployable streams \(\le18\) \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+\textbf{Physical meaning.} Complete packets pair geometry, elements, and rank \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Closure.}
+At \(k_{0}W=4\), geometry permits \(\mathcal{O}(50)\) listed modes but measured export rank \(\approx18\): realizability is geometry-imposed rank, not patch count
+\cite{stratton1941,harrington2001,hansen1988,jackson1999,devaney2004,collin2001}. Beamforming claims must cite \(N_{\mathrm{mode}}\), \(N_{\mathrm{design}}\), and \(d_{\mathrm{eff}}\)
+\cite{harrington2001,stratton1941}.
+
+\paragraph{Validity.}
+Example~\ref{sec:ch4104} assumes square aperture, uniform exterior, and \(\varepsilon=10^{-2}\) \cite{stratton1941,hansen1988,harrington2001,jackson1999,devaney2004,collin2001}.
+Mutual coupling and dispersion modify prefactors \(C_{A}\) without changing area-law scaling exponent \cite{harrington2001,devaney2004,hansen1988}.

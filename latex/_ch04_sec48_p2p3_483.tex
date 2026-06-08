@@ -1,0 +1,59 @@
+
+\paragraph{Tail-energy budget.}
+Define discarded export fraction
+\begin{equation}
+\label{eq:ch4.tail-discard}
+\mathcal{T}_{\mathrm{tail}}(\varepsilon)=1-\Lambda_{\mathrm{conc}}(\varepsilon)=\frac{\sum_{n>d_{\mathrm{eff}}}\sigma_{n}^{2}}{\sum_{n\ge1}\sigma_{n}^{2}},
+\end{equation}
+the radiative information sacrificed by rank-\(d_{\mathrm{eff}}\) truncation \cite{harrington2001,hansen1988,stratton1941}. Slow singular-value
+tails (\(\sigma_{n}\sim n^{-\alpha}\), \(\alpha\le2\)) keep \(\mathcal{T}_{\mathrm{tail}}\) large even when \(d_{\mathrm{eff}}\) is modest
+\cite{devaney2004}.
+
+\begin{theorem}[Eckart--Young concentration optimality]
+\label{thm:ch4.eckart-young-conc}
+Among all rank-\(N\) approximations of \(\boldsymbol{\Gamma}_\omega\), truncation at \(N=d_{\mathrm{eff}}(\varepsilon)\) minimizes
+\(\mathcal{T}_{\mathrm{tail}}(\varepsilon)\) and maximizes \(\Lambda_{\mathrm{conc}}(\varepsilon)\) \cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+\end{theorem}
+\begin{proof}
+Eckart--Young theorem on \(\{\sigma_{n}\}\) of compact \(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001}; Definition~\ref{def:ch4.effective-em-dimension}
+\cite{stratton1941}.
+\end{proof}
+
+\paragraph{Compression--synthesis alignment.}
+Spectral compression Eq.~\eqref{eq:ch4.spectral-compression-def} and concentration Eq.~\eqref{eq:ch4.spectral-concentration-ratio} share the
+same singular-value ledger: \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) caps angular listing while \(\Lambda_{\mathrm{conc}}(\varepsilon)\) caps
+energy participation \cite{hansen1988,stratton1941,harrington2001}. A pattern can satisfy \(\ell_{\mathrm{supp}}\) yet fail
+\(\Lambda_{\mathrm{conc}}\ge1-\varepsilon^{2}\) when tail modes carry non-negligible power \cite{devaney2004}.
+
+\paragraph{Worked illustration (flat tail).}
+\(\sigma_{n}/\sigma_{1}=\{1,0.35,0.2,0.15,0.12,0.1,\ldots\}\): \(d_{\mathrm{eff}}(10^{-2})=3\) but \(\Lambda_{\mathrm{conc}}(10^{-2})\approx0.82\),
+\(\mathcal{T}_{\mathrm{tail}}\approx0.18\) \cite{hansen1988,harrington2001}.
+
+\paragraph{Worked illustration (steep knee).}
+\(\sigma_{n}/\sigma_{1}=\{1,0.5,0.08,0.01,\ldots\}\): \(d_{\mathrm{eff}}(10^{-2})=2\), \(\mathrm{EPR}\approx0.99\) \cite{harrington2001,devaney2004}.
+
+\paragraph{Problem (tolerance trade).}
+\textbf{Problem.} Require \(\Lambda_{\mathrm{conc}}\ge0.995\). Find \(d_{\mathrm{eff}}\).
+\textbf{Step 1.} Accumulate \(\sum_{n\le N}\sigma_{n}^{2}/\sum_{n}\sigma_{n}^{2}\) \cite{harrington2001}.
+\textbf{Step 2.} Read smallest \(N\) meeting target \cite{hansen1988}.
+\textbf{Step 3.} Compare \(N\) to \(\ell_{\mathrm{supp}}\) from Eq.~\eqref{eq:ch4.spectral-compression-def} \cite{stratton1941}.
+\textbf{Physical meaning.} Tighter concentration demands higher rank \cite{devaney2004}.
+
+\paragraph{Problem (EPR certificate).}
+\textbf{Problem.} Attach \(\mathrm{EPR}\) to synthesis memo at \(\varepsilon=10^{-2}\).
+\textbf{Step 1.} Identify knee via Eq.~\eqref{eq:ch4.sv-knee} \cite{hansen1988}.
+\textbf{Step 2.} Compute \(\mathrm{EPR}=\Lambda_{\mathrm{conc}}\) \cite{harrington2001}.
+\textbf{Step 3.} Report \(\mathcal{T}_{\mathrm{tail}}\) from Eq.~\eqref{eq:ch4.tail-discard} \cite{stratton1941,devaney2004}.
+\textbf{Physical meaning.} EPR quantifies watts retained in truncated synthesis \cite{hansen1988}.
+
+\paragraph{Philosophical closure (truncation as optimum).}
+Finite support forces a singular-value ledger whether or not the designer computes it \cite{stratton1941,hansen1988,harrington2001}. Truncation is
+not a modeling convenience imposed after the fact; it is the unique rank-\(d_{\mathrm{eff}}\) approximation that minimizes discarded export energy
+\cite{devaney2004}. Claims of ``full spherical-harmonic synthesis'' without \(\Lambda_{\mathrm{conc}}\) audit confuse listing cardinality with
+energy concentration \cite{harrington2001}.
+
+\begin{corollary}[Tail-dominated low rank]
+\label{cor:ch4.tail-dominated}
+If \(\sigma_{d_{\mathrm{eff}}+1}/\sigma_{d_{\mathrm{eff}}}>1-\varepsilon\), then \(\mathcal{T}_{\mathrm{tail}}(\varepsilon)>\varepsilon^{2}\) despite minimal rank increment
+\cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+\end{corollary}

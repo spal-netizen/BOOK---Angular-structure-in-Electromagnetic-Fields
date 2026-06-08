@@ -1,0 +1,245 @@
+\subsection{Synthesis, reconstruction, and inversion limits}
+\label{sec:ch473}
+% TOC tag: [HOME]
+
+Inverse design and array synthesis minimize residuals on \(\mathbf{c}\) or on near-field probes; realizability requires
+\(\mathbf{c}\in\operatorname{ran}\boldsymbol{\Gamma}_\omega\) on admissible \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941,harrington2001,devaney2004}.
+Subsection~\ref{sec:ch473} states inversion limits as operator-range theorems for compact \(\boldsymbol{\Gamma}_\omega\) \cite{hansen1988}. The
+central distinction is variational fit versus range membership: optimizers find closest coefficients in \(\mathbb{C}^{I}\); synthesis demands zero
+perpendicular residual \(\mathbf{r}_{\perp}\) in Eq.~\eqref{eq:ch4.inversion-residual-decomposition} \cite{stratton1941,harrington2001}. A MoM
+residual below \(10^{-4}\) is therefore necessary but not sufficient for \(\delta_{\mathrm{syn}}=0\) \cite{devaney2004,hansen1988}.
+
+\paragraph{Assumptions.}
+Presuppose Theorem~\ref{thm:ch4.moore-penrose-synthesis} and Principle~\ref{prin:ch4.operator-chain} \cite{harrington2001,devaney2004,stratton1941}.
+Discrete MoM matrix \(\mathbf{T}\) is a Galerkin restriction of \(\boldsymbol{\Gamma}_\omega\) on \(\mathcal{J}_{\mathrm{real}}\) \cite{harrington2001}.
+Tolerance \(\varepsilon\in(0,1)\) fixed; flux-normalized \(\mathcal{C}\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{hansen1988,stratton1941}. Unreachable
+nullity from Subsection~\ref{sec:ch471} is imported by reference only \cite{devaney2004}.
+
+\paragraph{Range--null decomposition.}
+Every target \(\mathbf{c}_{\mathrm{target}}\in\mathbb{C}^{I}\) admits the orthogonal split
+\begin{equation}
+\label{eq:ch4.inversion-residual-decomposition}
+\mathbf{c}_{\mathrm{target}}=\mathcal{P}_{\mathrm{ran}}\mathbf{c}_{\mathrm{target}}+\mathbf{r}_{\perp},\qquad
+\mathbf{r}_{\perp}\in\ker\boldsymbol{\Gamma}_\omega^{\dagger},
+\end{equation}
+where \(\mathcal{P}_{\mathrm{ran}}=\boldsymbol{\Gamma}_\omega\boldsymbol{\Gamma}_\omega^{\dagger}\) is the Moore--Penrose range projector on the
+coefficient chart \cite{harrington2001,stratton1941}. Mathematically, Eq.~\eqref{eq:ch4.inversion-residual-decomposition} is the Fredholm split for
+compact \(\boldsymbol{\Gamma}_\omega\). Physically, \(\mathcal{P}_{\mathrm{ran}}\mathbf{c}_{\mathrm{target}}\) is the closest realizable pattern;
+\(\mathbf{r}_{\perp}\) is the unreachable component no passive \(\Jimp\) can radiate \cite{devaney2004,hansen1988}.
+
+\paragraph{Operator-range certificate.}
+Realizability is equivalent to membership in \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\):
+\begin{equation}
+\label{eq:ch4.range-certificate}
+\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})
+\iff
+\exists\,\Jimp\in\mathcal{J}_{\mathrm{real}}:\ \boldsymbol{\Gamma}_\omega[\Jimp]=\mathbf{c}
+\iff
+\mathbf{r}_{\perp}=\mathbf{0}.
+\end{equation}
+Equation~\eqref{eq:ch4.range-certificate} is the synthesis gate every inversion memo must close \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+
+\begin{theorem}[Inversion limit at rank \(d_{\mathrm{eff}}\)]
+\label{thm:ch4.inversion-limit}
+Best rank-\(d_{\mathrm{eff}}(\varepsilon)\) approximation to \(\mathbf{c}_{\mathrm{target}}\) achieves error
+\(\le\varepsilon\sigma_{1}\|\mathbf{c}_{\mathrm{target}}\|\) on \(\mathcal{P}_{\mathrm{ran}}\mathbf{c}_{\mathrm{target}}\). If
+\(\|\mathbf{r}_{\perp}\|_{\mathcal{C}}>\varepsilon\|\mathbf{c}_{\mathrm{target}}\|\), then
+\(\mathbf{c}_{\mathrm{target}}\notin\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) at tolerance \(\varepsilon\), independent of optimizer or feed count
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.radiative-rank} bounds truncation error on \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) by \(\varepsilon\sigma_{1}\)
+\cite{harrington2001,stratton1941}. Component \(\mathbf{r}_{\perp}\in\ker\boldsymbol{\Gamma}_\omega^{\dagger}\) lies outside range for all ranks
+\cite{devaney2004}. Combining Eckart--Young optimality with Eq.~\eqref{eq:ch4.inversion-residual-decomposition} yields the obstruction clause
+\cite{hansen1988,harrington2001}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.inversion-limit} elevates inversion from a numerical success criterion to a geometric membership test \cite{stratton1941}. No
+amount of feed reweighting, adjoint iteration, or Tikhonov damping moves \(\mathbf{r}_{\perp}\) into \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\)
+when \(\delta_{\mathrm{reg}}>0\) in Eq.~\eqref{eq:ch4.tikhonov-synthesis-gap} \cite{harrington2001,devaney2004,hansen1988}.
+
+\paragraph{Tikhonov--synthesis gap.}
+Regularized inversion minimizes
+\(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}\|^{2}+\alpha\|\mathbf{I}_{s}\|^{2}\) but realizability is certified only by
+\begin{equation}
+\label{eq:ch4.tikhonov-synthesis-gap}
+\delta_{\mathrm{reg}}=\|\mathbf{r}_{\perp}\|_{\mathcal{C}},\qquad
+\delta_{\mathrm{reg}}=0\iff\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C}).
+\end{equation}
+\begin{corollary}[Regularization does not create realizability]
+\label{cor:ch4.reg-not-realizability}
+\(\alpha>0\) lowers discrete residuals without moving \(\mathbf{c}\) into \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) when \(\delta_{\mathrm{reg}}>0\)
+\cite{harrington2001,devaney2004,stratton1941}.
+\end{corollary}
+
+\begin{theorem}[Discrete--continuum inversion gap]
+\label{thm:ch4.discrete-continuum-gap}
+\(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}\|_{\mathcal{C}}<\tau_{\mathrm{mom}}\) does not imply \(\delta_{\mathrm{syn}}=0\) unless
+\(\tau_{\mathrm{mom}}<\varepsilon\|\mathbf{c}\|\) and \(\mathbf{r}_{\perp}=\mathbf{0}\) in the continuum gauge of \(\boldsymbol{\Gamma}_\omega\)
+\cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+\end{theorem}
+\begin{proof}
+Galerkin discretization error is bounded by mesh resolution on \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) \cite{harrington2001}. Unreachable
+\(\mathbf{r}_{\perp}\) is gauge-independent in \(\ker\boldsymbol{\Gamma}_\omega^{\dagger}\) \cite{stratton1941,devaney2004}.
+\end{proof}
+
+\paragraph{Moore--Penrose synthesis chain.}
+On truncated rank \(d\),
+\begin{equation}
+\label{eq:ch4.mom-penrose-chain}
+\mathbf{I}_{s}^{(d)}=\mathbf{T}_{d}^{\dagger}\mathbf{c}
+=\sum_{n=1}^{d}\frac{\langle\mathbf{u}_{n},\mathbf{c}\rangle}{\sigma_{n}}\,\mathbf{v}_{n},
+\end{equation}
+where \(\mathbf{T}_{d}=\sum_{n=1}^{d}\sigma_{n}\mathbf{u}_{n}\mathbf{v}_{n}^{\dagger}\) \cite{harrington2001,hansen1988}. Equation
+\eqref{eq:ch4.mom-penrose-chain} inverts only the reachable component \(\mathcal{P}_{\mathrm{ran}}^{(d)}\mathbf{c}\); it cannot synthesize
+\(\mathbf{r}_{\perp}\) \cite{stratton1941,devaney2004}.
+
+\paragraph{Condition number certificate.}
+For rank-\(d\) truncation, \(\kappa(\mathbf{T}_{d})=\sigma_{1}/\sigma_{d}\). Large \(\kappa\) amplifies noise in Eq.~\eqref{eq:ch4.mom-penrose-chain}
+without reducing \(\|\mathbf{r}_{\perp}\|\) \cite{hansen1988,harrington2001}. Synthesis audits must report \((\delta_{\mathrm{syn}},\kappa,d_{\mathrm{eff}})\)
+as a triple certificate \cite{stratton1941,devaney2004}.
+
+\paragraph{Rank-truncated inversion bound.}
+Best rank-\(d_{\mathrm{eff}}\) inverse satisfies
+\begin{equation}
+\label{eq:ch4.rank-truncated-inverse}
+\min_{\mathbf{I}_{s}}\|\mathbf{T}_{d}\mathbf{I}_{s}-\mathcal{P}_{\mathrm{ran}}\mathbf{c}\|
+\le
+\varepsilon\sigma_{1}\|\mathbf{c}\|,
+\end{equation}
+but cannot reduce \(\|\mathbf{r}_{\perp}\|\) \cite{harrington2001,hansen1988,stratton1941}. Truncation optimizes within range; it does not create range
+\cite{devaney2004}.
+
+\paragraph{Eckart--Young alignment.}
+\begin{equation}
+\label{eq:ch4.eckart-young-target}
+\|\mathbf{c}-\mathcal{P}_{\mathrm{ran}}^{(d_{\mathrm{eff}})}\mathbf{c}\|_{\mathcal{C}}\le\varepsilon\|\mathbf{c}\|
+\iff
+\mathcal{P}_{\mathrm{ran}}^{(d_{\mathrm{eff}})}\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\ \text{at }\varepsilon.
+\end{equation}
+Equality in Eq.~\eqref{eq:ch4.eckart-young-target} still fails when \(\mathbf{r}_{\perp}\neq0\) \cite{harrington2001,stratton1941}.
+
+\paragraph{Adjoint inversion trap.}
+Adjoint optimizers minimize \(\|\mathbf{T}^{H}\mathbf{c}-\mathbf{w}\|\) on feed weights \(\mathbf{w}\) \cite{harrington2001,devaney2004}. The adjoint
+finds a closest current portrait whose export \(\mathbf{T}\mathbf{I}_{s}\) may fit \(\mathcal{P}_{\mathrm{ran}}\mathbf{c}\) while leaving
+\(\mathbf{r}_{\perp}\) in the target unchanged \cite{stratton1941,hansen1988}. Certification requires lifting to Eq.~\eqref{eq:ch4.range-certificate},
+not reporting adjoint residual alone \cite{harrington2001}.
+
+\begin{lemma}[Sparsity prior obstruction]
+\label{lem:ch4.sparsity-obstruction}
+\(\ell_{1}\) or cardinality priors on \(\mathbf{I}_{s}\) alter the variational landscape of inversion but do not enlarge
+\(\operatorname{ran}\boldsymbol{\Gamma}_\omega\). If \(\mathbf{r}_{\perp}\neq0\), no sparsity penalty yields \(\delta_{\mathrm{syn}}=0\)
+\cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+\end{lemma}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (ran) {$\operatorname{ran}\boldsymbol{\Gamma}_\omega$};
+  \node[ch1box, right=11mm of ran] (perp) {$\mathbf{r}_{\perp}$};
+  \node[ch1box, right=11mm of perp] (mom) {MoM residual};
+  \draw[ch1flow] (ran) -- (mom);
+  \draw[ch1flow] (perp) -- (mom);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch473}: MoM residual can be small while \(\mathbf{r}_{\perp}\neq0\); synthesis audits must decompose both components.}
+\label{fig:ch4.inversion-residual-split}
+\end{figure}
+
+Figure~\ref{fig:ch4.inversion-residual-split} is the inversion honesty diagram: the optimizer sees the sum; realizability requires the perpendicular
+part to vanish \cite{stratton1941,harrington2001,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (opt) {optimizer};
+  \node[ch1box, right=11mm of opt] (ran) {$\mathcal{P}_{\mathrm{ran}}\mathbf{c}$};
+  \node[ch1box, right=11mm of ran] (syn) {$\delta_{\mathrm{syn}}=0$};
+  \draw[ch1flow] (opt) -- (ran);
+  \draw[ch1flow] (ran) -- (syn);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch473}: optimization closes on range projection; synthesis certifies zero perpendicular residual.}
+\label{fig:ch4.synthesis-certificate-chain}
+\end{figure}
+
+\paragraph{Worked illustration (Tikhonov masking).}
+Tikhonov with \(\alpha=10^{-3}\) yields \(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}\|=3\times10^{-5}\) while \(\|\mathbf{r}_{\perp}\|/\|\mathbf{c}\|=0.09\):
+\(\delta_{\mathrm{syn}}>0\) \cite{harrington2001,devaney2004,stratton1941}.
+
+\paragraph{Worked illustration (optimizer trap).}
+Adjoint optimizer: residual \(10^{-5}\), \(\|\mathbf{r}_{\perp}\|/\|\mathbf{c}\|=0.12\) \cite{harrington2001,devaney2004}. Synthesis fails despite
+excellent fit on \(\mathcal{P}_{\mathrm{ran}}\mathbf{c}\) \cite{stratton1941,hansen1988}.
+
+\paragraph{Worked illustration (rank mismatch).}
+Target needs \(d_{\mathrm{eff}}=14\); inversion uses rank \(8\): within-range error \(\approx0.04\|\mathbf{c}\|\) masquerades as unreachable null
+until \(\mathcal{P}_{\mathrm{ran}}^{(14)}\) is tested \cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (condition number).}
+\(\kappa(\mathbf{T}_{8})=10^{4}\): discrete residual \(10^{-3}\) with \(\|\mathbf{r}_{\perp}\|=0\) is realizable but numerically fragile
+\cite{hansen1988,harrington2001}. Report \(\kappa\) alongside \(\delta_{\mathrm{syn}}\) \cite{stratton1941}.
+
+\paragraph{Worked numerics (full decomposition).}
+\(\|\mathbf{r}_{\perp}\|/\|\mathbf{c}\|=0.15\) at \(\varepsilon=10^{-2}\) fails synthesis despite MoM residual \(10^{-4}\) and
+\(\kappa(\mathbf{T}_{11})=120\) \cite{harrington2001,hansen1988,devaney2004}.
+
+\paragraph{Problem (inversion versus realizability).}
+\textbf{Problem.} Optimizer reports \(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}\|<10^{-4}\). Certify?
+\textbf{Step 1.} Decompose via Eq.~\eqref{eq:ch4.inversion-residual-decomposition} \cite{stratton1941}.
+\textbf{Step 2.} Test \(\delta_{\mathrm{syn}}=0\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Reject if \(\mathbf{r}_{\perp}\neq0\) \cite{hansen1988}.
+\textbf{Physical meaning.} Inversion finds closest coefficients; synthesis demands range membership \cite{stratton1941}.
+
+\paragraph{Problem (regularized fit).}
+\textbf{Problem.} Tikhonov yields residual \(<10^{-5}\). Realizable?
+\textbf{Step 1.} Test \(\delta_{\mathrm{reg}}=0\) in Eq.~\eqref{eq:ch4.tikhonov-synthesis-gap} \cite{harrington2001}.
+\textbf{Step 2.} If \(\delta_{\mathrm{reg}}>0\), reject \cite{devaney2004,stratton1941}.
+\textbf{Step 3.} Report \(\mathbf{r}_{\perp}\) norm in memo \cite{hansen1988}.
+\textbf{Physical meaning.} Regularization is not realizability \cite{stratton1941}.
+
+\paragraph{Problem (continuum certificate).}
+\textbf{Problem.} MoM passes; certify realizability.
+\textbf{Step 1.} Lift \(\mathbf{T}\) to continuum \(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.range-certificate} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Apply Theorem~\ref{thm:ch4.discrete-continuum-gap} \cite{hansen1988}.
+\textbf{Physical meaning.} Discrete fit \(\neq\) range membership \cite{stratton1941}.
+
+\paragraph{Problem (rank truncation).}
+\textbf{Problem.} Use rank \(d_{\mathrm{eff}}\) in inversion. When valid?
+\textbf{Step 1.} Verify \(\mathbf{c}\in\operatorname{ran}\boldsymbol{\Gamma}_\omega^{(d_{\mathrm{eff}})}\) \cite{harrington2001}.
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.rank-truncated-inverse} \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Separate truncation error from \(\mathbf{r}_{\perp}\) via Eq.~\eqref{eq:ch4.eckart-young-target} \cite{devaney2004}.
+\textbf{Physical meaning.} Truncation is within-range approximation \cite{harrington2001}.
+
+\paragraph{Problem (adjoint audit).}
+\textbf{Problem.} Adjoint reports success. Synthesis?
+\textbf{Step 1.} Compute \(\mathbf{c}_{\mathrm{fit}}=\mathbf{T}\mathbf{I}_{s}\) \cite{harrington2001}.
+\textbf{Step 2.} Decompose \(\mathbf{c}_{\mathrm{target}}-\mathbf{c}_{\mathrm{fit}}\) into \(\mathbf{r}_{\perp}\) \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Certify only if \(\mathbf{r}_{\perp}=\mathbf{0}\) \cite{hansen1988}.
+\textbf{Physical meaning.} Adjoint residual is not \(\delta_{\mathrm{syn}}\) \cite{harrington2001}.
+
+\paragraph{Problem (sparsity prior).}
+\textbf{Problem.} \(\ell_{1}\) prior yields sparse \(\mathbf{I}_{s}\) and low residual. Realizable?
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.sparsity-obstruction} \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Test \(\delta_{\mathrm{reg}}=0\) \cite{stratton1941}.
+\textbf{Step 3.} Reject if \(\mathbf{r}_{\perp}\neq0\) regardless of sparsity \cite{hansen1988}.
+\textbf{Physical meaning.} Priors reshape inversion, not range \cite{stratton1941}.
+
+\paragraph{Philosophical closure (inversion versus synthesis).}
+Inversion is a variational problem on \(\mathbb{C}^{I}\); synthesis is a membership problem on \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\)
+\cite{stratton1941,harrington2001,devaney2004}. Every inverse-design pipeline must terminate on Eq.~\eqref{eq:ch4.range-certificate}, not on optimizer
+cost \cite{hansen1988}. \(\delta_{\mathrm{syn}}=0\) is the synthesis certificate; MoM residual, adjoint score, and Tikhonov norm are diagnostics only
+\cite{stratton1941,harrington2001}.
+
+\begin{corollary}[Tikhonov cannot cure unreachable targets]
+\label{cor:ch4.tikhonov-unreachable}
+If \(\mathbf{r}_{\perp}\neq0\), no \(\alpha>0\) yields \(\delta_{\mathrm{reg}}=0\) in Eq.~\eqref{eq:ch4.tikhonov-synthesis-gap}
+\cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+\end{corollary}
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.inversion-limit} assumes linear forward models on \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941}. Nonlinear or active
+materials require separate range declarations; \(\mathbf{r}_{\perp}\) obstruction persists in the linearized subproblem \cite{harrington2001,devaney2004}.
+Loss modifies \(\sigma_{n}\) ordering without promoting unreachable components into \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) \cite{hansen1988}.

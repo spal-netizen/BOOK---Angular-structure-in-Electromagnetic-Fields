@@ -1,0 +1,233 @@
+\subsection{Localization versus angular resolution}
+\label{sec:ch474}
+% TOC tag: [HOME][USE SS3.8.4][USE SS3.6.4]
+
+Representation dependence of angular labels in Subsection~\ref{sec:ch384} and localization bounds in Subsection~\ref{sec:ch364} constrain
+simultaneous spatial concentration and angular resolution on \(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001,hansen1988,stratton1941}.
+Subsection~\ref{sec:ch474} states the tradeoff as realizability inequalities on compact \(\Omega_{s}\) \cite{devaney2004,jackson1999}. Tight beams
+and high \(\ell\) on the same support violate export tail laws unless \(\mathcal{L}_{2}\) and \(\mathcal{R}_{\mathrm{ang}}\) are jointly audited
+\cite{hansen1988,harrington2001}. Representation is coordinate freedom; simultaneous localization and resolution are geometry-imposed
+\cite{stratton1941,devaney2004}.
+
+\paragraph{Assumptions.}
+Import Eq.~\eqref{eq:ch4.localization-spectrum-product} and Eq.~\eqref{eq:ch3.OAM-representation-dependence} \cite{stratton1941,hansen1988,harrington2001}.
+Compact \(\Omega_{s}\); flux gauge on \(\mathcal{F}_{\mathrm{rad}}\); tolerance \(\varepsilon\in(0,1)\) \cite{jackson1999,devaney2004}. Paraxial LG
+labels require bridge Eq.~\eqref{eq:ch3.paraxial-vs-spherical-OAM} before VSH audit \cite{harrington2001,allen1992}.
+
+\paragraph{Resolution functional.}
+Define block angular resolution
+\begin{equation}
+\label{eq:ch4.angular-resolution-functional}
+\mathcal{R}_{\mathrm{ang}}(\mathbf{c})=\sup\left\{\ell:\ \sum_{m,\sigma}|\widehat{c}_{\ell m}^{(\sigma)}|^{2}\ge\eta_{\mathrm{blk}}\|\mathbf{c}\|_{\mathrm{rad}}^{2}\right\},
+\end{equation}
+the highest \(\ell\) carrying fraction \(\eta_{\mathrm{blk}}\) of radiative energy \cite{hansen1988,harrington2001,stratton1941}. On ball \(B_{a}\),
+\begin{equation}
+\label{eq:ch4.localization-resolution-tradeoff}
+\mathcal{L}_{2}[\Jimp]\,\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\ \gtrsim\ \mathcal{K}_{\mathrm{lr}}(k_{0}a,\eta_{\mathrm{blk}}),
+\end{equation}
+importing Subsection~\ref{sec:ch364} \cite{jackson1999,hansen1988,devaney2004}. Equation~\eqref{eq:ch4.localization-resolution-tradeoff} forbids
+arbitrarily tight \(\mathcal{L}_{2}\) with arbitrarily high \(\mathcal{R}_{\mathrm{ang}}\) on the same \(\Jimp\) \cite{stratton1941,harrington2001}.
+
+\begin{theorem}[Resolution ceiling]
+\label{thm:ch4.resolution-ceiling}
+\(\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\le\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) on \(B_{a}\) \cite{hansen1988,stratton1941,devaney2004,harrington2001}.
+\end{theorem}
+\begin{proof}
+\(\ell_{\mathrm{supp}}\) is the synthesis-side angular cutoff from singular-value ordering \cite{harrington2001}; \(\mathcal{R}_{\mathrm{ang}}\) counts
+energy above \(\eta_{\mathrm{blk}}\) in \(\ell\) blocks \cite{hansen1988,stratton1941}. Tail laws cap nonzero \(\widehat{c}_{\ell m}\) for
+\(\ell>\ell_{\mathrm{supp}}\) \cite{devaney2004,jackson1999}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.resolution-ceiling} converts tail-law decay into an angular-order audit: \(\mathcal{R}_{\mathrm{ang}}\) cannot exceed the
+synthesis-supported cutoff \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) regardless of chart listing or optimizer success \cite{hansen1988,harrington2001,stratton1941}.
+Vendor OAM claims must therefore be tested against \(\ell_{\mathrm{supp}}\) before localization inequalities are invoked \cite{devaney2004,jackson1999}.
+
+\paragraph{Supported-order scaling.}
+On \(B_{a}\), \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)=\mathcal{O}(k_{0}a)\) per Section~\ref{sec:ch46} truncation laws \cite{hansen1988,harrington2001}.
+Handset-scale \(k_{0}a<1\) supports only dipole-class \(\ell\) at practical \(\varepsilon\); super-hemispherical \(\mathcal{R}_{\mathrm{ang}}\) is excluded
+\cite{jackson1999,stratton1941,devaney2004}.
+
+\paragraph{Simultaneous bound.}
+\begin{equation}
+\label{eq:ch4.simultaneous-loc-ell}
+\mathcal{L}_{2}[\Jimp]\cdot\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\ge\mathcal{K}_{\mathrm{sl}}(k_{0}a,\eta_{\mathrm{blk}}),
+\end{equation}
+\begin{corollary}[Super-resolution obstruction]
+\label{cor:ch4.super-resolution-obstruction}
+Simultaneous \(\mathcal{L}_{2}\ll a^{2}\) and \(\mathcal{R}_{\mathrm{ang}}\gg k_{0}a\) implies \(\mathbf{c}\notin\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) on \(B_{a}\)
+\cite{hansen1988,stratton1941,devaney2004,jackson1999}.
+\end{corollary}
+
+\paragraph{Uncertainty product form.}
+Combining Eqs.~\eqref{eq:ch4.localization-resolution-tradeoff} and Theorem~\ref{thm:ch4.resolution-ceiling},
+\begin{equation}
+\label{eq:ch4.loc-res-uncertainty}
+\mathcal{L}_{2}[\Jimp]\cdot\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+\ge
+\mathcal{K}_{\mathrm{unc}}(k_{0}a,\varepsilon),
+\end{equation}
+an export-side uncertainty relation on compact supports \cite{hansen1988,jackson1999,stratton1941,harrington2001,devaney2004}.
+
+\begin{theorem}[Joint localization--supported-order bound]
+\label{thm:ch4.joint-loc-supp}
+On \(B_{a}\), any \(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) satisfies
+\(\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\le\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) and Eq.~\eqref{eq:ch4.loc-res-uncertainty} simultaneously
+\cite{hansen1988,stratton1941,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.resolution-ceiling} and Eq.~\eqref{eq:ch4.localization-resolution-tradeoff} \cite{hansen1988,stratton1941,jackson1999}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.joint-loc-supp} is the realizability audit for simultaneous focusing and OAM claims: both \(\mathcal{L}_{2}\) and
+\(\mathcal{R}_{\mathrm{ang}}\) must pass, not merely one \cite{harrington2001,hansen1988,devaney2004}.
+
+\paragraph{Beamwidth consistency.}
+\begin{equation}
+\label{eq:ch4.beamwidth-ell-consistency}
+\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\le\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\le\mathcal{O}(k_{0}a).
+\end{equation}
+Narrow beamwidth claims require Eq.~\eqref{eq:ch4.ell-max-scaling} before OAM order is certified \cite{hansen1988,harrington2001,jackson1999}.
+
+\paragraph{Representation bridge audit.}
+Paraxial LG labels require Eq.~\eqref{eq:ch3.paraxial-vs-spherical-OAM} before \(\mathcal{R}_{\mathrm{ang}}\) tests \cite{harrington2001,allen1992}.
+Full-vector decomposition may spread one LG index across multiple \(\ell\) sectors \cite{hansen1988,stratton1941,belinfante1940}. Essentialist OAM
+claims that skip the bridge fail realizability audit \cite{devaney2004,harrington2001}.
+
+\begin{lemma}[LG--VSH spread bound]
+\label{lem:ch4.lg-vsh-spread}
+Paraxial mode \(m_{\mathrm{LG}}\) maps to VSH sectors \(\ell\in\{m_{\mathrm{LG}}-1,m_{\mathrm{LG}},m_{\mathrm{LG}}+1,\ldots\}\) after full-vector
+decomposition; \(\mathcal{R}_{\mathrm{ang}}\) must be computed in VSH gauge \cite{harrington2001,hansen1988,allen1992,stratton1941}.
+\end{lemma}
+\begin{proof}
+Full-vector LG decomposition spreads azimuthal order across adjacent \(\ell\) sectors \cite{harrington2001,allen1992}. \(\mathcal{R}_{\mathrm{ang}}\) is
+defined on VSH coefficients after gauge conversion, not on paraxial labels alone \cite{hansen1988,stratton1941,belinfante1940}.
+\end{proof}
+
+\paragraph{Diameter scaling audit.}
+On ball supports \(B_{a}\), supported order scales as \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)=\mathcal{O}(k_{0}a)\) per
+Theorem~\ref{thm:ch4.resolution-ceiling} \cite{hansen1988,harrington2001,jackson1999}. Claims with \(\mathcal{R}_{\mathrm{ang}}\gg k_{0}a\) fail before
+localization tests are applied \cite{stratton1941,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (loc) {$\mathcal{L}_{2}$};
+  \node[ch1box, right=11mm of loc] (rang) {$\mathcal{R}_{\mathrm{ang}}$};
+  \node[ch1box, right=11mm of rang] (ell) {$\ell_{\mathrm{supp}}$};
+  \draw[ch1flow] (loc) -- (rang) -- (ell);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch474}: localization and angular resolution jointly bounded by support.}
+\label{fig:ch4.loc-resolution-tradeoff}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (lg) {LG index};
+  \node[ch1box, right=11mm of lg] (vsh) {VSH sectors};
+  \node[ch1box, right=11mm of vsh] (audit) {$\mathcal{R}_{\mathrm{ang}}$};
+  \draw[ch1flow] (lg) -- (vsh) -- (audit);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch474}: representation bridge before VSH realizability audit.}
+\label{fig:ch4.lg-vsh-bridge}
+\end{figure}
+
+Figure~\ref{fig:ch4.loc-resolution-tradeoff} chains localization to supported order; Figure~\ref{fig:ch4.lg-vsh-bridge} chains paraxial labels to
+VSH audit \cite{harrington2001,hansen1988,stratton1941}.
+
+\paragraph{Worked illustration (tight beam).}
+\(0.25\lambda\) aperture, \(2^{\circ}\) beam, \(\ell=8\): violates Eq.~\eqref{eq:ch4.localization-resolution-tradeoff}
+\cite{jackson1999,harrington2001,hansen1988,devaney2004}.
+
+\paragraph{Worked illustration (LG label).}
+\(m_{\mathrm{LG}}=5\) requires full-vector decomposition before VSH audit \cite{harrington2001,allen1992,hansen1988}.
+
+\paragraph{Worked illustration (LG to VSH).}
+\(m_{\mathrm{LG}}=3\) maps to \(\ell\in\{2,3,4\}\); \(\mathcal{R}_{\mathrm{ang}}\) computed in VSH gauge per Lemma~\ref{lem:ch4.lg-vsh-spread}
+\cite{harrington2001,hansen1988,allen1992}.
+
+\paragraph{Worked illustration (super-resolution).}
+\(k_{0}a=1.5\), \(\mathcal{R}_{\mathrm{ang}}=9\): violates Theorem~\ref{thm:ch4.joint-loc-supp} \cite{hansen1988,jackson1999,harrington2001,stratton1941}.
+
+\paragraph{Worked numerics (joint audit).}
+\(k_{0}a=1.8\), \(\mathcal{L}_{2}=0.3a^{2}\), claimed \(\mathcal{R}_{\mathrm{ang}}=7\): fails Eq.~\eqref{eq:ch4.loc-res-uncertainty} at \(\varepsilon=10^{-2}\)
+\cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (diameter class).}
+Handset \(k_{0}a=0.9\): \(\ell_{\mathrm{supp}}(10^{-2},0.9)\approx2\); claimed \(\mathcal{R}_{\mathrm{ang}}=5\) violates
+Theorem~\ref{thm:ch4.joint-loc-supp} before beamwidth audit \cite{hansen1988,jackson1999,harrington2001,stratton1941,devaney2004}.
+
+\begin{corollary}[Simultaneous product obstruction]
+\label{cor:ch4.loc-res-product}
+If \(\mathcal{L}_{2}[\Jimp]\cdot\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)<\mathcal{K}_{\mathrm{unc}}(k_{0}a,\varepsilon)\), then
+\(\mathbf{c}\notin\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) at the stated tolerance \cite{hansen1988,jackson1999,stratton1941,harrington2001,devaney2004}.
+\end{corollary}
+
+\paragraph{Problem (joint audit certificate).}
+\textbf{Problem.} Certify simultaneous tight focus and \(\ell=6\) on \(k_{0}a=1.6\).
+\textbf{Step 1.} Read \(\ell_{\mathrm{supp}}(10^{-2},1.6)\) from SVD \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test Theorem~\ref{thm:ch4.joint-loc-supp} and Corollary~\ref{cor:ch4.loc-res-product} \cite{jackson1999,stratton1941}.
+\textbf{Step 3.} Reject if either \(\mathcal{R}_{\mathrm{ang}}>\ell_{\mathrm{supp}}\) or product bound fails \cite{devaney2004}.
+\textbf{Physical meaning.} Joint audits precede OAM marketing claims \cite{harrington2001,hansen1988}.
+
+\paragraph{Problem (OAM transfer).}
+\textbf{Problem.} LG index \(m_{\mathrm{LG}}=5\). VSH realizability?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch3.paraxial-vs-spherical-OAM} \cite{harrington2001}.
+\textbf{Step 2.} Test \(\mathcal{R}_{\mathrm{ang}}\) against Eq.~\eqref{eq:ch4.ell-max-scaling} \cite{hansen1988}.
+\textbf{Step 3.} Reject essentialist claims \cite{stratton1941,belinfante1940}.
+\textbf{Physical meaning.} OAM labels are representation-dependent \cite{harrington2001}.
+
+\paragraph{Problem (resolution claim).}
+\textbf{Problem.} \(\mathcal{R}_{\mathrm{ang}}=12\) on \(k_{0}a=2\). Audit.
+\textbf{Step 1.} Test \(\ell_{\mathrm{supp}}(10^{-2},2)\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.simultaneous-loc-ell} \cite{jackson1999}.
+\textbf{Step 3.} Reject if either fails \cite{devaney2004,stratton1941}.
+\textbf{Physical meaning.} Resolution is jointly bounded \cite{hansen1988}.
+
+\paragraph{Problem (LG realizability).}
+\textbf{Problem.} \(m_{\mathrm{LG}}=4\) on \(k_{0}a=2\). Realizable?
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.lg-vsh-spread} \cite{harrington2001,allen1992}.
+\textbf{Step 2.} Compute \(\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\) \cite{hansen1988}.
+\textbf{Step 3.} Test \(\ell_{\mathrm{supp}}(10^{-2},2)\) \cite{stratton1941,devaney2004}.
+\textbf{Physical meaning.} OAM order is chart-dependent \cite{harrington2001}.
+
+\paragraph{Problem (beamwidth--\(\ell\) joint audit).}
+\textbf{Problem.} \(2^{\circ}\) beam and \(\ell=7\) on \(k_{0}a=1.8\). Feasible?
+\textbf{Step 1.} Test Eq.~\eqref{eq:ch4.beamwidth-ell-consistency} \cite{hansen1988,jackson1999}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.loc-res-uncertainty} \cite{stratton1941,harrington2001}.
+\textbf{Step 3.} Reject if either fails \cite{devaney2004}.
+\textbf{Physical meaning.} Beams and OAM orders are jointly bounded \cite{hansen1988}.
+
+\paragraph{Problem (handset OAM claim).}
+\textbf{Problem.} Handset aperture claims \(\ell=6\) OAM at \(k_{0}a=0.8\). Audit.
+\textbf{Step 1.} Test Theorem~\ref{thm:ch4.resolution-ceiling} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.localization-resolution-tradeoff} \cite{jackson1999,stratton1941}.
+\textbf{Step 3.} Reject super-resolution \cite{devaney2004}.
+\textbf{Physical meaning.} Handset-scale apertures are dipole-class in \(\ell\) \cite{harrington2001}.
+
+\paragraph{Problem (simultaneous product).}
+\textbf{Problem.} Verify Eq.~\eqref{eq:ch4.loc-res-uncertainty} for measured \((\mathcal{L}_{2},\ell_{\mathrm{supp}})\).
+\textbf{Step 1.} Measure \(\mathcal{L}_{2}[\Jimp]\) on \(\Omega_{s}\) \cite{jackson1999,stratton1941}.
+\textbf{Step 2.} Read \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) from SVD \cite{hansen1988,harrington2001}.
+\textbf{Step 3.} Compare product to \(\mathcal{K}_{\mathrm{unc}}\) \cite{devaney2004}.
+\textbf{Physical meaning.} Product bound is export-side uncertainty \cite{hansen1988}.
+
+\paragraph{Philosophical closure (simultaneous claims).}
+Localization and angular resolution are not independent knobs on compact sources \cite{hansen1988,stratton1941,harrington2001,jackson1999}. Every tight-focusing
+with high-azimuthal-order claim is simultaneous on \(\mathcal{L}_{2}\) and \(\mathcal{R}_{\mathrm{ang}}\); realizability requires
+Eqs.~\eqref{eq:ch4.localization-resolution-tradeoff}--\eqref{eq:ch4.loc-res-uncertainty} \cite{devaney2004,hansen1988,harrington2001}.
+
+\begin{corollary}[No free super-resolution on \(B_{a}\)]
+\label{cor:ch4.no-free-superres}
+\(\mathcal{L}_{2}\ll a^{2}\) and \(\mathcal{R}_{\mathrm{ang}}\gg k_{0}a\) cannot hold for the same \(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) on \(B_{a}\)
+\cite{hansen1988,stratton1941,devaney2004,harrington2001,jackson1999}.
+\end{corollary}
+
+\paragraph{Validity.}
+Eqs.~\eqref{eq:ch4.localization-resolution-tradeoff}--\eqref{eq:ch4.loc-res-uncertainty} assume open-region compact sources \cite{stratton1941}. Cavities
+quantize resolution via Subsection~\ref{sec:ch372} \cite{harrington2001}. Loss broadens \(\mathcal{L}_{2}\) without raising \(\ell_{\mathrm{supp}}\)
+\cite{devaney2004,hansen1988}.

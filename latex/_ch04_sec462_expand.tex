@@ -1,0 +1,195 @@
+\subsection{Scaling laws for spectral truncation}
+\label{sec:ch462}
+% TOC tag: [HOME]
+
+Truncation is not a numerical afterthought applied once a MoM matrix is assembled. On compact supports it is a scaling law: the count of
+export directions above \(\varepsilon\sigma_{1}\) grows with electrical size and frequency according to exponents fixed by the support class
+\cite{stratton1941,jackson1999,hansen1988}. Subsection~\ref{sec:ch462} states those exponents as realizability inequalities on
+\(r_{\mathrm{rad}}(\varepsilon)\), \(\ell_{\mathrm{supp}}\), and \(\operatorname{rank}\mathbf{K}\) \cite{harrington2001,devaney2004}. The
+philosophical point is inevitability: finite geometry cannot sustain an unbounded synthesis chart at fixed tolerance.
+
+\paragraph{Assumptions.}
+Presuppose Eqs.~\eqref{eq:ch4.weyl-mode-count}, \eqref{eq:ch4.geometry-coupling-scaling}, \eqref{eq:ch4.aperture-coupling-scaling}, and
+Theorem~\ref{thm:ch4.support-volume-scaling} \cite{stratton1941,hansen1988,harrington2001}. Asymptotic regime \(k_{0}a\ge1\) unless the
+Rayleigh branch is explicitly invoked \cite{jackson1999}. Tolerance \(\varepsilon\) is held fixed across comparisons \cite{devaney2004}.
+
+\paragraph{Volume and area exponents.}
+On enclosing ball \(B_{a}\),
+\begin{equation}
+\label{eq:ch4.truncation-volume-scaling}
+r_{\mathrm{rad}}(\varepsilon)
+\ \sim\
+C_{\mathrm{vol}}(\varepsilon)\,(k_{0}a)^{3},
+\qquad
+\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+\ \sim\
+C_{\ell}(\varepsilon)\,k_{0}a,
+\end{equation}
+importing Eq.~\eqref{eq:ch4.weyl-mode-count} and Theorem~\ref{thm:ch4.ell-max-scaling} \cite{stratton1941,jackson1999,hansen1988}. The cubic
+exponent on \(r_{\mathrm{rad}}\) is the export-side image of volume mode density: each additional wavelength inside \(B_{a}\) opens new
+orthogonal radiation channels \cite{harrington2001}. The linear exponent on \(\ell_{\mathrm{supp}}\) is the angular tail counterpart: high
+orders are permitted only in proportion to \(k_{0}a\) \cite{hansen1988,devaney2004}. On aperture \(\Sigma_{a}\) of area \(A_{a}\),
+\begin{equation}
+\label{eq:ch4.truncation-area-scaling}
+\operatorname{rank}\mathbf{K}\big|_{\Sigma_{a}}
+\ \sim\
+C_{A}(\varepsilon)\,k_{0}^{2}A_{a},
+\end{equation}
+from Eq.~\eqref{eq:ch4.aperture-coupling-scaling} \cite{collin2001,harrington2001,devaney2004}. Volume scaling dominates when synthesis is
+declared on the enclosing ball; area scaling governs mouth-only and patch-array models \cite{stratton1941}.
+
+\begin{proposition}[Scaling law consistency]
+\label{prop:ch4.truncation-scaling-consistency}
+If equivalence Theorem~\ref{thm:ch4.volume-surface-equivalence} holds and \(\mathcal{D}_{\mathrm{cpl}}=1\),
+Eqs.~\eqref{eq:ch4.truncation-volume-scaling} and \eqref{eq:ch4.truncation-area-scaling} bound the same \(\mathbf{c}\) image up to
+constants depending on \(\varepsilon\) and mesh alignment \cite{stratton1941,harrington2001,collin2001}. Neither exponent is raised by
+phase-only retuning on fixed geometry \cite{devaney2004,hansen1988}.
+\end{proposition}
+\begin{proof}
+\(\boldsymbol{\Gamma}_\omega\) depends on \(\mathcal{J}_{\mathrm{real}}\) support class; phase rotations preserve singular values on fixed
+support \cite{harrington2001,stratton1941}. Volume--surface equivalence identifies images up to equivalence constants \cite{collin2001}.
+\end{proof}
+
+\paragraph{Joint scaling audit.}
+Laboratories should report a single conservative bound
+\begin{equation}
+\label{eq:ch4.joint-scaling-law}
+d_{\mathrm{eff}}(\varepsilon)\le\min\big\{C_{V}(\varepsilon)(k_{0}a)^{3},\,C_{A}(\varepsilon)k_{0}^{2}A_{a}\big\},
+\end{equation}
+with the active term determined by declared synthesis support \cite{stratton1941,hansen1988,harrington2001}. Equation~\eqref{eq:ch4.joint-scaling-law}
+prevents aperture-only optimism when currents occupy a larger enclosing volume \cite{devaney2004,collin2001}.
+
+\begin{theorem}[Scaling exponent gauge invariance]
+\label{thm:ch4.scaling-gauge-invariant}
+Exponents \(3\) and \(2\) in Eq.~\eqref{eq:ch4.joint-scaling-law} are invariant under admissible changes of \(\mathcal{C}\); only
+prefactors \(C_{V},C_{A}\) depend on flux normalization \cite{hansen1988,stratton1941,harrington2001}.
+\end{theorem}
+\begin{proof}
+\(\boldsymbol{\Gamma}_\omega\) is unitarily equivalent under flux gauge changes; singular-value thresholds scale homogeneously, leaving rank
+growth exponents unchanged \cite{hansen1988,harrington2001}.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (vol) {$(k_{0}a)^{3}$};
+  \node[ch1box, right=11mm of vol] (area) {$k_{0}^{2}A_{a}$};
+  \node[ch1box, right=11mm of area] (min) {$\min$};
+  \node[ch1box, right=11mm of min] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (vol) -- (min);
+  \draw[ch1flow] (area) -- (min);
+  \draw[ch1flow] (min) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch462}: truncation rank is bounded by the smaller of volume-growth and area-growth laws at declared support.}
+\label{fig:ch4.truncation-scaling-audit}
+\end{figure}
+
+Figure~\ref{fig:ch4.truncation-scaling-audit} is the design-room audit: doubling frequency at fixed outline moves along the appropriate
+exponent; changing outline without updating \(k_{0}D_{s}\) leaves rank claims inconsistent \cite{jackson1999,harrington2001}.
+
+\paragraph{Prefactor sensitivity.}
+Constants \(C_{V}(\varepsilon)\) and \(C_{A}(\varepsilon)\) depend on \(\varepsilon\) and gauge but not on \(\ell_{\max}\)
+\cite{hansen1988,stratton1941}. On a circular aperture,
+\begin{equation}
+\label{eq:ch4.scaling-ratio}
+\frac{C_{V}(\varepsilon)(k_{0}a)^{3}}{C_{A}(\varepsilon)k_{0}^{2}A_{a}}
+\sim
+\frac{C_{V}}{C_{A}}\cdot\frac{k_{0}a}{\pi}.
+\end{equation}
+At \(k_{0}a=3\) with \(C_{V}/C_{A}\approx1\), volume and area bounds are comparable: both must be audited \cite{harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (doubling frequency).}
+At fixed \(a\), doubling \(k_{0}\) doubles \(k_{0}a\): \(r_{\mathrm{rad}}\) grows by \(2^{3}=8\) in the large-body regime while
+\(\ell_{\mathrm{supp}}\) grows by \(2\) \cite{jackson1999,harrington2001,hansen1988}. A handset outline unchanged from sub-6\,GHz to mmWave
+therefore crosses distinct realizability classes \cite{stratton1941,collin2001}.
+
+\paragraph{Worked illustration (horn versus ball).}
+A horn feed modeled on mouth area \(A_{a}\) may satisfy \(k_{0}^{2}A_{a}\approx40\) while the enclosing \(B_{a}\) yields
+\((k_{0}a)^{3}\approx30\) \cite{collin2001,harrington2001}. Eq.~\eqref{eq:ch4.joint-scaling-law} selects the area bound for aperture-only
+synthesis and the volume bound when \(\mathcal{J}_{\mathrm{real}}\) fills the enclosure \cite{stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (5G panel).}
+Panel with \(k_{0}W=3\) gives \(k_{0}^{2}A_{a}\sim9\pi\approx28\) and \(d_{\mathrm{eff}}(10^{-2})\lesssim30\) before element-count claims
+\cite{hansen1988,collin2001,harrington2001}.
+
+\paragraph{Problem (volume versus area rank).}
+\textbf{Problem.} Patch array on \(\Sigma_{a}\) reports \(k_{0}^{2}A_{a}\approx50\); enclosing ball gives \((k_{0}a)^{3}\approx30\). Which
+bound governs?
+
+\textbf{Step 1.} Declare whether synthesis is on \(\Sigma_{a}\) or \(B_{a}\) \cite{collin2001,stratton1941}.
+
+\textbf{Step 2.} Apply matching term in Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{harrington2001,devaney2004}.
+
+\textbf{Step 3.} Use \(\min(\cdot)\) for conservative \(d_{\mathrm{eff}}\) report \cite{hansen1988}.
+
+\textbf{Physical meaning.} Scaling exponents attach to support class, not CAD convenience \cite{stratton1941}.
+
+\paragraph{Problem (frequency extrapolation).}
+\textbf{Problem.} Rank measured at \(3\,\mathrm{GHz}\) is extrapolated to \(30\,\mathrm{GHz}\) on fixed hardware. Valid?
+
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) at each frequency \cite{jackson1999}.
+
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.truncation-volume-scaling} with factor \((10)^{3}=1000\) only in large-body regime \cite{hansen1988,harrington2001}.
+
+\textbf{Step 3.} Recompute \(d_{\mathrm{eff}}(\varepsilon)\) by SVD at each band \cite{devaney2004}.
+
+\textbf{Physical meaning.} Rank scales with electrical size, not with outline drawings alone \cite{stratton1941}.
+
+\paragraph{Problem (phase-only rank claim).}
+\textbf{Problem.} Metasurface retunes phases; designer claims doubled \(d_{\mathrm{eff}}\). Audit.
+
+\textbf{Step 1.} Verify \(\operatorname{diam}(\Omega_{s})\) and \(k_{0}\) unchanged \cite{stratton1941,harrington2001}.
+
+\textbf{Step 2.} Invoke Proposition~\ref{prop:ch4.truncation-scaling-consistency} \cite{hansen1988,devaney2004}.
+
+\textbf{Step 3.} Reject rank doubling; phase rotates within fixed export subspace \cite{harrington2001}.
+
+\textbf{Physical meaning.} Exponents are geometry-imposed; phase is coordinate freedom on fixed rank \cite{stratton1941}.
+
+\paragraph{Rayleigh crossover reminder.}
+When \(k_{0}a\ll1\), Eq.~\eqref{eq:ch4.truncation-volume-scaling} is superseded by dipole-class rank \(\le3\) \cite{jackson1999,hansen1988}.
+Scaling laws must name the active regime before extrapolation \cite{stratton1941,harrington2001}.
+
+\paragraph{Design frequency ladder.}
+Hold \(\operatorname{diam}(\Omega_{s})\) fixed and sample \(k_{0}\) at bands \(f_{1}<f_{2}<f_{3}\). Then
+\begin{equation}
+\label{eq:ch4.freq-ladder}
+\frac{d_{\mathrm{eff}}(f_{3})}{d_{\mathrm{eff}}(f_{1})}
+\approx
+\left(\frac{f_{3}}{f_{1}}\right)^{3}
+\quad\text{on }B_{a},\qquad
+\frac{\ell_{\mathrm{supp}}(f_{3})}{\ell_{\mathrm{supp}}(f_{1})}
+\approx
+\frac{f_{3}}{f_{1}},
+\end{equation}
+in the large-body regime \cite{jackson1999,hansen1988,harrington2001}. Handset roadmaps that quote a single ``mode count'' across decades of
+frequency without recomputing Eq.~\eqref{eq:ch4.freq-ladder} are not auditable \cite{stratton1941,devaney2004,collin2001}.
+
+\begin{corollary}[Outline invariance does not imply rank invariance]
+\label{cor:ch4.outline-rank-noninvariant}
+Mechanical outline invariance with frequency change leaves \(\operatorname{diam}(\Omega_{s})\) fixed but increases \(k_{0}D_{s}\), hence
+increases \(d_{\mathrm{eff}}(\varepsilon)\) per Eq.~\eqref{eq:ch4.truncation-volume-scaling} \cite{jackson1999,harrington2001,stratton1941}.
+\end{corollary}
+
+\paragraph{Worked illustration (band ladder).}
+\(150\,\mathrm{mm}\) device: \(d_{\mathrm{eff}}(10^{-2})\le3\) near \(700\,\mathrm{MHz}\); same outline near \(28\,\mathrm{GHz}\) gives
+\(d_{\mathrm{eff}}\sim\mathcal{O}(10^{2})\) before element-count marketing \cite{harrington2001,collin2001,hansen1988,jackson1999}.
+
+\paragraph{Problem (single mode-count spec).}
+\textbf{Problem.} Vendor quotes ``32 modes'' for a phone outline without frequency. Audit.
+
+\textbf{Step 1.} Request \((f,k_{0}D_{s},\varepsilon)\) triple \cite{jackson1999,hansen1988}.
+
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.joint-scaling-law} at that triple \cite{harrington2001}.
+
+\textbf{Step 3.} Reject spec without frequency; rank is not outline-invariant \cite{stratton1941,devaney2004}.
+
+\textbf{Physical meaning.} Mode count is a function of electrical size, not mechanical drawing alone \cite{hansen1988}.
+
+\paragraph{Validity.}
+Eqs.~\eqref{eq:ch4.truncation-volume-scaling}--\eqref{eq:ch4.truncation-area-scaling} are asymptotic for \(k_{0}D_{s}\gtrsim1\)
+\cite{jackson1999,hansen1988}. Dispersion and material resonances modify prefactors without changing exponents on fixed \(\mathcal{J}_{\mathrm{real}}\)
+class \cite{stratton1941,harrington2001}. Loss may increase effective rank slightly by broadening spectra \cite{devaney2004}.
+

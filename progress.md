@@ -2,25 +2,27 @@
 
 **Conventions:** \(e^{-j\omega t}\), SI | **Target:** publisher-ready Vol. I in 12 months  
 **Baseline locked:** 2026-05-24 (`LOCK-MANIFEST.md`)  
-**Chapter 1 locked:** 2026-05-29  
-**Chapter 2 locked:** 2026-05-31  
+**Chapter 1 locked:** 2026-06-07 (forensic re-lock)  
+**Chapter 2 locked:** 2026-05-31 (accessibility audit remediated 2026-05-29)  
+**Chapter 3 remediated:** 2026-05-29 (forensic audit + monograph compression pass)  
 **TOC:** `TOC/volume-I-ch01-04-FINAL.txt` — LOCKED  
 **GCHECK master:** `TOC/GCHECK-MASTER-CUMULATIVE.md`  
 **Governance locked:** 2026-05-31 (`LOCK-MANIFEST.md` addendum)  
-**Resume at:** **§3.0.1** Symmetry, operators, and representations (Chapter 3)
+**Resume at:** **§4.11.1** inventory / forward map (§4.6–§4.10 pass 3/3–5/5 merged 2026-06-08)
 
 ## Current focus
 
 | Field | Value |
 |-------|--------|
-| Active chapter | **3** |
-| Active section | **3.0** Introduction; next **§3.0.1** |
+| Active chapter | **4** |
+| Active section | **4.0** Introduction (compressed); next **§4.0.1** |
 | Tier | A |
-| Status | **Ch. 2 COMPLETE AND LOCKED**; Ch. 3 scaffold — resume **§3.0.1** |
-| Master command | `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT` |
-| PDF | **293 pages** (post Ch. 2 lock build) |
-| Depth | **≥ 5 PDF pages** per subsection |
-| Review cadence | **Chapter-end only** |
+| Status | **Ch. 1 audit done**; **Ch. 2 accessibility audit remediated**; **Ch. 3 forensic audit REMEDIATED** through **§3.11.3** |
+| Master command | `GCHECK DRAFT 4.11` (chapter inventory + forward map) |
+| Ch. 4 doctrine | `TOC/CH04-DRAFTING-KICKOFF-LOCK.md` + `TOC/CH04-REDRAFT-DEPTH-LOCK.md` (locked 2026-06-08) |
+| PDF | **667 pages** (`latex/main.pdf`, §4.9–§4.10 pass 3/3) |
+| Depth | §4.6 pass **3/3**; §4.7–§4.8 pass **5/5**; §4.9–§4.10 pass **3/3**; §4.11 pending |
+| Review cadence | **Chapter-end only** (author revises once §4.11 complete) |
 
 ## Milestone calendar
 
@@ -41,9 +43,9 @@
 
 ## Chapter checklist
 
-- [x] Ch. 1 — Foundations (§1.7 locked; 32/32 subsections; 68 figures; **131 pp** `main.pdf`)
+- [x] Ch. 1 — Foundations (§1.7 locked; 32/32 subsections; 68 figures; forensic re-lock **2026-06-07**; **301 pp** `main.pdf`)
 - [x] Ch. 2 — Operators (§2.11 locked; 45/45 subsections; **293 pp** `main.pdf`; sign-off 2026-05-31)
-- [ ] Ch. 3 — Eigenfields (§3.11 locked) ← sample for publisher
+- [x] Ch. 3 — Eigenfields (§3.11 locked; forensic audit remediated 2026-05-29) ← sample for publisher
 - [ ] Ch. 4 — Realizability (§4.11 locked)
 - [ ] Cross-volume forward map to Ch. 5 frozen in §4.11.2
 - [ ] Bibliography seeded

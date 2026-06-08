@@ -1,0 +1,302 @@
+\subsection{Observable manifestations of truncation}
+\label{sec:ch493}
+% TOC tag: [USE]
+
+Truncation is not invisible in laboratory data: it appears as smoothed main beams, elevated far-zone shoulders, saturated MIMO capacity curves, and
+channel counts that knee below element cardinality \cite{stratton1941,harrington2001,hansen1988,devaney2004}. Section~\ref{sec:ch01.5} established that
+measurement functionals report projections of fields, not full coefficient charts; here those projections inherit the finite-support restriction
+\(\mathcal{B}_{\mathrm{fs}}\) and rank ceiling \(d_{\mathrm{eff}}(\varepsilon)\) proved on \(\boldsymbol{\Gamma}_\omega\) \cite{jackson1999}.
+Observable signatures are realizability certificates read in watts and decibels, not operator jargon \cite{harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Definition~\ref{def:ch4.finite-support-restriction}, Theorem~\ref{thm:ch4.finite-support-audit}, and
+Eq.~\eqref{eq:ch3.truncation-remainder-energy} \cite{stratton1941,hansen1988,harrington2001}. Narrowband phasors; aligned flux gauge; tolerance
+\(\varepsilon\in(0,1)\) \cite{jackson1999,devaney2004}. Pattern and capacity observables are linear functionals on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{collin2001,harrington2001}.
+
+\paragraph{Observable signatures.}
+Truncation manifests in pattern and channel domains as
+\begin{equation}
+\label{eq:ch4.truncation-observables}
+\Delta_{\mathrm{pat}}
+\sim
+\|\mathbf{R}_{\ell_{\max}}\|_{\mathrm{rad}},
+\qquad
+\Delta_{\mathrm{chan}}
+\sim
+d_{\mathrm{eff}}^{-1},
+\end{equation}
+with \(\mathbf{R}_{\ell_{\max}}\) the discarded tail from Eq.~\eqref{eq:ch3.truncation-remainder-energy} \cite{hansen1988,stratton1941,harrington2001}.
+Mathematically, Eq.~\eqref{eq:ch4.truncation-observables} links remainder energy to shoulder level and rank to channel granularity. Physically, elevated
+far-zone sidelobes and capacity knees at fixed SNR are consistent signatures of \(\mathcal{A}_{\mathrm{fs}}>1\) or \(d_{\mathrm{eff}}\) saturation
+\cite{devaney2004,jackson1999,collin2001}.
+
+\begin{theorem}[Truncation signature theorem]
+\label{thm:ch4.truncation-signature}
+If \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]>1\) or \(\ell_{\mathrm{listed}}>\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\), then measured patterns exhibit
+shoulder artifacts \(\Delta_{\mathrm{pat}}\) bounded below by Eq.~\eqref{eq:ch4.shoulder-level} even under perfect calibration \cite{hansen1988,stratton1941,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.finite-support-audit} and Eq.~\eqref{eq:ch3.truncation-remainder-energy} convert discarded tail mass into far-zone power
+\cite{hansen1988,stratton1941}. Unreachable high-\(\ell\) content cannot be absorbed by calibration on \(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001,devaney2004}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.truncation-signature} redirects shoulder diagnostics: when \(\mathcal{A}_{\mathrm{fs}}>1\), recalibration cannot remove artifacts;
+aperture enlargement or \(\ell_{\max}\) reduction is required \cite{stratton1941,hansen1988,jackson1999}.
+
+\paragraph{Shoulder level estimate.}
+\begin{equation}
+\label{eq:ch4.shoulder-level}
+\Delta_{\mathrm{pat}}/\|\mathbf{c}\|_{\mathrm{rad}}\sim\sqrt{\mathcal{A}_{\mathrm{fs}}-1},\qquad
+\mathcal{A}_{\mathrm{fs}}>1.
+\end{equation}
+Shoulder level scales with discarded tail mass \(\|\mathbf{R}_{\ell_{\max}}\|_{\mathrm{rad}}\) per Eq.~\eqref{eq:ch4.truncation-observables}
+\cite{hansen1988,stratton1941,harrington2001,devaney2004}.
+
+\paragraph{Channel capacity saturation.}
+In linear MIMO models,
+\begin{equation}
+\label{eq:ch4.capacity-saturation}
+C_{\mathrm{MIMO}}\le\sum_{n=1}^{d_{\mathrm{eff}}(\varepsilon)}\log\bigl(1+\mathrm{SNR}\,\sigma_{n}^{2}\bigr),
+\end{equation}
+so streams beyond \(d_{\mathrm{eff}}\) cannot raise capacity \cite{harrington2001,devaney2004,hansen1988,jackson1999,collin2001}. Mathematically,
+Eq.~\eqref{eq:ch4.capacity-saturation} is the water-filling bound on export singular values. Physically, it is the capacity knee laboratories observe
+when element count exceeds rank \cite{stratton1941,harrington2001}.
+
+\begin{lemma}[Capacity knee location]
+\label{lem:ch4.capacity-knee}
+Capacity curves knee near stream count \(N_{\mathrm{stream}}\approx d_{\mathrm{eff}}(\varepsilon)\) at fixed SNR and \((\Omega_{s},k_{0})\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941,jackson1999}.
+\end{lemma}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (afs) {$\mathcal{A}_{\mathrm{fs}}$};
+  \node[ch1box, right=11mm of afs] (tail) {$\mathbf{R}_{\ell_{\max}}$};
+  \node[ch1box, right=11mm of tail] (sh) {$\Delta_{\mathrm{pat}}$};
+  \draw[ch1flow] (afs) -- (tail) -- (sh);
+\end{tikzpicture}%
+}
+\caption{Finite-support excess drives tail remainder and observable shoulder artifacts.}
+\label{fig:ch4.truncation-signatures}
+\end{figure}
+
+Figure~\ref{fig:ch4.truncation-signatures} chains the pattern diagnostic: \(\mathcal{A}_{\mathrm{fs}}\) audit precedes calibration blame \cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (nel) {$N_{\mathrm{el}}$};
+  \node[ch1box, right=11mm of nel] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=11mm of deff] (knee) {capacity knee};
+  \draw[ch1flow] (nel) -- (deff);
+  \draw[ch1flow, dashed] (deff) -- (knee);
+\end{tikzpicture}%
+}
+\caption{Element count may exceed rank; capacity knees trace \(d_{\mathrm{eff}}\), not patch count.}
+\label{fig:ch4.capacity-knee-map}
+\end{figure}
+
+\paragraph{Worked illustration (pattern shoulders).}
+A target with plateau high-\(\ell\) tails produces shoulder artifacts when synthesized on \(B_{a}\): the artifact is a realizability signature, not a
+calibration error per Theorem~\ref{thm:ch4.truncation-signature} \cite{hansen1988,jackson1999,harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (capacity knee).}
+Adding streams beyond \(d_{\mathrm{eff}}=11\) on \(32\) patches does not raise \(C_{\mathrm{MIMO}}\) in the linear model per
+Eq.~\eqref{eq:ch4.capacity-saturation} \cite{harrington2001,jackson1999,collin2001}.
+
+\paragraph{Worked illustration (tail mass).}
+\(\mathcal{A}_{\mathrm{fs}}=1.3\) with \(\|\mathbf{R}_{\ell_{\max}}\|_{\mathrm{rad}}/\|\mathbf{c}\|=0.22\): shoulders visible in anechoic scan
+\cite{hansen1988,stratton1941,harrington2001}.
+
+\paragraph{Worked illustration (OAM plateau).}
+Target \(\ell=8\) plateau on \(k_{0}a=1.6\): \(\ell_{\mathrm{supp}}=5\) forces shoulder ring in measured pattern \cite{hansen1988,jackson1999,devaney2004}.
+
+\paragraph{Worked numerics (shoulder diagnostic).}
+\(\mathcal{A}_{\mathrm{fs}}=1.2\) predicts shoulder level \(\sim0.45\) relative to main beam in power via Eq.~\eqref{eq:ch4.shoulder-level}
+\cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (capacity).}
+\(d_{\mathrm{eff}}(10^{-2})=9\), \(N_{\mathrm{el}}=64\): capacity knee at \(\sim9\)--\(11\) streams per Lemma~\ref{lem:ch4.capacity-knee}
+\cite{harrington2001,devaney2004,collin2001,jackson1999}.
+
+\paragraph{Problem (diagnose truncation in data).}
+\textbf{Problem.} Measured pattern shows unexpected shoulders. Truncation or miscalibration?
+\textbf{Step 1.} Compute \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]\) \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Test tail mass Eq.~\eqref{eq:ch4.cumulative-tail-mass} \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} If audits fail, attribute to geometry rank before recalibrating \cite{jackson1999}.
+\textbf{Physical meaning.} Truncation has characteristic far-zone signatures \cite{hansen1988,stratton1941}.
+
+\paragraph{Problem (capacity knee).}
+\textbf{Problem.} Capacity curve knees at sixteen streams on \(32\) patches. Explain.
+\textbf{Step 1.} Estimate \(d_{\mathrm{eff}}(10^{-2})\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Compare to stream count \cite{devaney2004,collin2001}.
+\textbf{Step 3.} Attribute knee to rank saturation per Lemma~\ref{lem:ch4.capacity-knee} \cite{stratton1941}.
+\textbf{Physical meaning.} Capacity knees trace \(d_{\mathrm{eff}}\) \cite{harrington2001,jackson1999}.
+
+\paragraph{Problem (shoulder after calibration).}
+\textbf{Problem.} Shoulders persist after probe calibration. Next step?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.truncation-signature} \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Test \(\mathcal{A}_{\mathrm{fs}}\le1\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Reduce \(\ell_{\mathrm{listed}}\) or enlarge aperture \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Shoulders are realizability, not metrology \cite{stratton1941}.
+
+\paragraph{Problem (MIMO stream audit).}
+\textbf{Problem.} Vendor claims \(48\) streams; panel \(k_{0}^{2}A_{a}=15\). Plausible?
+\textbf{Step 1.} Bound \(N_{\mathrm{mode}}\) \cite{jackson1999,hansen1988}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Compare to Eq.~\eqref{eq:ch4.capacity-saturation} \cite{collin2001,stratton1941}.
+\textbf{Physical meaning.} Streams are rank-limited \cite{harrington2001}.
+
+\paragraph{Problem (tail watts).}
+\textbf{Problem.} Convert discarded \(\ell\) sectors to shoulder watts.
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch3.truncation-remainder-energy} \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Compute \(\|\mathbf{R}_{\ell_{\max}}\|_{\mathrm{rad}}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Predict \(\Delta_{\mathrm{pat}}\) via Eq.~\eqref{eq:ch4.shoulder-level} \cite{jackson1999}.
+\textbf{Physical meaning.} Tail energy is measurable \cite{stratton1941,collin2001}.
+
+\paragraph{Problem (anechoic ring).}
+\textbf{Problem.} OAM ring in chamber data on small aperture. Interpretation?
+\textbf{Step 1.} Read \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test Theorem~\ref{thm:ch4.truncation-signature} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Attribute ring to truncation artifact if \(\mathcal{A}_{\mathrm{fs}}>1\) \cite{jackson1999}.
+\textbf{Physical meaning.} Rings can be rank signatures \cite{harrington2001}.
+
+\paragraph{Sidelobe envelope from tail mass.}
+For \(\mathcal{A}_{\mathrm{fs}}>1\), sidelobe envelope level satisfies
+\(\Delta_{\mathrm{pat}}/\|\mathbf{c}\|_{\mathrm{rad}}\gtrsim\|\mathbf{R}_{\ell_{\max}}\|_{\mathrm{rad}}/\|\mathbf{c}\|_{\mathrm{rad}}\) per
+Eqs.~\eqref{eq:ch4.truncation-observables} and \eqref{eq:ch4.shoulder-level} \cite{hansen1988,stratton1941,harrington2001,devaney2004,jackson1999}.
+Calibration removes probe gain errors, not tail energy \cite{harrington2001,collin2001}.
+
+\paragraph{Mutual coupling overlay.}
+Mutual coupling reshuffles \(\sigma_{n}\) without removing capacity knees at \(N_{\mathrm{stream}}\approx d_{\mathrm{eff}}\) on fixed \((\Omega_{s},k_{0})\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941}. Coupling-aware calibration improves conditioning; it does not manufacture export channels
+\cite{jackson1999,collin2001}.
+
+\begin{corollary}[Observable rank saturation]
+\label{cor:ch4.observable-rank-sat}
+Any observable linear functional on \(\mathcal{F}_{\mathrm{rad}}\) cannot resolve more than \(d_{\mathrm{eff}}(\varepsilon)\) independent export directions
+above \(\varepsilon\sigma_{1}\) on declared \((\Omega_{s},k_{0})\) \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+\end{corollary}
+
+\paragraph{Worked illustration (mutual coupling).}
+Coupling matrix conditioned; capacity knee remains at \(d_{\mathrm{eff}}=10\) on \(24\) patches \cite{harrington2001,devaney2004,hansen1988,collin2001}.
+
+\paragraph{Worked illustration (grating lobes versus truncation).}
+Grating lobes from periodic arrays are distinct from truncation shoulders; \(\mathcal{A}_{\mathrm{fs}}\) audit separates realizability shoulders from lattice artifacts
+\cite{hansen1988,stratton1941,harrington2001,jackson1999,devaney2004}.
+
+\paragraph{Worked numerics (tail-to-shoulder).}
+\(\|\mathbf{R}_{\ell_{\max}}\|_{\mathrm{rad}}/\|\mathbf{c}\|=0.18\) predicts \(\Delta_{\mathrm{pat}}\approx0.42\) in power via Eq.~\eqref{eq:ch4.shoulder-level}
+\cite{hansen1988,harrington2001,stratton1941,devaney2004,collin2001}.
+
+\paragraph{Problem (coupling versus rank).}
+\textbf{Problem.} Coupling calibration raises capacity slightly but knee unchanged. Explain.
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.capacity-knee} \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Note \(\sigma_{n}\) reordering only \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Knee tracks \(d_{\mathrm{eff}}\) \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Coupling conditions, does not create rank \cite{harrington2001}.
+
+\paragraph{Problem (grating versus shoulder).}
+\textbf{Problem.} Unexpected far sidelobe on periodic array. Truncation or grating?
+\textbf{Step 1.} Compute \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]\) \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Test lattice period versus \(\lambda\) \cite{harrington2001,collin2001}.
+\textbf{Step 3.} Attribute per dominant mechanism \cite{devaney2004,jackson1999}.
+\textbf{Physical meaning.} Two distinct far-zone mechanisms \cite{stratton1941}.
+
+\paragraph{Problem (SNR sweep).}
+\textbf{Problem.} Capacity rises with SNR but stream count at knee fixed. Explain.
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.capacity-saturation} \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Note \(d_{\mathrm{eff}}\) SNR-independent at fixed \((\Omega_{s},k_{0})\) \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Knee location unchanged; slope rises \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Rank sets knees; SNR sets slope \cite{harrington2001}.
+
+\paragraph{Pattern moment saturation.}
+Low-order pattern moments saturate when \(d_{\mathrm{eff}}\) is exhausted: adding higher moments without rank growth produces shoulders rather than main-beam
+sharpening \cite{hansen1988,stratton1941,harrington2001,devaney2004,jackson1999}. Moment fits must respect \(\ell_{\mathrm{supp}}\) ceiling
+\cite{harrington2001,collin2001}.
+
+\paragraph{Worked illustration (moment fit).}
+Fit through \(\ell=12\) on \(k_{0}a=1.4\) with \(\ell_{\mathrm{supp}}=5\): shoulders at \(\theta\approx\pm40^{\circ}\) per Theorem~\ref{thm:ch4.truncation-signature}
+\cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999}.
+
+\paragraph{Worked numerics (stream knee).}
+\(N_{\mathrm{el}}=48\), \(d_{\mathrm{eff}}=14\): Shannon capacity knee at stream \(14\)--\(16\); additional streams add \(\le0.3\,\mathrm{bps/Hz}\) per
+Lemma~\ref{lem:ch4.capacity-knee} \cite{harrington2001,devaney2004,hansen1988,collin2001,jackson1999}.
+
+\paragraph{Problem (moment overfit).}
+\textbf{Problem.} Pattern fit uses \(\ell_{\max}=15\) on small aperture. Artifact?
+\textbf{Step 1.} Read \(\ell_{\mathrm{supp}}\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.truncation-signature} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Truncate fit to supported order \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Overfit creates shoulders \cite{harrington2001}.
+
+\paragraph{Problem (observable saturation).}
+\textbf{Problem.} Main beam sharpens but shoulders grow. Interpretation?
+\textbf{Step 1.} Test \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]\) \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Apply Corollary~\ref{cor:ch4.observable-rank-sat} \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Attribute to rank saturation \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Sharpness trades with shoulders on fixed rank \cite{stratton1941}.
+
+\paragraph{Problem (chamber SNR floor).}
+\textbf{Problem.} Shoulders visible above SNR floor. Truncation confirmed?
+\textbf{Step 1.} Compare \(\Delta_{\mathrm{pat}}\) to Eq.~\eqref{eq:ch4.shoulder-level} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Test \(\mathcal{A}_{\mathrm{fs}}>1\) \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Confirm realizability signature \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Shoulders can exceed SNR floor \cite{harrington2001}.
+
+\paragraph{Philosophical closure (observable rank).}
+Laboratories do not read singular values directly; they read shoulders, knees, and saturation plateaus that are projections of the same truncation
+architecture \cite{stratton1941,harrington2001,hansen1988,jackson1999,devaney2004}. Treating those signatures as calibration defects delays the
+realizability diagnosis that geometry rank already predicts \cite{collin2001,stratton1941}.
+
+\paragraph{Far-zone power budget.}
+Truncation redistributes power from main beam to shoulders per Eq.~\eqref{eq:ch3.truncation-remainder-energy}; total radiated power is conserved but
+angular allocation violates target weights when \(\mathcal{A}_{\mathrm{fs}}>1\) \cite{hansen1988,stratton1941,harrington2001,devaney2004,jackson1999,collin2001}.
+Pattern error metrics must separate main-lobe fit from shoulder floor \cite{harrington2001,stratton1941}.
+
+\paragraph{Worked illustration (power budget).}
+Target allocates \(15\%\) to \(\ell>6\) sectors; \(\ell_{\mathrm{supp}}=5\) forces \(12\%\) into shoulders instead \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999}.
+
+\paragraph{Problem (power redistribution).}
+\textbf{Problem.} Main lobe matches; shoulders elevated. Truncation?
+\textbf{Step 1.} Compute tail mass Eq.~\eqref{eq:ch3.truncation-remainder-energy} \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Test \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Attribute shoulders to rank \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Power goes to shoulders \cite{stratton1941,harrington2001}.
+
+\paragraph{Problem (pattern error metric).}
+\textbf{Problem.} RMS pattern error low but shoulders visible. Explain.
+\textbf{Step 1.} Separate main-lobe and shoulder metrics \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.truncation-signature} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Report shoulder floor explicitly \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} RMS can hide shoulders \cite{harrington2001,stratton1941}.
+
+\begin{corollary}[Calibration cannot remove rank shoulders]
+\label{cor:ch4.calib-not-rank}
+When \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]>1\), probe calibration cannot reduce \(\Delta_{\mathrm{pat}}\) below Eq.~\eqref{eq:ch4.shoulder-level}
+\cite{hansen1988,stratton1941,harrington2001,devaney2004,jackson1999}.
+\end{corollary}
+
+\paragraph{Azimuthal ripple signature.}
+High-\(\ell\) truncation on disks produces azimuthal ripple in measured patterns at \(\Delta\theta\sim\pi/\ell_{\mathrm{supp}}\) \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999,collin2001}. Ripple period diagnoses supported order without SVD access
+\cite{harrington2001,hansen1988}.
+
+\paragraph{Worked numerics (ripple period).}
+\(\ell_{\mathrm{supp}}=6\) predicts ripple period \(\approx30^{\circ}\) in azimuth scan; observed period matches within measurement tolerance
+\cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Problem (ripple diagnosis).}
+\textbf{Problem.} Azimuthal ripple in chamber data. Infer \(\ell_{\mathrm{supp}}\)?
+\textbf{Step 1.} Estimate ripple period \(\Delta\theta\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Infer \(\ell_{\mathrm{supp}}\approx\pi/\Delta\theta\) \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Cross-check SVD rank \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Ripple is a rank signature \cite{harrington2001,stratton1941}.
+
+\paragraph{Validity.}
+Eqs.~\eqref{eq:ch4.truncation-observables}--\eqref{eq:ch4.capacity-saturation} are narrowband linear models \cite{stratton1941}. Broadband pulses and
+nonlinear receivers require frequency-dependent \(\mathcal{B}_{\mathrm{fs}}(\omega)\) families not developed here \cite{jackson1999,harrington2001,devaney2004}.
+Mutual coupling modifies \(\sigma_{n}\) ordering without removing capacity knees tied to \(d_{\mathrm{eff}}\) \cite{hansen1988,collin2001}.

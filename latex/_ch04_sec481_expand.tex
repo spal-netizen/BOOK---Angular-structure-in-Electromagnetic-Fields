@@ -1,0 +1,248 @@
+\subsection{Mode count versus aperture and frequency}
+\label{sec:ch481}
+% TOC tag: [HOME]
+
+Mode-count laws connect aperture area, wavelength, and integer budgets in array and MIMO design \cite{collin2001,jackson1999,hansen1988}.
+Subsection~\ref{sec:ch481} restates those laws as upper bounds on \(d_{\mathrm{eff}}(\varepsilon)\), importing volume and area truncation from
+Section~\ref{sec:ch46} \cite{stratton1941,harrington2001,devaney2004}. Elements sample the aperture; modes bound export cardinality; operator rank
+\(d_{\mathrm{eff}}\) counts directions above \(\varepsilon\sigma_{1}\) \cite{collin2001,hansen1988,harrington2001}. Confusing the three produces
+hardware budgets that exceed radiative information capacity \cite{devaney2004,stratton1941}.
+
+\paragraph{Assumptions.}
+Presuppose Eqs.~\eqref{eq:ch4.truncation-volume-scaling}, \eqref{eq:ch4.truncation-area-scaling}, Definition~\ref{def:ch4.effective-em-dimension}
+\cite{stratton1941,hansen1988,harrington2001}. Aligned flux gauge on \(\mathcal{C}\); tolerance \(\varepsilon\in(0,1)\) \cite{devaney2004,jackson1999}.
+Phase-only retuning does not raise mode ceilings on fixed \((\Omega_{s},k_{0})\) \cite{devaney2004,harrington2001,stratton1941}.
+
+\paragraph{Mode-count bounds.}
+Volume and area laws ceiling listing cardinality:
+\begin{equation}
+\label{eq:ch4.mode-count-volume}
+N_{\mathrm{mode}}^{\mathrm{(vol)}}(\varepsilon)\ \le\ C_{V}(\varepsilon)\,(k_{0}a)^{3},
+\end{equation}
+\begin{equation}
+\label{eq:ch4.mode-count-area}
+N_{\mathrm{mode}}^{\mathrm{(ap)}}(\varepsilon)\ \le\ C_{A}(\varepsilon)\,k_{0}^{2}A_{a},
+\end{equation}
+with \(N_{\mathrm{mode}}\ge d_{\mathrm{eff}}(\varepsilon)\) as analytic ceiling in aligned gauge \cite{collin2001,jackson1999,hansen1988,harrington2001}.
+Mathematically, Eqs.~\eqref{eq:ch4.mode-count-volume}--\eqref{eq:ch4.mode-count-area} are Weyl-type counting bounds. Physically, they limit how many
+independent propagating channels the geometry can support at tolerance \(\varepsilon\) \cite{stratton1941,devaney2004}.
+
+\begin{theorem}[Mode-count monotonicity]
+\label{thm:ch4.mode-count-monotone}
+At fixed \(\varepsilon\), \(N_{\mathrm{mode}}^{\mathrm{(vol)}}\) and \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) are non-decreasing in \(k_{0}\) and aperture size
+until dispersion alters \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941,jackson1999,hansen1988}. Phase-only tuning does not raise \(N_{\mathrm{mode}}\)
+\cite{devaney2004,harrington2001}.
+\end{theorem}
+
+\begin{theorem}[Mode ceiling dominates rank]
+\label{thm:ch4.mode-ceiling-rank}
+\(d_{\mathrm{eff}}(\varepsilon)\le N_{\mathrm{mode}}^{\mathrm{(vol)}}(\varepsilon)\le C_{V}(\varepsilon)(k_{0}a)^{3}\) and
+\(d_{\mathrm{eff}}(\varepsilon)\le N_{\mathrm{mode}}^{\mathrm{(ap)}}(\varepsilon)\le C_{A}(\varepsilon)k_{0}^{2}A_{a}\) on aligned gauge
+\cite{collin2001,jackson1999,hansen1988,harrington2001,stratton1941}.
+\end{theorem}
+\begin{proof}
+Definition~\ref{def:ch4.effective-em-dimension} and Eqs.~\eqref{eq:ch4.truncation-volume-scaling}, \eqref{eq:ch4.truncation-area-scaling}
+\cite{stratton1941,hansen1988,harrington2001}. Export rank cannot exceed mode-count ceiling \cite{devaney2004}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.mode-ceiling-rank} is the array honesty law: vendor stream counts must be compared to \(N_{\mathrm{mode}}\) and measured
+\(d_{\mathrm{eff}}\), not to element count alone \cite{collin2001,harrington2001,hansen1988}. Volume and area ceilings are not interchangeable:
+compact three-dimensional sources are bounded by Eq.~\eqref{eq:ch4.mode-count-volume}, while planar apertures obey
+Eq.~\eqref{eq:ch4.mode-count-area} \cite{jackson1999,stratton1941,hansen1988}. Synthesis audits must declare which geometry class governs the
+declared \(\Omega_{s}\) \cite{harrington2001,devaney2004}.
+
+\paragraph{Volume--area dominance.}
+For thin apertures with thickness \(h\ll a\),
+\begin{equation}
+\label{eq:ch4.vol-area-dominance}
+N_{\mathrm{mode}}^{\mathrm{(vol)}}\approx\frac{4\pi}{3}\frac{h}{a}\,N_{\mathrm{mode}}^{\mathrm{(ap)}},
+\end{equation}
+so area law typically sets the operative ceiling on panel arrays while volume law governs compact resonators \cite{collin2001,jackson1999,hansen1988,harrington2001}.
+
+\paragraph{Rank--mode gap certificate.}
+\begin{equation}
+\label{eq:ch4.mode-rank-gap}
+\Delta_{\mathrm{mr}}=N_{\mathrm{mode}}(\varepsilon)-d_{\mathrm{eff}}(\varepsilon)\ \ge\ 0
+\end{equation}
+measures listed modes below synthesis floor \cite{devaney2004,hansen1988}. Large \(\Delta_{\mathrm{mr}}\) with small \(d_{\mathrm{eff}}\) signals over-listing
+\cite{stratton1941,harrington2001}.
+
+\paragraph{Design margin.}
+Engineering margin applies to mode budget, not to rank:
+\begin{equation}
+\label{eq:ch4.mode-count-margin}
+N_{\mathrm{design}}=\lfloor\eta_{\mathrm{margin}}\,N_{\mathrm{mode}}(\varepsilon)\rfloor,\qquad 0<\eta_{\mathrm{margin}}<1.
+\end{equation}
+\begin{proposition}[Margin monotonicity]
+\label{prop:ch4.mode-margin-monotone}
+\(N_{\mathrm{design}}\) is non-decreasing in \(k_{0}\) and aperture at fixed \(\eta_{\mathrm{margin}}\) \cite{stratton1941,jackson1999,hansen1988,harrington2001}.
+\end{proposition}
+
+\paragraph{Element oversampling audit.}
+\begin{equation}
+\label{eq:ch4.element-mode-inequality}
+N_{\mathrm{el}}\ge N_{\mathrm{mode}}(\varepsilon)\ \not\Rightarrow\ d_{\mathrm{eff}}(\varepsilon)=N_{\mathrm{el}},
+\end{equation}
+because \(d_{\mathrm{eff}}\) is operator rank, not element count \cite{collin2001,harrington2001,devaney2004}. Oversampled MoM bases inflate \(N_{\mathrm{el}}\)
+without raising \(\sigma_{d_{\mathrm{eff}}+1}/\sigma_{1}\) above \(\varepsilon\) \cite{hansen1988,stratton1941}.
+
+\paragraph{Frequency scaling.}
+At fixed aperture area \(A_{a}\),
+\begin{equation}
+\label{eq:ch4.mode-freq-scaling}
+\frac{N_{\mathrm{mode}}(\omega_{2})}{N_{\mathrm{mode}}(\omega_{1})}=\left(\frac{\omega_{2}}{\omega_{1}}\right)^{2}.
+\end{equation}
+Doubling frequency quadruples area-law mode budget at fixed footprint \cite{jackson1999,hansen1988,collin2001,harrington2001}.
+
+\begin{lemma}[Stream count bound]
+\label{lem:ch4.stream-bound}
+Deployable MIMO streams satisfy \(N_{\mathrm{stream}}\le\min(N_{\mathrm{design}},d_{\mathrm{eff}}(\varepsilon))\) on declared \((\Omega_{s},k_{0},\varepsilon)\)
+\cite{harrington2001,devaney2004,collin2001,hansen1988,stratton1941}.
+\end{lemma}
+\begin{proof}
+\(N_{\mathrm{design}}\) is an engineering truncation of \(N_{\mathrm{mode}}\); deployable streams cannot exceed measured \(d_{\mathrm{eff}}(\varepsilon)\)
+on \(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001,devaney2004,collin2001}. Margin lowers listing; rank sets export \cite{stratton1941,hansen1988}.
+\end{proof}
+
+Lemma~\ref{lem:ch4.stream-bound} is the MIMO realizability certificate: vendor stream counts above \(\min(N_{\mathrm{design}},d_{\mathrm{eff}})\) are
+listing claims, not physics guarantees \cite{collin2001,harrington2001,hansen1988,devaney2004}.
+
+\begin{theorem}[Rank monotonicity in electrical size]
+\label{thm:ch4.rank-ka-monotone}
+At fixed \(\varepsilon\) and aperture class, \(d_{\mathrm{eff}}(\varepsilon)\) is non-decreasing in \(k_{0}a\) until material dispersion alters
+\(\mathcal{J}_{\mathrm{real}}\) \cite{hansen1988,harrington2001,stratton1941,devaney2004,jackson1999}.
+\end{theorem}
+\begin{proof}
+Singular values \(\sigma_{n}\) of \(\boldsymbol{\Gamma}_\omega\) are non-decreasing in \(k_{0}a\) on fixed aperture class until dispersion alters
+\(\mathcal{J}_{\mathrm{real}}\) \cite{hansen1988,harrington2001}. \(d_{\mathrm{eff}}(\varepsilon)\) counts modes above \(\varepsilon\sigma_{1}\)
+\cite{stratton1941,devaney2004,jackson1999}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.rank-ka-monotone} pairs with Theorem~\ref{thm:ch4.mode-count-monotone}: electrical enlargement raises listing ceilings and measured
+rank together, but \(d_{\mathrm{eff}}\le N_{\mathrm{mode}}\) always \cite{collin2001,harrington2001,hansen1988,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (ka) {$k_{0}a$};
+  \node[ch1box, right=11mm of ka] (nm) {$N_{\mathrm{mode}}$};
+  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (ka) -- (nm) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch481}: electrical size sets mode budget; \(d_{\mathrm{eff}}\) is measured rank.}
+\label{fig:ch4.mode-count-bound}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (nel) {$N_{\mathrm{el}}$};
+  \node[ch1box, right=11mm of nel] (nm) {$N_{\mathrm{mode}}$};
+  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (nel) -- (nm);
+  \draw[ch1flow] (nm) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch481}: elements \(\ge\) modes \(\ge\) rank; only \(d_{\mathrm{eff}}\) is physics-limited.}
+\label{fig:ch4.element-mode-rank}
+\end{figure}
+
+Figure~\ref{fig:ch4.element-mode-rank} is the MIMO audit chain: element count is hardware; \(d_{\mathrm{eff}}\) is the governing physics certificate
+\cite{collin2001,harrington2001,hansen1988,devaney2004}.
+
+\paragraph{Worked illustration (5G panel).}
+\(k_{0}W\approx3\): \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\sim\mathcal{O}(10)\)--\(\mathcal{O}(30)\) \cite{collin2001,harrington2001,hansen1988,jackson1999}.
+
+\paragraph{Worked illustration (panel audit).}
+\(8\times8\) patches (\(N_{\mathrm{el}}=64\)), \(k_{0}W=2.5\): \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\approx20\), \(d_{\mathrm{eff}}(10^{-2})=11\)
+\cite{collin2001,harrington2001,hansen1988,stratton1941}.
+
+\paragraph{Worked illustration (margin versus rank).}
+\(N_{\mathrm{mode}}=30\), \(\eta_{\mathrm{margin}}=0.8\Rightarrow N_{\mathrm{design}}=24\), but \(d_{\mathrm{eff}}=9\): margin cannot exceed rank
+\cite{harrington2001,stratton1941,devaney2004}.
+
+\paragraph{Worked illustration (frequency doubling).}
+\(k_{0}^{2}A_{a}=12\) at 3.5\,GHz \(\Rightarrow N_{\mathrm{mode}}^{\mathrm{(ap)}}\approx18\); at 7\,GHz \(\Rightarrow\) quadruple area factor in
+Eq.~\eqref{eq:ch4.mode-freq-scaling} \cite{jackson1999,hansen1988,collin2001}.
+
+\paragraph{Worked numerics (gap audit).}
+\(N_{\mathrm{mode}}=22\), \(d_{\mathrm{eff}}=9\), \(\Delta_{\mathrm{mr}}=13\): \(59\%\) of mode budget is below synthesis floor \cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (volume versus area).}
+Compact \(k_{0}a=1.2\) resonator: \(N_{\mathrm{mode}}^{\mathrm{(vol)}}\approx14\) per Eq.~\eqref{eq:ch4.mode-count-volume}; coplanar patch of same
+footprint yields \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\approx9\) per Eq.~\eqref{eq:ch4.vol-area-dominance} \cite{collin2001,jackson1999,hansen1988,harrington2001}.
+
+\paragraph{Worked illustration (stream bound).}
+\(N_{\mathrm{design}}=18\) from \(\eta_{\mathrm{margin}}=0.75\) on \(N_{\mathrm{mode}}=24\), but \(d_{\mathrm{eff}}(10^{-2})=10\): Lemma~\ref{lem:ch4.stream-bound}
+caps deployable streams at \(10\) \cite{harrington2001,devaney2004,collin2001,stratton1941}.
+
+\paragraph{Worked numerics (electrical-size sweep).}
+\(k_{0}W=1.5,2.0,2.5\Rightarrow N_{\mathrm{mode}}^{\mathrm{(ap)}}\approx7,12,19\) while \(d_{\mathrm{eff}}(10^{-2})=4,7,11\): rank tracks mode budget per
+Theorem~\ref{thm:ch4.rank-ka-monotone} but \(\Delta_{\mathrm{mr}}\) remains positive at each point \cite{hansen1988,harrington2001,devaney2004,collin2001}.
+
+\paragraph{Problem (elements versus modes).}
+\textbf{Problem.} \(64\) patches claim \(64\) beams. Audit.
+\textbf{Step 1.} Compute \(k_{0}^{2}A_{a}\) \cite{jackson1999,stratton1941}.
+\textbf{Step 2.} Bound \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) via Eq.~\eqref{eq:ch4.mode-count-area} \cite{hansen1988,harrington2001}.
+\textbf{Step 3.} Report \(d_{\mathrm{eff}}\) from SVD \cite{devaney2004}.
+\textbf{Physical meaning.} Elements sample; modes bound \cite{collin2001}.
+
+\paragraph{Problem (stream count).}
+\textbf{Problem.} MIMO streams at \(\eta_{\mathrm{margin}}=0.75\), \(N_{\mathrm{mode}}=24\)?
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.mode-count-margin} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Apply Lemma~\ref{lem:ch4.stream-bound} \cite{devaney2004,collin2001}.
+\textbf{Step 3.} Report \(\min(N_{\mathrm{design}},d_{\mathrm{eff}})\) \cite{stratton1941}.
+\textbf{Physical meaning.} Margin is engineering; rank is physics \cite{harrington2001}.
+
+\paragraph{Problem (beam claim audit).}
+\textbf{Problem.} Vendor claims \(48\) MU-MIMO streams on \(k_{0}^{2}A_{a}=15\).
+\textbf{Step 1.} Bound \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) \cite{jackson1999,hansen1988}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}(\varepsilon)\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Report Lemma~\ref{lem:ch4.stream-bound} result \cite{stratton1941,collin2001}.
+\textbf{Physical meaning.} Stream count is rank-limited \cite{hansen1988}.
+
+\paragraph{Problem (frequency doubling).}
+\textbf{Problem.} Double \(\omega\) at fixed aperture. Mode budget change?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.mode-freq-scaling} \cite{jackson1999,hansen1988}.
+\textbf{Step 2.} Recompute \(N_{\mathrm{mode}}\) and \(d_{\mathrm{eff}}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Update \(N_{\mathrm{design}}\) \cite{stratton1941,collin2001}.
+\textbf{Physical meaning.} Electrical size sets mode budget \cite{harrington2001}.
+
+\paragraph{Problem (gap certificate).}
+\textbf{Problem.} \(N_{\mathrm{mode}}=30\), \(d_{\mathrm{eff}}=8\). Interpret \(\Delta_{\mathrm{mr}}\).
+\textbf{Step 1.} Compute Eq.~\eqref{eq:ch4.mode-rank-gap} \cite{hansen1988,devaney2004}.
+\textbf{Step 2.} Conclude over-listing if \(\Delta_{\mathrm{mr}}\gg d_{\mathrm{eff}}\) \cite{harrington2001,stratton1941}.
+\textbf{Step 3.} Truncate chart to \(d_{\mathrm{eff}}\) for synthesis \cite{devaney2004}.
+\textbf{Physical meaning.} Gap measures listing excess \cite{hansen1988}.
+
+\paragraph{Problem (phase-only MIMO).}
+\textbf{Problem.} Phase-only metasurface claims doubled streams. Valid?
+\textbf{Step 1.} Apply Corollary~\ref{cor:ch4.phase-no-mode-gain} \cite{devaney2004,harrington2001}.
+\textbf{Step 2.} Verify \(d_{\mathrm{eff}}\) unchanged \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Reject stream-doubling claim \cite{collin2001}.
+\textbf{Physical meaning.} Phase retunes within fixed rank \cite{harrington2001}.
+
+\paragraph{Problem (rank--mode audit).}
+\textbf{Problem.} Base station \(k_{0}W=3.2\), \(N_{\mathrm{el}}=128\). Certify streams.
+\textbf{Step 1.} Bound \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) via Eq.~\eqref{eq:ch4.mode-count-area} \cite{jackson1999,hansen1988}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}(\varepsilon)\) and compute \(\Delta_{\mathrm{mr}}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Apply Lemma~\ref{lem:ch4.stream-bound} \cite{collin2001,stratton1941}.
+\textbf{Physical meaning.} Element oversampling does not raise rank \cite{hansen1988}.
+
+\paragraph{Philosophical closure (enumeration versus export).}
+Mode-count laws answer how many indices geometry can support; \(d_{\mathrm{eff}}\) answers how many carry export power above the noise floor
+\cite{hansen1988,stratton1941,harrington2001,devaney2004}. Every array synthesis memo must pair \(N_{\mathrm{mode}}\), \(N_{\mathrm{design}}\), and measured
+\(d_{\mathrm{eff}}\) with \(\Delta_{\mathrm{mr}}\) \cite{collin2001,stratton1941}.
+
+\begin{corollary}[Phase-only cannot raise mode ceiling]
+\label{cor:ch4.phase-no-mode-gain}
+At fixed \((\Omega_{s},k_{0},\varepsilon)\), phase-only retuning leaves \(N_{\mathrm{mode}}(\varepsilon)\) and \(d_{\mathrm{eff}}(\varepsilon)\) unchanged
+\cite{devaney2004,harrington2001,stratton1941,hansen1988}.
+\end{corollary}
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.mode-count-monotone} is asymptotic for \(k_{0}D_{s}\gtrsim1\) \cite{jackson1999,hansen1988}. Dispersion and surface waves modify
+prefactors \(C_{V},C_{A}\) without changing exponents on fixed \(\mathcal{J}_{\mathrm{real}}\) class \cite{stratton1941,harrington2001,devaney2004,collin2001}.

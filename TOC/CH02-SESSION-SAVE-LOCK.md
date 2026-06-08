@@ -2,11 +2,13 @@
 
 
 
-**Status:** **COMPLETE AND LOCKED — CHAPTER 2**  
+**Status:** **ACCESSIBILITY-AUDIT REMEDIATED — CHAPTER 2**  
 
 **Save date:** 2026-05-31  
 
 **Lock date:** 2026-05-31  
+
+**Remediation date:** 2026-05-29 (`TOC/CH02-ACCESSIBILITY-AUDIT-REMEDIATION-LOCK.md`)
 
 **Sign-off:** `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md`  
 

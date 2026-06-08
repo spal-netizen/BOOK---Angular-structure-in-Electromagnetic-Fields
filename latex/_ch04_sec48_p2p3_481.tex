@@ -1,0 +1,65 @@
+
+\paragraph{Rank--mode gap certificate.}
+Mode-count ceilings bound listing cardinality; \(d_{\mathrm{eff}}(\varepsilon)\) counts export directions above \(\varepsilon\sigma_{1}\)
+\cite{hansen1988,harrington2001,stratton1941}. The gap
+\begin{equation}
+\label{eq:ch4.mode-rank-gap}
+\Delta_{\mathrm{mr}}=N_{\mathrm{mode}}(\varepsilon)-d_{\mathrm{eff}}(\varepsilon)\ \ge\ 0
+\end{equation}
+measures how many listed modes are below the synthesis floor \cite{devaney2004,hansen1988}. Large \(\Delta_{\mathrm{mr}}\) with small
+\(d_{\mathrm{eff}}\) signals over-listing: the chart enumerates more indices than geometry exports \cite{stratton1941,harrington2001}.
+
+\begin{theorem}[Mode ceiling dominates rank]
+\label{thm:ch4.mode-ceiling-rank}
+\(d_{\mathrm{eff}}(\varepsilon)\le N_{\mathrm{mode}}^{\mathrm{(vol)}}(\varepsilon)\le C_{V}(\varepsilon)(k_{0}a)^{3}\) and
+\(d_{\mathrm{eff}}(\varepsilon)\le N_{\mathrm{mode}}^{\mathrm{(ap)}}(\varepsilon)\le C_{A}(\varepsilon)k_{0}^{2}A_{a}\) on aligned gauge
+\cite{collin2001,jackson1999,hansen1988,harrington2001,stratton1941}.
+\end{theorem}
+\begin{proof}
+Definition~\ref{def:ch4.effective-em-dimension} and volume/area truncation laws Eqs.~\eqref{eq:ch4.truncation-volume-scaling},
+\eqref{eq:ch4.truncation-area-scaling} \cite{stratton1941,hansen1988}.
+\end{proof}
+
+\paragraph{Element oversampling audit.}
+Array with \(N_{\mathrm{el}}\) feeds satisfies
+\begin{equation}
+\label{eq:ch4.element-mode-inequality}
+N_{\mathrm{el}}\ge N_{\mathrm{mode}}(\varepsilon)\ \not\Rightarrow\ d_{\mathrm{eff}}(\varepsilon)=N_{\mathrm{el}},
+\end{equation}
+because \(d_{\mathrm{eff}}\) is operator rank, not element count \cite{collin2001,harrington2001,devaney2004}. Oversampled MoM bases inflate
+\(N_{\mathrm{el}}\) without raising \(\sigma_{d_{\mathrm{eff}}+1}/\sigma_{1}\) above \(\varepsilon\) \cite{hansen1988}.
+
+\paragraph{Worked illustration (panel audit).}
+\(8\times8\) patch array (\(N_{\mathrm{el}}=64\)) on \(k_{0}W=2.5\): \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\approx20\), measured
+\(d_{\mathrm{eff}}(10^{-2})=11\) \cite{collin2001,harrington2001,hansen1988}. Claiming \(64\) independent beams violates
+Theorem~\ref{thm:ch4.mode-ceiling-rank} \cite{devaney2004}.
+
+\paragraph{Worked illustration (margin versus rank).}
+\(N_{\mathrm{mode}}=30\), \(\eta_{\mathrm{margin}}=0.8\Rightarrow N_{\mathrm{design}}=24\), but \(d_{\mathrm{eff}}=9\): engineering margin
+cannot exceed physics rank \cite{harrington2001,stratton1941}.
+
+\paragraph{Problem (beam claim audit).}
+\textbf{Problem.} Vendor claims \(48\) MU-MIMO streams on \(k_{0}^{2}A_{a}=15\).
+\textbf{Step 1.} Bound \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) via Eq.~\eqref{eq:ch4.mode-count-area} \cite{jackson1999,hansen1988}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}(\varepsilon)\) from \(\boldsymbol{\Gamma}_\omega\) SVD \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Report \(\min(N_{\mathrm{design}},d_{\mathrm{eff}})\) \cite{stratton1941}.
+\textbf{Physical meaning.} Stream count is rank-limited, not element-limited \cite{collin2001}.
+
+\paragraph{Problem (frequency doubling).}
+\textbf{Problem.} Double \(\omega\) at fixed aperture. Mode budget change?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.mode-freq-scaling} \cite{jackson1999,hansen1988}.
+\textbf{Step 2.} Recompute \(N_{\mathrm{mode}}\) and \(d_{\mathrm{eff}}\) \cite{harrington2001}.
+\textbf{Step 3.} Update \(N_{\mathrm{design}}\) via Eq.~\eqref{eq:ch4.mode-count-margin} \cite{devaney2004}.
+\textbf{Physical meaning.} Electrical size sets mode budget \cite{stratton1941}.
+
+\paragraph{Philosophical closure (enumeration versus export).}
+Mode-count laws answer how many indices the geometry can support at tolerance \(\varepsilon\); \(d_{\mathrm{eff}}\) answers how many carry
+export power above the noise floor \cite{hansen1988,stratton1941,harrington2001}. Confusing the two produces hardware budgets that exceed
+radiative information capacity \cite{devaney2004,collin2001}. Every array synthesis memo must pair \(N_{\mathrm{mode}}\) with measured
+\(d_{\mathrm{eff}}\) and report \(\Delta_{\mathrm{mr}}\) \cite{harrington2001}.
+
+\begin{corollary}[Phase-only cannot raise mode ceiling]
+\label{cor:ch4.phase-no-mode-gain}
+At fixed \((\Omega_{s},k_{0},\varepsilon)\), phase-only retuning leaves \(N_{\mathrm{mode}}(\varepsilon)\) and \(d_{\mathrm{eff}}(\varepsilon)\) unchanged
+\cite{devaney2004,harrington2001,stratton1941,hansen1988}.
+\end{corollary}

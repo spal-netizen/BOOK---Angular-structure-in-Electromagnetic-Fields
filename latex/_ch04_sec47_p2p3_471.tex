@@ -1,0 +1,66 @@
+
+\paragraph{Reachable subspace projection.}
+Decompose every target \(\mathbf{c}_{\mathrm{target}}\in\mathbb{C}^{I}\) as
+\begin{equation}
+\label{eq:ch4.reachable-projection}
+\mathbf{c}_{\mathrm{target}}=\mathcal{P}_{\mathrm{reach}}\mathbf{c}_{\mathrm{target}}+\mathbf{c}_{\mathrm{unreach}},\qquad
+\mathbf{c}_{\mathrm{unreach}}\in\mathcal{U}_{\mathrm{unreach}},
+\end{equation}
+with \(\mathcal{P}_{\mathrm{reach}}=\boldsymbol{\Gamma}_\omega\boldsymbol{\Gamma}_\omega^{\dagger}\) on the coefficient chart
+\cite{harrington2001,stratton1941,devaney2004}. Realizability is equivalent to \(\mathbf{c}_{\mathrm{unreach}}=\mathbf{0}\)
+\cite{hansen1988}. MoM solvers that do not project onto \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) fit unreachable components as
+numerical noise \cite{harrington2001}.
+
+\begin{theorem}[Unreachable component obstruction]
+\label{thm:ch4.unreachable-obstruction}
+If \(\|\mathbf{c}_{\mathrm{unreach}}\|_{\mathcal{C}}>\varepsilon\|\mathbf{c}_{\mathrm{target}}\|\), then
+\(\mathbf{c}_{\mathrm{target}}\notin\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) at tolerance \(\varepsilon\), independent of feed optimization
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Eq.~\eqref{eq:ch4.reachable-projection} and Definition of \(\mathcal{U}_{\mathrm{unreach}}\) \cite{stratton1941}; synthesis residual
+Eq.~\eqref{eq:ch4.synthesis-residual-norm} \cite{harrington2001}.
+\end{proof}
+
+\paragraph{NR template audit.}
+Non-radiating templates from Eq.~\eqref{eq:ch2.nr-current-def} span a subspace of \(\ker\mathcal{R}_\omega\cap\mathcal{J}_{\mathrm{real}}\)
+\cite{stratton1941,harrington2001}. Adding such templates before inversion leaves \(\mathbf{c}\) fixed per Theorem~\ref{thm:ch4.nr-lift-invisibility}
+but changes near-field probes' response \cite{devaney2004,hansen1988}. Inverse solvers must declare whether they fit NR lifts or export coefficients
+\cite{harrington2001}.
+
+\paragraph{Worked illustration (projection audit).}
+\(\mathbf{c}_{\mathrm{target}}\) has \(30\%\) weight in \(\mathcal{U}_{\mathrm{unreach}}\) on centered feed: \(\delta_{\mathrm{syn}}>0\) despite
+unit-norm target \cite{hansen1988,harrington2001,stratton1941}.
+
+\paragraph{Worked illustration (NR tomography trap).}
+Near-field tomography recovers \(\mathbf{J}_{\mathrm{nr}}\); far pattern unchanged \cite{stratton1941,harrington2001,devaney2004}. Publication
+claims ``unique current'' without stating quotient space \(\mathbb{C}^{I}/\mathcal{N}_{\mathrm{syn}}\) are incomplete \cite{hansen1988}.
+
+\paragraph{Problem (projection certificate).}
+\textbf{Problem.} Certify \(\mathbf{c}_{\mathrm{target}}\) before inversion.
+\textbf{Step 1.} Compute \(\mathbf{c}_{\mathrm{unreach}}=(\mathbf{I}-\mathcal{P}_{\mathrm{reach}})\mathbf{c}_{\mathrm{target}}\) \cite{harrington2001}.
+\textbf{Step 2.} Test Theorem~\ref{thm:ch4.unreachable-obstruction} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Reject if \(\|\mathbf{c}_{\mathrm{unreach}}\|>\varepsilon\|\mathbf{c}_{\mathrm{target}}\|\) \cite{hansen1988}.
+\textbf{Physical meaning.} Reachable projection is the synthesis gate \cite{stratton1941}.
+
+\paragraph{Problem (quotient reporting).}
+\textbf{Problem.} Two currents produce same \(\mathbf{c}\). Report uniqueness?
+\textbf{Step 1.} State quotient \(\mathbb{C}^{I}/\mathcal{N}_{\mathrm{syn}}\) via Eq.~\eqref{eq:ch4.quotient-synthesis} \cite{harrington2001}.
+\textbf{Step 2.} Identify NR lift dimension \cite{stratton1941}.
+\textbf{Step 3.} Uniqueness holds on quotient only \cite{devaney2004,hansen1988}.
+\textbf{Physical meaning.} Current portraits are non-unique; \(\mathbf{c}\) is the export certificate \cite{stratton1941}.
+
+\paragraph{Philosophical closure (structural nullity).}
+Weak coupling is a magnitude statement; unreachable nullity is a structural statement \cite{hansen1988,harrington2001,stratton1941}. A sector
+exactly in \(\mathcal{U}_{\mathrm{unreach}}\) has zero coupling to every admissible \(\Jimp\), not merely small coupling \cite{devaney2004}. Design
+reports that rank sectors by \(|\mathcal{K}_{\alpha}|\) without null-space tests confuse magnitude with membership \cite{harrington2001}.
+
+\begin{corollary}[Far-zone blindness to NR lifts]
+\label{cor:ch4.farzone-nr-blind}
+Any measurement functional supported only on \(\mathcal{F}_{\mathrm{rad}}\) is blind to \(\ker\mathcal{R}_\omega\) on \(\mathcal{J}_{\mathrm{real}}\)
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{corollary}
+
+\paragraph{Worked numerics (null fraction).}
+\(\dim\mathcal{U}_{\mathrm{unreach}}/\dim\mathbb{C}^{I}=0.55\), \(d_{\mathrm{eff}}=4\): more than half the listing is synthesis-null
+\cite{hansen1988,harrington2001}.

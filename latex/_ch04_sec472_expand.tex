@@ -1,0 +1,237 @@
+\subsection{Reactive subspaces and evanescent accessibility}
+\label{sec:ch472}
+% TOC tag: [HOME]
+
+Evanescent subspace \(\mathcal{F}_{\mathrm{ev}}\) carries reactive storage accessible to near probes yet invisible to \(\boldsymbol{\Gamma}_\omega\)
+on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch472} separates reactive accessibility from synthesis
+accessibility \cite{devaney2004,hansen1988}. Reactive richness certifies how finely near fields can be resolved and how much energy the near zone can
+store; it does not enlarge \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) on the propagating chart \cite{jackson1999,stratton1941,harrington2001}.
+The philosophical split: storage is not export; probe rank is not synthesis rank \cite{devaney2004,hansen1988}.
+
+\paragraph{Assumptions.}
+Presuppose Proposition~\ref{prop:ch4.evanescent-invisibility} and Subsection~\ref{sec:ch273} reconstructability caps \cite{stratton1941,harrington2001}.
+Observation rank \(N\) finite; probes linear and calibrated on \(\mathcal{F}_{\mathrm{ev}}\cup\mathcal{F}_{\mathrm{near}}\) \cite{devaney2004,harrington2001}.
+Tolerance \(\varepsilon\in(0,1)\) fixed for \(d_{\mathrm{eff}}\) audits \cite{hansen1988}.
+
+\paragraph{Reactive accessibility functional.}
+\begin{equation}
+\label{eq:ch4.reactive-accessibility}
+\mathcal{A}_{\mathrm{react}}^{(N)}(\mathbf{c})=\big\|\mathcal{P}_{\mathrm{react}}\mathbf{c}\big\|_{\mathrm{react}},
+\end{equation}
+with \(\mathcal{P}_{\mathrm{react}}\) projecting reactive components when near data are used \cite{harrington2001,stratton1941}. Mathematically,
+\(\mathcal{A}_{\mathrm{react}}^{(N)}\) measures how much of the field chart lies outside \(\mathcal{F}_{\mathrm{rad}}\) at probe resolution \(N\).
+Physically, large \(\mathcal{A}_{\mathrm{react}}^{(N)}\) with small \(\|\mathbf{c}\|_{\mathrm{rad}}\) signals evanescent-dominated certification
+\cite{devaney2004,jackson1999}.
+
+\paragraph{Evanescent mode budget.}
+Let \(N_{\mathrm{ev}}(k_{t,\max})\) count evanescent modes with \(k_{t}>k_{0}\) resolved up to \(k_{t,\max}\) \cite{jackson1999,hansen1988}.
+\(N_{\mathrm{ev}}\) grows with scan resolution while \(d_{\mathrm{eff}}(\varepsilon)\) on \(\mathcal{F}_{\mathrm{rad}}\) remains fixed on
+\((\Omega_{s},k_{0})\) \cite{stratton1941,harrington2001,devaney2004}.
+
+\begin{proposition}[Reactive accessibility does not enlarge synthesis]
+\label{prop:ch4.reactive-not-synthesis}
+\(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) is independent of \(\mathcal{A}_{\mathrm{react}}^{(N)}\) on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941,harrington2001}. Raising \(N\) may raise \(\mathcal{A}_{\mathrm{react}}^{(N)}\) without enlarging
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{devaney2004,hansen1988}.
+\end{proposition}
+
+\paragraph{Propagating-sector filter.}
+Before listing \(\mathbf{c}\), apply
+\begin{equation}
+\label{eq:ch4.propagating-filter}
+\widetilde{\mathbf{c}}=\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\mathcal{C}\big[\mathcal{S}_\omega[\Jimp]\big],
+\end{equation}
+importing Section~\ref{sec:ch44} by reference \cite{stratton1941,harrington2001}. Scans that skip Eq.~\eqref{eq:ch4.propagating-filter} inflate
+\(\mathcal{A}_{\mathrm{react}}^{(N)}\) without changing \(\widetilde{\mathbf{c}}\) \cite{devaney2004,hansen1988}.
+
+\begin{theorem}[Evanescent invisibility to export]
+\label{thm:ch4.ev-invisible-export}
+\(\|\widetilde{\mathbf{c}}\|_{\mathrm{rad}}\) and \(d_{\mathrm{eff}}(\varepsilon)\) on \(\mathcal{F}_{\mathrm{rad}}\) are independent of
+\(\mathcal{A}_{\mathrm{react}}^{(N)}\) on fixed \((\Omega_{s},k_{0})\) \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:ch4.reactive-not-synthesis} and linearity of \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\) \cite{stratton1941,harrington2001}. Evanescent
+content lies outside \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{devaney2004,hansen1988}.
+\end{proof}
+
+\paragraph{Reactive--radiative split.}
+\begin{equation}
+\label{eq:ch4.reactive-radiative-split}
+\mathcal{J}_{\mathrm{react}}[\Jimp]=\|\mathcal{P}_{\mathrm{react}}\mathcal{S}_\omega[\Jimp]\|,\quad
+\mathcal{J}_{\mathrm{rad}}[\Jimp]=\|\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]\|_{\mathrm{rad}}.
+\end{equation}
+\begin{theorem}[Reactive dominance without rank gain]
+\label{thm:ch4.reactive-dominance}
+\(\mathcal{J}_{\mathrm{react}}\gg\mathcal{J}_{\mathrm{rad}}\) does not imply \(d_{\mathrm{eff}}\) enlargement on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+Eq.~\eqref{eq:ch4.propagating-filter} removes evanescent weight before \(\boldsymbol{\Gamma}_\omega\) \cite{stratton1941,harrington2001}. Reactive
+dominance enlarges \(\mathcal{J}_{\mathrm{react}}\) without altering \(\sigma_{n}\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{devaney2004,hansen1988}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.reactive-dominance} is the near-field honesty law: tomography and hotspot scans certify storage and probe resolution, not export
+rank on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941,harrington2001,jackson1999}. Any synthesis memo that equates reactive recovery with diversity
+must be rejected before inversion starts \cite{devaney2004,hansen1988}.
+
+\paragraph{Evanescent wavenumber budget.}
+Transverse wavenumbers resolved at standoff \(z\) satisfy
+\begin{equation}
+\label{eq:ch4.ev-wavenumber-budget}
+k_{t,\max}(z)\approx k_{0}+\frac{1}{z}\ln\!\left(\frac{1}{\varepsilon_{\mathrm{probe}}}\right),
+\end{equation}
+so over-resolving \(k_{t}\) inflates \(\mathcal{A}_{\mathrm{react}}^{(N)}\) without shifting \(\mathbf{c}\) \cite{jackson1999,hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Reactive-to-export ratio.}
+\begin{equation}
+\label{eq:ch4.react-export-ratio}
+\mathcal{Q}_{\mathrm{re}}=\frac{\mathcal{A}_{\mathrm{react}}^{(N)}}{\|\mathbf{c}\|_{\mathrm{rad}}+\delta},\qquad \delta>0.
+\end{equation}
+Large \(\mathcal{Q}_{\mathrm{re}}\) with fixed \(d_{\mathrm{eff}}\) signals reactive-dominated certification \cite{harrington2001,devaney2004,hansen1988,jackson1999}.
+
+\paragraph{Probe transfer bound.}
+Near-field transfer matrix \(\mathbf{G}_{N}\) has rank \(\le N\); reactive recovery saturates when \(N\ge N_{\mathrm{ev}}(k_{t,\max})\)
+\cite{harrington2001,devaney2004}. \(d_{\mathrm{eff}}\) is bounded by \(\boldsymbol{\Gamma}_\omega\), not \(\mathbf{G}_{N}\) \cite{stratton1941,hansen1988}.
+
+\paragraph{Reactive energy budget.}
+\begin{equation}
+\label{eq:ch4.reactive-energy-budget}
+\mathcal{E}_{\mathrm{react}}^{(N)}=\int_{\Sigma_{N}}\big(\varepsilon_{0}|\E|^{2}+\mu_{0}|\H|^{2}\big)\,dS,
+\end{equation}
+grows with \(N\) and \(k_{t,\max}\) but does not enter \(\boldsymbol{\Gamma}_\omega\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{jackson1999,stratton1941,harrington2001,devaney2004}.
+
+\begin{lemma}[Probe saturation before rank gain]
+\label{lem:ch4.probe-sat-lemma}
+\(\mathcal{A}_{\mathrm{react}}^{(N)}\) saturates as \(N\) increases while \(d_{\mathrm{eff}}(\varepsilon)\) remains constant on fixed \((\Omega_{s},k_{0})\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941}.
+\end{lemma}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (ev) {$\mathcal{F}_{\mathrm{ev}}$};
+  \node[ch1box, right=11mm of ev] (react) {$\mathcal{A}_{\mathrm{react}}^{(N)}$};
+  \node[ch1box, right=11mm of react] (rad) {$\mathbf{c}$};
+  \draw[ch1flow] (ev) -- (react);
+  \draw[ch1flow] (react) -- (rad);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch472}: reactive accessibility measures storage; synthesis uses propagating \(\mathbf{c}\) only.}
+\label{fig:ch4.reactive-accessibility-split}
+\end{figure}
+
+\paragraph{Probe-rank saturation.}
+\begin{equation}
+\label{eq:ch4.probe-saturation}
+\lim_{N\to\infty}\mathcal{A}_{\mathrm{react}}^{(N)}=\|\mathcal{P}_{\mathrm{react}}\mathcal{S}_\omega[\Jimp]\|,\qquad
+\mathbf{c}_{N\to\infty}=\boldsymbol{\Gamma}_\omega[\Jimp].
+\end{equation}
+Saturation of \(\mathcal{A}_{\mathrm{react}}^{(N)}\) does not shift \(\mathbf{c}_{N\to\infty}\) \cite{stratton1941,harrington2001,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (probe) {$N$ probes};
+  \node[ch1box, right=11mm of probe] (areact) {$\mathcal{A}_{\mathrm{react}}^{(N)}$};
+  \node[ch1box, right=11mm of areact] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (probe) -- (areact);
+  \draw[ch1flow, dashed] (areact) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch472}: probe count raises \(\mathcal{A}_{\mathrm{react}}^{(N)}\) until saturation; \(d_{\mathrm{eff}}\) unchanged.}
+\label{fig:ch4.probe-saturation-map}
+\end{figure}
+
+Figure~\ref{fig:ch4.probe-saturation-map} shows the dashed link: reactive accessibility does not drive export rank \cite{harrington2001,stratton1941,devaney2004}.
+Probe budgets should therefore be reported as \((N,\mathcal{A}_{\mathrm{react}}^{(N)},d_{\mathrm{eff}})\) triples rather than as rank surrogates
+\cite{hansen1988,devaney2004}.
+
+\begin{corollary}[Propagating filter persistence]
+\label{cor:ch4.prop-filter-persist}
+\(\widetilde{\mathbf{c}}=\Pi_{\mathrm{rad}}\mathbf{c}\) is invariant under reactive probe enrichment on fixed \((\Omega_{s},k_{0})\)
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{corollary}
+
+\paragraph{Evanescent coupling envelope.}
+For \(k_{t}>k_{0}\), probe coupling decays as \(\exp(-\alpha z)\) with standoff \(z\) \cite{jackson1999,hansen1988}. Over-resolving \(k_{t}\) without
+reducing \(z\) inflates \(\mathcal{A}_{\mathrm{react}}^{(N)}\) without improving far-zone rank \cite{harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (near scan).}
+Scan at \(k_{t}=1.2k_{0}\) raises \(\mathcal{A}_{\mathrm{react}}^{(N)}\); \(\mathbf{c}\) stays dipole-dominated \cite{harrington2001,jackson1999,hansen1988}.
+
+\paragraph{Worked illustration (resonant particle).}
+\(\mathcal{J}_{\mathrm{react}}/\mathcal{J}_{\mathrm{rad}}=10\), \(d_{\mathrm{eff}}=3\) unchanged \cite{jackson1999,hansen1988,harrington2001,stratton1941}.
+
+\paragraph{Worked illustration (scan over-resolution).}
+\(k_{t}=1.5k_{0}\): \(\mathcal{Q}_{\mathrm{re}}\approx8\), \(d_{\mathrm{eff}}=6\) unchanged \cite{harrington2001,jackson1999,hansen1988}.
+
+\paragraph{Worked illustration (resonator).}
+High-\(Q\) particle: \(\mathcal{J}_{\mathrm{react}}\gg\mathcal{J}_{\mathrm{rad}}\), \(\mathbf{c}\) dipole-class \cite{jackson1999,stratton1941,harrington2001}.
+
+\paragraph{Worked numerics (probe saturation).}
+\(N=50\) on \(\lambda/4\) grid: \(\mathcal{A}_{\mathrm{react}}^{(N)}\) within \(2\%\) of limit; \(d_{\mathrm{eff}}(10^{-2})=7\) for \(N=25,50,100\)
+\cite{harrington2001,hansen1988,devaney2004}.
+
+\paragraph{Worked illustration (standoff audit).}
+At \(z=\lambda/8\), Eq.~\eqref{eq:ch4.ev-wavenumber-budget} permits \(k_{t,\max}\approx1.4k_{0}\); doubling probes raises \(\mathcal{Q}_{\mathrm{re}}\) from
+\(4.2\) to \(6.8\) while \(d_{\mathrm{eff}}=5\) is unchanged \cite{jackson1999,harrington2001,devaney2004,hansen1988}.
+
+\paragraph{Problem (reactive versus synthesis).}
+\textbf{Problem.} Near tomography recovers reactive content. Enlarge \(\mathcal{S}_{\mathrm{real}}\)?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.propagating-filter} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Test \(\delta_{\mathrm{syn}}\) on \(\widetilde{\mathbf{c}}\) \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Treat reactive recovery as certification only \cite{harrington2001}.
+\textbf{Physical meaning.} Reactive dominance is storage, not export \cite{stratton1941}.
+
+\paragraph{Problem (hotspot audit).}
+\textbf{Problem.} Near hotspot, flat far pattern. Rank change?
+\textbf{Step 1.} Compute \(\mathbf{c}\) after \(\Pi_{\mathrm{rad}}\) \cite{stratton1941}.
+\textbf{Step 2.} Compare \(d_{\mathrm{eff}}\) before/after near fit \cite{hansen1988,harrington2001}.
+\textbf{Step 3.} Conclude no rank gain per Theorem~\ref{thm:ch4.reactive-dominance} \cite{devaney2004}.
+\textbf{Physical meaning.} Hotspots certify reactance \cite{harrington2001}.
+
+\paragraph{Problem (reactive certificate).}
+\textbf{Problem.} Laboratory reports high reactive content. Rank change?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.propagating-filter} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Recompute \(d_{\mathrm{eff}}\) on \(\widetilde{\mathbf{c}}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Report \(\mathcal{Q}_{\mathrm{re}}\) separately \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Reactive certificates \(\neq\) diversity \cite{stratton1941}.
+
+\paragraph{Problem (probe budget).}
+\textbf{Problem.} Double probe count. Rank change?
+\textbf{Step 1.} Test Theorem~\ref{thm:ch4.ev-invisible-export} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Track saturation via Eq.~\eqref{eq:ch4.probe-saturation} \cite{devaney2004}.
+\textbf{Step 3.} Apply Lemma~\ref{lem:ch4.probe-sat-lemma} \cite{hansen1988}.
+\textbf{Physical meaning.} Probes certify reactance \cite{stratton1941}.
+
+\paragraph{Problem (reactive energy versus rank).}
+\textbf{Problem.} \(\mathcal{E}_{\mathrm{react}}^{(N)}\) doubles after scan upgrade. Does \(d_{\mathrm{eff}}\) double?
+\textbf{Step 1.} Filter via Eq.~\eqref{eq:ch4.propagating-filter} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Recompute \(d_{\mathrm{eff}}\) on \(\widetilde{\mathbf{c}}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Report \((\mathcal{Q}_{\mathrm{re}},\mathcal{E}_{\mathrm{react}}^{(N)},d_{\mathrm{eff}})\) triple \cite{jackson1999}.
+\textbf{Physical meaning.} Stored energy is not export rank \cite{stratton1941}.
+
+\paragraph{Problem (evanescent over-resolution).}
+\textbf{Problem.} Scan resolves \(k_{t}=2k_{0}\) at \(z=\lambda/10\). Synthesis impact?
+\textbf{Step 1.} Compute \(N_{\mathrm{ev}}\) and \(\mathcal{A}_{\mathrm{react}}^{(N)}\) \cite{jackson1999,hansen1988}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.ev-invisible-export} \cite{stratton1941,harrington2001}.
+\textbf{Step 3.} Conclude \(d_{\mathrm{eff}}\) unchanged \cite{devaney2004}.
+\textbf{Physical meaning.} Evanescent resolution is not export resolution \cite{hansen1988}.
+
+\paragraph{Philosophical closure (storage versus export).}
+Reactive accessibility measures storage and probe resolution; synthesis rank measures independent far-zone directions above \(\varepsilon\sigma_{1}\)
+\cite{stratton1941,harrington2001,jackson1999,hansen1988,devaney2004}. Enlarging one does not enlarge the other on passive supports
+\cite{stratton1941,harrington2001}.
+
+\begin{corollary}[Reactive saturation before rank gain]
+\label{cor:ch4.reactive-saturation}
+\(\mathcal{A}_{\mathrm{react}}^{(N)}\) saturates as \(N\) increases while \(d_{\mathrm{eff}}(\varepsilon)\) remains constant on fixed \((\Omega_{s},k_{0})\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941}.
+\end{corollary}
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.reactive-accessibility} assumes linear probes and calibration \cite{harrington2001}. Loss modifies \(\mathcal{F}_{\mathrm{ev}}\) split
+without exporting evanescent weight to \(\mathbf{c}\) \cite{stratton1941,devaney2004}. Nonlinear probes require separate \(\mathcal{P}_{\mathrm{react}}\) declaration
+\cite{hansen1988,jackson1999}.

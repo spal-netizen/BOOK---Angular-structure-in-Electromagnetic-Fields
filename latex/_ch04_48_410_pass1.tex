@@ -1,0 +1,552 @@
+\subsection{Mode count versus aperture and frequency}
+\label{sec:ch481}
+% TOC tag: [HOME]
+
+Mode-count laws connect aperture area, wavelength, and the integer budgets used in array and MIMO design \cite{collin2001,jackson1999,hansen1988}.
+Subsection~\ref{sec:ch481} restates those laws as upper bounds on \(d_{\mathrm{eff}}(\varepsilon)\) \cite{stratton1941,harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Eqs.~\eqref{eq:ch4.truncation-volume-scaling}, \eqref{eq:ch4.truncation-area-scaling}, and Definition~\ref{def:ch4.effective-em-dimension}
+\cite{stratton1941,hansen1988,harrington2001}.
+
+\paragraph{Mode-count bounds.}
+For ball \(B_{a}\),
+\begin{equation}
+\label{eq:ch4.mode-count-volume}
+N_{\mathrm{mode}}^{\mathrm{(vol)}}(\varepsilon)
+\ \le\
+C_{V}(\varepsilon)\,(k_{0}a)^{3},
+\end{equation}
+and for aperture \(\Sigma_{a}\),
+\begin{equation}
+\label{eq:ch4.mode-count-area}
+N_{\mathrm{mode}}^{\mathrm{(ap)}}(\varepsilon)
+\ \le\
+C_{A}(\varepsilon)\,k_{0}^{2}A_{a},
+\end{equation}
+with \(N_{\mathrm{mode}}\le d_{\mathrm{eff}}(\varepsilon)\) in the aligned export gauge \cite{collin2001,jackson1999,hansen1988,harrington2001}.
+Equations~\eqref{eq:ch4.mode-count-volume}--\eqref{eq:ch4.mode-count-area} are realizability ceilings, not design targets
+\cite{stratton1941,devaney2004}.
+
+\begin{theorem}[Mode-count monotonicity]
+\label{thm:ch4.mode-count-monotone}
+At fixed \(\varepsilon\), \(N_{\mathrm{mode}}^{\mathrm{(vol)}}\) and \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) are non-decreasing in
+\(k_{0}\) and in \(a\) or \(A_{a}\) until material dispersion alters \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941,jackson1999,hansen1988}.
+Phase-only tuning on fixed geometry does not raise \(N_{\mathrm{mode}}\) \cite{devaney2004,harrington2001}.
+\end{theorem}
+
+\paragraph{Worked illustration (5G panel).}
+A \(k_{0}W\approx3\) panel has \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\sim\mathcal{O}(10)\)--\(\mathcal{O}(30)\), not one per patch
+\cite{collin2001,harrington2001,hansen1988}.
+
+\paragraph{Problem (element count versus modes).}
+\textbf{Problem.} \(64\) patches claim \(64\) independent beams. Audit.
+
+\textbf{Step 1.} Compute \(k_{0}^{2}A_{a}\) \cite{jackson1999,stratton1941}.
+
+\textbf{Step 2.} Bound \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\) via Eq.~\eqref{eq:ch4.mode-count-area} \cite{hansen1988,harrington2001}.
+
+\textbf{Step 3.} Report \(d_{\mathrm{eff}}(\varepsilon)\) from SVD \cite{devaney2004}.
+
+\textbf{Physical meaning.} Elements sample the aperture; modes are geometry-bounded \cite{collin2001}.
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.mode-count-monotone} is asymptotic for \(k_{0}D_{s}\gtrsim1\) \cite{jackson1999,hansen1988}.
+
+
+\subsection{High- and low-frequency asymptotics}
+\label{sec:ch482}
+% TOC tag: [HOME]
+
+Radiative rank crosses distinct asymptotic regimes as \(k_{0}D_{s}\) varies \cite{stratton1941,jackson1999,hansen1988}. Subsection
+~\ref{sec:ch482} records the low-frequency dipole limit and high-frequency volume-growth limit on \(d_{\mathrm{eff}}\)
+\cite{harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Eq.~\eqref{eq:ch4.coupling-crossover} and compact \(\Omega_{s}\) \cite{stratton1941,hansen1988}.
+
+\paragraph{Rayleigh limit.}
+As \(k_{0}D_{s}\to0\),
+\begin{equation}
+\label{eq:ch4.rayleigh-rank-limit}
+d_{\mathrm{eff}}(\varepsilon)
+\ \longrightarrow\
+d_{0}\le3
+\end{equation}
+in the electric dipole class on centered \(\Omega_{s}\) \cite{jackson1999,stratton1941,harrington2001}. High-\(\ell\) synthesis is
+forbidden by Eq.~\eqref{eq:ch4.high-ell-decay} in this regime \cite{hansen1988,devaney2004}.
+
+\paragraph{Large-body limit.}
+As \(k_{0}D_{s}\to\infty\) on fixed shape,
+\begin{equation}
+\label{eq:ch4.large-body-rank-growth}
+d_{\mathrm{eff}}(\varepsilon)
+\ \sim\
+C_{\infty}(\varepsilon)\,(k_{0}D_{s})^{3},
+\end{equation}
+importing Eq.~\eqref{eq:ch4.mode-count-volume} \cite{stratton1941,jackson1999,hansen1988}. Truncation remains mandatory at any
+finite tolerance \cite{harrington2001}.
+
+\begin{corollary}[Asymptotic synthesis regimes]
+\label{cor:ch4.asymptotic-regimes}
+Inverse design on electrically small hardware is dipole-class limited; on electrically large hardware is volume-growth limited with
+mandatory truncation at \(\varepsilon\) \cite{stratton1941,jackson1999,hansen1988,harrington2001,devaney2004}.
+\end{corollary}
+
+\paragraph{Worked illustration (UHF versus mmWave).}
+A UHF loop at \(k_{0}D_{s}=0.3\) has \(d_{\mathrm{eff}}\le3\); a mmWave array at \(k_{0}D_{s}=4\) accesses dozens of export modes
+\cite{jackson1999,harrington2001,collin2001}.
+
+\paragraph{Problem (frequency sweep rank).}
+\textbf{Problem.} Rank is measured at 3\,GHz and extrapolated to 30\,GHz on fixed hardware. Valid?
+
+\textbf{Step 1.} Identify regime via \(k_{0}D_{s}\) at each frequency \cite{jackson1999,stratton1941}.
+
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.rayleigh-rank-limit} or \eqref{eq:ch4.large-body-rank-growth} \cite{hansen1988,harrington2001}.
+
+\textbf{Step 3.} Recompute \(d_{\mathrm{eff}}(\varepsilon)\) per frequency \cite{devaney2004}.
+
+\textbf{Physical meaning.} Asymptotic regime sets the scaling law \cite{stratton1941}.
+
+\paragraph{Validity.}
+Eqs.~\eqref{eq:ch4.rayleigh-rank-limit}--\eqref{eq:ch4.large-body-rank-growth} assume linear isotropic exterior \cite{stratton1941}.
+
+
+\subsection{Spectral concentration and localization}
+\label{sec:ch483}
+% TOC tag: [HOME]
+
+Finite support concentrates spatial energy and compresses spectral support; concentration inequalities make truncation the optimal
+description of exportable information \cite{stratton1941,jackson1999,hansen1988}. Subsection~\ref{sec:ch483} states concentration on
+\(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Eq.~\eqref{eq:ch4.spectral-compression-def} and Theorem~\ref{thm:ch4.spectral-compression-optimal}
+\cite{stratton1941,harrington2001,hansen1988}.
+
+\paragraph{Concentration ratio.}
+Define
+\begin{equation}
+\label{eq:ch4.spectral-concentration-ratio}
+\Lambda_{\mathrm{conc}}(\varepsilon)
+=
+\frac{\sum_{n=1}^{d_{\mathrm{eff}}(\varepsilon)}\sigma_{n}^{2}}
+{\sum_{n\ge1}\sigma_{n}^{2}}
+\ \ge\
+1-\varepsilon^{2},
+\end{equation}
+with \(\{\sigma_{n}\}\) from Eq.~\eqref{eq:ch4.gamma-SVD} \cite{harrington2001,hansen1988}. High \(\Lambda_{\mathrm{conc}}\) means
+export energy concentrates in the leading \(d_{\mathrm{eff}}\) directions \cite{stratton1941,devaney2004}.
+
+\begin{proposition}[Truncation as concentration optimum]
+\label{prop:ch4.truncation-concentration}
+Rank-\(d_{\mathrm{eff}}(\varepsilon)\) truncation maximizes \(\Lambda_{\mathrm{conc}}(\varepsilon)\) among all rank-\(N\) approximations
+of \(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001,devaney2004,stratton1941}. Alternative sparsity priors that retain higher
+listing rank without raising \(\sigma_{n}\) above threshold do not increase export power \cite{hansen1988}.
+\end{proposition}
+
+\paragraph{Worked illustration (slow tail).}
+If \(\Lambda_{\mathrm{conc}}(10^{-2})=0.85\), \(15\%\) of export gain lies outside the leading \(d_{\mathrm{eff}}\) subspace: truncation
+at \(d_{\mathrm{eff}}\) sacrifices certified power, not merely labels \cite{harrington2001,hansen1988}.
+
+\paragraph{Problem (concentration audit).}
+\textbf{Problem.} Given \(\{\sigma_{n}\}\), find minimal \(N\) with \(\Lambda_{\mathrm{conc}}\ge0.99\).
+
+\textbf{Step 1.} Accumulate \(\sigma_{n}^{2}\) until ratio Eq.~\eqref{eq:ch4.spectral-concentration-ratio} exceeds \(0.99\) \cite{harrington2001}.
+
+\textbf{Step 2.} Set \(N=d_{\mathrm{eff}}(\varepsilon')\) at implied \(\varepsilon'\) \cite{hansen1988,devaney2004}.
+
+\textbf{Step 3.} Compare to \(\ell_{\mathrm{supp}}\) for consistency \cite{stratton1941}.
+
+\textbf{Physical meaning.} Concentration quantifies how sharply geometry compresses export \cite{hansen1988}.
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.spectral-concentration-ratio} depends on flux normalization of \(\mathcal{C}\) \cite{hansen1988,stratton1941}.
+
+
+\subsection{Landau-Pollak-Slepian limits and n-widths}
+\label{sec:ch484}
+% TOC tag: [HOME]
+
+Prolate concentration and Kolmogorov \(n\)-widths bound how many degrees of freedom can be simultaneously localized and bandlimited
+\cite{hansen1988,stratton1941}. Subsection~\ref{sec:ch484} imports those bounds as realizability ceilings on \(d_{\mathrm{eff}}\)
+\cite{harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Consider spatial domain \(D\) supporting \(\Jimp\) and spectral domain \(\Omega_{k}\) supporting \(\widetilde{\mathbf{A}}_{\mathrm{rad}}\)
+\cite{stratton1941,jackson1999}. Presuppose Eq.~\eqref{eq:ch4.duality-bandlimit-scaling} \cite{hansen1988}.
+
+\paragraph{\(n\)-width realizability bound.}
+Let \(N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k})\) denote the Kolmogorov \(n\)-width of the concentration operator linking \(D\) to
+\(\Omega_{k}\) \cite{hansen1988,stratton1941}. Then
+\begin{equation}
+\label{eq:ch4.lps-nwidth-bound}
+d_{\mathrm{eff}}(\varepsilon)
+\ \le\
+N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k}),
+\end{equation}
+because export synthesis cannot exceed simultaneous spatial--spectral concentration \cite{harrington2001,devaney2004}. On ball
+\(B_{a}\), \(N_{\mathrm{LPS}}\sim(k_{0}a)^{3}\) consistent with Eq.~\eqref{eq:ch4.mode-count-volume} \cite{jackson1999,hansen1988}.
+
+\begin{theorem}[LPS bound on synthesis dimension]
+\label{thm:ch4.lps-synthesis-bound}
+\(\dim\mathcal{S}_{\mathrm{real}}(\mathcal{C})\le N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k})\) for any admissible listing \(\mathcal{C}\)
+\cite{stratton1941,hansen1988,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+Concentration operator dominates export map in operator norm on compact domains \cite{hansen1988}; Definition~\ref{def:ch4.effective-em-dimension}
+\cite{harrington2001,stratton1941}.
+\end{proof}
+
+\paragraph{Worked illustration (prolate aperture).}
+A prolate spheroidal aperture has anisotropic \(N_{\mathrm{LPS}}\): major-axis concentration raises \(d_{\mathrm{eff}}\) along one
+direction before others \cite{hansen1988,jackson1999,harrington2001}.
+
+\paragraph{Problem (LPS versus SVD rank).}
+\textbf{Problem.} \(d_{\mathrm{eff}}(10^{-2})=40\) but \(N_{\mathrm{LPS}}=35\) for declared \((D,\Omega_{k})\). Which governs?
+
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.lps-synthesis-bound} as ceiling \cite{hansen1988,stratton1941}.
+
+\textbf{Step 2.} If SVD exceeds LPS, audit domain declarations \cite{harrington2001,devaney2004}.
+
+\textbf{Step 3.} Use \(\min(d_{\mathrm{eff}},N_{\mathrm{LPS}})\) for conservative design \cite{jackson1999}.
+
+\textbf{Physical meaning.} \(n\)-widths are geometry--spectrum concentration limits \cite{hansen1988}.
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.lps-nwidth-bound} assumes linear time-harmonic maps and declared concentration domains \cite{stratton1941,hansen1988}.
+
+Section~\ref{sec:ch48} has linked mode count, asymptotics, concentration, and LPS bounds to \(d_{\mathrm{eff}}\)
+\cite{stratton1941,hansen1988,harrington2001}. Section~\ref{sec:ch49} records physical consequences for engineering and measurement
+\cite{devaney2004}.
+
+
+\section{Physical Consequences of Realizability Limits}
+\label{sec:ch49}
+
+Truncation and rank are not abstract operator facts: they bound what finite apertures can radiate, what phase-only hardware can retune,
+and what laboratories can observe \cite{stratton1941,harrington2001,devaney2004}. Section~\ref{sec:ch49} states those consequences in
+design and measurement language without leaving the realizability framework established in Sections~\ref{sec:ch41}--\ref{sec:ch48}
+\cite{hansen1988,jackson1999}.
+
+
+\subsection{Geometry as origin of dimensionality limits}
+\label{sec:ch491}
+% TOC tag: [HOME]
+
+Dimensionality limits in synthesis reports trace to \(\operatorname{diam}(\Omega_{s})\), \(A_{a}\), and \(k_{0}\) through
+\(d_{\mathrm{eff}}(\varepsilon)\), not to solver tolerances alone \cite{stratton1941,jackson1999,hansen1988}. Subsection~\ref{sec:ch491}
+states the origin principle for laboratory interpretation \cite{harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Definition~\ref{def:ch4.effective-em-dimension} and Eqs.~\eqref{eq:ch4.mode-count-volume}--\eqref{eq:ch4.mode-count-area}
+\cite{stratton1941,hansen1988,harrington2001}.
+
+\begin{theorem}[Geometry as rank origin]
+\label{thm:ch4.geometry-rank-origin}
+At fixed \(\varepsilon\) and listing \(\mathcal{C}\), \(d_{\mathrm{eff}}(\varepsilon)\) is invariant under phase-only
+reparameterizations of \(\Jimp\) on fixed \(\Omega_{s}\) and changes only when \(\operatorname{diam}(\Omega_{s})\), \(k_{0}\), or
+\(\mathcal{J}_{\mathrm{real}}\) class changes \cite{stratton1941,jackson1999,hansen1988,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+\(\boldsymbol{\Gamma}_\omega\) depends on support and material class; phase rotations on fixed support are gauge transformations on
+\(\mathcal{J}_{\mathrm{real}}\) that preserve singular values of the export map \cite{harrington2001,stratton1941}.
+\end{proof}
+
+\paragraph{Worked illustration (metasurface phase).}
+A fixed-area metasurface that retunes phases without enlarging \(\mathcal{L}_{2}\) cannot raise \(d_{\mathrm{eff}}\)
+\cite{stratton1941,harrington2001,hansen1988}.
+
+\paragraph{Problem (solver rank versus hardware).}
+\textbf{Problem.} FEM rank grows with mesh; diversity saturates. Explain.
+
+\textbf{Step 1.} Report \(d_{\mathrm{eff}}(\varepsilon)\), not mesh DOF \cite{harrington2001,devaney2004}.
+
+\textbf{Step 2.} Tie saturation to \(k_{0}D_{s}\) via Eq.~\eqref{eq:ch4.mode-count-volume} \cite{jackson1999,hansen1988}.
+
+\textbf{Step 3.} Enlarge aperture or frequency to raise rank \cite{stratton1941}.
+
+\textbf{Physical meaning.} Geometry is the origin of dimensionality \cite{stratton1941}.
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.geometry-rank-origin} assumes linear passive exterior \cite{stratton1941}.
+
+
+\subsection{Limits of phase-only engineering}
+\label{sec:ch492}
+% TOC tag: [HOME]
+
+Phase-only control explores a submanifold of \(\mathcal{J}_{\mathrm{real}}\) at fixed amplitude support \cite{stratton1941,harrington2001}.
+Subsection~\ref{sec:ch492} states what phase-only designs can and cannot change in \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\)
+\cite{devaney2004,hansen1988}.
+
+\paragraph{Assumptions.}
+Presuppose Proposition~\ref{prop:ch4.tangent-dimension} and Theorem~\ref{thm:ch4.geometry-rank-origin}
+\cite{stratton1941,harrington2001,devaney2004}.
+
+\begin{proposition}[Phase-only rank ceiling]
+\label{prop:ch4.phase-only-ceiling}
+Phase-only optimization on fixed \(\Omega_{s}\) cannot increase \(d_{\mathrm{eff}}(\varepsilon)\), \(\ell_{\mathrm{supp}}\), or
+\(N_{\mathrm{mode}}\) \cite{stratton1941,jackson1999,hansen1988,harrington2001}. It rotates \(\mathbf{c}\) within the same export
+subspace of dimension \(\le d_{\mathrm{eff}}(\varepsilon)\) \cite{devaney2004}.
+\end{proposition}
+
+\paragraph{Worked illustration (reflectarray).}
+A reflectarray that steers a beam without enlarging aperture rotates \(\mathbf{c}\) within \(\ell=1\)--\(\ell_{\mathrm{supp}}\) content;
+it does not manufacture high-\(\ell\) tails forbidden by Eq.~\eqref{eq:ch4.high-ell-decay} \cite{hansen1988,jackson1999,harrington2001}.
+
+\paragraph{Problem (phase-only OAM claim).}
+\textbf{Problem.} Phase plate claims new OAM order without size change. Audit.
+
+\textbf{Step 1.} Test \(\ell_{\mathrm{supp}}\) before and after \cite{hansen1988,stratton1941}.
+
+\textbf{Step 2.} Test tail exponent Eq.~\eqref{eq:ch4.tail-exponent} \cite{jackson1999,devaney2004}.
+
+\textbf{Step 3.} Reject if only phase changed on fixed \(\mathcal{L}_{2}\) \cite{harrington2001}.
+
+\textbf{Physical meaning.} Phase explores a fixed-rank manifold \cite{stratton1941}.
+
+\paragraph{Validity.}
+Proposition~\ref{prop:ch4.phase-only-ceiling} assumes passive linear exterior \cite{stratton1941}.
+
+
+\subsection{Observable manifestations of truncation}
+\label{sec:ch493}
+% TOC tag: [USE]
+
+Measurement reports from Section~\ref{sec:ch15} inherit truncation as smoothed patterns, elevated sidelobes, and saturated channel
+counts \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch493} links those observables to \(\mathcal{B}_{\mathrm{fs}}\) and
+\(d_{\mathrm{eff}}\) \cite{hansen1988,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Definition~\ref{def:ch4.finite-support-restriction} and Theorem~\ref{thm:ch4.finite-support-audit}
+\cite{stratton1941,hansen1988,harrington2001}.
+
+\paragraph{Observable signatures.}
+Truncation manifests as
+\begin{equation}
+\label{eq:ch4.truncation-observables}
+\Delta_{\mathrm{pat}}
+\sim
+\|\mathbf{R}_{\ell_{\max}}\|_{\mathrm{rad}},
+\qquad
+\Delta_{\mathrm{chan}}
+\sim
+d_{\mathrm{eff}}^{-1},
+\end{equation}
+with \(\mathbf{R}_{\ell_{\max}}\) from Eq.~\eqref{eq:ch3.truncation-remainder-energy} \cite{hansen1988,stratton1941}. Elevated
+far-zone sidelobes and saturated MIMO capacity at fixed SNR are consistent signatures of \(\mathcal{A}_{\mathrm{fs}}>1\) or
+\(d_{\mathrm{eff}}\) saturation \cite{harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (pattern shoulders).}
+A target with plateau high-\(\ell\) tails produces shoulder artifacts when synthesized on \(B_{a}\): the artifact is a realizability
+signature, not a calibration error \cite{hansen1988,jackson1999,harrington2001}.
+
+\paragraph{Problem (diagnose truncation in data).}
+\textbf{Problem.} Measured pattern shows unexpected shoulders. Truncation or miscalibration?
+
+\textbf{Step 1.} Compute \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]\) \cite{hansen1988,stratton1941}.
+
+\textbf{Step 2.} Test tail mass Eq.~\eqref{eq:ch4.cumulative-tail-mass} \cite{harrington2001}.
+
+\textbf{Step 3.} If audits fail, attribute to geometry rank before recalibrating \cite{devaney2004}.
+
+\textbf{Physical meaning.} Truncation has characteristic far-zone signatures \cite{hansen1988}.
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.truncation-observables} is narrowband \cite{stratton1941}.
+
+
+\subsection{Implications for radiation and measurement}
+\label{sec:ch494}
+% TOC tag:
+
+Laboratory certification requires \(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}\cap\mathcal{B}_{\mathrm{fs}}\cap\mathcal{E}_{\mathrm{acc}}^{(N)}\)
+from Theorem~\ref{thm:ch4.three-way-certificate} \cite{harrington2001,devaney2004,hansen1988}. Subsection~\ref{sec:ch494} closes the
+measurement thread for Volume~I; full OAM tomography, MIMO capacity proofs, and inverse-source uniqueness on noisy data continue in
+Volume~II \cite{stratton1941}.
+
+\paragraph{Assumptions.}
+Presuppose Eq.~\eqref{eq:ch4.certified-intersection-closure} and accessibility envelope
+Definition~\ref{def:ch4.accessibility-envelope} \cite{harrington2001,devaney2004}.
+
+\paragraph{Measurement closure in Volume I.}
+Volume~I certifies that declared \((\Omega_{s},k_{0},\mathcal{C},N)\) yield a well-posed intersection
+Eq.~\eqref{eq:ch4.certified-intersection-closure} \cite{stratton1941,hansen1988}. When \(\mathbf{c}\notin\mathcal{E}_{\mathrm{acc}}^{(N)}\),
+the failure is instrument rank, not synthesis operator error \cite{harrington2001,devaney2004}. Broadband pulsed certification requires
+\(\mathcal{B}_{\mathrm{fs}}(\omega)\) families not developed here \cite{jackson1999}.
+
+\paragraph{Forward pointer.}
+Volume~II develops measurement operators on multi-path channels, noise floors, and tomographic OAM readout beyond the narrowband
+\(d_{\mathrm{eff}}\) certificate of Chapter~\ref{ch:04} \cite{harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (certified versus synthesizable).}
+A synthesizable \(\mathbf{c}\) with \(\ell_{\mathrm{supp}}=8\) may fail certification at \(N=5\) modes: the laboratory reports a
+rank-limited envelope, not a synthesis failure \cite{harrington2001,hansen1988}.
+
+\paragraph{Problem (three-way failure diagnosis).}
+\textbf{Problem.} Pattern error persists after calibration. Synthesis, finite support, or accessibility?
+
+\textbf{Step 1.} Test \(\delta_{\mathrm{syn}}=0\) \cite{stratton1941,harrington2001}.
+
+\textbf{Step 2.} Test \(\mathcal{A}_{\mathrm{fs}}\le1\) \cite{hansen1988}.
+
+\textbf{Step 3.} Test \(\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(N)}\) \cite{devaney2004}.
+
+\textbf{Physical meaning.} Measurement closes only on the three-way intersection \cite{stratton1941}.
+
+\paragraph{Validity.}
+Subsection~\ref{sec:ch494} does not develop Volume~II measurement protocols \cite{harrington2001}.
+
+Section~\ref{sec:ch49} has identified geometry as rank origin, phase-only ceilings, observable truncation signatures, and Volume~I
+measurement closure \cite{stratton1941,hansen1988,harrington2001}. Section~\ref{sec:ch410} supplies worked examples with figures
+\cite{devaney2004}.
+
+
+\section{Examples}
+\label{sec:ch410}
+
+The examples compress the realizability architecture into auditable calculations on finite apertures and feeds
+\cite{stratton1941,harrington2001,hansen1988}. Each subsection states a problem, develops the governing inequalities, and interprets
+the result in watts and export rank \cite{devaney2004}.
+
+
+\subsection{Maximum angular momentum of a finite aperture}
+\label{sec:ch4101}
+% TOC tag: [FIG+PROB][HOME][USE SS3.7.2][USE SS3.4]
+
+\textbf{Problem.} A circular aperture of radius \(a\) at \(k_{0}a=2.5\) claims dominant azimuthal content at \(\ell=10\). Determine the
+maximum supported order \(\ell_{\mathrm{supp}}\) at \(\varepsilon=10^{-2}\) and test the claim.
+
+\paragraph{Setup.}
+Use Eq.~\eqref{eq:ch4.ell-max-scaling} and tail bound Eq.~\eqref{eq:ch4.high-ell-decay} on \(B_{a}\) \cite{hansen1988,jackson1999,stratton1941}.
+VSH listing from Section~\ref{sec:ch34} \cite{hansen1988}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (ap) {Aperture $B_{a}$};
+  \node[ch1box, right=11mm of ap] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=11mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
+  \node[ch1box, below=11mm of ell] (claim) {claim $\ell=10$};
+  \draw[ch1flow] (ap) -- (ell) -- (tail);
+  \draw[ch1flow] (claim) -- (ell);
+\end{tikzpicture}%
+}
+\caption{Example~\ref{sec:ch4101}: electrical size sets \(\ell_{\mathrm{supp}}\) before azimuthal claims.}
+\label{fig:ch4.ex-ell-max-aperture}
+\end{figure}
+
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.ell-max-scaling} gives \(\ell_{\mathrm{supp}}(10^{-2},2.5)\sim\mathcal{O}(6)\)--\(\mathcal{O}(8)\)
+\cite{jackson1999,hansen1988,stratton1941}.
+
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.high-ell-decay} at \(\ell=10\), \(k_{0}a=2.5\) suppresses \(|\widehat{c}_{10,m}^{(\sigma)}|\) by
+\(\exp(-10/2.5)=\exp(-4)\) relative to low-\(\ell\) sectors \cite{hansen1988,jackson1999}.
+
+\textbf{Step 3.} Dominant \(\ell=10\) content fails \(\ell_{\mathrm{supp}}\) and tail audits: the claim is not in
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) on the declared aperture \cite{devaney2004,harrington2001}.
+
+\textbf{Physical meaning.} Maximum OAM order on a compact aperture is a tail inequality, not a design preference \cite{hansen1988}.
+
+
+\subsection{Construction of non-accessible eigenfields}
+\label{sec:ch4102}
+% TOC tag: [FIG+PROB][USE]
+
+\textbf{Problem.} Construct a coefficient vector \(\mathbf{c}_{\mathrm{na}}\) that lies in \(\mathcal{U}_{\mathrm{unreach}}\) of
+Eq.~\eqref{eq:ch4.unreachable-modes} for a centered dipole feed on \(B_{a}\) at \(k_{0}a=1\).
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (feed) {Dipole feed};
+  \node[ch1box, right=11mm of feed] (gamma) {$\boldsymbol{\Gamma}_\omega$};
+  \node[ch1box, right=11mm of gamma] (c) {$\mathbf{c}$};
+  \node[ch1box, below=11mm of gamma] (null) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \draw[ch1flow] (feed) -- (gamma) -- (c);
+  \draw[ch1flow] (null) -- (gamma);
+\end{tikzpicture}%
+}
+\caption{Example~\ref{sec:ch4102}: unreachable directions are synthesis-null, not low coupling alone.}
+\label{fig:ch4.ex-unreachable-modes}
+\end{figure}
+
+\textbf{Step 1.} For centered \(\Omega_{s}\), symmetry nulls odd-\(m\) and high-\(\ell\) sectors in Theorem~\ref{thm:ch4.symmetry-coupling-nulls}
+\cite{hansen1988,jackson1999,stratton1941}.
+
+\textbf{Step 2.} Choose \(\widehat{c}_{5,3}^{(\mathbf{M})}=1\) with all other entries zero \cite{harrington2001}.
+
+\textbf{Step 3.} \(\mathbf{c}_{\mathrm{na}}\in\mathcal{U}_{\mathrm{unreach}}\): \(\delta_{\mathrm{syn}}>0\) despite unit coefficient norm
+\cite{devaney2004,stratton1941}.
+
+\textbf{Physical meaning.} Non-accessible eigenfields are symmetry- or rank-null directions, not ``weakly coupled'' modes \cite{hansen1988}.
+
+
+\subsection{Near-field versus far-field truncation}
+\label{sec:ch4103}
+% TOC tag: [FIG+PROB][USE]
+
+\textbf{Problem.} A near-field scan fits large \(k_{t}>k_{0}\) content. Estimate far-zone \(\mathbf{c}\) after propagating-sector projection.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 8mm]
+  \node[ch1box] (nf) {Near scan};
+  \node[ch1box, right=10mm of nf] (prop) {$\Pi_{\mathrm{prop}}$};
+  \node[ch1box, right=10mm of prop] (ff) {Far $\mathbf{c}$};
+  \node[ch1box, below=10mm of prop] (ev) {$\mathcal{K}_{\mathrm{ev}}$};
+  \draw[ch1flow] (nf) -- (prop) -- (ff);
+  \draw[ch1flow] (ev) -- (prop);
+\end{tikzpicture}%
+}
+\caption{Example~\ref{sec:ch4103}: evanescent scan energy is removed before far-zone listing.}
+\label{fig:ch4.ex-nf-ff-truncation}
+\end{figure}
+
+\textbf{Step 1.} Split scan spectrum into \(\mathcal{E}_{\mathrm{prop}}\) and \(\mathcal{E}_{\mathrm{ev}}\) via
+Eq.~\eqref{eq:ch4.prop-ev-energy-fractions} \cite{stratton1941,jackson1999}.
+
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.prop-sector-equivalence}: only \(\widetilde{\mathbf{A}}_{\mathrm{syn}}\) enters \(\mathbf{c}\)
+\cite{harrington2001,devaney2004}.
+
+\textbf{Step 3.} If \(\mathcal{E}_{\mathrm{ev}}\gg\mathcal{E}_{\mathrm{prop}}\), far-zone \(\mathbf{c}\) is low-rank despite rich near-field
+\cite{stratton1941,hansen1988}.
+
+\textbf{Physical meaning.} Near-field truncation excess is reactive certification, not far-zone synthesis rank \cite{harrington2001}.
+
+
+\subsection{Mode-count scaling with geometry and frequency}
+\label{sec:ch4104}
+% TOC tag: [FIG+PROB][USE]
+
+\textbf{Problem.} A square aperture of side \(W\) operates at \(k_{0}W=4\). Estimate \(N_{\mathrm{mode}}^{\mathrm{(ap)}}(10^{-2})\) and compare
+to a \(32\)-element array.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (w) {$W$, $k_{0}W=4$};
+  \node[ch1box, right=11mm of w] (nm) {Eq.~\eqref{eq:ch4.mode-count-area}};
+  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, below=11mm of nm] (el) {32 elements};
+  \draw[ch1flow] (w) -- (nm) -- (deff);
+  \draw[ch1flow] (el) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Example~\ref{sec:ch4104}: mode-count scaling bounds diversity below element count.}
+\label{fig:ch4.ex-mode-count-scaling}
+\end{figure}
+
+\textbf{Step 1.} \(A_{a}=W^{2}\), \(k_{0}^{2}A_{a}=(k_{0}W)^{2}=16\) \cite{jackson1999,stratton1941}.
+
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.mode-count-area} gives \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\sim\mathcal{O}(10^{1})\)--\(\mathcal{O}(10^{2})\) up to
+\(C_{A}(\varepsilon)\) \cite{hansen1988,collin2001,harrington2001}.
+
+\textbf{Step 3.} Thirty-two elements do not guarantee thirty-two independent beams: \(d_{\mathrm{eff}}(10^{-2})\le N_{\mathrm{mode}}^{\mathrm{(ap)}}\)
+\cite{devaney2004,stratton1941}.
+
+\textbf{Physical meaning.} Mode-count scaling laws bound array diversity before beamforming claims \cite{hansen1988}.

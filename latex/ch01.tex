@@ -1,4 +1,6 @@
-﻿% LOCKED SCAFFOLD - Volume I FINAL TOC - Chapter 1 only
+﻿% COMPLETE AND LOCKED - Volume I Chapter 1 manuscript (2026-06-07)
+% Prose-uniqueness pass P1-P3 complete; forensic audit remediated
+% Unlock only via TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md author directive
 % Do not add Ch 2+ content to this file
 \chapter{Foundations of Angular Electromagnetic Structure}
 \label{ch:01}
@@ -10,7 +12,7 @@
 \paragraph{Why this monograph exists.}
 Existing literature studies modes, beams, phase singularities, angular-momentum
 decompositions, and application-driven implementations with great success
-\cite{allen1992,stratton1941,harrington2001,jackson1999}. It studies orbital angular
+\cite{allen1992,stratton1941,harrington2001,maxwell1873}. It studies orbital angular
 momentum, vector beams, structured light, and twisted-wave phenomenology in lasers,
 optics, and antennas. Yet the literature rarely asks, in one Maxwellian architecture,
 which angular electromagnetic structures are \emph{physically realizable} by finite
@@ -68,8 +70,11 @@ how many can a finite measurement chain resolve?} Rank, truncation, singular-val
 effective dimension, and accessibility budgets---developed fully in Chapters~2--4---are not
 abstract linear-algebra ornaments. They count independent angular channels permitted by
 Maxwell theory after finite support, finite aperture, and finite instrument rank are
-imposed \cite{harrington2001,hansen1988,chu1948}. Chapter~\ref{ch:01} names the question;
-Chapter~4 closes it.
+imposed \cite{harrington2001,hansen1988,chu1948}. This DOF viewpoint may become the
+bridge between electromagnetics, antenna theory, inverse problems, and modern wave
+physics: the same field may occupy many mathematical degrees of freedom while offering
+only a smaller set to generation and a still smaller set to observation.
+Chapter~\ref{ch:01} names the question; Chapter~4 closes it.
 
 \paragraph{Finite sources versus mathematical admissibility.}
 Maxwell theory admits infinitely many mathematically described field patterns on paper.
@@ -92,16 +97,182 @@ a gauge-dependent local density can look rotational while failing operational
 reportability. Chapter~\ref{ch:01} installs the screens that separate these categories
 before modal vocabulary accumulates.
 
+\begin{principle}[Representation--Physics Separation Principle]
+\label{prin:ch1.rep-physics}
+A mathematical representation of an electromagnetic field is not itself a physical
+observable.
+
+Modal indices, basis functions, beam labels, coordinate descriptions, phase
+singularities, spectral decompositions, and angular-momentum representations may
+provide useful descriptions of the same physical state. However, a change of
+representation does not necessarily imply a change of measurable electromagnetic
+content.
+
+Throughout this monograph, representation is treated as a descriptive layer, whereas
+physics is identified through measurable quantities, realizable source structures,
+accessible observables, and transferable conserved fluxes.
+
+Consequently, no representation is granted physical significance solely because it
+provides a convenient mathematical description. Physical significance arises only
+after realizability, accessibility, and transport criteria have been satisfied.
+
+This distinction remains a recurring principle throughout all later chapters and
+volumes.
+\end{principle}
+
 \paragraph{Admissible, realizable, accessible, and transferable.}
-Four status classes organize the monograph:
+Four status classes organize Volume~I and may become one of its most durable
+conceptual contributions:
 \emph{admissible}---mathematically consistent with Maxwell data on a declared domain;
 \emph{realizable}---generable by a finite impressed source in the model class of
-Chapter~4; \emph{accessible}---resolvable by a finite aperture and finite measurement rank;
-\emph{transferable}---capable of carrying measurable conserved flux across a control
-surface under the transport criteria of Section~\ref{sec:ch01.2}
+Chapter~4; \emph{accessible}---recoverable by a finite aperture and finite measurement
+rank; \emph{transferable}---capable of carrying measurable conserved flux across a
+control surface under the transport criteria of Section~\ref{sec:ch01.2}
 \cite{stratton1941,harrington2001,hansen1988}. A field state can be admissible yet not
-realizable; realizable yet not accessible; accessible yet not transferable. Volume~I maps
-these implications forward without collapsing them into a single ``OAM'' label.
+realizable; realizable yet not accessible; accessible yet not transferable. The four
+classes are not synonyms for ``OAM'' or ``structured light''; they are a progressive
+filter that asks, at each stage, whether angular organization survives the next
+physical constraint.
+
+\begin{hierarchy}[Hierarchy of Physical Angular Structure]
+\label{hier:ch1.angular-status}
+Angular electromagnetic structure is classified throughout this monograph according to
+the following hierarchy:
+\begin{center}
+\begin{tabular}{@{}c@{}}
+Admissible \\[2pt]
+$\downarrow$ \\[2pt]
+Realizable \\[2pt]
+$\downarrow$ \\[2pt]
+Accessible \\[2pt]
+$\downarrow$ \\[2pt]
+Transferable
+\end{tabular}
+\end{center}
+where \emph{admissible} denotes mathematical compatibility with Maxwell equations
+and declared boundary data; \emph{realizable} denotes generation by finite impressed
+sources and finite physical geometry; \emph{accessible} denotes recoverability by
+finite measurement systems possessing finite aperture, bandwidth, calibration accuracy,
+and rank; and \emph{transferable} denotes the capability of carrying measurable
+conserved quantities across a declared control surface.
+The hierarchy is progressive rather than descriptive. Advancement from one level to
+the next requires satisfaction of additional physical constraints. Consequently, not
+every admissible structure is realizable, not every realizable structure is
+accessible, and not every accessible structure is transferable.
+
+This hierarchy serves as one of the principal organizing frameworks of the entire
+monograph.
+\end{hierarchy}
+
+\paragraph{Realizability and accessibility are different questions.}
+\emph{Realizability} asks whether Nature, through finite impressed sources and declared
+geometry, can \emph{generate} an angular structure.
+\emph{Accessibility} asks whether an observer, through finite apertures, finite
+bandwidth, finite signal-to-noise ratio, and finite calibration accuracy, can
+\emph{recover} that structure from measurements \cite{harrington2001,hansen1988}.
+Those questions are profoundly different, and conflating them has produced decades of
+laboratory confusion. A field may be Maxwell-admissible and even source-realizable
+while remaining only partially accessible to the instrument that must certify it.
+Consider, illustratively, a radiative state that organizes angular content across one
+hundred independent channels at the Maxwell level. A finite transmitting array may
+excite only eighty within its geometry; a finite receiving aperture may resolve
+twenty; a practical estimation chain may recover only ten with reproducible
+confidence. The field exists; much of its organized content exists in principle; the
+observer never fully sees it. \emph{Nature may contain more angular structure than
+measurement can reveal.} That sentence is among the deepest messages of Volume~I, and
+it should remain in view throughout Chapters~1--4.
+
+\begin{principle}[Accessibility]
+\label{prin:ch1.accessibility}
+Nature may contain electromagnetic structure beyond the resolving capability of
+any finite measurement system. Accessibility is therefore not merely an experimental
+limitation but a fundamental physical distinction between existence and observation.
+\end{principle}
+
+The distinction between existence and observation is one of the central
+philosophical themes of this monograph: electromagnetic structure may exist as a
+Maxwellian possibility long before it becomes accessible as a measurable laboratory
+reality.
+
+\paragraph{Accessibility as an informational limitation.}
+The term \emph{information} is used here in a physical rather than Shannon-formal
+sense \cite{hansen1988,stratton1941}. Accessibility is not merely a post-processing
+inconvenience; it is a constraint on which portions of an electromagnetic state can
+enter the observable record at all. Finite aperture limits spatial interrogation;
+finite bandwidth limits temporal/spectral resolution of angular transients; finite
+signal-to-noise ratio limits distinguishability of weak channels; finite dynamic range
+limits simultaneous recovery of strong and weak angular components; finite calibration
+accuracy limits how reliably a modal index or flux component can be mapped to a
+laboratory unit. Each limit removes observable angular degrees of freedom even when
+the underlying Maxwell field remains well defined. Accessibility is therefore a
+\emph{physical principle}: the gap between existence and observation, not a secondary
+footnote to antenna engineering.
+
+\paragraph{A neglected question in electromagnetic literature.}
+Most electromagnetic literature asks what fields \emph{exist} on a domain, and a
+smaller but important literature asks what fields can be \emph{generated} by declared
+sources \cite{stratton1941,harrington2001}. Far less literature asks which portions of
+those fields can actually be \emph{recovered} by finite instruments under noise,
+aperture, and inversion limits \cite{hansen1988,chu1948}. Volume~I is strongest when
+it keeps that third question in the foreground, because it is where the monograph's
+originality concentrates: not in renaming beams, but in separating mathematical
+possibility from laboratory recoverability. Researchers working on metasurfaces,
+programmable apertures, near-field communications, mode multiplexing, structured
+radio waves, or quantum angular states will eventually confront the same universal
+question---\emph{how much angular structure is genuinely available?}---and Volume~I
+supplies the Maxwellian language in which that question can be posed without
+fashion-driven vocabulary.
+
+\paragraph{Progressive elimination of nonphysical angular structure.}
+The deepest contribution of Volume~I is not orbital angular momentum, structured
+light, vector beams, singular optics, or angular-momentum slogans taken alone. It is
+the \emph{progressive elimination of nonphysical angular structures}---the disciplined
+removal, stage by stage, of descriptions that fail Maxwell law, finite-source
+geometry, measurement rank, or transport closure. The logical chain runs:
+Maxwell-admissible
+\(\rightarrow\) source-realizable
+\(\rightarrow\) measurement-accessible
+\(\rightarrow\) physically transferable.
+Each arrow is a filter, not a notational convenience. Chapter~\ref{ch:01} installs the
+first two screens at the field-theoretic level; Chapter~4 completes the realizability
+and truncation proof; the measurement-accessible stage is developed jointly here and in
+Chapters~2--4 \cite{stratton1941,harrington2001,hansen1988}. A reader who internalizes
+this chain will not remember the book as another OAM monograph, but as a foundational
+work on the physical limits of angular electromagnetic structure.
+
+\paragraph{Mathematical description is not physical meaning.}
+A timeless monograph does not solve only today's questions; it defines tomorrow's.
+The recurring sentence that governs this chapter is:
+\emph{not every mathematically describable angular structure is physically meaningful.}
+Infinite modal expansions, ideal beams without decay, and gauge-rich local densities can
+all be written down; fewer survive finite sources, finite apertures, and qualified flux
+tests \cite{stratton1941,harrington2001}. According to the Representation--Physics
+Separation Principle (Principle~\ref{prin:ch1.rep-physics}), export content, source
+realizability, and measurement recoverability must be certified before a
+representation acquires physical meaning.
+That distinction is reinforced in every major section of Chapter~\ref{ch:01} and is
+intended to remain audible when the reader turns to later volumes.
+
+\paragraph{Why Nature restricts angular structure.}
+The limitations encountered in this monograph are not mere engineering inconveniences
+to be removed by better hardware. They arise from the structure of Maxwell theory
+itself when impressed sources have finite support, current distributions have finite
+extent, radiating apertures have finite area, radiation operators have finite rank,
+and measurement chains have finite dimension \cite{chu1948,harrington2001,stratton1941}.
+Finite geometry is Nature's mechanism for restricting angular complexity; truncation is
+not an artifact of poor numerics but a statement about how many independent angular
+channels a physical configuration can support and how many an observer can stably
+estimate. Chapter~4 will prove this mathematically through realizability operators and
+effective angular dimension; Chapter~\ref{ch:01} foreshadows it philosophically so
+that the later proofs read as inevitable rather than punitive.
+
+Finite geometry is not merely a practical limitation imposed by engineering
+implementation. It is the physical mechanism through which Nature limits angular
+complexity. The finite support of sources, apertures, materials, and measurement
+systems imposes an upper bound on physically meaningful angular organization. In this
+sense, finite geometry plays a role analogous to bandwidth in communication theory: it
+limits not only what may be transmitted, but also how much independent angular
+information can physically exist within a realizable electromagnetic configuration.
 
 \paragraph{Operational physics and measurement.}
 Electromagnetic physics in this monograph means \emph{measurable} quantities under declared
@@ -141,7 +312,7 @@ structures survive finite geometry at each stage.
   \node[ch1lblout, right=18mm of l3] {Ch.~4};
 \end{tikzpicture}%
 }
-\caption{Three-level hierarchy of angular electromagnetic structure: Maxwell fields (law and flux), representations (descriptive bases), and realizable structures (finite sources and accessible measurements). Most literature confusions arise from identifying Level~II labels with Level~I invariants or Level~III laboratory objects without intermediate proof.}
+\caption{Three-level hierarchy of angular electromagnetic structure: Maxwell fields (law and flux), representations (descriptive bases), and realizable structures (finite sources and accessible measurements). Volume~I progressively eliminates nonphysical angular descriptions by forcing each claim to descend this ladder. Most literature confusions arise from identifying Level~II labels with Level~I invariants or Level~III laboratory objects without intermediate proof.}
 \label{fig:ch1.three-level-hierarchy}
 \end{figure}
 
@@ -151,6 +322,18 @@ basis; Chapter~4 determines Level~III realizability, truncation, and effective a
 dimension \cite{stratton1941,harrington2001}. The reader should return to this figure when
 modal names, OAM indices, or beam labels appear: the label names a representation; the
 hierarchy asks whether the named content is permitted, realizable, and accessible.
+
+\paragraph{Orientation for the reader.}
+The concepts introduced in this opening section---including admissibility,
+realizability, accessibility, transferability, effective angular dimension,
+finite-source constraints, operator screening, spectral truncation, and
+measurement-limited observability---serve initially as navigational markers rather
+than as completed mathematical constructions. Their rigorous realization is developed
+progressively throughout Chapters~2--4 through radiation operators, eigenfield
+representations, realizability operators, spectral truncation theory, and
+accessibility analysis. The reader is therefore not expected to master these concepts
+at this stage. Their purpose here is to identify the central questions of the
+monograph and to provide a conceptual map for the developments that follow.
 
 \paragraph{Central research program.}
 The monograph addresses four organizing questions that recur across all nineteen chapters:
@@ -166,18 +349,53 @@ satisfied \cite{allen1992,belinfante1940,stratton1941}. Volume~I classifies angu
 electromagnetic structure by realizability and accessibility, not by modal nomenclature
 alone.
 
+Although orbital angular momentum, vortex beams, structured light, and twisted-wave
+phenomena appear throughout this monograph, they are not its primary subject. The
+deeper objective is to understand how finite geometry governs the emergence,
+accessibility, realizability, and transferability of angular electromagnetic
+structure.
+
 \paragraph{Volume~I roadmap.}
-The reader path is deliberate:
-Chapter~\ref{ch:01}---Maxwell foundations, conservation, transport screens, and
-admissible field classes;
-Chapter~2---radiation operators, null spaces, and angular-spectrum action;
-Chapter~3---eigenfield representations and spectral change of basis;
-Chapter~4---realizability, truncation, rank, and effective angular dimension
-\cite{stratton1941,harrington2001}. Chapter~4 is the intellectual destination of Volume~I:
-many texts treat angular momentum, OAM, and vector harmonics; far fewer develop a rigorous
-theory of which angular structures finite sources may generate and finite instruments may
-resolve. Seeds of finite geometry, truncation, and accessibility appear here so that
-Chapter~4 does not arrive as a surprise.
+The reader path is deliberate and cumulative:
+Chapter~\ref{ch:01} establishes what angular structure \emph{means} physically under
+Maxwell law, conservation, transport screens, and measurement discipline;
+Chapter~2 develops how Maxwell fields are \emph{mapped} from finite sources to
+observations through radiation operators, null spaces, and angular-spectrum action;
+Chapter~3 decomposes those mappings into natural \emph{angular eigenstructures} and
+representation-theoretic change of basis;
+Chapter~4 determines which eigenstructures \emph{survive} finite geometry through
+realizability, truncation, rank, and effective angular dimension
+\cite{stratton1941,harrington2001,chu1948}. Chapter~4 is the intellectual destination
+of Volume~I: many texts treat angular momentum, OAM, and vector harmonics; far fewer
+develop a rigorous theory of which angular structures finite sources may generate and
+finite instruments may resolve.
+
+Viewed retrospectively, the central intellectual thread of Volume~I is neither orbital
+angular momentum nor any specific beam family. It is the determination of how finite
+geometry restricts angular electromagnetic complexity, and how those restrictions
+propagate through realizability, accessibility, and measurement. In Chapters~2--4,
+every major result concerning rank deficiency, spectral truncation, accessibility
+limits, finite-aperture effects, or source realizability will be read against this
+same finite-geometry criterion: the support and dimension of physical geometry set the
+effective angular complexity that generation and observation can jointly sustain.
+
+\paragraph{Why Chapter~2 must exist.}
+The central problem of Volume~I cannot be closed in Chapter~\ref{ch:01} alone.
+Chapter~\ref{ch:01} defines admissible angular structure at the field level, but
+laboratory questions are invariably source-to-observation questions: given a finite
+current distribution or aperture excitation, which angular channels appear in the
+radiated field, which are extinguished by operator nullity, and which remain below
+measurement threshold? Those questions require explicit source-to-field maps,
+radiation operators, and Green-function actions developed in Chapter~2
+\cite{stratton1941,tai1994,harrington2001}. Without that chapter, Chapter~3 would
+decompose representations detached from how fields are actually produced, and
+Chapter~4 could not state realizability as a property of finite sources rather than
+of abstract modes. The progression is therefore not merely convenient; for the stated
+problem it is the only coherent path: physical meaning (Chapter~\ref{ch:01}),
+production and observation maps (Chapter~2), natural angular eigenstructure
+(Chapter~3), finite-geometry survival (Chapter~4). The reader should feel that
+alternative orderings would leave the central questions formally posed but
+operationally unanswered.
 
 \paragraph{Reading map for Section~\ref{sec:ch01.0}.}
 Subsection~\ref{sec:ch01.0.1} states chapter scope and the law--transport--observability
@@ -188,21 +406,34 @@ Section~\ref{sec:ch01.1} develops Maxwell law, Poynting flux, stress tensor, and
 angular-momentum balance in full physical depth \emph{before} representation vocabulary
 dominates Sections~\ref{sec:ch01.2}--\ref{sec:ch01.5}.
 
-\paragraph{Masterpiece test (foundational status).}
+The enduring value of the framework developed in this chapter does not depend on any
+particular modal basis, beam family, or angular-momentum representation. Its primary
+objective is to establish a unified language for distinguishing admissible,
+realizable, accessible, and transferable angular structure; for separating
+mathematical representation from physical meaning through
+Principle~\ref{prin:ch1.rep-physics}; for understanding accessibility as a
+fundamental physical limitation through Principle~\ref{prin:ch1.accessibility}; for
+recognizing finite geometry as Nature's mechanism for limiting angular complexity;
+and for progressively eliminating nonphysical descriptions from electromagnetic
+analysis. These themes will remain active throughout all subsequent chapters and
+volumes.
+
+\paragraph{Foundational self-sufficiency.}
 If every reference to OAM, Laguerre--Gaussian modes, twisted waves, vortex beams, and
 structured-light slogans were removed from Chapter~\ref{ch:01}, the chapter should still
 stand as a foundational theory of angular electromagnetic structure under Maxwell law,
-conservation, realizability, and measurement. That standard governs the forensic edit of
-this chapter.
+conservation, realizability, accessibility, and measurement. That standard is the
+intellectual bar for every section that follows: the chapter must remain legible as
+physics of limits, not as commentary on fashionable beam names.
 
 \subsection{Scope and role of Chapter 1}
 \label{sec:ch01.0.1}
 % TOC tag: [HOME]
 
-\emph{Scope} names what Chapter~\ref{ch:01} owns in Volume~I and what it deliberately
-defers; \emph{role} names how this chapter screens later radiation, representation, and
-realizability theory before operator formalism enters
-\cite{stratton1941,harrington2001}.
+Chapter~\ref{ch:01} owns Level~I Maxwell screening in Volume~I: \emph{scope} fixes what
+must be proved here versus deferred to Chapters~2--4; \emph{role} fixes how later
+radiation, representation, and realizability theory may cite these results without
+re-derivation \cite{stratton1941,harrington2001}.
 
 Volume~I of this monograph (Chapters~1--4) establishes what angular structure in
 electromagnetic fields is, in Maxwellian terms, before radiation mechanisms,
@@ -221,10 +452,11 @@ this chapter and culminates in Chapter~4 realizability theory \cite{harrington20
 Electromagnetic fields often exhibit strong azimuthal phase gradients, rotating
 interference textures, and polarization patterns that appear to carry angular
 content. Those signatures become physically meaningful only after one separates
-three questions: whether the fields satisfy Maxwell equations on the stated
-domain, whether the associated momentum flux supports angular transport, and
-whether a measurement protocol can access the claimed quantity
-\cite{stratton1941}. The opening task is therefore to
+four questions: whether the fields are Maxwell-\emph{admissible} on the stated
+domain, whether a finite source can make them \emph{realizable}, whether a finite
+instrument can make them \emph{accessible}, and whether qualified flux makes them
+\emph{transferable} across a declared control surface
+\cite{stratton1941,harrington2001,hansen1988}. The opening task is therefore to
 state this separation as a mathematical screening, so that descriptive structure is
 not confused with conserved transfer. Two ideas govern the entire chapter:
 \emph{scope} fixes what is and is not owned here; \emph{role} fixes how results
@@ -354,6 +586,11 @@ separates claims by requirement class. Confusing input data with output
 constraints---for example, treating a modal index as if it were already a member of
 \(\mathcal{T}_C\)---is precisely the category error the three-screen criterion prevents.
 
+Throughout this monograph, worked examples are included not primarily as computational
+exercises but as conceptual clarifications. Each example is intended to illuminate a
+specific physical principle, admissibility criterion, transport condition, realizability
+limitation, or accessibility constraint discussed in the surrounding text.
+
 \paragraph{Worked problem: matched versus mismatched aperture claims.}
 \begin{figure}[t]
 \centering
@@ -413,15 +650,14 @@ descriptive metadata from masquerading as conserved angular action
 \label{sec:ch01.0.2}
 % TOC tag: [HOME]
 
-\emph{Angular structure} names organized directional content; \emph{Maxwell symmetry}
-names compatibility with the rotationally covariant boundary-value map induced by the field
-equations; \emph{boundary conditions} name the traces and source data that select which
-rotational patterns are dynamically supported on \(\Omega\) rather than graphically imposed
-\cite{stratton1941}. Together they answer why a field may \emph{look} rotationally organized
-while failing to transport angular momentum once flux is integrated on a declared surface.
+A lightning channel can look helical in a photograph while exporting negligible net
+orbital flux on a storm-scale envelope---appearance without transport. Three coupled
+filters interpret such images: angular structure (organized directional content),
+Maxwell symmetry (compatibility with the rotationally covariant boundary-value map),
+and boundary conditions (traces and source data that select supported rotations on
+\(\Omega\) rather than graphically imposed patterns) \cite{stratton1941,maxwell1873}.
 
-Angular structure, Maxwell symmetry, and boundary conditions are three coupled
-filters, not interchangeable labels. \emph{Angular structure} is the organized
+These filters are not interchangeable labels. \emph{Angular structure} is the organized
 directional and rotational content of a field state, including amplitude, phase,
 polarization, momentum-flow, symmetry, and topological organization as enumerated in
 Section~\ref{sec:ch01.0}. \emph{Maxwell symmetry} is the requirement that such organization
@@ -489,6 +725,15 @@ that prevents denominator singularity near vanishing field magnitude. The
 numerator measures non-commuting residue; the denominator scales that residue by
 field amplitude. Thus \(\kappa_{\mathrm{rot}}\) is a dimensionless mismatch index
 that reports boundary/material-induced redistribution among angular channels.
+
+The importance of \(\kappa_{\mathrm{rot}}\) extends beyond symmetry classification.
+Later chapters reinterpret propagation, radiation, and realizability as processes that
+selectively preserve, redistribute, or suppress angular structure. In that broader
+context, \(\kappa_{\mathrm{rot}}\) serves as an early diagnostic of rotational channel
+preservation under finite geometry and boundary-induced asymmetry. Its continued role
+throughout the monograph will therefore not be as a local symmetry indicator alone,
+but as a measure of the stability of angular organization under physically realizable
+transformations.
 
 When \(\kappa_{\mathrm{rot}}(\alpha)\) is small for all \(\alpha\in\mathcal{I}_\alpha\),
 the propagation map preserves rotational channel identity up to measurement
@@ -635,12 +880,12 @@ angular channels across an asymmetric boundary \cite{stratton1941,maxwell1873}.
 \label{sec:ch01.0.3}
 % TOC tag: [HOME]
 
-\emph{Assumptions} fix the material model and excitation class; \emph{finite-energy
-admissibility} requires square-integrable field norms on bounded control volumes;
-\emph{domain of validity} records where extrapolation beyond that class demands new
-operators or state variables \cite{stratton1941}. These three contracts prevent
-angular-momentum claims from resting on fields that Maxwell integration cannot
-support.
+Before any angular budget is evaluated, the manuscript fixes where the mathematics
+lives. \emph{Assumptions} select the material model and excitation class;
+\emph{finite-energy admissibility} demands square-integrable field norms on bounded
+control volumes; \emph{domain of validity} records the horizon beyond which new
+operators or state variables are required \cite{stratton1941}. These three contracts
+prevent transport claims from resting on fields Maxwell integration cannot support.
 
 Every conservation law in this chapter is read as a statement about fields that
 can be integrated, differentiated, and compared on finite control volumes without
@@ -648,11 +893,7 @@ divergent norms or incompatible traces. That requirement sounds modest, yet it
 excludes a large class of formal manipulations that appear in informal angular-momentum
 discussions---delta-function sources without regularization, idealized infinite
 beams without transverse decay, or reactive near fields treated as if they were
-asymptotic radiative states \cite{stratton1941}. Three
-contracts govern admissibility: \emph{assumptions} fix the model class;
-\emph{finite-energy admissibility} fixes the function space; \emph{domain of
-validity} records where extrapolation beyond that class requires new state
-variables or operators.
+asymptotic radiative states \cite{stratton1941}.
 
 Finite-energy admissibility is the minimal mathematical condition that keeps
 transport quantities, projections, and measurement models in the same functional
@@ -670,11 +911,11 @@ finite-energy condition is
 \end{equation}
 where \((\cdot)^*\) denotes complex conjugation and \(dV\) is the volume element.
 At term level, \(\E^*\!\cdot\E\) and \(\H^*\!\cdot\H\) are nonnegative electric
-and magnetic energy-density surrogates in phasor form. Full-equation meaning:
+and magnetic energy-density surrogates in phasor form. Collectively,
 Eq.~\eqref{eq:ch1.energy-class} places admissible states in
-\(L^2(\Omega)^3\times L^2(\Omega)^3\). Physical meaning: field states with
-divergent norm content are excluded because they do not support stable finite
-control-volume flux interpretation.
+\(L^2(\Omega)^3\times L^2(\Omega)^3\); states whose norm content diverges are
+excluded because they do not support stable finite control-volume flux
+interpretation.
 
 Energy admissibility alone is insufficient; source and boundary compatibility must
 be imposed simultaneously. Define
@@ -721,7 +962,7 @@ embedding it in \(\mathcal{X}_{\mathrm{ch1}}(\Omega)\) violates the admissibilit
 specification fixed here and propagates error into every later section that inherits
 Eq.~\eqref{eq:ch1.admissible-space} by reference.
 
-\paragraph{Section 1.0 summary and bridge.}
+\paragraph{Closing synthesis (Introduction and Scope).}
 The field class considered in this chapter is now fully specified: candidate
 statements must satisfy simultaneous law consistency, transport consistency, and
 operational observability; rotational interpretation is tied to symmetry of the
@@ -834,23 +1075,15 @@ modal or operator language is introduced.
 \section{Maxwell Theory and Conservation Laws}
 \label{sec:ch01.1}
 
-\emph{Maxwell theory} supplies the local and integral field laws; \emph{conservation laws}
-supply the flux and balance statements that connect those laws to measurable energy,
-momentum, and angular-momentum transfer. This section owns the physics that must precede
-every representation label: Poynting flux, stress tensor, and angular-momentum balance are
-developed here in full depth so the reader earns the screening framework of
-Section~\ref{sec:ch01.0} through field law rather than through editorial formalism
-\cite{maxwell1873,poynting1884,belinfante1940,stratton1941}. Finite sources enter through
-\(\Jimp\) and boundary data: the same equations govern infinite idealizations and compact
-antennas, but only the latter are buildable \cite{harrington2001}.
-
-Section~\ref{sec:ch01.1} establishes the governing dynamical core that all later
-angular claims must inherit: Maxwell equations in the adopted SI phasor
-convention, admissible source and boundary data, well-posed evolution, and the
-continuity laws that connect local field structure to measurable transfer of
-energy, linear momentum, and angular momentum. The subsection sequence is
-organized so that conservation statements are read as consequences of the same
-field equations, not as independent postulates. Subsection~\ref{sec:ch01.1.1} owns
+Every representation label in later chapters rests on field law proved here first.
+Section~\ref{sec:ch01.1} develops Maxwell equations in the adopted SI phasor
+convention, admissible sources and boundaries, well-posed evolution, and the
+continuity laws that connect local structure to measurable transfer of energy,
+linear momentum, and angular momentum \cite{maxwell1873,poynting1884,belinfante1940,stratton1941}.
+Conservation is treated as a \emph{consequence} of the same field equations, not as
+an independent postulate. Finite impressed currents \(\Jimp\) and boundary data remind
+the reader that compact antennas are buildable while infinite idealizations are not
+\cite{harrington2001}. Subsection~\ref{sec:ch01.1.1} owns
 the Maxwell system and vacuum closure; Subsection~\ref{sec:ch01.1.2} owns sources
 and boundary admissibility; Subsection~\ref{sec:ch01.1.3} owns uniqueness of
 solutions; Subsections~\ref{sec:ch01.1.4} and~\ref{sec:ch01.1.5} own the stress
@@ -1265,14 +1498,15 @@ form the complete local law set imported by every later angular argument
 \label{sec:ch01.1.2}
 % TOC tag: [HOME]
 
-\emph{Sources} inject impressed current and charge; \emph{boundary conditions} fix
-tangential traces and outgoing-wave selection; \emph{physical admissibility} requires
-that the combined dataset lies in the finite-energy class of
-Subsection~\ref{sec:ch01.0.3} \cite{stratton1941}. Finite antennas and apertures
-realize only a subset of mathematically smooth boundary data---a realizability theme
-developed in Chapter~4 \cite{harrington2001}.
+No radiating laboratory exists without a feed and an outer world. Impressed
+\emph{sources} inject current and charge; \emph{boundary conditions} fix tangential
+traces and outgoing-wave selection; \emph{physical admissibility} requires the full
+dataset to lie in the finite-energy class of Subsection~\ref{sec:ch01.0.3}
+\cite{stratton1941,harrington2001}. Finite antennas realize only a subset of
+mathematically smooth boundary data---a realizability theme developed in Chapter~4.
 
-Subsection~\ref{sec:ch01.1.1} fixed the Maxwell system in vacuum form. Real
+Vacuum Maxwell laws from Subsection~\ref{sec:ch01.1.1} are necessary but not
+sufficient for a complete boundary-value problem. Real
 angular-structure problems always include where excitation enters, how fields
 match across material interfaces, and which outer-boundary condition selects
 outgoing rather than incoming waves. Those data are not decorative parameters:
@@ -2041,16 +2275,13 @@ any angular transport diagnostic in Section~\ref{sec:ch01.2} \cite{maxwell1873}.
 \label{sec:ch01.1.4}
 % TOC tag: [HOME]
 
-Subsections~\ref{sec:ch01.1.1}--\ref{sec:ch01.1.3} fixed the Maxwell system, source
-and boundary admissibility, and uniqueness of the boundary-value map. The
-cycle-averaged energy and momentum budgets developed below turn those field
-solutions into flux quantities measurable on finite surfaces. Energy (storage and
-outward flow), linear momentum (directed mechanical action carried by the field),
-and the Maxwell stress tensor (the local bilinear map that converts field
-intensity to traction on a surface) enter as one coupled derivation. Angular-momentum
-arguments in Subsection~\ref{sec:ch01.1.5} inherit \(\mathbf{T}\) from here by
-reference; they do not introduce an independent mechanical postulate
-\cite{stratton1941}. In the
+Uniqueness makes flux budgets identifiable: a single field branch now supports
+measurable surface integrals. The cycle-averaged energy and momentum accounts below
+translate Subsections~\ref{sec:ch01.1.1}--\ref{sec:ch01.1.3} into outward flow,
+directed momentum action, and the Maxwell stress tensor as the local traction map
+on \(\partial V\). Subsection~\ref{sec:ch01.1.5} imports \(\mathbf{T}\) from here
+rather than postulating independent rotational mechanics \cite{stratton1941,poynting1884}.
+In the
 \(\exp(-\jj\omega t)\) phasor convention, define
 \(\mathbf{S}=\tfrac{1}{2}\E\times\H^*\), where \((\cdot)^*\) is complex
 conjugation. Define stored-energy densities
@@ -2688,7 +2919,7 @@ Within the vacuum harmonic framework adopted here, the balance laws are the
 rotational closure imported by every transport criterion in Section~\ref{sec:ch01.2}
 \cite{maxwell1873,belinfante1940,stratton1941}.
 
-\paragraph{Section 1.1 summary and transition.}
+\paragraph{Handoff from Maxwell theory and conservation.}
 Section~\ref{sec:ch01.1} closes the Maxwell conservation chain---field laws,
 admissible sources and boundaries, uniqueness, and the energy--momentum--angular
 balance laws that fix measurable transfer channels
@@ -2701,21 +2932,16 @@ those balances rather than from visual pattern alone
 \section{Angular Structure of Electromagnetic Fields}
 \label{sec:ch01.2}
 
-\emph{Angular structure of electromagnetic fields} names the directional, phase, polarization,
-and transport organization of qualified Maxwell solutions---not beam nicknames alone.
-Section~\ref{sec:ch01.2} develops that meaning from field quantities and transport criteria.
-Appearance versus transport is enforced repeatedly: phase winding and modal index are
-representation-facing descriptors until flux integrals and measurement maps certify export
-\cite{belinfante1940,poynting1884,allen1992}. The degrees-of-freedom question seeded in
-Section~\ref{sec:ch01.0} reappears here as directional resolution and channel count on
-observation spheres \cite{hansen1988}.
-
-Section~\ref{sec:ch01.2} develops the meaning of angular structure from
-field quantities and transport criteria rather than from phase-pattern naming.
-Its scope is to separate directional geometry, polarization-phase organization,
-and genuine angular-momentum carriage under explicit radiative and reactive
-regimes, so that each later modal interpretation remains tied to an operational
-electromagnetic criterion.
+Qualified Maxwell solutions can look directionally organized long before they export
+angular action. Section~\ref{sec:ch01.2} separates directional, phase, polarization,
+and Poynting topology from the narrower class that \emph{transports} qualified flux
+\cite{belinfante1940,poynting1884,allen1992}. Phase winding and modal index remain
+representation-facing until flux integrals and measurement maps certify export; a
+realizable pattern may still fail transport, and a transporting pattern may still
+lie below instrument resolution. The degrees-of-freedom question from
+Section~\ref{sec:ch01.0} therefore becomes directional channel count on observation
+spheres and the first operational split between field existence and data recoverability
+\cite{hansen1988,harrington2001}.
 
 
 \subsection{Directional dependence and angular momentum}
@@ -3400,12 +3626,13 @@ for transport closure \cite{poynting1884,stratton1941}.
 \label{sec:ch01.2.3}
 % TOC tag: [HOME]
 
-Earlier sections fixed conservation laws and directional maps; here the question
-becomes operational: when does angular structure \emph{transport} rather than merely
-\emph{display}? Section~\ref{sec:ch01.1.5} tied angular momentum to Maxwell stress
-and torque; Subsections~\ref{sec:ch01.2.1}--\ref{sec:ch01.2.2} showed that rich
-phase-polarization textures need not export flux
-\cite{stratton1941}.
+A vortex-core photograph can circulate the eye while the far-zone flux integral
+vanishes---display without transport. The operational question posed here is when
+angular organization exports qualified flux rather than merely decorating the field:
+Section~\ref{sec:ch01.1.5} tied angular momentum to stress and torque;
+Subsections~\ref{sec:ch01.2.1}--\ref{sec:ch01.2.2} showed that rich
+phase-polarization textures need not carry outward action
+\cite{stratton1941,belinfante1940}.
 
 From a Maxwellian standpoint, transport is not a visual property of phase fronts;
 it is a balance property. A pattern that satisfies the wave equation and even
@@ -3774,15 +4001,12 @@ export-capable rather than representation-rich \cite{maxwell1873,belinfante1940}
 \label{sec:ch01.2.4}
 % TOC tag: [HOME]
 
-Subsection~\ref{sec:ch01.2.3} answered whether angular structure \emph{can} transport
-when three-part conditions hold. A prior question experiments often skip is \emph{where}
-in space that transport interpretation is physically meaningful. Reactive and
-radiative regimes are not merely labels for
-near and far zones; they are distinct Maxwellian partitions of the same Poynting
-vector into oscillatory storage exchange and irreversible outward flow. Angular
-patterns that look equally striking in both regimes can carry opposite
-interpretive status---storage geometry in one shell, export evidence in another
-\cite{stratton1941}.
+Stand-off distance changes the physics story even when the source is unchanged. A
+near-field probe may register reactive circulation while a far-zone meter records
+outward transport---two readings of one state, not two states. Reactive and
+radiative regimes partition the Poynting vector into oscillatory storage exchange
+and irreversible export; equally vivid phase textures can therefore carry opposite
+interpretive status in different shells \cite{stratton1941,poynting1884}.
 
 The linkage to Subsection~\ref{sec:ch01.2.3} is direct. Triad condition
 \(\mathcal{C}_3\) already demanded propagative support through
@@ -4117,7 +4341,7 @@ With this regime criterion fixed, Section~\ref{sec:ch01.3} can analyze covarianc
 transformations without conflating coordinate effects with storage-dominant
 near-field structure.
 
-\paragraph{Section 1.2 synthesis and bridge.}
+\paragraph{Handoff from angular structure and transport screening.}
 Section~\ref{sec:ch01.2} separates directional transport
 \((\Pi,\boldsymbol{\Psi}_J)\), phase-polarization diagnostics, triad closure, and
 reactive-radiative partitioning, culminating in the master chain
@@ -4131,26 +4355,17 @@ origin shifts.
 \section{Rotations, Tensors, and Covariance}
 \label{sec:ch01.3}
 
-\emph{Rotations} change how the same Maxwell state is viewed or how the laboratory is
-re-oriented relative to fixed sources; \emph{tensors} package multi-component field
-quantities that must transform coherently under those actions; \emph{covariance} demands
-that transport reports transform with the geometry, not as accidental coordinate
-artifacts \cite{stratton1941}. Section~\ref{sec:ch01.3} answers a practical question
-raised in Section~\ref{sec:ch01.2}: when a torque or angular-flux number is measured in
-one frame, what correction laws apply after rotation, tensor contraction, or origin shift?
-Finite-source geometry often breaks full rotational symmetry; covariance diagnostics
-therefore preview the realizability constraints developed in Chapter~4
-\cite{harrington2001}.
-
-Section~\ref{sec:ch01.3} formulates angular-field statements under explicit
-rotation and translation actions, tensor transformation rules, and invariant
-observable criteria. The section-level objective is to separate physical transfer
-content from coordinate-dependent representation, so that subsequent gauge
-analysis inherits only frame-consistent quantities and not chart artifacts.
-Section~\ref{sec:ch01.2} developed directional transport and regime criteria on a
-fixed origin and axis system; the present section asks how those reports transform
-when the laboratory frame rotates, when tensors replace vectors in constitutive
-laws, and when the reference origin for \(\mathbf{r}\times(\cdot)\) is moved.
+Turn the laboratory bench and a torque readout may change sign unless correction
+laws are applied consistently. Section~\ref{sec:ch01.3} supplies those laws for
+rotations, tensor contractions, and origin shifts on the transport reports qualified
+in Section~\ref{sec:ch01.2} \cite{stratton1941}. Covariance is the requirement that
+physical transfer content separate from coordinate-dependent representation before
+gauge analysis begins; finite-source geometry often breaks full rotational symmetry,
+previewing realizability constraints developed in Chapter~4 \cite{harrington2001}.
+Building on a fixed origin and axis system from Section~\ref{sec:ch01.2}, the
+subsections below ask how qualified flux and stress reports transform when frames
+rotate, when dyadic constitutive laws replace vector laws, and when the moment arm
+\(\mathbf{r}\times(\cdot)\) is redefined.
 Subsection~\ref{sec:ch01.3.1} disentangles active from passive rotation;
 Subsection~\ref{sec:ch01.3.2} fixes tensor and dyadic transformation laws;
 Subsection~\ref{sec:ch01.3.3} states origin-shift rules for torque and angular
@@ -4406,12 +4621,11 @@ dependent constitutive operators require extended covariance machinery.
 \label{sec:ch01.3.2}
 % TOC tag: [HOME]
 
-\emph{Vectors} carry one index and rotate by \(R\); \emph{tensors} carry multiple
-indices and transform by congruence laws; \emph{dyads} are rank-two objects whose
-contractions with vectors must remain objective when frames rotate
-\cite{stratton1941}. Maxwell stress is the canonical dyad in angular transport:
-mis-stating its rotation law produces fictitious torque even when \(\E\) and \(\H\)
-are correct.
+Rotate a laboratory frame and the components of \(\E\) reorder; rotate the stress
+dyad incorrectly and a torsion balance reports torque that Maxwell never supplied.
+Vectors, tensors, and dyads each obey a distinct transformation law under
+\(R\in\mathrm{SO}(3)\); the Maxwell stress tensor is the rank-two object whose
+mishandling is most costly in angular work \cite{stratton1941,maxwell1873}.
 
 Rigid rotations act on vectors, tensors, and dyads through distinct but linked
 transformation laws. Covariance failures at any one layer propagate into false
@@ -4855,11 +5069,11 @@ not to intrinsic angular structure \cite{stratton1941}.
 \label{sec:ch01.3.4}
 % TOC tag: [HOME]
 
-\emph{Invariants} are scalars unchanged by allowed frame actions; \emph{frame-independent
-observables} are vector or tensor reports that transform with the geometry rather than
-as coordinate accidents \cite{stratton1941}. A laboratory rotation of the apparatus
-must not alter exported power or net angular-flux magnitude; only directional
-\emph{components} of vector reports may change when the reference axes rotate.
+Will the reported number survive when the apparatus is re-oriented on the bench?
+Scalars such as total exported power must answer invariantly; vector and tensor
+reports must transform with the geometry, not as coordinate accidents
+\cite{stratton1941}. Only directional \emph{components} of vector observables may
+change when reference axes rotate; magnitudes tied to qualified flux integrals may not.
 
 Field diagnostics qualify as observables only when their numerical report survives
 allowed frame transformations with the correct geometric law. This subsection
@@ -5111,7 +5325,7 @@ integrals and residual norms used above. Non-Euclidean manifolds, improper
 transformations, and gauge-dependent local decompositions require modified
 objectivity operators handled in Section~\ref{sec:ch01.4}.
 
-\paragraph{Section 1.3 closure and forward link.}
+\paragraph{Handoff from rotations, tensors, and covariance.}
 Section~\ref{sec:ch01.3} fixes active/passive rotation duality, tensor and dyadic
 covariance, origin translation, and frame-invariant observables. Quantities carried
 forward must survive rigid-frame action and declared origin protocol before entering
@@ -5122,51 +5336,38 @@ same screening discipline.
 \section{Gauge Structure and Physical Observables}
 \label{sec:ch01.4}
 
-\emph{Gauge structure} names the equivalence class of potentials that produce the same
-\((\E,\H)\); \emph{physical observables} are the gauge-invariant and frame-consistent
-quantities that survive that equivalence and connect to measurement
-\cite{stratton1941,belinfante1940}. The laboratory risk is familiar: local
-angular-momentum or helicity densities can look substantial in one gauge yet change
-under a legal potential redefinition while exported flux integrals remain fixed.
-Section~\ref{sec:ch01.4} separates bookkeeping from physics before Chapter~3 introduces
-richer modal decompositions that could otherwise be mistaken for new invariants.
-
-Section~\ref{sec:ch01.4} develops gauge structure as an equivalence-class framework
-for electromagnetic representation: potentials are introduced as computational
-coordinates on field space, gauge transformations as symmetry operations within that
-representation class, and helicity-linked constructions as meaningful only after
-explicit observability filtering. The section objective is therefore twofold: first,
-to show which potential-level decompositions are gauge-dependent bookkeeping; second,
-to isolate the combinations that remain invariant and can be connected to physical
-transport channels established earlier. Every statement in this section is evaluated
-against that invariant-content requirement before it is used in subsequent chapters.
+Two laboratories can share identical \(\E\) and \(\H\) yet publish different
+``local angular momentum'' maps because they chose different potentials. Section~\ref{sec:ch01.4}
+develops gauge structure as the equivalence class of representations that leave
+measurable fields unchanged, then isolates the observables that survive that orbit
+and connect to transport \cite{stratton1941,belinfante1940}. The task is twofold:
+demote gauge-dependent bookkeeping, and promote only gauge-invariant, frame-consistent
+reports that can be tied to the flux channels of Sections~\ref{sec:ch01.1}--\ref{sec:ch01.2}.
+Helicity-linked constructions and spin-orbit splits receive the same screening before
+Chapter~3 introduces richer modal language that could otherwise be mistaken for new
+invariants.
 
 
 \subsection{Potentials and gauge transformations}
 \label{sec:ch01.4.1}
 % TOC tag: [HOME]
 
-\emph{Potentials} \((\mathbf{A},\phi)\) are a convenient representation of the same
-\((\E,\H)\); \emph{gauge transformations} are the legal reparameterizations that leave
-measurable fields unchanged while moving potential-dependent local formulas
-\cite{stratton1941,belinfante1940}. Angular discussions that begin from \(\mathbf{A}\)
-therefore inherit gauge orbit motion before any transport claim is made.
+Two laboratories can disagree on \(\mathbf{A}\) while agreeing on every meter reading
+of \(\E\) and \(\H\)---the signature of gauge freedom. Potentials
+\((\mathbf{A},\phi)\) are a representation of the same measurable fields; gauge
+transformations are the legal reparameterizations that move potential-built formulas
+without altering export content \cite{stratton1941,belinfante1940}. Angular arguments
+that begin from \(\mathbf{A}\) therefore inherit gauge-orbit motion before any
+transport claim is made.
 
-Potential theory in Maxwell electrodynamics is a representation framework, not an
-extra layer of physics. Observable fields are invariant under a continuous family
-of potential reparameterizations, so potential-level statements become meaningful
-only after explicit gauge-invariance checks
-\cite{stratton1941}.
-
-Gauge freedom is not a Maxwellian afterthought: it is the statement that infinitely
-many potential pairs generate the same physically measurable \((\E,\H)\). Classical
-monographs from Stratton \cite{stratton1941} through Jackson
-\cite{maxwell1873,stratton1941} treat Lorenz and Coulomb gauges as complementary tools---the
-first for radiation problems with retarded potentials, the second for static and
-quasi-static limits. Angular-momentum discussions that build local densities from
-\(\mathbf{A}\) and \(\phi\) therefore inherit gauge orbit motion by construction;
-Subsections~\ref{sec:ch01.4.2} and~\ref{sec:ch01.4.5} quantify when such maps may
-still be reported and when they must remain interpretive \cite{belinfante1940}.
+Infinitely many potential pairs can generate the same \((\E,\H)\), so
+potential-level statements require explicit gauge-invariance checks before they
+enter transport arguments \cite{stratton1941,belinfante1940}. Stratton
+\cite{stratton1941} and the classical radiation literature following Maxwell
+\cite{maxwell1873} treat Lorenz and Coulomb gauges as complementary tools---retarded
+potentials for radiation, Coulomb gauge for static and quasi-static limits---while
+Subsections~\ref{sec:ch01.4.2} and~\ref{sec:ch01.4.5} quantify when potential-built
+local densities may still be reported and when they must remain interpretive.
 
 Let \(\mathbf{A}(\mathbf{r})\) be vector potential, \(\phi(\mathbf{r})\) scalar
 potential, \(\E(\mathbf{r})\) electric phasor, and \(\mathbf{B}(\mathbf{r})\)
@@ -5389,10 +5590,11 @@ observable and which remain gauge-dependent bookkeeping.
 \label{sec:ch01.4.2}
 % TOC tag: [HOME]
 
-\emph{Gauge dependence} means a local density written with potentials can change under
-legal gauge shifts even when integrated totals and measurable fields remain fixed
-\cite{belinfante1940,stratton1941}. The physics question is therefore not whether a
-formula exists, but whether its gauge variation cancels on the measurement domain.
+A colour map of ``local angular momentum'' can change hue under a legal gauge shift
+while the torque balance on a surrounding surface remains fixed. The question is
+therefore not whether a potential-built density can be written down, but whether its
+gauge variation cancels on the declared measurement domain
+\cite{belinfante1940,stratton1941}.
 
 Gauge freedom preserves measurable fields but can alter local densities written
 explicitly in terms of potentials. Belinfante \cite{belinfante1940} established
@@ -5454,7 +5656,7 @@ signals non-removable gauge contamination in the interior.
 
 Let \(\mathbf{A}\) and \(\phi\) denote a potential pair and
 \((\mathbf{A}',\phi')\) the transformed pair from
-Eq.~\eqref{eq:ch1.gauge-transform}. Let \(\mathbf{E}\) and \(\mathbf{B}\) be the
+Eq.~\eqref{eq:ch1.gauge-transform}. Let \(\E\) and \(\mathbf{B}\) be the
 physical fields reconstructed through Eq.~\eqref{eq:ch1.potential-field-relations},
 and let \(\mathbf{d}_{\mathrm{loc}}(\mathbf{r})\) be a candidate local density
 vector at position \(\mathbf{r}\). The dependence structure can be written as
@@ -5462,7 +5664,7 @@ vector at position \(\mathbf{r}\). The dependence structure can be written as
 \label{eq:ch1.local-density-functional}
 \mathbf{d}_{\mathrm{loc}}(\mathbf{r})
 =
-\mathcal{D}\!\left[\mathbf{A},\phi,\mathbf{E},\mathbf{B}\right](\mathbf{r}),
+\mathcal{D}\!\left[\mathbf{A},\phi,\E,\mathbf{B}\right](\mathbf{r}),
 \end{equation}
 where \(\mathcal{D}\) is a density-construction functional. If
 \(\mathcal{D}\) uses potentials explicitly, then the gauge update in
@@ -5668,18 +5870,14 @@ helicity and dual-symmetry structure.
 \label{sec:ch01.4.3}
 % TOC tag: [HOME]
 
-\emph{Gauge-invariant observables} survive potential relabeling; \emph{helicity}
-names the signed overlap between electric and magnetic rotational content in the
-radiative regime; \emph{dual symmetry} links electric and magnetic field patterns
+Gauge-contaminated local maps screened out, the constructive task is to identify
+reports that survive potential relabeling and rigid-frame motion while retaining
+transport meaning. In the radiative regime, helicity quantifies the signed overlap
+between electric and magnetic rotational content; dual symmetry links field patterns
 under the duality rotation that preserves free-space Maxwell structure
-\cite{stratton1941,belinfante1940}.
-
-The previous subsection showed that potential-dependent local densities can fail
-observable status unless gauge variation is explicitly closed. The present
-development advances from that screening step to a constructive objective: identify
-field reports that remain invariant under gauge relabeling, remain objective under
-rigid-frame transformations, and admit a transport law linked to helicity and dual
-symmetry \cite{stratton1941}.
+\cite{stratton1941,belinfante1940}. The admissibility specification below promotes
+only those combinations that close gauge variation, respect covariance, and connect
+to qualified flux channels.
 
 Let the phasor field state be \(\mathcal{F}=(\E,\H)\) in a linear isotropic region
 with scalar permittivity \(\varepsilon\), scalar permeability \(\mu\), angular
@@ -6004,14 +6202,12 @@ transport channels.
 \label{sec:ch01.4.4}
 % TOC tag: [HOME]
 
-Sections~\ref{sec:ch01.4.1}--\ref{sec:ch01.4.3} established what may be written
-down without changing under gauge relabeling or rigid-frame motion. A student may
-still ask the experimenter's question: ``How do I \emph{measure} it?'' That question
-is not secondary; in Maxwellian electrodynamics, a quantity that cannot be reached
-through a declared channel map remains physics on paper but not yet physics in the
-laboratory. Subsection~\ref{sec:ch01.4.4} therefore closes the gap between
-symmetry-admissible field functionals and reportable numbers with uncertainty,
-calibration trace, and identifiability constraints \cite{stratton1941}.
+Symmetry-admissible formulas still miss the experimenter's question: \emph{by what
+procedure does a number appear on the display?} In Maxwellian electrodynamics, a
+quantity unreachable through a declared channel map remains physics on paper but not
+yet physics in the laboratory. The operational map developed below closes that gap
+with uncertainty, calibration trace, and identifiability constraints
+\cite{stratton1941,poynting1884,beth1936}.
 
 The operational viewpoint links backward to angular transport
 (Section~\ref{sec:ch01.2}) and forward to Section~\ref{sec:ch01.5}. Transport
@@ -6312,18 +6508,14 @@ interpretive tools unless they satisfy the same operational criteria.
 \label{sec:ch01.4.5}
 % TOC tag: [HOME]
 
-Subsections~\ref{sec:ch01.4.1}--\ref{sec:ch01.4.4} established gauge transformations,
-gauge-sensitive local maps, gauge-invariant observables including helicity, and the
-operational channel specification that turns field functionals into reportable numbers.
-The most persistent interpretive temptation in angular electrodynamics is to
-partition total electromagnetic angular-momentum density
-\(\mathbf{j}_{\mathrm{em}}\) into ``spin'' and ``orbit'' parts at each point in
-space. Such partitions are widely used in optics and near-field imaging because
-they suggest intuitive pictures---polarization circulation as spin, azimuthal phase
-gradient as orbit---yet Maxwell theory does not assign a unique pointwise pair
-\((\mathbf{s}_{\mathrm{loc}},\mathbf{l}_{\mathrm{loc}})\) unless convention,
-gauge, boundary data, and measurement kernel are declared simultaneously
-\cite{stratton1941}.
+Near-field micrographs invite a seductive partition: call polarization circulation
+``spin'' and azimuthal phase gradient ``orbit'' at every pixel. Maxwell theory
+permits such pictures only as convention-tagged diagnostics: the total density
+\(\mathbf{j}_{\mathrm{em}}\) does not decompose uniquely into
+\((\mathbf{s}_{\mathrm{loc}},\mathbf{l}_{\mathrm{loc}})\) unless gauge, boundary
+data, split family, and measurement kernel are declared together
+\cite{stratton1941,belinfante1940}. The limits below are constructive---local splits
+remain valuable when their equivalence class and closure tests are explicit.
 
 Local spin-orbit decomposition remains mathematically valuable but physically
 delicate: two admissible formalisms may assign different local ``spin-like'' and
@@ -6660,39 +6852,39 @@ physical disagreement \cite{stratton1941}.
 \end{figure}
 
 Figure~\ref{fig:ch1.wp-equivalent-splits} fixes the anchor before comparing labels: equivalent splits in Eq.~\eqref{eq:ch1.spin-orbit-equivalence-class} alter local maps without changing the integrated angular-momentum content on \(V\).
-\emph{Step 1---Fix the anchor.}
+\emph{Anchor fixation.}
 Let \(\mathbf{j}_{\mathrm{em}}=\mathbf{j}_0(\mathbf{r})\) on volume \(V\) be the
 gauge-invariant density from Eq.~\eqref{eq:ch1.angular-momentum-balance}. All splits
 must sum to \(\mathbf{j}_0\).
-\emph{Physical meaning:} the anchor is the only object with unconditional claim to
-total angular content; splits are coordinates on an equivalence class.
+\emph{Maxwellian reading:} only the anchor has unconditional claim to total angular
+content; splits are coordinates on an equivalence class.
 
-\emph{Step 2---Choose representative~A.}
+\emph{Convention~A (all-orbit label).}
 Set \(\mathbf{l}_{\mathrm{loc}}^{(A)}=\mathbf{j}_0\), \(\mathbf{s}_{\mathrm{loc}}^{(A)}=\mathbf{0}\).
-\emph{Physical meaning:} this is the ``all-orbit'' labeling convention; it is
-admissible but not canonical.
+\emph{Laboratory reading:} the entire density is assigned to the orbit slot---admissible
+but not canonical.
 
-\emph{Step 3---Choose representative~B.}
+\emph{Convention~B (spin redistribution).}
 Add \(\mathbf{s}_{\mathrm{loc}}^{(B)}=\tfrac12\nabla\times(\mathbf{r}\times\E)\) and
 adjust \(\mathbf{l}_{\mathrm{loc}}^{(B)}=\mathbf{j}_0-\mathbf{s}_{\mathrm{loc}}^{(B)}\)
 so Eq.~\eqref{eq:ch1.local-spin-orbit-split} holds with \(\mathbf{C}=\mathbf{0}\).
-\emph{Physical meaning:} spin-labeled content is redirected from the orbit channel
+\emph{Field interpretation:} spin-labeled content is redirected from the orbit channel
 without changing \(\mathbf{j}_0\).
 
-\emph{Step 4---Compare pointwise and integrated reports.}
+\emph{Pointwise versus integrated comparison.}
 Both splits yield \(\mathbf{J}_{\mathrm{int}}=\int_V\mathbf{j}_0\,dV\), yet
 \(\|\mathbf{s}_{\mathrm{loc}}^{(A)}-\mathbf{s}_{\mathrm{loc}}^{(B)}\|\) is order
 unity on much of \(V\).
-\emph{Physical meaning:} integrated totals agree while local ratios disagree---the
-signature of non-uniqueness, not measurement error.
+\emph{Diagnostic signature:} agreeing integrals with disagreeing local maps indicate
+non-uniqueness, not instrument error.
 
-\emph{Step 5---Apply criteria.}
+\emph{Reporting rule.}
 Nonuniqueness index \(\kappa_{\mathrm{so}}\) from
 Eq.~\eqref{eq:ch1.spin-orbit-nonuniqueness-index} is order unity; split-closure
 residual Eq.~\eqref{eq:ch1.spin-orbit-measurement-residual} must still be checked on
 reconstructed channels. Hence \(\mathcal{D}_{\mathrm{so}}=0\) unless tolerances in
 Eq.~\eqref{eq:ch1.spin-orbit-observable-decision} are met.
-\emph{Physical meaning:} report \(\mathbf{J}_{\mathrm{int}}\) as observable; report
+\emph{Closure verdict:} report \(\mathbf{J}_{\mathrm{int}}\) as observable; report
 local spin fraction only with convention tag \cite{stratton1941}.
 
 \paragraph{Helicity versus spin-orbit labels.}
@@ -6884,7 +7076,7 @@ Omitting any one field voids comparability with the criteria of
 Eq.~\eqref{eq:ch1.spin-orbit-observable-decision} even when the visualization is
 striking \cite{stratton1941}.
 
-\paragraph{Section 1.4 summary and continuation.}
+\paragraph{Handoff from gauge structure and observables.}
 Section~\ref{sec:ch01.4} filters potential-level statements by gauge invariance,
 local-density closure, helicity symmetry, and spin-orbit equivalence limits; the
 corollary symbols appear in Table~\ref{tab:ch1.admissibility-corollaries}
@@ -6895,40 +7087,28 @@ surviving quantities into instrument-ready reports.
 \section{Measurement and Interpretation}
 \label{sec:ch01.5}
 
-\emph{Measurement} names the interaction, transduction, and calibration chain that
-produces numbers from fields; \emph{interpretation} names the inference step that maps
-those numbers to angular-structure claims under declared uncertainty
-\cite{stratton1941,hansen1988}. Physics in this monograph means measurable quantities:
-a modal index or phase winding is not a report until a finite instrument and finite
-aperture declare what was actually resolved---the accessibility theme seeded in
-Section~\ref{sec:ch01.0} and closed in Chapter~4 \cite{harrington2001}. Section~\ref{sec:ch01.5}
-therefore treats finite bandwidth, finite rank, and ill-conditioned inversion as
-physical limits, not numerical nuisances.
-
-Section~\ref{sec:ch01.5} converts the admissible field quantities from
-Section~\ref{sec:ch01.4} into measurable reports under finite sensors, finite
-bandwidth, and finite inference accuracy. The central task is to define the full
-measurement chain---interaction law, transduction channel, reconstruction map, and
-uncertainty-qualified interpretation---for torque, flux, and modal content in a way
-that preserves gauge/frame objectivity at every stage
-\cite{stratton1941}. Accordingly, each subsection separates
-direct observables from model-dependent reconstructions, states the closure
-conditions under which inferred quantities are admissible, and ties interpretation
-claims to explicit transfer equations rather than to decomposition labels alone.
+A number on an instrument display is the end of a chain, not the beginning of physics.
+Section~\ref{sec:ch01.5} defines that chain---interaction, transduction, calibration,
+reconstruction, and uncertainty-qualified interpretation---for torque, flux, and modal
+content while preserving gauge and frame objectivity at every stage
+\cite{stratton1941,hansen1988,poynting1884}. Realizability asks what Nature can
+generate; accessibility asks what the observer can recover; here the second question
+becomes operational. Finite bandwidth, finite rank, and ill-conditioned inversion are
+fundamental constraints on observable angular structure, not numerical nuisances
+\cite{harrington2001}. Each subsection separates direct observables from
+model-dependent reconstructions and ties interpretation claims to explicit transfer
+equations rather than to decomposition labels alone.
 
 
 \subsection{Field-matter interaction}
 \label{sec:ch01.5.1}
 % TOC tag: [HOME]
 
-Section~\ref{sec:ch01.4} fixed which field-level quantities survive gauge and frame
-scrutiny and which remain representation-dependent. Section~\ref{sec:ch01.5}
-translates those survivors into laboratory language: currents induced in matter,
-forces and torques on test bodies, modal projections on apertures, and the decisive
-distinction between direct observables and inference-dependent reconstructions. The
-present subsection begins that translation at the most elementary coupling point---
-the local exchange of energy and momentum between electromagnetic fields and material
-degrees of freedom \cite{stratton1941}.
+Every meter terminates in matter. Before torque transducers, modal fits, or
+aperture scans enter the story, fields must exchange energy and momentum with
+charged media through local coupling laws. That is where free-space flux meets a
+detectable response---the first laboratory rung on the measurement ladder developed
+in this section \cite{stratton1941,poynting1884}.
 
 Why begin with matter rather than with free-space flux? Because every angular
 transport claim in this chapter ultimately meets a detector, absorber, or mechanical
@@ -7037,7 +7217,7 @@ the factor \(1/2\) converts phasor form to time average. Physically,
 \(\mathbf{g}_{\mathrm{M}}\) treats \(\mathbf{D}\) and \(\mathbf{B}\) as the
 canonical field pair for momentum storage in material media: polarization and
 magnetization enter through \(\mathbf{D}\) and \(\mathbf{B}\) rather than through
-\(\mathbf{E}\) and \(\mathbf{H}\) alone \cite{minkowski1908,stratton1941}.
+\(\E\) and \(\H\) alone \cite{minkowski1908,stratton1941}.
 
 Abraham's electromagnetic momentum density, expressed in the same phasor SI units, is
 \begin{equation}
@@ -7286,8 +7466,8 @@ P_m=\int_{V_m}\frac{1}{2}\sigma\|\E\|^2\,dV
 The Lorentz-force density of Eq.~\eqref{eq:ch1.material-force-density} reduces to
 \(\mathbf{f}_m=\tfrac{1}{2}\Re\{\mathbf{J}_c\times\mu\H^*\}\) with
 \(\mathbf{J}_c=\sigma\E\), giving net force \(\mathbf{F}_m=\mathbf{0}\) by symmetry
-but edge-local torque density about \(\hat{\mathbf{z}}\) when \(\mathbf{E}\) and
-\(\mathbf{H}\) are not collinear. Integrating
+but edge-local torque density about \(\hat{\mathbf{z}}\) when \(\E\) and
+\(\H\) are not collinear. Integrating
 Eq.~\eqref{eq:ch1.material-torque-density} and closing with
 Eq.~\eqref{eq:ch1.material-balance-control-volume} checks that deposited
 \(P_m\) equals net Poynting influx through \(\partial V_m\) minus storage change.
@@ -7406,27 +7586,14 @@ relations.
 \label{sec:ch01.5.2}
 % TOC tag: [USE SS1.1.4]
 
-\emph{Torque} is rotational mechanical action on a declared axis; \emph{momentum flux}
-is directed field momentum crossing a surface; \emph{stress measurements} are
-laboratory readouts of \(\mathbf{T}\cdot\hat{\mathbf{n}}\) after calibration and
-geometry are declared \cite{poynting1884,beth1936}. These three channels test the same
-Maxwellian ladder at increasing distance from the ideal continuum limit.
-
-Subsection~\ref{sec:ch01.5.1} fixed how fields deposit energy and momentum locally
-in matter. Torque, momentum flux, and stress measurements are the quantities most
-often quoted in angular-momentum experiments. Each term corresponds to a distinct
-rung on the same Maxwellian ladder: \(\mathbf{T}\) is the field-theoretic object,
-\(\mathbf{T}\cdot\hat{\mathbf{n}}\) is traction on a chosen surface, and
-\(y_\tau\) is what a calibrated sensor reports after geometry, origin, and noise
-are declared. The intellectual continuity with Subsection~\ref{sec:ch01.1.4} is
-deliberate: stress is not re-derived here; it is \emph{used} under the framework
-established in Section~\ref{sec:ch01.1} \cite{poynting1884,belinfante1940}.
-
-Stress-based measurement inherits the owner framework of
-Subsection~\ref{sec:ch01.1.4} without re-deriving field momentum balance. The
-objective is operational: map the established stress tensor to instrument outputs
-for force and torque with declared geometry, calibration, and uncertainty
-\cite{beth1936,poynting1884}.
+Beth's quartz plate did not read a modal index; it read mechanical torque from
+electromagnetic stress \cite{beth1936}. The present development follows that
+experimental logic: \(\mathbf{T}\) is the field-theoretic object inherited from
+Subsection~\ref{sec:ch01.1.4}; \(\mathbf{T}\cdot\hat{\mathbf{n}}\) is traction on a
+declared surface; \(y_\tau\) is what a calibrated transducer reports after geometry,
+origin, and noise are specified. Momentum-flux and torque channels are therefore
+specializations of one Maxwellian ladder, not independent postulates
+\cite{poynting1884,belinfante1940,stratton1941}.
 
 The experimental lineage of torque readouts begins with Beth's 1936 detection of
 mechanical rotation in quartz wave plates illuminated by circularly polarized light
@@ -7661,12 +7828,26 @@ measurements and where those estimates become ill-conditioned.
 \label{sec:ch01.5.3}
 % TOC tag: [HOME]
 
-\emph{Modal projections} are estimates of expansion coefficients obtained by fitting
-measured fields to a truncated basis; \emph{measurement limits} are the finite
-aperture, bandwidth, and signal-to-noise constraints that make those estimates
-ill-conditioned rather than exact \cite{stratton1941,hansen1988}. A mode index is
-therefore an inference label until the projection kernel is declared---the
-accessibility theme carried forward to Chapter~4.
+A spherical-harmonic index printed on a plot is rarely a direct observation; it is
+almost always the output of a truncated fit to finite aperture data
+\cite{hansen1988,stratton1941}. Modal projections are estimates of expansion
+coefficients; measurement limits are the aperture, bandwidth, and noise constraints
+that make those estimates ill-conditioned rather than exact. Until the projection
+kernel is declared, a mode label remains inference---the accessibility theme carried
+forward to Chapter~4.
+
+The informational character of accessibility appears with special clarity in modal
+recovery. A spherical or cylindrical harmonic basis may list dozens or hundreds of
+angular degrees of freedom, yet a finite scan surface, finite bandwidth, finite
+dynamic range, and finite calibration budget jointly determine how many of those
+directions enter the stabilized inverse problem below. The field state may contain
+organized angular content that the measurement operator cannot separate from noise or
+from coupling to neighbouring channels; that is the physical tragedy of accessibility
+in operational form, not a comment on software quality. Hansen's spherical
+near-field theory \cite{hansen1988} and Harrington's source formulations
+\cite{harrington2001} both encounter this wall from different sides---one from the
+receiver, one from the transmitter---and Chapter~4 will unify the count as effective
+angular dimension.
 
 Modal language enters angular electrodynamics early because spherical and
 cylindrical harmonics organize radiation patterns efficiently. Allen \emph{et al.}
@@ -8097,7 +8278,7 @@ aperture is inference-only unless \(\mathcal{D}_{\mathrm{mod}}=1\). Poynting flu
 \(\Pi(\theta,\phi)\) on the resolved sector remains direct in both cases
 \cite{poynting1884,beth1936,allen1992}.
 
-\paragraph{Section 1.5 consolidation and handoff.}
+\paragraph{Handoff from measurement and interpretation.}
 Section~\ref{sec:ch01.5} closes the measurement stack---field--matter transfer,
 stress-flux torque channels, modal reconstruction limits, and
 observable-versus-inference classification---as specialized layers of
@@ -8109,23 +8290,13 @@ this protocol on worked configurations.
 \label{sec:ch01.6}
 % TOC tag: [FIG+PROB]
 
-\emph{Examples} verify that qualified angular transport occurs when conservation,
-regime, and measurement screens align; \emph{counterexamples} show that rich phase or
-polarization \emph{appearance} can persist when transport, gauge, or reactive-shell
-interpretation fails \cite{stratton1941,allen1992}. Each subsection is a complete
-problem---geometry, derivation, physical meaning---so the reader tests the architecture
-of Sections~\ref{sec:ch01.0}--\ref{sec:ch01.5} rather than memorizing definitions.
-The masterpiece test of Section~\ref{sec:ch01.0} applies here: conclusions must follow
-from Maxwell flux and admissibility even when OAM vocabulary is removed from the
-wording.
-
-Section~\ref{sec:ch01.6} serves as the verification layer of Chapter~\ref{ch:01}:
-each subsection is posed as a complete problem with schematic geometry, explicit
-derivation steps, and interpretation checks tied to the admissibility framework from
-Sections~\ref{sec:ch01.1}--\ref{sec:ch01.5}. The purpose is not to introduce new
-foundational laws, but to stress-test established criteria on canonical and limiting
-configurations so that valid angular-transport conclusions can be distinguished from
-phase-only or inversion-fragile narratives.
+Theory earns trust only when it survives arithmetic on concrete geometries.
+Section~\ref{sec:ch01.6} poses four worked problems---positive transport, phase-only
+counterexample, gauge-sensitive local maps, and reactive-versus-radiative shell
+comparison---that stress-test Sections~\ref{sec:ch01.0}--\ref{sec:ch01.5} without
+introducing new laws \cite{stratton1941,allen1992}. Each case demands schematic
+geometry, explicit derivation, and a closing admissibility verdict derivable from
+Maxwell flux alone, without reliance on orbital-mode vocabulary.
 
 The four problems are ordered deliberately. Subsection~\ref{sec:ch01.6.1} confirms
 the positive case: when conservation, radiative regime, and calibrated channels align,
@@ -8167,7 +8338,7 @@ consistent with exported angular-momentum flux, and state the regime and
 admissibility tags required for a valid conclusion
 \cite{stratton1941}.
 
-\paragraph{Physical meaning of the setup.}
+\paragraph{Shell geometry and torque closure.}
 The problem tests a single Maxwellian chain: conserved angular momentum leaving
 \(S_R\) as stress-flux must appear as opposite mechanical torque on the source
 support. It is not a new derivation of conservation law; it is an application of
@@ -8188,7 +8359,7 @@ the \emph{control-surface block} (red) is the far-zone shell \(S_R\); the
 \(S_R\); the \emph{mechanical block} (orange) is the measured load torque; the
 \emph{readout block} (gray) collects \(y_P\), \(y_\tau\), and \(\mathcal{R}_\tau\).
 
-\emph{Step 1---Field and stress on \(S_R\).}
+\emph{Radiation-shell stress evaluation.}
 For dominant mode \((m,\sigma)=(1,+1)\), far-zone fields scale as
 \(|\E|\propto 1/R\) with azimuthal phase \(e^{\jj\phi}\). The Maxwell stress
 Eq.~\eqref{eq:ch1.maxwell-stress} is evaluated on \(S_R\) with outward normal
@@ -8196,7 +8367,7 @@ Eq.~\eqref{eq:ch1.maxwell-stress} is evaluated on \(S_R\) with outward normal
 The \(1/R\) decay confirms radiative-zone placement; azimuthal phase ties the stress
 flux to a definite helical channel before integration.
 
-\emph{Step 2---Angular flux integration.}
+\emph{Flux assembly on \(S_R\).}
 The angular-momentum flux density is
 \([\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{n}})]\cdot\hat{\mathbf{z}}\).
 Integrating over \(S_R\) yields \(\dot J_z\) in
@@ -8204,20 +8375,20 @@ Eq.~\eqref{eq:ch1.ex61-transport-factor}.
 Each surface element contributes local angular-momentum current; the integral is the
 exported \(z\)-component budget per unit time.
 
-\emph{Step 3---Torque balance.}
+\emph{Mechanical torque linkage.}
 By Eq.~\eqref{eq:ch1.ex61-torque-flux}, \(\tau_z^{\mathrm{mech}}=-\dot J_z\).
 Mechanical torque on the source equals the negative of exported electromagnetic
 angular momentum---the operational face of conservation in
 Subsection~\ref{sec:ch01.1.5}.
 
-\emph{Step 4---Modal power sum.}
+\emph{Multimode channel budget (if needed).}
 If multiple modes contribute, use Eq.~\eqref{eq:ch1.ex61-multimode-torque} with
 measured \(P_{m,\sigma}\) from directional decomposition of
 Eqs.~\eqref{eq:ch1.directional-power-density}--\eqref{eq:ch1.directional-am-flux}.
 Each modal channel carries a definite \((m+\sigma)/\omega\) torque-per-power factor;
 unresolved leakage \(\Delta\tau_{\mathrm{leak}}\) must be budgeted explicitly.
 
-\emph{Step 5---Closure test.}
+\emph{Conservation closure test.}
 Compute \(\mathcal{R}_\tau\) from Eq.~\eqref{eq:ch1.ex61-torque-closure-residual}
 and verify \(\mathcal{D}_{61}=1\) from Eq.~\eqref{eq:ch1.ex61-admissibility-gate}.
 Small \(\mathcal{R}_\tau\) certifies agreement between mechanics and electromagnetism
@@ -8456,7 +8627,7 @@ whether the visible phase structure implies net angular-momentum transport, and
 quantify the imbalance sensitivity if one channel is five percent stronger than the
 other \cite{stratton1941}.
 
-\paragraph{Physical meaning of the setup.}
+\paragraph{Phase richness versus flux balance.}
 The experiment isolates a logical error common in angular-momentum discourse:
 confusing \emph{phase richness} with \emph{flux imbalance}. Counter-rotating channels
 of equal intensity produce standing azimuthal texture---nodes, lobes, and strong
@@ -8477,37 +8648,36 @@ the \emph{balance block} (gray, bottom) states the zero-transport verdict and im
 test.
 
 \paragraph{Solution outline.}
-\emph{Step 1---Superposed field.}
+\emph{Superposition on the aperture.}
 Form \(E_t=E_++E_-\) from Eq.~\eqref{eq:ch1.ex62-channel-amplitudes} with equal
 amplitudes \(A_+=A_-=A(\rho)\). The result is
 Eq.~\eqref{eq:ch1.ex62-counter-rotating-superposition}.
-\emph{Physical meaning:} interference converts two circulating carriers into a
-real-valued standing pattern; circulation is present locally but oppositely signed.
+\emph{Interference reading:} two counter-rotating carriers synthesize a standing
+azimuthal lobe pattern; local circulation exists but with opposite sign.
 
-\emph{Step 2---Channel intensities.}
+\emph{Per-channel power accounting.}
 Compute \(I_\pm=|A_\pm|^2\). Under equal-amplitude condition,
 \(I_+=I_-=|A(\rho)|^2\) everywhere on \(S_o\).
-\emph{Physical meaning:} each helical channel carries half the total power; neither
-dominates the angular budget.
+\emph{Balance check:} each helical ingress carries half the total power; neither
+channel dominates the angular budget.
 
-\emph{Step 3---Net transport integral.}
+\emph{Net flux from channel difference.}
 Substitute into Eq.~\eqref{eq:ch1.ex62-net-am-transport}:
 \(\dot J_z=(m/\omega)\int_{S_o}(I_+-I_-)\,dS\).
-\emph{Physical meaning:} only the \emph{difference} of channel powers enters net
-export; equal powers force exact cancelation regardless of \(m\).
+\emph{Transport rule:} only \(I_+-I_-\) enters net export; matched powers cancel
+regardless of azimuthal index \(m\).
 
-\emph{Step 4---Torque prediction.}
+\emph{Predicted torque on the mount.}
 Apply Eq.~\eqref{eq:ch1.ex62-zero-torque-prediction}:
 \(\tau_z^{\mathrm{pred}}=-\dot J_z=0\).
-\emph{Physical meaning:} a null torque readout is the \emph{expected} Maxwellian
-outcome, not evidence of instrument failure, when channels are balanced.
+\emph{Null-readout interpretation:} zero torque is the expected Maxwellian outcome
+for balanced channels, not a failed sensor.
 
-\emph{Step 5---Imbalance perturbation.}
+\emph{Five-percent imbalance test.}
 Introduce \(I_+=1.05\,I_0\), \(I_-=0.95\,I_0\) and evaluate
 Eq.~\eqref{eq:ch1.ex62-imbalance-sensitivity}.
-\emph{Physical meaning:} tiny intensity bias---from loss, ellipticity mismatch, or
-aperture truncation---is the minimal mechanism that converts a visually ``twisted''
-field into weak but nonzero transport.
+\emph{Sensitivity lesson:} minute loss or ellipticity mismatch is enough to convert
+a vivid phase image into weak but nonzero transport.
 
 Let a monochromatic transverse field on observation surface \(S_o\) be formed by
 superposing two coherent counter-rotating helical channels with common radial
@@ -8758,7 +8928,7 @@ Determine which reports are admissible observables and quantify local versus
 integral gauge sensitivity using inherited structure from
 Subsection~\ref{sec:ch01.4.2} \cite{stratton1941}.
 
-\paragraph{Physical meaning of the setup.}
+\paragraph{Local maps under gauge relabeling.}
 Gauge freedom leaves fields invariant while reshuffling information between scalar and
 vector potentials. Any local density built from potentials alone can therefore
 exhibit gauge-orbit motion even when integrated flux observables are fixed. The
@@ -8776,37 +8946,38 @@ the \emph{admissibility block} (gray, bottom) reports the integral contamination
 \(\mathcal{C}_{\mathrm{int}}\).
 
 \paragraph{Solution outline.}
-\emph{Step 1---Gauge-related potentials.}
+\emph{Gauge orbit on potentials.}
 Relate \((\mathbf{A}',\phi')\) to \((\mathbf{A},\phi)\) via
 \(\mathbf{A}'=\mathbf{A}+\nabla\chi\), \(\phi'=\phi-\jj\omega\chi\), with
 \(\chi\) inherited from Subsection~\ref{sec:ch01.4.2}.
-\emph{Physical meaning:} \(\chi\) is a pure relabeling; it must not alter \(\E,\H\).
+\emph{Invariance check:} \(\chi\) relabels potentials only; \(\E\) and \(\H\) must
+remain unchanged.
 
-\emph{Step 2---Local density variation.}
+\emph{Pointwise density shift.}
 Define \(\delta_\chi\mathbf{j}_{\mathrm{loc}}=\mathbf{j}_{\mathrm{loc}}'-\mathbf{j}_{\mathrm{loc}}\).
-\emph{Physical meaning:} pointwise disagreement can be large even when fields match;
-maps are gauge-tagged, not gauge-neutral.
+\emph{Map warning:} local colour maps can disagree strongly even when fields match;
+the density is gauge-tagged, not gauge-neutral.
 
-\emph{Step 3---Volume balance.}
+\emph{Volume divergence accounting.}
 Apply Eq.~\eqref{eq:ch1.ex63-gauge-density-balance} to decompose
 \(\int_{V_g}\delta_\chi\mathbf{j}_{\mathrm{loc}}\,dV\) into boundary flux and
 residual source channels.
-\emph{Physical meaning:} gauge variation is not arbitrary noise; it partitions into
-relocatable boundary terms and genuine volumetric contamination.
+\emph{Partition rule:} gauge variation splits into relocatable boundary terms and
+genuine volumetric contamination.
 
-\emph{Step 4---Integral comparison.}
+\emph{Integrated report comparison.}
 Evaluate \(\mathbf{J}_{\mathrm{int}}\) and \(\mathbf{J}_{\mathrm{int}}'\) from
 Eq.~\eqref{eq:ch1.ex63-integrated-report} and compute
 \(\mathcal{C}_{\mathrm{int}}\) from Eq.~\eqref{eq:ch1.ex63-integral-contamination-index}.
-\emph{Physical meaning:} observability is controlled by integral contamination, not
-by local map appearance.
+\emph{Observability test:} integral contamination, not local hue, controls promotion
+to observable status.
 
-\emph{Step 5---Admissibility criterion.}
+\emph{Epistemic gate.}
 Accept gauge-sensitive local maps as observables only if
 \(\mathcal{D}_{63}=1\) in Eq.~\eqref{eq:ch1.ex63-observable-gate}; otherwise report
 them as inference-only intermediates.
-\emph{Physical meaning:} the criterion forces explicit epistemic labeling before
-publication-grade claims.
+\emph{Reporting discipline:} explicit labeling is required before publication-grade
+claims.
 
 Take a finite control volume \(V_g\) with boundary \(\partial V_g\), outward unit
 normal \(\hat{\mathbf{n}}\), and two gauge-related potential representatives
@@ -9014,7 +9185,7 @@ each shell as storage-diagnostic or export-diagnostic, compute
 \(\eta_\tau(r_k)\), and verify \(\mathcal{D}_{64}=1\)
 \cite{stratton1941}.
 
-\paragraph{Physical meaning of the setup.}
+\paragraph{Reactive storage versus radiative export.}
 The two-shell protocol mirrors what happens when one laboratory measures ``angular
 momentum'' in the reactive near zone and another measures torque in the far zone.
 Both may record structured phase and polarization, yet Maxwellian interpretation
@@ -9032,34 +9203,34 @@ export; the \emph{readout block} (gray, bottom) lists shell channels and closure
 \(\mathcal{D}_{64}\).
 
 \paragraph{Solution outline.}
-\emph{Step 1---Surface functionals.}
+\emph{Shell power functionals.}
 Evaluate Eq.~\eqref{eq:ch1.ex64-power-functionals} on \(S_{r_1}\) and \(S_{r_2}\).
-\emph{Physical meaning:} \(P(r)\) is irreversible export; \(Q(r)\) is oscillatory
-storage circulation---the reactive-radiative split of Section~\ref{sec:ch01.2.4}.
+\emph{Regime vocabulary:} \(P(r)\) measures irreversible export; \(Q(r)\) measures
+oscillatory storage---the reactive-radiative split of Section~\ref{sec:ch01.2.4}.
 
-\emph{Step 2---Regime ratio.}
+\emph{Reactive-ratio classification.}
 Compute \(\mathcal{R}_Q(r_k)=|Q(r_k)|/(|P(r_k)|+\epsilon_P)\) from
 Eq.~\eqref{eq:ch1.ex64-reactive-ratio}.
-\emph{Physical meaning:} \(\mathcal{R}_Q\gg 1\) flags reactive dominance where phase
-texture can mislead; \(\mathcal{R}_Q\ll 1\) permits export interpretation.
+\emph{Shell reading:} \(\mathcal{R}_Q\gg 1\) marks reactive dominance where phase
+can mislead; \(\mathcal{R}_Q\ll 1\) supports export interpretation.
 
-\emph{Step 3---Torque contrast.}
+\emph{Torque contrast across shells.}
 Form \(\mathcal{C}_\tau=|\tau_z(r_2)|/(|\tau_z(r_1)|+\epsilon_\tau)\) from
 Eq.~\eqref{eq:ch1.ex64-torque-contrast}.
-\emph{Physical meaning:} strong outer-to-inner torque contrast confirms that
-transport-capable readouts emerge only after crossing the reactive shell.
+\emph{Transport emergence:} large outer-to-inner contrast shows torque channels
+activating only beyond the reactive shell.
 
-\emph{Step 4---Gated efficiency.}
+\emph{Gated efficiency correction.}
 Apply Eq.~\eqref{eq:ch1.ex64-gated-efficiency} with factor
 \(1/(1+\mathcal{R}_Q)\) to suppress false efficiency in reactive zones.
-\emph{Physical meaning:} dividing torque by power alone overstates transport
-capability when \(|Q|\gg |P|\).
+\emph{Interpretation guard:} raw torque-to-power ratios overstate transport when
+\(|Q|\gg |P|\).
 
-\emph{Step 5---Trend and criterion.}
+\emph{Trend consistency and gate.}
 Evaluate \(\mathcal{T}_{12}\) from Eq.~\eqref{eq:ch1.ex64-trend-consistency} and
 verify \(\mathcal{D}_{64}=1\) in Eq.~\eqref{eq:ch1.ex64-regime-admissibility}.
-\emph{Physical meaning:} admissible regime discrimination requires both shells to
-occupy their expected classes and the transition trend to be internally consistent.
+\emph{Joint verdict:} both shells must occupy expected classes and the
+\(r_1\to r_2\) trend must be internally consistent.
 
 Let \(S_{r_1}\) and \(S_{r_2}\) be concentric spherical observation surfaces,
 with radii \(r_1<r_2\), centered on the same source. The objective is to compare
@@ -9181,13 +9352,13 @@ diagnostics---\(\mathcal{R}_Q\), \(\chi(r)\), and \(Q_{\mathrm{Chu}}\)---on the 
 classification: inner data are storage-diagnostic; outer data are export-diagnostic
 \cite{chu1948}.
 
-\paragraph{Step-by-step shell comparison with closure arithmetic.}
-\emph{Step 6---Chu consistency.}
+\paragraph{Two-shell closure arithmetic.}
+\emph{Chu-bound cross-check.}
 Verify \(2\omega\langle U\rangle_{\mathrm{st}}/P_{\mathrm{rad}}\ge Q_{\mathrm{LB}}\)
 on each shell using Table~\ref{tab:ch1.regime-numeric-dipole} as order-of-magnitude
 guide. On \(S_{r_1}\), violation of export interpretation is expected; on
 \(S_{r_2}\), consistency confirms radiative placement.
-\emph{Step 7---Joint criterion.}
+\emph{Admissibility synthesis.}
 With \(R_{Q,\min}=2\), \(R_{Q,\max}=0.2\), \(C_{\tau,\min}=5\), and measured
 \(\mathcal{R}_Q(r_1)=8\), \(\mathcal{R}_Q(r_2)=0.05\), \(\mathcal{C}_\tau=22\),
 Eq.~\eqref{eq:ch1.ex64-regime-admissibility} yields \(\mathcal{D}_{64}=1\) when
@@ -9275,7 +9446,7 @@ operation, and negligible environmental scattering between \(S_{r_1}\) and
 The worked sequence of Section~\ref{sec:ch01.6} is therefore complete: radiation
 torque conservation, phase-only counterexample, gauge-sensitivity check, and
 reactive/radiative discrimination are all established in operational form.
-\paragraph{Section 1.6 outcome and bridge.}
+\paragraph{Handoff from worked examples and counterexamples.}
 Section~\ref{sec:ch01.6} verifies conservation torque prediction, phase-only
 counterexamples, gauge-sensitive local maps, and reactive-radiative surface
 comparison under the full reporting protocol. Section~\ref{sec:ch01.7} consolidates
@@ -9289,25 +9460,32 @@ established results and states the forward inheritance map into Chapter~2.
 transport screens, gauge discipline, and measurement limits---without re-displaying their
 proofs. \emph{Forward map} states what Chapter~2 may import by reference and what remains
 deferred to Chapters~3--4 realizability theory \cite{stratton1941,harrington2001}.
-Section~\ref{sec:ch01.7} is the governed transition layer: it closes Level~I of
-Figure~\ref{fig:ch1.three-level-hierarchy} and points to radiation operators
-(Chapter~2), eigenfield representations (Chapter~3), and finite-source realizability
-(Chapter~4).
+Section~\ref{sec:ch01.7} closes Level~I of
+Figure~\ref{fig:ch1.three-level-hierarchy}, lists verified outcomes from
+Sections~\ref{sec:ch01.1}--\ref{sec:ch01.6}, declares deferred boundaries for
+Chapters~2--4, and states the inheritance map into Chapter~2. No new theorem content
+is introduced.
 
-Section~\ref{sec:ch01.7} closes Chapter~\ref{ch:01} by listing verified outcomes,
-declaring deferred topic boundaries, and stating the inheritance map for
-Chapter~2. No new theorem content is introduced; the section is a governed transition
-layer only.
+Three narratives introduced in Section~\ref{sec:ch01.0} should now be unmistakable to
+the reader who closes Chapter~\ref{ch:01}. First, \emph{accessibility} is the gap
+between existence and observation---what the field contains versus what finite
+instruments can recover. Second, \emph{finite geometry} is Nature's mechanism for
+restricting angular complexity through finite support, finite aperture, and finite
+operator rank. Third, Volume~I is a \emph{progressive filtering process} that
+separates Maxwell-admissible description from source-realizable generation and
+measurement-accessible recovery before transport claims are made. The mathematics of
+the chapter is abundant; its enduring contribution is this ontology of angular
+electromagnetic structure---not a catalogue of beam names.
 
 
 \subsection{Results established in Chapter 1}
 \label{sec:ch01.7.1}
 % TOC tag: [DEFER]
 
-\emph{Results established} collects theorem-level outcomes that survived Maxwell law,
-transport screening, covariance discipline, gauge bounds, and measurement limits.
-The ledger is compact by design: proofs remain in their home subsections, and
-Chapter~2 imports by reference only \cite{stratton1941}.
+What may Chapter~2 assume without reproving it? The ledger below lists
+theorem-level outcomes that survived Maxwell law, transport screening, covariance
+discipline, gauge bounds, and measurement limits. Proofs remain in their home
+subsections; downstream chapters import by reference only \cite{stratton1941}.
 
 Chapter~\ref{ch:01} closes the Maxwell-to-measurement chain required before
 Chapter~\ref{ch:02}. Downstream material inherits by reference only through
@@ -9341,10 +9519,10 @@ as fixed in Sections~\ref{sec:ch01.5}--\ref{sec:ch01.6}
 \label{sec:ch01.7.2}
 % TOC tag: [DEFER]
 
-\emph{Concepts deferred} are topics whose proofs require operator domains
-(Chapter~2), representation closure (Chapter~3), or finite-source realizability and
-truncation (Chapter~4). Listing them here prevents premature re-derivation in
-Level~I prose and keeps the three-level hierarchy of
+Several powerful ideas are named in Chapter~\ref{ch:01} but not proved here because
+their HOME locations lie in later volumes: operator domains (Chapter~2),
+representation closure (Chapter~3), and realizability/truncation (Chapter~4).
+Listing them explicitly prevents premature re-derivation and keeps
 Figure~\ref{fig:ch1.three-level-hierarchy} intellectually honest
 \cite{stratton1941,harrington2001}.
 
@@ -9376,10 +9554,10 @@ and
 \label{sec:ch01.7.3}
 % TOC tag: [DEFER]
 
-\emph{Bridge to Chapter 2} names the inheritance map: which Level~I certificates
-\(\mathcal{D}_{\mathrm{ch1}}=1\) must hold before radiation operators, Green
-mappings, and source-to-field actions are developed without reopening Maxwell proofs
-\cite{stratton1941}.
+Chapter~2 opens only if Level~I certificates remain unviolated. The inheritance map
+below states which outcomes \(\mathcal{R}_{\mathrm{ch1}}\) radiation operators and
+Green mappings may assume, and which proofs must not be reopened in operator formalism
+\cite{stratton1941,tai1994}.
 
 Chapter~2 begins from the closed inheritance base assembled in
 Sections~\ref{sec:ch01.1}--\ref{sec:ch01.6}: Maxwell conservation, transport
@@ -9413,11 +9591,16 @@ with inherited \(\mathcal{D}_{J}\), \(\mathcal{D}_{\mathrm{org}}\),
 \(\mathcal{D}_{\mathrm{g}}\), and \(\mathcal{D}_{\mathrm{op}}\) criteria
 \cite{stratton1941}.
 
-\paragraph{Section 1.7 terminal summary.}
+\paragraph{Closing synthesis (Chapter Summary and Forward Map).}
 Chapter~\ref{ch:01} now stands as the sole foundational basis for the
 Maxwell-conservation-gauge-observability structure used by subsequent chapters.
-Chapter~2 inherits this base by reference and develops operator-domain machinery
-without recursive re-derivation.
+Chapter~2 inherits this base by reference and develops the source-to-observation maps
+without which realizability and accessibility cannot be counted. The reader who
+continues should carry forward three sentences: realizability asks what Nature can
+generate; accessibility asks what observers can recover; and finite geometry---not
+mere technology---determines how many angular degrees of freedom survive each stage.
+Chapter~2 is the next necessary step in that argument, not an optional formal
+extension.
 
 
 \bibliographystyle{IEEEtran}

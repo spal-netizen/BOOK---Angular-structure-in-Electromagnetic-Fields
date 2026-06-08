@@ -8,7 +8,7 @@ Run this audit after drafting each chapter and again at volume freeze.
 
 | Chapter | Status | Audit date | Notes |
 |---------|--------|------------|-------|
-| 1 | **PASS — LOCKED** | 2026-05-29 | 32 subsections; TOC sign-off `CH01-TOC-SIGNOFF-LOCK.md`; manuscript complete |
+| 1 | **PASS — LOCKED** (prose caveats) | 2026-06-07 | Full forensic audit `CH01-FORENSIC-AUDIT-FULL-ULTIMATE.md`; 32 subsections; sign-off `CH01-MANUSCRIPT-SIGNOFF-LOCK.md` |
 | 2 | **TOC LOCKED** | 2026-05-29 | 45 subsections; `CH02-TOC-AUDIT-FLOW-LOCK.md`; ready for drafting |
 | 3 | **TOC LOCKED** | 2026-05-29 | 48 subsections; `CH03-TOC-AUDIT-FLOW-LOCK.md`; scaffold synced |
 | 4 | pending | — | — |

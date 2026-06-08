@@ -1,0 +1,311 @@
+\subsection{Geometry as origin of dimensionality limits}
+\label{sec:ch491}
+% TOC tag: [HOME]
+
+Dimensionality limits in synthesis reports trace to \(\operatorname{diam}(\Omega_{s})\), \(A_{a}\), and \(k_{0}\) through
+\(d_{\mathrm{eff}}(\varepsilon)\), not to solver tolerances or mesh cardinalities alone \cite{stratton1941,jackson1999,hansen1988,harrington2001}.
+Finite support compresses the export map \(\boldsymbol{\Gamma}_\omega\) on \(\mathcal{J}_{\mathrm{real}}\); the resulting singular-value ladder is
+monotone in electrical size and invariant under phase-only reparameterizations on fixed \(\Omega_{s}\) \cite{devaney2004,harrington2001}. Listing
+\(\mathcal{C}\) may print arbitrarily many indices; realizability counts only directions whose aligned \(\sigma_{n}\) exceeds \(\varepsilon\sigma_{1}\)
+\cite{stratton1941,hansen1988}.
+
+\paragraph{Assumptions.}
+Presuppose Definition~\ref{def:ch4.effective-em-dimension}, Eqs.~\eqref{eq:ch4.mode-count-volume}--\eqref{eq:ch4.mode-count-area}, and
+Theorem~\ref{thm:ch4.rank-ka-monotone} \cite{stratton1941,hansen1988,harrington2001,jackson1999}. Fix tolerance \(\varepsilon\in(0,1)\), aligned flux
+gauge on \(\mathcal{C}\), and passive linear exterior on \(\mathcal{J}_{\mathrm{real}}\) \cite{devaney2004}. Rank audits report \((k_{0},D_{s},\varepsilon)\)
+triples with declared geometry class (volume versus area) \cite{collin2001,stratton1941}.
+
+\paragraph{Hardware parameter map.}
+Export rank is a functional of geometry and frequency:
+\begin{equation}
+\label{eq:ch4.hardware-rank-map}
+d_{\mathrm{eff}}(\varepsilon)=F\big(\operatorname{diam}(\Omega_{s}),k_{0},\varepsilon;\mathcal{C}\big),
+\end{equation}
+with \(F\) monotone in \(\operatorname{diam}(\Omega_{s})\) and \(k_{0}\) per Theorem~\ref{thm:ch4.rank-ka-monotone} \cite{stratton1941,jackson1999,hansen1988}.
+Mathematically, Eq.~\eqref{eq:ch4.hardware-rank-map} is the counting functional induced by \(\boldsymbol{\Gamma}_\omega\). Physically, it is the number
+of independent far-zone directions a laboratory can excite above the noise floor at declared tolerance \cite{harrington2001,devaney2004}.
+
+\begin{theorem}[Geometry as rank origin]
+\label{thm:ch4.geometry-rank-origin}
+At fixed \(\varepsilon\) and listing \(\mathcal{C}\), \(d_{\mathrm{eff}}(\varepsilon)\) is invariant under phase-only
+reparameterizations of \(\Jimp\) on fixed \(\Omega_{s}\) and changes only when \(\operatorname{diam}(\Omega_{s})\), \(k_{0}\), or
+\(\mathcal{J}_{\mathrm{real}}\) class changes \cite{stratton1941,jackson1999,hansen1988,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+\(\boldsymbol{\Gamma}_\omega\) depends on support and material class through \(\mathcal{R}_\omega\) and \(\mathcal{C}\) \cite{stratton1941,harrington2001}.
+Phase rotations on fixed support are unitary gauge transformations on \(\mathcal{J}_{\mathrm{real}}\) that preserve singular values of the export map
+\cite{hansen1988,devaney2004}. Enlarging \(\operatorname{diam}(\Omega_{s})\) or raising \(k_{0}\) enlarges the set of propagating channels coupled by
+\(\boldsymbol{\Gamma}_\omega\) until dispersion alters \(\mathcal{J}_{\mathrm{real}}\) \cite{jackson1999,collin2001}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.geometry-rank-origin} is the origin principle for hardware audits: diversity saturation on unchanged outline is a geometry certificate,
+not a solver defect \cite{stratton1941,harrington2001}. Metasurfaces that retune phases without enlarging \(\mathcal{L}_{2}\) cannot raise \(d_{\mathrm{eff}}\)
+\cite{hansen1988,devaney2004}. Rank growth requires electrical enlargement---frequency, aperture, or material class---not mesh refinement alone
+\cite{jackson1999,collin2001}.
+
+\paragraph{Electrical-size monotonicity.}
+On fixed \(\Omega_{s}\) class,
+\begin{equation}
+\label{eq:ch4.outline-trap}
+\frac{\partial d_{\mathrm{eff}}}{\partial k_{0}}\Big|_{\operatorname{diam}(\Omega_{s})=\text{const}}>0\quad\text{for }k_{0}D_{s}\gtrsim1.
+\end{equation}
+Mechanical CAD outline is invariant under band change, but \(k_{0}D_{s}\) is not \cite{jackson1999,harrington2001}. Rank memos must quote electrical
+size, not enclosure volume alone \cite{hansen1988,stratton1941,devaney2004}.
+
+\begin{lemma}[Mesh DOF versus export rank]
+\label{lem:ch4.mesh-dof-trap}
+FEM or MoM degrees of freedom \(N_{\mathrm{dof}}\) satisfy \(N_{\mathrm{dof}}\ge d_{\mathrm{eff}}(\varepsilon)\) but \(N_{\mathrm{dof}}\gg d_{\mathrm{eff}}\)
+does not imply rank growth on fixed \((\Omega_{s},k_{0})\) \cite{harrington2001,devaney2004,hansen1988,stratton1941}.
+\end{lemma}
+\begin{proof}
+Discretization enlarges the trial space for \(\Jimp\) without enlarging \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) on fixed compact support
+\cite{harrington2001,stratton1941}. Singular values \(\sigma_{n}\) of \(\boldsymbol{\Gamma}_\omega\) are properties of the continuum export map;
+mesh refinement approximates them but cannot create new propagating channels on fixed \((\Omega_{s},k_{0})\) \cite{devaney2004,hansen1988}.
+\end{proof}
+
+\begin{corollary}[CAD outline decoupling]
+\label{cor:ch4.cad-rank-decouple}
+Identical mechanical outlines at different \(k_{0}\) generally yield different \(d_{\mathrm{eff}}(\varepsilon)\) via Eq.~\eqref{eq:ch4.joint-scaling-law}
+\cite{jackson1999,harrington2001,hansen1988,stratton1941,devaney2004}.
+\end{corollary}
+
+\paragraph{Volume versus area geometry class.}
+Compact three-dimensional \(\Omega_{s}\) obey Eq.~\eqref{eq:ch4.mode-count-volume}; planar apertures obey Eq.~\eqref{eq:ch4.mode-count-area}
+\cite{collin2001,jackson1999,hansen1988}. Declaring the wrong class over-estimates or under-estimates \(N_{\mathrm{mode}}\) and mis-attributes rank
+saturation \cite{stratton1941,harrington2001,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (geom) {$(\Omega_{s},k_{0})$};
+  \node[ch1box, right=11mm of geom] (gamma) {$\boldsymbol{\Gamma}_\omega$};
+  \node[ch1box, right=11mm of gamma] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (geom) -- (gamma) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Geometry and frequency set the export map; \(d_{\mathrm{eff}}\) counts singular directions above \(\varepsilon\sigma_{1}\).}
+\label{fig:ch4.geometry-rank-map}
+\end{figure}
+
+Figure~\ref{fig:ch4.geometry-rank-map} is the hardware honesty chain: solvers and optimizers operate downstream of \((\Omega_{s},k_{0})\); rank is fixed
+upstream by geometry \cite{stratton1941,harrington2001,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (low) {$k_{0}D_{s}<1$};
+  \node[ch1box, right=11mm of low] (mid) {$k_{0}D_{s}\sim1$};
+  \node[ch1box, right=11mm of mid] (high) {$k_{0}D_{s}\gg1$};
+  \draw[ch1flow] (low) -- (mid) -- (high);
+\end{tikzpicture}%
+}
+\caption{Electrical-size ladder: \(d_{\mathrm{eff}}\) rises with \(k_{0}D_{s}\) at fixed mechanical outline.}
+\label{fig:ch4.electrical-size-ladder}
+\end{figure}
+
+\paragraph{Worked illustration (metasurface phase).}
+A fixed-area metasurface that retunes phases without enlarging \(\mathcal{L}_{2}\) leaves \(d_{\mathrm{eff}}\) unchanged while rotating \(\mathbf{c}\)
+within \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) \cite{stratton1941,harrington2001,hansen1988,devaney2004}.
+
+\paragraph{Worked illustration (same phone, two bands).}
+\(150\,\mathrm{mm}\) outline: \(k_{0}D_{s}\approx0.8\) at \(700\,\mathrm{MHz}\) (\(d_{\mathrm{eff}}\le3\)) versus \(k_{0}D_{s}\approx8\) at
+\(28\,\mathrm{GHz}\) (\(d_{\mathrm{eff}}\sim\mathcal{O}(10^{2})\)) \cite{harrington2001,collin2001,hansen1988,jackson1999}.
+
+\paragraph{Worked illustration (mesh saturation).}
+FEM rank grows from \(d_{\mathrm{eff}}=8\) to \(N_{\mathrm{dof}}=4000\) on fixed \(\lambda/4\) patch without changing measured \(d_{\mathrm{eff}}\):
+Lemma~\ref{lem:ch4.mesh-dof-trap} \cite{harrington2001,devaney2004,hansen1988}.
+
+\paragraph{Worked illustration (panel enlargement).}
+Doubling \(W\) at fixed \(k_{0}\) quadruples area-law mode budget per Eq.~\eqref{eq:ch4.mode-count-area} and raises \(d_{\mathrm{eff}}\) per
+Theorem~\ref{thm:ch4.rank-ka-monotone} \cite{collin2001,jackson1999,hansen1988,harrington2001}.
+
+\paragraph{Worked numerics (joint scaling).}
+\(k_{0}a=1.2\): volume ceiling \(\sim(k_{0}a)^{3}\approx1.7\), area ceiling \(\sim(k_{0}a)^{2}\approx1.4\); measured \(d_{\mathrm{eff}}(10^{-2})=4\) lies
+below both analytic ceilings as expected \cite{hansen1988,stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (frequency doubling).}
+Fixed \(A_{a}\), \(\omega\to2\omega\): Eq.~\eqref{eq:ch4.joint-scaling-law} predicts rank growth \(\propto k_{0}^{2}\) or \(k_{0}^{3}\) by geometry class;
+measured \(d_{\mathrm{eff}}\) tracks electrical enlargement \cite{jackson1999,harrington2001,collin2001}.
+
+\paragraph{Problem (solver rank versus hardware).}
+\textbf{Problem.} FEM rank grows with mesh; diversity saturates. Explain.
+\textbf{Step 1.} Report \(d_{\mathrm{eff}}(\varepsilon)\), not \(N_{\mathrm{dof}}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Tie saturation to \(k_{0}D_{s}\) via Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{jackson1999,hansen1988}.
+\textbf{Step 3.} Enlarge aperture or frequency to raise rank \cite{stratton1941}.
+\textbf{Physical meaning.} Geometry is the origin of dimensionality \cite{stratton1941,harrington2001}.
+
+\paragraph{Problem (outline versus rank).}
+\textbf{Problem.} CAD outline unchanged; frequency doubled. Rank change?
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) \cite{jackson1999}.
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{hansen1988,harrington2001}.
+\textbf{Step 3.} Recompute \(d_{\mathrm{eff}}\) \cite{devaney2004}.
+\textbf{Physical meaning.} Rank tracks electrical size, not mechanical outline alone \cite{stratton1941,collin2001}.
+
+\paragraph{Problem (metasurface diversity claim).}
+\textbf{Problem.} Vendor claims doubled MIMO streams after phase-only retuning on fixed area. Audit.
+\textbf{Step 1.} Test Theorem~\ref{thm:ch4.geometry-rank-origin} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Measure \(d_{\mathrm{eff}}\) before and after \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Reject if \(d_{\mathrm{eff}}\) unchanged \cite{jackson1999}.
+\textbf{Physical meaning.} Phase explores fixed-rank geometry \cite{harrington2001}.
+
+\paragraph{Problem (volume versus area class).}
+\textbf{Problem.} Compact resonator modeled as planar patch. Rank over-estimated?
+\textbf{Step 1.} Declare geometry class \cite{collin2001,stratton1941}.
+\textbf{Step 2.} Compare Eqs.~\eqref{eq:ch4.mode-count-volume} and \eqref{eq:ch4.mode-count-area} \cite{jackson1999,hansen1988}.
+\textbf{Step 3.} Apply operative ceiling to \(d_{\mathrm{eff}}\) audit \cite{harrington2001,devaney2004}.
+\textbf{Physical meaning.} Geometry class sets the counting law \cite{stratton1941}.
+
+\paragraph{Problem (handset band audit).}
+\textbf{Problem.} Same enclosure, LTE versus mmWave. Rank comparison?
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) per band \cite{jackson1999,harrington2001}.
+\textbf{Step 2.} Apply Corollary~\ref{cor:ch4.cad-rank-decouple} \cite{hansen1988}.
+\textbf{Step 3.} Report separate \(d_{\mathrm{eff}}\) certificates \cite{devaney2004,collin2001}.
+\textbf{Physical meaning.} Outline invariance does not imply rank invariance \cite{stratton1941}.
+
+\paragraph{Problem (mesh refinement trap).}
+\textbf{Problem.} MoM residual improves with mesh; \(d_{\mathrm{eff}}\) flat. Consistent?
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.mesh-dof-trap} \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Verify \((\Omega_{s},k_{0})\) unchanged \cite{stratton1941,hansen1988}.
+\textbf{Step 3.} Attribute flat rank to geometry, not discretization \cite{jackson1999}.
+\textbf{Physical meaning.} Mesh resolves currents, not export channels \cite{harrington2001}.
+
+\paragraph{Rank certificate workflow.}
+Laboratory rank memos should report the quadruple \((k_{0}D_{s},\varepsilon,d_{\mathrm{eff}},N_{\mathrm{mode}})\) with geometry class declared
+\cite{stratton1941,harrington2001,hansen1988,jackson1999}. Solver mesh \(N_{\mathrm{dof}}\) and chart size \(|\mathbb{C}^{I}|\) are diagnostic overlays,
+not substitutes for \(d_{\mathrm{eff}}\) \cite{devaney2004,collin2001}.
+
+\begin{theorem}[Diameter monotonicity of export rank]
+\label{thm:ch4.diam-rank-monotone}
+At fixed \(k_{0}\), \(\varepsilon\), and \(\mathcal{J}_{\mathrm{real}}\) class, \(d_{\mathrm{eff}}(\varepsilon)\) is non-decreasing in \(\operatorname{diam}(\Omega_{s})\)
+\cite{stratton1941,hansen1988,harrington2001,jackson1999,devaney2004}.
+\end{theorem}
+\begin{proof}
+Enlarging \(\operatorname{diam}(\Omega_{s})\) enlarges coupled propagating channels in \(\boldsymbol{\Gamma}_\omega\) until material dispersion alters
+\(\mathcal{J}_{\mathrm{real}}\) \cite{harrington2001,stratton1941}. \(d_{\mathrm{eff}}\) counts singular values above \(\varepsilon\sigma_{1}\), which cannot
+decrease under support enlargement on fixed class \cite{hansen1988,devaney2004,jackson1999}.
+\end{proof}
+
+\paragraph{Discretization scaling trap.}
+MoM or FEM bases of size \(N_{\mathrm{basis}}\) approximate \(\boldsymbol{\Gamma}_\omega\) with error \(\tau_{\mathrm{mom}}\) on \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\)
+but cannot raise continuum rank on fixed \((\Omega_{s},k_{0})\) \cite{harrington2001,devaney2004}. Reports that equate \(N_{\mathrm{basis}}\) with diversity
+confuse approximation cardinality with export rank \cite{stratton1941,hansen1988,collin2001}.
+
+\paragraph{Worked illustration (base station footprint).}
+\(2\lambda\times2\lambda\) panel at \(3.5\,\mathrm{GHz}\): \(k_{0}W\approx14\), \(N_{\mathrm{mode}}^{\mathrm{(ap)}}\sim\mathcal{O}(10^{2})\), measured
+\(d_{\mathrm{eff}}(10^{-2})\sim\mathcal{O}(10^{1})\)--\(\mathcal{O}(10^{2})\) per Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{collin2001,harrington2001,hansen1988,jackson1999}.
+
+\paragraph{Worked illustration (wearable).}
+\(k_{0}D_{s}<1\) wearable at \(2.4\,\mathrm{GHz}\): \(d_{\mathrm{eff}}\le3\) regardless of mesh density; electrical size sets dipole-class rank
+\cite{harrington2001,jackson1999,stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (diameter sweep).}
+\(D_{s}=0.5\lambda,1.0\lambda,1.5\lambda\) at fixed \(k_{0}\): \(d_{\mathrm{eff}}(10^{-2})\) increases monotonically per Theorem~\ref{thm:ch4.diam-rank-monotone}
+\cite{hansen1988,harrington2001,stratton1941,devaney2004,collin2001}.
+
+\paragraph{Problem (solver versus physics).}
+\textbf{Problem.} Optimizer reports \(200\) feeds; measured \(d_{\mathrm{eff}}=14\). Explain.
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.mesh-dof-trap} \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Report \(d_{\mathrm{eff}}\) as physics certificate \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Truncate design to rank \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Feeds \(\neq\) channels \cite{harrington2001}.
+
+\paragraph{Problem (diameter doubling).}
+\textbf{Problem.} Double \(\operatorname{diam}(\Omega_{s})\) at fixed \(k_{0}\). Rank trend?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.diam-rank-monotone} \cite{stratton1941,hansen1988}.
+\textbf{Step 2.} Bound \(N_{\mathrm{mode}}\) via Eqs.~\eqref{eq:ch4.mode-count-volume} or \eqref{eq:ch4.mode-count-area} \cite{jackson1999,harrington2001}.
+\textbf{Step 3.} Measure SVD rank \cite{devaney2004,collin2001}.
+\textbf{Physical meaning.} Larger support raises rank \cite{stratton1941}.
+
+\paragraph{Problem (aperture growth).}
+\textbf{Problem.} Double aperture width at fixed \(k_{0}\). Expected \(d_{\mathrm{eff}}\) trend?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.mode-count-area} \cite{collin2001,hansen1988}.
+\textbf{Step 2.} Test Theorem~\ref{thm:ch4.rank-ka-monotone} \cite{harrington2001,jackson1999}.
+\textbf{Step 3.} Measure SVD rank on enlarged \(\Omega_{s}\) \cite{devaney2004,stratton1941}.
+\textbf{Physical meaning.} Larger aperture raises electrical mode budget \cite{hansen1988}.
+
+\paragraph{Geometry scaling certificate.}
+Joint scaling Eq.~\eqref{eq:ch4.joint-scaling-law} combines volume and area ceilings; the operative bound is
+\(\min\{C_{V}(k_{0}a)^{3},C_{A}k_{0}^{2}A_{a}\}\) on declared class \cite{jackson1999,hansen1988,harrington2001,stratton1941,devaney2004,collin2001}.
+Rank audits that cite only mechanical area without \(k_{0}\) mis-state electrical mode budget \cite{stratton1941,harrington2001}.
+
+\paragraph{Worked illustration (satellite dish).}
+\(\lambda/10\) mesh on \(10\lambda\) dish at \(12\,\mathrm{GHz}\): \(N_{\mathrm{dof}}\sim10^{4}\), \(d_{\mathrm{eff}}\sim10^{2}\): two orders of magnitude
+separate discretization from export rank per Lemma~\ref{lem:ch4.mesh-dof-trap} \cite{harrington2001,hansen1988,jackson1999,devaney2004,collin2001}.
+
+\paragraph{Worked numerics (wearable mmWave).}
+\(k_{0}D_{s}=0.6\) at \(28\,\mathrm{GHz}\) on \(150\,\mathrm{mm}\) outline: \(d_{\mathrm{eff}}\le4\) despite \(|\mathbb{C}^{I}|=120\) chart listing
+\cite{harrington2001,jackson1999,stratton1941,hansen1988,devaney2004}.
+
+\paragraph{Problem (joint scaling class).}
+\textbf{Problem.} Compact resonator versus patch array at same footprint. Which ceiling?
+\textbf{Step 1.} Declare volume versus area class \cite{collin2001,stratton1941}.
+\textbf{Step 2.} Evaluate Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{jackson1999,hansen1988}.
+\textbf{Step 3.} Apply operative minimum \cite{harrington2001,devaney2004}.
+\textbf{Physical meaning.} Class selects exponent \cite{stratton1941}.
+
+\paragraph{Problem (chart listing).}
+\textbf{Problem.} \(\ell_{\max}=40\) on \(k_{0}a=1.2\). Rank implication?
+\textbf{Step 1.} Read \(\ell_{\mathrm{supp}}(10^{-2},1.2)\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Apply Corollary~\ref{cor:ch4.listing-excess-no-rank} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Report listing excess separately from \(d_{\mathrm{eff}}\) \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Charts over-list by design \cite{harrington2001}.
+
+\paragraph{Problem (electrical ladder).}
+\textbf{Problem.} Move along Figure~\ref{fig:ch4.electrical-size-ladder} at fixed outline. Rank trend?
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) per band \cite{jackson1999,harrington2001}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.rank-ka-monotone} \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Tabulate \(d_{\mathrm{eff}}\) versus band \cite{devaney2004,collin2001}.
+\textbf{Physical meaning.} Electrical ladder sets rank \cite{stratton1941,harrington2001}.
+
+\paragraph{Philosophical closure (origin versus listing).}
+Dimensionality is imposed by \((\Omega_{s},k_{0},\mathcal{J}_{\mathrm{real}})\) through \(\boldsymbol{\Gamma}_\omega\), not by how many indices \(\mathcal{C}\)
+prints or how fine a mesh resolves \(\Jimp\) \cite{stratton1941,harrington2001,jackson1999,hansen1988,devaney2004}. Every synthesis report that attributes
+rank saturation to optimizer failure without auditing electrical size mis-identifies the origin of truncation \cite{collin2001,stratton1941}.
+
+\paragraph{Singular-value ladder interpretation.}
+\(d_{\mathrm{eff}}(\varepsilon)\) counts the singular-value ladder of \(\boldsymbol{\Gamma}_\omega\) above \(\varepsilon\sigma_{1}\); geometry sets the ladder
+through support and \(k_{0}\), not through chart padding \cite{harrington2001,hansen1988,stratton1941,devaney2004,jackson1999,collin2001}. Reports that
+tabulate \(\sigma_{n}\) without \((\Omega_{s},k_{0})\) context are incomplete rank certificates \cite{stratton1941,harrington2001}.
+
+\paragraph{Worked illustration (IoT module).}
+\(50\,\mathrm{mm}\) IoT module at \(915\,\mathrm{MHz}\): \(k_{0}D_{s}\approx0.15\), \(d_{\mathrm{eff}}\le2\); rank is electrically tiny despite large CAD model
+\cite{harrington2001,jackson1999,stratton1941,hansen1988,devaney2004,collin2001}.
+
+\paragraph{Problem (sigma ladder audit).}
+\textbf{Problem.} Tabulate \(\sigma_{1..N}\) for vendor audit. What else is required?
+\textbf{Step 1.} Declare \((\Omega_{s},k_{0},\varepsilon)\) \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Count \(d_{\mathrm{eff}}\) above \(\varepsilon\sigma_{1}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Compare to \(N_{\mathrm{mode}}\) ceiling \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Ladder without geometry is incomplete \cite{harrington2001}.
+
+\paragraph{Problem (IoT rank).}
+\textbf{Problem.} IoT vendor claims eight MIMO streams at sub-wavelength size. Audit.
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) \cite{jackson1999,harrington2001}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.geometry-rank-origin} \cite{stratton1941,hansen1988}.
+\textbf{Step 3.} Reject if \(d_{\mathrm{eff}}\ll8\) \cite{devaney2004,collin2001}.
+\textbf{Physical meaning.} Sub-wavelength rank is dipole-class \cite{harrington2001,stratton1941}.
+
+\begin{corollary}[Listing excess without rank gain]
+\label{cor:ch4.listing-excess-no-rank}
+\(|\mathbb{C}^{I}|\gg d_{\mathrm{eff}}(\varepsilon)\) on symmetric charts is expected; enlarging the chart without enlarging \(\Omega_{s}\) or \(k_{0}\)
+does not raise export rank \cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+\end{corollary}
+
+\paragraph{Material class qualifier.}
+\(\mathcal{J}_{\mathrm{real}}\) class---metal, dielectric, or active---enters Eq.~\eqref{eq:ch4.hardware-rank-map} through constitutive parameters that alter
+\(\boldsymbol{\Gamma}_\omega\) without changing the monotonicity conclusions on fixed class \cite{stratton1941,harrington2001,hansen1988,jackson1999,devaney2004,collin2001}.
+Rank memos must declare material class alongside \((\Omega_{s},k_{0})\) \cite{harrington2001,stratton1941}.
+
+\paragraph{Problem (material class change).}
+\textbf{Problem.} Switch from metal to dielectric loading on fixed outline. Rank change?
+\textbf{Step 1.} Declare \(\mathcal{J}_{\mathrm{real}}\) class change \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Recompute \(\boldsymbol{\Gamma}_\omega\) and \(d_{\mathrm{eff}}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Compare to Theorem~\ref{thm:ch4.geometry-rank-origin} baseline \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Material alters coupling, not listing \cite{harrington2001,stratton1941}.
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.geometry-rank-origin} assumes linear passive exterior on \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941}. Active or nonlinear materials
+enlarge \(\mathcal{J}_{\mathrm{real}}\) class and require separate range declarations \cite{harrington2001,devaney2004}. Dispersion modifies prefactors in
+Eq.~\eqref{eq:ch4.joint-scaling-law} without changing the monotonicity conclusion on fixed material class \cite{jackson1999,hansen1988,collin2001}.

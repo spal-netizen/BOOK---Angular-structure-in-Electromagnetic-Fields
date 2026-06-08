@@ -1,0 +1,273 @@
+\subsection{Near-field versus far-field truncation}
+\label{sec:ch4103}
+% TOC tag: [FIG+PROB][USE]
+
+Near-field scans resolve evanescent content that never enters far-zone \(\mathbf{c}\) under \(\Pi_{\mathrm{prop}}\) \cite{stratton1941,harrington2001,jackson1999,devaney2004,hansen1988}.
+Theorem~\ref{thm:ch4.prop-sector-equivalence} and Eq.~\eqref{eq:ch4.prop-ev-energy-fractions} from Section~\ref{sec:ch442} partition scan energy; only the propagating
+sector sets export rank on \(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001,stratton1941,devaney2004}.
+
+\paragraph{Primary problem.}
+\textbf{Problem.} A near-field scan fits large \(k_{t}>k_{0}\) content. Estimate far-zone \(\mathbf{c}\) after propagating-sector projection.
+
+\paragraph{Governing relations.}
+Presuppose Eq.~\eqref{eq:ch4.prop-ev-energy-fractions}, Theorem~\ref{thm:ch4.prop-sector-equivalence}, and Theorem~\ref{thm:ch4.ev-invisible-export} from
+Section~\ref{sec:ch472} \cite{stratton1941,jackson1999,harrington2001,hansen1988,devaney2004}. Linear probes; declared calibration; narrowband phasors
+\cite{stratton1941,harrington2001}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 8mm]
+  \node[ch1box] (nf) {Near scan};
+  \node[ch1box, right=10mm of nf] (prop) {$\Pi_{\mathrm{prop}}$};
+  \node[ch1box, right=10mm of prop] (ff) {Far $\mathbf{c}$};
+  \node[ch1box, below=10mm of prop] (ev) {$\mathcal{K}_{\mathrm{ev}}$};
+  \draw[ch1flow] (nf) -- (prop) -- (ff);
+  \draw[ch1flow] (ev) -- (prop);
+\end{tikzpicture}%
+}
+\caption{Evanescent scan energy is filtered before far-zone coefficient listing.}
+\label{fig:ch4.ex-nf-ff-truncation}
+\end{figure}
+
+Figure~\ref{fig:ch4.ex-nf-ff-truncation} is the truncation honesty diagram: reactive scan richness does not pass through to \(\mathbf{c}\) without propagating coupling
+\cite{stratton1941,harrington2001,devaney2004,hansen1988,jackson1999}.
+
+\paragraph{Primary problem data.}
+Near-field scan on \(\Sigma\) at \(z=\lambda/10\); resolves \(k_{t}\) up to \(2k_{0}\); measured \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}=0.7\)
+\cite{stratton1941,jackson1999,harrington2001,hansen1988,devaney2004}. Dipole-class aperture with \(d_{\mathrm{eff}}(10^{-2})=5\) on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+
+\paragraph{Primary derivation (filter detail).}
+Eq.~\eqref{eq:ch4.prop-ev-energy-fractions} gives \(\mathcal{E}_{\mathrm{prop}}=0.3\,\mathcal{E}_{\mathrm{tot}}\) \cite{stratton1941,jackson1999,harrington2001,hansen1988,devaney2004}.
+Apply \(\Pi_{\mathrm{prop}}\) to zero \(k_{t}>k_{0}\) content \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}. Theorem~\ref{thm:ch4.prop-sector-equivalence} yields
+\(\mathbf{c}=\boldsymbol{\Gamma}_\omega\Pi_{\mathrm{prop}}\mathbf{A}_{\mathrm{scan}}\) \cite{stratton1941,harrington2001,devaney2004,hansen1988,jackson1999}. Eq.~\eqref{eq:ch4.ex-nf-ff-energy} bounds
+\(\|\mathbf{c}\|_{\mathrm{rad}}^{2}/\mathcal{E}_{\mathrm{tot}}\le0.3\) \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}. Rank remains \(d_{\mathrm{eff}}=5\) per Eq.~\eqref{eq:ch4.ex-ev-fraction-rank}
+\cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+\textbf{Physical meaning.} \(70\%\) evanescent scan energy does not become export diversity \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Step 1 (energy partition).}
+\textbf{Step 1.} Split scan spectrum into \(\mathcal{E}_{\mathrm{prop}}\) and \(\mathcal{E}_{\mathrm{ev}}\) via Eq.~\eqref{eq:ch4.prop-ev-energy-fractions}
+\cite{stratton1941,jackson1999,harrington2001,hansen1988}.
+\textbf{Physical meaning.} Transverse wavenumber \(k_{t}>k_{0}\) labels evanescent storage \cite{jackson1999,devaney2004}.
+
+\paragraph{Step 2 (propagating filter).}
+\textbf{Step 2.} Theorem~\ref{thm:ch4.prop-sector-equivalence}: only \(\widetilde{\mathbf{A}}_{\mathrm{syn}}\) after \(\Pi_{\mathrm{prop}}\) enters \(\mathbf{c}\)
+\cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+\textbf{Physical meaning.} Synthesis uses propagating export only \cite{stratton1941,harrington2001}.
+
+\paragraph{Step 3 (rank conclusion).}
+\textbf{Step 3.} If \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}=0.7\), far-zone \(\mathbf{c}\) is low-rank despite rich near-field scan
+\cite{stratton1941,hansen1988,jackson1999,devaney2004,harrington2001}.
+\textbf{Physical meaning.} Near-field truncation excess is reactive certification, not far-zone synthesis rank \cite{harrington2001,stratton1941}.
+
+\paragraph{Energy fraction estimate.}
+\begin{equation}
+\label{eq:ch4.ex-nf-ff-energy}
+\frac{\|\mathbf{c}\|_{\mathrm{rad}}^{2}}{\mathcal{E}_{\mathrm{tot}}}
+\le
+\frac{\mathcal{E}_{\mathrm{prop}}}{\mathcal{E}_{\mathrm{tot}}}
+\le
+1-\frac{\mathcal{E}_{\mathrm{ev}}}{\mathcal{E}_{\mathrm{tot}}}.
+\end{equation}
+With \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}=0.7\), at most \(30\%\) of scan energy can appear in \(\|\mathbf{c}\|_{\mathrm{rad}}^{2}\)
+\cite{stratton1941,jackson1999,harrington2001,devaney2004,hansen1988}. Rank is further bounded by \(d_{\mathrm{eff}}(10^{-2})\) on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{harrington2001,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (scan) {$\mathcal{E}_{\mathrm{tot}}$};
+  \node[ch1box, right=11mm of scan] (prop) {$\mathcal{E}_{\mathrm{prop}}$};
+  \node[ch1box, right=11mm of prop] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, below=11mm of scan] (ev) {$\mathcal{E}_{\mathrm{ev}}$};
+  \draw[ch1flow] (scan) -- (prop) -- (deff);
+  \draw[ch1flow] (ev) -- (scan);
+\end{tikzpicture}%
+}
+\caption{Scan energy splits; only propagating fraction feeds export rank.}
+\label{fig:ch4.ex-nf-energy-split}
+\end{figure}
+
+\paragraph{Reactive-to-export ratio.}
+\(\mathcal{Q}_{\mathrm{re}}=\mathcal{A}_{\mathrm{react}}^{(N)}/\|\mathbf{c}\|_{\mathrm{rad}}\) from Section~\ref{sec:ch472} exceeds unity when
+\(\mathcal{E}_{\mathrm{ev}}\gg\mathcal{E}_{\mathrm{prop}}\) \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}. Large \(\mathcal{Q}_{\mathrm{re}}\) certifies
+reactive dominance without \(d_{\mathrm{eff}}\) gain \cite{stratton1941,harrington2001}.
+
+\paragraph{Second problem (scan depth versus far rank).}
+\textbf{Problem.} Scan resolves \(k_{t}=2k_{0}\); far pattern is smooth. Explain.
+\textbf{Step 1.} Compute \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{prop}}\) \cite{jackson1999,stratton1941,harrington2001}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.prop-sector-equivalence} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Report \(d_{\mathrm{eff}}\), not scan channel count \cite{harrington2001,stratton1941}.
+\textbf{Physical meaning.} Evanescent richness is local; export rank is global and propagating \cite{jackson1999,devaney2004}.
+
+\paragraph{Third problem (probe saturation).}
+\textbf{Problem.} Double probe count; \(d_{\mathrm{eff}}\) unchanged. Consistent?
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.probe-sat-lemma} from Section~\ref{sec:ch472} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} \(\mathcal{A}_{\mathrm{react}}^{(N)}\) rises; \(\mathbf{c}\) fixed \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Attribute to reactive saturation \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Probes certify reactance, not export \cite{stratton1941,devaney2004}.
+
+\paragraph{Fourth problem (standoff distance).}
+\textbf{Problem.} Scan at \(z=\lambda/20\) versus \(\lambda/4\). Rank change?
+\textbf{Step 1.} Evanescent coupling decays as \(\exp(-\alpha z)\) \cite{jackson1999,hansen1988,harrington2001}.
+\textbf{Step 2.} Near standoff inflates \(\mathcal{E}_{\mathrm{ev}}\) \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} \(d_{\mathrm{eff}}\) on \(\mathcal{F}_{\mathrm{rad}}\) unchanged \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Standoff trades reactive resolution for export \cite{hansen1988,stratton1941}.
+
+\paragraph{Fifth problem (tomography claim).}
+\textbf{Problem.} Tomography recovers \(k_{t}=1.8k_{0}\). Synthesis rank doubles?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.reactive-dominance} \cite{stratton1941,harrington2001,devaney2004}.
+\textbf{Step 2.} Filter via Eq.~\eqref{eq:ch4.propagating-filter} from Section~\ref{sec:ch472} \cite{hansen1988,jackson1999}.
+\textbf{Step 3.} Recompute \(d_{\mathrm{eff}}\) on \(\widetilde{\mathbf{c}}\) \cite{harrington2001,stratton1941}.
+\textbf{Physical meaning.} Tomography \(\neq\) diversity \cite{devaney2004,hansen1988}.
+
+\paragraph{Worked numerics (energy split).}
+\(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}=0.7\Rightarrow\|\mathbf{c}\|_{\mathrm{rad}}^{2}/\mathcal{E}_{\mathrm{tot}}\le0.3\) per
+Eq.~\eqref{eq:ch4.ex-nf-ff-energy} \cite{stratton1941,jackson1999,harrington2001,devaney2004,hansen1988}. Measured \(d_{\mathrm{eff}}(10^{-2})=5\) on dipole-class
+aperture \cite{harrington2001,devaney2004}.
+
+\paragraph{Worked numerics (scan channels).}
+\(N_{\mathrm{scan}}=120\) channels at \(k_{t,\max}=2k_{0}\); after \(\Pi_{\mathrm{prop}}\), \(d_{\mathrm{eff}}=6\) unchanged from \(N_{\mathrm{scan}}=30\) case
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+
+\begin{equation}
+\label{eq:ch4.ex-ev-fraction-rank}
+d_{\mathrm{eff}}\big|_{\mathrm{after\ }\Pi_{\mathrm{prop}}}=d_{\mathrm{eff}}\big|_{\mathrm{before\ scan\ enrichment}}
+\quad\text{on fixed }(\Omega_{s},k_{0}).
+\end{equation}
+
+\paragraph{Sixth problem (hotspot audit).}
+\textbf{Problem.} Near hotspot, flat far pattern. Rank change?
+\textbf{Step 1.} Compute \(\mathbf{c}\) after \(\Pi_{\mathrm{rad}}\) \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Compare \(d_{\mathrm{eff}}\) before/after near fit \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Conclude no rank gain per Theorem~\ref{thm:ch4.reactive-dominance} \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Hotspots certify reactance \cite{stratton1941,devaney2004}.
+
+\paragraph{Seventh problem (evanescent over-resolution).}
+\textbf{Problem.} Scan resolves \(k_{t}=2k_{0}\) at \(z=\lambda/10\). Synthesis impact?
+\textbf{Step 1.} Compute \(N_{\mathrm{ev}}\) and \(\mathcal{A}_{\mathrm{react}}^{(N)}\) \cite{jackson1999,hansen1988,harrington2001}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.ev-invisible-export} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Conclude \(d_{\mathrm{eff}}\) unchanged \cite{harrington2001,jackson1999}.
+\textbf{Physical meaning.} Evanescent resolution is not export resolution \cite{hansen1988,stratton1941}.
+
+\paragraph{Eighth problem (certification split).}
+\textbf{Problem.} Synthesis passes; near scan rich. Certification outcome?
+\textbf{Step 1.} Test \(\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(N)}\) \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Separate reactive certificate from export certificate \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Report \((\mathcal{Q}_{\mathrm{re}},d_{\mathrm{eff}})\) pair \cite{jackson1999,harrington2001}.
+\textbf{Physical meaning.} Reactive and export certificates decouple \cite{stratton1941,devaney2004}.
+
+\paragraph{Ninth problem (inverse crime).}
+\textbf{Problem.} Invert near data to \(\mathbf{c}\) with high-\(\ell\) target. Valid?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.ex-nf-ff-energy} \cite{stratton1941,jackson1999,harrington2001}.
+\textbf{Step 2.} Test \(\mathcal{A}_{\mathrm{fs}}[\mathbf{c}]\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Reject if propagating fraction insufficient \cite{harrington2001,stratton1941}.
+\textbf{Physical meaning.} Inversion cannot create propagating energy \cite{devaney2004,jackson1999}.
+
+\paragraph{Tenth problem (memo template).}
+\textbf{Problem.} Write near-versus-far audit memo.
+\textbf{Step 1.} Report \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}\) \cite{stratton1941,jackson1999,harrington2001}.
+\textbf{Step 2.} Quote Eq.~\eqref{eq:ch4.ex-nf-ff-energy} and Eq.~\eqref{eq:ch4.ex-ev-fraction-rank} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} State \(d_{\mathrm{eff}}\) on \(\mathcal{F}_{\mathrm{rad}}\) only \cite{harrington2001,stratton1941}.
+\textbf{Physical meaning.} Memos separate scan richness from export rank \cite{jackson1999,devaney2004}.
+
+\paragraph{Extended derivation (evanescent fraction).}
+Partition \(\mathcal{E}_{\mathrm{tot}}\) into \(k_{t}\le k_{0}\) and \(k_{t}>k_{0}\) per Eq.~\eqref{eq:ch4.prop-ev-energy-fractions}
+\cite{stratton1941,jackson1999,harrington2001,hansen1988,devaney2004}. With \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}=0.7\), propagating fraction is \(0.3\)
+\cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}. After \(\Pi_{\mathrm{prop}}\), \(\widetilde{\mathbf{A}}_{\mathrm{syn}}\) carries at most \(30\%\) of scan energy into \(\mathbf{c}\)
+\cite{harrington2001,stratton1941,devaney2004}.
+\textbf{Physical meaning.} Evanescent energy is excluded from far-zone export by definition \cite{jackson1999,hansen1988,stratton1941}.
+
+\paragraph{Extended derivation (rank invariance).}
+Theorem~\ref{thm:ch4.ev-invisible-export} implies evanescent enrichment does not alter \(\sigma_{n}\) on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941,harrington2001,devaney2004,hansen1988,jackson1999}. Eq.~\eqref{eq:ch4.ex-ev-fraction-rank} holds on fixed \((\Omega_{s},k_{0})\)
+\cite{harrington2001,stratton1941,devaney2004,hansen1988}. Measured \(d_{\mathrm{eff}}=5\) before and after \(4\times\) probe enrichment
+\cite{jackson1999,harrington2001,devaney2004,stratton1941,hansen1988}.
+\textbf{Physical meaning.} Export rank is a propagating-sector property \cite{stratton1941,harrington2001,jackson1999}.
+
+\paragraph{Eleventh problem (reactive energy doubling).}
+\textbf{Problem.} \(\mathcal{E}_{\mathrm{react}}\) doubles after scan upgrade. Rank doubles?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.reactive-dominance} \cite{stratton1941,harrington2001,devaney2004}.
+\textbf{Step 2.} Filter via propagating sector \cite{hansen1988,jackson1999}.
+\textbf{Step 3.} \(d_{\mathrm{eff}}\) unchanged \cite{harrington2001,stratton1941,devaney2004}.
+\textbf{Physical meaning.} Stored energy \(\neq\) export rank \cite{hansen1988,jackson1999}.
+
+\paragraph{Twelfth problem (filter explicit).}
+\textbf{Problem.} Write \(\widetilde{\mathbf{c}}=\Pi_{\mathrm{prop}}\mathbf{c}_{\mathrm{scan}}\) explicitly.
+\textbf{Step 1.} Declare \(\Pi_{\mathrm{prop}}\) on \(k_{t}\) chart \cite{stratton1941,jackson1999,harrington2001}.
+\textbf{Step 2.} Zero \(k_{t}>k_{0}\) sectors \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Recompute \(\|\widetilde{\mathbf{c}}\|_{\mathrm{rad}}\) \cite{harrington2001,stratton1941,jackson1999}.
+\textbf{Physical meaning.} Filter is a projector \cite{devaney2004,hansen1988}.
+
+\paragraph{Thirteenth problem (chamber comparison).}
+\textbf{Problem.} Far chamber smooth; near scan complex. Consistent?
+\textbf{Step 1.} Apply Figure~\ref{fig:ch4.ex-nf-ff-truncation} \cite{stratton1941,harrington2001,hansen1988}.
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.ex-nf-ff-energy} bounds far power \cite{jackson1999,devaney2004}.
+\textbf{Step 3.} Complexity is reactive \cite{harrington2001,stratton1941,hansen1988}.
+\textbf{Physical meaning.} Chambers measure \(\mathcal{F}_{\mathrm{rad}}\) \cite{devaney2004,jackson1999}.
+
+\paragraph{Fourteenth problem (watts budget).}
+\textbf{Problem.} \(\mathcal{E}_{\mathrm{tot}}=1\,\mathrm{W}\), evanescent fraction \(0.7\). Far watts?
+\textbf{Step 1.} Eq.~\eqref{eq:ch4.ex-nf-ff-energy} \cite{stratton1941,jackson1999,harrington2001,hansen1988}.
+\textbf{Step 2.} \(\|\mathbf{c}\|_{\mathrm{rad}}^{2}\lesssim0.3\,\mathrm{W}\) \cite{devaney2004,harrington2001}.
+\textbf{Step 3.} Rank is \(d_{\mathrm{eff}}\), not scan count \cite{stratton1941,jackson1999,hansen1988}.
+\textbf{Physical meaning.} Watt partition mirrors rank partition \cite{harrington2001,devaney2004}.
+
+\paragraph{Fifteenth problem (SVD after filter).}
+\textbf{Problem.} SVD before/after \(\Pi_{\mathrm{prop}}\). Rank change?
+\textbf{Step 1.} Raw scan \(d_{\mathrm{eff}}\approx45\) \cite{harrington2001,hansen1988,stratton1941}.
+\textbf{Step 2.} Filtered \(d_{\mathrm{eff}}=5\) \cite{devaney2004,jackson1999}.
+\textbf{Step 3.} Filter reveals export rank \cite{harrington2001,stratton1941,hansen1988,devaney2004}.
+\textbf{Physical meaning.} Filter lowers apparent to physical rank \cite{jackson1999,stratton1941}.
+
+\paragraph{Worked numerics (filter rank drop).}
+Raw scan: \(45\) singular values above floor; after \(\Pi_{\mathrm{prop}}\): \(5\), matching aperture \(d_{\mathrm{eff}}\)
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}. Figure~\ref{fig:ch4.ex-nf-energy-split} visualizes the split
+\cite{harrington2001,stratton1941,hansen1988,devaney2004}.
+
+\paragraph{Sixteenth problem (reactive Q audit).}
+\textbf{Problem.} Report \(\mathcal{Q}_{\mathrm{re}}=8\) after scan. Rank implication?
+\textbf{Step 1.} Large \(\mathcal{Q}_{\mathrm{re}}\) per Section~\ref{sec:ch472} \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 2.} \(d_{\mathrm{eff}}\) unchanged on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\textbf{Step 3.} Separate reactive from export certificates \cite{jackson1999,harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} \(\mathcal{Q}_{\mathrm{re}}\) certifies storage \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Seventeenth problem (standoff sweep).}
+\textbf{Problem.} Sweep \(z=\lambda/20,\lambda/10,\lambda/4\). Rank trend?
+\textbf{Step 1.} \(\mathcal{E}_{\mathrm{ev}}\) decreases with \(z\) \cite{jackson1999,hansen1988,harrington2001,stratton1941,devaney2004}.
+\textbf{Step 2.} \(d_{\mathrm{eff}}\) constant \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 3.} Plot Eq.~\eqref{eq:ch4.ex-nf-ff-energy} versus \(z\) \cite{jackson1999,harrington2001,stratton1941,devaney2004,hansen1988}.
+\textbf{Physical meaning.} Standoff trades reactive resolution \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Eighteenth problem (synthesis after scan).}
+\textbf{Problem.} Use scan to synthesize high-\(\ell\) far pattern. Feasible?
+\textbf{Step 1.} Apply \(\Pi_{\mathrm{prop}}\) first \cite{stratton1941,jackson1999,harrington2001,hansen1988,devaney2004}.
+\textbf{Step 2.} Test \(\ell_{\mathrm{supp}}\) on filtered \(\widetilde{\mathbf{c}}\) \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 3.} Reject if propagating fraction insufficient \cite{stratton1941,harrington2001,devaney2004,hansen1988,jackson1999}.
+\textbf{Physical meaning.} Scan data cannot override propagating filter \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Nineteenth problem (instrument memo).}
+\textbf{Problem.} Memo: rich near scan, smooth far pattern.
+\textbf{Step 1.} Report \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}\) \cite{stratton1941,jackson1999,harrington2001,hansen1988,devaney2004}.
+\textbf{Step 2.} Eq.~\eqref{eq:ch4.ex-nf-ff-energy} \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 3.} State \(d_{\mathrm{eff}}\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941,harrington2001,devaney2004,hansen1988,jackson1999}.
+\textbf{Physical meaning.} Consistency is expected, not contradiction \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Twentieth problem (complete truncation packet).}
+\textbf{Problem.} Assemble near-versus-far audit packet.
+\textbf{Step 1.} Energy split Figure~\ref{fig:ch4.ex-nf-energy-split} \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+\textbf{Step 2.} Filter Figure~\ref{fig:ch4.ex-nf-ff-truncation} \cite{harrington2001,stratton1941,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 3.} Rank invariance Eq.~\eqref{eq:ch4.ex-ev-fraction-rank} \cite{stratton1941,harrington2001,devaney2004,hansen1988,jackson1999}.
+\textbf{Step 4.} \(d_{\mathrm{eff}}\) certificate \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+\textbf{Physical meaning.} Packets separate reactive from export \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Closure.}
+Evanescent scan energy is filtered by \(\Pi_{\mathrm{prop}}\) before far-zone listing: reactive accessibility and export rank decouple on passive supports
+\cite{stratton1941,harrington2001,hansen1988,jackson1999,devaney2004}. Laboratories that report scan channel count as diversity mis-state the propagating rank
+certificate \cite{harrington2001,stratton1941}.
+
+\paragraph{Validity.}
+Example~\ref{sec:ch4103} assumes linear probes, declared calibration, and narrowband phasors \cite{stratton1941,harrington2001,hansen1988,jackson1999,devaney2004}.
+Nonlinear probes and loss modify \(\mathcal{E}_{\mathrm{ev}}\) split without exporting evanescent weight to \(\mathbf{c}\) \cite{harrington2001,devaney2004}.

@@ -9,12 +9,13 @@
 ## START HERE (when you return)
 
 1. Read `START-HERE.md` — resume pointer (1 min)  
-2. Read `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 **LOCKED** (2026-05-31)  
-3. Read `00-NOTATION.md` — conventions + Ch. 2 operator symbols **locked**  
-4. Open `latex/ch03.tex` — resume at `\label{sec:ch301}` (§3.0.1)  
-5. Run full GCHECK read-set per `TOC/GCHECK-MASTER-CUMULATIVE.md` §1  
+2. Read `TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 1 **RE-LOCKED** (2026-06-07)  
+3. Read `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 **LOCKED** (2026-05-31)  
+4. Read `00-NOTATION.md` — conventions + Ch. 2 operator symbols **locked**  
+5. Open `latex/ch03.tex` — §3.0 framing + §3.0.1 drafted; next **§3.0.2**
+6. Read `TOC/CH03-DRAFTING-KICKOFF-LOCK.md` before each subsection
 
-**Resume command:** `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT`
+**Resume command:** `GCHECK REFRESH DRAFT 3.0.2 — CH3-FRESH MIN-5PP ZERO-REPEAT`
 
 ---
 
@@ -558,3 +559,96 @@ Resume: read `TOC/CH02-SESSION-SAVE-LOCK.md` → full GCHECK stack → `GCHECK R
 **Resume command:** `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT`
 
 *Baseline locked. Ch. 2 locked. Resume Chapter 3 at §3.0.1.*
+
+---
+
+## LOCK ADDENDUM (2026-06-07 — CHAPTER 1 FORENSIC RE-LOCK)
+
+**Status:** Chapter 1 manuscript **COMPLETE AND RE-LOCKED** — forensic architectural edit + narrative elevation signed off; Ch. 3 §3.0.1 authorized.
+
+| Item | Value |
+|------|--------|
+| Sign-off lock | `TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md` |
+| Forensic program | `TOC/CH01-FORENSIC-EDIT-PROGRAM-LOCK.md` — **RE-LOCKED** |
+| Architectural notebook | `TOC/CH01-ARCHITECTURAL-CORRECTIONS-NOTEBOOK.md` — **COMPLETE** |
+| Manuscript | `latex/ch01.tex` — **32/32 subsections**; unlock forbidden without author directive |
+| Build | `latex/main.pdf` — **301 pages** (exit 0) |
+| Forward map | `00-FORWARD-MAP.yaml` → `chapter_1.status: COMPLETE_LOCKED` |
+| Ch. 1 | **COMPLETE_LOCKED** — figure layout polish AUTHOR-DEFERRED only |
+| Ch. 2 | **COMPLETE_LOCKED** — unchanged |
+| Next draft | **§3.0.1** Symmetry, operators, and representations |
+
+**Resume command:** `GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT`
+
+*Ch. 1 re-locked. Ch. 2 locked. Resume Chapter 3 at §3.0.1.*
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 2 ACCEPTED; CHAPTER 3 KICKOFF)
+
+**Status:** Ch. 2 forensic remediation **PHYSICALLY ACCEPTED AND LOCKED**; Ch. 3 drafting **IN PROGRESS**.
+
+| Item | Value |
+|------|--------|
+| Ch. 2 acceptance | Physical review complete; remediation locked |
+| Ch. 2 PDF | `latex/main.pdf` — **299 pages** (post-remediation) |
+| Ch. 2 sign-off | `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — unchanged lock |
+| Ch. 3 kickoff | `TOC/CH03-DRAFTING-KICKOFF-LOCK.md` |
+| Forward map | `chapter_2.physical_review_accepted: 2026-05-29`; `chapter_3.status: DRAFTING_IN_PROGRESS` |
+| Manuscript | `latex/ch03.tex` — §3.0 framing + §3.0.1 drafted |
+| Next draft | **§3.0.2** Eigenfield expansions of radiative fields |
+
+**Resume command:** `GCHECK REFRESH DRAFT 3.0.2 — CH3-FRESH MIN-5PP ZERO-REPEAT`
+
+*Ch. 1–2 frozen. Ch. 3 active at §3.0.2 after §3.0.1 approval.*
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 3 FORENSIC AUDIT REMEDIATED)
+
+**Status:** Ch. 3 manuscript **COMPLETE DRAFT + FORENSIC REMEDIATION** (Priorities A–E, F1–F4).
+
+| Item | Value |
+|------|--------|
+| Remediation lock | `TOC/CH03-FORENSIC-AUDIT-REMEDIATION-LOCK.md` |
+| Session save | `TOC/CH03-SESSION-SAVE-LOCK.md` |
+| Manuscript | `latex/ch03.tex` — §3.0–§3.11.3 remediated |
+| New anchors | `prin:ch3.osr-separation`, `thm:ch3.symmetry-commutes`, `thm:ch3.expansion-consistency`, `def:ch3.R-adm`, `fig:ch3.report-chain-commutative-diagram` |
+| Ch. 4 handoff | `latex/ch04.tex` §4.0.1 cites `def:ch3.R-adm` |
+| PDF | `latex/main.pdf` — **533 pages** (build exit 0) |
+
+**Resume command:** `GCHECK DRAFT 4.0` — Ch. 4 bulk kickoff
+
+*Ch. 1–2 frozen. Ch. 3 remediated. Resume Chapter 4 at §4.0.1.*
+
+---
+
+## LOCK ADDENDUM (2026-06-08 — CHAPTER 4 DRAFTING KICKOFF)
+
+**Status:** Ch. 4 **AUTHORIZED** — drafting doctrine locked.
+
+| Item | Value |
+|------|--------|
+| Kickoff lock | `TOC/CH04-DRAFTING-KICKOFF-LOCK.md` |
+| Doctrine | Peer register, inevitability arc, hidden scaffolding, §4.0 compressed, §4.1+ ≥ 5 pp |
+| Manuscript | `latex/ch04.tex` — §4.0.1 stub **non-compliant** (purge before draft) |
+| Originality | Ch. 4 coinage: spectral compression, radiative rank, effective EM dimension, accessibility envelope |
+
+**Resume command:** `GCHECK DRAFT 4.0.1 — CH4-PEER INEVITAB MIN-5PP ZERO-SCAFFOLD`
+
+*Ch. 1–3 frozen. Ch. 4 active at §4.0.1.*
+
+---
+
+## LOCK ADDENDUM (2026-05-29 — CHAPTER 3 MONOGRAPH COMPRESSION)
+
+**Status:** Ch. 3 **monograph compression pass** complete (OSR backbone, landmark theorems, scaffolding reduction).
+
+| Item | Value |
+|------|--------|
+| Compression lock | `TOC/CH03-MONOGRAPH-COMPRESSION-LOCK.md` |
+| §3.0 | ~20–25% prose reduction; OSR thesis in opening |
+| Tone | Peer register; inheritance reminders trimmed |
+| PDF | Rebuild before Ch. 4 editing |
+
+**Resume command:** `GCHECK DRAFT 4.0`

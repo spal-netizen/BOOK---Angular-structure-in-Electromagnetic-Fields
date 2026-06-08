@@ -1,0 +1,59 @@
+
+\paragraph{Concentration operator bridge.}
+Landau--Pollak--Slepian theory bounds the number of functions simultaneously concentrated in spatial domain \(D\) and spectral domain \(\Omega_{k}\)
+\cite{hansen1988,stratton1941}. On EM export maps, \(N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k})\) ceilings \(d_{\mathrm{eff}}(\varepsilon)\) because
+\(\boldsymbol{\Gamma}_\omega\) factors through the same concentration inequality \cite{harrington2001,devaney2004,jackson1999}.
+
+\begin{equation}
+\label{eq:ch4.lps-export-bridge}
+d_{\mathrm{eff}}(\varepsilon)\ \le\ \min\big(N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k}),\,N_{\mathrm{mode}}(\varepsilon)\big),
+\end{equation}
+unifying LPS, mode-count, and SVD certificates \cite{hansen1988,stratton1941,harrington2001}.
+
+\begin{theorem}[Triple ceiling consistency]
+\label{thm:ch4.triple-ceiling}
+On declared \((D,\Omega_{k},\mathcal{C})\), any two of \(\{d_{\mathrm{eff}},N_{\mathrm{LPS}},N_{\mathrm{mode}}\}\) that exceed the third indicate
+domain mismatch or gauge misalignment \cite{hansen1988,harrington2001,devaney2004,stratton1941}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.lps-synthesis-bound}, Theorem~\ref{thm:ch4.mode-ceiling-rank}, and Definition~\ref{def:ch4.effective-em-dimension}
+\cite{stratton1941,hansen1988}.
+\end{proof}
+
+\paragraph{Prolate degeneracy.}
+On prolate spheroids, major-axis concentration saturates before minor-axis modes activate \cite{hansen1988,jackson1999}. Equations
+\eqref{eq:ch4.lps-anisotropy}--\eqref{eq:ch4.prolate-nwidth} require directional audits: isotropic \(N_{\mathrm{LPS}}\) on anisotropic apertures
+overstates minor-axis export \cite{collin2001,harrington2001}.
+
+\paragraph{Worked illustration (slot versus disk).}
+Equal-area slot (\(10:1\)) and disk: disk \(N_{\mathrm{LPS}}^{(\mathrm{vol})}\sim(k_{0}a)^{3}\); slot major axis dominates first
+\cite{hansen1988,collin2001,stratton1941}.
+
+\paragraph{Worked illustration (SVD exceeds LPS).}
+\(d_{\mathrm{eff}}=42\) from MoM on slot, \(N_{\mathrm{LPS}}=28\): domain declaration likely includes evanescent chart rows outside \(\Omega_{k}\)
+\cite{harrington2001,devaney2004,hansen1988}.
+
+\paragraph{Problem (LPS audit).}
+\textbf{Problem.} Compute conservative \(N_{\mathrm{LPS}}\) for prolate \(k_{0}a=3\), \(k_{0}b=0.5\).
+\textbf{Step 1.} Evaluate Eq.~\eqref{eq:ch4.prolate-nwidth} per axis \cite{hansen1988,jackson1999}.
+\textbf{Step 2.} Sum via Eq.~\eqref{eq:ch4.lps-anisotropy} \cite{stratton1941}.
+\textbf{Step 3.} Compare to measured \(d_{\mathrm{eff}}\) \cite{harrington2001,devaney2004}.
+\textbf{Physical meaning.} LPS is geometry-directional concentration bound \cite{hansen1988}.
+
+\paragraph{Problem (triple consistency).}
+\textbf{Problem.} \(d_{\mathrm{eff}}=18\), \(N_{\mathrm{mode}}=22\), \(N_{\mathrm{LPS}}=15\). Resolve.
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.triple-ceiling} \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Use \(\min\) in Eq.~\eqref{eq:ch4.lps-export-bridge} \cite{harrington2001}.
+\textbf{Step 3.} Audit \(\mathcal{C}\) chart for over-listing \cite{devaney2004}.
+\textbf{Physical meaning.} Tightest ceiling governs realizability \cite{stratton1941}.
+
+\paragraph{Philosophical closure (concentration inevitability).}
+\(n\)-width bounds are not parallel to operator rank; they explain why rank is finite on compact supports \cite{hansen1988,stratton1941,harrington2001}.
+Spatial concentration and spectral bandlimit are conjugate resources: enlarging one shrinks the other in the LPS sense \cite{jackson1999,devaney2004}.
+Synthesis dimension is therefore a concentration fact before it is a hardware fact \cite{harrington2001}.
+
+\begin{corollary}[Domain declaration obligation]
+\label{cor:ch4.lps-domain}
+\(d_{\mathrm{eff}}>N_{\mathrm{LPS}}(\varepsilon,D,\Omega_{k})\) on passive \(\Omega_{s}\) implies \((D,\Omega_{k})\) were mis-declared or
+\(\mathcal{C}\) includes non-export rows \cite{hansen1988,harrington2001,devaney2004,stratton1941}.
+\end{corollary}

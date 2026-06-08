@@ -1,0 +1,62 @@
+
+\paragraph{Regime selection certificate.}
+Asymptotic laws apply only when \(k_{0}D_{s}\) lies in the declared branch of Eq.~\eqref{eq:ch4.regime-table}
+\cite{jackson1999,stratton1941,hansen1988}. Extrapolating volume growth Eq.~\eqref{eq:ch4.large-body-rank-growth} into the Rayleigh band
+over-estimates \(d_{\mathrm{eff}}\) by orders of magnitude \cite{harrington2001,devaney2004}.
+
+\begin{theorem}[Dipole cap in Rayleigh band]
+\label{thm:ch4.rayleigh-dipole-cap}
+For \(k_{0}D_{s}<0.5\) on compact \(\Omega_{s}\), \(d_{\mathrm{eff}}(\varepsilon)\le3\) for any \(\varepsilon\in(0,1)\) in the
+electric-dipole gauge \cite{jackson1999,stratton1941,harrington2001,hansen1988}.
+\end{theorem}
+\begin{proof}
+Eq.~\eqref{eq:ch4.rayleigh-rank-limit} and multipole suppression \(\propto(k_{0}D_{s})^{2\ell+1}\) for \(\ell\ge1\)
+\cite{jackson1999,stratton1941}.
+\end{proof}
+
+\paragraph{Crossover identification.}
+Define knee functional
+\begin{equation}
+\label{eq:ch4.crossover-knee}
+\kappa_{\mathrm{cross}}=\inf\left\{k_{0}D_{s}:\ d_{\mathrm{eff}}(\varepsilon)>3\right\},
+\end{equation}
+with \(\kappa_{\mathrm{cross}}\sim k_{0}^{(\mathrm{cross})}D_{s}\) from Eq.~\eqref{eq:ch4.crossover-frequency} \cite{hansen1988,harrington2001}.
+Synthesis reports must state which asymptote was active when projecting rank across bands \cite{devaney2004,stratton1941}.
+
+\paragraph{Volume-growth saturation.}
+At large \(k_{0}D_{s}\), \(d_{\mathrm{eff}}(\varepsilon)\sim C_{\infty}(\varepsilon)(k_{0}D_{s})^{3}\) until
+Eq.~\eqref{eq:ch4.coupling-crossover} dispersion or material dispersion alters \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941,jackson1999}.
+Truncation at tolerance \(\varepsilon\) is mandatory: full listing is numerically and physically unattainable \cite{hansen1988,harrington2001}.
+
+\paragraph{Worked illustration (handset bands).}
+Smartphone outline \(D_{s}\approx0.15\,\mathrm{m}\): at 1\,GHz, \(k_{0}D_{s}\approx0.3\Rightarrow d_{\mathrm{eff}}\le3\); at 28\,GHz,
+\(k_{0}D_{s}\approx8\Rightarrow d_{\mathrm{eff}}\sim\mathcal{O}(10^{2})\) under volume law \cite{jackson1999,harrington2001,collin2001}.
+
+\paragraph{Worked illustration (mis-extrapolation).}
+Rank measured at 900\,MHz (\(d_{\mathrm{eff}}=2\)) extrapolated to 60\,GHz via dipole law yields \(d_{\mathrm{eff}}\approx2\); correct volume
+branch gives \(d_{\mathrm{eff}}\gg10\) \cite{hansen1988,devaney2004,stratton1941}.
+
+\paragraph{Problem (band sweep).}
+\textbf{Problem.} Fixed \(D_{s}=0.2\,\mathrm{m}\), sweep 1--40\,GHz. Document rank law.
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) per frequency \cite{jackson1999}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.rayleigh-dipole-cap} or Eq.~\eqref{eq:ch4.large-body-rank-growth} per branch \cite{stratton1941,hansen1988}.
+\textbf{Step 3.} Identify \(\kappa_{\mathrm{cross}}\) via Eq.~\eqref{eq:ch4.crossover-knee} \cite{harrington2001}.
+\textbf{Physical meaning.} Regime selects scaling exponent \cite{devaney2004}.
+
+\paragraph{Problem (crossover memo).}
+\textbf{Problem.} When does \(d_{\mathrm{eff}}>3\) first occur?
+\textbf{Step 1.} SVD sweep vs \(k_{0}D_{s}\) \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Mark knee at Eq.~\eqref{eq:ch4.crossover-frequency} \cite{jackson1999}.
+\textbf{Step 3.} Attach active branch to synthesis certificate \cite{stratton1941}.
+\textbf{Physical meaning.} Crossover is not tunable by phase \cite{devaney2004}.
+
+\paragraph{Philosophical closure (asymptotic honesty).}
+Small-body and large-body limits are not competing approximations to be blended by optimism \cite{jackson1999,stratton1941,hansen1988}. They are
+mutually exclusive regimes separated by \(\kappa_{\mathrm{cross}}\) on the same geometry \cite{harrington2001}. Rank projections that ignore the
+crossover confuse electrical size with element count and produce synthesis targets no passive support can meet \cite{devaney2004}.
+
+\begin{corollary}[No mid-band dipole extrapolation]
+\label{cor:ch4.no-dipole-extrap}
+For \(k_{0}D_{s}>2\), replacing Eq.~\eqref{eq:ch4.large-body-rank-growth} with Eq.~\eqref{eq:ch4.rayleigh-rank-limit} underestimates
+\(d_{\mathrm{eff}}(\varepsilon)\) by at least factor \((k_{0}D_{s}/0.5)^{3}\) \cite{jackson1999,hansen1988,stratton1941,harrington2001}.
+\end{corollary}

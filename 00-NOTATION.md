@@ -90,6 +90,17 @@ Underlined symbols denote phasors; time-domain vectors are **not** underlined.
 
 Do not overload these symbols in Chapters 3–4; harmonic relabeling in Ch. 3 must preserve composition order.
 
+### Chapter 2 radiation integral prefactor (locked 2026-05-29)
+
+With \(\mathcal{W}_{E,\omega}\E=-\jj\omega\mu_0\Jimp+\cdots\) and dyadic
+\(\mathcal{W}_{E,\omega}\overline{\mathbf{G}}_{E}=\overline{\mathbf{I}}\delta\), the impressed-current
+electric field is
+\[
+\E(\mathbf{r})=-\jj\omega\mu_0\int\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'+\E_{\mathrm{hom}}(\mathbf{r}).
+\]
+All Chapter 2 dyadic/volume/Huygens/MoM electric routes use this sign consistently with
+`eq:ch2.radiation-integral-preview` and `eq:ch2.helmholtz-forcing-map`.
+
 ## Inner products
 
 Finite-energy fields on domain \(\Omega\):

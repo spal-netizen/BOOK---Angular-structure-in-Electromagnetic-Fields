@@ -1,0 +1,243 @@
+\subsection{Non-radiating and unreachable modes}
+\label{sec:ch471}
+% TOC tag: [USE]
+
+Non-radiating currents and unreachable far-zone components lie in \(\ker\mathcal{R}_\omega\) and related synthesis nullities
+from Section~\ref{sec:ch27} \cite{stratton1941,harrington2001}. Subsection~\ref{sec:ch471} states their impact on
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\): such modes alter near fields without changing \(\mathbf{c}\) \cite{devaney2004}.
+
+\paragraph{Assumptions.}
+Import \(\ker\mathcal{R}_\omega\), non-radiating templates Eq.~\eqref{eq:ch2.nr-current-def}, and synthesis null space
+Eq.~\eqref{eq:ch4.synthesis-null-space} \cite{stratton1941,harrington2001}. \(\boldsymbol{\Gamma}_\omega\) is compact on
+\(\mathcal{J}_{\mathrm{real}}\) \cite{harrington2001,devaney2004}.
+
+\paragraph{Unreachable synthesis directions.}
+Define
+\begin{equation}
+\label{eq:ch4.unreachable-modes}
+\mathcal{U}_{\mathrm{unreach}}
+=
+\ker\boldsymbol{\Gamma}_\omega^{\dagger}
+\cap
+\mathbb{C}^{I},
+\end{equation}
+the coefficient directions with zero coupling to every admissible \(\Jimp\in\mathcal{J}_{\mathrm{real}}\)
+\cite{stratton1941,harrington2001,devaney2004}. Targets with component along \(\mathcal{U}_{\mathrm{unreach}}\) fail
+\(\delta_{\mathrm{syn}}=0\) in Eq.~\eqref{eq:ch4.synthesis-residual-norm} regardless of MoM residual \cite{harrington2001}.
+
+\begin{theorem}[Non-radiating lift does not enlarge \(\mathbf{c}\)]
+\label{thm:ch4.nr-lift-invisibility}
+For every \(\mathbf{J}_{\mathrm{nr}}\in\ker\mathcal{R}_\omega\cap\mathcal{J}_{\mathrm{real}}\) and every
+\(\Jimp\in\mathcal{J}_{\mathrm{real}}\),
+\(\boldsymbol{\Gamma}_\omega[\Jimp+\mathbf{J}_{\mathrm{nr}}]=\boldsymbol{\Gamma}_\omega[\Jimp]\) on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941,harrington2001}. Near-field data distinguish \(\mathbf{J}_{\mathrm{nr}}\); far-zone \(\mathbf{c}\) does not
+\cite{devaney2004}.
+\end{theorem}
+\begin{proof}
+Linearity of \(\mathcal{R}_\omega\) and definition of \(\ker\mathcal{R}_\omega\) \cite{stratton1941}; \(\mathcal{C}\) bounded on
+\(\mathcal{F}_{\mathrm{rad}}\) \cite{hansen1988,harrington2001}.
+\end{proof}
+
+\paragraph{Worked illustration (NR current superposition).}
+Adding a non-radiating current to a feed leaves \(\mathbf{c}\) unchanged while altering reactive near fields
+\cite{stratton1941,harrington2001}. Inverse solvers that fit near fields may absorb \(\mathbf{J}_{\mathrm{nr}}\) without changing
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{devaney2004}.
+
+\paragraph{Problem (unreachable target component).}
+\textbf{Problem.} \(\mathbf{c}_{\mathrm{target}}\) has unit weight on a sector nullified by symmetry. Is inversion well-posed?
+
+\textbf{Step 1.} Project \(\mathbf{c}_{\mathrm{target}}\) off \(\mathcal{U}_{\mathrm{unreach}}\) \cite{harrington2001}.
+
+\textbf{Step 2.} Test \(\delta_{\mathrm{syn}}\) on the projection \cite{stratton1941,devaney2004}.
+
+\textbf{Step 3.} Report unreachable component as certification failure, not feed error \cite{hansen1988}.
+
+\textbf{Physical meaning.} Unreachable modes are synthesis null directions, not small coupling \cite{stratton1941}.
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.nr-lift-invisibility} assumes linear Maxwell maps on declared domains \cite{stratton1941}. Loss and dispersion
+modify \(\ker\mathcal{R}_\omega\) without promoting NR content to \(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001}.
+
+
+\subsection{Reactive subspaces and evanescent accessibility}
+\label{sec:ch472}
+% TOC tag: [HOME]
+
+Evanescent subspace \(\mathcal{F}_{\mathrm{ev}}\) from Eq.~\eqref{eq:ch2.evanescent-subspace-def} carries reactive storage accessible
+to near probes yet invisible to \(\boldsymbol{\Gamma}_\omega\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941,harrington2001}.
+Subsection~\ref{sec:ch472} separates reactive accessibility from synthesis accessibility \cite{devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Proposition~\ref{prop:ch4.evanescent-invisibility} and Subsection~\ref{sec:ch273} reconstructability caps
+\cite{stratton1941,harrington2001}. Observation rank \(N\) finite \cite{devaney2004}.
+
+\paragraph{Reactive accessibility functional.}
+Define
+\begin{equation}
+\label{eq:ch4.reactive-accessibility}
+\mathcal{A}_{\mathrm{react}}^{(N)}(\mathbf{c})
+=
+\big\|\mathcal{P}_{\mathrm{react}}\mathbf{c}\big\|_{\mathrm{react}},
+\end{equation}
+with \(\mathcal{P}_{\mathrm{react}}\) projecting onto reactive components of the observation functional when near data are used
+\cite{harrington2001,stratton1941}. Large \(\mathcal{A}_{\mathrm{react}}^{(N)}\) with small \(\|\mathbf{c}\|_{\mathrm{rad}}\) signals
+evanescent-dominated certification \cite{devaney2004}.
+
+\begin{proposition}[Reactive accessibility does not enlarge synthesis]}
+\label{prop:ch4.reactive-not-synthesis}
+\(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) is independent of \(\mathcal{A}_{\mathrm{react}}^{(N)}\) on
+\(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941,harrington2001}. Increasing near-field probe rank \(N\) may raise
+\(\mathcal{A}_{\mathrm{react}}^{(N)}\) without enlarging \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{devaney2004,hansen1988}.
+\end{proposition}
+
+\paragraph{Worked illustration (near-field scan).}
+A scan resolving \(k_{t}>k_{0}\) weight reports high \(\mathcal{A}_{\mathrm{react}}^{(N)}\) while \(\mathbf{c}\) remains
+dipole-dominated \cite{harrington2001,jackson1999}. Far-zone OAM claims must use \(\mathcal{K}_{\mathrm{prop}}\) only
+\cite{stratton1941,devaney2004}.
+
+\paragraph{Problem (reactive accessibility versus synthesis).}
+\textbf{Problem.} Near-field tomography recovers reactive content. Does that enlarge \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\)?
+
+\textbf{Step 1.} Apply \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\) before listing \(\mathbf{c}\) \cite{stratton1941}.
+
+\textbf{Step 2.} Test \(\delta_{\mathrm{syn}}\) on far-zone \(\mathbf{c}\) alone \cite{harrington2001,devaney2004}.
+
+\textbf{Step 3.} Treat reactive recovery as certification, not synthesis enlargement \cite{hansen1988}.
+
+\textbf{Physical meaning.} Reactive accessibility certifies storage; synthesis exports propagating rank \cite{stratton1941}.
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.reactive-accessibility} assumes linear probes and declared calibration \cite{harrington2001}. Loss modifies
+\(\mathcal{F}_{\mathrm{ev}}\) split without exporting evanescent weight to \(\mathbf{c}\) \cite{stratton1941}.
+
+
+\subsection{Synthesis, reconstruction, and inversion limits}
+\label{sec:ch473}
+% TOC tag: [HOME]
+
+Inverse design and source reconstruction minimize residuals on \(\mathbf{c}\) or near fields; realizability requires target membership in
+\(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) \cite{stratton1941,harrington2001,devaney2004}. Subsection~\ref{sec:ch473} states
+inversion limits as operator-range theorems \cite{hansen1988}.
+
+\paragraph{Assumptions.}
+Presuppose Theorem~\ref{thm:ch4.moore-penrose-synthesis} and Principle~\ref{prin:ch4.operator-chain}
+\cite{harrington2001,devaney2004,stratton1941}. Tolerance \(\varepsilon\) fixed \cite{hansen1988}.
+
+\paragraph{Inversion residual decomposition.}
+For target \(\mathbf{c}_{\mathrm{target}}\),
+\begin{equation}
+\label{eq:ch4.inversion-residual-decomposition}
+\mathbf{c}_{\mathrm{target}}
+=
+\mathcal{P}_{\mathrm{ran}}\mathbf{c}_{\mathrm{target}}
++
+\mathbf{r}_{\perp},
+\qquad
+\mathbf{r}_{\perp}\in\ker\boldsymbol{\Gamma}_\omega^{\dagger},
+\end{equation}
+with \(\mathcal{P}_{\mathrm{ran}}\) from Principle~\ref{prin:ch4.operator-chain} \cite{stratton1941,harrington2001}. Realizability
+requires \(\mathbf{r}_{\perp}=\mathbf{0}\); MoM may minimize \(\|\mathbf{r}_{\perp}\|\) only if regularization is undeclared
+\cite{devaney2004,hansen1988}.
+
+\begin{theorem}[Inversion limit at rank \(d_{\mathrm{eff}}\)]
+\label{thm:ch4.inversion-limit}
+Best rank-\(d_{\mathrm{eff}}(\varepsilon)\) approximation of \(\boldsymbol{\Gamma}_\omega\) achieves error
+\(\le\varepsilon\sigma_{1}\) in operator norm, and any \(\mathbf{c}_{\mathrm{target}}\) with
+\(\|\mathbf{r}_{\perp}\|>\varepsilon\|\mathbf{c}_{\mathrm{target}}\|\) lies outside \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\)
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.radiative-rank} and Eckart--Young truncation \cite{harrington2001,stratton1941}.
+\end{proof}
+
+\paragraph{Worked illustration (Tikhonov masking).}
+Tikhonov inversion can suppress \(\mathbf{r}_{\perp}\) in discrete norms while \(\delta_{\mathrm{syn}}>0\) in the continuum gauge
+\cite{harrington2001,devaney2004}. \(\delta_{\mathrm{syn}}=0\) is the synthesis certificate \cite{stratton1941}.
+
+\paragraph{Problem (inversion versus realizability).}
+\textbf{Problem.} Optimizer reports \(\|\mathbf{T}\mathbf{I}_{s}-\mathbf{c}_{\mathrm{target}}\|<10^{-4}\). Certify realizability.
+
+\textbf{Step 1.} Decompose \(\mathbf{c}_{\mathrm{target}}\) via Eq.~\eqref{eq:ch4.inversion-residual-decomposition} \cite{stratton1941}.
+
+\textbf{Step 2.} Test \(\delta_{\mathrm{syn}}=0\) \cite{harrington2001,devaney2004}.
+
+\textbf{Step 3.} Reject if \(\mathbf{r}_{\perp}\neq\mathbf{0}\) despite small MoM norm \cite{hansen1988}.
+
+\textbf{Physical meaning.} Inversion finds closest coefficients; synthesis demands range membership \cite{stratton1941}.
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.inversion-limit} assumes linear forward models \cite{stratton1941}. Nonlinear materials require separate
+\(\mathcal{J}_{\mathrm{real}}\) classes \cite{harrington2001}.
+
+
+\subsection{Localization versus angular resolution}
+\label{sec:ch474}
+% TOC tag: [HOME][USE SS3.8.4][USE SS3.6.4]
+
+Representation dependence of angular labels in Subsection~\ref{sec:ch384} and localization bounds in
+Subsection~\ref{sec:ch364} constrain simultaneous spatial concentration and angular resolution on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{harrington2001,hansen1988,stratton1941}. Subsection~\ref{sec:ch474} states the tradeoff as a realizability inequality on
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{devaney2004}.
+
+\paragraph{Assumptions.}
+Import Eq.~\eqref{eq:ch4.localization-spectrum-product} and Eq.~\eqref{eq:ch3.OAM-representation-dependence}
+\cite{stratton1941,hansen1988,harrington2001}. Compact \(\Omega_{s}\) \cite{jackson1999}.
+
+\paragraph{Resolution functional.}
+Define
+\begin{equation}
+\label{eq:ch4.angular-resolution-functional}
+\mathcal{R}_{\mathrm{ang}}(\mathbf{c})
+=
+\sup\left\{
+\ell:\ \sum_{m,\sigma}|\widehat{c}_{\ell m}^{(\sigma)}|^{2}
+\ge
+\eta_{\mathrm{blk}}\|\mathbf{c}\|_{\mathrm{rad}}^{2}
+\right\},
+\end{equation}
+the highest \(\ell\) block carrying fraction \(\eta_{\mathrm{blk}}\) of radiative power \cite{hansen1988,stratton1941}. On \(B_{a}\),
+\begin{equation}
+\label{eq:ch4.localization-resolution-tradeoff}
+\mathcal{L}_{2}[\Jimp]\,\mathcal{R}_{\mathrm{ang}}(\mathbf{c})
+\ \gtrsim\
+\mathcal{K}_{\mathrm{lr}}(k_{0}a,\eta_{\mathrm{blk}}),
+\end{equation}
+combining Eq.~\eqref{eq:ch4.localization-spectrum-product} with tail bounds Eq.~\eqref{eq:ch4.high-ell-decay}
+\cite{jackson1999,hansen1988,devaney2004}.
+
+\begin{corollary}[Super-resolution obstruction]
+\label{cor:ch4.super-resolution-obstruction}
+Simultaneous \(\mathcal{L}_{2}\ll a^{2}\) and \(\mathcal{R}_{\mathrm{ang}}\gg k_{0}a\) on the same \(\mathbf{c}\) implies
+\(\mathbf{c}\notin\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) on \(B_{a}\) \cite{hansen1988,stratton1941,devaney2004}.
+\end{corollary}
+
+\paragraph{Worked illustration (tight beam, small aperture).}
+A \(0.25\lambda\) aperture claiming \(2^{\circ}\) beam and \(\ell=8\) OAM violates
+Eq.~\eqref{eq:ch4.localization-resolution-tradeoff} \cite{jackson1999,harrington2001,hansen1988}.
+
+\paragraph{Problem (OAM label versus resolution).}
+\textbf{Problem.} Report uses LG index \(m_{\mathrm{LG}}=5\) on a paraxial beam. Transfer to VSH realizability?
+
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch3.paraxial-vs-spherical-OAM} \cite{harrington2001,allen1992}.
+
+\textbf{Step 2.} Test \(\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\) against Eq.~\eqref{eq:ch4.ell-max-scaling} \cite{hansen1988}.
+
+\textbf{Step 3.} Reject essentialist OAM claims that skip basis change \cite{stratton1941,belinfante1940}.
+
+\textbf{Physical meaning.} Angular resolution and localization are jointly bounded by support \cite{hansen1988}.
+
+\paragraph{Validity.}
+Eqs.~\eqref{eq:ch4.localization-resolution-tradeoff} assume open-region compact sources \cite{stratton1941}. Cavities quantize
+resolution differently via Subsection~\ref{sec:ch372} \cite{harrington2001}.
+
+Section~\ref{sec:ch47} has separated synthesis rank from reactive accessibility, inversion limits, and localization--resolution
+tradeoffs \cite{stratton1941,harrington2001,devaney2004}. Section~\ref{sec:ch48} develops scaling laws and spectral concentration
+on the same geometry \cite{hansen1988}.
+
+
+\section{Scaling Laws and Spectral Concentration}
+\label{sec:ch48}
+
+Effective dimension \(d_{\mathrm{eff}}\) counts export directions; scaling exponents and concentration inequalities describe how that
+count grows with aperture, frequency, and signal bandwidth \cite{stratton1941,jackson1999,hansen1988}. Section~\ref{sec:ch48}
+supplies the asymptotic laws and concentration bounds that make truncation inevitable on finite hardware \cite{harrington2001,devaney2004}.

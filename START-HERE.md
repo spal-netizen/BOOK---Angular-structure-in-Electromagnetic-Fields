@@ -4,13 +4,11 @@
 
 **Baseline locked:** 2026-05-24  
 
-**Chapter 1 locked:** 2026-05-29  
+**Chapter 1 locked:** 2026-06-07 (forensic re-lock)  
 
 **Chapter 2 locked:** 2026-05-31  
 
-**Summer break:** 2026-05-31 → **return Friday 2026-06-06**  
-
-**Governance sync locked:** 2026-05-31  
+**Governance sync locked:** 2026-06-07  
 
 
 
@@ -32,7 +30,7 @@
 
 | Margin notes template | `review/author-margin-notes-TEMPLATE.md` |
 
-| Live build (same content) | `latex/main.pdf` — **293 pages**, exit 0 |
+| Live build (same content) | `latex/main.pdf` — **301 pages**, exit 0 |
 
 
 
@@ -56,9 +54,11 @@
 
 | Next subsection | **§3.0.1** Symmetry, operators, and representations |
 
-| PDF | `latex/main.pdf` — **293 pages** (build exit 0) |
+| PDF | `latex/main.pdf` — **301 pages** (build exit 0) |
 
-| Sign-off | `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` |
+| Ch. 1 sign-off | `TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md` |
+
+| Ch. 2 sign-off | `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` |
 
 
 
@@ -82,15 +82,17 @@ GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT
 
 
 
-1. `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 lock authority  
+1. `TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 1 re-lock authority (2026-06-07)  
 
-2. `TOC/GCHECK-MASTER-CUMULATIVE.md` — zero-deviation checklist  
+2. `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 lock authority  
 
-3. `latex/ch03.tex` — write at `\label{sec:ch301}` (§3.0.1)  
+3. `TOC/GCHECK-MASTER-CUMULATIVE.md` — zero-deviation checklist  
+
+4. `latex/ch03.tex` — write at `\label{sec:ch301}` (§3.0.1)  
 
 
 
-Chapter 1: `latex/ch01.tex` — **COMPLETE_LOCKED** (figure layout polish only, author-deferred).  
+Chapter 1: `latex/ch01.tex` — **COMPLETE_LOCKED** (forensic edit complete; figure layout polish author-deferred).  
 
 Chapter 2: `latex/ch02.tex` — **COMPLETE_LOCKED** — no prose edits without unlock.
 

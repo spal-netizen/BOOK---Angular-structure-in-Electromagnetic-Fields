@@ -1,0 +1,171 @@
+\subsection{Decay of high-order coupling}
+\label{sec:ch463}
+% TOC tag: [HOME][USE SS3.5.3]
+
+Mode density on \(S^{2}\) in Subsection~\ref{sec:ch353} counts how many angular channels may be labeled at cutoff \(\ell_{\max}\)
+\cite{jackson1999,hansen1988}. Subsection~\ref{sec:ch463} converts that count into a realizability law on
+\(\boldsymbol{\mathcal{K}}_{\mathrm{geo}}\) from Eq.~\eqref{eq:ch4.geometry-coupling-operator}: listable channels are not exportable
+channels \cite{stratton1941,harrington2001,devaney2004}. The philosophical insight is that DOS measures coordinate cardinality; coupling tails
+measure watts. Truncation is inevitable because tail mass decays exponentially while labels grow quadratically in \(\ell_{\max}\).
+
+\paragraph{Assumptions.}
+Fix compact \(\Omega_{s}\) with \(\operatorname{diam}=D_{s}\), flux gauge, and coupling operator \(\boldsymbol{\mathcal{K}}_{\mathrm{geo}}\)
+\cite{stratton1941,hansen1988}. Import Eq.~\eqref{eq:ch4.coupling-ell-decay} from Section~\ref{sec:ch45} by reference
+\cite{harrington2001,devaney2004}. Narrowband linear exterior \cite{jackson1999}.
+
+\paragraph{Coupling tail envelope.}
+For \(\ell>k_{0}D_{s}\),
+\begin{equation}
+\label{eq:ch4.coupling-tail-envelope}
+\sup_{\Jimp\in\mathcal{J}_{\mathrm{real}}}
+\frac{|\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]|}{\|\boldsymbol{\mathcal{K}}_{\mathrm{geo}}[\Jimp]\|}
+\le
+\mathcal{C}_{\mathrm{tail}}(\ell,k_{0}D_{s})\,
+\ell^{-1}\exp(-\ell/k_{0}D_{s}),
+\end{equation}
+extending Eq.~\eqref{eq:ch4.coupling-ell-decay} with sector constants \(\mathcal{C}_{\mathrm{tail}}\)
+\cite{hansen1988,stratton1941,jackson1999}. Mathematically, Eq.~\eqref{eq:ch4.coupling-tail-envelope} is a uniform operator bound on
+high-\(\ell\) blocks. Physically, it states that sources on \(\Omega_{s}\) cannot strongly excite angular orders far beyond electrical size
+\cite{harrington2001,devaney2004}.
+
+\begin{theorem}[Coupling tail implies spectral compression]
+\label{thm:ch4.coupling-tail-compression}
+If Eq.~\eqref{eq:ch4.coupling-tail-envelope} holds, then
+\(r_{\mathrm{rad}}(\varepsilon)\le C(k_{0}D_{s},\varepsilon)\) with \(C\) growing slower than raw channel count \((2\ell_{\max}+1)^{2}\)
+from Subsection~\ref{sec:ch353} \cite{hansen1988,stratton1941,harrington2001}. Listing size overstates synthesis dimension when
+\(\ell_{\max}\gg k_{0}D_{s}\) \cite{devaney2004}.
+\end{theorem}
+\begin{proof}
+Summing Eq.~\eqref{eq:ch4.coupling-tail-envelope} over \((m,\sigma)\) yields exponentially small tail mass for \(\ell\gg k_{0}D_{s}\)
+\cite{hansen1988}. Comparing summed mass to \(\varepsilon\sigma_{1}\) in Definition~\ref{def:ch4.radiative-rank} bounds
+\(r_{\mathrm{rad}}(\varepsilon)\) independently of \(\ell_{\max}\) \cite{harrington2001,stratton1941}.
+\end{proof}
+
+\paragraph{Cumulative coupling tail mass.}
+Define
+\begin{equation}
+\label{eq:ch4.coupling-tail-mass}
+\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{cut}})=\sum_{\ell>\ell_{\mathrm{cut}}}(2\ell+1)\max_{m,\sigma}|\mathcal{K}_{\ell m}^{(\sigma)}|^{2}.
+\end{equation}
+\begin{proposition}[Coupling tail versus DOS]
+\label{prop:ch4.coupling-tail-dos}
+\(\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{cut}})\) decays exponentially for \(\ell_{\mathrm{cut}}\gg k_{0}D_{s}\) while DOS grows as
+\(\mathcal{O}(\ell_{\max}^{2})\) \cite{hansen1988,stratton1941,harrington2001}.
+\end{proposition}
+
+\paragraph{Tail mass integral bound.}
+Integrating the envelope gives \(\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{cut}})\lesssim\mathcal{C}_{\mathrm{tail}}\exp(-\ell_{\mathrm{cut}}/k_{0}D_{s})\)
+\cite{hansen1988,stratton1941}. At \(\ell_{\mathrm{cut}}=\ell_{\mathrm{supp}}(\varepsilon)\),
+\begin{equation}
+\label{eq:ch4.tail-mass-bound}
+\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{supp}})\le\varepsilon^{2}\sigma_{1}^{2},\qquad
+\sum_{\ell\le\ell_{\mathrm{supp}}}(2\ell+1)\ge d_{\mathrm{eff}}(\varepsilon).
+\end{equation}
+Equation~\eqref{eq:ch4.tail-mass-bound} links angular cutoff to export threshold \cite{harrington2001,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (dos) {DOS $\sim\ell_{\max}^{2}$};
+  \node[ch1box, right=11mm of dos] (tail) {Eq.~\eqref{eq:ch4.coupling-tail-envelope}};
+  \node[ch1box, right=11mm of tail] (rr) {$r_{\mathrm{rad}}$};
+  \draw[ch1flow] (dos) -- (tail) -- (rr);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch463}: channel DOS grows with listing; coupling tails compress export rank.}
+\label{fig:ch4.coupling-tail-compression}
+\end{figure}
+
+Figure~\ref{fig:ch4.coupling-tail-compression} is the conceptual compression map: designers must not equate channel labels with independent
+beams \cite{hansen1988,harrington2001}.
+
+\paragraph{Worked illustration (high channel count, low rank).}
+At \(\ell_{\max}=20\), \(k_{0}D_{s}=1.5\), Subsection~\ref{sec:ch353} lists hundreds of labels but \(r_{\mathrm{rad}}(10^{-2})\approx10\)
+by Theorem~\ref{thm:ch4.coupling-tail-compression} \cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (tail mass fraction).}
+At \(\ell_{\max}=18\), \(k_{0}D_{s}=1.2\), only \(\ell\le5\) carry \(99\%\) of \(\mathcal{M}_{\mathrm{cpl}}\) \cite{hansen1988,devaney2004}.
+
+\paragraph{Worked numerics (cutoff sweep).}
+At \(k_{0}D_{s}=1.5\), \(\ell_{\mathrm{cut}}=8\) yields \(\mathcal{M}_{\mathrm{cpl}}\lesssim10^{-2}\) of total coupling mass
+\cite{hansen1988,harrington2001}.
+
+\paragraph{Problem (coupling versus DOS).}
+\textbf{Problem.} Channel DOS grows as \(\ell_{\max}^{2}\) but measured diversity saturates. Reconcile.
+
+\textbf{Step 1.} Distinguish listable channels from couplings above \(\varepsilon\sigma_{1}\) \cite{hansen1988,stratton1941}.
+
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.coupling-tail-compression} \cite{harrington2001,devaney2004}.
+
+\textbf{Step 3.} Report \(r_{\mathrm{rad}}(\varepsilon)\), not raw DOS \cite{jackson1999}.
+
+\textbf{Physical meaning.} DOS counts labels; coupling tails count watts \cite{hansen1988}.
+
+\paragraph{Problem (MoM channel inflation).}
+\textbf{Problem.} MoM uses \(\ell_{\max}=25\); SVD shows \(r_{\mathrm{rad}}(10^{-2})=11\). Explain.
+
+\textbf{Step 1.} Compute \(\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{supp}})\) via Eq.~\eqref{eq:ch4.coupling-tail-mass} \cite{hansen1988}.
+
+\textbf{Step 2.} Identify \(\ell_{\mathrm{supp}}\) from Eq.~\eqref{eq:ch4.ell-max-supported} \cite{harrington2001}.
+
+\textbf{Step 3.} Truncate \(\mathbf{T}\) to \(r_{\mathrm{rad}}\) rows for synthesis \cite{devaney2004,stratton1941}.
+
+\textbf{Physical meaning.} Matrix dimension is coordinate freedom; rank is realizability \cite{harrington2001}.
+
+\paragraph{Problem (anisotropic feed).}
+\textbf{Problem.} Offset feed raises \(\mathbf{N}\)-sector coupling at \(\ell=4\) but not \(\mathbf{M}\)-sector. Effect on rank?
+
+\textbf{Step 1.} Evaluate sector-resolved \(\mathcal{M}_{\mathrm{cpl}}^{(\sigma)}\) \cite{harrington2001,hansen1988}.
+
+\textbf{Step 2.} Sum active sectors only for \(r_{\mathrm{rad}}\) \cite{stratton1941}.
+
+\textbf{Step 3.} Report sector ceilings before combined OAM labels \cite{devaney2004}.
+
+\textbf{Physical meaning.} Tail decay is sector-specific; DOS is not \cite{hansen1988}.
+
+\paragraph{Compression optimality link.}
+Rank-\(r_{\mathrm{rad}}(\varepsilon)\) truncation is optimal for \(\boldsymbol{\mathcal{K}}_{\mathrm{geo}}\) in operator norm
+\cite{harrington2001,devaney2004}. Retaining \(\ell_{\max}\gg\ell_{\mathrm{supp}}\) adds null directions that MoM may misinterpret as
+coupled channels \cite{stratton1941,hansen1988}.
+
+\paragraph{DOS inflation diagnostic.}
+Define the \emph{listing inflation factor}
+\begin{equation}
+\label{eq:ch4.dos-inflation}
+\mathcal{I}_{\mathrm{DOS}}
+=
+\frac{(2\ell_{\max}+1)^{2}}{d_{\mathrm{eff}}(\varepsilon)}
+\approx
+\frac{\text{channel labels}}{\text{export directions}}.
+\end{equation}
+When \(\mathcal{I}_{\mathrm{DOS}}\gg1\), MoM practitioners are fitting noise in padding rows \cite{harrington2001,devaney2004,hansen1988}.
+Theorem~\ref{thm:ch4.coupling-tail-compression} explains why \(\mathcal{I}_{\mathrm{DOS}}\) grows with \(\ell_{\max}\) at fixed \(k_{0}D_{s}\)
+\cite{stratton1941,jackson1999}.
+
+\begin{corollary}[Safe listing width]
+\label{cor:ch4.safe-listing-width}
+A conservative listing satisfies \(\ell_{\max}\le\ell_{\mathrm{supp}}(\varepsilon,k_{0}D_{s})+\mathcal{O}(1)\) in the aligned gauge
+\cite{hansen1988,harrington2001}. Wider listings do not enlarge \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{devaney2004,stratton1941}.
+\end{corollary}
+
+\paragraph{Worked illustration (inflation factor).}
+\(\ell_{\max}=20\), \(k_{0}D_{s}=1.2\), \(d_{\mathrm{eff}}(10^{-2})=9\) gives \(\mathcal{I}_{\mathrm{DOS}}\approx(41)^{2}/9\approx190\)
+\cite{hansen1988,harrington2001,devaney2004}. Ninety-nine percent of matrix rows are synthesis-invisible at tolerance \cite{stratton1941}.
+
+\paragraph{Problem (safe \(\ell_{\max}\)).}
+\textbf{Problem.} Choose \(\ell_{\max}\) for MoM without padding inflation.
+
+\textbf{Step 1.} Compute \(\ell_{\mathrm{supp}}(10^{-2},k_{0}D_{s})\) \cite{hansen1988,harrington2001}.
+
+\textbf{Step 2.} Set \(\ell_{\max}=\ell_{\mathrm{supp}}+\Delta\) with \(\Delta\le2\) \cite{devaney2004}.
+
+\textbf{Step 3.} Verify \(\mathcal{I}_{\mathrm{DOS}}\lesssim10\) \cite{stratton1941,jackson1999}.
+
+\textbf{Physical meaning.} Listing width should track supported order, not numerical habit \cite{hansen1988}.
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.coupling-tail-envelope} is narrowband and assumes isotropic exterior \cite{stratton1941}. Anisotropic feeds modify
+\(\mathcal{C}_{\mathrm{tail}}\) without removing exponential decay \cite{harrington2001}. Loss broadens resonances but does not convert
+sub-threshold \(\ell\) sectors into export directions on passive supports \cite{devaney2004,stratton1941}.
+

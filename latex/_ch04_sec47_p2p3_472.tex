@@ -1,0 +1,61 @@
+
+\paragraph{Propagating-sector filter.}
+Before listing \(\mathbf{c}\), apply
+\begin{equation}
+\label{eq:ch4.propagating-filter}
+\widetilde{\mathbf{c}}=\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\mathcal{C}\big[\mathcal{S}_\omega[\Jimp]\big],
+\end{equation}
+importing the propagating-sector equivalence of Section~\ref{sec:ch44} by reference \cite{stratton1941,harrington2001}. Reactive scans that skip
+Eq.~\eqref{eq:ch4.propagating-filter} inflate \(\mathcal{A}_{\mathrm{react}}^{(N)}\) without changing \(\widetilde{\mathbf{c}}\)
+\cite{devaney2004,hansen1988}.
+
+\begin{theorem}[Evanescent invisibility to export]
+\label{thm:ch4.ev-invisible-export}
+\(\|\widetilde{\mathbf{c}}\|_{\mathrm{rad}}\) is independent of \(\mathcal{A}_{\mathrm{react}}^{(N)}\) on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941,harrington2001,devaney2004}. Increasing evanescent probe resolution raises \(\mathcal{A}_{\mathrm{react}}^{(N)}\) without
+enlarging \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{hansen1988}.
+\end{theorem}
+\begin{proof}
+Proposition~\ref{prop:ch4.reactive-not-synthesis} and linearity of \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\) \cite{stratton1941,harrington2001}.
+\end{proof}
+
+\paragraph{Reactive-to-export ratio.}
+Define
+\begin{equation}
+\label{eq:ch4.react-export-ratio}
+\mathcal{Q}_{\mathrm{re}}=\frac{\mathcal{A}_{\mathrm{react}}^{(N)}}{\|\mathbf{c}\|_{\mathrm{rad}}+\delta},\qquad \delta>0.
+\end{equation}
+Large \(\mathcal{Q}_{\mathrm{re}}\) with fixed \(d_{\mathrm{eff}}\) signals reactive-dominated certification, not synthesis enlargement
+\cite{harrington2001,devaney2004,hansen1988,jackson1999}.
+
+\paragraph{Worked illustration (scan over-resolution).}
+Near scan at \(k_{t}=1.5k_{0}\) gives \(\mathcal{Q}_{\mathrm{re}}\approx8\), \(d_{\mathrm{eff}}=6\) unchanged \cite{harrington2001,jackson1999,hansen1988}.
+
+\paragraph{Worked illustration (resonator).}
+High-\(Q\) particle: \(\mathcal{J}_{\mathrm{react}}\gg\mathcal{J}_{\mathrm{rad}}\), \(\mathbf{c}\) dipole-class \cite{jackson1999,stratton1941,harrington2001}.
+
+\paragraph{Problem (reactive certificate).}
+\textbf{Problem.} Laboratory reports high reactive content. Synthesis rank change?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.propagating-filter} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Recompute \(d_{\mathrm{eff}}(\varepsilon)\) on \(\widetilde{\mathbf{c}}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Report \(\mathcal{Q}_{\mathrm{re}}\) separately from \(d_{\mathrm{eff}}\) \cite{harrington2001}.
+\textbf{Physical meaning.} Reactive certificates are not diversity certificates \cite{stratton1941}.
+
+\paragraph{Problem (probe budget).}
+\textbf{Problem.} Double near-field probe count. Rank change?
+\textbf{Step 1.} Test Theorem~\ref{thm:ch4.ev-invisible-export} \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Track \(\mathcal{A}_{\mathrm{react}}^{(N)}\) saturation via Eq.~\eqref{eq:ch4.probe-saturation} \cite{devaney2004}.
+\textbf{Step 3.} Conclude no \(d_{\mathrm{eff}}\) gain \cite{hansen1988}.
+\textbf{Physical meaning.} Probes certify reactance; export rank is far-zone \cite{stratton1941}.
+
+\paragraph{Philosophical closure (storage versus export).}
+Reactive accessibility measures how much energy the near field can store and how finely probes can resolve that storage
+\cite{stratton1941,harrington2001,jackson1999}. Synthesis rank measures how many independent directions reach the far zone above \(\varepsilon\sigma_{1}\)
+\cite{hansen1988,devaney2004}. The two functionals share geometry but not value: enlarging one does not enlarge the other on passive supports
+\cite{stratton1941,harrington2001}.
+
+\begin{corollary}[Reactive saturation before rank gain]
+\label{cor:ch4.reactive-saturation}
+\(\mathcal{A}_{\mathrm{react}}^{(N)}\) saturates as \(N\) increases while \(d_{\mathrm{eff}}(\varepsilon)\) remains constant on fixed \((\Omega_{s},k_{0})\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941}.
+\end{corollary}

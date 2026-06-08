@@ -1,0 +1,197 @@
+\subsection{Spectral concentration and localization}
+\label{sec:ch483}
+% TOC tag: [HOME]
+
+Finite support concentrates spatial energy and compresses the spectral support of \(\boldsymbol{\Gamma}_\omega\); concentration inequalities make
+truncation the optimal description of exportable information \cite{stratton1941,jackson1999,hansen1988}. Subsection~\ref{sec:ch483} states concentration
+on the singular-value ledger of \(\boldsymbol{\Gamma}_\omega\), linking \(\Lambda_{\mathrm{conc}}(\varepsilon)\) to \(\ell_{\mathrm{supp}}\) from
+Eq.~\eqref{eq:ch4.spectral-compression-def} and to coupling-tail mass in Subsection~\ref{sec:ch463} \cite{harrington2001,devaney2004}. Listing
+cardinality and energy participation are distinct certificates \cite{stratton1941,hansen1988}.
+
+\paragraph{Assumptions.}
+Presuppose Eq.~\eqref{eq:ch4.spectral-compression-def}, Theorem~\ref{thm:ch4.spectral-compression-optimal}, and compact \(\boldsymbol{\Gamma}_\omega\)
+on \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941,harrington2001,hansen1988}. Tolerance \(\varepsilon\in(0,1)\) fixed; flux-normalized \(\mathcal{C}\)
+\cite{devaney2004}. SVD \(\boldsymbol{\Gamma}_\omega=\sum_{n}\sigma_{n}\mathbf{u}_{n}\mathbf{v}_{n}^{\dagger}\) in aligned gauge \cite{harrington2001}.
+
+\paragraph{Concentration ratio.}
+Define the export participation fraction
+\begin{equation}
+\label{eq:ch4.spectral-concentration-ratio}
+\Lambda_{\mathrm{conc}}(\varepsilon)=\frac{\sum_{n=1}^{d_{\mathrm{eff}}(\varepsilon)}\sigma_{n}^{2}}{\sum_{n\ge1}\sigma_{n}^{2}}\ \ge\ 1-\varepsilon^{2},
+\end{equation}
+\cite{harrington2001,hansen1988,stratton1941}. Mathematically, \(\Lambda_{\mathrm{conc}}\) is the fraction of \(\|\boldsymbol{\Gamma}_\omega\|_{\mathrm{HS}}^{2}\)
+carried by the leading \(d_{\mathrm{eff}}\) singular values. Physically, it is the fraction of exportable radiative information retained after rank-\(d_{\mathrm{eff}}\)
+truncation \cite{devaney2004,hansen1988}.
+
+\paragraph{Tail-energy budget.}
+The discarded export fraction is
+\begin{equation}
+\label{eq:ch4.tail-discard}
+\mathcal{T}_{\mathrm{tail}}(\varepsilon)=1-\Lambda_{\mathrm{conc}}(\varepsilon)=\frac{\sum_{n>d_{\mathrm{eff}}}\sigma_{n}^{2}}{\sum_{n\ge1}\sigma_{n}^{2}}.
+\end{equation}
+Slow singular-value tails (\(\sigma_{n}\sim n^{-\alpha}\), \(\alpha\le2\)) keep \(\mathcal{T}_{\mathrm{tail}}\) large even when \(d_{\mathrm{eff}}\) is modest
+\cite{devaney2004,hansen1988,harrington2001}. Flat tails are the concentration analogue of coupling-tail mass
+\(\mathcal{M}_{\mathrm{cpl}}\) in Eq.~\eqref{eq:ch4.coupling-tail-mass} \cite{stratton1941}.
+
+\begin{proposition}[Truncation as concentration optimum]
+\label{prop:ch4.truncation-concentration}
+Rank-\(d_{\mathrm{eff}}(\varepsilon)\) truncation maximizes \(\Lambda_{\mathrm{conc}}(\varepsilon)\) among all rank-\(N\) approximations of
+\(\boldsymbol{\Gamma}_\omega\) \cite{harrington2001,devaney2004,stratton1941}.
+\end{proposition}
+\begin{proof}
+Eckart--Young theorem: best rank-\(N\) approximation minimizes discarded tail energy \cite{harrington2001}. Definition~\ref{def:ch4.effective-em-dimension}
+selects \(N=d_{\mathrm{eff}}(\varepsilon)\) at tolerance \(\varepsilon\) \cite{stratton1941,hansen1988}.
+\end{proof}
+
+\begin{theorem}[Eckart--Young concentration optimality]
+\label{thm:ch4.eckart-young-conc}
+Among all rank-\(N\) approximations of \(\boldsymbol{\Gamma}_\omega\), truncation at \(N=d_{\mathrm{eff}}(\varepsilon)\) minimizes
+\(\mathcal{T}_{\mathrm{tail}}(\varepsilon)\) and maximizes \(\Lambda_{\mathrm{conc}}(\varepsilon)\) \cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+\end{theorem}
+
+\paragraph{Export participation ratio.}
+\begin{equation}
+\label{eq:ch4.export-participation}
+\mathrm{EPR}(\varepsilon)=\Lambda_{\mathrm{conc}}(\varepsilon),\qquad 1-\mathrm{EPR}(\varepsilon)=\mathcal{T}_{\mathrm{tail}}(\varepsilon).
+\end{equation}
+\begin{theorem}[Optimal truncation participation]
+\label{thm:ch4.optimal-participation}
+Rank-\(d_{\mathrm{eff}}(\varepsilon)\) truncation maximizes \(\mathrm{EPR}(\varepsilon)\) among rank-\(N\) maps on \(\boldsymbol{\Gamma}_\omega\)
+\cite{harrington2001,devaney2004,stratton1941}.
+\end{theorem}
+
+Theorem~\ref{thm:ch4.optimal-participation} is the watts-honesty certificate: a synthesis memo that reports \(d_{\mathrm{eff}}\) without
+\(\mathrm{EPR}\) omits how much radiative information was sacrificed \cite{hansen1988,harrington2001,stratton1941}.
+
+\paragraph{Singular-value knee.}
+Tolerance \(\varepsilon\) locates the knee
+\begin{equation}
+\label{eq:ch4.sv-knee}
+\sigma_{d_{\mathrm{eff}}}/\sigma_{1}\ge\varepsilon,\qquad \sigma_{d_{\mathrm{eff}}+1}/\sigma_{1}<\varepsilon.
+\end{equation}
+Knee location sets both \(d_{\mathrm{eff}}\) and \(\mathrm{EPR}\) simultaneously \cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Per-mode participation.}
+Define \(\pi_{n}=\sigma_{n}^{2}/\sum_{k}\sigma_{k}^{2}\). Flat \(\{\pi_{n}\}\) implies large \(\mathcal{T}_{\mathrm{tail}}\) at small rank increment
+\cite{devaney2004,hansen1988}. Steep knees permit high \(\mathrm{EPR}\) at modest \(d_{\mathrm{eff}}\) \cite{harrington2001,stratton1941}.
+
+\paragraph{Decay-rate bound.}
+If \(\sigma_{n}\le C n^{-\alpha}\) for \(n\ge n_{0}\), then
+\begin{equation}
+\label{eq:ch4.sv-decay-bound}
+\mathcal{T}_{\mathrm{tail}}(\varepsilon)\le C'\,d_{\mathrm{eff}}^{1-2\alpha}\quad(\alpha>1/2),
+\end{equation}
+linking tail flatness to slow rank convergence \cite{hansen1988,harrington2001,devaney2004}. Algebraic tails require higher \(d_{\mathrm{eff}}\) for
+\(\mathrm{EPR}\ge0.99\) than exponential tails at the same \(\varepsilon\) \cite{stratton1941}.
+
+\begin{lemma}[Concentration monotonicity in \(\varepsilon\)]
+\label{lem:ch4.conc-monotone}
+\(\Lambda_{\mathrm{conc}}(\varepsilon)\) is non-decreasing as \(\varepsilon\) decreases (rank \(d_{\mathrm{eff}}\) increases)
+\cite{harrington2001,hansen1988,stratton1941,devaney2004}.
+\end{lemma}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (svd) {$\{\sigma_{n}\}$};
+  \node[ch1box, right=11mm of svd] (epr) {$\mathrm{EPR}$};
+  \node[ch1box, right=11mm of epr] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (svd) -- (epr) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch483}: singular-value ledger drives EPR and \(d_{\mathrm{eff}}\) at knee Eq.~\eqref{eq:ch4.sv-knee}.}
+\label{fig:ch4.spectral-concentration}
+\end{figure}
+
+Figure~\ref{fig:ch4.spectral-concentration} is the concentration audit chain: \(\{\sigma_{n}\}\) is the primitive; \(\mathrm{EPR}\) and
+\(d_{\mathrm{eff}}\) are derived certificates \cite{harrington2001,hansen1988,stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=11mm of ell] (epr) {$\mathrm{EPR}$};
+  \node[ch1box, right=11mm of epr] (tail) {$\mathcal{T}_{\mathrm{tail}}$};
+  \draw[ch1flow] (ell) -- (epr);
+  \draw[ch1flow] (epr) -- (tail);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch483}: angular listing \(\ell_{\mathrm{supp}}\) and energy concentration \(\mathrm{EPR}\) are independent certificates.}
+\label{fig:ch4.listing-concentration-split}
+\end{figure}
+
+\paragraph{Compression--concentration alignment.}
+Eq.~\eqref{eq:ch4.spectral-compression-def} caps angular listing; Eq.~\eqref{eq:ch4.spectral-concentration-ratio} caps energy participation
+\cite{hansen1988,stratton1941,harrington2001}. A pattern can satisfy \(\ell_{\mathrm{supp}}\) yet fail \(\Lambda_{\mathrm{conc}}\ge1-\varepsilon^{2}\) when
+tail modes carry non-negligible power \cite{devaney2004}. Both must appear in synthesis memos \cite{stratton1941}.
+
+\paragraph{Worked illustration (slow tail).}
+\(\Lambda_{\mathrm{conc}}(10^{-2})=0.85\): \(15\%\) export gain remains outside leading subspace \cite{harrington2001,hansen1988,devaney2004}.
+
+\paragraph{Worked illustration (flat tail).}
+\(\sigma_{n}/\sigma_{1}=\{1,0.35,0.2,0.15,0.12,0.1,\ldots\}\): \(d_{\mathrm{eff}}(10^{-2})=3\), \(\Lambda_{\mathrm{conc}}\approx0.82\),
+\(\mathcal{T}_{\mathrm{tail}}\approx0.18\) \cite{hansen1988,harrington2001}.
+
+\paragraph{Worked illustration (steep knee).}
+\(\sigma_{n}/\sigma_{1}=\{1,0.5,0.08,0.01,\ldots\}\): \(d_{\mathrm{eff}}(10^{-2})=2\), \(\mathrm{EPR}\approx0.99\) \cite{harrington2001,devaney2004,stratton1941}.
+
+\paragraph{Worked illustration (sector flatness).}
+\(\mathbf{M}\)-sector knee at \(d=4\), \(\mathbf{N}\)-sector knee at \(d=2\): aggregate \(d_{\mathrm{eff}}=4\) but \(\mathrm{EPR}=0.86\) due to flat
+\(\mathbf{N}\)-tail \cite{harrington2001,hansen1988}.
+
+\paragraph{Worked numerics (EPR sweep).}
+\(\varepsilon\in\{10^{-1},10^{-2},10^{-3}\}\Rightarrow(d_{\mathrm{eff}},\mathrm{EPR})=(2,0.91),(5,0.97),(12,0.995)\) on \(k_{0}a=2.5\) aperture
+\cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Problem (concentration audit).}
+\textbf{Problem.} Minimal \(N\) with \(\Lambda_{\mathrm{conc}}\ge0.99\)?
+\textbf{Step 1.} Accumulate \(\sum_{n\le N}\sigma_{n}^{2}\) \cite{harrington2001}.
+\textbf{Step 2.} Read \(d_{\mathrm{eff}}(\varepsilon')\) at knee Eq.~\eqref{eq:ch4.sv-knee} \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Compare \(N\) to \(\ell_{\mathrm{supp}}\) from Eq.~\eqref{eq:ch4.spectral-compression-def} \cite{stratton1941}.
+\textbf{Physical meaning.} Concentration quantifies truncation sacrifice \cite{hansen1988}.
+
+\paragraph{Problem (participation target).}
+\textbf{Problem.} Find \(\varepsilon\) with \(\mathrm{EPR}\ge0.99\).
+\textbf{Step 1.} Sweep \(\varepsilon\) on \(\{\sigma_{n}\}\) \cite{harrington2001}.
+\textbf{Step 2.} Report \((\varepsilon,d_{\mathrm{eff}})\) pair \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Attach \(\mathcal{T}_{\mathrm{tail}}\) from Eq.~\eqref{eq:ch4.tail-discard} \cite{stratton1941}.
+\textbf{Physical meaning.} EPR is the watts honesty metric \cite{harrington2001}.
+
+\paragraph{Problem (tolerance trade).}
+\textbf{Problem.} Require \(\Lambda_{\mathrm{conc}}\ge0.995\). Find \(d_{\mathrm{eff}}\).
+\textbf{Step 1.} Accumulate partial sums \cite{harrington2001}.
+\textbf{Step 2.} Read smallest \(N\) meeting target \cite{hansen1988}.
+\textbf{Step 3.} Compare \(N\) to \(\ell_{\mathrm{supp}}\) and report both \cite{stratton1941,devaney2004}.
+\textbf{Physical meaning.} Tighter concentration demands higher rank \cite{hansen1988}.
+
+\paragraph{Problem (tail versus listing).}
+\textbf{Problem.} \(\ell_{\mathrm{supp}}=8\) but \(\Lambda_{\mathrm{conc}}(10^{-2})=0.88\). Explain.
+\textbf{Step 1.} Read \(\{\sigma_{n}\}\) knee via Eq.~\eqref{eq:ch4.sv-knee} \cite{hansen1988}.
+\textbf{Step 2.} Compute \(\mathcal{T}_{\mathrm{tail}}\) from Eq.~\eqref{eq:ch4.tail-discard} \cite{harrington2001}.
+\textbf{Step 3.} Conclude flat tail despite moderate listing \cite{devaney2004,stratton1941}.
+\textbf{Physical meaning.} Listing and concentration diverge on slow tails \cite{hansen1988}.
+
+\paragraph{Problem (EPR certificate).}
+\textbf{Problem.} Attach \(\mathrm{EPR}\) at \(\varepsilon=10^{-2}\) to synthesis memo.
+\textbf{Step 1.} Identify knee via Eq.~\eqref{eq:ch4.sv-knee} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Compute \(\mathrm{EPR}=\Lambda_{\mathrm{conc}}\) \cite{harrington2001}.
+\textbf{Step 3.} Report \((d_{\mathrm{eff}},\mathcal{T}_{\mathrm{tail}},\ell_{\mathrm{supp}})\) triple \cite{stratton1941,devaney2004}.
+\textbf{Physical meaning.} EPR quantifies watts retained in truncated synthesis \cite{hansen1988}.
+
+\paragraph{Philosophical closure (truncation as optimum).}
+Finite support forces a singular-value ledger whether or not the designer computes it \cite{stratton1941,hansen1988,harrington2001}. Truncation is
+not a post hoc modeling choice; it is the unique rank-\(d_{\mathrm{eff}}\) approximation minimizing discarded export energy per
+Theorem~\ref{thm:ch4.eckart-young-conc} \cite{devaney2004}. Claims of full harmonic synthesis without \(\mathrm{EPR}\) audit confuse coordinate
+cardinality with energy concentration \cite{harrington2001,stratton1941}.
+
+\begin{corollary}[Tail-dominated low rank]
+\label{cor:ch4.tail-dominated}
+If \(\sigma_{d_{\mathrm{eff}}+1}/\sigma_{d_{\mathrm{eff}}}>1-\varepsilon\), then \(\mathcal{T}_{\mathrm{tail}}(\varepsilon)>\varepsilon^{2}\) despite minimal rank increment
+\cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+\end{corollary}
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.spectral-concentration-ratio} depends on \(\mathcal{C}\) normalization and gauge alignment \cite{hansen1988,stratton1941}. Loss broadens
+\(\{\sigma_{n}\}\) tails and may lower \(\mathrm{EPR}\) at fixed \(d_{\mathrm{eff}}\) \cite{harrington2001,devaney2004}.

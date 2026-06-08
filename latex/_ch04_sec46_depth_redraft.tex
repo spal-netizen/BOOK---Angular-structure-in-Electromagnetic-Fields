@@ -1,0 +1,858 @@
+\section{Truncation and Effective Dimension}
+\label{sec:ch46}
+
+Sections~\ref{sec:ch43}--\ref{sec:ch45} established radiative rank \(r_{\mathrm{rad}}(\varepsilon)\), spectral compression on
+\(\boldsymbol{\Gamma}_\omega\), and geometry-limited coupling to angular-momentum eigenfields
+\cite{stratton1941,harrington2001,devaney2004}. The present section converts those operator facts into explicit truncation
+certificates: a maximum supported angular order \(\ell_{\mathrm{supp}}\), volume and area scaling exponents for spectral rank,
+coupling-tail envelopes that separate listable channels from exportable watts, and the effective electromagnetic dimension
+\(d_{\mathrm{eff}}\) that laboratories report as ``number of modes'' \cite{hansen1988,jackson1999}. Representation on
+\(\mathcal{C}\) remains coordinate freedom; realizability is imposed by compact support, electrical size, and singular-value
+thresholds on the export map \cite{stratton1941,collin2001}. Finite geometry fixes the exponents and ceilings; retuning phase on
+fixed \(\Omega_{s}\) cannot enlarge \(\ell_{\mathrm{supp}}\) or \(d_{\mathrm{eff}}\) without enlarging \(k_{0}D_{s}\) or feed rank
+\cite{devaney2004,hansen1988}.
+
+\subsection{Maximum supported angular order}
+\label{sec:ch461}
+% TOC tag: [HOME][USE SS3.7.2]
+
+Boundary quantization in Subsection~\ref{sec:ch372} replaces continuous direction spectra by countable mode sets once a
+closed surface \(\Gamma_{b}\) is declared \cite{stratton1941,harrington2001}. On open regions with compact sources enclosed in
+\(B_{a}\), the analogous realizability question is angular: which \(\ell\) sectors carry export gain above tolerance on
+\(\mathcal{J}_{\mathrm{real}}\)? Listing \(\ell_{\max}\) modes in software answers a coordinate question; supported order
+answers a geometry question \cite{hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Assumptions.}
+Fix ball support \(B_{a}\) of radius \(a\), flux-normalized vector spherical harmonic (VSH) listing \(\mathcal{C}\), and export
+tolerance \(\varepsilon\in(0,1)\) tied to Definition~\ref{def:ch4.radiative-rank} \cite{stratton1941,hansen1988}. Presuppose
+high-\(\ell\) tail decay Eq.~\eqref{eq:ch4.high-ell-decay} and singular-value ordering on \(\boldsymbol{\Gamma}_\omega\) from
+Eq.~\eqref{eq:ch4.gamma-SVD} \cite{harrington2001,devaney2004}. Narrowband phasor convention \(\exp(-\mathrm{j}\omega t)\) and
+SI units are in force throughout \cite{jackson1999,stratton1941}.
+
+\paragraph{Maximum supported order.}
+For each sector \(\alpha=(\ell,m,\sigma)\) in the export basis, let \(\sigma_{\alpha}\) denote the singular value of
+\(\boldsymbol{\Gamma}_\omega\) aligned to the unit export direction \(\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}\) in
+Eq.~\eqref{eq:ch4.gamma-SVD} \cite{harrington2001,hansen1988}. Define the \emph{maximum supported angular order}
+\begin{equation}
+\label{eq:ch4.ell-max-supported}
+\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+=
+\max\left\{
+\ell:\ \exists\,(\ell,m,\sigma)\ \text{with}\ 
+\sigma_{(\ell,m,\sigma)}\ge\varepsilon\,\sigma_{1}
+\ \text{in Eq.~\eqref{eq:ch4.gamma-SVD}}
+\right\},
+\end{equation}
+where \(\sigma_{1}\) is the leading singular value in the aligned gauge \cite{hansen1988,stratton1941}. Equation~\eqref{eq:ch4.ell-max-supported}
+is the synthesis-side angular cutoff: modes with \(\ell>\ell_{\mathrm{supp}}\) lie below export threshold at \(\varepsilon\) regardless
+of how many rows the listing retains \cite{devaney2004,harrington2001}. Mathematically, \(\ell_{\mathrm{supp}}\) is the largest
+\(\ell\) block in the sector-partitioned SVD that still intersects the \(\varepsilon\)-threshold hypercone in coefficient space;
+physically, it is the highest angular momentum index that can receive appreciable far-zone power from currents in \(B_{a}\) at the
+declared electrical size \cite{jackson1999,hansen1988}.
+
+The distinction between listing and support is not pedantic. A MoM or mode-matching code may allocate \((2\ell_{\max}+1)\) rows per
+\(\ell\) shell because \(\mathcal{C}\) is a convenient coordinate chart \cite{stratton1941}. Only those shells with
+\(\sigma_{(\ell,m,\sigma)}\ge\varepsilon\sigma_{1}\) for some \(m\) and polarization \(\sigma\in\{\mathbf{M},\mathbf{N}\}\) are
+\emph{supported} in the realizability sense \cite{hansen1988}. Shells with \(\ell\le\ell_{\max}\) but \(\ell>\ell_{\mathrm{supp}}\)
+are export-padding: they appear in the matrix dimensions yet carry negligible watts through \(\boldsymbol{\Gamma}_\omega\)
+\cite{devaney2004,harrington2001}.
+
+\paragraph{Tail linkage and electrical-size scaling.}
+Importing Eq.~\eqref{eq:ch4.ellmax-from-tail} together with Eq.~\eqref{eq:ch4.high-ell-decay} yields the electrical-size ceiling
+that Subsection~\ref{sec:ch372} anticipates for closed cavities, here translated to open-region ball supports
+\cite{hansen1988,jackson1999,stratton1941}.
+
+\begin{theorem}[Supported order versus electrical size]
+\label{thm:ch4.ell-max-scaling}
+For compact sources in \(B_{a}\) and aligned VSH gauge on \(\mathcal{C}\),
+\begin{equation}
+\label{eq:ch4.ell-max-scaling}
+\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+\ \le\
+\ell_{\max}(\eta_{\mathrm{tail}},k_{0}a)
+\ \sim\
+k_{0}a+\mathcal{O}\!\big(\log(1/\varepsilon)\big),
+\end{equation}
+with \(\eta_{\mathrm{tail}}\) the tail exponent in Eq.~\eqref{eq:ch4.high-ell-decay} \cite{hansen1988,jackson1999,stratton1941}.
+Equality holds in the isotropic ball case up to gauge constants that do not alter \(\ell_{\mathrm{supp}}\) \cite{harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+Tail envelope Eq.~\eqref{eq:ch4.high-ell-decay} bounds nonzero \(\widehat{c}_{\ell m}^{(\sigma)}\) for realizable \(\mathbf{c}\);
+sector-wise singular values of \(\boldsymbol{\Gamma}_\omega\) inherit the same \(\ell\)-dependent decay because \(\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}\)
+are flux-normalized eigendirections of the export operator \cite{hansen1988,stratton1941}. The cutoff identity
+\(\ell_{\mathrm{supp}}=\max\{\ell:\sigma_{(\ell,\cdot,\cdot)}\ge\varepsilon\sigma_{1}\}\) therefore cannot exceed
+\(\ell_{\max}(\eta_{\mathrm{tail}},k_{0}a)\) from Eq.~\eqref{eq:ch4.ellmax-from-tail} \cite{harrington2001,jackson1999}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.ell-max-scaling} is the open-region counterpart of Subsection~\ref{sec:ch372} quantization: geometry imposes a
+countable ceiling on \(\ell\), not merely on mesh indices or plotting grids \cite{stratton1941}. Phase-only metasurfaces on fixed
+\(a\) redistribute power among supported sectors but cannot raise \(\ell_{\mathrm{supp}}\) without raising \(k_{0}a\) or enlarging feed
+rank on \(\mathcal{J}_{\mathrm{real}}\) \cite{devaney2004,hansen1988,collin2001}. Representation choice---VSH versus other
+angular charts---changes normalization constants in Eq.~\eqref{eq:ch4.ell-max-scaling} but not the \(\mathcal{O}(k_{0}a)\) exponent
+\cite{hansen1988,stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 10mm]
+  \node[ch1box] (ka) {$k_{0}a$};
+  \node[ch1box, right=12mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=12mm of ell] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (ka) -- (ell) -- (sr);
+\end{tikzpicture}%
+}
+\caption{Electrical size \(k_{0}a\) sets the maximum supported angular order \(\ell_{\mathrm{supp}}\) before synthesis listing;
+only sectors with \(\ell\le\ell_{\mathrm{supp}}\) intersect \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) at tolerance \(\varepsilon\).}
+\label{fig:ch4.ell-max-supported}
+\end{figure}
+
+Figure~\ref{fig:ch4.ell-max-supported} summarizes the causal chain audited in practice: enlarging \(k_{0}a\) opens higher-\(\ell\)
+sectors in the operator spectrum, which enlarges the feasible synthesis set \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) only along
+directions that pass the \(\varepsilon\) singular-value screen \cite{harrington2001,devaney2004}. Shrinking \(\varepsilon\) tightens
+the screen and adds a logarithmic increment to \(\ell_{\mathrm{supp}}\) through the \(\mathcal{O}(\log(1/\varepsilon))\) term in
+Eq.~\eqref{eq:ch4.ell-max-scaling} \cite{hansen1988,jackson1999}.
+
+\paragraph{Sector-resolved supported order.}
+Polarization splitting is material when feeds break spherical symmetry \cite{harrington2001,collin2001}. Define
+\(\ell_{\mathrm{supp}}^{(\sigma)}(\varepsilon,k_{0}a)\) as the largest \(\ell\) for which
+\(\sigma_{(\ell,m,\sigma)}\ge\varepsilon\sigma_{1}\) for some azimuthal index \(m\) \cite{hansen1988,stratton1941}. The aggregate
+supported order is
+\begin{equation}
+\label{eq:ch4.ell-sector-supported}
+\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+=
+\max_{\sigma\in\{\mathbf{M},\mathbf{N}\}}
+\ell_{\mathrm{supp}}^{(\sigma)}(\varepsilon,k_{0}a).
+\end{equation}
+Equation~\eqref{eq:ch4.ell-sector-supported} states that \(\ell_{\mathrm{supp}}\) is the larger of the TM-like (\(\mathbf{N}\)) and
+TE-like (\(\mathbf{M}\)) sector ceilings at fixed tolerance \cite{harrington2001,jackson1999}. A offset aperture may satisfy
+\(\ell_{\mathrm{supp}}^{(\mathbf{N})}>\ell_{\mathrm{supp}}^{(\mathbf{M})}\) even when \(\ell_{\max}\) is identical in both sectors
+\cite{collin2001,devaney2004}.
+
+\begin{corollary}[Listing cutoff versus supported order]
+\label{cor:ch4.listing-vs-supported}
+If \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)<\ell\le\ell_{\max}\), then every mode label with angular order \(\ell\) in the listing
+is export-padding at tolerance \(\varepsilon\): formal coefficients may be computed, but
+\(\sigma_{(\ell,m,\sigma)}<\varepsilon\sigma_{1}\) for all \((m,\sigma)\) \cite{hansen1988,harrington2001,devaney2004}.
+\end{corollary}
+\begin{proof}
+Immediate from Eq.~\eqref{eq:ch4.ell-max-supported} and the definition of \(\ell_{\mathrm{supp}}\) as a maximum over \(\ell\)
+with at least one above-threshold singular value \cite{hansen1988,stratton1941}.
+\end{proof}
+
+Corollary~\ref{cor:ch4.listing-vs-supported} is the audit rule for OAM and vortex-beam claims on fixed apertures \cite{devaney2004}.
+Marketing materials that highlight dominant \(\ell=12\) content on a handset-sized aperture must be checked against
+\(\ell_{\mathrm{supp}}(k_{0}a)\) from Theorem~\ref{thm:ch4.ell-max-scaling}, not against the highest row index in a simulation deck
+\cite{hansen1988,jackson1999,harrington2001}.
+
+\paragraph{Electric-size monotone chain.}
+Monotonicity in electrical size is the operational form of support enlargement \cite{jackson1999,stratton1941}. At fixed
+\(\varepsilon\), increasing \(k_{0}a\) cannot lower \(\ell_{\mathrm{supp}}\) on \(B_{a}\): each additional electrical radius opens
+angular sectors that were below threshold at smaller size \cite{hansen1988,harrington2001}. Conversely, raising \(\ell_{\max}\) in
+software without raising \(k_{0}a\) adds only gauge-padding rows per Corollary~\ref{cor:ch4.listing-vs-supported}
+\cite{devaney2004,stratton1941}. These facts combine in
+\begin{equation}
+\label{eq:ch4.ell-supp-monotone}
+\frac{\partial\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)}{\partial(k_{0}a)}\ge0,\qquad
+\frac{\partial d_{\mathrm{eff}}(\varepsilon)}{\partial\ell_{\max}}\Big|_{k_{0}a=\mathrm{const}}=0
+\ \text{at fixed }\varepsilon,
+\end{equation}
+where the second identity presupposes Definition~\ref{def:ch4.effective-em-dimension} developed in Subsection~\ref{sec:ch464}
+\cite{hansen1988,harrington2001,devaney2004}. Equation~\eqref{eq:ch4.ell-supp-monotone} expresses that realizability dimension is
+geometry-limited: coordinate truncation is optional, but geometry truncation is mandatory \cite{stratton1941}.
+
+\paragraph{Singular-value sector blocks.}
+Partition Eq.~\eqref{eq:ch4.gamma-SVD} by angular order \(\ell\) and define block energies
+\begin{equation}
+\label{eq:ch4.ell-block-svd-energy}
+\mathcal{E}_{\ell}
+=
+\sum_{m,\sigma:\,\sigma_{(\ell,m,\sigma)}\ge\varepsilon\sigma_{1}}
+\sigma_{(\ell,m,\sigma)}^{2},
+\qquad
+\sum_{\ell\le\ell_{\mathrm{supp}}}\mathcal{E}_{\ell}
+\ge
+(1-\varepsilon^{2})\sigma_{1}^{2}
+\end{equation}
+for realizable templates that concentrate export in supported sectors \cite{harrington2001,hansen1988}. Equation~\eqref{eq:ch4.ell-block-svd-energy}
+connects \(\ell_{\mathrm{supp}}\) to cumulative export power: shells beyond \(\ell_{\mathrm{supp}}\) contribute at most
+\(\mathcal{O}(\varepsilon^{2}\sigma_{1}^{2})\) to the tail budget tied to Eq.~\eqref{eq:ch4.high-ell-decay}
+\cite{devaney2004,stratton1941,jackson1999}.
+
+\begin{proposition}[Supported-order stability under gauge change]
+\label{prop:ch4.ell-supp-gauge-stable}
+\(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) is invariant under diagonal rescalings of \(\mathcal{C}\) that preserve flux normalization
+Eq.~\eqref{eq:ch3.VSH-unit-flux-normalization}; only \(\varepsilon\) relative to \(\sigma_{1}\) is gauge meaningful
+\cite{hansen1988,stratton1941,harrington2001}.
+\end{proposition}
+\begin{proof}
+Diagonal gauge changes multiply each \(\sigma_{(\ell,m,\sigma)}\) by positive constants; the inequality
+\(\sigma_{(\ell,m,\sigma)}\ge\varepsilon\sigma_{1}\) is scale-invariant when both sides use the same gauge \cite{hansen1988,harrington2001}.
+\end{proof}
+
+\paragraph{Worked illustration (handset aperture).}
+Consider a mobile handset radiating from an enclosing ball of radius \(a\) with \(k_{0}a=2\) at cellular frequency
+\cite{collin2001,jackson1999}. Theorem~\ref{thm:ch4.ell-max-scaling} with \(\varepsilon=10^{-2}\) gives
+\(\ell_{\mathrm{supp}}\approx4\)--\(6\), consistent with measured diversity orders in compact terminals \cite{hansen1988,harrington2001}.
+A design brief claiming dominant \(\ell=12\) orbital-angular-momentum content on the same aperture without enlarging \(a\) or \(k_{0}\)
+contradicts Eq.~\eqref{eq:ch4.ell-max-scaling} before feed optimization is attempted \cite{devaney2004,jackson1999}. The failure mode is
+geometric, not numerical: finer meshes cannot resurrect unsupported \(\ell\) shells \cite{stratton1941,hansen1988}.
+
+\paragraph{Worked illustration (sector split on offset feed).}
+An offset waveguide feed on a small reflector may produce \(\ell_{\mathrm{supp}}^{(\mathbf{N})}=7\) and
+\(\ell_{\mathrm{supp}}^{(\mathbf{M})}=5\) at \(k_{0}a=2.2\) and \(\varepsilon=10^{-2}\) \cite{harrington2001,collin2001}. Equation~\eqref{eq:ch4.ell-sector-supported}
+then gives \(\ell_{\mathrm{supp}}=7\), yet a listing with common \(\ell_{\max}=12\) still contains five padding shells in the weaker
+\(\mathbf{M}\) sector and five in both sectors above the aggregate ceiling \cite{hansen1988,devaney2004}. Synthesis templates must be
+truncated to \(\ell\le7\), not to the software row count \cite{stratton1941}.
+
+\paragraph{Problem (supported order audit).}
+\textbf{Problem.} A VSH listing retains \(\ell\le15\) but \(k_{0}a=1.8\). How many \(\ell\) sectors matter at \(\varepsilon=10^{-2}\)?
+
+\textbf{Step 1.} Compute \(\ell_{\mathrm{supp}}(10^{-2},1.8)\) from Eq.~\eqref{eq:ch4.ell-max-supported} via singular values of the
+discretized export map \(\mathbf{T}\) aligned to \(\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}\) \cite{harrington2001,hansen1988}.
+
+\textbf{Step 2.} Compare the numerical result to the conservative bound in Eq.~\eqref{eq:ch4.ell-max-scaling}, using
+\(\ell_{\max}(\eta_{\mathrm{tail}},1.8)\) from Eq.~\eqref{eq:ch4.ellmax-from-tail} \cite{hansen1988,jackson1999,stratton1941}.
+
+\textbf{Step 3.} Truncate design targets and coupling templates to \(\ell\le\ell_{\mathrm{supp}}\); treat indices with
+\(\ell_{\mathrm{supp}}<\ell\le15\) as export-padding per Corollary~\ref{cor:ch4.listing-vs-supported} \cite{devaney2004,harrington2001}.
+
+\textbf{Physical meaning.} \(\ell_{\mathrm{supp}}\) is a geometry-imposed ceiling on angular momentum export, not a plotting convenience
+or post-processing filter \cite{hansen1988,stratton1941}.
+
+\paragraph{Problem (supported order versus \(\ell_{\max}\)).}
+\textbf{Problem.} A simulation deck sets \(\ell_{\max}=12\); singular-value audit gives \(\ell_{\mathrm{supp}}(10^{-2})=7\). How many
+angular shells carry export above threshold?
+
+\textbf{Step 1.} For each \(\ell\in\{0,\ldots,12\}\), count pairs \((m,\sigma)\) with
+\(\sigma_{(\ell,m,\sigma)}\ge10^{-2}\sigma_{1}\) \cite{harrington2001,hansen1988}.
+
+\textbf{Step 2.} Apply Corollary~\ref{cor:ch4.listing-vs-supported}: shells with \(\ell>7\) are padding regardless of row allocation
+\cite{hansen1988,devaney2004}.
+
+\textbf{Step 3.} Rebuild the coupling matrix and synthesis targets on \(\ell\le7\) only; document \(\ell_{\max}-\ell_{\mathrm{supp}}=5\)
+padding shells in the certification memo \cite{stratton1941,collin2001}.
+
+\textbf{Physical meaning.} Supported order is an export threshold on watts, not an index set inherited from the discretization
+\cite{hansen1988,harrington2001}.
+
+\paragraph{Worked numerics (\(k_{0}a\) sweep).}
+Centered feeds on \(B_{a}\) at \(\varepsilon=10^{-2}\) yield representative supported orders
+\(\ell_{\mathrm{supp}}\approx3,5,7,9\) for \(k_{0}a=1,1.5,2,2.5\) \cite{hansen1988,harrington2001,jackson1999}. The approximately
+linear growth in \(k_{0}a\) mirrors Eq.~\eqref{eq:ch4.ell-max-scaling} and confirms that electrical enlargement---not coordinate
+relabeling---opens high-\(\ell\) sectors \cite{stratton1941,devaney2004}. Any claim of dominant radiation at
+\(\ell>\ell_{\mathrm{supp}}(k_{0}a)\) on fixed geometry fails the audit in Theorem~\ref{thm:ch4.ell-max-scaling} independent of
+optimizer success \cite{hansen1988}.
+
+\paragraph{Tail exponent sensitivity.}
+When measured tail slopes violate Eq.~\eqref{eq:ch4.high-ell-decay}, \(\ell_{\mathrm{supp}}\) inferred from Eq.~\eqref{eq:ch4.ell-max-supported}
+remains valid but \(\ell_{\max}(\eta_{\mathrm{tail}},k_{0}a)\) in Eq.~\eqref{eq:ch4.ell-max-scaling} may be optimistic
+\cite{hansen1988,harrington2001}. Plateau tails suggest near-field storage or superdirective coupling outside
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) rather than enlarged angular support \cite{devaney2004,stratton1941,collin2001}. The conservative
+certification practice is to report \(\ell_{\mathrm{supp}}\) from the operator SVD and treat analytic tail bounds as cross-checks, not
+substitutes \cite{hansen1988,jackson1999}.
+
+\begin{theorem}[Supported order obstruction for superdirective templates]
+\label{thm:ch4.ell-supp-superdirective}
+If a target pattern requires appreciable weight in sectors with \(\ell>\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\), then
+\(\mathbf{c}_{\mathrm{target}}\notin\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) at tolerance \(\varepsilon\) on \(B_{a}\), regardless of
+near-field reactive tuning \cite{devaney2004,hansen1988,harrington2001,stratton1941}.
+\end{theorem}
+\begin{proof}
+For \(\ell>\ell_{\mathrm{supp}}\), all sector singular values satisfy \(\sigma_{(\ell,m,\sigma)}<\varepsilon\sigma_{1}\) by
+Eq.~\eqref{eq:ch4.ell-max-supported}; any coefficient vector with appreciable energy in those sectors violates the
+\(r_{\mathrm{rad}}(\varepsilon)\) threshold of Definition~\ref{def:ch4.radiative-rank} \cite{harrington2001,devaney2004}.
+\end{proof}
+
+\paragraph{Validity.}
+Equations~\eqref{eq:ch4.ell-max-supported}--\eqref{eq:ch4.ell-max-scaling} assume open-region ball supports, aligned VSH gauge, and
+narrowband linear media \cite{stratton1941,hansen1988}. Closed cavities require the three-index quantization of Subsection~\ref{sec:ch372}
+with radial order \(n_{r}\) alongside \((\ell,m)\) \cite{harrington2001,collin2001}. Lossy media modify tail constants in
+Eq.~\eqref{eq:ch4.high-ell-decay} but do not remove the existence of \(\ell_{\mathrm{supp}}\) as a finite ceiling at fixed \(k_{0}a\)
+\cite{devaney2004,stratton1941}.
+
+
+\subsection{Scaling laws for spectral truncation}
+\label{sec:ch462}
+% TOC tag: [HOME]
+
+Truncation exponents summarize how rapidly \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) grows with electrical size and frequency when
+support class and tolerance are held fixed \cite{stratton1941,jackson1999,hansen1988}. Subsection~\ref{sec:ch462} states scaling laws
+as realizability inequalities on \(r_{\mathrm{rad}}(\varepsilon)\), \(\ell_{\mathrm{supp}}\), and the joint bound on
+\(d_{\mathrm{eff}}\) \cite{harrington2001,devaney2004}. The exponents \(3\) and \(2\) attached to volume and area measures are
+geometry-induced; they are not adjustable by phase-only synthesis on fixed \(\Omega_{s}\) \cite{collin2001,hansen1988}.
+
+\paragraph{Assumptions.}
+Presuppose Weyl-type mode-count scaling Eq.~\eqref{eq:ch4.weyl-mode-count}, geometry-coupling rank bounds
+Eqs.~\eqref{eq:ch4.geometry-coupling-scaling}--\eqref{eq:ch4.aperture-coupling-scaling}, and
+Theorem~\ref{thm:ch4.support-volume-scaling} from Section~\ref{sec:ch44} \cite{stratton1941,hansen1988,harrington2001}. Asymptotic
+regime \(k_{0}a\ge1\) is default unless noted; Rayleigh-region corrections appear only in the validity paragraph
+\cite{jackson1999,devaney2004}. Tolerance \(\varepsilon\) is declared jointly for rank and angular-order audits \cite{hansen1988}.
+
+\paragraph{Volume and area exponents.}
+On ball support \(B_{a}\), radiative rank and supported angular order obey
+\begin{equation}
+\label{eq:ch4.truncation-volume-scaling}
+r_{\mathrm{rad}}(\varepsilon)
+\ \sim\
+C_{\mathrm{vol}}(\varepsilon)\,(k_{0}a)^{3},
+\qquad
+\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+\ \sim\
+C_{\ell}(\varepsilon)\,k_{0}a,
+\end{equation}
+importing Eq.~\eqref{eq:ch4.weyl-mode-count} and Theorem~\ref{thm:ch4.ell-max-scaling} \cite{stratton1941,jackson1999,hansen1988}.
+The cubic exponent counts independent export directions in the enclosed volume in the large-body regime; the linear exponent counts the
+highest supported angular shell \cite{harrington2001,devaney2004}. On a mouth aperture \(\Sigma_{a}\) of area \(A_{a}\),
+\begin{equation}
+\label{eq:ch4.truncation-area-scaling}
+\operatorname{rank}\mathbf{K}\big|_{\Sigma_{a}}
+\ \sim\
+C_{A}(\varepsilon)\,k_{0}^{2}A_{a},
+\end{equation}
+from Eq.~\eqref{eq:ch4.aperture-coupling-scaling} \cite{collin2001,harrington2001,devaney2004}. Equation~\eqref{eq:ch4.truncation-area-scaling}
+governs aperture-only models in which \(\mathcal{J}_{\mathrm{real}}\) is declared on \(\Sigma_{a}\) rather than on the enclosing ball
+\cite{stratton1941,collin2001}. Volume scaling dominates rank growth when synthesis is certified on \(B_{a}\); area scaling governs
+mouth-restricted or patch-array models \cite{hansen1988,jackson1999}.
+
+\paragraph{Physical interpretation of competing exponents.}
+The same physical device may admit two honest rank estimates when both an enclosing ball and a radiating aperture are defined
+\cite{stratton1941,collin2001}. A patch array on \(\Sigma_{a}\) reports \(k_{0}^{2}A_{a}\) channels because coupling is measured
+across the mouth; a body-of-revolution antenna analyzed in \(B_{a}\) reports \((k_{0}a)^{3}\) because currents occupy volume
+\cite{harrington2001,devaney2004}. Realizability audits must declare which support functional defines \(\mathcal{J}_{\mathrm{real}}\);
+mixing exponents without declaration is a common source of overstated MIMO rank \cite{hansen1988,jackson1999}.
+
+\begin{proposition}[Scaling law consistency]
+\label{prop:ch4.truncation-scaling-consistency}
+If equivalence Theorem~\ref{thm:ch4.volume-surface-equivalence} holds and \(\mathcal{D}_{\mathrm{cpl}}=1\), then
+Eqs.~\eqref{eq:ch4.truncation-volume-scaling} and \eqref{eq:ch4.truncation-area-scaling} bound the same export image up to constants
+depending on \(\varepsilon\), mesh alignment, and mouth-to-ball embedding \cite{stratton1941,harrington2001,collin2001}. Neither exponent
+is raised by phase-only retuning on fixed geometry \cite{devaney2004,hansen1988}.
+\end{proposition}
+\begin{proof}
+Volume-surface equivalence identifies far-zone coefficients \(\mathbf{c}\) achievable from volume currents with those achievable from
+equivalent surface currents when coupling is admissible \cite{stratton1941,harrington2001}. Rank of the export map is invariant under
+phase reparameterization of \(\mathcal{C}\); only prefactors \(C_{\mathrm{vol}},C_{A}\) vary with normalization \cite{hansen1988,devaney2004}.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (vol) {$(k_{0}a)^{3}$};
+  \node[ch1box, right=11mm of vol] (area) {$k_{0}^{2}A_{a}$};
+  \node[ch1box, right=11mm of area] (min) {$\min\{\cdot\}$};
+  \node[ch1box, right=11mm of min] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (vol) -- (min);
+  \draw[ch1flow] (area) -- (min);
+  \draw[ch1flow] (min) -- (deff);
+\end{tikzpicture}%
+}
+\caption{Joint scaling audit: effective dimension is bounded by the minimum of volume and area rank laws once support class is declared.}
+\label{fig:ch4.joint-scaling-audit}
+\end{figure}
+
+Figure~\ref{fig:ch4.joint-scaling-audit} encodes the conservative practice used throughout this section: when two support classes are
+honest for the same hardware, the smaller bound governs certification \cite{hansen1988,stratton1941,collin2001}.
+
+\paragraph{Joint scaling audit.}
+When both \(B_{a}\) and \(\Sigma_{a}\) descriptions apply, the effective dimension satisfies
+\begin{equation}
+\label{eq:ch4.joint-scaling-law}
+d_{\mathrm{eff}}(\varepsilon)
+\le
+\min\big\{
+C_{V}(\varepsilon)\,(k_{0}a)^{3},\,
+C_{A}(\varepsilon)\,k_{0}^{2}A_{a}
+\big\}.
+\end{equation}
+Equation~\eqref{eq:ch4.joint-scaling-law} is the single-line synthesis certificate combining
+Eqs.~\eqref{eq:ch4.truncation-volume-scaling}--\eqref{eq:ch4.truncation-area-scaling} with
+Definition~\ref{def:ch4.effective-em-dimension} \cite{harrington2001,devaney2004,hansen1988}. Prefactors \(C_{V},C_{A}\) absorb flux
+gauge and mesh alignment; exponents \(3\) and \(2\) are support-class labels, not fit parameters \cite{stratton1941,jackson1999}.
+
+\begin{theorem}[Scaling exponent gauge invariance]
+\label{thm:ch4.scaling-gauge-invariant}
+The exponents in Eq.~\eqref{eq:ch4.joint-scaling-law} are invariant under admissible renormalizations of \(\mathcal{C}\); only
+\(C_{V}(\varepsilon)\) and \(C_{A}(\varepsilon)\) change with gauge choice \cite{hansen1988,stratton1941,harrington2001}.
+\end{theorem}
+\begin{proof}
+Diagonal rescalings of export directions multiply singular values but do not alter how rank scales with \(k_{0}a\) or \(k_{0}^{2}A_{a}\)
+in the Weyl and aperture counting regimes \cite{hansen1988,stratton1941}. Counting arguments in
+Eq.~\eqref{eq:ch4.weyl-mode-count} and Eq.~\eqref{eq:ch4.aperture-coupling-scaling} depend on support measure, not on coordinate labels
+\cite{harrington2001,devaney2004,jackson1999}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.scaling-gauge-invariant} separates representation freedom from realizability scaling: two codes that disagree on
+\(C_{V}\) yet agree on support class must still report the same exponents in Eq.~\eqref{eq:ch4.joint-scaling-law}
+\cite{hansen1988,collin2001}. Disputes about ``mode count'' that reduce to gauge normalization are resolved by joint flux calibration;
+disputes about exponents reduce to mis-declared support \cite{stratton1941,harrington2001}.
+
+\paragraph{Prefactor ratio on circular apertures.}
+On a circular mouth of radius \(a\) embedded in \(B_{a}\),
+\begin{equation}
+\label{eq:ch4.scaling-ratio}
+\frac{C_{V}(\varepsilon)\,(k_{0}a)^{3}}{C_{A}(\varepsilon)\,k_{0}^{2}A_{a}}
+\sim
+\frac{C_{V}(\varepsilon)}{C_{A}(\varepsilon)}\cdot\frac{k_{0}a}{\pi},
+\end{equation}
+using \(A_{a}=\pi a^{2}\) \cite{collin2001,jackson1999,hansen1988}. Equation~\eqref{eq:ch4.scaling-ratio} shows that volume and area
+bounds become comparable near \(k_{0}a\approx\pi\); both must be audited in that regime \cite{harrington2001,devaney2004,stratton1941}.
+
+\begin{corollary}[Frequency doubling on fixed geometry]
+\label{cor:ch4.scaling-freq-double}
+At fixed physical radius \(a\), doubling \(k_{0}\) doubles \(k_{0}a\) and multiplies the volume bound in
+Eq.~\eqref{eq:ch4.truncation-volume-scaling} by approximately eight in the asymptotic regime \cite{jackson1999,hansen1988,harrington2001}.
+Area bound \(k_{0}^{2}A_{a}\) quadruples; \(\ell_{\mathrm{supp}}\) doubles per Eq.~\eqref{eq:ch4.truncation-volume-scaling}
+\cite{devaney2004,stratton1941}.
+\end{corollary}
+
+\paragraph{Worked illustration (doubling frequency).}
+A compact resonant antenna with \(a=5\,\mathrm{cm}\) at \(f_{1}=1\,\mathrm{GHz}\) has \(k_{0}a\approx1\); at \(f_{2}=2\,\mathrm{GHz}\),
+\(k_{0}a\approx2\) \cite{jackson1999,collin2001}. Corollary~\ref{cor:ch4.scaling-freq-double} predicts rough rank growth by
+\(2^{3}=8\) in the volume law and \(\ell_{\mathrm{supp}}\) growth by \(2\) \cite{hansen1988,harrington2001}. Measured diversity order
+that remains flat across the octave contradicts declared ball support unless \(\varepsilon\) is relaxed or feed rank is capped independently
+\cite{devaney2004,stratton1941}.
+
+\paragraph{Worked illustration (bound ratio at \(k_{0}a=3\)).}
+With \(C_{V}/C_{A}\approx1\), Eq.~\eqref{eq:ch4.scaling-ratio} gives volume-to-area ratio \(\approx3/\pi\approx0.95\)
+\cite{hansen1988,devaney2004,collin2001}. Neither bound dominates decisively; certification must report both and take the minimum in
+Eq.~\eqref{eq:ch4.joint-scaling-law} \cite{harrington2001,stratton1941}. Declaring mouth-only synthesis when currents occupy the full
+enclosure would overstate rank by using Eq.~\eqref{eq:ch4.truncation-area-scaling} alone \cite{jackson1999,hansen1988}.
+
+\paragraph{Problem (volume versus area rank).}
+\textbf{Problem.} A patch array on \(\Sigma_{a}\) reports rank \(k_{0}^{2}A_{a}\approx50\); enclosing ball analysis gives
+\((k_{0}a)^{3}\approx30\). Which bound governs synthesis?
+
+\textbf{Step 1.} Identify the declared synthesis domain: aperture-only \(\mathcal{J}_{\mathrm{real}}\) on \(\Sigma_{a}\) versus full
+volume support in \(B_{a}\) \cite{collin2001,stratton1941,harrington2001}.
+
+\textbf{Step 2.} Apply the bound matching the declared support class; if both are honest, apply Eq.~\eqref{eq:ch4.joint-scaling-law}
+\cite{devaney2004,hansen1988,jackson1999}.
+
+\textbf{Step 3.} Use the smaller conservative rank for realizability audits and document which functional set \(\mathcal{J}_{\mathrm{real}}\)
+\cite{stratton1941,harrington2001}.
+
+\textbf{Physical meaning.} Scaling exponents attach to the declared support class, not to the largest number produced by either estimate
+\cite{hansen1988,collin2001}.
+
+\paragraph{Problem (which exponent?).}
+\textbf{Problem.} A horn antenna memo cites mouth-area rank \(k_{0}^{2}A_{a}\) while the inverse-design code encloses the feed in a ball
+of radius \(a_{\mathrm{enc}}\). Which exponent applies?
+
+\textbf{Step 1.} Declare whether synthesis currents are permitted only on \(\Sigma_{a}\) or throughout \(B_{a_{\mathrm{enc}}}\)
+\cite{collin2001,stratton1941}.
+
+\textbf{Step 2.} Apply the matching term in Eq.~\eqref{eq:ch4.joint-scaling-law}; if both supports are used in different stages, report
+the minimum \cite{harrington2001,devaney2004,hansen1988}.
+
+\textbf{Step 3.} Align the code's truncation with the certified exponent before comparing to measured diversity \cite{jackson1999,stratton1941}.
+
+\textbf{Physical meaning.} Exponents follow geometry of current support, not convenience of the mesh generator \cite{hansen1988,harrington2001}.
+
+\paragraph{Asymptotic rank envelope.}
+Combining Eqs.~\eqref{eq:ch4.truncation-volume-scaling} and \eqref{eq:ch4.joint-scaling-law} yields the certified envelope
+\begin{equation}
+\label{eq:ch4.rank-envelope}
+r_{\mathrm{rad}}(\varepsilon)
+\le
+C_{\mathrm{env}}(\varepsilon)\,(k_{0}a)^{3},
+\qquad
+C_{\mathrm{env}}(\varepsilon)=\min\{C_{V}(\varepsilon),\,C_{A}(\varepsilon)\,k_{0}a/\pi\}
+\end{equation}
+on circular geometry \cite{hansen1988,stratton1941,collin2001,jackson1999}. Equation~\eqref{eq:ch4.rank-envelope} is the rank-side
+statement of spectral compression: listable channel count may grow faster, but export rank does not \cite{devaney2004,harrington2001}.
+
+\begin{proposition}[Phase-only retuning leaves exponents invariant]
+\label{prop:ch4.scaling-phase-invariant}
+Metasurface phase profiles on fixed \(\Sigma_{a}\) redistribute coupling among sectors below the exponents in
+Eq.~\eqref{eq:ch4.joint-scaling-law} but do not change \(C_{V},C_{A}\) exponents \cite{devaney2004,hansen1988,collin2001,stratton1941}.
+\end{proposition}
+
+\paragraph{Worked numerics (W-band envelope).}
+At \(k_{0}a=4\), Eq.~\eqref{eq:ch4.truncation-volume-scaling} predicts \(r_{\mathrm{rad}}\propto64\,C_{\mathrm{vol}}\) while
+\(\ell_{\mathrm{supp}}\propto4\,C_{\ell}\) \cite{hansen1988,jackson1999,harrington2001}. Channel listings with \(\ell_{\max}=20\) exceed
+supported shells by Corollary~\ref{cor:ch4.listing-vs-supported}; padding rows must not enter diversity totals \cite{devaney2004,stratton1941}.
+
+\paragraph{Validity.}
+Equations~\eqref{eq:ch4.truncation-volume-scaling}--\eqref{eq:ch4.truncation-area-scaling} are asymptotic for \(k_{0}a\ge1\)
+\cite{jackson1999,hansen1988}. In the Rayleigh regime \(k_{0}a\ll1\), dipole-dominated rank replaces cubic growth
+\cite{jackson1999,stratton1941,harrington2001}. Anisotropic bodies modify \(C_{\mathrm{vol}},C_{A}\) without changing the exponents once
+support class is fixed \cite{devaney2004,collin2001}.
+
+
+\subsection{Decay of high-order coupling}
+\label{sec:ch463}
+% TOC tag: [HOME][USE SS3.5.3]
+
+Mode density and coupling tails in Subsection~\ref{sec:ch353} count angular channels on \(S^{2}\) and relate list size to direction
+quadrature \cite{jackson1999,hansen1988,stratton1941}. Subsection~\ref{sec:ch463} restates the tail as a realizability law on the
+geometry coupling operator \(\boldsymbol{\mathcal{K}}_{\mathrm{geo}}\) from Eq.~\eqref{eq:ch4.geometry-coupling-operator}
+\cite{harrington2001,devaney2004}. Channel density of states (DOS) answers how many labels exist; coupling tails answer how many labels
+carry export watts above threshold \cite{hansen1988,collin2001}.
+
+\paragraph{Assumptions.}
+Fix compact source region \(\Omega_{s}\) of diameter \(D_{s}\), flux gauge on \(\mathcal{C}\), and coupling operator
+\(\boldsymbol{\mathcal{K}}_{\mathrm{geo}}\) acting on \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941,hansen1988}. Import
+Eq.~\eqref{eq:ch4.coupling-ell-decay} from Section~\ref{sec:ch453} by reference; do not re-derive spherical-harmonic asymptotics here
+\cite{harrington2001,devaney2004,jackson1999}. Tolerance \(\varepsilon\) matches Definition~\ref{def:ch4.radiative-rank}
+\cite{hansen1988}.
+
+\paragraph{Coupling tail envelope.}
+For \(\ell>k_{0}D_{s}\),
+\begin{equation}
+\label{eq:ch4.coupling-tail-envelope}
+\sup_{\Jimp\in\mathcal{J}_{\mathrm{real}}}
+\frac{|\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]|}{\|\boldsymbol{\mathcal{K}}_{\mathrm{geo}}[\Jimp]\|}
+\le
+\mathcal{C}_{\mathrm{tail}}(\ell,k_{0}D_{s})\,
+\ell^{-1}\exp\!\big(-\ell/(k_{0}D_{s})\big),
+\end{equation}
+extending Eq.~\eqref{eq:ch4.coupling-ell-decay} with explicit sector constants \(\mathcal{C}_{\mathrm{tail}}\) that depend on
+polarization and near-field anisotropy but not on listing size \cite{hansen1988,stratton1941,jackson1999}. Equation~\eqref{eq:ch4.coupling-tail-envelope}
+ties Subsection~\ref{sec:ch353} channel counts to export gain: high-\(\ell\) channels may be listable yet carry negligible coupling to
+realizable currents \cite{harrington2001,devaney2004,collin2001}. Mathematically, the envelope is a uniform bound on normalized coupling
+functionals; physically, it states that angular momentum sectors far above electrical size are evanescent in the coupling operator
+\cite{jackson1999,hansen1988,stratton1941}.
+
+\begin{theorem}[Coupling tail implies spectral compression]
+\label{thm:ch4.coupling-tail-compression}
+If Eq.~\eqref{eq:ch4.coupling-tail-envelope} holds, then
+\(r_{\mathrm{rad}}(\varepsilon)\le C(k_{0}D_{s},\varepsilon)\) with \(C\) growing slower than the raw channel count
+\((2\ell_{\max}+1)\) imported from Subsection~\ref{sec:ch353} \cite{hansen1988,stratton1941,harrington2001}. Listing size therefore
+overstates synthesis dimension when \(\ell_{\max}\gg k_{0}D_{s}\) \cite{devaney2004,jackson1999}.
+\end{theorem}
+\begin{proof}
+Summing envelope Eq.~\eqref{eq:ch4.coupling-tail-envelope} over \((m,\sigma)\) at each \(\ell\) and comparing to the threshold
+\(\varepsilon\sigma_{1}\) in Definition~\ref{def:ch4.radiative-rank} yields exponentially small cumulative coupling beyond
+\(\ell\sim k_{0}D_{s}+\log(1/\varepsilon)\) \cite{hansen1988,harrington2001,stratton1941}. Only finitely many \(\ell\) blocks contribute
+above threshold; \(r_{\mathrm{rad}}(\varepsilon)\) is bounded by that finite count \cite{devaney2004}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.coupling-tail-compression} reconciles channel DOS with measured diversity saturation \cite{hansen1988}. Subsection~\ref{sec:ch353}
+may list \(\mathcal{O}(\ell_{\max}^{2})\) angular labels on \(S^{2}\), yet \(r_{\mathrm{rad}}(\varepsilon)\) remains
+\(\mathcal{O}((k_{0}D_{s})^{3})\) in volume-equivalent scaling \cite{jackson1999,harrington2001,devaney2004}. Representation lists
+coordinates; coupling tails count watts \cite{stratton1941,collin2001}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (dos) {Subsec.~\ref{sec:ch353} DOS};
+  \node[ch1box, right=11mm of dos] (tail) {Eq.~\eqref{eq:ch4.coupling-tail-envelope}};
+  \node[ch1box, right=11mm of tail] (rr) {$r_{\mathrm{rad}}$};
+  \draw[ch1flow] (dos) -- (tail) -- (rr);
+\end{tikzpicture}%
+}
+\caption{Channel DOS grows algebraically with \(\ell_{\max}\); coupling tail compression bounds export rank \(r_{\mathrm{rad}}\) independently of listing size.}
+\label{fig:ch4.coupling-tail-compression}
+\end{figure}
+
+Figure~\ref{fig:ch4.coupling-tail-compression} is the operator picture of spectral compression: DOS supplies indices, the tail envelope
+supplies decay, and \(r_{\mathrm{rad}}\) counts surviving singular values \cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Cumulative coupling tail mass.}
+Define
+\begin{equation}
+\label{eq:ch4.coupling-tail-mass}
+\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{cut}})
+=
+\sum_{\ell>\ell_{\mathrm{cut}}}(2\ell+1)\,
+\max_{m,\sigma}\big|\mathcal{K}_{\ell m}^{(\sigma)}\big|^{2},
+\end{equation}
+aggregating squared coupling maxima over all channels with \(\ell>\ell_{\mathrm{cut}}\) \cite{hansen1988,stratton1941}. Equation~\eqref{eq:ch4.coupling-tail-mass}
+measures how much coupling energy lies in the high-\(\ell\) tail of the operator; it is the coupling-side analog of tail-mass budgets in
+Section~\ref{sec:ch443} \cite{harrington2001,devaney2004,jackson1999}.
+
+\begin{proposition}[Coupling tail versus DOS]
+\label{prop:ch4.coupling-tail-dos}
+\(\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{cut}})\) decays exponentially for \(\ell_{\mathrm{cut}}\gg k_{0}D_{s}\) while DOS grows
+algebraically with \(\ell_{\max}\) from Subsection~\ref{sec:ch353} \cite{hansen1988,stratton1941,harrington2001}. Increasing
+\(\ell_{\max}\) in the listing therefore adds labels faster than it adds export coupling \cite{devaney2004,collin2001}.
+\end{proposition}
+\begin{proof}
+Insert Eq.~\eqref{eq:ch4.coupling-tail-envelope} into Eq.~\eqref{eq:ch4.coupling-tail-mass} and sum the geometric tail for
+\(\ell>\ell_{\mathrm{cut}}\) \cite{hansen1988,stratton1941}. DOS adds \((2\ell+1)\) terms per shell regardless of coupling magnitude
+\cite{jackson1999,harrington2001}.
+\end{proof}
+
+\paragraph{Tail mass integral bound.}
+Integrating Eq.~\eqref{eq:ch4.coupling-tail-envelope} over \(\ell>\ell_{\mathrm{cut}}\) yields
+\(\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{cut}})\lesssim\mathcal{C}_{\mathrm{tail}}\exp(-\ell_{\mathrm{cut}}/k_{0}D_{s})\) \cite{hansen1988,stratton1941,harrington2001}.
+Choosing \(\ell_{\mathrm{cut}}=\ell_{\mathrm{supp}}(\varepsilon)\) from Subsection~\ref{sec:ch461} gives
+\begin{equation}
+\label{eq:ch4.tail-mass-bound}
+\mathcal{M}_{\mathrm{cpl}}\big(\ell_{\mathrm{supp}}\big)
+\le
+\varepsilon^{2}\,\sigma_{1}^{2},
+\qquad
+\sum_{\ell\le\ell_{\mathrm{supp}}}(2\ell+1)
+\ge
+d_{\mathrm{eff}}(\varepsilon),
+\end{equation}
+in aligned gauge \cite{harrington2001,devaney2004,hansen1988}. Equation~\eqref{eq:ch4.tail-mass-bound} links angular cutoff to effective
+dimension: supported shells must account for at least \(d_{\mathrm{eff}}\) independent export directions, while tail mass above
+\(\ell_{\mathrm{supp}}\) is negligible at tolerance \cite{stratton1941,jackson1999,collin2001}.
+
+\begin{corollary}[DOS overcount at fixed electrical size]
+\label{cor:ch4.dos-overcount}
+When \(\ell_{\max}\ge5\,k_{0}D_{s}\), channel DOS from Subsection~\ref{sec:ch353} exceeds
+\(r_{\mathrm{rad}}(\varepsilon)\) by at least an order of magnitude at \(\varepsilon=10^{-2}\) \cite{hansen1988,harrington2001,devaney2004}.
+\end{corollary}
+
+\paragraph{Worked illustration (high channel count, low rank).}
+At \(\ell_{\max}=20\) and \(k_{0}D_{s}=1.5\), Subsection~\ref{sec:ch353} lists hundreds of angular labels, yet
+\(r_{\mathrm{rad}}(10^{-2})\approx10\) by Theorem~\ref{thm:ch4.coupling-tail-compression} \cite{hansen1988,harrington2001,devaney2004,jackson1999}.
+A diversity report that cites \(\ell_{\max}\) or raw DOS as ``modes'' overstates synthesis dimension by an order of magnitude
+\cite{stratton1941,collin2001}.
+
+\paragraph{Worked illustration (tail mass concentration).}
+With \(k_{0}D_{s}=1.2\) and \(\ell_{\max}=18\), numerical evaluation of Eq.~\eqref{eq:ch4.coupling-tail-mass} shows that shells with
+\(\ell\le5\) carry \(99\%\) of \(\mathcal{M}_{\mathrm{cpl}}(0)\) \cite{hansen1988,devaney2004,harrington2001}. Equation~\eqref{eq:ch4.tail-mass-bound}
+then certifies that raising \(\ell_{\max}\) from \(8\) to \(18\) adds listable labels without adding export rank at \(\varepsilon=10^{-2}\)
+\cite{stratton1941,jackson1999}.
+
+\paragraph{Problem (coupling versus DOS).}
+\textbf{Problem.} Channel DOS grows as \(\mathcal{O}(\ell_{\max}^{2})\) but measured diversity saturates. Reconcile the two counts.
+
+\textbf{Step 1.} Distinguish listable channels imported from Subsection~\ref{sec:ch353} from export couplings above
+\(\varepsilon\sigma_{1}\) in Definition~\ref{def:ch4.radiative-rank} \cite{hansen1988,stratton1941,harrington2001}.
+
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.coupling-tail-compression} and Proposition~\ref{prop:ch4.coupling-tail-dos} to bound
+\(r_{\mathrm{rad}}(\varepsilon)\) independently of \(\ell_{\max}\) \cite{devaney2004,hansen1988,jackson1999}.
+
+\textbf{Step 3.} Report \(r_{\mathrm{rad}}(\varepsilon)\) or \(d_{\mathrm{eff}}(\varepsilon)\), not raw DOS, in the certification memo
+\cite{stratton1941,collin2001}.
+
+\textbf{Physical meaning.} DOS counts labels on \(S^{2}\); coupling tails count watts coupled from \(\mathcal{J}_{\mathrm{real}}\)
+\cite{hansen1988,harrington2001}.
+
+\paragraph{Problem (DOS versus coupling mass).}
+\textbf{Problem.} A full-sphere channel list claims \(\mathcal{O}(\ell_{\max}^{2})\) ``modes'' while SVD shows rank \(12\). Explain without
+blaming numerical noise.
+
+\textbf{Step 1.} Compute \(\mathcal{M}_{\mathrm{cpl}}(\ell_{\mathrm{cut}})\) from Eq.~\eqref{eq:ch4.coupling-tail-mass} for several
+\(\ell_{\mathrm{cut}}\) \cite{hansen1988,harrington2001}.
+
+\textbf{Step 2.} Compare cumulative coupling to \(r_{\mathrm{rad}}(\varepsilon)\) from Eq.~\eqref{eq:ch4.gamma-SVD}
+\cite{devaney2004,stratton1941,jackson1999}.
+
+\textbf{Step 3.} Report rank and \(\ell_{\mathrm{supp}}\) with \(\varepsilon\) and \(k_{0}D_{s}\); cite Corollary~\ref{cor:ch4.dos-overcount}
+\cite{hansen1988,collin2001}.
+
+\textbf{Physical meaning.} Coupling tails measure operator mass; DOS measures index cardinality \cite{stratton1941,devaney2004}.
+
+\paragraph{Worked numerics (tail cutoff).}
+At \(k_{0}D_{s}=1.5\), choosing \(\ell_{\mathrm{cut}}=8\) gives \(\mathcal{M}_{\mathrm{cpl}}(8)\lesssim10^{-2}\) of total coupling mass
+\cite{hansen1988,harrington2001,jackson1999}. Equation~\eqref{eq:ch4.tail-mass-bound} then supports truncating synthesis templates at
+\(\ell_{\mathrm{supp}}\approx8\) for \(\varepsilon=10^{-2}\) \cite{devaney2004,stratton1941,collin2001}.
+
+\begin{theorem}[Tail cutoff optimality at tolerance]
+\label{thm:ch4.tail-cutoff-optimal}
+If \(\ell_{\mathrm{cut}}=\ell_{\mathrm{supp}}(\varepsilon)\), then increasing listing beyond \(\ell_{\mathrm{cut}}\) does not increase
+\(r_{\mathrm{rad}}(\varepsilon)\) or \(d_{\mathrm{eff}}(\varepsilon)\) \cite{hansen1988,harrington2001,devaney2004,stratton1941}.
+\end{theorem}
+\begin{proof}
+For \(\ell>\ell_{\mathrm{supp}}\), all sector singular values fall below \(\varepsilon\sigma_{1}\) by
+Eq.~\eqref{eq:ch4.ell-max-supported}; additional rows cannot contribute to the count in
+Definition~\ref{def:ch4.effective-em-dimension} \cite{harrington2001,hansen1988}.
+\end{proof}
+
+\paragraph{Anisotropic feeds.}
+Constants \(\mathcal{C}_{\mathrm{tail}}\) in Eq.~\eqref{eq:ch4.coupling-tail-envelope} increase for offset or elongated \(\Omega_{s}\)
+but the exponential factor \(\exp(-\ell/k_{0}D_{s})\) persists \cite{harrington2001,collin2001,devaney2004}. Anisotropy may split
+\(\ell_{\mathrm{supp}}^{(\mathbf{M})}\) and \(\ell_{\mathrm{supp}}^{(\mathbf{N})}\) as in Eq.~\eqref{eq:ch4.ell-sector-supported} without
+altering Theorem~\ref{thm:ch4.coupling-tail-compression} \cite{hansen1988,stratton1941,jackson1999}.
+
+\paragraph{Validity.}
+Equation~\eqref{eq:ch4.coupling-tail-envelope} is narrowband and assumes isotropic exterior with linear media \cite{stratton1941,hansen1988}.
+Anisotropic feeds modify \(\mathcal{C}_{\mathrm{tail}}\) without removing exponential decay \cite{harrington2001,devaney2004,collin2001}.
+Loss lowers effective decay rates and may increase \(r_{\mathrm{rad}}(\varepsilon)\) at fixed \(k_{0}D_{s}\) \cite{stratton1941,jackson1999}.
+
+
+\subsection{Effective rank and electromagnetic dimension}
+\label{sec:ch464}
+% TOC tag: [HOME]
+
+Radiative rank names export directions in the singular-value basis of Eq.~\eqref{eq:ch4.gamma-SVD}; laboratories and inverse-design workflows
+nevertheless require a single integer summary for arrays, MIMO links, and tolerance certificates \cite{harrington2001,devaney2004,collin2001}.
+Subsection~\ref{sec:ch464} locks that integer to geometry-imposed thresholds on \(\boldsymbol{\Gamma}_\omega\), elevating the preview
+Eq.~\eqref{eq:ch4.effective-dimension-preview} to the chapter definition of effective electromagnetic dimension
+\cite{stratton1941,hansen1988,jackson1999}.
+
+\paragraph{Assumptions.}
+Presuppose Definition~\ref{def:ch4.radiative-rank}, Eq.~\eqref{eq:ch4.gamma-SVD}, and scaling bounds
+Eqs.~\eqref{eq:ch4.joint-scaling-law}--\eqref{eq:ch4.truncation-volume-scaling} \cite{harrington2001,devaney2004,hansen1988}. Tolerance
+\(\varepsilon\) is declared jointly for synthesis, inversion, and certification \cite{stratton1941,collin2001}. Continuum operator limits
+are distinguished from MoM discretizations per Lemma~\ref{lem:ch4.rank-gap-aliasing} \cite{harrington2001,devaney2004}.
+
+\begin{definition}[Effective electromagnetic dimension]
+\label{def:ch4.effective-em-dimension}
+The \emph{effective electromagnetic dimension} of \((\Omega_{s},\omega,\mathcal{C})\) at tolerance \(\varepsilon\) is
+\begin{equation}
+\label{eq:ch4.effective-em-dimension}
+d_{\mathrm{eff}}(\varepsilon)
+=
+r_{\mathrm{rad}}(\varepsilon)
+=
+\#\big\{n:\ \sigma_{n}\ge\varepsilon\,\sigma_{1}\big\},
+\end{equation}
+with \(\{\sigma_{n}\}\) from Eq.~\eqref{eq:ch4.gamma-SVD} \cite{stratton1941,harrington2001,hansen1988}.
+\end{definition}
+
+Equation~\eqref{eq:ch4.effective-em-dimension} states that \(d_{\mathrm{eff}}\) is not patch count, not \(\ell_{\max}\), and not channel
+DOS from Subsection~\ref{sec:ch353} \cite{hansen1988,harrington2001,devaney2004}. It is the number of independent export directions whose
+singular values exceed the relative threshold \(\varepsilon\sigma_{1}\) \cite{stratton1941,jackson1999,collin2001}. Representation on
+\(\mathcal{C}\) chooses coordinates for those directions; realizability fixes how many directions exist \cite{hansen1988,devaney2004}.
+
+\begin{theorem}[Dimension bounds realizability]
+\label{thm:ch4.dimension-bounds-realizability}
+\(\dim\mathcal{S}_{\mathrm{real}}(\mathcal{C})\le d_{\mathrm{eff}}(\varepsilon)\) at tolerance \(\varepsilon\), and every
+\(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) has at most \(d_{\mathrm{eff}}(\varepsilon)\) independent components above export
+threshold \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.radiative-rank} identifies \(r_{\mathrm{rad}}(\varepsilon)\) with the export singular-value count; Definition~\ref{def:ch4.effective-em-dimension}
+sets \(d_{\mathrm{eff}}=r_{\mathrm{rad}}\) \cite{harrington2001,stratton1941,devaney2004}. Realizable coefficients lie in the span of
+directions with \(\sigma_{n}\ge\varepsilon\sigma_{1}\) \cite{hansen1988,jackson1999}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.dimension-bounds-realizability} is the synthesis-side cap on independent far-zone degrees of freedom \cite{devaney2004,collin2001}.
+Inverse solvers may return longer vectors in listing coordinates, but only \(d_{\mathrm{eff}}\) components carry watts above threshold
+\cite{harrington2001,hansen1988,stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
+  \node[ch1box, right=11mm of svd] (rr) {$r_{\mathrm{rad}}$};
+  \node[ch1box, right=11mm of rr] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=11mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (svd) -- (rr) -- (deff) -- (sr);
+\end{tikzpicture}%
+}
+\caption{Effective electromagnetic dimension equals radiative rank in the export gauge and bounds the realizable synthesis set
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\).}
+\label{fig:ch4.effective-em-dimension}
+\end{figure}
+
+Figure~\ref{fig:ch4.effective-em-dimension} traces the certification chain used in design reviews: singular values from
+Eq.~\eqref{eq:ch4.gamma-SVD} determine \(r_{\mathrm{rad}}\), which equals \(d_{\mathrm{eff}}\), which bounds
+\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) \cite{hansen1988,harrington2001,devaney2004,jackson1999}.
+
+\paragraph{Dimension reporting protocol.}
+Laboratory reports must state \((\varepsilon,\,k_{0}D_{s},\,\mathcal{C}\text{-gauge})\) alongside \(d_{\mathrm{eff}}\)
+\cite{hansen1988,stratton1941,harrington2001,collin2001}. Continuum and discrete ranks are paired as
+\begin{equation}
+\label{eq:ch4.deff-reporting}
+d_{\mathrm{eff}}(\varepsilon)
+=
+\#\{n:\sigma_{n}\ge\varepsilon\sigma_{1}\},
+\qquad
+\Delta d_{\mathrm{eff}}
+=
+\big|d_{\mathrm{eff}}^{\mathrm{(MoM)}}-d_{\mathrm{eff}}^{\mathrm{(cont)}}\big|.
+\end{equation}
+Equation~\eqref{eq:ch4.deff-reporting} makes mesh refinement an auditable perturbation: \(\Delta d_{\mathrm{eff}}\) quantifies how far a
+solver's rank exceeds continuum realizability \cite{harrington2001,devaney2004,hansen1988}.
+
+\begin{corollary}[Mesh gap on dimension]
+\label{cor:ch4.deff-mesh-gap}
+\(\Delta d_{\mathrm{eff}}\le\Delta r_{\mathrm{gap}}\) in Eq.~\eqref{eq:ch4.rank-gap} \cite{harrington2001,devaney2004,stratton1941,jackson1999}.
+\end{corollary}
+\begin{proof}
+MoM discretization rank differs from continuum rank by at most the gap bound of Eq.~\eqref{eq:ch4.rank-gap}; \(d_{\mathrm{eff}}\) counts
+the same thresholded singular values in both settings \cite{harrington2001,hansen1988,devaney2004}.
+\end{proof}
+
+\paragraph{Conservative reporting.}
+When MoM rank exceeds continuum \(r_{\mathrm{rad}}(\varepsilon)\), the conservative laboratory statement is
+\begin{equation}
+\label{eq:ch4.deff-conservative}
+d_{\mathrm{eff}}^{\mathrm{(report)}}
+=
+\min\big(d_{\mathrm{eff}}^{\mathrm{(MoM)}},\,r_{\mathrm{rad}}^{\mathrm{(cont)}}\big),
+\qquad
+\Delta d_{\mathrm{eff}}\ge0.
+\end{equation}
+Equation~\eqref{eq:ch4.deff-conservative} prevents mesh aliasing from inflating certified synthesis dimension \cite{hansen1988,stratton1941,harrington2001}.
+Aliased singular values above \(\varepsilon\sigma_{1}\) in the discrete problem may fall below threshold in the continuum limit
+\cite{devaney2004,collin2001,jackson1999}.
+
+\begin{proposition}[Joint scaling bound on \(d_{\mathrm{eff}}\)]
+\label{prop:ch4.deff-joint-scaling}
+\(d_{\mathrm{eff}}(\varepsilon)\) satisfies Eq.~\eqref{eq:ch4.joint-scaling-law} with the same exponents as \(r_{\mathrm{rad}}(\varepsilon)\)
+\cite{hansen1988,stratton1941,harrington2001,devaney2004,jackson1999}.
+\end{proposition}
+
+\paragraph{Worked illustration (MIMO claim).}
+A \(16\times16\) patch array claims \(256\) synthesis degrees of freedom; continuum audit on the enclosing ball at \(k_{0}a=3\) gives
+\(d_{\mathrm{eff}}(10^{-2})=22\) \cite{harrington2001,collin2001,hansen1988,jackson1999}. MIMO rank must be reported as
+\(d_{\mathrm{eff}}\), not element count \cite{devaney2004,stratton1941}. Element spacing and coupling matrix condition number do not enlarge
+\(d_{\mathrm{eff}}\) without enlarging \(k_{0}D_{s}\) \cite{hansen1988,harrington2001}.
+
+\paragraph{Worked illustration (mesh saturation).}
+MoM SVD shows \(d_{\mathrm{eff}}^{\mathrm{(MoM)}}=45\) but continuum audit gives \(r_{\mathrm{rad}}(10^{-2})=38\)
+\cite{harrington2001,hansen1988,devaney2004}. Equation~\eqref{eq:ch4.deff-conservative} requires reporting \(d_{\mathrm{eff}}=38\) with
+\(\Delta d_{\mathrm{eff}}=7\) \cite{stratton1941,collin2001,jackson1999}. Omitting \(\Delta d_{\mathrm{eff}}\) overstates inverse-design
+search space dimension \cite{hansen1988,harrington2001}.
+
+\paragraph{Problem (dimension from MoM).}
+\textbf{Problem.} SVD of \(\mathbf{T}\) shows \(180\) singular values above \(10^{-3}\). Is \(d_{\mathrm{eff}}(10^{-3})=180\)?
+
+\textbf{Step 1.} Compare discrete singular values to continuum \(\boldsymbol{\Gamma}_\omega\) per Lemma~\ref{lem:ch4.rank-gap-aliasing}
+\cite{harrington2001,devaney2004,hansen1988}.
+
+\textbf{Step 2.} Set \(d_{\mathrm{eff}}=\min(d_{\mathrm{eff}}^{\mathrm{(MoM)}},r_{\mathrm{rad}}^{\mathrm{(cont)}})\) in aligned gauge per
+Eq.~\eqref{eq:ch4.deff-conservative} \cite{stratton1941,jackson1999,collin2001}.
+
+\textbf{Step 3.} Report \(\varepsilon=10^{-3}\), \(k_{0}D_{s}\), and \(\Delta d_{\mathrm{eff}}\) with the certified integer
+\cite{hansen1988,harrington2001,devaney2004}.
+
+\textbf{Physical meaning.} \(d_{\mathrm{eff}}\) is the geometry-imposed synthesis dimension, not the MoM matrix row count
+\cite{hansen1988,stratton1941}.
+
+\paragraph{Problem (reporting \(d_{\mathrm{eff}}\)).}
+\textbf{Problem.} A design memo states \(d_{\mathrm{eff}}=25\). What must accompany that integer?
+
+\textbf{Step 1.} State \(\varepsilon\) and the flux gauge defining \(\sigma_{1}\) \cite{hansen1988,stratton1941,harrington2001}.
+
+\textbf{Step 2.} State \(k_{0}D_{s}\) and support class (\(B_{a}\) versus \(\Sigma_{a}\)) used in the audit \cite{jackson1999,collin2001,devaney2004}.
+
+\textbf{Step 3.} Bound \(\Delta d_{\mathrm{eff}}\) via Corollary~\ref{cor:ch4.deff-mesh-gap} and cite Eq.~\eqref{eq:ch4.joint-scaling-law}
+\cite{harrington2001,hansen1988,stratton1941}.
+
+\textbf{Physical meaning.} \(d_{\mathrm{eff}}\) is a certified integer tied to operator thresholds, not an unconstrained solver output
+\cite{devaney2004,hansen1988,collin2001}.
+
+\paragraph{Relation to \(\ell_{\mathrm{supp}}\) and tail bounds.}
+Equations~\eqref{eq:ch4.tail-mass-bound} and \eqref{eq:ch4.ell-max-supported} imply
+\(d_{\mathrm{eff}}(\varepsilon)\le\sum_{\ell\le\ell_{\mathrm{supp}}}(2\ell+1)\) but equality rarely holds because not every listable
+shell carries \(\sigma_{n}\ge\varepsilon\sigma_{1}\) \cite{hansen1988,harrington2001,devaney2004,jackson1999}. Effective dimension is
+operator-defined; \(\ell_{\mathrm{supp}}\) is angular envelope-defined \cite{stratton1941,collin2001}.
+
+\begin{theorem}[Tolerance monotonicity of \(d_{\mathrm{eff}}\)]
+\label{thm:ch4.deff-tolerance-monotone}
+If \(\varepsilon_{1}<\varepsilon_{2}\), then \(d_{\mathrm{eff}}(\varepsilon_{1})\ge d_{\mathrm{eff}}(\varepsilon_{2})\) for fixed
+\((\Omega_{s},\omega,\mathcal{C})\) \cite{hansen1988,harrington2001,devaney2004,stratton1941}.
+\end{theorem}
+\begin{proof}
+Lowering \(\varepsilon\) enlarges the threshold set \(\{n:\sigma_{n}\ge\varepsilon\sigma_{1}\}\) \cite{harrington2001,hansen1988}.
+\end{proof}
+
+\paragraph{Worked numerics (tolerance sweep).}
+On \(B_{a}\) with \(k_{0}a=2.5\), representative values \(d_{\mathrm{eff}}(10^{-1})=8\), \(d_{\mathrm{eff}}(10^{-2})=18\),
+\(d_{\mathrm{eff}}(10^{-3})=26\) illustrate Theorem~\ref{thm:ch4.deff-tolerance-monotone} \cite{hansen1988,harrington2001,jackson1999,devaney2004}.
+Reports that compare diversity across projects must use common \(\varepsilon\) \cite{stratton1941,collin2001}.
+
+\paragraph{Validity.}
+Definition~\ref{def:ch4.effective-em-dimension} depends on \(\mathcal{C}\) normalization; \(\varepsilon\) must be stated relative to
+\(\sigma_{1}\) in the same gauge \cite{hansen1988,stratton1941,harrington2001}. Loss lowers tail decay and may increase
+\(d_{\mathrm{eff}}(\varepsilon)\) at fixed geometry \cite{harrington2001,devaney2004,jackson1999,collin2001}. Active feeds require
+declared injected power in the passivity budget of Section~\ref{sec:ch45} \cite{stratton1941,hansen1988}.
+
+Section~\ref{sec:ch46} has replaced heuristic truncation by the supported angular order \(\ell_{\mathrm{supp}}\), volume and area scaling
+exponents, coupling-tail compression, and the effective electromagnetic dimension \(d_{\mathrm{eff}}\) tied to singular-value thresholds on
+\(\boldsymbol{\Gamma}_\omega\) \cite{stratton1941,hansen1988,harrington2001,jackson1999,devaney2004}. Section~\ref{sec:ch47} treats null
+spaces, accessibility, and reconstruction limits on the same operator chain \cite{devaney2004,collin2001}.

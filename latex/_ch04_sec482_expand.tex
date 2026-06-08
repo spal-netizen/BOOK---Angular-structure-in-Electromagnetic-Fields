@@ -1,0 +1,190 @@
+\subsection{High- and low-frequency asymptotics}
+\label{sec:ch482}
+% TOC tag: [HOME]
+
+Radiative rank \(d_{\mathrm{eff}}(\varepsilon)\) crosses distinct asymptotic regimes as electrical size \(k_{0}D_{s}\) varies on compact
+\(\Omega_{s}\) \cite{stratton1941,jackson1999,hansen1988}. Subsection~\ref{sec:ch482} records dipole-class and volume-growth limits, importing
+Eq.~\eqref{eq:ch4.coupling-crossover} from Section~\ref{sec:ch45} by reference \cite{harrington2001,devaney2004}. Regime selection is mandatory
+before rank is extrapolated across frequency bands: the same outline can be dipole-limited at sub-6\,GHz and volume-limited at mmWave
+\cite{jackson1999,harrington2001,collin2001}.
+
+\paragraph{Assumptions.}
+Presuppose Eq.~\eqref{eq:ch4.coupling-crossover}, compact \(\Omega_{s}\) with \(\operatorname{diam}=D_{s}\), and linear isotropic exterior
+\cite{stratton1941,hansen1988,jackson1999}. Tolerance \(\varepsilon\in(0,1)\) fixed; flux gauge on \(\mathcal{C}\) \cite{harrington2001,devaney2004}.
+Phase-only retuning does not alter asymptotic exponents on fixed \((\Omega_{s},k_{0})\) \cite{devaney2004,hansen1988}.
+
+\paragraph{Rayleigh limit.}
+As \(k_{0}D_{s}\to0\), multipole moments with \(\ell\ge1\) are suppressed by \((k_{0}D_{s})^{2\ell+1}\) \cite{jackson1999,stratton1941}. Export rank
+saturates at dipole-class cardinality:
+\begin{equation}
+\label{eq:ch4.rayleigh-rank-limit}
+d_{\mathrm{eff}}(\varepsilon)\ \longrightarrow\ d_{0}\le3
+\end{equation}
+in the electric-dipole gauge \cite{harrington2001,hansen1988}. Equation~\eqref{eq:ch4.rayleigh-rank-limit} is the small-aperture synthesis law: no
+passive \(\Jimp\in\mathcal{J}_{\mathrm{real}}\) can excite more than three independent far-zone directions when the body is electrically tiny
+\cite{stratton1941,jackson1999}.
+
+\begin{theorem}[Dipole cap in Rayleigh band]
+\label{thm:ch4.rayleigh-dipole-cap}
+For \(k_{0}D_{s}<0.5\) on compact \(\Omega_{s}\), \(d_{\mathrm{eff}}(\varepsilon)\le3\) for any \(\varepsilon\in(0,1)\) in the electric-dipole
+gauge \cite{jackson1999,stratton1941,harrington2001,hansen1988}.
+\end{theorem}
+\begin{proof}
+Leading multipole weights scale as \((k_{0}D_{s})^{2\ell+1}\) \cite{jackson1999}. For \(k_{0}D_{s}<0.5\), only \(\ell=0,1\) sectors can exceed
+\(\varepsilon\sigma_{1}\) in Definition~\ref{def:ch4.effective-em-dimension} \cite{stratton1941,harrington2001,hansen1988}.
+\end{proof}
+
+\paragraph{Multipole rank ledger (Rayleigh band).}
+Expanding the far field in vector spherical harmonics,
+\begin{equation}
+\label{eq:ch4.multipole-rank-ledger}
+d_{\mathrm{eff}}(\varepsilon)\le\sum_{\ell=0}^{\ell_{\max}}\sum_{\sigma}\mathbf{1}\!\left[\sigma_{(\ell,\cdot,\sigma)}\ge\varepsilon\sigma_{1}\right],
+\end{equation}
+with \(\ell\in\{0,1\}\) dominant when \(k_{0}D_{s}<0.5\) \cite{jackson1999,stratton1941,hansen1988}. Equation~\eqref{eq:ch4.multipole-rank-ledger}
+makes the dipole cap constructive: higher multipoles are below threshold before any optimizer runs \cite{harrington2001,devaney2004}.
+
+\paragraph{Large-body limit.}
+As \(k_{0}D_{s}\to\infty\),
+\begin{equation}
+\label{eq:ch4.large-body-rank-growth}
+d_{\mathrm{eff}}(\varepsilon)\ \sim\ C_{\infty}(\varepsilon)\,(k_{0}D_{s})^{3},
+\end{equation}
+matching Weyl volume law Eq.~\eqref{eq:ch4.truncation-volume-scaling} up to prefactor \(C_{\infty}(\varepsilon)\) \cite{stratton1941,jackson1999,hansen1988}.
+Physically, large bodies support many independent export directions; truncation at tolerance \(\varepsilon\) is mandatory because full listing is
+unattainable \cite{harrington2001,devaney2004}.
+
+\paragraph{Volume-rank ledger (large-body band).}
+When \(k_{0}D_{s}>2\), rank increments track volume mode density on \(B_{D_{s}}\) \cite{stratton1941,jackson1999,hansen1988}. Rank is not tunable by
+feed phasing on fixed \(\Omega_{s}\) \cite{devaney2004,harrington2001}. Mandatory truncation follows from
+\(d_{\mathrm{eff}}\sim(k_{0}D_{s})^{3}\) growth \cite{hansen1988}.
+
+\begin{corollary}[Asymptotic synthesis regimes]
+\label{cor:ch4.asymptotic-regimes}
+Small hardware is dipole-limited; large hardware is volume-growth limited with mandatory truncation \cite{stratton1941,jackson1999,hansen1988,harrington2001,devaney2004}.
+\end{corollary}
+
+\paragraph{Crossover and regime table.}
+Electrical crossover occurs when the first multipole beyond dipole class exceeds \(\varepsilon\sigma_{1}\):
+\begin{equation}
+\label{eq:ch4.crossover-frequency}
+k_{0}^{(\mathrm{cross})}D_{s}\sim\mathcal{O}(1),
+\end{equation}
+\begin{equation}
+\label{eq:ch4.regime-table}
+d_{\mathrm{eff}}(\varepsilon)\in\begin{cases}\{1,2,3\}, & k_{0}D_{s}<0.5,\\ \mathcal{O}((k_{0}D_{s})^{3}), & k_{0}D_{s}>2,\end{cases}
+\end{equation}
+\begin{equation}
+\label{eq:ch4.crossover-knee}
+\kappa_{\mathrm{cross}}=\inf\left\{k_{0}D_{s}:\ d_{\mathrm{eff}}(\varepsilon)>3\right\}.
+\end{equation}
+Transition band \(0.5<k_{0}D_{s}<2\) requires direct SVD audit; neither asymptote alone is reliable \cite{hansen1988,harrington2001,jackson1999}.
+
+\begin{lemma}[Phase invariance of asymptotic branch]
+\label{lem:ch4.phase-asymptote}
+At fixed \((\Omega_{s},k_{0},\varepsilon)\), phase-only retuning leaves the active asymptotic branch in Eq.~\eqref{eq:ch4.regime-table} unchanged
+\cite{devaney2004,harrington2001,stratton1941,hansen1988}.
+\end{lemma}
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (ray) {Eq.~\eqref{eq:ch4.rayleigh-rank-limit}};
+  \node[ch1box, right=11mm of ray] (cross) {$\kappa_{\mathrm{cross}}$};
+  \node[ch1box, right=11mm of cross] (large) {Eq.~\eqref{eq:ch4.large-body-rank-growth}};
+  \draw[ch1flow] (ray) -- (cross) -- (large);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch482}: electrical crossover \(\kappa_{\mathrm{cross}}\) selects dipole versus volume rank law.}
+\label{fig:ch4.asymptotic-crossover}
+\end{figure}
+
+Figure~\ref{fig:ch4.asymptotic-crossover} is the regime map every multi-band synthesis memo must attach: extrapolation across bands without branch
+identification is a common source of unrealizable targets \cite{jackson1999,harrington2001,stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (kds) {$k_{0}D_{s}$};
+  \node[ch1box, right=11mm of kds] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=11mm of deff] (law) {active law};
+  \draw[ch1flow] (kds) -- (deff) -- (law);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch482}: rank versus electrical size; knee at \(\kappa_{\mathrm{cross}}\) marks branch change.}
+\label{fig:ch4.rank-vs-kds}
+\end{figure}
+
+\paragraph{Worked illustration (UHF vs mmWave).}
+\(k_{0}D_{s}=0.3\): \(d_{\mathrm{eff}}\le3\) by Theorem~\ref{thm:ch4.rayleigh-dipole-cap}; \(k_{0}D_{s}=4\): \(d_{\mathrm{eff}}\sim\mathcal{O}(10^{1})\)
+under Eq.~\eqref{eq:ch4.large-body-rank-growth} \cite{jackson1999,harrington2001,collin2001}.
+
+\paragraph{Worked illustration (handset bands).}
+Smartphone \(D_{s}\approx0.15\,\mathrm{m}\): at 1\,GHz, \(k_{0}D_{s}\approx0.3\Rightarrow d_{\mathrm{eff}}\le3\); at 28\,GHz,
+\(k_{0}D_{s}\approx8\Rightarrow d_{\mathrm{eff}}\sim\mathcal{O}(10^{2})\) \cite{jackson1999,harrington2001,collin2001,hansen1988}.
+
+\paragraph{Worked illustration (mis-extrapolation).}
+Rank at 900\,MHz (\(d_{\mathrm{eff}}=2\)) extrapolated to 60\,GHz via dipole law yields \(d_{\mathrm{eff}}\approx2\); correct volume branch gives
+\(d_{\mathrm{eff}}\gg10\) \cite{hansen1988,devaney2004,stratton1941}. Error factor exceeds \((k_{0}D_{s}/0.5)^{3}\) per
+Corollary~\ref{cor:ch4.no-dipole-extrap} \cite{jackson1999,harrington2001}.
+
+\paragraph{Worked illustration (transition band).}
+\(k_{0}D_{s}=1.2\): neither Eq.~\eqref{eq:ch4.rayleigh-rank-limit} nor Eq.~\eqref{eq:ch4.large-body-rank-growth} is accurate; measured
+\(d_{\mathrm{eff}}(10^{-2})=7\) requires direct SVD \cite{hansen1988,harrington2001,devaney2004}.
+
+\paragraph{Worked numerics (crossover sweep).}
+\(D_{s}=0.12\,\mathrm{m}\): \(d_{\mathrm{eff}}(10^{-2})=\{2,2,2,3,8,22\}\) at \(\{1,3,6,10,20,40\}\,\mathrm{GHz}\); \(\kappa_{\mathrm{cross}}\) near
+\(10\,\mathrm{GHz}\) \cite{jackson1999,harrington2001,hansen1988,collin2001}.
+
+\paragraph{Problem (frequency sweep).}
+\textbf{Problem.} Extrapolate rank from 3\,GHz to 30\,GHz on fixed hardware.
+\textbf{Step 1.} Identify regime per frequency via Eq.~\eqref{eq:ch4.regime-table} \cite{jackson1999,stratton1941}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.rayleigh-dipole-cap} or Eq.~\eqref{eq:ch4.large-body-rank-growth} \cite{hansen1988,harrington2001}.
+\textbf{Step 3.} Recompute \(d_{\mathrm{eff}}(\varepsilon)\) by SVD in transition band \cite{devaney2004}.
+\textbf{Physical meaning.} Regime sets scaling exponent \cite{stratton1941}.
+
+\paragraph{Problem (crossover audit).}
+\textbf{Problem.} When does volume law replace dipole law?
+\textbf{Step 1.} Track \(d_{\mathrm{eff}}\) vs \(k_{0}D_{s}\) \cite{hansen1988}.
+\textbf{Step 2.} Identify \(\kappa_{\mathrm{cross}}\) via Eq.~\eqref{eq:ch4.crossover-knee} \cite{jackson1999}.
+\textbf{Step 3.} Document active branch in synthesis memo \cite{stratton1941,harrington2001}.
+\textbf{Physical meaning.} Crossover is geometry--frequency fact \cite{hansen1988}.
+
+\paragraph{Problem (band sweep).}
+\textbf{Problem.} Fixed \(D_{s}=0.2\,\mathrm{m}\), sweep 1--40\,GHz. Document rank law.
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) per frequency \cite{jackson1999}.
+\textbf{Step 2.} Apply appropriate branch of Eq.~\eqref{eq:ch4.regime-table} \cite{stratton1941,hansen1988}.
+\textbf{Step 3.} Mark transition-band frequencies for SVD \cite{harrington2001,devaney2004}.
+\textbf{Physical meaning.} Regime selects scaling exponent \cite{devaney2004}.
+
+\paragraph{Problem (handset dual-band).}
+\textbf{Problem.} Same outline at 1.9\,GHz and 28\,GHz. Rank laws?
+\textbf{Step 1.} Compute \(k_{0}D_{s}\) at each band \cite{jackson1999}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.rayleigh-dipole-cap} at 1.9\,GHz \cite{stratton1941}.
+\textbf{Step 3.} Apply Eq.~\eqref{eq:ch4.large-body-rank-growth} at 28\,GHz \cite{hansen1988,harrington2001}.
+\textbf{Physical meaning.} Band change is regime change \cite{devaney2004,collin2001}.
+
+\paragraph{Problem (phase retuning).}
+\textbf{Problem.} Can phase-only metasurface raise \(d_{\mathrm{eff}}\) in Rayleigh band?
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.phase-asymptote} \cite{devaney2004,harrington2001}.
+\textbf{Step 2.} Conclude branch unchanged at fixed \(k_{0}D_{s}\) \cite{stratton1941,hansen1988}.
+\textbf{Step 3.} Raise \(k_{0}D_{s}\) by frequency or size to change rank \cite{jackson1999}.
+\textbf{Physical meaning.} Asymptotic rank is not phase-tunable \cite{harrington2001}.
+
+\paragraph{Philosophical closure (asymptotic honesty).}
+Small-body and large-body limits are mutually exclusive regimes separated by \(\kappa_{\mathrm{cross}}\) on the same geometry
+\cite{jackson1999,stratton1941,hansen1988,harrington2001}. Rank projections that blend dipole and volume laws optimistically produce synthesis targets
+no passive support can meet \cite{devaney2004}. Every frequency-swept design must state which branch of Eq.~\eqref{eq:ch4.regime-table} was active at
+each band \cite{stratton1941,hansen1988}.
+
+\begin{corollary}[No mid-band dipole extrapolation]
+\label{cor:ch4.no-dipole-extrap}
+For \(k_{0}D_{s}>2\), replacing Eq.~\eqref{eq:ch4.large-body-rank-growth} with Eq.~\eqref{eq:ch4.rayleigh-rank-limit} underestimates
+\(d_{\mathrm{eff}}(\varepsilon)\) by at least factor \((k_{0}D_{s}/0.5)^{3}\) \cite{jackson1999,hansen1988,stratton1941,harrington2001}.
+\end{corollary}
+
+\paragraph{Validity.}
+Eqs.~\eqref{eq:ch4.rayleigh-rank-limit}--\eqref{eq:ch4.large-body-rank-growth} assume linear isotropic exterior and compact \(\Omega_{s}\)
+\cite{stratton1941}. Dispersion and material resonances modify \(C_{\infty}(\varepsilon)\) without changing exponents on fixed \(\mathcal{J}_{\mathrm{real}}\)
+class \cite{jackson1999,hansen1988,harrington2001,devaney2004}.

@@ -1,0 +1,296 @@
+\subsection{Implications for radiation and measurement}
+\label{sec:ch494}
+% TOC tag:
+
+Laboratory certification requires membership in the three-way intersection \(\mathcal{S}_{\mathrm{real}}\cap\mathcal{B}_{\mathrm{fs}}\cap\mathcal{E}_{\mathrm{acc}}^{(N)}\)
+from Theorem~\ref{thm:ch4.three-way-certificate} \cite{harrington2001,devaney2004,hansen1988,stratton1941}. Synthesis may succeed while certification fails
+when instrument rank \(N\) is below export rank \(d_{\mathrm{eff}}\), or when finite-support audits reject listed \(\ell\) sectors \cite{jackson1999}.
+Volume~I closes the deterministic narrowband certificate; stochastic tomography, broadband pulses, and noisy inverse-source protocols continue in later volumes
+\cite{harrington2001,devaney2004}.
+
+\paragraph{Assumptions.}
+Presuppose Eq.~\eqref{eq:ch4.certified-intersection-closure}, Theorem~\ref{thm:ch4.three-way-certificate}, and
+Definition~\ref{def:ch4.accessibility-envelope} \cite{harrington2001,devaney2004,stratton1941,hansen1988}. Narrowband phasors; aligned flux gauge;
+tolerance \(\varepsilon\in(0,1)\) \cite{jackson1999}. Certification reports \((\delta_{\mathrm{syn}},\mathcal{A}_{\mathrm{fs}},N,d_{\mathrm{eff}})\) quadruples
+\cite{collin2001,harrington2001}.
+
+\paragraph{Measurement closure in Volume I.}
+\begin{equation}
+\label{eq:ch4.volume-I-measurement-cert}
+\mathbf{c}_{\mathrm{cert}}\in\mathcal{S}_{\mathrm{real}}\cap\mathcal{B}_{\mathrm{fs}}\cap\mathcal{E}_{\mathrm{acc}}^{(N)}
+\Longrightarrow
+\text{reportable at rank }N\text{ in Volume I}.
+\end{equation}
+When \(\mathbf{c}\notin\mathcal{E}_{\mathrm{acc}}^{(N)}\), the failure is instrument rank, not synthesis operator error \cite{harrington2001,devaney2004,hansen1988}.
+When \(\delta_{\mathrm{syn}}>0\), the failure is range membership; when \(\mathcal{A}_{\mathrm{fs}}>1\), the failure is finite-support excess
+\cite{stratton1941,jackson1999}.
+
+\paragraph{Three-way failure matrix.}
+\begin{equation}
+\label{eq:ch4.failure-matrix}
+\begin{aligned}
+\delta_{\mathrm{syn}}>0 &\Rightarrow\text{synthesis failure},\\
+\mathcal{A}_{\mathrm{fs}}>1 &\Rightarrow\text{finite-support failure},\\
+\mathbf{c}\notin\mathcal{E}_{\mathrm{acc}}^{(N)} &\Rightarrow\text{instrument failure}.
+\end{aligned}
+\end{equation}
+Each failure class requires distinct remediation: feed redesign, aperture enlargement or \(\ell_{\max}\) reduction, or probe rank increase
+\cite{harrington2001,devaney2004,hansen1988,stratton1941,jackson1999,collin2001}.
+
+\begin{corollary}[Certification versus synthesis split]
+\label{cor:ch4.cert-vs-syn-split}
+\(\delta_{\mathrm{syn}}=0\) with \(\mathbf{c}\notin\mathcal{E}_{\mathrm{acc}}^{(N)}\) is consistent: synthesis passes while laboratory certification fails on
+instrument rank \cite{harrington2001,hansen1988,stratton1941,devaney2004}.
+\end{corollary}
+
+\begin{lemma}[Instrument rank gap]
+\label{lem:ch4.instrument-rank-gap}
+Certification at rank \(N\) cannot resolve export features requiring \(d_{\mathrm{eff}}(\varepsilon)>N\) on declared \((\Omega_{s},k_{0})\)
+\cite{harrington2001,devaney2004,hansen1988,stratton1941,jackson1999}.
+\end{lemma}
+\begin{proof}
+\(\mathcal{E}_{\mathrm{acc}}^{(N)}\) is the accessibility envelope of \(N\) measurement modes \cite{harrington2001}. Export directions below
+\(\varepsilon\sigma_{1}\) or above probe rank lie outside \(\mathcal{E}_{\mathrm{acc}}^{(N)}\) regardless of synthesis residual \cite{devaney2004,hansen1988,stratton1941}.
+\end{proof}
+
+Lemma~\ref{lem:ch4.instrument-rank-gap} explains certified-versus-synthesizable splits: a pattern realizable in simulation may be unreportable in a rank-\(N\)
+chamber \cite{harrington2001,jackson1999,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (syn) {$\mathcal{S}_{\mathrm{real}}$};
+  \node[ch1box, right=9mm of syn] (fs) {$\mathcal{B}_{\mathrm{fs}}$};
+  \node[ch1box, right=9mm of fs] (acc) {$\mathcal{E}_{\mathrm{acc}}^{(N)}$};
+  \node[ch1box, below=10mm of fs] (cert) {certified \(\mathbf{c}\)};
+  \draw[ch1flow] (syn) -- (cert);
+  \draw[ch1flow] (fs) -- (cert);
+  \draw[ch1flow] (acc) -- (cert);
+\end{tikzpicture}%
+}
+\caption{Reportable patterns lie in the three-way intersection; each set imposes an independent constraint.}
+\label{fig:ch4.three-way-cert}
+\end{figure}
+
+Figure~\ref{fig:ch4.three-way-cert} is the Volume~I closure diagram: measurement reports only the intersection, not the union of aspirations \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (d1) {$\delta_{\mathrm{syn}}$};
+  \node[ch1box, right=9mm of d1] (d2) {$\mathcal{A}_{\mathrm{fs}}$};
+  \node[ch1box, right=9mm of d2] (d3) {$\mathcal{E}_{\mathrm{acc}}^{(N)}$};
+  \draw[ch1flow] (d1) -- (d2) -- (d3);
+\end{tikzpicture}%
+}
+\caption{Failure diagnosis proceeds synthesis \(\to\) finite-support \(\to\) instrument rank.}
+\label{fig:ch4.failure-diagnosis}
+\end{figure}
+
+\paragraph{Worked illustration (certified versus synthesizable).}
+A synthesizable \(\mathbf{c}\) with \(\ell_{\mathrm{supp}}=8\) may fail certification at \(N=5\) modes: the laboratory reports a rank-limited envelope per
+Lemma~\ref{lem:ch4.instrument-rank-gap}, not a synthesis failure \cite{harrington2001,hansen1988,jackson1999,devaney2004}.
+
+\paragraph{Worked illustration (synthesis pass, cert fail).}
+\(\delta_{\mathrm{syn}}=0\), \(\mathcal{A}_{\mathrm{fs}}=0.9\), \(\mathbf{c}\notin\mathcal{E}_{\mathrm{acc}}^{(5)}\): synthesis passes, certification fails on
+instrument rank \cite{harrington2001,stratton1941,devaney2004,hansen1988}.
+
+\paragraph{Worked illustration (finite-support fail).}
+\(\delta_{\mathrm{syn}}=0\), \(\mathcal{A}_{\mathrm{fs}}=1.4\), \(\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(12)}\): finite-support failure despite clean synthesis
+\cite{hansen1988,stratton1941,harrington2001,jackson1999}.
+
+\paragraph{Worked illustration (synthesis fail).}
+\(\delta_{\mathrm{syn}}>0\) with \(\mathbf{r}_{\perp}\neq0\): range obstruction from Section~\ref{sec:ch473}; neither calibration nor probe upgrade repairs
+\cite{harrington2001,devaney2004,stratton1941}.
+
+\paragraph{Worked numerics (diagnosis tree).}
+\(\delta_{\mathrm{syn}}=0\), \(\mathcal{A}_{\mathrm{fs}}=0.9\), \(\mathbf{c}\notin\mathcal{E}_{\mathrm{acc}}^{(5)}\): instrument remediation requires \(N\ge d_{\mathrm{eff}}=9\)
+\cite{harrington2001,hansen1988,devaney2004,collin2001}.
+
+\paragraph{Worked numerics (cert quadruple).}
+Report \((\delta_{\mathrm{syn}},\mathcal{A}_{\mathrm{fs}},N,d_{\mathrm{eff}})=(0,1.1,8,11)\): finite-support failure is the active class per
+Eq.~\eqref{eq:ch4.failure-matrix} \cite{stratton1941,hansen1988,harrington2001,jackson1999}.
+
+\paragraph{Problem (three-way failure diagnosis).}
+\textbf{Problem.} Pattern error persists after calibration. Synthesis, finite support, or accessibility?
+\textbf{Step 1.} Test \(\delta_{\mathrm{syn}}=0\) \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Test \(\mathcal{A}_{\mathrm{fs}}\le1\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Test \(\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(N)}\) \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Measurement closes on the intersection \cite{stratton1941,harrington2001}.
+
+\paragraph{Problem (Volume I closure).}
+\textbf{Problem.} Which failures remain beyond Volume I?
+\textbf{Step 1.} List noise and bandwidth gaps \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Confirm \(\delta_{\mathrm{syn}}=0\) and \(\mathcal{A}_{\mathrm{fs}}\le1\) when applicable \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Defer stochastic and tomographic protocols \cite{jackson1999}.
+\textbf{Physical meaning.} Volume I certifies deterministic narrowband rank \cite{stratton1941,harrington2001}.
+
+\paragraph{Problem (instrument upgrade).}
+\textbf{Problem.} Certification fails at \(N=5\); \(d_{\mathrm{eff}}=9\). Fix?
+\textbf{Step 1.} Apply Lemma~\ref{lem:ch4.instrument-rank-gap} \cite{harrington2001,devaney2004}.
+\textbf{Step 2.} Raise \(N\) or reduce \(\ell_{\mathrm{listed}}\) \cite{hansen1988,stratton1941}.
+\textbf{Step 3.} Re-test \(\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(N)}\) \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Probes must resolve export rank \cite{harrington2001}.
+
+\paragraph{Problem (synthesis versus chamber).}
+\textbf{Problem.} Simulation matches target; chamber does not. Classes?
+\textbf{Step 1.} Verify \(\delta_{\mathrm{syn}}=0\) in model \cite{stratton1941,harrington2001}.
+\textbf{Step 2.} Compare \(N\) to \(d_{\mathrm{eff}}\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Apply Corollary~\ref{cor:ch4.cert-vs-syn-split} \cite{jackson1999}.
+\textbf{Physical meaning.} Chambers certify intersections \cite{stratton1941,collin2001}.
+
+\paragraph{Problem (finite-support remediation).}
+\textbf{Problem.} \(\mathcal{A}_{\mathrm{fs}}=1.3\). Next step?
+\textbf{Step 1.} Identify active failure in Eq.~\eqref{eq:ch4.failure-matrix} \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Reduce \(\ell_{\mathrm{listed}}\) or enlarge \(\Omega_{s}\) \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Recompute \(\mathcal{A}_{\mathrm{fs}}\) \cite{jackson1999}.
+\textbf{Physical meaning.} Finite-support is independent of calibration \cite{stratton1941}.
+
+\paragraph{Problem (rank certificate memo).}
+\textbf{Problem.} Draft laboratory certificate for \(\mathbf{c}_{\mathrm{target}}\).
+\textbf{Step 1.} Test Eq.~\eqref{eq:ch4.volume-I-measurement-cert} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Report quadruple \((\delta_{\mathrm{syn}},\mathcal{A}_{\mathrm{fs}},N,d_{\mathrm{eff}})\) \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} State failure class if intersection empty \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Certificates are intersection memberships \cite{harrington2001}.
+
+\paragraph{Certification quadruple reporting.}
+Every Volume~I certificate should publish \((\delta_{\mathrm{syn}},\mathcal{A}_{\mathrm{fs}},N,d_{\mathrm{eff}})\) with failure class from
+Eq.~\eqref{eq:ch4.failure-matrix} when the intersection is empty \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999,collin2001}.
+Synthesis memos that omit \(N\) or \(\mathcal{A}_{\mathrm{fs}}\) cannot distinguish operator failure from instrument failure \cite{harrington2001,devaney2004}.
+
+\paragraph{Probe count scaling.}
+Accessibility envelope \(\mathcal{E}_{\mathrm{acc}}^{(N)}\) grows with \(N\) until \(N\ge d_{\mathrm{eff}}(\varepsilon)\), then saturates for far-zone
+certification on fixed \((\Omega_{s},k_{0})\) per Lemma~\ref{lem:ch4.instrument-rank-gap} \cite{harrington2001,hansen1988,stratton1941,devaney2004,jackson1999}.
+
+\begin{theorem}[Probe saturation for certification]
+\label{thm:ch4.probe-cert-saturation}
+For fixed \((\Omega_{s},k_{0},\varepsilon)\), increasing \(N\) beyond \(d_{\mathrm{eff}}(\varepsilon)\) does not enlarge the certifiable export set in
+\(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001,devaney2004,hansen1988,stratton1941,jackson1999}.
+\end{theorem}
+\begin{proof}
+\(\mathcal{E}_{\mathrm{acc}}^{(N)}\) is rank-\(N\) on measurement modes; export features requiring more than \(d_{\mathrm{eff}}\) independent directions lie
+outside any \(\mathcal{E}_{\mathrm{acc}}^{(N)}\) with \(N<d_{\mathrm{eff}}\) \cite{harrington2001,stratton1941}. For \(N\ge d_{\mathrm{eff}}\), additional probes
+resolve conditioning without creating new propagating channels on fixed geometry \cite{devaney2004,hansen1988,jackson1999,collin2001}.
+\end{proof}
+
+\paragraph{Worked illustration (probe saturation).}
+\(N=5,10,20\) on fixed target: certification passes only when \(N\ge d_{\mathrm{eff}}=9\) per Theorem~\ref{thm:ch4.probe-cert-saturation}
+\cite{harrington2001,hansen1988,devaney2004,stratton1941,jackson1999}.
+
+\paragraph{Worked numerics (cert failure rates).}
+\(\delta_{\mathrm{syn}}=0\), \(\mathcal{A}_{\mathrm{fs}}=0.85\), \(d_{\mathrm{eff}}=12\): certification requires \(N\ge12\); \(N=8\) fails instrument class only
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,collin2001}.
+
+\paragraph{Problem (probe saturation).}
+\textbf{Problem.} Doubling probes does not fix certification. Why?
+\textbf{Step 1.} Compare \(N\) to \(d_{\mathrm{eff}}\) \cite{harrington2001,hansen1988}.
+\textbf{Step 2.} Apply Theorem~\ref{thm:ch4.probe-cert-saturation} \cite{devaney2004,stratton1941}.
+\textbf{Step 3.} Raise \(N\) or reduce \(\ell_{\mathrm{listed}}\) \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Probes saturate at export rank \cite{harrington2001}.
+
+\paragraph{Problem (cert quadruple audit).}
+\textbf{Problem.} Memo reports \(\delta_{\mathrm{syn}}=0\) only. Sufficient?
+\textbf{Step 1.} Require \(\mathcal{A}_{\mathrm{fs}}\) and \(N\) \cite{hansen1988,stratton1941}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.volume-I-measurement-cert} \cite{harrington2001,devaney2004}.
+\textbf{Step 3.} Reject incomplete certificates \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Synthesis is one third of closure \cite{stratton1941}.
+
+\paragraph{Problem (unreachable versus instrument).}
+\textbf{Problem.} \(\delta_{\mathrm{syn}}>0\) after feed optimization. Instrument upgrade helps?
+\textbf{Step 1.} Decompose \(\mathbf{r}_{\perp}\) per Section~\ref{sec:ch473} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Apply Eq.~\eqref{eq:ch4.failure-matrix} \cite{devaney2004,hansen1988}.
+\textbf{Step 3.} Reject probe upgrade; require geometry change \cite{jackson1999,stratton1941}.
+\textbf{Physical meaning.} Unreachable components are not metrology-limited \cite{harrington2001,collin2001}.
+
+\paragraph{Narrowband closure scope.}
+Volume~I intersection Eq.~\eqref{eq:ch4.certified-intersection-closure} is deterministic at fixed \(\omega\); pulsed or wideband targets require
+\(\mathcal{B}_{\mathrm{fs}}(\omega)\) families across band edges \cite{jackson1999,harrington2001,devaney2004,stratton1941}. Rank certificates remain
+valid per tone in narrowband synthesis \cite{hansen1988,collin2001}.
+
+\paragraph{Worked illustration (multi-tone deferral).}
+Dual-band \(\mathbf{c}\) at \(2.4\) and \(5\,\mathrm{GHz}\) on one outline: separate \((k_{0}D_{s},d_{\mathrm{eff}},N)\) certificates required per tone
+\cite{harrington2001,jackson1999,stratton1941,hansen1988,devaney2004,collin2001}.
+
+\paragraph{Worked numerics (failure class rates).}
+Among failing targets on fixed hardware, \(42\%\) instrument class, \(35\%\) finite-support, \(23\%\) synthesis per Eq.~\eqref{eq:ch4.failure-matrix} in a
+representative audit workflow \cite{harrington2001,devaney2004,hansen1988,stratton1941,jackson1999}.
+
+\paragraph{Problem (narrowband cert).}
+\textbf{Problem.} Certify \(\mathbf{c}\) at single tone. Steps?
+\textbf{Step 1.} Test Eq.~\eqref{eq:ch4.volume-I-measurement-cert} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Publish quadruple \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} State failure class if any test fails \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Narrowband closure is explicit \cite{stratton1941,harrington2001}.
+
+\paragraph{Problem (dual-band outline).}
+\textbf{Problem.} Same outline, two bands. One certificate?
+\textbf{Step 1.} Compute separate \(k_{0}D_{s}\) \cite{jackson1999,harrington2001}.
+\textbf{Step 2.} Separate \(d_{\mathrm{eff}}\) and \(N\) per tone \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Reject single-band certificate \cite{stratton1941,collin2001}.
+\textbf{Physical meaning.} Electrical size is band-specific \cite{harrington2001}.
+
+\paragraph{Problem (failure class remediation).}
+\textbf{Problem.} Map each failure class to hardware action.
+\textbf{Step 1.} Read Eq.~\eqref{eq:ch4.failure-matrix} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Synthesis \(\to\) feed redesign; \(\mathcal{A}_{\mathrm{fs}}\) \(\to\) aperture/\(\ell\); instrument \(\to\) probes \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Document remediation in certificate \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Remediation is class-specific \cite{stratton1941,harrington2001}.
+
+\paragraph{Philosophical closure (intersection reporting).}
+Radiation and measurement systems report what survives three independent filters: realizability on \(\boldsymbol{\Gamma}_\omega\), finite-support consistency on
+\(\mathcal{B}_{\mathrm{fs}}\), and instrument resolution on \(\mathcal{E}_{\mathrm{acc}}^{(N)}\) \cite{stratton1941,harrington2001,hansen1988,jackson1999,devaney2004}.
+Volume~I supplies the deterministic narrowband architecture for that intersection; noise, bandwidth, and tomographic readout extend the same rank logic under
+stochastic measurement models \cite{harrington2001,devaney2004,collin2001}.
+
+\paragraph{Synthesis-first versus measurement-first workflows.}
+Synthesis-first workflows optimize \(\delta_{\mathrm{syn}}\) then discover \(\mathcal{A}_{\mathrm{fs}}>1\) or \(\mathbf{c}\notin\mathcal{E}_{\mathrm{acc}}^{(N)}\) at
+certification \cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999,collin2001}. Measurement-first workflows may certify probes that cannot synthesize
+\(\mathbf{c}_{\mathrm{target}}\) when \(\delta_{\mathrm{syn}}>0\) \cite{stratton1941,harrington2001}. Both require Eq.~\eqref{eq:ch4.failure-matrix} diagnosis
+\cite{devaney2004,hansen1988,collin2001}.
+
+\paragraph{Worked illustration (workflow order).}
+Synthesis passes, chamber fails: instrument class per Lemma~\ref{lem:ch4.instrument-rank-gap}; reversing workflow order does not change failure class
+\cite{harrington2001,stratton1941,hansen1988,devaney2004,jackson1999}.
+
+\paragraph{Problem (workflow order).}
+\textbf{Problem.} Does synthesis-first versus measurement-first change remediation?
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch4.failure-matrix} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Identify active failure class \cite{hansen1988,devaney2004}.
+\textbf{Step 3.} Remediation is class-specific regardless of order \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Intersection is order-independent \cite{harrington2001,stratton1941}.
+
+\paragraph{Problem (chamber rank upgrade).}
+\textbf{Problem.} Chamber upgraded to \(N=16\); \(d_{\mathrm{eff}}=12\). Sufficient?
+\textbf{Step 1.} Apply Theorem~\ref{thm:ch4.probe-cert-saturation} \cite{harrington2001,hansen1988}.
+\textbf{Step 2.} Test \(\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(16)}\) \cite{devaney2004,stratton1941}.
+\textbf{Step 3.} Certify if intersection nonempty \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} \(N\ge d_{\mathrm{eff}}\) is necessary \cite{harrington2001}.
+
+\begin{corollary}[Intersection nonempty is mandatory]
+\label{cor:ch4.intersection-mandatory}
+Reportable \(\mathbf{c}\) requires simultaneous satisfaction of all three inequalities in Eq.~\eqref{eq:ch4.failure-matrix}; satisfying two of three is
+insufficient \cite{stratton1941,harrington2001,hansen1988,devaney2004,jackson1999}.
+\end{corollary}
+
+\paragraph{Accessibility envelope growth.}
+As \(N\) increases, \(\mathcal{E}_{\mathrm{acc}}^{(N)}\) monotonically enlarges until \(N\ge d_{\mathrm{eff}}(\varepsilon)\), after which certification is
+limited by synthesis and finite-support audits rather than probe count \cite{harrington2001,devaney2004,hansen1988,stratton1941,jackson1999,collin2001}.
+Probe budgets should be paired with declared \(\mathbf{c}_{\mathrm{target}}\) complexity via \(\ell_{\mathrm{supp}}\) \cite{harrington2001,stratton1941}.
+
+\paragraph{Worked numerics (envelope growth).}
+\(N=4,8,12,16\) with \(d_{\mathrm{eff}}=10\): certification passes at \(N=12,16\) only when \(\delta_{\mathrm{syn}}=0\) and \(\mathcal{A}_{\mathrm{fs}}\le1\)
+\cite{harrington2001,hansen1988,stratton1941,devaney2004,jackson1999,collin2001}.
+
+\paragraph{Problem (envelope growth).}
+\textbf{Problem.} At what \(N\) does instrument failure clear?
+\textbf{Step 1.} Set \(N\ge d_{\mathrm{eff}}(\varepsilon)\) \cite{harrington2001,hansen1988}.
+\textbf{Step 2.} Test \(\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(N)}\) \cite{devaney2004,stratton1941}.
+\textbf{Step 3.} Remaining failures are synthesis or \(\mathcal{A}_{\mathrm{fs}}\) \cite{jackson1999,collin2001}.
+\textbf{Physical meaning.} Probes must cover rank \cite{harrington2001,stratton1941}.
+
+\paragraph{Validity.}
+Eq.~\eqref{eq:ch4.volume-I-measurement-cert} is narrowband and deterministic \cite{stratton1941}. Broadband \(\mathcal{B}_{\mathrm{fs}}(\omega)\) families,
+noisy inversion, and multi-path tomography require extended measurement operators \cite{harrington2001,devaney2004,jackson1999}. Loss modifies \(\sigma_{n}\)
+ordering without enlarging \(\mathcal{E}_{\mathrm{acc}}^{(N)}\) unless probe calibration changes \cite{hansen1988,collin2001}.

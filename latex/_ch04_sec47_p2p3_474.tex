@@ -1,0 +1,59 @@
+
+\paragraph{Uncertainty product form.}
+Combining Eq.~\eqref{eq:ch4.localization-resolution-tradeoff} with supported-order ceiling Theorem~\ref{thm:ch4.resolution-ceiling},
+\begin{equation}
+\label{eq:ch4.loc-res-uncertainty}
+\mathcal{L}_{2}[\Jimp]\cdot\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)
+\ge
+\mathcal{K}_{\mathrm{unc}}(k_{0}a,\varepsilon),
+\end{equation}
+an export-side uncertainty relation on compact supports \cite{hansen1988,jackson1999,stratton1941,harrington2001,devaney2004}. Tight spatial
+concentration and high angular order cannot coexist on the same \(\mathbf{c}\) when \(\ell_{\mathrm{supp}}\) is small \cite{hansen1988}.
+
+\begin{theorem}[Joint localization--supported-order bound]
+\label{thm:ch4.joint-loc-supp}
+On \(B_{a}\), any \(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) satisfies
+\(\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\le\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\) and
+Eq.~\eqref{eq:ch4.loc-res-uncertainty} simultaneously \cite{hansen1988,stratton1941,harrington2001,devaney2004}.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:ch4.resolution-ceiling} and Eq.~\eqref{eq:ch4.localization-resolution-tradeoff} \cite{hansen1988,stratton1941}.
+\end{proof}
+
+\paragraph{Representation bridge audit.}
+Paraxial LG labels require Eq.~\eqref{eq:ch3.paraxial-vs-spherical-OAM} before any \(\mathcal{R}_{\mathrm{ang}}\) test
+\cite{harrington2001,allen1992}. Full-vector decomposition may spread one LG index across multiple \(\ell\) sectors
+\cite{hansen1988,stratton1941,belinfante1940}. Essentialist OAM claims that skip the bridge fail realizability audit \cite{devaney2004}.
+
+\paragraph{Worked illustration (LG to VSH).}
+\(m_{\mathrm{LG}}=3\) beam maps to \(\ell\in\{2,3,4\}\) sectors after decomposition; \(\mathcal{R}_{\mathrm{ang}}\) must be computed in VSH gauge
+\cite{harrington2001,hansen1988,allen1992}.
+
+\paragraph{Worked illustration (super-resolution).}
+\(k_{0}a=1.5\), claimed \(\mathcal{R}_{\mathrm{ang}}=9\): violates Theorem~\ref{thm:ch4.joint-loc-supp} and Corollary~\ref{cor:ch4.super-resolution-obstruction}
+\cite{hansen1988,jackson1999,harrington2001}.
+
+\paragraph{Problem (LG realizability).}
+\textbf{Problem.} Convert LG index \(m_{\mathrm{LG}}=4\) to VSH realizability on \(k_{0}a=2\).
+\textbf{Step 1.} Apply Eq.~\eqref{eq:ch3.paraxial-vs-spherical-OAM} \cite{harrington2001}.
+\textbf{Step 2.} Compute \(\mathcal{R}_{\mathrm{ang}}(\mathbf{c})\) \cite{hansen1988}.
+\textbf{Step 3.} Test \(\ell_{\mathrm{supp}}(10^{-2},2)\) \cite{stratton1941,devaney2004}.
+\textbf{Physical meaning.} OAM order is chart-dependent \cite{harrington2001}.
+
+\paragraph{Problem (beamwidth--\(\ell\) joint audit).}
+\textbf{Problem.} \(2^{\circ}\) beam and \(\ell=7\) on \(k_{0}a=1.8\). Feasible?
+\textbf{Step 1.} Test Eq.~\eqref{eq:ch4.beamwidth-ell-consistency} \cite{hansen1988,jackson1999}.
+\textbf{Step 2.} Test Eq.~\eqref{eq:ch4.loc-res-uncertainty} \cite{stratton1941,harrington2001}.
+\textbf{Step 3.} Reject if either fails \cite{devaney2004}.
+\textbf{Physical meaning.} Beams and OAM orders are jointly bounded \cite{hansen1988}.
+
+\paragraph{Philosophical closure (simultaneous claims).}
+Localization and angular resolution are not independent design knobs on compact sources \cite{hansen1988,stratton1941,harrington2001,jackson1999}.
+Every claim of tight focusing with high azimuthal order is a simultaneous claim on \(\mathcal{L}_{2}\) and \(\mathcal{R}_{\mathrm{ang}}\); realizability
+requires both to satisfy Eqs.~\eqref{eq:ch4.localization-resolution-tradeoff}--\eqref{eq:ch4.loc-res-uncertainty} \cite{devaney2004,hansen1988}.
+
+\begin{corollary}[No free super-resolution on \(B_{a}\)]
+\label{cor:ch4.no-free-superres}
+\(\mathcal{L}_{2}\ll a^{2}\) and \(\mathcal{R}_{\mathrm{ang}}\gg k_{0}a\) cannot hold for the same \(\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) on ball \(B_{a}\)
+\cite{hansen1988,stratton1941,devaney2004,harrington2001}.
+\end{corollary}

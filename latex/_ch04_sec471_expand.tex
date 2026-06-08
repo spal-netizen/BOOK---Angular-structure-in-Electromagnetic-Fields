@@ -1,0 +1,242 @@
+\subsection{Non-radiating and unreachable modes}
+\label{sec:ch471}
+% TOC tag: [USE]
+
+Non-radiating currents and unreachable far-zone components occupy structural nullities of the export map
+\(\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega\) established in Section~\ref{sec:ch27} \cite{stratton1941,harrington2001}.
+Subsection~\ref{sec:ch471} quantifies how those nullities partition synthesis space: near-field observables respond to
+\(\ker\mathcal{R}_\omega\) and to unreachable coefficient directions, while \(\mathbf{c}\) on \(\mathcal{F}_{\mathrm{rad}}\) does not
+\cite{devaney2004,hansen1988}. The distinction is membership, not magnitude---a sector can be exactly uncoupled to every admissible
+\(\Jimp\in\mathcal{J}_{\mathrm{real}}\) while still appearing in a VSH listing \cite{stratton1941,harrington2001}. Export rank counts
+reachable directions; nullity counts directions the chart prints but geometry cannot excite \cite{hansen1988,devaney2004}.
+
+\paragraph{Assumptions.}
+Import \(\ker\mathcal{R}_\omega\), Eq.~\eqref{eq:ch2.nr-current-def}, and Eq.~\eqref{eq:ch4.synthesis-null-space} \cite{stratton1941,harrington2001}.
+\(\boldsymbol{\Gamma}_\omega\) is compact on \(\mathcal{J}_{\mathrm{real}}\); tolerance \(\varepsilon\in(0,1)\) fixed \cite{devaney2004,hansen1988}.
+Synthesis audits use flux-normalized \(\mathcal{C}\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{hansen1988}. NR definitions are not re-derived here
+\cite{stratton1941,harrington2001}.
+
+\paragraph{Unreachable synthesis directions.}
+Define the unreachable subspace
+\begin{equation}
+\label{eq:ch4.unreachable-modes}
+\mathcal{U}_{\mathrm{unreach}}=\ker\boldsymbol{\Gamma}_\omega^{\dagger}\cap\mathbb{C}^{I},
+\end{equation}
+comprising coefficient directions orthogonal to every image \(\boldsymbol{\Gamma}_\omega[\Jimp]\), \(\Jimp\in\mathcal{J}_{\mathrm{real}}\)
+\cite{stratton1941,harrington2001,devaney2004}. Mathematically, Eq.~\eqref{eq:ch4.unreachable-modes} is the coefficient-side null space of the
+export adjoint. Physically, it is the set of pattern components no passive source on \(\Omega_{s}\) can radiate, regardless of feed optimization
+\cite{hansen1988,harrington2001}. Targets with nonzero \(\mathcal{U}_{\mathrm{unreach}}\) component violate \(\delta_{\mathrm{syn}}=0\) in
+Eq.~\eqref{eq:ch4.synthesis-residual-norm} regardless of MoM residual \cite{devaney2004}.
+
+\paragraph{Nullity dimension on \(B_{a}\).}
+For ball support \(B_{a}\) at \(k_{0}a\gtrsim1\),
+\begin{equation}
+\label{eq:ch4.unreach-dim-bound}
+\dim\mathcal{U}_{\mathrm{unreach}}\ \ge\ (2\ell_{\max}+1)^{2}-d_{\mathrm{eff}}(\varepsilon)-\dim\ker\mathcal{R}_\omega,
+\end{equation}
+because listing cardinality exceeds export rank whenever \(\ell_{\max}\) exceeds \(\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\)
+\cite{hansen1988,harrington2001,stratton1941}. On centered feeds, symmetry can force \(\dim\mathcal{U}_{\mathrm{unreach}}\) to exceed half of
+\(|\mathbb{C}^{I}|\) while \(d_{\mathrm{eff}}\le4\) \cite{jackson1999,hansen1988}.
+
+\begin{theorem}[Non-radiating lift does not enlarge \(\mathbf{c}\)]
+\label{thm:ch4.nr-lift-invisibility}
+For \(\mathbf{J}_{\mathrm{nr}}\in\ker\mathcal{R}_\omega\cap\mathcal{J}_{\mathrm{real}}\) and \(\Jimp\in\mathcal{J}_{\mathrm{real}}\),
+\(\boldsymbol{\Gamma}_\omega[\Jimp+\mathbf{J}_{\mathrm{nr}}]=\boldsymbol{\Gamma}_\omega[\Jimp]\) on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941,harrington2001}. Near-field data distinguish \(\mathbf{J}_{\mathrm{nr}}\); far-zone \(\mathbf{c}\) does not \cite{devaney2004}.
+\end{theorem}
+\begin{proof}
+Linearity: \(\mathcal{R}_\omega[\Jimp+\mathbf{J}_{\mathrm{nr}}]=\mathcal{R}_\omega[\Jimp]\) since \(\mathcal{R}_\omega[\mathbf{J}_{\mathrm{nr}}]=\mathbf{0}\)
+\cite{stratton1941}. Bounded \(\mathcal{C}\) on \(\mathcal{F}_{\mathrm{rad}}\) gives identical \(\mathbf{c}\) \cite{hansen1988,harrington2001}. Near-field
+functionals on \(\mathcal{F}_{\mathrm{ev}}\) retain NR sensitivity \cite{devaney2004}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.nr-lift-invisibility} is the synthesis invisibility law: NR superposition is a current-space ambiguity, not a far-zone degree of
+freedom \cite{stratton1941,harrington2001}. Inverse solvers that add NR templates alter near-field fits without changing \(\mathbf{c}\)
+\cite{devaney2004,hansen1988}.
+
+\paragraph{NR--unreachable composition.}
+Synthesis non-uniqueness aggregates NR lifts and unreachable directions:
+\begin{equation}
+\label{eq:ch4.nr-unreachable-composition}
+\mathcal{N}_{\mathrm{syn}}\supseteq\ker\mathcal{R}_\omega\oplus\mathcal{U}_{\mathrm{unreach}},
+\end{equation}
+with certificates valid only on quotient \(\mathbb{C}^{I}/\mathcal{N}_{\mathrm{syn}}\) \cite{stratton1941,harrington2001,devaney2004}.
+\begin{lemma}[Near-field discrimination bound]
+\label{lem:ch4.nf-discrimination}
+Distinct \(\Jimp_{A},\Jimp_{B}\) with identical \(\mathbf{c}\) require near-field probes resolving \(\ker\mathcal{R}_\omega\) to discriminate
+\cite{harrington2001,stratton1941}.
+\end{lemma}
+
+\paragraph{Reachable subspace projection.}
+Every target decomposes as
+\begin{equation}
+\label{eq:ch4.reachable-projection}
+\mathbf{c}_{\mathrm{target}}=\mathcal{P}_{\mathrm{reach}}\mathbf{c}_{\mathrm{target}}+\mathbf{c}_{\mathrm{unreach}},\qquad
+\mathbf{c}_{\mathrm{unreach}}\in\mathcal{U}_{\mathrm{unreach}},
+\end{equation}
+with \(\mathcal{P}_{\mathrm{reach}}=\boldsymbol{\Gamma}_\omega\boldsymbol{\Gamma}_\omega^{\dagger}\) \cite{harrington2001,stratton1941,devaney2004}.
+Realizability requires \(\mathbf{c}_{\mathrm{unreach}}=\mathbf{0}\) \cite{hansen1988}.
+
+\begin{theorem}[Unreachable component obstruction]
+\label{thm:ch4.unreachable-obstruction}
+If \(\|\mathbf{c}_{\mathrm{unreach}}\|_{\mathcal{C}}>\varepsilon\|\mathbf{c}_{\mathrm{target}}\|\), then
+\(\mathbf{c}_{\mathrm{target}}\notin\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) at tolerance \(\varepsilon\), independent of feed optimization
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{theorem}
+\begin{proof}
+Eq.~\eqref{eq:ch4.reachable-projection}; unreachable component lies outside \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) for all \(\Jimp\)
+\cite{stratton1941,harrington2001}. Synthesis residual Eq.~\eqref{eq:ch4.synthesis-residual-norm} lower-bounds \(\|\mathbf{c}_{\mathrm{unreach}}\|\)
+\cite{devaney2004,hansen1988}.
+\end{proof}
+
+Theorem~\ref{thm:ch4.unreachable-obstruction} closes the synthesis gate before any optimizer runs: unreachable weight is orthogonal to every admissible
+\(\Jimp\) portrait and therefore survives feed reweighting, adjoint iteration, and Tikhonov damping unchanged in the \(\mathcal{C}\)-gauge
+\cite{stratton1941,harrington2001,devaney2004}. Certification memos must report \(\|\mathbf{c}_{\mathrm{unreach}}\|/\|\mathbf{c}_{\mathrm{target}}\|\)
+alongside MoM residuals \cite{hansen1988}.
+
+\paragraph{Unreachable dimension bound.}
+On symmetric charts with \(\ell_{\max}\gg\ell_{\mathrm{supp}}(\varepsilon,k_{0}a)\),
+\begin{equation}
+\label{eq:ch4.unreach-dim-bound}
+\dim\mathcal{U}_{\mathrm{unreach}}\ \ge\ |\mathbb{C}^{I}|-d_{\mathrm{eff}}(\varepsilon)-\dim\ker\mathcal{R}_\omega,
+\end{equation}
+so large nullity is expected rather than pathological when listing exceeds geometry-supported rank \cite{hansen1988,harrington2001,stratton1941,devaney2004}.
+
+\paragraph{Fredholm split.}
+Compact \(\boldsymbol{\Gamma}_\omega\) yields Fredholm alternative: \(\mathbf{c}\in\operatorname{ran}\boldsymbol{\Gamma}_\omega\) iff
+\(\mathbf{c}\perp\mathcal{U}_{\mathrm{unreach}}\) \cite{harrington2001,stratton1941}. Eq.~\eqref{eq:ch4.reachable-projection} is the finite-dimensional
+realization \cite{devaney2004}.
+
+\paragraph{Quotient synthesis space.}
+\begin{equation}
+\label{eq:ch4.quotient-synthesis}
+\mathbf{c}_{1}=\mathbf{c}_{2}\ \text{in }\mathbb{C}^{I}/\mathcal{U}_{\mathrm{unreach}}
+\iff
+\delta_{\mathrm{syn}}(\mathbf{c}_{1}-\mathbf{c}_{2})=0.
+\end{equation}
+Uniqueness of \(\Jimp\) is not claimed; uniqueness of export class is \cite{harrington2001,stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (nr) {$\ker\mathcal{R}_\omega$};
+  \node[ch1box, right=11mm of nr] (un) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \node[ch1box, right=11mm of un] (c) {$\mathbf{c}$};
+  \node[ch1box, below=11mm of un] (nf) {near field};
+  \draw[ch1flow] (nr) -- (c);
+  \draw[ch1flow] (un) -- (c);
+  \draw[ch1flow] (nf) -- (nr);
+  \draw[ch1flow] (nf) -- (un);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch471}: NR and unreachable components are invisible to \(\mathbf{c}\) but visible to near probes.}
+\label{fig:ch4.nr-unreachable-split}
+\end{figure}
+
+Figure~\ref{fig:ch4.nr-unreachable-split} maps three observability channels: far-zone \(\mathbf{c}\) collapses NR and unreachable components; near probes
+retain sensitivity \cite{stratton1941,harrington2001,devaney2004}.
+
+\paragraph{NR template audit.}
+Non-radiating templates from Eq.~\eqref{eq:ch2.nr-current-def} span \(\ker\mathcal{R}_\omega\cap\mathcal{J}_{\mathrm{real}}\)
+\cite{stratton1941,harrington2001}. Adding templates before inversion leaves \(\mathbf{c}\) fixed per Theorem~\ref{thm:ch4.nr-lift-invisibility} but
+changes near-field response \cite{devaney2004,hansen1988}.
+
+\paragraph{Worked illustration (unreachable obstruction).}
+\(\mathbf{c}_{\mathrm{target}}\) with \(\|\mathbf{c}_{\mathrm{unreach}}\|/\|\mathbf{c}_{\mathrm{target}}\|=0.14\) at \(\varepsilon=10^{-2}\): MoM residual
+\(3\times10^{-5}\) but Theorem~\ref{thm:ch4.unreachable-obstruction} rejects realizability \cite{harrington2001,devaney2004,stratton1941,hansen1988}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+  \node[ch1box] (far) {$\mathcal{F}_{\mathrm{rad}}$};
+  \node[ch1box, right=11mm of far] (meas) {measurement};
+  \node[ch1box, below=9mm of far] (nr) {$\ker\mathcal{R}_\omega$};
+  \node[ch1box, below=9mm of meas] (un) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \draw[ch1flow] (far) -- (meas);
+  \draw[ch1flow, dashed] (nr) -- (far);
+  \draw[ch1flow, dashed] (un) -- (far);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch471}: far-zone measurements intersect \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) only.}
+\label{fig:ch4.measurement-intersection}
+\end{figure}
+
+\paragraph{Null-space diagnostic sequence.}
+Workflow: (i) form \(\boldsymbol{\Gamma}_\omega\); (ii) compute \(\mathcal{P}_{\mathrm{reach}}\); (iii) decompose \(\mathbf{c}_{\mathrm{target}}\) via
+Eq.~\eqref{eq:ch4.reachable-projection}; (iv) test Theorem~\ref{thm:ch4.unreachable-obstruction}; (v) report \(\dim\mathcal{U}_{\mathrm{unreach}}\) and
+\(d_{\mathrm{eff}}\) jointly \cite{harrington2001,stratton1941,devaney2004,hansen1988}.
+
+\paragraph{Worked illustration (NR superposition).}
+\(\Jimp_{B}=\Jimp_{A}+\mathbf{J}_{\mathrm{nr}}\) leaves \(\mathbf{c}\) unchanged; near reactive fields differ \cite{stratton1941,harrington2001,devaney2004}.
+
+\paragraph{Worked illustration (symmetry null).}
+Centered feed: unit weight on \(\widehat{c}_{5,3}^{(\mathbf{M})}\) lies in \(\mathcal{U}_{\mathrm{unreach}}\) \cite{hansen1988,jackson1999,stratton1941}.
+
+\paragraph{Worked illustration (projection audit).}
+\(30\%\) weight in \(\mathcal{U}_{\mathrm{unreach}}\): \(\delta_{\mathrm{syn}}>0\) despite unit-norm target \cite{hansen1988,harrington2001,stratton1941}.
+
+\paragraph{Worked illustration (NR tomography trap).}
+Near-field tomography recovers \(\mathbf{J}_{\mathrm{nr}}\); far pattern unchanged \cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+
+\paragraph{Worked numerics.}
+Centered \(B_{a}\), \(k_{0}a=1\): \(\dim\mathcal{U}_{\mathrm{unreach}}/|\mathbb{C}^{I}|=0.55\), \(d_{\mathrm{eff}}=4\) \cite{hansen1988,harrington2001}.
+
+\paragraph{Problem (unreachable component).}
+\textbf{Problem.} Unit weight on symmetry-null sector. Well-posed?
+\textbf{Step 1.} Project off \(\mathcal{U}_{\mathrm{unreach}}\) \cite{harrington2001}.
+\textbf{Step 2.} Test \(\delta_{\mathrm{syn}}\) on projection \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Report unreachable part as failure \cite{hansen1988}.
+\textbf{Physical meaning.} Null directions are structural \cite{stratton1941}.
+
+\paragraph{Problem (NR discrimination).}
+\textbf{Problem.} Distinguish \(\Jimp_{A}\) from \(\Jimp_{B}=\Jimp_{A}+\mathbf{J}_{\mathrm{nr}}\) by far-zone data?
+\textbf{Step 1.} Test \(\boldsymbol{\Gamma}_\omega[\mathbf{J}_{\mathrm{nr}}]=\mathbf{0}\) \cite{stratton1941}.
+\textbf{Step 2.} Conclude identical \(\mathbf{c}\) \cite{harrington2001}.
+\textbf{Step 3.} Use near fields per Lemma~\ref{lem:ch4.nf-discrimination} \cite{devaney2004}.
+\textbf{Physical meaning.} NR lifts are synthesis-invisible \cite{stratton1941}.
+
+\paragraph{Problem (projection certificate).}
+\textbf{Problem.} Certify \(\mathbf{c}_{\mathrm{target}}\) before inversion.
+\textbf{Step 1.} Compute \(\mathbf{c}_{\mathrm{unreach}}=(\mathbf{I}-\mathcal{P}_{\mathrm{reach}})\mathbf{c}_{\mathrm{target}}\) \cite{harrington2001}.
+\textbf{Step 2.} Test Theorem~\ref{thm:ch4.unreachable-obstruction} \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Reject if \(\|\mathbf{c}_{\mathrm{unreach}}\|>\varepsilon\|\mathbf{c}_{\mathrm{target}}\|\) \cite{hansen1988}.
+\textbf{Physical meaning.} Reachable projection is the synthesis gate \cite{stratton1941}.
+
+\paragraph{Problem (quotient reporting).}
+\textbf{Problem.} Two currents, same \(\mathbf{c}\). Report uniqueness?
+\textbf{Step 1.} State quotient via Eq.~\eqref{eq:ch4.quotient-synthesis} \cite{harrington2001}.
+\textbf{Step 2.} Identify \(\dim\ker\mathcal{R}_\omega\) \cite{stratton1941}.
+\textbf{Step 3.} Uniqueness on quotient only \cite{devaney2004,hansen1988}.
+\textbf{Physical meaning.} \(\mathbf{c}\) is the export certificate \cite{stratton1941}.
+
+\paragraph{Problem (nullity dimension).}
+\textbf{Problem.} \(\dim\mathcal{U}_{\mathrm{unreach}}=120\), \(d_{\mathrm{eff}}=6\), \(|\mathbb{C}^{I}|=200\). Consistent?
+\textbf{Step 1.} Check Eq.~\eqref{eq:ch4.unreach-dim-bound} \cite{hansen1988,harrington2001}.
+\textbf{Step 2.} Compare \(\ell_{\max}\) to \(\ell_{\mathrm{supp}}\) \cite{stratton1941,devaney2004}.
+\textbf{Step 3.} Conclude over-listing \cite{jackson1999}.
+\textbf{Physical meaning.} Large nullity expected on symmetric charts \cite{harrington2001}.
+
+\paragraph{Problem (MoM null fitting).}
+\textbf{Problem.} MoM fits unreachable sector to \(10^{-4}\) residual. Realizable?
+\textbf{Step 1.} Decompose via Eq.~\eqref{eq:ch4.reachable-projection} \cite{harrington2001,stratton1941}.
+\textbf{Step 2.} Test \(\mathbf{c}_{\mathrm{unreach}}=\mathbf{0}\) \cite{devaney2004}.
+\textbf{Step 3.} Reject if unreachable weight exceeds \(\varepsilon\) \cite{hansen1988}.
+\textbf{Physical meaning.} MoM fits null directions as noise \cite{harrington2001}.
+
+\paragraph{Philosophical closure (structural nullity).}
+Weak coupling is magnitude; unreachable nullity is membership \cite{hansen1988,harrington2001,stratton1941}. Sectors in \(\mathcal{U}_{\mathrm{unreach}}\)
+have zero coupling to every admissible \(\Jimp\), not merely small coupling \cite{devaney2004}. Reports that rank by \(|\mathcal{K}_{\alpha}|\) without
+null-space tests confuse magnitude with realizability \cite{harrington2001,hansen1988}.
+
+\begin{corollary}[Far-zone blindness to NR lifts]
+\label{cor:ch4.farzone-nr-blind}
+Any measurement functional supported only on \(\mathcal{F}_{\mathrm{rad}}\) is blind to \(\ker\mathcal{R}_\omega\) on \(\mathcal{J}_{\mathrm{real}}\)
+\cite{stratton1941,harrington2001,devaney2004,hansen1988}.
+\end{corollary}
+
+\paragraph{Validity.}
+Theorem~\ref{thm:ch4.nr-lift-invisibility} assumes linear Maxwell maps on \(\mathcal{J}_{\mathrm{real}}\) \cite{stratton1941}. Loss modifies
+\(\ker\mathcal{R}_\omega\) without promoting NR content to \(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001,devaney2004}. Active sources enlarge
+\(\mathcal{J}_{\mathrm{real}}\) but do not remove unreachable chart nullities on passive synthesis targets \cite{hansen1988}.
