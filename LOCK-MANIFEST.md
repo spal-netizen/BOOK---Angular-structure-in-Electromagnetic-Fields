@@ -8,14 +8,26 @@
 
 ## START HERE (when you return)
 
-1. Read `START-HERE.md` — resume pointer (1 min)  
-2. Read `TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 1 **RE-LOCKED** (2026-06-07)  
-3. Read `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 **LOCKED** (2026-05-31)  
-4. Read `00-NOTATION.md` — conventions + Ch. 2 operator symbols **locked**  
-5. Open `latex/ch03.tex` — §3.0 framing + §3.0.1 drafted; next **§3.0.2**
-6. Read `TOC/CH03-DRAFTING-KICKOFF-LOCK.md` before each subsection
+1. Read `TOC/VOL-I-CLASSICAL-MONOGRAPH-FINAL-PASS-LOCK.md` — **ACTIVE** final monograph pass (2026-06-14)  
+2. Read `TOC/VOL-I-SESSION-SAVE-LOCK.md` — session resume (1 min)  
+3. **Ch. 3:** `TOC/CH03-MONOGRAPH-FINAL-LOCK.md` — **FROZEN** (190 pp: `review/Volume-I-Ch03-Monograph-Final-2026-06-14.pdf`)  
+4. Review PDFs: `review/CUP-FINAL-10-Chapter{1,2,4}.pdf` — Ch. 3 superseded by monograph-final PDF above  
+5. **Next:** Ch. 4 monograph final pass (author-directed)
 
-**Resume command:** `GCHECK REFRESH DRAFT 3.0.2 — CH3-FRESH MIN-5PP ZERO-REPEAT`
+**Status:** Ch. 3 monograph final **COMPLETE**; Volume I monograph pass **IN PROGRESS** (Ch. 4 next)  
+**Unlock (author only):** `GCHECK UNLOCK VOL-I-MONOGRAPH-FINAL` or per-chapter `GCHECK UNLOCK VOL-I-CH0N-MONOGRAPH-FINAL`
+
+---
+
+## START HERE (legacy — Volume I structural freeze)
+
+1. Read `TOC/VOL-I-SESSION-SAVE-LOCK.md` — session resume (1 min)  
+2. Read `TOC/VOLUME-I-FINAL-FREEZE-LOCK.md` — structural freeze (2026-06-10)  
+3. Read `TOC/VOL-I-VERIFICATION-CERT-LOCK.md` — zero-error certification  
+4. Open `latex/main.pdf` — Volume I full build (**755 pages**)  
+
+**Status (legacy):** Volume I structural package **COMPLETE — FINAL FROZEN**  
+**Unlock (author only):** `GCHECK UNLOCK VOLUME-I-FINAL`
 
 ---
 
@@ -652,3 +664,114 @@ Resume: read `TOC/CH02-SESSION-SAVE-LOCK.md` → full GCHECK stack → `GCHECK R
 | PDF | Rebuild before Ch. 4 editing |
 
 **Resume command:** `GCHECK DRAFT 4.0`
+
+---
+
+## LOCK ADDENDUM (2026-06-09 — VOLUME I DRAFT FREEZE + AUDIT PIPELINE)
+
+**Status:** Volume I Ch. 1–4 **FROZEN** at draft-complete baseline. Five-step audit pipeline **AUTHORIZED**.
+
+| Item | Value |
+|------|--------|
+| Master freeze | `TOC/VOLUME-I-FREEZE-LOCK.md` |
+| Audit pipeline | `TOC/VOLUME-I-AUDIT-PIPELINE-LOCK.md` |
+| Ch. 1 freeze | `TOC/CH01-VOLUME-I-FREEZE-LOCK.md` — 10,736 lines |
+| Ch. 2 freeze | `TOC/CH02-VOLUME-I-FREEZE-LOCK.md` — 17,957 lines |
+| Ch. 3 freeze | `TOC/CH03-VOLUME-I-FREEZE-LOCK.md` — 19,154 lines |
+| Ch. 4 freeze | `TOC/CH04-VOLUME-I-FREEZE-LOCK.md` — 12,236 lines |
+| PDF | `latex/main.pdf` — **861 pages** |
+| Archive | `review/Volume-I-Main-861pp-VolI-Freeze-2026-06-09.pdf` |
+
+**Resume command:** `GCHECK VOL-I-AUDIT-1-TIMELESSNESS`  
+**Do not:** ad-hoc edits, bulk deepen, or parallel audits without author unlock.
+
+---
+
+## LOCK ADDENDUM (2026-06-08 — SESSION CLOSE; AUDIT 2 PASS 2 COMPLETE)
+
+**Status:** Volume I session **CLOSED**. Audit 2 Classical Monograph Pass 2 **COMPLETE**. Safe to resume tomorrow.
+
+| Item | Value |
+|------|--------|
+| Session save | `TOC/VOL-I-SESSION-SAVE-LOCK.md` — **primary resume pointer** |
+| Audit 2 Pass 2 lock | `TOC/VOL-I-AUDIT-2-AUTHOR-REPORT-INTEGRATION-LOCK.md` |
+| Script | `scripts/Vol-I-Audit-2-Pass2-Monograph.ps1` |
+| PDF | `latex/main.pdf` — **751 pages** |
+| Archive | `review/Volume-I-Main-751pp-Audit2-Pass2-Monograph-2026-06-09.pdf` |
+| Manuscript lines | Ch.1 **10,289** / Ch.2 **17,051** / Ch.3 **18,537** / Ch.4 **12,335** |
+
+**Resume command:** `GCHECK VOL-I-AUDIT-3-MASTERPIECE`  
+**Author close:** File → Save All in Cursor before closing IDE.  
+**Do not:** reopen scientific architecture; prose compression deferred to Step 5 Final Freeze.
+
+---
+
+## LOCK ADDENDUM (2026-06-10 — VOLUME I FINAL FREEZE COMPLETE)
+
+**Status:** Volume I Ch. 1–4 **FINAL FROZEN**. Five-step audit pipeline **COMPLETE**.
+
+| Item | Value |
+|------|--------|
+| Final freeze lock | `TOC/VOLUME-I-FINAL-FREEZE-LOCK.md` |
+| Audit 5 lock | `TOC/VOL-I-AUDIT-5-COMPLETE-LOCK.md` |
+| PDF | `latex/main.pdf` — **751 pages** |
+| Archive | `review/Volume-I-FINAL-751pp-2026-06-10.pdf` |
+| Manuscript lines | Ch.1 **8,756** / Ch.2 **15,054** / Ch.3 **15,885** / Ch.4 **10,519** |
+
+**Resume command:** `GCHECK UNLOCK VOLUME-I-FINAL`  
+**Do not:** edit Volume I without explicit author unlock.
+
+---
+
+## LOCK ADDENDUM (2026-06-14 — CHAPTER 3 MONOGRAPH FINAL)
+
+**Status:** Ch. 3 **CLASSICAL MONOGRAPH FINAL FROZEN** — masterpiece + lucidity passes complete.
+
+| Item | Value |
+|------|--------|
+| Final lock | `TOC/CH03-MONOGRAPH-FINAL-LOCK.md` |
+| Revision report | `TOC/CH03-CLASSICAL-MONOGRAPH-FINAL-REVISION-REPORT.md` |
+| Manuscript | `latex/ch03.tex` — ~12,480 lines |
+| PDF | `review/Volume-I-Ch03-Monograph-Final-2026-06-14.pdf` — **190 pages** |
+| Ref verify | `scripts/Ch03-Verify-Refs.ps1` — **PASS** |
+| Unlock closed | `GCHECK UNLOCK VOL-I-CH03-MONOGRAPH-FINAL`, `GCHECK UNLOCK VOL-I-CH03-LUCIDITY-PASS` |
+
+**Resume command:** `GCHECK UNLOCK VOL-I-CH03-MONOGRAPH-FINAL` (author only)  
+**Volume I next:** Ch. 4 monograph final pass (author-directed)
+
+**Ch. 3 CUP presence (2026-06-14):** **FROZEN** — `TOC/CH03-CUP-PROFESSORIAL-PRESENCE-PASS-LOCK.md`; PDF `review/Volume-I-Ch03-CUP-Presence-Final-2026-06-14.pdf`
+
+**Ch. 4 masterpiece classicalization (2026-06-14):** **CLOSED** — superseded by CUP presence lock  
+**Ch. 4 CUP presence (2026-06-14):** **FROZEN** — `TOC/CH04-CUP-PROFESSORIAL-PRESENCE-PASS-LOCK.md`; PDF `review/Volume-I-Ch04-CUP-Presence-Final-2026-06-14.pdf` (**120 pp**)  
+**Ch. 4 lucidity unlock closed:** `GCHECK UNLOCK VOL-I-CH04-LUCIDITY-PASS` → `TOC/CH04-LUCIDITY-PASS-UNLOCK-LOG.md`
+
+**Ch. 1 CUP presence (2026-06-14):** **FROZEN** — `TOC/CH01-CUP-PROFESSORIAL-PRESENCE-PASS-LOCK.md`; PDF `review/Volume-I-Ch01-CUP-Presence-Final-2026-06-14.pdf` (**64 pp**); **68 TikZ figures** retained  
+**Ch. 1 master revision closed:** `GCHECK UNLOCK MASTER-REVISE CH01` → `TOC/CH01-MASTER-REVISION-UNLOCK-LOG.md`  
+**Ch. 1 lucidity unlock closed:** `GCHECK UNLOCK VOL-I-CH01-LUCIDITY-PASS` → `TOC/CH01-LUCIDITY-PASS-UNLOCK-LOG.md`
+
+**Ch. 2 CUP presence (2026-06-14):** **FROZEN** — `TOC/CH02-CUP-PROFESSORIAL-PRESENCE-PASS-LOCK.md`; PDF `review/Volume-I-Ch02-CUP-Presence-Final-2026-06-14.pdf` (**148 pp**)  
+**Ch. 2 master revision closed:** `GCHECK UNLOCK MASTER-REVISE CH02` → `TOC/CH02-MASTER-REVISION-UNLOCK-LOG.md`  
+**Ch. 2 lucidity unlock closed:** `GCHECK UNLOCK VOL-I-CH02-LUCIDITY-PASS` → `TOC/CH02-LUCIDITY-PASS-UNLOCK-LOG.md`
+
+---
+
+## LOCK ADDENDUM (2026-06-25 — PHASE VIII LITERARY-PHYSICAL COMPLETE)
+
+**Status:** Volume I Ch. 1–4 **Phase VIII literary-physical pass COMPLETE**. Scorecard **~92/100**.
+
+| Item | Value |
+|------|--------|
+| Master lock | `TOC/VOL-I-PHASE8-COMPLETE-LOCK.md` |
+| Scorecard | `TOC/VOL-I-PHASE8I-SCORECARD-REPORT.md` |
+| Voice lexicon | `TOC/VOL-I-PHASE8-VOICE-LEXICON.md` |
+| Nine-criteria | `TOC/VOL-I-NINE-CRITERIA-SCORECARD-LOCK.md` |
+| Session save | `TOC/VOL-I-SESSION-SAVE-LOCK.md` |
+| Orchestrator | `scripts/VolI-Phase8I-Scorecard.ps1` |
+| Build | `scripts/Build-VolumeI-Final.ps1` |
+
+**Gates PASS:** VIII-A, VIII-C, VIII-D, VIII-E, VIII-F, VIII-G, VIII-H, VIII-I  
+**Open:** external referee (Phase IX); 30-page Harrington read-aloud (author)
+
+**Resume command:** `GCHECK UNLOCK VOL-I-PHASE8-LITERARY-PHYSICAL` (author only)  
+**Do not:** claim masterpiece-safe until `TOC/VOL-I-EXTERNAL-REFEREE-RESPONSE.md`
+

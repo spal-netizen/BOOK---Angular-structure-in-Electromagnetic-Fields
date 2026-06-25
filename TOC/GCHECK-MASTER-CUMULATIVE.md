@@ -205,3 +205,18 @@ Optional when depth/citation/model workflow applies: `MODEL-WORKFLOW-LOCKED.md`,
 ---
 
 **END OF LOCKED DOCUMENT** — `TOC/GCHECK-MASTER-CUMULATIVE.md` — **LOCKED 2026-05-29** (Ch. 2 progress sync **2026-05-31**)
+
+---
+
+## 6. Phase VIII literary-physical addendum (2026-06-25)
+
+**Status:** **COMPLETE** — `TOC/VOL-I-PHASE8-COMPLETE-LOCK.md`
+
+| Gate | Verify |
+|------|--------|
+| VIII-A lexicon | `scripts/VolI-Phase8A-Extended.ps1 -VerifyOnly` |
+| VIII-C architecture | `scripts/VolI-Phase8C-Architecture-Invisibility.ps1 -VerifyOnly` |
+| VIII-I scorecard | `scripts/VolI-Phase8I-Scorecard.ps1` |
+
+**Scorecard:** ~92/100 expert composite; 0 `[Proof sketch]`; 171 vignettes.  
+**Unlock:** `GCHECK UNLOCK VOL-I-PHASE8-LITERARY-PHYSICAL` (author only)
