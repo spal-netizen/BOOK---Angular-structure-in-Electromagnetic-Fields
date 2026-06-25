@@ -34,7 +34,7 @@ Or inspect only: open `latex/main.pdf` or latest `review/Volume-I-FINAL-PreFreez
 | Phase VIII-G — Harrington voice (Ch. 1–4) | **PASS** |
 | Phase VIII-H — Ch. 3 proofs + figure merge | **PASS** |
 | Phase VIII-I — scorecard (~92/100 expert composite) | **PASS** |
-| Volume I full build + archive | **COMPLETE** |
+| Volume I full build + archive | **COMPLETE** (540 pp archive; fresh build in progress) |
 
 ---
 
@@ -77,7 +77,7 @@ Or inspect only: open `latex/main.pdf` or latest `review/Volume-I-FINAL-PreFreez
 | Step | Action |
 |------|--------|
 | 1 | Confirm `latex/main.pdf` and archive PDF open |
-| 2 | Git commit governance + manuscript (if not already committed) |
+| 2 | Git commit `211dcdb` — Phase VIII governance + Ch. 1–4 |
 | 3 | Phase IX: external referee when ready |
 
 ---
