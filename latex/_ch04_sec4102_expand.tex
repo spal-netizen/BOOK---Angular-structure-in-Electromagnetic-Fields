@@ -1,4 +1,4 @@
-\subsection{Construction of non-accessible eigenfields}
+﻿\subsection{Construction of non-accessible eigenfields}
 \label{sec:ch4102}
 % TOC tag: [FIG+PROB][USE]
 
@@ -16,13 +16,17 @@ Section~\ref{sec:ch471} \cite{stratton1941,harrington2001,hansen1988,devaney2004
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (feed) {Dipole feed};
-  \node[ch1box, right=11mm of feed] (gamma) {$\boldsymbol{\Gamma}_\omega$};
-  \node[ch1box, right=11mm of gamma] (c) {$\mathbf{c}$};
-  \node[ch1box, below=11mm of gamma] (null) {$\mathcal{U}_{\mathrm{unreach}}$};
-  \draw[ch1flow] (feed) -- (gamma) -- (c);
-  \draw[ch1flow] (null) -- (gamma);
+  \node[ch1box, right=7mm of feed] (gamma) {$\boldsymbol{\Gamma}_\omega$};
+  \node[ch1box, right=7mm of gamma] (c) {$\mathbf{c}$};
+  \node[ch1box, below=5mm of gamma] (null) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \draw[ch1flow] (feed.east) -- (feed.east |- gamma.west);
+  \draw[ch1flow] (feed.east |- gamma.west) -- (gamma.west);
+  \draw[ch1flow] (gamma.east) -- (gamma.east |- c.west);
+  \draw[ch1flow] (gamma.east |- c.west) -- (c.west);
+  \draw[ch1flow] (null.south) -- (null.south |- gamma.north);
+  \draw[ch1flow] (null.south |- gamma.north) -- (gamma.north);
 \end{tikzpicture}%
 }
 \caption{Unreachable directions are orthogonal to \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\); coupling magnitude does not rescue them.}
@@ -74,11 +78,14 @@ Equation~\eqref{eq:ch4.ex-unreachable-residual} is the MoM face of unreachable o
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (cna) {$\mathbf{c}_{\mathrm{na}}$};
-  \node[ch1box, right=11mm of cna] (perp) {$\mathbf{r}_{\perp}$};
-  \node[ch1box, right=11mm of perp] (mom) {MoM fit};
-  \draw[ch1flow] (cna) -- (perp) -- (mom);
+  \node[ch1box, right=7mm of cna] (perp) {$\mathbf{r}_{\perp}$};
+  \node[ch1box, right=7mm of perp] (mom) {MoM fit};
+  \draw[ch1flow] (cna.east) -- (cna.east |- perp.west);
+  \draw[ch1flow] (cna.east |- perp.west) -- (perp.west);
+  \draw[ch1flow] (perp.east) -- (perp.east |- mom.west);
+  \draw[ch1flow] (perp.east |- mom.west) -- (mom.west);
 \end{tikzpicture}%
 }
 \caption{MoM cannot reduce residual when the target lies entirely in unreachable nullity.}

@@ -1,4 +1,4 @@
-\section{Truncation and Effective Dimension}
+﻿\section{Truncation and Effective Dimension}
 \label{sec:ch46}
 
 Sections~\ref{sec:ch43}--\ref{sec:ch45} established radiative rank \(r_{\mathrm{rad}}(\varepsilon)\), spectral compression on
@@ -94,11 +94,14 @@ angular charts---changes normalization constants in Eq.~\eqref{eq:ch4.ell-max-sc
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 10mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ka) {$k_{0}a$};
-  \node[ch1box, right=12mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=12mm of ell] (sr) {$\mathcal{S}_{\mathrm{real}}$};
-  \draw[ch1flow] (ka) -- (ell) -- (sr);
+  \node[ch1box, right=7mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=7mm of ell] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (ka.east) -- (ka.east |- ell.west);
+  \draw[ch1flow] (ka.east |- ell.west) -- (ell.west);
+  \draw[ch1flow] (ell.east) -- (ell.east |- sr.west);
+  \draw[ch1flow] (ell.east |- sr.west) -- (sr.west);
 \end{tikzpicture}%
 }
 \caption{Electrical size \(k_{0}a\) sets the maximum supported angular order \(\ell_{\mathrm{supp}}\) before synthesis listing;
@@ -338,14 +341,17 @@ phase reparameterization of \(\mathcal{C}\); only prefactors \(C_{\mathrm{vol}},
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (vol) {$(k_{0}a)^{3}$};
-  \node[ch1box, right=11mm of vol] (area) {$k_{0}^{2}A_{a}$};
-  \node[ch1box, right=11mm of area] (min) {$\min\{\cdot\}$};
-  \node[ch1box, right=11mm of min] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (vol) -- (min);
-  \draw[ch1flow] (area) -- (min);
-  \draw[ch1flow] (min) -- (deff);
+  \node[ch1box, right=7mm of vol] (area) {$k_{0}^{2}A_{a}$};
+  \node[ch1box, right=7mm of area] (min) {$\min\{\cdot\}$};
+  \node[ch1box, right=7mm of min] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1seg] (vol.east) -- (vol.east |- min.west);
+  \draw[ch1flow] (vol.east |- min.west) -- (min.west);
+  \draw[ch1flow] (area.east) -- (area.east |- min.west);
+  \draw[ch1flow] (area.east |- min.west) -- (min.west);
+  \draw[ch1flow] (min.east) -- (min.east |- deff.west);
+  \draw[ch1flow] (min.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Joint scaling audit: effective dimension is bounded by the minimum of volume and area rank laws once support class is declared.}
@@ -537,11 +543,14 @@ coordinates; coupling tails count watts \cite{stratton1941,collin2001}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (dos) {Subsec.~\ref{sec:ch353} DOS};
-  \node[ch1box, right=11mm of dos] (tail) {Eq.~\eqref{eq:ch4.coupling-tail-envelope}};
-  \node[ch1box, right=11mm of tail] (rr) {$r_{\mathrm{rad}}$};
-  \draw[ch1flow] (dos) -- (tail) -- (rr);
+  \node[ch1box, right=7mm of dos] (tail) {Eq.~\eqref{eq:ch4.coupling-tail-envelope}};
+  \node[ch1box, right=7mm of tail] (rr) {$r_{\mathrm{rad}}$};
+  \draw[ch1flow] (dos.east) -- (dos.east |- tail.west);
+  \draw[ch1flow] (dos.east |- tail.west) -- (tail.west);
+  \draw[ch1flow] (tail.east) -- (tail.east |- rr.west);
+  \draw[ch1flow] (tail.east |- rr.west) -- (rr.west);
 \end{tikzpicture}%
 }
 \caption{Channel DOS grows algebraically with \(\ell_{\max}\); coupling tail compression bounds export rank \(r_{\mathrm{rad}}\) independently of listing size.}
@@ -677,7 +686,7 @@ Loss lowers effective decay rates and may increase \(r_{\mathrm{rad}}(\varepsilo
 Radiative rank names export directions in the singular-value basis of Eq.~\eqref{eq:ch4.gamma-SVD}; laboratories and inverse-design workflows
 nevertheless require a single integer summary for arrays, MIMO links, and tolerance certificates \cite{harrington2001,devaney2004,collin2001}.
 Subsection~\ref{sec:ch464} locks that integer to geometry-imposed thresholds on \(\boldsymbol{\Gamma}_\omega\), elevating the preview
-Eq.~\eqref{eq:ch4.effective-dimension-preview} to the chapter definition of effective electromagnetic dimension
+Eq.~\eqref{eq:ch4.effective-dimension} to the chapter definition of effective electromagnetic dimension
 \cite{stratton1941,hansen1988,jackson1999}.
 
 \paragraph{Assumptions.}
@@ -724,12 +733,17 @@ Inverse solvers may return longer vectors in listing coordinates, but only \(d_{
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
-  \node[ch1box, right=11mm of svd] (rr) {$r_{\mathrm{rad}}$};
-  \node[ch1box, right=11mm of rr] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, right=11mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
-  \draw[ch1flow] (svd) -- (rr) -- (deff) -- (sr);
+  \node[ch1box, right=7mm of svd] (rr) {$r_{\mathrm{rad}}$};
+  \node[ch1box, right=7mm of rr] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=7mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (svd.east) -- (svd.east |- rr.west);
+  \draw[ch1flow] (svd.east |- rr.west) -- (rr.west);
+  \draw[ch1flow] (rr.east) -- (rr.east |- deff.west);
+  \draw[ch1flow] (rr.east |- deff.west) -- (deff.west);
+  \draw[ch1flow] (deff.east) -- (deff.east |- sr.west);
+  \draw[ch1flow] (deff.east |- sr.west) -- (sr.west);
 \end{tikzpicture}%
 }
 \caption{Effective electromagnetic dimension equals radiative rank in the export gauge and bounds the realizable synthesis set

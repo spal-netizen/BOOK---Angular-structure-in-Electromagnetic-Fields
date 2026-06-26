@@ -8,21 +8,28 @@
 **TOC:** `TOC/volume-I-ch01-04-FINAL.txt` — LOCKED  
 **GCHECK master:** `TOC/GCHECK-MASTER-CUMULATIVE.md`  
 **Governance locked:** 2026-05-31 (`LOCK-MANIFEST.md` addendum)  
-**Resume at:** **§4.11.1** inventory / forward map (§4.6–§4.10 pass 3/3–5/5 merged 2026-06-08)
+**Resume at:** **VOLUME I FINAL FROZEN** (2026-06-17 integrated build) — `TOC/VOLUME-I-FINAL-FREEZE-LOCK.md`
 
 ## Current focus
 
 | Field | Value |
 |-------|--------|
-| Active chapter | **4** |
-| Active section | **4.0** Introduction (compressed); next **§4.0.1** |
+| Active volume | **Volume I — ALL FOUR CHAPTERS FROZEN** |
+| Active phase | **Volume I COMPLETE — FINAL FROZEN (integrated build)** |
 | Tier | A |
-| Status | **Ch. 1 audit done**; **Ch. 2 accessibility audit remediated**; **Ch. 3 forensic audit REMEDIATED** through **§3.11.3** |
-| Master command | `GCHECK DRAFT 4.11` (chapter inventory + forward map) |
-| Ch. 4 doctrine | `TOC/CH04-DRAFTING-KICKOFF-LOCK.md` + `TOC/CH04-REDRAFT-DEPTH-LOCK.md` (locked 2026-06-08) |
-| PDF | **667 pages** (`latex/main.pdf`, §4.9–§4.10 pass 3/3) |
-| Depth | §4.6 pass **3/3**; §4.7–§4.8 pass **5/5**; §4.9–§4.10 pass **3/3**; §4.11 pending |
-| Review cadence | **Chapter-end only** (author revises once §4.11 complete) |
+| Status | **MASTERPIECE AUDIT + TRANSFORMATION + INTEGRATION COMPLETE** (2026-06-17); deepen halted |
+| Master command | `GCHECK UNLOCK VOLUME-I-FINAL` (unlock only) |
+| Integration report | `TOC/VOL-I-FINAL-INTEGRATION-REPORT.md` — cross-chapter checks **PASS** |
+| Masterpiece locks | `TOC/VOL-I-MASTERPIECE-AUDIT-COMPLETE-LOCK.md` · `TOC/VOL-I-MASTERPIECE-TRANSFORMATION-COMPLETE-LOCK.md` |
+| Session save | `TOC/VOL-I-FIG-SESSION-SAVE-LOCK.md` — Tier A figure re-embed (optional follow-up) |
+| Audit locks | `TOC/VOL-I-AUDIT-1-COMPLETE-LOCK.md` … `TOC/VOL-I-AUDIT-5-COMPLETE-LOCK.md` |
+| Freeze lock | `TOC/VOLUME-I-FINAL-FREEZE-LOCK.md` — **ACTIVE** |
+| Pipeline lock | `TOC/VOLUME-I-AUDIT-PIPELINE-LOCK.md` — **ALL 5 STEPS COMPLETE** |
+| PDF | **540 pages** — `latex/main.pdf` + `review/Volume-I-FINAL-540pp-2026-06-13.pdf` |
+| Title | *Foundations of Radiation, Symmetry, and Realizability* — `TOC/VOL-I-TITLE-FRONTMATTER-REFRESH-LOCK.md` |
+| Manuscript lines | Ch.1 **4,651** / Ch.2 **11,686** / Ch.3 **12,002** / Ch.4 **6,674** (**35,013 total**) |
+| Tier A embed | `TOC/VOL-I-TIER-A-EMBED-COMPLETE-LOCK.md` — **9/9 OK** (Ch. 3 re-embedded 2026-06-13) |
+| Review cadence | **Author PDF review**; no ad-hoc edits without unlock |
 
 ## Milestone calendar
 
@@ -46,8 +53,8 @@
 - [x] Ch. 1 — Foundations (§1.7 locked; 32/32 subsections; 68 figures; forensic re-lock **2026-06-07**; **301 pp** `main.pdf`)
 - [x] Ch. 2 — Operators (§2.11 locked; 45/45 subsections; **293 pp** `main.pdf`; sign-off 2026-05-31)
 - [x] Ch. 3 — Eigenfields (§3.11 locked; forensic audit remediated 2026-05-29) ← sample for publisher
-- [ ] Ch. 4 — Realizability (§4.11 locked)
-- [ ] Cross-volume forward map to Ch. 5 frozen in §4.11.2
+- [x] Ch. 4 — Realizability (§4.11 + prose-uniqueness **PASS** 2026-06-08; `TOC/CH04-FORENSIC-AUDIT-FULL-ULTIMATE.md`)
+- [x] Cross-volume continuation to Ch. 5 frozen in §4.11.2–§4.11.3
 - [ ] Bibliography seeded
 - [ ] Index (month 11–12)
 
@@ -103,6 +110,11 @@ rg -i "Maxwell.*differential" latex/ch0[234].tex
 
 ## Lock change log
 
+2026-06-17: **Build REMEDIATION** — restored clean `ch03.tex` (removed corrupted §3.10.5 line that re-included Ch.~3 as Ch.~4); capped Tier A figure height; PDF **534 pp** — `review/Volume-I-FINAL-534pp-2026-06-17.pdf`; TOC **4 chapters** verified. — 9 figures via `Vol-I-Figure-Embed-TierA-RunAll.ps1`; LOF targets `eq:ch1.angular-momentum-balance`, `eq:ch2.geometric-symmetry-operator-def` repaired; Ch.4 §4.7 header fixed; PDF **692 pp** — `review/Volume-I-FINAL-692pp-2026-06-17.pdf`; lock `TOC/VOL-I-TIER-A-EMBED-COMPLETE-LOCK.md`.
+2026-06-17: **Volume I INTEGRATED BUILD COMPLETE** — `scripts/Vol-I-Final-Integrate-RunAll.ps1`; Ch.1–4 Verify-Refs **PASS**; inheritance anchors §1.7 / §2.11 / §3.11 / §4.11 **PASS**; governing ideas + prohibited lexicon **PASS**; PDF **530 pp** — `review/Volume-I-FINAL-530pp-2026-06-17.pdf`; report `TOC/VOL-I-FINAL-INTEGRATION-REPORT.md`; governance sync `TOC/VOLUME-I-FINAL-FREEZE-LOCK.md`, `START-HERE.md`, `progress.md`.
+2026-06-17: **Masterpiece transformation COMPLETE** — Ch. 1–4; lock `TOC/VOL-I-MASTERPIECE-TRANSFORMATION-COMPLETE-LOCK.md`.
+2026-06-17: **Masterpiece audit COMPLETE** — Ch. 1–4 Pass 1–3; lock `TOC/VOL-I-MASTERPIECE-AUDIT-COMPLETE-LOCK.md`.
+2026-06-14: **Ch. 3 MONOGRAPH FINAL LOCKED** — `GCHECK LOCK VOL-I-CH03-MONOGRAPH-FINAL`; `TOC/CH03-MONOGRAPH-FINAL-LOCK.md`; PDF `review/Volume-I-Ch03-Monograph-Final-2026-06-14.pdf` (190 pp); `Ch03-Verify-Refs.ps1` PASS.
 2026-05-31: **Physical review pack** — `review/Volume-I-Physical-Review-2026-05-31.pdf` (293 pp); summer break → return **2026-06-06**; Ch. 3 §3.0.1 next.
 2026-05-31: **Ch. 2 COMPLETE AND LOCKED** — `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md`; audit pass; 45/45 subsections; PDF **293 pp**; resume **Ch. 3 §3.0.1**.
 2026-05-31: **Ch. 2 DRAFT COMPLETE** — §2.10.4 structured sources + §2.11 inheritance; resume **Ch. 3 §3.0.1**; PDF **291 pp**.

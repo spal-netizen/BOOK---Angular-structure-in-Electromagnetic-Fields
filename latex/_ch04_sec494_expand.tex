@@ -1,4 +1,4 @@
-\subsection{Implications for radiation and measurement}
+﻿\subsection{Implications for radiation and measurement}
 \label{sec:ch494}
 % TOC tag:
 
@@ -59,14 +59,17 @@ chamber \cite{harrington2001,jackson1999,devaney2004}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (syn) {$\mathcal{S}_{\mathrm{real}}$};
-  \node[ch1box, right=9mm of syn] (fs) {$\mathcal{B}_{\mathrm{fs}}$};
-  \node[ch1box, right=9mm of fs] (acc) {$\mathcal{E}_{\mathrm{acc}}^{(N)}$};
-  \node[ch1box, below=10mm of fs] (cert) {certified \(\mathbf{c}\)};
-  \draw[ch1flow] (syn) -- (cert);
-  \draw[ch1flow] (fs) -- (cert);
-  \draw[ch1flow] (acc) -- (cert);
+  \node[ch1box, right=7mm of syn] (fs) {$\mathcal{B}_{\mathrm{fs}}$};
+  \node[ch1box, right=7mm of fs] (acc) {$\mathcal{E}_{\mathrm{acc}}^{(N)}$};
+  \node[ch1box, below=5mm of fs] (cert) {certified \(\mathbf{c}\)};
+  \draw[ch1flow] (syn.south) -- (syn.south |- cert.north);
+  \draw[ch1flow] (syn.south |- cert.north) -- (cert.north);
+  \draw[ch1flow] (fs.south) -- (fs.south |- cert.north);
+  \draw[ch1flow] (fs.south |- cert.north) -- (cert.north);
+  \draw[ch1seg] (acc.south) -- (acc.south |- cert.east);  
+  \draw[ch1flow] (acc.south |- cert.east) -- (cert.east);
 \end{tikzpicture}%
 }
 \caption{Reportable patterns lie in the three-way intersection; each set imposes an independent constraint.}
@@ -78,11 +81,14 @@ Figure~\ref{fig:ch4.three-way-cert} is the Volume~I closure diagram: measurement
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (d1) {$\delta_{\mathrm{syn}}$};
-  \node[ch1box, right=9mm of d1] (d2) {$\mathcal{A}_{\mathrm{fs}}$};
-  \node[ch1box, right=9mm of d2] (d3) {$\mathcal{E}_{\mathrm{acc}}^{(N)}$};
-  \draw[ch1flow] (d1) -- (d2) -- (d3);
+  \node[ch1box, right=7mm of d1] (d2) {$\mathcal{A}_{\mathrm{fs}}$};
+  \node[ch1box, right=7mm of d2] (d3) {$\mathcal{E}_{\mathrm{acc}}^{(N)}$};
+  \draw[ch1flow] (d1.east) -- (d1.east |- d2.west);
+  \draw[ch1flow] (d1.east |- d2.west) -- (d2.west);
+  \draw[ch1flow] (d2.east) -- (d2.east |- d3.west);
+  \draw[ch1flow] (d2.east |- d3.west) -- (d3.west);
 \end{tikzpicture}%
 }
 \caption{Failure diagnosis proceeds synthesis \(\to\) finite-support \(\to\) instrument rank.}

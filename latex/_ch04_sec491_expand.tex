@@ -1,4 +1,4 @@
-\subsection{Geometry as origin of dimensionality limits}
+﻿\subsection{Geometry as origin of dimensionality limits}
 \label{sec:ch491}
 % TOC tag: [HOME]
 
@@ -77,11 +77,14 @@ saturation \cite{stratton1941,harrington2001,devaney2004}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (geom) {$(\Omega_{s},k_{0})$};
-  \node[ch1box, right=11mm of geom] (gamma) {$\boldsymbol{\Gamma}_\omega$};
-  \node[ch1box, right=11mm of gamma] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (geom) -- (gamma) -- (deff);
+  \node[ch1box, right=7mm of geom] (gamma) {$\boldsymbol{\Gamma}_\omega$};
+  \node[ch1box, right=7mm of gamma] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (geom.east) -- (geom.east |- gamma.west);
+  \draw[ch1flow] (geom.east |- gamma.west) -- (gamma.west);
+  \draw[ch1flow] (gamma.east) -- (gamma.east |- deff.west);
+  \draw[ch1flow] (gamma.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Geometry and frequency set the export map; \(d_{\mathrm{eff}}\) counts singular directions above \(\varepsilon\sigma_{1}\).}
@@ -94,11 +97,14 @@ upstream by geometry \cite{stratton1941,harrington2001,devaney2004}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (low) {$k_{0}D_{s}<1$};
-  \node[ch1box, right=11mm of low] (mid) {$k_{0}D_{s}\sim1$};
-  \node[ch1box, right=11mm of mid] (high) {$k_{0}D_{s}\gg1$};
-  \draw[ch1flow] (low) -- (mid) -- (high);
+  \node[ch1box, right=7mm of low] (mid) {$k_{0}D_{s}\sim1$};
+  \node[ch1box, right=7mm of mid] (high) {$k_{0}D_{s}\gg1$};
+  \draw[ch1flow] (low.east) -- (low.east |- mid.west);
+  \draw[ch1flow] (low.east |- mid.west) -- (mid.west);
+  \draw[ch1flow] (mid.east) -- (mid.east |- high.west);
+  \draw[ch1flow] (mid.east |- high.west) -- (high.west);
 \end{tikzpicture}%
 }
 \caption{Electrical-size ladder: \(d_{\mathrm{eff}}\) rises with \(k_{0}D_{s}\) at fixed mechanical outline.}

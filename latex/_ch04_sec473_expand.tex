@@ -1,4 +1,4 @@
-\subsection{Synthesis, reconstruction, and inversion limits}
+﻿\subsection{Synthesis, reconstruction, and inversion limits}
 \label{sec:ch473}
 % TOC tag: [HOME]
 
@@ -135,12 +135,14 @@ not reporting adjoint residual alone \cite{harrington2001}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ran) {$\operatorname{ran}\boldsymbol{\Gamma}_\omega$};
-  \node[ch1box, right=11mm of ran] (perp) {$\mathbf{r}_{\perp}$};
-  \node[ch1box, right=11mm of perp] (mom) {MoM residual};
-  \draw[ch1flow] (ran) -- (mom);
-  \draw[ch1flow] (perp) -- (mom);
+  \node[ch1box, right=7mm of ran] (perp) {$\mathbf{r}_{\perp}$};
+  \node[ch1box, right=7mm of perp] (mom) {MoM residual};
+  \draw[ch1seg] (ran.east) -- (ran.east |- mom.west);
+  \draw[ch1flow] (ran.east |- mom.west) -- (mom.west);
+  \draw[ch1flow] (perp.east) -- (perp.east |- mom.west);
+  \draw[ch1flow] (perp.east |- mom.west) -- (mom.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch473}: MoM residual can be small while \(\mathbf{r}_{\perp}\neq0\); synthesis audits must decompose both components.}
@@ -153,12 +155,14 @@ part to vanish \cite{stratton1941,harrington2001,devaney2004}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (opt) {optimizer};
-  \node[ch1box, right=11mm of opt] (ran) {$\mathcal{P}_{\mathrm{ran}}\mathbf{c}$};
-  \node[ch1box, right=11mm of ran] (syn) {$\delta_{\mathrm{syn}}=0$};
-  \draw[ch1flow] (opt) -- (ran);
-  \draw[ch1flow] (ran) -- (syn);
+  \node[ch1box, right=7mm of opt] (ran) {$\mathcal{P}_{\mathrm{ran}}\mathbf{c}$};
+  \node[ch1box, right=7mm of ran] (syn) {$\delta_{\mathrm{syn}}=0$};
+  \draw[ch1flow] (opt.east) -- (opt.east |- ran.west);
+  \draw[ch1flow] (opt.east |- ran.west) -- (ran.west);
+  \draw[ch1flow] (ran.east) -- (ran.east |- syn.west);
+  \draw[ch1flow] (ran.east |- syn.west) -- (syn.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch473}: optimization closes on range projection; synthesis certifies zero perpendicular residual.}

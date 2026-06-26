@@ -1,4 +1,4 @@
-\subsection{Localization versus angular resolution}
+﻿\subsection{Localization versus angular resolution}
 \label{sec:ch474}
 % TOC tag: [HOME][USE SS3.8.4][USE SS3.6.4]
 
@@ -111,11 +111,14 @@ localization tests are applied \cite{stratton1941,devaney2004}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (loc) {$\mathcal{L}_{2}$};
-  \node[ch1box, right=11mm of loc] (rang) {$\mathcal{R}_{\mathrm{ang}}$};
-  \node[ch1box, right=11mm of rang] (ell) {$\ell_{\mathrm{supp}}$};
-  \draw[ch1flow] (loc) -- (rang) -- (ell);
+  \node[ch1box, right=7mm of loc] (rang) {$\mathcal{R}_{\mathrm{ang}}$};
+  \node[ch1box, right=7mm of rang] (ell) {$\ell_{\mathrm{supp}}$};
+  \draw[ch1flow] (loc.east) -- (loc.east |- rang.west);
+  \draw[ch1flow] (loc.east |- rang.west) -- (rang.west);
+  \draw[ch1flow] (rang.east) -- (rang.east |- ell.west);
+  \draw[ch1flow] (rang.east |- ell.west) -- (ell.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch474}: localization and angular resolution jointly bounded by support.}
@@ -125,11 +128,14 @@ localization tests are applied \cite{stratton1941,devaney2004}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (lg) {LG index};
-  \node[ch1box, right=11mm of lg] (vsh) {VSH sectors};
-  \node[ch1box, right=11mm of vsh] (audit) {$\mathcal{R}_{\mathrm{ang}}$};
-  \draw[ch1flow] (lg) -- (vsh) -- (audit);
+  \node[ch1box, right=7mm of lg] (vsh) {VSH sectors};
+  \node[ch1box, right=7mm of vsh] (audit) {$\mathcal{R}_{\mathrm{ang}}$};
+  \draw[ch1flow] (lg.east) -- (lg.east |- vsh.west);
+  \draw[ch1flow] (lg.east |- vsh.west) -- (vsh.west);
+  \draw[ch1flow] (vsh.east) -- (vsh.east |- audit.west);
+  \draw[ch1flow] (vsh.east |- audit.west) -- (audit.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch474}: representation bridge before VSH realizability audit.}

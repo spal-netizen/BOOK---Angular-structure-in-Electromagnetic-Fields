@@ -67,7 +67,7 @@
 
 | Equation | Label | Prefactor | Location |
 |----------|-------|-----------|----------|
-| Radiation preview | `eq:ch2.radiation-integral-preview` | **−jωμ₀** | L198 |
+| Radiation preview | `eq:ch2.radiation-integral` | **−jωμ₀** | L198 |
 | Dyadic convolution (HOME) | `eq:ch2.electric-dyadic-convolution` | **+jωμ₀** | L3979 |
 | Outgoing upgrade | `eq:ch2.radiation-integral-outgoing-upgrade` | **−jωμ₀** | L6503 |
 | Outgoing volume integral | `eq:ch2.outgoing-electric-volume-integral` | **+jωμ₀** | L6729 |
@@ -488,7 +488,7 @@ Reader naturally asks *“Which accessible structures can finite sources realize
 
 | Priority | Item | Effort | Unlock? |
 |----------|------|--------|---------|
-| **P0** | Sign audit: `eq:ch2.radiation-integral-preview`, `eq:ch2.electric-dyadic-convolution`, `eq:ch2.radiation-integral-outgoing-upgrade`, `eq:ch2.outgoing-electric-volume-integral` | 1–2 hr | **Required micro-unlock** |
+| **P0** | Sign audit: `eq:ch2.radiation-integral`, `eq:ch2.electric-dyadic-convolution`, `eq:ch2.radiation-integral-outgoing-upgrade`, `eq:ch2.outgoing-electric-volume-integral` | 1–2 hr | **Required micro-unlock** |
 | **P1** | Thesis headline paragraph in §2.0 | 30 min | Prose unlock |
 | **P1** | Replace ~33 “establishes HOME” closings with science-only summaries | 3–4 hr | Prose unlock |
 | **P1** | Rename `sec:ch2111` → `sec:ch02.11.1` (and siblings) | 30 min | Micro-unlock |

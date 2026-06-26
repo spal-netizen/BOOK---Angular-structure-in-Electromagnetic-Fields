@@ -83,3 +83,19 @@ Or inspect only: open `latex/main.pdf` or latest `review/Volume-I-FINAL-PreFreez
 ---
 
 **END OF SESSION SAVE LOCK** — 2026-06-25
+
+---
+
+## 7. Phase IX CUP serial pass (2026-06-25)
+
+| Pass | Status | Artifact |
+|------|--------|----------|
+| **P-01** Timeless laboratory diction (Ch. 4) | **AUTHOR-APPROVED** (2026-06-25) | `TOC/VOL-I-PHASE9-PASS01-TIMELESS-DICTION-LOCK.md` |
+| **P-02** Pipeline scar purge (Ch. 2–4) | **COMPLETE** — author gate open | `TOC/VOL-I-PHASE9-PASS02-PIPELINE-SCAR-PURGE-REPORT.md` |
+| P-03+ | Pending author approval of P-02 | `TOC/VOL-I-PHASE9-CUP-SERIAL-PLAN.md` |
+
+**Manuscript:** Ch. 2–4 P-02 scar purge applied (71 fixes). Ch. 4 P-01 diction preserved.
+
+**Resume:** Read P-02 report → spot-check PDF vignettes → **APPROVE P-02** → P-03.
+
+**Session updated:** 2026-06-25

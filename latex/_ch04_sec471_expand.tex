@@ -1,4 +1,4 @@
-\subsection{Non-radiating and unreachable modes}
+﻿\subsection{Non-radiating and unreachable modes}
 \label{sec:ch471}
 % TOC tag: [USE]
 
@@ -119,15 +119,19 @@ Uniqueness of \(\Jimp\) is not claimed; uniqueness of export class is \cite{harr
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (nr) {$\ker\mathcal{R}_\omega$};
-  \node[ch1box, right=11mm of nr] (un) {$\mathcal{U}_{\mathrm{unreach}}$};
-  \node[ch1box, right=11mm of un] (c) {$\mathbf{c}$};
-  \node[ch1box, below=11mm of un] (nf) {near field};
-  \draw[ch1flow] (nr) -- (c);
-  \draw[ch1flow] (un) -- (c);
-  \draw[ch1flow] (nf) -- (nr);
-  \draw[ch1flow] (nf) -- (un);
+  \node[ch1box, right=7mm of nr] (un) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \node[ch1box, right=7mm of un] (c) {$\mathbf{c}$};
+  \node[ch1box, below=5mm of un] (nf) {near field};
+  \draw[ch1seg] (nr.east) -- (nr.east |- c.west);
+  \draw[ch1flow] (nr.east |- c.west) -- (c.west);
+  \draw[ch1flow] (un.east) -- (un.east |- c.west);
+  \draw[ch1flow] (un.east |- c.west) -- (c.west);
+  \draw[ch1seg] (nf.north) -- (nf.north |- nr.south);
+  \draw[ch1flow] (nf.north |- nr.south) -- (nr.south);
+  \draw[ch1flow] (nf.south) -- (nf.south |- un.north);
+  \draw[ch1flow] (nf.south |- un.north) -- (un.north);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch471}: NR and unreachable components are invisible to \(\mathbf{c}\) but visible to near probes.}
@@ -149,14 +153,15 @@ changes near-field response \cite{devaney2004,hansen1988}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (far) {$\mathcal{F}_{\mathrm{rad}}$};
-  \node[ch1box, right=11mm of far] (meas) {measurement};
-  \node[ch1box, below=9mm of far] (nr) {$\ker\mathcal{R}_\omega$};
-  \node[ch1box, below=9mm of meas] (un) {$\mathcal{U}_{\mathrm{unreach}}$};
-  \draw[ch1flow] (far) -- (meas);
-  \draw[ch1flow, dashed] (nr) -- (far);
-  \draw[ch1flow, dashed] (un) -- (far);
+  \node[ch1box, right=7mm of far] (meas) {measurement};
+  \node[ch1box, below=5mm of far] (nr) {$\ker\mathcal{R}_\omega$};
+  \node[ch1box, below=5mm of meas] (un) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \draw[ch1flow] (far.east) -- (far.east |- meas.west);
+  \draw[ch1flow] (far.east |- meas.west) -- (meas.west);
+  \draw[ch1flow, dashed] (nr.south) -- (far.north);
+  \draw[ch1flow, dashed] (un.east) -- (far.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch471}: far-zone measurements intersect \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) only.}

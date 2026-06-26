@@ -1,4 +1,4 @@
-\subsection{Observable manifestations of truncation}
+﻿\subsection{Observable manifestations of truncation}
 \label{sec:ch493}
 % TOC tag: [USE]
 
@@ -72,11 +72,14 @@ Capacity curves knee near stream count \(N_{\mathrm{stream}}\approx d_{\mathrm{e
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (afs) {$\mathcal{A}_{\mathrm{fs}}$};
-  \node[ch1box, right=11mm of afs] (tail) {$\mathbf{R}_{\ell_{\max}}$};
-  \node[ch1box, right=11mm of tail] (sh) {$\Delta_{\mathrm{pat}}$};
-  \draw[ch1flow] (afs) -- (tail) -- (sh);
+  \node[ch1box, right=7mm of afs] (tail) {$\mathbf{R}_{\ell_{\max}}$};
+  \node[ch1box, right=7mm of tail] (sh) {$\Delta_{\mathrm{pat}}$};
+  \draw[ch1flow] (afs.east) -- (afs.east |- tail.west);
+  \draw[ch1flow] (afs.east |- tail.west) -- (tail.west);
+  \draw[ch1flow] (tail.east) -- (tail.east |- sh.west);
+  \draw[ch1flow] (tail.east |- sh.west) -- (sh.west);
 \end{tikzpicture}%
 }
 \caption{Finite-support excess drives tail remainder and observable shoulder artifacts.}
@@ -88,12 +91,13 @@ Figure~\ref{fig:ch4.truncation-signatures} chains the pattern diagnostic: \(\mat
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (nel) {$N_{\mathrm{el}}$};
-  \node[ch1box, right=11mm of nel] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, right=11mm of deff] (knee) {capacity knee};
-  \draw[ch1flow] (nel) -- (deff);
-  \draw[ch1flow, dashed] (deff) -- (knee);
+  \node[ch1box, right=7mm of nel] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=7mm of deff] (knee) {capacity knee};
+  \draw[ch1flow] (nel.east) -- (nel.east |- deff.west);
+  \draw[ch1flow] (nel.east |- deff.west) -- (deff.west);
+  \draw[ch1flow, dashed] (deff.east) -- (knee.west);
 \end{tikzpicture}%
 }
 \caption{Element count may exceed rank; capacity knees trace \(d_{\mathrm{eff}}\), not patch count.}

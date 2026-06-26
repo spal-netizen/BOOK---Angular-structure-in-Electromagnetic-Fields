@@ -1,4 +1,4 @@
-\subsection{Mode count versus aperture and frequency}
+﻿\subsection{Mode count versus aperture and frequency}
 \label{sec:ch481}
 % TOC tag: [HOME]
 
@@ -124,11 +124,14 @@ rank together, but \(d_{\mathrm{eff}}\le N_{\mathrm{mode}}\) always \cite{collin
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ka) {$k_{0}a$};
-  \node[ch1box, right=11mm of ka] (nm) {$N_{\mathrm{mode}}$};
-  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (ka) -- (nm) -- (deff);
+  \node[ch1box, right=7mm of ka] (nm) {$N_{\mathrm{mode}}$};
+  \node[ch1box, right=7mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (ka.east) -- (ka.east |- nm.west);
+  \draw[ch1flow] (ka.east |- nm.west) -- (nm.west);
+  \draw[ch1flow] (nm.east) -- (nm.east |- deff.west);
+  \draw[ch1flow] (nm.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch481}: electrical size sets mode budget; \(d_{\mathrm{eff}}\) is measured rank.}
@@ -138,12 +141,14 @@ rank together, but \(d_{\mathrm{eff}}\le N_{\mathrm{mode}}\) always \cite{collin
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (nel) {$N_{\mathrm{el}}$};
-  \node[ch1box, right=11mm of nel] (nm) {$N_{\mathrm{mode}}$};
-  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (nel) -- (nm);
-  \draw[ch1flow] (nm) -- (deff);
+  \node[ch1box, right=7mm of nel] (nm) {$N_{\mathrm{mode}}$};
+  \node[ch1box, right=7mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (nel.east) -- (nel.east |- nm.west);
+  \draw[ch1flow] (nel.east |- nm.west) -- (nm.west);
+  \draw[ch1flow] (nm.east) -- (nm.east |- deff.west);
+  \draw[ch1flow] (nm.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch481}: elements \(\ge\) modes \(\ge\) rank; only \(d_{\mathrm{eff}}\) is physics-limited.}

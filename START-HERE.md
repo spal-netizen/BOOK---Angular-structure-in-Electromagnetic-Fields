@@ -1,182 +1,95 @@
 # Start Here — Volume I
 
-
-
 **Baseline locked:** 2026-05-24  
-
-**Chapter 1 locked:** 2026-06-07 (forensic re-lock)  
-
-**Chapter 2 locked:** 2026-05-31  
-
-**Governance sync locked:** 2026-06-07  
-
-
+**Volume I draft freeze:** 2026-06-09 — **ALL FOUR CHAPTERS FROZEN**  
+**Governance sync:** 2026-06-17 (integrated build)  
 
 ---
 
-
-
-## Physical review (before break)
-
-
-
-| Item | Location |
-
-|------|----------|
-
-| **Print this PDF** | `review/Volume-I-Physical-Review-2026-05-31.pdf` |
-
-| Page map + checklist | `review/README-PHYSICAL-REVIEW.md` |
-
-| Margin notes template | `review/author-margin-notes-TEMPLATE.md` |
-
-| Live build (same content) | `latex/main.pdf` — **301 pages**, exit 0 |
-
-
-
-**Review scope:** Ch. 1 + Ch. 2 only (locked manuscript). Ch. 3–4 are scaffolds — skip for content review.
-
-
-
----
-
-
-
-## Resume (Ch. 3 — after return, Friday 2026-06-06)
-
-
+## Current status
 
 | Item | Value |
-
 |------|--------|
+| **Session** | **2026-06-13** — title/front-matter refresh + figure legibility |
+| **Freeze** | `TOC/VOLUME-I-FINAL-FREEZE-LOCK.md` — Ch. 1–4 **FINAL FROZEN** |
+| **PDF** | `latex/main.pdf` — **540 pages** |
+| **Archive** | `review/Volume-I-FINAL-540pp-2026-06-13.pdf` |
+| **Title** | *Angular Structure in Electromagnetic Fields* — **Volume I:** *Foundations of Radiation, Symmetry, and Realizability* |
+| **Title lock** | `TOC/VOL-I-TITLE-FRONTMATTER-REFRESH-LOCK.md` |
+| **Manuscript** | Ch.1 **4,651** / Ch.2 **11,686** / Ch.3 **12,002** / Ch.4 **6,674** lines (**35,013 total**) |
+| **Tier A figures** | **9/9 embedded** — `TOC/VOL-I-TIER-A-EMBED-COMPLETE-LOCK.md` |
+| **Integration** | `TOC/VOL-I-FINAL-INTEGRATION-REPORT.md` — cross-chapter checks **PASS** |
+| **Masterpiece audit** | `TOC/VOL-I-MASTERPIECE-AUDIT-COMPLETE-LOCK.md` — Ch. 1–4 **PASS** (2026-06-17) |
+| **Masterpiece transformation** | `TOC/VOL-I-MASTERPIECE-TRANSFORMATION-COMPLETE-LOCK.md` — Ch. 1–4 **PASS** (2026-06-17) |
+| **Deepen** | **HALTED** — `TOC/VOLUME-I-DEEPEN-STOP-LOCK.md` |
+| **Audit Step 5** | **COMPLETE** — Final Freeze (`TOC/VOL-I-AUDIT-5-COMPLETE-LOCK.md`) |
+| **Status** | **VOLUME I FINAL FROZEN** — author review PDF ready |
 
-| Manuscript | `latex/ch02.tex` — **Ch. 2 LOCKED** (§2.0–§2.11); `latex/ch03.tex` scaffold |
+---
 
-| Next subsection | **§3.0.1** Symmetry, operators, and representations |
+## Masterpiece pass (complete)
 
-| PDF | `latex/main.pdf` — **301 pages** (build exit 0) |
+Ch. 1–4 three-pass masterpiece audit + 15-rule transformation **COMPLETE** (2026-06-17). Full Volume I integrated build archived.
 
-| Ch. 1 sign-off | `TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md` |
+Per-chapter transformation PDFs: `review/Volume-I-Ch0N-Masterpiece-Transformation-2026-06-17.pdf`  
+Integration script: `scripts/Vol-I-Final-Integrate-RunAll.ps1`
 
-| Ch. 2 sign-off | `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` |
+---
 
-
-
-**Copy-paste command:**
-
-
+## Resume command
 
 ```text
-
-GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT
-
+GCHECK UNLOCK VOLUME-I-FINAL
 ```
 
+Volume I is **FINAL FROZEN** (2026-06-17 integrated build). Unlock required for any edit.  
+Full 5-step pipeline: `TOC/VOLUME-I-AUDIT-PIPELINE-LOCK.md` — **ALL STEPS COMPLETE**
 
+| Step | Command |
+|------|---------|
+| 1 Timelessness | `GCHECK VOL-I-AUDIT-1-TIMELESSNESS` |
+| 2 Classical Monograph | `GCHECK VOL-I-AUDIT-2-MONOGRAPH` |
+| 3 Masterpiece | `GCHECK VOL-I-AUDIT-3-MASTERPIECE` |
+| 4 Publisher-Referee | `GCHECK VOL-I-AUDIT-4-REFEREE` |
+| 5 Final Freeze | `GCHECK VOL-I-AUDIT-5-FINAL-FREEZE` |
 
----
-
-
-
-## Three files to open first
-
-
-
-1. `TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 1 re-lock authority (2026-06-07)  
-
-2. `TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md` — Ch. 2 lock authority  
-
-3. `TOC/GCHECK-MASTER-CUMULATIVE.md` — zero-deviation checklist  
-
-4. `latex/ch03.tex` — write at `\label{sec:ch301}` (§3.0.1)  
-
-
-
-Chapter 1: `latex/ch01.tex` — **COMPLETE_LOCKED** (forensic edit complete; figure layout polish author-deferred).  
-
-Chapter 2: `latex/ch02.tex` — **COMPLETE_LOCKED** — no prose edits without unlock.
-
-
+**Conduct audits step-wise, one at a time.** Apply corrections and re-freeze after each step before advancing.
 
 ---
 
+## Files to open first
 
-
-## Rules (one line each)
-
-
-
-- **Zero deviation:** full GCHECK read-set before every draft  
-
-- Define once (`[HOME]`); later sections cite (`[USE SS…]` / `\ref`)  
-
-- **Ch. 2 forbidden repeats:** full Maxwell derivation, gauge introduction, angular-momentum conservation proof (`00-FORWARD-MAP.yaml`)  
-
-- **Depth:** ≥ 5 PDF pages per subsection (`CH2-FRESH MIN-5PP`)  
-
-- **Review:** chapter-end audit only (author)  
-
-- **Session end:** Save All → confirm `TOC/END-OF-SESSION-PROTOCOL-LOCK.md`  
-
-
+1. `review/Volume-I-FINAL-540pp-2026-06-13.pdf` — **author review PDF (read first)**  
+2. `TOC/VOL-I-FINAL-INTEGRATION-REPORT.md` — cross-chapter integration verdict  
+3. `TOC/VOLUME-I-FINAL-FREEZE-LOCK.md` — master freeze authority  
+4. `TOC/VOLUME-I-AUDIT-PIPELINE-LOCK.md` — 5-step audit protocol  
+5. `latex/main.pdf` — live Volume I build (540 pp)  
+6. `TOC/GCHECK-MASTER-CUMULATIVE.md` — zero-deviation checklist  
+7. `progress.md` — line counts and milestone tracker  
 
 ---
 
+## Per-chapter freeze locks
 
-
-## Locked governance (priority order)
-
-
-
-| # | File |
-
-|---|------|
-
-| 1 | `TOC/GCHECK-MASTER-CUMULATIVE.md` |
-
-| 2 | `LOCK-MANIFEST.md` |
-
-| 3 | `.cursor/rules/book-consistency.mdc` |
-
-| 4 | `TOC/SUBSECTION-DRAFTING-CONTRACT-ULTIMATE.md` |
-
-| 5 | `TOC/CITATION-CONTRACT-ULTIMATE.md` |
-
-| 6 | `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md` |
-
-| 7 | `00-NOTATION.md` |
-
-| 8 | `00-FORWARD-MAP.yaml` |
-
-| 9 | `TOC/THEOREM-HOME-MATRIX-19CH-ULTIMATE.md` |
-
-| 10 | `MODEL-WORKFLOW-LOCKED.md` |
-
-
-
-TOC line authority: `TOC/volume-I-ch01-04-FINAL.txt`
-
-
-
-Ch. 2 workflow locks: `TOC/CH02-FRESH-RESTART-LOCK.md`, `TOC/CH02-SESSION-SAVE-LOCK.md`
-
-
+| Ch. | Lock file | Lines |
+|-----|-----------|-------|
+| 1 | `TOC/CH01-VOLUME-I-FREEZE-LOCK.md` | 4,651 |
+| 2 | `TOC/CH02-VOLUME-I-FREEZE-LOCK.md` | 11,686 |
+| 3 | `TOC/CH03-VOLUME-I-FREEZE-LOCK.md` | 12,002 |
+| 4 | `TOC/CH04-VOLUME-I-FREEZE-LOCK.md` | 6,674 |
 
 ---
 
+## Scientific arc (Volume I)
 
+- **Ch. 1:** What angular structure means  
+- **Ch. 2:** How angular structure is exported  
+- **Ch. 3:** How exported structure is represented  
+- **Ch. 4:** Why most structure cannot be physically realized  
 
-## Build
+---
 
+## Unlock (author only)
 
-
-```powershell
-
-powershell -ExecutionPolicy Bypass -File .\scripts\Build-VolumeI-ChapterBib.ps1
-
-```
-
-
-
-Output: `latex/main.pdf` (local; gitignored).
-
+- Targeted fix during audit: `GCHECK UNLOCK VOL-I-CH0X` + `GCHECK REVISE X.y.z — <note>`
+- After Step 5 only: `GCHECK UNLOCK VOLUME-I-FINAL`

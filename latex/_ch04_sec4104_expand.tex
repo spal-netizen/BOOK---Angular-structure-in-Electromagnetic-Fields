@@ -1,4 +1,4 @@
-\subsection{Mode-count scaling with geometry and frequency}
+﻿\subsection{Mode-count scaling with geometry and frequency}
 \label{sec:ch4104}
 % TOC tag: [FIG+PROB][USE]
 
@@ -17,13 +17,17 @@ uniform exterior \cite{stratton1941,hansen1988}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (w) {$W$, $k_{0}W=4$};
-  \node[ch1box, right=11mm of w] (nm) {Eq.~\eqref{eq:ch4.mode-count-area}};
-  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, below=11mm of nm] (el) {32 elements};
-  \draw[ch1flow] (w) -- (nm) -- (deff);
-  \draw[ch1flow] (el) -- (deff);
+  \node[ch1box, right=7mm of w] (nm) {Eq.~\eqref{eq:ch4.mode-count-area}};
+  \node[ch1box, right=7mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, below=5mm of nm] (el) {32 elements};
+  \draw[ch1flow] (w.east) -- (w.east |- nm.west);
+  \draw[ch1flow] (w.east |- nm.west) -- (nm.west);
+  \draw[ch1flow] (nm.east) -- (nm.east |- deff.west);
+  \draw[ch1flow] (nm.east |- deff.west) -- (deff.west);
+  \draw[ch1seg] (el.north) -- (el.north |- deff.south);
+  \draw[ch1flow] (el.north |- deff.south) -- (deff.south);
 \end{tikzpicture}%
 }
 \caption{Electrical area \(k_{0}^{2}A_{a}\) bounds mode budget; element count samples but does not set rank.}
@@ -73,11 +77,14 @@ Engineering margin Eq.~\eqref{eq:ch4.mode-count-margin} at \(\eta_{\mathrm{margi
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (nel) {$N_{\mathrm{el}}=32$};
-  \node[ch1box, right=11mm of nel] (nm) {$N_{\mathrm{mode}}\approx50$};
-  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}\approx18$};
-  \draw[ch1flow] (nel) -- (nm) -- (deff);
+  \node[ch1box, right=7mm of nel] (nm) {$N_{\mathrm{mode}}\approx50$};
+  \node[ch1box, right=7mm of nm] (deff) {$d_{\mathrm{eff}}\approx18$};
+  \draw[ch1flow] (nel.east) -- (nel.east |- nm.west);
+  \draw[ch1flow] (nel.east |- nm.west) -- (nm.west);
+  \draw[ch1flow] (nm.east) -- (nm.east |- deff.west);
+  \draw[ch1flow] (nm.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Typical ordering \(N_{\mathrm{el}}\le N_{\mathrm{mode}}\); measured \(d_{\mathrm{eff}}\) may be lower.}

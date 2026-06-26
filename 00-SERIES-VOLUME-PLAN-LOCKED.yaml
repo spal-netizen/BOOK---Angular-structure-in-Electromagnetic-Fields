@@ -22,7 +22,7 @@ volumes:
     number: I
     chapters: [1, 2, 3, 4]
     movement: "Existence & realizability"
-    working_title: "Foundations, Operators, Eigenfields, and Realizability"
+    working_title: "Foundations of Radiation, Symmetry, and Realizability"
     question: >
       What is angular electromagnetic structure in Maxwell theory, and what
       subsets are physically realizable under finite geometry and truncation?

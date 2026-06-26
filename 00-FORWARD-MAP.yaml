@@ -280,3 +280,23 @@ chapter_4:
     "4.9.3": "1.5"
     "4.10.1": "3.7.2,3.4"
   transitions_to: volume_II_chapter_5
+
+volume_i_audit:
+  session_closed: 2026-06-08
+  session_save: TOC/VOL-I-SESSION-SAVE-LOCK.md
+  resume_command: GCHECK VOL-I-AUDIT-3-MASTERPIECE
+  pipeline_lock: TOC/VOLUME-I-AUDIT-PIPELINE-LOCK.md
+  pdf_pages: 751
+  pdf_live: latex/main.pdf
+  pdf_archive: review/Volume-I-Main-751pp-Audit2-Pass2-Monograph-2026-06-09.pdf
+  step_1: complete
+  step_2_pass_1: complete
+  step_2_pass_2: complete
+  step_3: reverify_recommended
+  step_4: prior_complete
+  step_5: not_started
+  manuscript_lines:
+    ch01: 10289
+    ch02: 17051
+    ch03: 18537
+    ch04: 12335

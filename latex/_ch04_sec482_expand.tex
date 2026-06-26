@@ -1,4 +1,4 @@
-\subsection{High- and low-frequency asymptotics}
+﻿\subsection{High- and low-frequency asymptotics}
 \label{sec:ch482}
 % TOC tag: [HOME]
 
@@ -88,11 +88,14 @@ At fixed \((\Omega_{s},k_{0},\varepsilon)\), phase-only retuning leaves the acti
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ray) {Eq.~\eqref{eq:ch4.rayleigh-rank-limit}};
-  \node[ch1box, right=11mm of ray] (cross) {$\kappa_{\mathrm{cross}}$};
-  \node[ch1box, right=11mm of cross] (large) {Eq.~\eqref{eq:ch4.large-body-rank-growth}};
-  \draw[ch1flow] (ray) -- (cross) -- (large);
+  \node[ch1box, right=7mm of ray] (cross) {$\kappa_{\mathrm{cross}}$};
+  \node[ch1box, right=7mm of cross] (large) {Eq.~\eqref{eq:ch4.large-body-rank-growth}};
+  \draw[ch1flow] (ray.east) -- (ray.east |- cross.west);
+  \draw[ch1flow] (ray.east |- cross.west) -- (cross.west);
+  \draw[ch1flow] (cross.east) -- (cross.east |- large.west);
+  \draw[ch1flow] (cross.east |- large.west) -- (large.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch482}: electrical crossover \(\kappa_{\mathrm{cross}}\) selects dipole versus volume rank law.}
@@ -105,11 +108,14 @@ identification is a common source of unrealizable targets \cite{jackson1999,harr
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (kds) {$k_{0}D_{s}$};
-  \node[ch1box, right=11mm of kds] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, right=11mm of deff] (law) {active law};
-  \draw[ch1flow] (kds) -- (deff) -- (law);
+  \node[ch1box, right=7mm of kds] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=7mm of deff] (law) {active law};
+  \draw[ch1flow] (kds.east) -- (kds.east |- deff.west);
+  \draw[ch1flow] (kds.east |- deff.west) -- (deff.west);
+  \draw[ch1flow] (deff.east) -- (deff.east |- law.west);
+  \draw[ch1flow] (deff.east |- law.west) -- (law.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch482}: rank versus electrical size; knee at \(\kappa_{\mathrm{cross}}\) marks branch change.}

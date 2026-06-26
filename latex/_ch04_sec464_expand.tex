@@ -1,4 +1,4 @@
-\subsection{Effective rank and electromagnetic dimension}
+﻿\subsection{Effective rank and electromagnetic dimension}
 \label{sec:ch464}
 % TOC tag: [HOME]
 
@@ -9,7 +9,7 @@ effective dimension is not patch count, not \(\ell_{\max}\), and not channel DOS
 tolerance \(\varepsilon\) \cite{hansen1988,harrington2001,devaney2004}.
 
 \paragraph{Assumptions.}
-Presuppose Definition~\ref{def:ch4.radiative-rank}, Eq.~\eqref{eq:ch4.gamma-SVD}, and Eq.~\eqref{eq:ch4.effective-dimension-preview}
+Presuppose Definition~\ref{def:ch4.radiative-rank}, Eq.~\eqref{eq:ch4.gamma-SVD}, and Eq.~\eqref{eq:ch4.effective-dimension}
 \cite{harrington2001,devaney2004,hansen1988}. Tolerance \(\varepsilon\) is declared jointly for synthesis and certification \cite{stratton1941}.
 
 \begin{definition}[Effective electromagnetic dimension]
@@ -26,7 +26,7 @@ r_{\mathrm{rad}}(\varepsilon)
 with \(\{\sigma_{n}\}\) from Eq.~\eqref{eq:ch4.gamma-SVD} \cite{stratton1941,harrington2001,hansen1988}.
 \end{definition}
 
-Equation~\eqref{eq:ch4.effective-em-dimension} elevates the preview Eq.~\eqref{eq:ch4.effective-dimension-preview} to the Chapter~\ref{ch:04}
+Equation~\eqref{eq:ch4.effective-em-dimension} elevates the preview Eq.~\eqref{eq:ch4.effective-dimension} to the Chapter~\ref{ch:04}
 name for geometry-imposed synthesis dimension \cite{devaney2004}. Mathematically, \(d_{\mathrm{eff}}\) is a discrete counting functional on
 the singular spectrum. Physically, it is the number of independent far-zone degrees of freedom a finite source can export at declared power
 resolution \(\varepsilon\) \cite{hansen1988,jackson1999}.
@@ -64,12 +64,17 @@ Equation~\eqref{eq:ch4.deff-conservative} is the conservative laboratory integer
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
-  \node[ch1box, right=11mm of svd] (rr) {$r_{\mathrm{rad}}$};
-  \node[ch1box, right=11mm of rr] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, right=11mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
-  \draw[ch1flow] (svd) -- (rr) -- (deff) -- (sr);
+  \node[ch1box, right=7mm of svd] (rr) {$r_{\mathrm{rad}}$};
+  \node[ch1box, right=7mm of rr] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=7mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (svd.east) -- (svd.east |- rr.west);
+  \draw[ch1flow] (svd.east |- rr.west) -- (rr.west);
+  \draw[ch1flow] (rr.east) -- (rr.east |- deff.west);
+  \draw[ch1flow] (rr.east |- deff.west) -- (deff.west);
+  \draw[ch1flow] (deff.east) -- (deff.east |- sr.west);
+  \draw[ch1flow] (deff.east |- sr.west) -- (sr.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch464}: effective electromagnetic dimension is radiative rank in the export gauge.}

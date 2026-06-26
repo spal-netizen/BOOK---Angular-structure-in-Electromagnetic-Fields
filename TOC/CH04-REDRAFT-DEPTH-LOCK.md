@@ -1,7 +1,7 @@
 # Chapter 4 — Redraft Depth Lock
 
-**Status:** **§4.9–§4.10 pass 3/3 RE-DRAFT splice** — 2026-06-08 (`latex/ch04.tex`; PDF **667 pp**)  
-**Scope:** §4.6.1–§4.10.4 redrafted; §4.11 pending  
+**Status:** **§4.11 pass 1/1 RE-DRAFT** — 2026-06-08 (`latex/ch04.tex`; PDF **669 pp**); **Ch. 4 manuscript COMPLETE**  
+**Scope:** §4.6.1–§4.11.3 redrafted; §4.11 inventory + Ch.~5 continuation (**MAX 3pp/sub**)  
 **Authority:** `TOC/CH04-DRAFTING-KICKOFF-LOCK.md` (doctrine unchanged)  
 **Note:** §4.10.1–§4.10.4 FIG+PROB pass **3/3** (§4.10.1 ~282, §4.10.2 ~266, §4.10.3 ~273, §4.10.4 ~270 lines; 20 problems + 2 figs/sub). §4.9 at §4.6.1 baseline (~310/sub). §4.7–§4.8 pass **5/5**. Strict ≥5pp/sub on §4.10 estimated ~3–4pp from PDF delta (+12 pp total).
 
@@ -22,6 +22,7 @@
 | §4.8 | §4.8.1–§4.8.4 | **≥ 5 PDF pages** each |
 | §4.9 | §4.9.1–§4.9.4 | **≥ 5 PDF pages** each |
 | §4.10 | §4.10.1–§4.10.4 | **≥ 5 PDF pages** each ([FIG+PROB]) |
+| §4.11 | §4.11.1–§4.11.3 | **≤ 3 PDF pages** each (inventory / continuation) |
 
 ---
 

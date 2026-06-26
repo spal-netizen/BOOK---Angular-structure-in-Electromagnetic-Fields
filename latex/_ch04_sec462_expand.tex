@@ -1,4 +1,4 @@
-\subsection{Scaling laws for spectral truncation}
+﻿\subsection{Scaling laws for spectral truncation}
 \label{sec:ch462}
 % TOC tag: [HOME]
 
@@ -72,14 +72,17 @@ growth exponents unchanged \cite{hansen1988,harrington2001}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (vol) {$(k_{0}a)^{3}$};
-  \node[ch1box, right=11mm of vol] (area) {$k_{0}^{2}A_{a}$};
-  \node[ch1box, right=11mm of area] (min) {$\min$};
-  \node[ch1box, right=11mm of min] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (vol) -- (min);
-  \draw[ch1flow] (area) -- (min);
-  \draw[ch1flow] (min) -- (deff);
+  \node[ch1box, right=7mm of vol] (area) {$k_{0}^{2}A_{a}$};
+  \node[ch1box, right=7mm of area] (min) {$\min$};
+  \node[ch1box, right=7mm of min] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1seg] (vol.east) -- (vol.east |- min.west);
+  \draw[ch1flow] (vol.east |- min.west) -- (min.west);
+  \draw[ch1flow] (area.east) -- (area.east |- min.west);
+  \draw[ch1flow] (area.east |- min.west) -- (min.west);
+  \draw[ch1flow] (min.east) -- (min.east |- deff.west);
+  \draw[ch1flow] (min.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch462}: truncation rank is bounded by the smaller of volume-growth and area-growth laws at declared support.}

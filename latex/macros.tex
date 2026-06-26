@@ -6,6 +6,7 @@
 % Harmonic time dependence exp(-j omega t) is stated in prose; no underline marker.
 \newcommand{\E}{\mathbf{E}}
 \renewcommand{\H}{\mathbf{H}}
+\newcommand{\D}{\mathbf{D}}
 \newcommand{\Jimp}{\mathbf{J}_{\mathrm{imp}}}
 
 % Common operators
@@ -22,3 +23,18 @@
 \newcommand{\Ylm}{Y_{\ell}^{m}}
 \newcommand{\Mlm}{\mathbf{M}_{\ell m}}
 \newcommand{\Nlm}{\mathbf{N}_{\ell m}}
+
+% Laboratory abbreviations (prose only)
+\newcommand{\VSWR}{\mathrm{VSWR}}
+\newcommand{\TE}{\mathrm{TE}}
+
+% Phase VIII-E — Physical Memory Corps (prose-only vignettes; no displayed math)
+\newenvironment{physicalvignette}[1][]{%
+  \par\smallskip
+  \noindent\textit{Physical memory}%
+  \ifx\relax#1\relax\else\ \emph{(#1)}\fi
+  \par\nopagebreak\smallskip
+  \noindent\ignorespaces
+}{%
+  \par\smallskip
+}

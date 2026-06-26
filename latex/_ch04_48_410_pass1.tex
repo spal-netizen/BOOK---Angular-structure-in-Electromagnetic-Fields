@@ -1,4 +1,4 @@
-\subsection{Mode count versus aperture and frequency}
+﻿\subsection{Mode count versus aperture and frequency}
 \label{sec:ch481}
 % TOC tag: [HOME]
 
@@ -425,13 +425,17 @@ VSH listing from Section~\ref{sec:ch34} \cite{hansen1988}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ap) {Aperture $B_{a}$};
-  \node[ch1box, right=11mm of ap] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=11mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
-  \node[ch1box, below=11mm of ell] (claim) {claim $\ell=10$};
-  \draw[ch1flow] (ap) -- (ell) -- (tail);
-  \draw[ch1flow] (claim) -- (ell);
+  \node[ch1box, right=7mm of ap] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=7mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
+  \node[ch1box, below=5mm of ell] (claim) {claim $\ell=10$};
+  \draw[ch1flow] (ap.east) -- (ap.east |- ell.west);
+  \draw[ch1flow] (ap.east |- ell.west) -- (ell.west);
+  \draw[ch1flow] (ell.east) -- (ell.east |- tail.west);
+  \draw[ch1flow] (ell.east |- tail.west) -- (tail.west);
+  \draw[ch1flow] (claim.south) -- (claim.south |- ell.north);
+  \draw[ch1flow] (claim.south |- ell.north) -- (ell.north);
 \end{tikzpicture}%
 }
 \caption{Example~\ref{sec:ch4101}: electrical size sets \(\ell_{\mathrm{supp}}\) before azimuthal claims.}
@@ -460,13 +464,17 @@ Eq.~\eqref{eq:ch4.unreachable-modes} for a centered dipole feed on \(B_{a}\) at 
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (feed) {Dipole feed};
-  \node[ch1box, right=11mm of feed] (gamma) {$\boldsymbol{\Gamma}_\omega$};
-  \node[ch1box, right=11mm of gamma] (c) {$\mathbf{c}$};
-  \node[ch1box, below=11mm of gamma] (null) {$\mathcal{U}_{\mathrm{unreach}}$};
-  \draw[ch1flow] (feed) -- (gamma) -- (c);
-  \draw[ch1flow] (null) -- (gamma);
+  \node[ch1box, right=7mm of feed] (gamma) {$\boldsymbol{\Gamma}_\omega$};
+  \node[ch1box, right=7mm of gamma] (c) {$\mathbf{c}$};
+  \node[ch1box, below=5mm of gamma] (null) {$\mathcal{U}_{\mathrm{unreach}}$};
+  \draw[ch1flow] (feed.east) -- (feed.east |- gamma.west);
+  \draw[ch1flow] (feed.east |- gamma.west) -- (gamma.west);
+  \draw[ch1flow] (gamma.east) -- (gamma.east |- c.west);
+  \draw[ch1flow] (gamma.east |- c.west) -- (c.west);
+  \draw[ch1flow] (null.south) -- (null.south |- gamma.north);
+  \draw[ch1flow] (null.south |- gamma.north) -- (gamma.north);
 \end{tikzpicture}%
 }
 \caption{Example~\ref{sec:ch4102}: unreachable directions are synthesis-null, not low coupling alone.}
@@ -493,13 +501,17 @@ Eq.~\eqref{eq:ch4.unreachable-modes} for a centered dipole feed on \(B_{a}\) at 
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 8mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (nf) {Near scan};
-  \node[ch1box, right=10mm of nf] (prop) {$\Pi_{\mathrm{prop}}$};
-  \node[ch1box, right=10mm of prop] (ff) {Far $\mathbf{c}$};
-  \node[ch1box, below=10mm of prop] (ev) {$\mathcal{K}_{\mathrm{ev}}$};
-  \draw[ch1flow] (nf) -- (prop) -- (ff);
-  \draw[ch1flow] (ev) -- (prop);
+  \node[ch1box, right=7mm of nf] (prop) {$\Pi_{\mathrm{prop}}$};
+  \node[ch1box, right=7mm of prop] (ff) {Far $\mathbf{c}$};
+  \node[ch1box, below=5mm of prop] (ev) {$\mathcal{K}_{\mathrm{ev}}$};
+  \draw[ch1flow] (nf.east) -- (nf.east |- prop.west);
+  \draw[ch1flow] (nf.east |- prop.west) -- (prop.west);
+  \draw[ch1flow] (prop.east) -- (prop.east |- ff.west);
+  \draw[ch1flow] (prop.east |- ff.west) -- (ff.west);
+  \draw[ch1flow] (ev.south) -- (ev.south |- prop.north);
+  \draw[ch1flow] (ev.south |- prop.north) -- (prop.north);
 \end{tikzpicture}%
 }
 \caption{Example~\ref{sec:ch4103}: evanescent scan energy is removed before far-zone listing.}
@@ -528,13 +540,17 @@ to a \(32\)-element array.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (w) {$W$, $k_{0}W=4$};
-  \node[ch1box, right=11mm of w] (nm) {Eq.~\eqref{eq:ch4.mode-count-area}};
-  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, below=11mm of nm] (el) {32 elements};
-  \draw[ch1flow] (w) -- (nm) -- (deff);
-  \draw[ch1flow] (el) -- (deff);
+  \node[ch1box, right=7mm of w] (nm) {Eq.~\eqref{eq:ch4.mode-count-area}};
+  \node[ch1box, right=7mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, below=5mm of nm] (el) {32 elements};
+  \draw[ch1flow] (w.east) -- (w.east |- nm.west);
+  \draw[ch1flow] (w.east |- nm.west) -- (nm.west);
+  \draw[ch1flow] (nm.east) -- (nm.east |- deff.west);
+  \draw[ch1flow] (nm.east |- deff.west) -- (deff.west);
+  \draw[ch1seg] (el.north) -- (el.north |- deff.south);
+  \draw[ch1flow] (el.north |- deff.south) -- (deff.south);
 \end{tikzpicture}%
 }
 \caption{Example~\ref{sec:ch4104}: mode-count scaling bounds diversity below element count.}

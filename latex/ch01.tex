@@ -135,8 +135,12 @@ That historical arc explains why Chapter~1 does not begin with modal indices or 
 \subsection{Source data, boundaries, and Maxwell consistency}
 \label{sec:ch01.0.1}
 
+% CH01-NARR-EXP:01.0.1
+Every compact-range file presupposes the same data tuple: geometry, constitutive response, impressed $\Jimp$, and frequency under $\exp(-\j\omega t)$ \cite{stratton1941,maxwell1873}. Angular claims attach only after charge continuity, compatible boundary traces, and outgoing support close on $\Omega$ \cite{harrington2001}.
+
+
 % HARRINGTON-OPEN:sec:ch01.0.1
-Every range measurement begins with finite sources, finite power, and bounded observation surfaces \cite{maxwell1873,stratton1941,chu1948}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+Every range measurement begins with finite sources, finite power, and bounded observation surfaces \cite{maxwell1873}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 Before any angular descriptor is named, fix what Stratton \cite{stratton1941} called the \emph{data of the problem}: the spatial domain $\Omega$, its boundary $\Gamma$, the constitutive response $\chi$, the impressed sources that drive the field, and the harmonic frequency under the $\exp(-\jj\omega t)$ convention adopted throughout this volume. Phase plots and catalog modal indices must not precede domain closure; Maxwell theory shows that such labels are meaningless until charge continuity, compatible boundary traces, and---where radiation is claimed---outgoing support close on the declared domain \cite{maxwell1873}. A laboratory measurement never records a free-standing tangential field template: every compact-range file, every near-field scan, and every torsion-balance report presupposes the same tuple whether or not the experimenter writes it down explicitly \cite{hansen1988}. Separation of \emph{Maxwell consistency} from \emph{source realizability}: a rim field prescription may look admissible on $\partial V$ yet fail when no charge-continuous impressed current $\Jimp$ of finite support can synthesize it---the laboratory error introduced in Section~\ref{sec:ch01.0} for the $a=5\,\mathrm{mm}$ aperture at $30\,\mathrm{GHz}$ \cite{harrington2001}. Electrical size, probe count, and dynamic range then set which components of that tuple enter the observable record once $\Gamma_R$ is declared \cite{stratton1941}. The formal specification below states what every numerical export and range calibration report must declare before flux or torque integrals become identifiable reports \cite{maxwell1873}.
 
@@ -195,7 +199,7 @@ where $\|\cdot\|_{\mathcal{H}_F}$ is the field energy norm on the analysis domai
 \label{sec:ch01.0.3}
 
 % HARRINGTON-OPEN:sec:ch01.0.3
-A coax-fed pyramidal horn over a ground plane defines the impressed-current and boundary-data tuple technicians declare before Maxwell export is computed \cite{stratton1941,harrington2001,collin2001}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+A coax-fed pyramidal horn over a ground plane defines the impressed-current and boundary-data tuple technicians declare before Maxwell export is computed \cite{stratton1941}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 Transport claims require fields integrable on finite control volumes without divergent
 norms or incompatible traces \cite{stratton1941}. Every conservation law in this
@@ -661,6 +665,8 @@ Integrating Eq.~\eqref{eq:ch1.charge-continuity-harmonic} over $\Omega$ and appl
 
 With sources and boundaries specified, uniqueness requires one admissible dataset to define one field state. Without that answer, power and torque integrals could be computed on distinct Maxwell solutions that share the same feed description---a laboratory error familiar in resonant cavities and in truncated analysis domains placed too close to the radiator \cite{stratton1941}.
 
+Admissibility precedes interpretation: source, interface, and boundary channels must close jointly before uniqueness or flux reports are legitimate \cite{stratton1941,maxwell1873}.
+
 \phantomsection\label{prop:ch1.source-boundary-compatibility}
 Assume Eq.~\eqref{eq:ch1.source-charge-continuous} and the boundary operator
 constraint Eq.~\eqref{eq:ch1.boundary-data-operator}. Then admissible data must
@@ -831,10 +837,14 @@ interpretation \cite{stratton1941}. Within the stated class,
 \(\mathbb{A}_\omega\) is the manifold on which uniqueness, Poynting balance, and
 angular transport claims remain mutually consistent \cite{maxwell1873}.
 
-charge-continuous separates a rim field template from a feed: the WR-90 port, dielectric window, and open-range termination each fix a different row of $\mathfrak{D}$, and angular flux on $\Gamma_R$ is meaningful only when those rows close with charge continuity and compatible traces \cite{harrington2001,collin2001}. $\mathbb{A}_\omega$ must not be reduced to a single $\mathcal{D}_J=1$ flag; Maxwell theory shows it is the manifold on which uniqueness, Poynting balance, and torque channels can be quoted without contradiction \cite{maxwell1873}. Subsection~\ref{sec:ch01.1.3} asks which of those datasets yield a \emph{single} physical field branch once outgoing radiation data are imposed \cite{sommerfeld1949}.
+charge-continuous separates a rim field template from a feed: the WR-90 port, dielectric window, and open-range termination each fix a different row of $\mathfrak{D}$, and angular flux on $\Gamma_R$ is meaningful only when those rows close with charge continuity and compatible traces \cite{harrington2001}. $\mathbb{A}_\omega$ must not be reduced to a single $\mathcal{D}_J=1$ flag; Maxwell theory shows it is the manifold on which uniqueness, Poynting balance, and torque channels can be quoted without contradiction \cite{maxwell1873}. Subsection~\ref{sec:ch01.1.3} asks which of those datasets yield a \emph{single} physical field branch once outgoing radiation data are imposed \cite{sommerfeld1949}.
 
 \subsection{Initial-boundary value problems and uniqueness}
 \label{sec:ch01.1.3}
+
+% CH01-NARR-EXP:01.1.3
+Uniqueness on exterior domains is an outgoing-selection statement, not a numerical convenience: Sommerfeld radiation and energy bounds decide which Maxwell pair belongs to a given $\Jimp$ before flux or torque integrals are reported \cite{sommerfeld1949,stratton1941}. Two solvers that disagree in the far zone while sharing the same impressed data usually signal incomplete boundary class, not new physics \cite{harrington2001}.
+
 
 Uniqueness on exterior domains is an outgoing-selection statement, not a numerical convenience \cite{sommerfeld1949}. Sommerfeld radiation and energy bounds decide which Maxwell pair belongs to a given $\Jimp$ before flux or torque integrals are reported; without that selection, two distinct $(\E,\H)$ pairs can share identical near-field samples yet differ in far-zone phase, and power or torque integrals would name different physics on the same hardware \cite{harrington2001}. Every subsequent watt, momentum, and torque integral assumes that branch has already been fixed \cite{poynting1884}.
 
@@ -1506,6 +1516,10 @@ Subsection~\ref{sec:ch01.2.0} fixes the distinction between \emph{kinematic} spi
 \subsection{Directional dependence and angular momentum}
 \label{sec:ch01.2.1}
 
+% CH01-NARR-EXP:01.2.1
+The flux pair $(\Pi,\boldsymbol{\Psi}_J)$ ties Poynting transport to angular-momentum action on declared control surfaces \cite{poynting1884,belinfante1940,beth1936}. Beth torque and spherical harmonic labels are downstream readouts of that pair---not independent postulates that can override Maxwell closure \cite{stratton1941}.
+
+
 The flux pair $(\Pi,\boldsymbol{\Psi}_J)$ ties Poynting transport to angular-momentum action on declared control surfaces \cite{poynting1884}. Beth torque and spherical harmonic labels are downstream readouts of that pair---not independent postulates that can override Maxwell field specification \cite{stratton1941}.
 
 Directional dependence is the first filter between ``a field exists'' and ``a field exports action in a chosen sector.'' A pattern may radiate power isotropically yet carry no net directional angular flux; conversely, a highly structured near field may circulate energy locally without exporting the channel a far-zone instrument resolves \cite{stratton1941}. Allen \emph{et al.} \cite{allen1992} showed that Laguerre--Gaussian modes carry a well-defined azimuthal index and that mode converters transfer that index reversibly; those results belong to the physics of structured light, yet Eqs.~\eqref{eq:ch1.directional-power-density} and~\eqref{eq:ch1.directional-am-flux} remain the measurement-facing quantities that decide export on a chosen sphere \cite{stratton1941}. Directional radiation patterns were analyzed in antenna theory long before orbital angular momentum became a standalone keyword \cite{stratton1941}.
@@ -1998,7 +2012,7 @@ explains why two laboratories comparing ``angular momentum'' at different stand-
 distances can disagree without either being wrong: they may be evaluating different
 regime points on the same three-part ladder. That table fixes transport qualification is not a single yes/no at fixed $kr$, but a joint statement about power support, directional angular flux, and cancellation factor $\mathcal{K}_J$ before $\mathcal{D}_J=1$ is credible \cite{stratton1941}.
 
-Section~\ref{sec:ch01.3} addresses objectivity: when a torsion balance, a near-field range, and a harmonic post-processor each rotate their component bases, which reports remain comparable without hidden convention tags \cite{beth1936,stratton1941}? A tabulation of $E_x,E_y,E_z$ must not be identified with a laboratory measurement; Maxwell theory shows that vectors, tensors, and dyads transform under distinct laws, and mishandling the stress dyad is the fastest route to spurious torque \cite{stratton1941}. Turntable practice already applies the covariance rules below: the feed rotates, the pattern components reorder, and traction on a fixed probe must transform as a vector if mechanical load is to be conserved \cite{hansen1988}. Subsections~\ref{sec:ch01.3.1}--\ref{sec:ch01.3.4} develop active and passive rotations, origin shifts, and scalar invariants that survive arbitrary proper rotations---the covariance rules required before gauge questions enter in Section~\ref{sec:ch01.4} \cite{belinfante1940}.
+Section~\ref{sec:ch01.3} addresses objectivity: when a torsion balance, a near-field range, and a harmonic post-processor each rotate their component bases, which reports remain comparable without hidden convention tags \cite{beth1936}? A tabulation of $E_x,E_y,E_z$ must not be identified with a laboratory measurement; Maxwell theory shows that vectors, tensors, and dyads transform under distinct laws, and mishandling the stress dyad is the fastest route to spurious torque \cite{stratton1941}. Turntable practice already applies the covariance rules below: the feed rotates, the pattern components reorder, and traction on a fixed probe must transform as a vector if mechanical load is to be conserved \cite{hansen1988}. Subsections~\ref{sec:ch01.3.1}--\ref{sec:ch01.3.4} develop active and passive rotations, origin shifts, and scalar invariants that survive arbitrary proper rotations---the covariance rules required before gauge questions enter in Section~\ref{sec:ch01.4} \cite{belinfante1940}.
 
 \phantomsection\label{sec:ch01.3.1}
 \phantomsection\label{sec:ch01.3}
@@ -2146,7 +2160,7 @@ Torque reports computed at different reference points on the same fixture must n
 
 Only certain contractions survive arbitrary proper rotations without additional convention tags \cite{stratton1941}. Equations~\eqref{eq:ch1.tensor-invariant-trace} and~\eqref{eq:ch1.stress-eigen-covariance} state that traces, Frobenius norms, and eigenvalues of the Maxwell stress tensor are objective scalars, while principal directions rotate covariantly with the laboratory frame \cite{maxwell1873}. The important distinction is not between ``tensor components'' and ``physics,'' but between \emph{invariant reports}---watts, principal stresses, coupling strengths $\mathrm{tr}(\mathbf{D}_{mn}^\top\mathbf{D}_{mn})$---and \emph{covariant reports}---traction, torque, and directional flux densities---that require explicit active/passive rotation convention from Subsection~\ref{sec:ch01.3.1} \cite{stratton1941}. Traction $\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}$ transforms as a vector under Eq.~\eqref{eq:ch1.traction-rotation-covariance}, which is why a pressure pad and a torsion wire read objective mechanical load once the surface orientation is fixed, whereas a tabulation of $T_{ij}$ components without rotation law is not yet a laboratory report \cite{beth1936}. Section~\ref{sec:ch01.4} next asks which combinations of $(\E,\H)$ remain meaningful when potentials are relabeled---a separate invariance question from rotation, but equally decisive for angular-momentum discourse \cite{belinfante1940}.
 
-Section~\ref{sec:ch01.3} fixes one discipline for the display below: \emph{invariant scalars}---traces, eigenvalues, coupling strengths---may be compared across laboratories without convention tags, while \emph{covariant vectors and torque functionals} require published rotation law, origin, and axis before any angular-momentum headline is written \cite{stratton1941,beth1936}. Gauge relabeling in Section~\ref{sec:ch01.4} tests a different layer of invariance: potentials may change while flux integrals on $\partial V$ remain fixed only when the observables are constructed from $(\E,\H)$ rather than from $\mathbf{A}$ or $\phi$ alone \cite{belinfante1940}.
+Section~\ref{sec:ch01.3} fixes one discipline for the display below: \emph{invariant scalars}---traces, eigenvalues, coupling strengths---may be compared across laboratories without convention tags, while \emph{covariant vectors and torque functionals} require published rotation law, origin, and axis before any angular-momentum headline is written \cite{stratton1941}. Gauge relabeling in Section~\ref{sec:ch01.4} tests a different layer of invariance: potentials may change while flux integrals on $\partial V$ remain fixed only when the observables are constructed from $(\E,\H)$ rather than from $\mathbf{A}$ or $\phi$ alone \cite{belinfante1940}.
 
 \phantomsection\label{sec:ch01.4}
 \phantomsection\label{sec:ch01.4.2}
@@ -2532,7 +2546,7 @@ interpretive tools unless they satisfy the same operational criteria.
 \label{sec:ch01.4.5}
 
 % HARRINGTON-OPEN:sec:ch01.4.5
-A spiral phase plate in front of a horn feed on a compact range defines the hardware scene for `Limits of local spin-orbit decompositions'': technicians compare turntable cuts and wattmeter totals on $\Gamma_R$ before paraxial labels are quoted \cite{allen1992,harrington2001,belinfante1940}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+A spiral phase plate in front of a horn feed on a compact range defines the hardware scene for `Limits of local spin-orbit decompositions'': technicians compare turntable cuts and wattmeter totals on $\Gamma_R$ before paraxial labels are quoted \cite{allen1992}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 Near-field micrographs invite a seductive partition: call polarization circulation
 ``spin'' and azimuthal phase gradient ``orbit'' at every pixel. Maxwell theory
@@ -2990,7 +3004,7 @@ identification \cite{stratton1941}.
 \label{sec:ch01.5.3}
 
 % HARRINGTON-OPEN:sec:ch01.5.3
-Modal projections on finite probes recover only part of the angular spectrum \cite{stratton1941,harrington2001,hansen1988}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+Modal projections on finite probes recover only part of the angular spectrum \cite{stratton1941}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 A spherical-harmonic index printed on a plot is rarely a direct observation; it is
 almost always the output of a truncated fit to finite aperture data
@@ -3163,7 +3177,7 @@ labels.
 \label{sec:ch01.5.4}
 
 % HARRINGTON-OPEN:sec:ch01.5.4
-A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Observables versus inferred quantities'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988,stratton1941,harrington2001}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Observables versus inferred quantities'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 The measurement stack of Section~\ref{sec:ch01.5} would remain incomplete without
 an explicit vocabulary for reporting status. Two quantities may share the same
@@ -3282,13 +3296,17 @@ Angular structure begins in fields, not labels; flux integrals outrank modal nam
 \section{Examples and Counterexamples}
 \label{sec:ch01.6}
 
-The four worked cases form a progressive $\mathcal{D}_J=1$ ladder: positive Beth completion, phase without transport, gauge-stable integrals, and reactive versus radiative shells on one source \cite{beth1936}. Each repeats geometry, origin, regime, channel model, and Maxwell-closed completion before modal vocabulary enters \cite{poynting1884}. Subsection~\ref{sec:ch01.6.1} confirms the positive case; Subsection~\ref{sec:ch01.6.2} inverts the logic with counter-rotating phase; Subsection~\ref{sec:ch01.6.3} addresses gauge-stable integrals; Subsection~\ref{sec:ch01.6.4} compares inner reactive and outer radiative shells on the same source in measurement form \cite{stratton1941}. Together the four cases exercise every layer of Eq.~\eqref{eq:ch1.master-charge-continuous-chain} at least once before \ref{ch:02} introduces representation-theoretic refinements \cite{harrington2001}.
+% CH01-NARR-EXP:01.6
+The four worked cases form a screening ladder: positive Beth closure, phase without transport, gauge-stable integrals, and reactive versus radiative shells on one source \cite{beth1936,belinfante1940,stratton1941}. Each repeats geometry, origin, regime, channel model, and admissibility closure before modal vocabulary enters \cite{poynting1884,hansen1988}.
+
+
+The four worked cases form an admissibility ladder with $\mathcal{D}_J=1$: positive Beth completion, phase without transport, gauge-stable integrals, and reactive versus radiative shells on one source \cite{beth1936}. Each repeats geometry, origin, regime, channel model, and Maxwell-closed completion before modal vocabulary enters \cite{poynting1884}. Subsection~\ref{sec:ch01.6.1} confirms the positive case; Subsection~\ref{sec:ch01.6.2} inverts the logic with counter-rotating phase; Subsection~\ref{sec:ch01.6.3} addresses gauge-stable integrals; Subsection~\ref{sec:ch01.6.4} compares inner reactive and outer radiative shells on the same source in measurement form \cite{stratton1941}. Together the four cases exercise every layer of Eq.~\eqref{eq:ch1.master-charge-continuous-chain} at least once before \ref{ch:02} introduces representation-theoretic refinements \cite{harrington2001}.
 
 \subsection{Angular momentum conservation in radiation}
 \label{sec:ch01.6.1}
 
 % HARRINGTON-OPEN:sec:ch01.6.1
-Radiation examples must show flux closure on a sphere before OAM claims \cite{poynting1884,stratton1941,belinfante1940}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+Radiation examples must show flux closure on a sphere before OAM claims \cite{poynting1884}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 Radiation examples must show flux completion on a sphere before OAM claims \cite{poynting1884}.
 
@@ -3517,7 +3535,7 @@ protocol. Both conditions are required.
 \label{sec:ch01.6.2}
 
 % HARRINGTON-OPEN:sec:ch01.6.2
-On a declared compact-range or anechoic campaign, technicians record frequency, outline, and probe geometry before any harmonic fit is trusted \cite{hansen1988,stratton1941}. Phase vortices in near fields need not transport angular momentum to the far zone \cite{allen1992,belinfante1940,stratton1941}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+On a declared compact-range or anechoic campaign, technicians record frequency, outline, and probe geometry before any harmonic fit is trusted \cite{hansen1988}. Phase vortices in near fields need not transport angular momentum to the far zone \cite{allen1992}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 Phase vortices in near fields need not transport angular momentum to the far zone \cite{allen1992}. Superposed $m=+2$ and $m=-2$ beams illustrate channel cancellation: azimuthal intensity may show four lobes while net $\oint \mathbf{M}\cdot\hat{\mathbf{n}}\,dS$ vanishes when amplitudes match \cite{belinfante1940}. Equal-power beams on $S_o$ cancel torque when amplitudes match; a five-percent excess in the $+2$ channel breaks that cancellation and fixes the torque sign \cite{stratton1941}. The flux integral scales linearly with amplitude imbalance---a direct laboratory consequence of superposition on outgoing sectors \cite{beth1936}.
 
@@ -3778,7 +3796,7 @@ cancelation and produce residual transport \cite{poynting1884}.
 \label{sec:ch01.6.3}
 
 % HARRINGTON-OPEN:sec:ch01.6.3
-A spiral phase plate in front of a horn feed on a compact range defines the hardware scene for `Gauge dependence of local angular-momentum densities'': technicians compare turntable cuts and wattmeter totals on $\Gamma_R$ before paraxial labels are quoted \cite{allen1992,harrington2001,belinfante1940}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873,jackson1999}.
+A spiral phase plate in front of a horn feed on a compact range defines the hardware scene for `Gauge dependence of local angular-momentum densities'': technicians compare turntable cuts and wattmeter totals on $\Gamma_R$ before paraxial labels are quoted \cite{allen1992}. Maxwell's equations on the declared exterior domain remain the governing constraint \cite{maxwell1873}.
 
 Gauge relabeling leaves $(\E,\H)$ fixed while reshuffling information between scalar
 and vector potentials \cite{maxwell1873}. The worked problem below quantifies when
@@ -4301,6 +4319,10 @@ The Maxwellian preconditions fixed here---consistent sources and boundaries, fin
 \section{Summary}
 \label{sec:ch01.7}
 
+% CH01-NARR-EXP:01.7
+Chapter~1 closes on one admissibility chain: Maxwell-consistent data, finite-geometry realizability, instrument-limited observability, and flux-qualified transport on declared surfaces \cite{maxwell1873,stratton1941,harrington2001}. Later chapters inherit that chain by reference---representation, harmonics, and rank bounds---without reopening the foundations proved here \cite{belinfante1940,devaney2004}.
+
+
 Chapter~\ref{ch:01} began where Maxwell theory always begins: impressed sources on a
 declared domain, boundary data consistent with the phasor branch, and conservation
 laws that tie field stress to measurable traction and torque \cite{maxwell1873}.
@@ -4316,12 +4338,12 @@ balanced superposition with vivid phase but zero export, gauge-shifted local map
 stable surface integrals, and reactive versus radiative shells on one dipole
 \cite{poynting1884}.
 
-Three principles carry forward unchanged: the progressive $\mathcal{D}_J=1$ ladder of Principle~\ref{prin:ch1.progressive-admissibility}; angular structure lives in \((\E,\H)\) before modal names; flux integrals outrank phase images on declared surfaces; finite geometry and finite instruments bound every export and recovery report \cite{poynting1884}.
+Three principles carry forward unchanged: the admissibility ladder ($\mathcal{D}_J=1$) of Principle~\ref{prin:ch1.progressive-admissibility}; angular structure lives in \((\E,\H)\) before modal names; flux integrals outrank phase images on declared surfaces; finite geometry and finite instruments bound every export and recovery measurement \cite{poynting1884}.
 
 \subsection{Results}
 \label{sec:ch01.7.results}
 
-Principle~\ref{prin:ch1.progressive-admissibility} fixes the admissibility ladder ($\mathcal{D}_J=1$ before watt reports) \cite{stratton1941,pal2026}. The results proved in Sections~\ref{sec:ch01.1}--\ref{sec:ch01.6} may be collected
+Principle~\ref{prin:ch1.progressive-admissibility} fixes the admissibility ladder ($\mathcal{D}_J=1$ before watt reports) \cite{stratton1941}. The results proved in Sections~\ref{sec:ch01.1}--\ref{sec:ch01.6} may be collected
 without repeating the subsection chain. Maxwell consistency, uniqueness on admissible
 domains, and the stress--torque--flux ladder of Section~\ref{sec:ch01.1} fix what
 finite sources may produce and how angular action is accounted \cite{maxwell1873}.
@@ -4364,7 +4386,7 @@ as fixed in Sections~\ref{sec:ch01.5}--\ref{sec:ch01.6}
 
 Topics requiring operator-domain proofs, representation-theoretic completion, or
 realizability and truncation bounds are taken up in Chapters~\ref{ch:02}--\ref{ch:04}
-by forward reference only---not by local re-derivation in Chapter~\ref{ch:01}
+by citation in later chapters---not by local re-derivation in Chapter~\ref{ch:01}
 \cite{harrington2001}. The compatibility conditions recorded below state when later
 material may cite Chapter~\ref{ch:01} results Maxwell foundations
 or transport qualification \cite{stratton1941}.
@@ -4385,7 +4407,7 @@ and
 \label{eq:ch1.defer-reporting-lock}
 \mathcal{X}\in\mathcal{D}_{\mathrm{defer}}
 \Longrightarrow
-\text{use by forward reference only; no local re-derivation in Ch.1}.
+\text{cite in later chapters; no local re-derivation in Ch.~1}.
 \end{equation}
 \cite{stratton1941}.
 
@@ -4429,4 +4451,5 @@ confronts realizability limits on sources that produce it \cite{harrington2001}.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+
 

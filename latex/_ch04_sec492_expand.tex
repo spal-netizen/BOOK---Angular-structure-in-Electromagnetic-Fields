@@ -1,4 +1,4 @@
-\subsection{Limits of phase-only engineering}
+﻿\subsection{Limits of phase-only engineering}
 \label{sec:ch492}
 % TOC tag: [HOME]
 
@@ -72,11 +72,14 @@ fixing \(\|\widehat{c}_{\ell m}^{(\sigma)}\|\) sector envelopes while rotating p
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (phi) {phase \(\phi\)};
-  \node[ch1box, right=11mm of phi] (tphi) {$\mathcal{T}_{\phi}$};
-  \node[ch1box, right=11mm of tphi] (c) {$\mathbf{c}$};
-  \draw[ch1flow] (phi) -- (tphi) -- (c);
+  \node[ch1box, right=7mm of phi] (tphi) {$\mathcal{T}_{\phi}$};
+  \node[ch1box, right=7mm of tphi] (c) {$\mathbf{c}$};
+  \draw[ch1flow] (phi.east) -- (phi.east |- tphi.west);
+  \draw[ch1flow] (phi.east |- tphi.west) -- (tphi.west);
+  \draw[ch1flow] (tphi.east) -- (tphi.east |- c.west);
+  \draw[ch1flow] (tphi.east |- c.west) -- (c.west);
 \end{tikzpicture}%
 }
 \caption{Phase-only control explores \(\mathcal{T}_{\phi}\); export rank \(d_{\mathrm{eff}}\) is fixed by geometry.}
@@ -89,11 +92,14 @@ Figure~\ref{fig:ch4.phase-tangent-manifold} is the phase-only honesty diagram: o
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=11mm of ell] (phase) {phase-only};
-  \node[ch1box, right=11mm of phase] (flat) {unchanged};
-  \draw[ch1flow] (ell) -- (phase) -- (flat);
+  \node[ch1box, right=7mm of ell] (phase) {phase-only};
+  \node[ch1box, right=7mm of phase] (flat) {unchanged};
+  \draw[ch1flow] (ell.east) -- (ell.east |- phase.west);
+  \draw[ch1flow] (ell.east |- phase.west) -- (phase.west);
+  \draw[ch1flow] (phase.east) -- (phase.east |- flat.west);
+  \draw[ch1flow] (phase.east |- flat.west) -- (flat.west);
 \end{tikzpicture}%
 }
 \caption{Supported angular order is invariant under phase-only retuning on fixed aperture.}

@@ -1,4 +1,4 @@
-\subsection{Maximum supported angular order}
+﻿\subsection{Maximum supported angular order}
 \label{sec:ch461}
 % TOC tag: [HOME][USE SS3.7.2]
 
@@ -88,14 +88,20 @@ coordinates \cite{harrington2001}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 10mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ka) {$k_{0}a$};
-  \node[ch1box, right=12mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=12mm of ell] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
-  \node[ch1box, right=12mm of svd] (sr) {$\mathcal{S}_{\mathrm{real}}$};
-  \node[ch1box, below=11mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
-  \draw[ch1flow] (ka) -- (ell) -- (svd) -- (sr);
-  \draw[ch1flow] (tail) -- (ell);
+  \node[ch1box, right=7mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=7mm of ell] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
+  \node[ch1box, right=7mm of svd] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \node[ch1box, below=5mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
+  \draw[ch1flow] (ka.east) -- (ka.east |- ell.west);
+  \draw[ch1flow] (ka.east |- ell.west) -- (ell.west);
+  \draw[ch1flow] (ell.east) -- (ell.east |- svd.west);
+  \draw[ch1flow] (ell.east |- svd.west) -- (svd.west);
+  \draw[ch1flow] (svd.east) -- (svd.east |- sr.west);
+  \draw[ch1flow] (svd.east |- sr.west) -- (sr.west);
+  \draw[ch1flow] (tail.south) -- (tail.south |- ell.north);
+  \draw[ch1flow] (tail.south |- ell.north) -- (ell.north);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch461}: electrical size sets \(\ell_{\mathrm{supp}}\) through tail bounds before synthesis listing; only

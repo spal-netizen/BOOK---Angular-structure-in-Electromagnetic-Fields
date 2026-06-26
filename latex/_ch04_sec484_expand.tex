@@ -1,4 +1,4 @@
-\subsection{Landau-Pollak-Slepian limits and n-widths}
+﻿\subsection{Landau-Pollak-Slepian limits and n-widths}
 \label{sec:ch484}
 % TOC tag: [HOME]
 
@@ -83,11 +83,14 @@ One-dimensional PSWF concentration on \([-1,1]\) with bandwidth parameter \(c=k_
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (lps) {$N_{\mathrm{LPS}}$};
-  \node[ch1box, right=11mm of lps] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, right=11mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
-  \draw[ch1flow] (lps) -- (deff) -- (sr);
+  \node[ch1box, right=7mm of lps] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=7mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (lps.east) -- (lps.east |- deff.west);
+  \draw[ch1flow] (lps.east |- deff.west) -- (deff.west);
+  \draw[ch1flow] (deff.east) -- (deff.east |- sr.west);
+  \draw[ch1flow] (deff.east |- sr.west) -- (sr.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch484}: \(n\)-width \(N_{\mathrm{LPS}}\) ceilings \(d_{\mathrm{eff}}\) and hence \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\).}
@@ -97,12 +100,14 @@ One-dimensional PSWF concentration on \([-1,1]\) with bandwidth parameter \(c=k_
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (lps) {$N_{\mathrm{LPS}}$};
-  \node[ch1box, right=11mm of lps] (nm) {$N_{\mathrm{mode}}$};
-  \node[ch1box, right=11mm of nm] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (lps) -- (deff);
-  \draw[ch1flow] (nm) -- (deff);
+  \node[ch1box, right=7mm of lps] (nm) {$N_{\mathrm{mode}}$};
+  \node[ch1box, right=7mm of nm] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1seg] (lps.east) -- (lps.east |- deff.west);
+  \draw[ch1flow] (lps.east |- deff.west) -- (deff.west);
+  \draw[ch1flow] (nm.east) -- (nm.east |- deff.west);
+  \draw[ch1flow] (nm.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch484}: triple ceiling Eq.~\eqref{eq:ch4.lps-export-bridge}; tightest bound governs.}

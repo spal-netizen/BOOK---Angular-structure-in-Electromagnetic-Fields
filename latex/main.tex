@@ -1,10 +1,11 @@
 % Build: latexmk -pdf main.tex  (from latex/ directory)
 \input{preamble}
 
-\title{Angular Structure in Electromagnetic Fields\\[0.5em]
-  \large Volume I: Chapters 1--4}
-\author{[Author Name]}
-\date{\today}
+\title{Angular Structure in Electromagnetic Fields\\[0.75em]
+  {\large Volume I}\\[0.5em]
+  {\large\itshape Foundations of Radiation, Symmetry, and Realizability}}
+\author{Srikanta Pal}
+\date{2026}
 
 \begin{document}
 \input{frontmatter}
@@ -14,10 +15,14 @@
 \include{ch03}
 \include{ch04}
 
+\input{vol-i-synthesis}
+
 \backmatter
 
+\listoffigures
+\listoftables
 \appendix
-\chapter{Notation Summary}
-% Condensed table from 00-NOTATION.md
+\input{appendix-notation-summary}
+\input{vol-i-subject-index}
 
 \end{document}

@@ -1,4 +1,4 @@
-\subsection{Maximum angular momentum of a finite aperture}
+﻿\subsection{Maximum angular momentum of a finite aperture}
 \label{sec:ch4101}
 % TOC tag: [FIG+PROB][HOME][USE SS3.7.2][USE SS3.4]
 
@@ -18,13 +18,17 @@ with aligned flux gauge \cite{hansen1988,stratton1941,harrington2001,jackson1999
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ap) {Aperture $B_{a}$};
-  \node[ch1box, right=11mm of ap] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=11mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
-  \node[ch1box, below=11mm of ell] (claim) {claim $\ell=10$};
-  \draw[ch1flow] (ap) -- (ell) -- (tail);
-  \draw[ch1flow] (claim) -- (ell);
+  \node[ch1box, right=7mm of ap] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=7mm of ell] (tail) {Eq.~\eqref{eq:ch4.high-ell-decay}};
+  \node[ch1box, below=5mm of ell] (claim) {claim $\ell=10$};
+  \draw[ch1flow] (ap.east) -- (ap.east |- ell.west);
+  \draw[ch1flow] (ap.east |- ell.west) -- (ell.west);
+  \draw[ch1flow] (ell.east) -- (ell.east |- tail.west);
+  \draw[ch1flow] (ell.east |- tail.west) -- (tail.west);
+  \draw[ch1flow] (claim.south) -- (claim.south |- ell.north);
+  \draw[ch1flow] (claim.south |- ell.north) -- (ell.north);
 \end{tikzpicture}%
 }
 \caption{Electrical size \(k_{0}a\) sets \(\ell_{\mathrm{supp}}\) before azimuthal marketing claims are tested.}
@@ -93,11 +97,14 @@ SVD of \(\mathbf{T}\) on the declared VSH chart yields \(d_{\mathrm{eff}}(10^{-2
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (svd) {SVD $\sigma_{n}$};
-  \node[ch1box, right=11mm of svd] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=11mm of ell] (tail) {tail floor};
-  \draw[ch1flow] (svd) -- (ell) -- (tail);
+  \node[ch1box, right=7mm of svd] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=7mm of ell] (tail) {tail floor};
+  \draw[ch1flow] (svd.east) -- (svd.east |- ell.west);
+  \draw[ch1flow] (svd.east |- ell.west) -- (ell.west);
+  \draw[ch1flow] (ell.east) -- (ell.east |- tail.west);
+  \draw[ch1flow] (ell.east |- tail.west) -- (tail.west);
 \end{tikzpicture}%
 }
 \caption{Singular-value ladder and tail bound must agree before \(\ell\) claims are certified.}

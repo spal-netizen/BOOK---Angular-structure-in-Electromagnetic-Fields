@@ -17,12 +17,33 @@
 
 \usepackage{graphicx}
 \usepackage{adjustbox}
+\makeatletter
+\def\@maxfloats{256}
+\makeatother
+\setcounter{topnumber}{10}
+\setcounter{bottomnumber}{10}
+\setcounter{totalnumber}{30}
+\renewcommand{\topfraction}{.92}
+\renewcommand{\bottomfraction}{.92}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.75}
+\usepackage{caption}
+\captionsetup{skip=10pt,font=small,labelfont=bf}
+\setlength{\textfloatsep}{14pt plus 4pt minus 2pt}
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{12pt plus 2pt minus 2pt}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,positioning,shapes.geometric}
 \usepackage{booktabs}
+\usepackage{placeins}
 \usepackage{enumitem}
 \usepackage{chapterbib}
 \usepackage[hidelinks,plainpages=false,pdfpagelabels]{hyperref}
+\hypersetup{%
+  pdftitle={Angular Structure in Electromagnetic Fields - Volume I: Foundations of Radiation, Symmetry, and Realizability},%
+  pdfauthor={Srikanta Pal},%
+  pdfsubject={Electromagnetics; Antennas; Angular momentum; Radiation theory}%
+}
 \usepackage[nameinlink,capitalize]{cleveref}
 
 \sisetup{per-mode=symbol}
@@ -51,4 +72,5 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \input{macros}
+\input{fig-macros}
 \input{ch01-tikz-styles}

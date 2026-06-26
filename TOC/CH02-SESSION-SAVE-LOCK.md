@@ -222,9 +222,9 @@ GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT
 
 - `eq:ch2.section29-angular-spectrum-chain`
 
-- `eq:ch2.plane-wave-radiation-operator-preview`, `eq:ch2.retained-suppressed-filter-preview`
+- `eq:ch2.plane-wave-radiation-operator`, `eq:ch2.retained-suppressed-filter`
 
-- `eq:ch2.near-to-far-transform-preview`, `eq:ch2.far-angular-accessibility-preview`
+- `eq:ch2.near-to-far-transform`, `eq:ch2.far-angular-accessibility`
 
 - `eq:ch2.angular-action-composition`, `fig:ch2.angular-spectrum-action-roadmap`
 
@@ -264,9 +264,9 @@ GCHECK REFRESH DRAFT 3.0.1 — CH3-FRESH MIN-5PP ZERO-REPEAT
 
 - `eq:ch2.section28-reciprocity-chain`
 
-- `eq:ch2.lorentz-reciprocity-preview`, `eq:ch2.modal-orthogonality-preview`
+- `eq:ch2.lorentz-reciprocity`, `eq:ch2.modal-orthogonality`
 
-- `eq:ch2.transmit-receive-swap-preview`, `eq:ch2.radiative-coupling-bilinear-preview`
+- `eq:ch2.transmit-receive-swap`, `eq:ch2.radiative-coupling-bilinear`
 
 - `fig:ch2.reciprocity-roadmap`
 

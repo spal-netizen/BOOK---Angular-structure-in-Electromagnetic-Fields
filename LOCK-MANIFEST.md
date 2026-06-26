@@ -775,3 +775,31 @@ Resume: read `TOC/CH02-SESSION-SAVE-LOCK.md` → full GCHECK stack → `GCHECK R
 **Resume command:** `GCHECK UNLOCK VOL-I-PHASE8-LITERARY-PHYSICAL` (author only)  
 **Do not:** claim masterpiece-safe until `TOC/VOL-I-EXTERNAL-REFEREE-RESPONSE.md`
 
+---
+
+## LOCK ADDENDUM (2026-06-25 — PHASE X CLASSICAL REFINEMENT ENGINE)
+
+**Status:** ACTIVE — serial refinement toward 9.8+ elegance; professor voice, not editor  
+**Master lock:** `TOC/VOL-I-PHASE10-CLASSICAL-REFINEMENT-ENGINE.md`  
+**Serial plan:** `TOC/VOL-I-PHASE10-SERIAL-PASS-PLAN.md`  
+**Cursor rule:** `.cursor/rules/vol-i-classical-refinement-engine.mdc`  
+**Verify:** `scripts/VolI-Phase10-Classical-Verify.ps1`  
+**Baseline:** `TOC/VOL-I-PHASE10-BASELINE-AUDIT.md`  
+**Terminology queue:** `TOC/VOL-I-PHASE10-TERMINOLOGY-REVIEW.tsv`
+
+**Current pass:** P-10-A1 complete (Ch. 4 §4.0–§4.0.2) — author gate open  
+**Unlock:** `GCHECK UNLOCK VOL-I-PHASE10` (author only)
+
+
+---
+
+## LOCK ADDENDUM (2026-06-25 — PHASE IX CUP SERIAL PASS)
+
+**Status:** ACTIVE — P-01 **AUTHOR-APPROVED**; P-02 **COMPLETE** (author gate open)  
+**Master plan:** `TOC/VOL-I-PHASE9-CUP-SERIAL-PLAN.md`  
+**P-01 lock:** `TOC/VOL-I-PHASE9-PASS01-TIMELESS-DICTION-LOCK.md`  
+**P-02 report:** `TOC/VOL-I-PHASE9-PASS02-PIPELINE-SCAR-PURGE-REPORT.md`  
+**Session save:** `TOC/VOL-I-SESSION-SAVE-LOCK.md`  
+
+**Current pass:** P-02 pipeline scar purge applied (Ch. 2–4); rebuild PDF after author spot-check  
+**Unlock:** `GCHECK UNLOCK VOL-I-PHASE9` (author only)

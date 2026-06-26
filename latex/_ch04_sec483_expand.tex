@@ -1,4 +1,4 @@
-\subsection{Spectral concentration and localization}
+﻿\subsection{Spectral concentration and localization}
 \label{sec:ch483}
 % TOC tag: [HOME]
 
@@ -93,11 +93,14 @@ linking tail flatness to slow rank convergence \cite{hansen1988,harrington2001,d
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (svd) {$\{\sigma_{n}\}$};
-  \node[ch1box, right=11mm of svd] (epr) {$\mathrm{EPR}$};
-  \node[ch1box, right=11mm of epr] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (svd) -- (epr) -- (deff);
+  \node[ch1box, right=7mm of svd] (epr) {$\mathrm{EPR}$};
+  \node[ch1box, right=7mm of epr] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (svd.east) -- (svd.east |- epr.west);
+  \draw[ch1flow] (svd.east |- epr.west) -- (epr.west);
+  \draw[ch1flow] (epr.east) -- (epr.east |- deff.west);
+  \draw[ch1flow] (epr.east |- deff.west) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch483}: singular-value ledger drives EPR and \(d_{\mathrm{eff}}\) at knee Eq.~\eqref{eq:ch4.sv-knee}.}
@@ -110,12 +113,14 @@ Figure~\ref{fig:ch4.spectral-concentration} is the concentration audit chain: \(
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=11mm of ell] (epr) {$\mathrm{EPR}$};
-  \node[ch1box, right=11mm of epr] (tail) {$\mathcal{T}_{\mathrm{tail}}$};
-  \draw[ch1flow] (ell) -- (epr);
-  \draw[ch1flow] (epr) -- (tail);
+  \node[ch1box, right=7mm of ell] (epr) {$\mathrm{EPR}$};
+  \node[ch1box, right=7mm of epr] (tail) {$\mathcal{T}_{\mathrm{tail}}$};
+  \draw[ch1flow] (ell.east) -- (ell.east |- epr.west);
+  \draw[ch1flow] (ell.east |- epr.west) -- (epr.west);
+  \draw[ch1flow] (epr.east) -- (epr.east |- tail.west);
+  \draw[ch1flow] (epr.east |- tail.west) -- (tail.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch483}: angular listing \(\ell_{\mathrm{supp}}\) and energy concentration \(\mathrm{EPR}\) are independent certificates.}

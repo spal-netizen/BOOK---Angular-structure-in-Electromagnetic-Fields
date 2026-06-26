@@ -1,4 +1,4 @@
-\subsection{Decay of high-order coupling}
+﻿\subsection{Decay of high-order coupling}
 \label{sec:ch463}
 % TOC tag: [HOME][USE SS3.5.3]
 
@@ -66,11 +66,14 @@ Equation~\eqref{eq:ch4.tail-mass-bound} links angular cutoff to export threshold
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (dos) {DOS $\sim\ell_{\max}^{2}$};
-  \node[ch1box, right=11mm of dos] (tail) {Eq.~\eqref{eq:ch4.coupling-tail-envelope}};
-  \node[ch1box, right=11mm of tail] (rr) {$r_{\mathrm{rad}}$};
-  \draw[ch1flow] (dos) -- (tail) -- (rr);
+  \node[ch1box, right=7mm of dos] (tail) {Eq.~\eqref{eq:ch4.coupling-tail-envelope}};
+  \node[ch1box, right=7mm of tail] (rr) {$r_{\mathrm{rad}}$};
+  \draw[ch1flow] (dos.east) -- (dos.east |- tail.west);
+  \draw[ch1flow] (dos.east |- tail.west) -- (tail.west);
+  \draw[ch1flow] (tail.east) -- (tail.east |- rr.west);
+  \draw[ch1flow] (tail.east |- rr.west) -- (rr.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch463}: channel DOS grows with listing; coupling tails compress export rank.}

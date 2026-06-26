@@ -26,7 +26,7 @@ Therefore \(\partial/\partial t \to -j\omega\) and \(\partial^2/\partial t^2 \to
 | Permeability of free space | \(\mu_0\) | H/m |
 | Speed of light | \(c = 1/\sqrt{\varepsilon_0\mu_0}\) | m/s |
 | Intrinsic impedance | \(\eta_0 = \sqrt{\mu_0/\varepsilon_0}\) | \(\Omega\) |
-| Wavenumber | \(k = \omega/c\) | rad/m |
+| Wavenumber | \(k_{0}=\omega/c\) in vacuum (Volume I default); \(k=\omega\sqrt{\varepsilon\mu}\) in generic media when stated |
 
 Material relations (linear, local, isotropic unless stated):
 
@@ -71,7 +71,10 @@ Underlined symbols denote phasors; time-domain vectors are **not** underlined.
 
 | Symbol | Meaning |
 |--------|---------|
-| \(\mathcal{R}\) | Radiation operator (maps source → radiative field; precise domain in §2.0) |
+| \(\mathcal{R}\) | Radiation operator \(\mathcal{R}_\omega\) (maps source → radiative field; precise domain in §2.0) |
+| \(\mathcal{R}\) (Ch. 1) | **Reconstruction** map from measurement data (distinct from \(\mathcal{R}_\omega\)) |
+| \(\mathcal{R}(s)\) | Laplace **resolvent** (Ch. 2 only; not radiation) |
+| \(\boldsymbol{\Sigma}_\omega\) | Ch. 4 synthesis alias: \(\boldsymbol{\Sigma}_\omega\equiv\mathcal{R}_\omega\) on \(\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}\) (Eq.~\eqref{eq:ch4.synthesis-map}) |
 | \(\mathcal{G}\) | Dyadic Green function operator |
 | \(\dagger\) | Adjoint (with appropriate inner product) |
 
@@ -90,6 +93,38 @@ Underlined symbols denote phasors; time-domain vectors are **not** underlined.
 
 Do not overload these symbols in Chapters 3–4; harmonic relabeling in Ch. 3 must preserve composition order.
 
+### Chapter 4 synthesis and rank symbols (locked Phase B)
+
+| Symbol | Meaning |
+|--------|---------|
+| \(\mathcal{J}_{\mathrm{real}}\) | Physically realizable impressed-source subclass of \(\mathcal{J}_\Omega\) (Ch. 4) |
+| \(\boldsymbol{\Sigma}_\omega\) | Synthesis map alias \(\boldsymbol{\Sigma}_\omega\equiv\mathcal{R}_\omega\) (Eq. `eq:ch4.synthesis-map`) |
+| \(\boldsymbol{\Gamma}_\omega\) | Coefficient synthesis \(\mathcal{C}\circ\mathcal{R}_\omega=\mathcal{C}\circ\boldsymbol{\Sigma}_\omega\) |
+| \(r_{\mathrm{rad}}(\varepsilon)\) | Radiative rank from singular-value threshold on \(\boldsymbol{\Gamma}_\omega\) |
+| \(d_{\mathrm{eff}}(\varepsilon)\) | Effective electromagnetic dimension; equals \(r_{\mathrm{rad}}(\varepsilon)\) on aligned gauge unless stated |
+| \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) | Realizable coefficient set; \(\boldsymbol{\Gamma}_\omega[\mathcal{J}_{\mathrm{real}}]\) |
+| \(\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})\) | Recoverable set under rank-\(N\) measurement |
+| \(\|\cdot\|_{\mathrm{rad}}\) | Flux-normalized radiative norm (§3.5; used in Ch. 3–4 truncation) |
+| \(\sigma_{n}\) | Ordered singular values of \(\boldsymbol{\Gamma}_\omega\), \(\sigma_{1}\ge\sigma_{2}\ge\cdots\) |
+
+### Fourier and angular-spectrum convention (locked)
+
+Lateral Fourier transform on plane \(z=z_0\) (Eq. `eq:ch2.plane-wave-angular-spectrum-def`):
+
+\[
+\widetilde{\E}(k_x,k_y;z_0)=\int \E(x,y,z_0)\,e^{\jj(k_x x+k_y y)}\,dx\,dy,
+\qquad
+\E=\frac{1}{(2\pi)^{2}}\int \widetilde{\E}\,e^{-\jj(k_x x+k_y y)}\,dk_x\,dk_y.
+\]
+
+Far-zone angular amplitude \(a(\widehat{\mathbf{k}})\) on \(S^{2}\) is defined in Ch. 2 §2.9 and consumed in Ch. 3–4 without redefinition.
+
+### Time convention audit (locked)
+
+- Engineering phasor: \(\mathbf{f}(\mathbf{r},t)=\mathrm{Re}\{\mathbf{f}(\mathbf{r})\,e^{-\jj\omega t}\}\) with `\jj` macro (not bare `j`).
+- \(\partial/\partial t\to -\jj\omega\); Maxwell curl signs use `\jj\omega` consistently.
+- Positive-time mentions `exp(+\jj\omega t)` appear only as explicit contrast warnings.
+
 ### Chapter 2 radiation integral prefactor (locked 2026-05-29)
 
 With \(\mathcal{W}_{E,\omega}\E=-\jj\omega\mu_0\Jimp+\cdots\) and dyadic
@@ -99,7 +134,7 @@ electric field is
 \E(\mathbf{r})=-\jj\omega\mu_0\int\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'+\E_{\mathrm{hom}}(\mathbf{r}).
 \]
 All Chapter 2 dyadic/volume/Huygens/MoM electric routes use this sign consistently with
-`eq:ch2.radiation-integral-preview` and `eq:ch2.helmholtz-forcing-map`.
+`eq:ch2.radiation-integral` and `eq:ch2.helmholtz-forcing-map`.
 
 ## Inner products
 

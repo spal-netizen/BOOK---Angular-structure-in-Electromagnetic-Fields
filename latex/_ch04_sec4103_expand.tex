@@ -1,4 +1,4 @@
-\subsection{Near-field versus far-field truncation}
+﻿\subsection{Near-field versus far-field truncation}
 \label{sec:ch4103}
 % TOC tag: [FIG+PROB][USE]
 
@@ -17,13 +17,17 @@ Section~\ref{sec:ch472} \cite{stratton1941,jackson1999,harrington2001,hansen1988
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 8mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (nf) {Near scan};
-  \node[ch1box, right=10mm of nf] (prop) {$\Pi_{\mathrm{prop}}$};
-  \node[ch1box, right=10mm of prop] (ff) {Far $\mathbf{c}$};
-  \node[ch1box, below=10mm of prop] (ev) {$\mathcal{K}_{\mathrm{ev}}$};
-  \draw[ch1flow] (nf) -- (prop) -- (ff);
-  \draw[ch1flow] (ev) -- (prop);
+  \node[ch1box, right=7mm of nf] (prop) {$\Pi_{\mathrm{prop}}$};
+  \node[ch1box, right=7mm of prop] (ff) {Far $\mathbf{c}$};
+  \node[ch1box, below=5mm of prop] (ev) {$\mathcal{K}_{\mathrm{ev}}$};
+  \draw[ch1flow] (nf.east) -- (nf.east |- prop.west);
+  \draw[ch1flow] (nf.east |- prop.west) -- (prop.west);
+  \draw[ch1flow] (prop.east) -- (prop.east |- ff.west);
+  \draw[ch1flow] (prop.east |- ff.west) -- (ff.west);
+  \draw[ch1flow] (ev.south) -- (ev.south |- prop.north);
+  \draw[ch1flow] (ev.south |- prop.north) -- (prop.north);
 \end{tikzpicture}%
 }
 \caption{Evanescent scan energy is filtered before far-zone coefficient listing.}
@@ -77,13 +81,17 @@ With \(\mathcal{E}_{\mathrm{ev}}/\mathcal{E}_{\mathrm{tot}}=0.7\), at most \(30\
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (scan) {$\mathcal{E}_{\mathrm{tot}}$};
-  \node[ch1box, right=11mm of scan] (prop) {$\mathcal{E}_{\mathrm{prop}}$};
-  \node[ch1box, right=11mm of prop] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, below=11mm of scan] (ev) {$\mathcal{E}_{\mathrm{ev}}$};
-  \draw[ch1flow] (scan) -- (prop) -- (deff);
-  \draw[ch1flow] (ev) -- (scan);
+  \node[ch1box, right=7mm of scan] (prop) {$\mathcal{E}_{\mathrm{prop}}$};
+  \node[ch1box, right=7mm of prop] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, below=5mm of scan] (ev) {$\mathcal{E}_{\mathrm{ev}}$};
+  \draw[ch1flow] (scan.east) -- (scan.east |- prop.west);
+  \draw[ch1flow] (scan.east |- prop.west) -- (prop.west);
+  \draw[ch1flow] (prop.east) -- (prop.east |- deff.west);
+  \draw[ch1flow] (prop.east |- deff.west) -- (deff.west);
+  \draw[ch1flow] (ev.south) -- (ev.south |- scan.north);
+  \draw[ch1flow] (ev.south |- scan.north) -- (scan.north);
 \end{tikzpicture}%
 }
 \caption{Scan energy splits; only propagating fraction feeds export rank.}

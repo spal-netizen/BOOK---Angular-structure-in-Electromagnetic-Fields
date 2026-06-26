@@ -1,61 +1,77 @@
-% Chapter 1 TikZ — two-tier legibility lock (GCHECK 2026-05-29)
-% Tier A (BLOCK): flow / concept maps — stacked ch1box, symbols only on canvas
-% Tier B (GEO): worked-problem geometry — canvas + margin ch1keybox annotations
+% Volume I — Cambridge UP monograph figure scale (compact, in-text teaching figures)
+% Routing: one arrow per transition; ortho gutters outside box interiors.
 
-\usetikzlibrary{positioning,calc}
+\usetikzlibrary{positioning,calc,arrows.meta}
 
 \tikzset{
   ch1fig/.style={
-    every node/.style={font=\small},
-    >=Latex,
+    every node/.style={font=\footnotesize},
     line cap=round,
     line join=round,
-    node distance=9mm and 11mm
+    node distance=5mm and 7mm
   },
   ch1geo/.style={
-    every node/.style={font=\small},
-    >=Latex,
+    every node/.style={font=\footnotesize},
+    scale=1.00,
     line cap=round,
     line join=round
   },
-  ch1axis/.style={->, very thick, black!80},
-  ch1shell/.style={very thick, draw=red!70!black},
-  ch1shellB/.style={very thick, draw=blue!70!black},
-  ch1shellO/.style={very thick, draw=orange!85!black},
+  ch1axis/.style={-{Latex[length=2.2mm,width=1.6mm]}, line width=0.75pt, black!80},
+  ch1shell/.style={line width=0.9pt, draw=red!70!black},
+  ch1shellB/.style={line width=0.9pt, draw=blue!70!black},
+  ch1shellO/.style={line width=0.9pt, draw=orange!85!black},
   ch1box/.style={
-    draw=black!70, thick, rounded corners=3pt,
-    minimum height=9mm, minimum width=26mm,
-    align=center, inner sep=4pt, font=\small
+    draw=black!70, line width=0.75pt, rounded corners=2.5pt,
+    fill=white,
+    minimum height=9mm, minimum width=24mm,
+    align=center, inner sep=4pt, outer sep=2.5pt, font=\footnotesize
   },
-  ch1flow/.style={->, thick, gray!70!black},
-  ch1src/.style={fill=black, circle, inner sep=2pt},
+  ch1link/.style={-{Latex[length=2.2mm,width=1.6mm]}, line width=0.75pt, gray!70!black},
+  ch1seg/.style={line width=0.75pt, gray!70!black},
+  ch1segd/.style={line width=0.75pt, dashed, gray!55!black},
+  ch1flow/.style={-{Latex[length=2.2mm,width=1.6mm]}, line width=0.75pt, gray!70!black},
+  ch1flowd/.style={line width=0.75pt, dashed, gray!55!black},
+  ch1flowdarr/.style={-{Latex[length=2.2mm,width=1.6mm]}, line width=0.75pt, dashed, gray!55!black},
+  ch1src/.style={fill=black, circle, inner sep=1.8pt},
   ch1oncanvas/.style={
-    font=\small, align=center,
-    inner sep=2pt, outer sep=3pt,
+    font=\footnotesize, align=center,
+    inner sep=2.5pt, outer sep=2.5pt,
     fill=white, fill opacity=0.98,
-    draw=black!12, rounded corners=1pt
+    draw=black!12, rounded corners=2.5pt
   },
   ch1lblout/.style={
-    font=\small, align=center,
-    inner sep=3pt, outer sep=3pt,
+    font=\footnotesize, align=center,
+    inner sep=2.5pt, outer sep=2.5pt,
     fill=white, fill opacity=0.98,
-    draw=black!15, rounded corners=1pt
+    draw=black!25, rounded corners=2.5pt
   },
   ch1keybox/.style={
-    draw=black!55, thick, rounded corners=3pt,
+    draw=black!55, line width=0.75pt, rounded corners=2.5pt,
+    fill=white,
     minimum height=8mm, align=center,
-    inner sep=4pt, outer sep=2pt,
+    inner sep=3pt, outer sep=2.5pt,
     font=\footnotesize
   }
 }
 
-% Tier A — vertical block / concept maps
+\newcommand{\ChOneFlowS}[2]{\draw[ch1flow] (#1.south) -- (#2.north);}
+\newcommand{\ChOneFlowE}[2]{\draw[ch1flow] (#1.east) -- (#2.west);}
+\newcommand{\ChOneFlowW}[2]{\draw[ch1flow] (#1.west) -- (#2.east);}
+\newcommand{\ChOneFlowN}[2]{\draw[ch1flow] (#1.north) -- (#2.south);}
+\newcommand{\ChOneFlowSgw}[2]{%
+  \draw[ch1seg] (#1.south) -- (#1.south |- #2.west);%
+  \draw[ch1flow] (#1.south |- #2.west) -- (#2.west);%
+}
+\newcommand{\ChOneFlowEgw}[2]{%
+  \draw[ch1seg] (#1.east) -- (#1.east |- #2.south);%
+  \draw[ch1flow] (#1.east |- #2.south) -- (#2.south);%
+}
+
+% Cambridge UP in-text sizing: modest width, never full-column bloated diagrams
 \newcommand{\ChOneFigBlock}[1]{%
-  \adjustbox{max width=0.94\linewidth, max height=0.44\textheight, center}{#1}%
+  \adjustbox{max width=0.72\linewidth, max height=0.38\textheight, center}{#1}%
 }
-% Tier B — geometry / worked-problem schematics
 \newcommand{\ChOneFigGeo}[1]{%
-  \adjustbox{max width=0.92\linewidth, max height=0.34\textheight, center}{#1}%
+  \adjustbox{max width=0.62\linewidth, max height=0.32\textheight, center}{#1}%
 }
-% Legacy alias (defaults to geo — prefer explicit tier macro in new edits)
 \newcommand{\ChOneFigResize}[1]{\ChOneFigGeo{#1}}

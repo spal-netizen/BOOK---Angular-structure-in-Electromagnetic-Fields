@@ -1,4 +1,4 @@
-\subsection{Reactive subspaces and evanescent accessibility}
+﻿\subsection{Reactive subspaces and evanescent accessibility}
 \label{sec:ch472}
 % TOC tag: [HOME]
 
@@ -109,12 +109,14 @@ grows with \(N\) and \(k_{t,\max}\) but does not enter \(\boldsymbol{\Gamma}_\om
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ev) {$\mathcal{F}_{\mathrm{ev}}$};
-  \node[ch1box, right=11mm of ev] (react) {$\mathcal{A}_{\mathrm{react}}^{(N)}$};
-  \node[ch1box, right=11mm of react] (rad) {$\mathbf{c}$};
-  \draw[ch1flow] (ev) -- (react);
-  \draw[ch1flow] (react) -- (rad);
+  \node[ch1box, right=7mm of ev] (react) {$\mathcal{A}_{\mathrm{react}}^{(N)}$};
+  \node[ch1box, right=7mm of react] (rad) {$\mathbf{c}$};
+  \draw[ch1flow] (ev.east) -- (ev.east |- react.west);
+  \draw[ch1flow] (ev.east |- react.west) -- (react.west);
+  \draw[ch1flow] (react.east) -- (react.east |- rad.west);
+  \draw[ch1flow] (react.east |- rad.west) -- (rad.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch472}: reactive accessibility measures storage; synthesis uses propagating \(\mathbf{c}\) only.}
@@ -132,12 +134,13 @@ Saturation of \(\mathcal{A}_{\mathrm{react}}^{(N)}\) does not shift \(\mathbf{c}
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (probe) {$N$ probes};
-  \node[ch1box, right=11mm of probe] (areact) {$\mathcal{A}_{\mathrm{react}}^{(N)}$};
-  \node[ch1box, right=11mm of areact] (deff) {$d_{\mathrm{eff}}$};
-  \draw[ch1flow] (probe) -- (areact);
-  \draw[ch1flow, dashed] (areact) -- (deff);
+  \node[ch1box, right=7mm of probe] (areact) {$\mathcal{A}_{\mathrm{react}}^{(N)}$};
+  \node[ch1box, right=7mm of areact] (deff) {$d_{\mathrm{eff}}$};
+  \draw[ch1flow] (probe.east) -- (probe.east |- areact.west);
+  \draw[ch1flow] (probe.east |- areact.west) -- (areact.west);
+  \draw[ch1flow, dashed] (areact.east) -- (deff.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch472}: probe count raises \(\mathcal{A}_{\mathrm{react}}^{(N)}\) until saturation; \(d_{\mathrm{eff}}\) unchanged.}

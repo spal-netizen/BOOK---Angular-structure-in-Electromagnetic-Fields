@@ -1,4 +1,4 @@
-\section{Truncation and Effective Dimension}
+﻿\section{Truncation and Effective Dimension}
 \label{sec:ch46}
 
 Sections~\ref{sec:ch43}--\ref{sec:ch45} identified radiative rank \(r_{\mathrm{rad}}(\varepsilon)\), spectral compression, and
@@ -64,11 +64,14 @@ cannot raise \(\ell_{\mathrm{supp}}\) without raising \(k_{0}a\) or feed rank \c
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 10mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (ka) {$k_{0}a$};
-  \node[ch1box, right=12mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
-  \node[ch1box, right=12mm of ell] (sr) {$\mathcal{S}_{\mathrm{real}}$};
-  \draw[ch1flow] (ka) -- (ell) -- (sr);
+  \node[ch1box, right=7mm of ka] (ell) {$\ell_{\mathrm{supp}}$};
+  \node[ch1box, right=7mm of ell] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (ka.east) -- (ka.east |- ell.west);
+  \draw[ch1flow] (ka.east |- ell.west) -- (ell.west);
+  \draw[ch1flow] (ell.east) -- (ell.east |- sr.west);
+  \draw[ch1flow] (ell.east |- sr.west) -- (sr.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch461}: electrical size sets maximum supported \(\ell\) before synthesis listing.}
@@ -228,7 +231,7 @@ Radiative rank names export directions; laboratories require a single integer \(
 \(\boldsymbol{\Gamma}_\omega\) \cite{stratton1941,hansen1988}.
 
 \paragraph{Assumptions.}
-Presuppose Definition~\ref{def:ch4.radiative-rank} and Eq.~\eqref{eq:ch4.effective-dimension-preview}
+Presuppose Definition~\ref{def:ch4.radiative-rank} and Eq.~\eqref{eq:ch4.effective-dimension}
 \cite{harrington2001,devaney2004}. Tolerance \(\varepsilon\) declared for synthesis and certification jointly \cite{hansen1988}.
 
 \begin{definition}[Effective electromagnetic dimension]
@@ -245,7 +248,7 @@ r_{\mathrm{rad}}(\varepsilon)
 with \(\{\sigma_{n}\}\) from Eq.~\eqref{eq:ch4.gamma-SVD} \cite{stratton1941,harrington2001,hansen1988}.
 \end{definition}
 
-Equation~\eqref{eq:ch4.effective-em-dimension} elevates Eq.~\eqref{eq:ch4.effective-dimension-preview} to the Chapter~\ref{ch:04} name for
+Equation~\eqref{eq:ch4.effective-em-dimension} elevates Eq.~\eqref{eq:ch4.effective-dimension} to the Chapter~\ref{ch:04} name for
 geometry-imposed synthesis dimension \cite{devaney2004}. \(d_{\mathrm{eff}}\) is not patch count, not \(\ell_{\max}\), and not channel DOS
 \cite{hansen1988,harrington2001}.
 
@@ -262,12 +265,17 @@ Theorem~\ref{thm:ch4.radiative-rank} and Definition~\ref{def:ch4.effective-em-di
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
   \node[ch1box] (svd) {Eq.~\eqref{eq:ch4.gamma-SVD}};
-  \node[ch1box, right=11mm of svd] (rr) {$r_{\mathrm{rad}}$};
-  \node[ch1box, right=11mm of rr] (deff) {$d_{\mathrm{eff}}$};
-  \node[ch1box, right=11mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
-  \draw[ch1flow] (svd) -- (rr) -- (deff) -- (sr);
+  \node[ch1box, right=7mm of svd] (rr) {$r_{\mathrm{rad}}$};
+  \node[ch1box, right=7mm of rr] (deff) {$d_{\mathrm{eff}}$};
+  \node[ch1box, right=7mm of deff] (sr) {$\mathcal{S}_{\mathrm{real}}$};
+  \draw[ch1flow] (svd.east) -- (svd.east |- rr.west);
+  \draw[ch1flow] (svd.east |- rr.west) -- (rr.west);
+  \draw[ch1flow] (rr.east) -- (rr.east |- deff.west);
+  \draw[ch1flow] (rr.east |- deff.west) -- (deff.west);
+  \draw[ch1flow] (deff.east) -- (deff.east |- sr.west);
+  \draw[ch1flow] (deff.east |- sr.west) -- (sr.west);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch464}: effective electromagnetic dimension is radiative rank in the export gauge.}
