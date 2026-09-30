@@ -1,0 +1,56 @@
+% Ch.1 — problems (Stage 2.5: Chapter-1 dependencies only)
+\section{Problems}
+\label{sec:ch01.8}
+
+\begin{enumerate}
+\item \textbf{Maxwell conservation laws: Poynting, momentum, stress, and torque.}
+Using Eqs.~\eqref{eq:ch1.poynting-complex}, \eqref{eq:ch1.momentum-balance-instantaneous}, and~\eqref{eq:ch1.angular-momentum-balance} \cite{poynting1884,maxwell1873,stratton1941}:
+(a) Derive the real and imaginary parts in Eq.~\eqref{eq:ch1.poynting-real-imag-split} and state physically what $\Re(\mathbf{S}_\mathrm{c})$ and $\Im(\mathbf{S}_\mathrm{c})$ measure.
+(b) Starting from Eq.~\eqref{eq:ch1.lorentz-force}, outline how index contraction with Maxwell's equations yields Eq.~\eqref{eq:ch1.momentum-balance-instantaneous}.
+(c) Multiply Eq.~\eqref{eq:ch1.momentum-balance-instantaneous} by $\mathbf{r}\times$, use $T_{kj}=T_{jk}$, and obtain Eq.~\eqref{eq:ch1.angular-momentum-balance}; define $\Minst=\mathbf{r}\times\Tinst$ and $\Mavg=\mathbf{r}\times\Tavg$, with $\boldsymbol{\mathcal{T}}_J=\oint\Mavg\cdot\hat{\mathbf{n}}\,dS$ and $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$; show $\boldsymbol{\tau}_{\mathrm{matter}}=-\boldsymbol{\Phi}_{J,\mathrm{out}}$ at steady state and distinguish $\boldsymbol{\tau}_{\mathrm{source}}$ from $\boldsymbol{\tau}_{\mathrm{load}}$ \cite{beth1936}.
+(d) For the plane wave of Eq.~\eqref{eq:ch1.plane-wave-transverse} normally incident on a perfect absorber with vacuum control volume $z<0$ and outward normal $\hat{\mathbf{n}}=+\hat{\mathbf{z}}$, verify $p_{\mathrm{abs}}=|\langle\mathbf{S}\rangle|/c$ \cite{stratton1941}.
+(e) For the same wave on a perfect reflector, show $p_{\mathrm{refl}}=2|\langle\mathbf{S}\rangle|/c$ and explain the factor of two physically \cite{maxwell1873,stratton1941}.
+
+\item \textbf{Charge continuity and Green-function bridge.}
+(a) Take the divergence of Amp\`ere's law under $\exp(+\jj\omega t)$ and obtain Eq.~\eqref{eq:ch1.charge-continuity-harmonic}. Explain why impressed $\rho$ cannot be chosen independently of $\Jimp$ \cite{maxwell1873,stratton1941}.
+(b) Integrate Eq.~\eqref{eq:ch1.charge-continuity-harmonic} over a source region and interpret Eq.~\eqref{eq:ch1.global-charge-compatibility}.
+(c) Explain why longitudinal/transverse Helmholtz decomposition of $\Jimp$ is not the same as near-field versus far-field decomposition \cite{stratton1941,jackson1999}. \emph{[Chapter~\ref{ch:02}.]}
+(d) State how Eqs.~\eqref{eq:ch1.inhomogeneous-helmholtz} and~\eqref{eq:ch1.scalar-green-outgoing} connect localized sources to outgoing fields and how Eq.~\eqref{eq:ch1.green-far-zone-phase} introduces angular phase \cite{tai1994,stratton1941}.
+
+\item \textbf{Boundary conditions and outgoing selection.}
+(a) State PEC, PMC, and impedance boundary conditions of Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}.
+(b) For a radiating exterior problem, explain the physical content of Eq.~\eqref{eq:ch1.radiation-trace-condition} and why it excludes incoming completion \cite{sommerfeld1949,stratton1941}.
+(c) Using Eq.~\eqref{eq:ch1.uniqueness-energy-identity}, summarize uniqueness on (i) bounded lossy domains, (ii) lossless cavities at eigenfrequency, and (iii) exterior radiating problems \cite{stratton1941}.
+(d) Explain why compatible source, interface, and boundary data must be fixed before Poynting and torque integrals are physically defined \cite{harrington2001}.
+
+\item \textbf{Angular spectrum.}
+\emph{[Chapter~\ref{ch:02}.]} Using only Eq.~\eqref{eq:ch1.green-far-zone-phase}, explain how a localized source imprints direction-dependent phase on the outgoing field and why that phase structure is not yet a complete angular-spectrum representation \cite{stratton1941,silver1949}.
+
+\item \textbf{Cylindrical waves.}
+\emph{[Chapter~\ref{ch:02}.]} Under $\exp(+\jj\omega t)$, state which cylindrical Hankel branch is outgoing and why constant-phase analysis must be used rather than sign inspection alone \cite{stratton1941,harrington2001}. Relate azimuthal phase $e^{\jj m\phi}$ to angular \emph{dependence} without claiming net angular-momentum transport \cite{beth1936}.
+
+\item \textbf{Spherical harmonics and VSH.}
+\emph{[Chapter~\ref{ch:03}.]} Explain why a tangential vector field on a sphere requires componentwise scalar harmonics or an explicit tangential vector basis, and why scalar $Y_\ell^m$ alone is not a complete electromagnetic basis \cite{stratton1941,hansen1988}.
+
+\item \textbf{Rotation, helicity, and limits of $(m+\sigma)P/\omega$.}
+(a) Distinguish active source rotation from passive coordinate rotation using Section~\ref{sec:ch01.3} \cite{beth1936,stratton1941}.
+(b) For Eq.~\eqref{eq:ch1.ex61-helicity-transport-law}, state the separable assumptions required and why the relation is not universal for arbitrary full-vector fields \cite{stratton1941,allen1992}.
+(c) For field-based helicity Eq.~\eqref{eq:ch1.helicity-density}, explain why $(\E,\H)$ built quantities are gauge invariant whereas potential-based canonical splits may not be \cite{jackson1999,belinfante1940}.
+(d) Two equal-power outgoing components have azimuthal indices $+m$ and $-m$ on aperture $S_o$. The resulting field has a pronounced standing azimuthal pattern. Determine the net signed orbital angular-momentum flux under Eq.~\eqref{eq:ch1.ex62-net-am-transport} and explain why the visible pattern does not determine the answer \cite{allen1992,beth1936}.
+
+\item \textbf{Fraunhofer and aperture patterns.}
+\emph{[Chapter~\ref{ch:02}.]} Starting from Eq.~\eqref{eq:ch1.green-far-zone-phase}, state the Fraunhofer far-field condition $r\gg a^2/\lambda$ in words and explain the role of $-\hat{\mathbf{r}}\cdot\mathbf{r}'$ in selecting observable direction \cite{bornwolf1999,silver1949}.
+
+\item \textbf{Dipole fields, continuity, and Maxwell closure.}
+(a) From Eq.~\eqref{eq:ch1.vector-potential-retarded}, explain how the $e^{-\jj k_0 R}/R$ phase generates a dipole far field without re-deriving full multipole theory \cite{jackson1999,stratton1941}.
+(b) Using Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, explain why an isolated localized source cannot support a time-varying radiating electric monopole while static Coulomb fields remain \cite{maxwell1873,stratton1941}.
+(c) Using Eqs.~\eqref{eq:ch1.dipole-Er}, \eqref{eq:ch1.dipole-Etheta}, and~\eqref{eq:ch1.dipole-Hphi} (within Eq.~\eqref{eq:ch1.dipole-fields-explicit}), verify $\nabla\cdot\E=0$ for $r>0$, $\curl\E=-\jj\omega\mu_0\H$, and $\curl\H=+\jj\omega\varepsilon_0\E$ in source-free spherical coordinates; identify $r^{-3}$, $r^{-2}$, $r^{-1}$ zones and the $\sin^2\theta$ intensity pattern \cite{stratton1941}.
+(d) At $f=300\,\mathrm{MHz}$, compute $kr$ at $r=0.5\,\mathrm{m}$ and $r=5\,\mathrm{m}$. State which radial terms dominate in each case and describe the corresponding Poynting behaviour (reactive versus radiative) \cite{stratton1941,poynting1884}.
+(e) Using Eqs.~\eqref{eq:ch1.radiation-intensity-Ur} and~\eqref{eq:ch1.directivity-definition}, show $D(\theta)=\tfrac32\sin^2\theta$ for the aligned dipole when Eq.~\eqref{eq:ch1.ex64-power-invariance} holds \cite{harrington2001}.
+
+\item \textbf{Reactive shell, Chu quality factor, and finite size.}
+(a) Distinguish $P_{\mathrm{rad}}$ from $P_{\mathrm{reac}}(r)$ in Eq.~\eqref{eq:ch1.ex64-power-functionals} and explain why $|P_{\mathrm{reac}}(r)|/P_{\mathrm{rad}}$ depends on shell radius \cite{poynting1884,stratton1941}.
+(b) Using $Q_{\mathrm{Chu}}=2\omega\max(W_e,W_m)/P_{\mathrm{rad}}$ from Eq.~\eqref{eq:ch1.chu-q-definition}, explain why $P_{\mathrm{reac}}(r)$ is not $Q_{\mathrm{Chu}}$ and state the resonance form $Q_{\mathrm{Chu}}=\omega(W_e+W_m)/P_{\mathrm{rad}}$ \cite{chu1948}.
+(c) For the two-shell dipole comparison in Subsection~\ref{sec:ch01.6.4}, relate reactive dominance at $kr_1=0.5$ to radiative dominance at $kr_2=5$ without changing $P_{\mathrm{rad}}$ \cite{stratton1941}.
+(d) State Chu's small-$ka$ scaling $Q_{\mathrm{LB}}\sim(ka)^{-3}$ under Eq.~\eqref{eq:ch1.chu-q-lower-bound} \cite{chu1948,harrington2001}.
+\end{enumerate}

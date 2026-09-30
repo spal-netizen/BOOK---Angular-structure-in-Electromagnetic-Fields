@@ -1,0 +1,2850 @@
+Angular Structure in Electromagnetic Fields
+Volume I — Chapter 1
+Foundations of Angular Electromagnetic Structure
+Srikanta Pal
+2026
+2
+Contents
+1
+Foundations of Angular Electromagnetic Structure
+5
+1.0
+Introduction and Scope
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+1.0.1
+Historical lineage of field energy, momentum, and angular structure
+. . . . .
+7
+1.0.2
+Source data, boundaries, and Maxwell consistency
+. . . . . . . . . . . . . . .
+8
+1.0.3
+Rotation and Maxwell compatibility . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.0.4
+Assumptions, finite energy, and domain of validity . . . . . . . . . . . . . . .
+9
+1.1
+Maxwell Theory and Conservation Laws . . . . . . . . . . . . . . . . . . . . . . . . .
+10
+1.1.1
+Maxwell equations: differential, integral, vacuum constitutive relations . . . .
+10
+1.1.2
+From inhomogeneous Helmholtz equation to outgoing Green function
+. . . .
+13
+1.1.3
+Sources, boundary conditions, and the Maxwell boundary-value problem . . .
+15
+1.1.4
+Boundary-Value Problems and Uniqueness . . . . . . . . . . . . . . . . . . . .
+19
+1.1.5
+Energy, linear momentum, and Maxwell stress tensor . . . . . . . . . . . . . .
+19
+1.1.6
+Angular momentum conservation and torque balance . . . . . . . . . . . . . .
+24
+1.2
+Angular Structure of Electromagnetic Fields . . . . . . . . . . . . . . . . . . . . . . .
+27
+1.2.1
+Rotating source versus rotating pattern
+. . . . . . . . . . . . . . . . . . . . .
+27
+1.2.2
+Directional dependence and angular momentum . . . . . . . . . . . . . . . . .
+28
+1.2.3
+Helical phase structure and transport
+. . . . . . . . . . . . . . . . . . . . . .
+30
+1.2.4
+Physical relations for angular-momentum transport . . . . . . . . . . . . . . .
+31
+1.2.5
+Reactive and radiative field regimes
+. . . . . . . . . . . . . . . . . . . . . . .
+31
+1.3
+Rotational covariance and reference frames
+. . . . . . . . . . . . . . . . . . . . . . .
+33
+1.4
+Gauge structure, helicity, and spin–orbit limits
+. . . . . . . . . . . . . . . . . . . . .
+35
+1.4.1
+Gauge-invariant observables, helicity, and dual symmetry
+. . . . . . . . . . .
+35
+1.4.2
+Limits of local spin-orbit decompositions . . . . . . . . . . . . . . . . . . . . .
+37
+1.5
+Surface flux, torque, and physical observation . . . . . . . . . . . . . . . . . . . . . .
+38
+1.5.1
+Power flux, stress traction, and torque . . . . . . . . . . . . . . . . . . . . . .
+38
+1.5.2
+Field quantities, instrument readings, and inferred structure . . . . . . . . . .
+39
+1.5.3
+Apertures, angular charts, and later radiation mappings . . . . . . . . . . . .
+39
+1.6
+Examples and Counterexamples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+40
+1.6.1
+Angular momentum conservation in radiation . . . . . . . . . . . . . . . . . .
+40
+1.6.2
+Phase structure without angular-momentum transport . . . . . . . . . . . . .
+42
+1.6.3
+Gauge dependence of local angular-momentum densities . . . . . . . . . . . .
+44
+1.6.4
+Radial structure of a localized radiator . . . . . . . . . . . . . . . . . . . . . .
+44
+1.7
+Summary
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+47
+1.8
+Problems
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+47
+3
+4
+CONTENTS
+Chapter 1
+Foundations of Angular
+Electromagnetic Structure
+1.0
+Introduction and Scope
+Maxwell’s equations determine the electromagnetic field; the field carries energy through the Poynting
+vector, momentum through the Maxwell stress tensor, and angular momentum as the moment of
+that momentum about a chosen origin [1, 2, 3]. Angular structure is how (E, H) is organized under
+rotations of physical space. Azimuthal dependence in the field pattern, angular-momentum density,
+and signed angular-momentum transport through a surface answer different questions and must be
+kept distinct [4, 3]. A spiral phase factor ejmϕ describes angular organization; net rotational action
+on matter is fixed only by the Maxwell stress and its surface integrals [5].
+Consider a harmonic electromagnetic field incident upon a material surface, a transverse pattern
+with azimuthal phase ejmϕ, or a near-zone shell where Im(Sc · ˆn) dominates [4, 3]. Energy transfer,
+linear momentum transfer, and—when symmetry permits—angular momentum transfer are fixed by
+Sc, ⟨T⟩, and ⟨M⟩= r × ⟨T⟩on declared surfaces. Two fields can share the same spiral isophases
+yet differ in
+∮︁⟨M⟩· ˆn dS; a field with no visible azimuthal gradient can still carry definite angular
+momentum when the stress flux is integrated on the outgoing branch [4].
+Throughout Volume I the time dependence is exp(+jωt), with angular frequency ω in rad/s. A
+phasor E(r) is the complex amplitude whose real part Re{Eejωt} is the instantaneous electric field.
+Cycle-averaged bilinear products use (·)∗: for example ⟨E × H⟩= 1
+2 Re{E × H∗} [4, 6].
+For harmonic fields the complex Poynting vector is
+Sc = 1
+2E × H∗,
+(1.1)
+where (·)∗denotes complex conjugation [2, 4]. Time-averaged real power flux density is ⟨S⟩= Re(Sc);
+Sc itself is not the cycle-averaged Poynting vector. The divergence ∇· Sc is net outward complex
+power per unit volume: its real part balances impressed work on sources, and its imaginary part
+tracks harmonic exchange between electric and magnetic stored energy (section 1.1.5) [4]. Both Sc
+and ⟨S⟩have dimensions W m−2; ⟨S⟩· ˆn dS is active power per unit area crossing a surface element
+with outward normal ˆn.
+Linear momentum is carried by the Maxwell stress tensor [1, 4]. In real time, the instantaneous
+tensor T(i) enters
+∂gem
+∂t
++ fem = ∇· T(i),
+(1.2)
+with gem = ε0 E × B [1]. On phasor fields, cycle-averaged traction uses ⟨T⟩of Eq. (1.42) and
+5
+6
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+⟨S⟩/c
+linear
+momentum
+σ=±1
+CP
+torque
++m
+−m
+P+ = P−
+˙Jz=0
+standing
+pattern
+Figure 1.1: Three Maxwellian consequences of radiation: linear momentum delivered to an absorber, angular
+momentum delivered through circular polarization, and equal counter-rotating orbital components whose
+signed transport cancels despite a structured field [2, 3, 5].
+t = ⟨T⟩· ˆn [4]. Let Vm enclose the material whose force and torque are sought; ˆn is outward from
+Vm. At harmonic steady state, Fmatter =
+∮︁
+∂Vm⟨T⟩· ˆn dS.
+The stress-moment density is ⟨M⟩= r × ⟨T⟩(instantaneous counterpart M(i) = r × T(i)). The
+stress moment T J =
+∮︁
+∂Vm r × (⟨T⟩· ˆn) dS enters the torque balance; outward electromagnetic
+angular-momentum transport is ΦJ,out = −T J (Eqs. (1.54) and (1.55)). At steady state, τmatter =
+T J = −ΦJ,out when storage variation averages to zero [3, 4].
+In vacuum take E = E0e−jkzˆx and, from ∇× E = −jωµ0H, H = (E0/η0) e−jkzˆy with η0 =
+√︁
+µ0/ε0 and k = ω√ε0µ0 [4]. Then
+Sc = 1
+2E × H∗= |E0|2
+2η0 ˆz,
+(1.3)
+so the power through a disk of radius a normal to ˆz is P = πa2|E0|2/(2η0). Let the field control
+volume be the vacuum region z < 0, so that at the plane z = 0 the outward unit normal is
+ˆn = +ˆz. Momentum conservation gives radiation pressure pabs = ⟨Sz⟩/c = |E0|2/(2η0c) on a perfect
+absorber, directed along +ˆz into the material [4]. A perfect reflector at normal incidence receives
+prefl = 2⟨Sz⟩/c. The vacuum field region Vf (z < 0) and the matter-enclosing volume Vm (absorber
+plus any region whose mechanical reaction is required) play different roles: Vf fixes the outward
+normal ˆn = +ˆz at z = 0, while pabs is the mechanical pressure on the absorber [1, 4]. With
+Eq. (1.42), ⟨Tzz⟩= −ε0|E0|2/2 on the vacuum side. Because the field is transversely symmetric
+about ˆz, ˙Jz,out = 0 even when P > 0 [3]. Adding ejmϕ to the transverse factor alters the phase
+portrait without, by itself, fixing the sign of the stress-flux integral [5, 4].
+A compatible impressed current Jimp on finite support, together with constitutive response,
+boundary conditions, and outgoing selection, determines a Maxwell field (E, H) [1, 4]. On an
+enclosing surface ΓR in a predominantly radiative region, outward power is
+∮︁Re(Sc · ˆn) dS and
+outward electromagnetic angular-momentum transport is −
+∮︁⟨M⟩· ˆn dS = ΦJ,out on the same shell
+under the stress convention of Eq. (1.55) [3]. Near-zone fields can exchange substantial reactive
+energy through Im(Sc · ˆn) while the signed angular-momentum flux on ΓR vanishes by symmetry—as
+the equal counter-rotating pair of Subsection 1.6.2 demonstrates [5].
+Figure 1.2 separates reactive from radiative shells. The impressed current occupies finite support;
+the dashed inner shell lies where Im(Sc · ˆn) can dominate local normal flux; the solid shell ΓR
+lies where Re(Sc · ˆn) carries the conserved outward power of the source. The angular-momentum
+balance holds on any admissible closed surface; to read outward radiated angular momentum, a
+predominantly radiative enclosing surface is preferred because reactive near-zone exchange and
+storage then cease to obscure the transport interpretation [7, 4].
+Prescribing tangential Et on an aperture is not equivalent to specifying a physical source: without
+a charge-continuous impressed current Jimp whose Maxwell field produces that trace, Poynting and
+torque integrals on ΓR need not correspond to any synthesizable excitation [4, 6]. Figure 1.4 in
+Subsection 1.0.2 contrasts sourced and rim-aperture configurations on identical geometry.
+1.0. INTRODUCTION AND SCOPE
+7
+bounded source
+reactive
+P
+ΓR
+∮︁
+ΓR Re{Sc·ˆn} dS
+Figure 1.2: Bounded source on finite support, large net reactive power in the near zone (dashed shell), and
+outward power flux through enclosing surface ΓR (solid shell). Reactive shells can carry large | Im(Sc · ˆn)|
+while radiative shells carry the conserved outward power [2, 7].
+Ωs
+Jimp ΓRE
+H
+ˆn
+(E, H) on ΓR
+Et(θ, ϕ) on S2
+Figure 1.3: Impressed current on finite support Ωs, Maxwell fields (E, H) on enclosing surface ΓR, and
+angular variation of the tangential field in a harmonic chart on S2. The field precedes every representation
+[4].
+Impressed current on Ωs launches the Maxwell pair on ΓR; angular variation of the tangential
+field on S2 is a harmonic chart of that same pair, not a substitute for it [4, 6]. A prescribed rim
+tangential field without charge-continuous Jimp, an aperture that cannot realize a prescribed near
+field, and reactive storage mistaken for radiation on ΓR are the principal counterexamples developed
+in sections 1.0.2, 1.6.2, and 1.6.4 [4].
+Energy, momentum, and torque were field properties long before modern beam vocabulary
+appeared [2, 3].
+1.0.1
+Historical lineage of field energy, momentum, and angular structure
+Faraday’s experiments on induction and magnetism forced a shift from action at a distance to
+fields as the primary carriers of electric and magnetic action in space [1]. Maxwell’s 1865 paper
+and the 1873 Treatise supplied the mathematical field pair (E, H), the displacement current that
+closes Ampère’s law in time-dependent form, and the wave equation that predicted electromagnetic
+propagation at the speed of light [1]. Once the field itself became dynamical, two questions followed
+immediately: where does electromagnetic energy reside, and how does the field exchange linear and
+rotational mechanical action with matter?
+Maxwell answered the mechanical side within the same field picture. His stress tensor relates
+bilinear products of (E, H) to force and momentum density in the electromagnetic medium [1, 4].
+Poynting [2] then identified energy transport with the flux s = E × H, giving a local account of
+power crossing a surface. Hertz’s experiments (1887–1888) showed that Maxwell’s predicted waves
+8
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+could be generated and detected in the laboratory, converting the wave equation from theory into
+measurable radiation [4]. Radiation-pressure measurements on absorbing and reflecting surfaces
+confirmed that the same field carries directed momentum as well as energy; on a perfect absorber
+the pressure is pabs = |⟨S⟩|/c, on a perfect reflector prefl = 2|⟨S⟩|/c in vacuum [4].
+The early twentieth century did not introduce electromagnetic stress—Maxwell had already done
+so—but reopened the question of momentum inside material media. Abraham [8] and Minkowski [9]
+proposed different symmetric stress–energy forms for polarizable matter; their disagreement concerns
+how much momentum is stored in a dielectric, not whether vacuum radiation exerts pressure. In
+source-free exterior regions both reduce to the vacuum Maxwell stress used throughout this chapter
+[4].
+Stratton [4], Sommerfeld [10], Harrington [6], and Jackson [11] consolidated the mathematical
+apparatus of boundary-value radiation problems: impressed sources, outgoing conditions, dyadic
+Green functions, and surface flux integrals for power and momentum. Chu [7] emphasized that
+finite source size and stored reactive energy bound what a compact antenna can radiate, so far-zone
+patterns cannot be separated from near-zone storage. Tai [12] extended the same field-theoretic
+language to helicity and dual symmetry in monochromatic media.
+Rotational action entered experimentally with Beth [3], who measured the mechanical torque on
+a quartz wave plate in circularly polarized light. The observation confirmed that angular momentum
+is transported by the Maxwell field and delivered to matter through stress at an interface, not
+inferred from phase portrait alone. Belinfante [13] clarified that canonical and kinetic momentum
+densities differ by the divergence of a spin current; correspondingly, local “orbital” and “spin” labels
+partition total angular momentum in a convention-dependent way, while closed-surface flux integrals
+remain anchored to (E, H) [13, 4].
+Allen et al. [5] later gave paraxial beams a countable azimuthal index m through the phase
+exp(jmϕ). That vocabulary made helical phase structure experimentally accessible, but the mea-
+surable quantities of this chapter remain the Poynting flux, Maxwell traction, and angular flux
+⟨M⟩= r × ⟨T⟩on a radiative shell—quantities whose history runs from Maxwell and Poynting
+through Beth to the present chapter [2, 3, 5].
+1.0.2
+Source data, boundaries, and Maxwell consistency
+Every flux integral in this chapter refers to a Maxwell field pair (E, H) fixed by impressed sources,
+constitutive law, boundary data, and—when radiation is claimed—an outgoing condition [4, 1]. A
+tangential field prescribed tangential pattern on an aperture is not, by itself, such a specification [6].
+On a PEC-backed circular aperture, a charge-continuous impressed current Jimp closes Maxwell’s
+equations and defines radiated flux on ΓR; prescribing Et alone on the rim without a matching
+source may satisfy a local boundary relation yet fail to tie Poynting and torque integrals to any
+synthesizable excitation [4, 6]. Figure 1.4 contrasts the two configurations. Stratton [4] fixed
+the physical content of a radiation problem: spatial domain Ω, boundary Γ, constitutive data
+χ, impressed sources (Jimp, ρ), and harmonic frequency under the exp(+jωt) convention adopted
+throughout this volume.
+Given impressed current and charge, together with the constitutive medium, boundary conditions
+on Γ = ∂Ω, and angular frequency ω > 0 in the exp(+jωt) convention, Maxwell’s equations determine
+the electromagnetic field once the appropriate radiation condition is imposed [1, 4]. An angular
+claim is meaningful only after that boundary-value problem is closed.
+Inconsistent boundary traces cannot be repaired by deeper harmonic listing. The source and
+boundary conditions precede every transport statement [4].
+1.0. INTRODUCTION AND SCOPE
+9
+aperture radius a
+Jimp
+ΓR
+Maxwell-consistent
+impressed current
+Et
+prescribed only
+ΓR
+tangential template
+without matching Jimp
+Figure 1.4: Same circular aperture and observation shell ΓR: left, a charge-continuous impressed current
+Jimp launches a Maxwell field whose outward flux on ΓR is defined; right, a tangential Et pattern is prescribed
+on the rim without a matching source, so flux integrals need not correspond to any realizable excitation [4, 6].
+1.0.3
+Rotation and Maxwell compatibility
+Rotate a vector by angle α about axis ˆu: v′ = Rαv.
+A second-order tensor transforms as
+T ′
+ij = RikTklRjl, or T′ = RTR⊤in dyadic notation [4]. A vector field transforms actively as
+(TRF)(r) = R F(R−1r): the source is rotated in space, not merely relabelled [14].
+If the impressed current on a feed is rotated through α while the horn, ground plane, and medium
+share the same axisymmetry, does the radiated field rotate with it? When source, medium, and
+boundaries share rotational symmetry, solving Maxwell’s equations after rotating Jimp yields the
+same physical field as rotating the solution [4, 14]. An anisotropic radome or azimuthally varying ε
+breaks that equivalence.
+An anisotropic radome, an azimuthally varying permittivity, or a source that does not share the
+domain symmetry breaks rotational equivalence: azimuthal labels assigned in a harmonic chart need
+not track the physical rotation of the feed, even though total radiated power on ΓR may remain
+unchanged [6]. Rotational symmetry of Maxwell radiation is therefore a property of the source,
+medium, and boundary geometry together—not of a phase portrait viewed in isolation [4].
+1.0.4
+Assumptions, finite energy, and domain of validity
+A coax-fed pyramidal horn over a ground plane illustrates how an impressed current on a finite
+feed support, together with conducting boundaries and an outgoing radiation condition, defines a
+Maxwell boundary-value problem [4]. The next question is whether the resulting field pair has finite
+energy on the control volume on which flux and torque will be integrated [1].
+For the energy, linear momentum, and angular momentum of the field to be represented by
+surface integrals, the corresponding flux densities must be integrable on the chosen surface [2, 4].
+The requirement is therefore a property of the field and of the surface on which the conservation
+law is evaluated—not a separate procedural gate imposed before transport is discussed.
+Let Ω⊂R3 be the analysis region with boundary Γ = ∂Ω. On any finite control volume V ⊂Ω
+that excludes point singularities, Poynting and stress integrals require convergent field norms on V
+[2, 4]:
+∫︂
+V
+(E∗· E + H∗· H) dV < ∞.
+(1.4)
+Ideal point dipoles and filaments are used only as explicit distributional limits; otherwise sources
+satisfy Eq. (1.28). Outgoing 1/r radiation is not globally square-integrable at infinity, yet Prad,
+T J, and ΦJ,out on a finite shell SR remain well defined when the outgoing radiation condition is
+enforced [4]. Charge continuity ∇· Jimp + jωρ = 0 follows from Ampère’s law [1]; boundary data on
+Γ complete the physical problem [4].
+10
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+x
+exp(︁
+−r2/w2
+0
+)︁
+[−10w0, 10w0]3
+[−w0, w0]3
+S
+Figure 1.5: Gaussian beam envelope exp
+(︁
+−r2/w2
+0
+)︁
+on finite analysis domains and enclosing radiative shell
+S. Angular-flux integrals require a control volume that encloses radiated power [5, 4].
+k
+E
+H
+D
+B
+D = ε0E
+B = µ0H
+η0 =
+√︁
+µ0/ε0
+Figure 1.6: Vacuum constitutive relations linking (E, D) and (H, B) through ε0 and µ0, and the outgoing
+wave whose kinematics those constants determine.
+Finite analysis domains must enclose the radiated power before flux integrals are interpreted;
+waist parameters alone do not define transport on a shell [5, 4]. Figure 1.5 illustrates that enclosure
+requirement [4].
+1.1
+Maxwell Theory and Conservation Laws
+Charge continuity follows from the divergence of Ampère’s law. Energy and momentum follow from
+the curl structure of (E, H). Angular momentum is the moment of electromagnetic momentum
+carried by the Maxwell stress tensor [1, 2, 3]. Maxwell’s equations in harmonic form are
+∇× E = −jωµ0H,
+∇× H = Jimp + jωε0E,
+(1.5)
+together with the divergence constraints and boundary completion of section 1.0 [4].
+Helicity sectors, modal coefficients, and orbital labels are coordinate listings on radiative fields,
+not independent degrees of freedom that override curl–divergence constraints [1, 11]. Assigning
+azimuthal phase to E alone without updating H through ∇× E = −jωµ0H violates local Maxwell
+compatibility [4].
+1.1.1
+Maxwell equations: differential, integral, vacuum constitutive relations
+Maxwell’s equations couple E and H at every point: Faraday’s law links ∇× E to H, and Ampère–
+Maxwell law links ∇× H to E and the impressed sources [1, 4]. Angular structure is always a
+property of the coupled (E, H) state—never of a single component viewed in isolation [4].
+Three equivalent formulations answer three distinct physical questions. The differential form
+states local field relations at each point. The integral form states the same laws on finite surfaces
+and volumes—the form in which enclosed charge, circulating E, and power crossing a shell are
+evaluated. The vacuum constitutive relations link (E, H) to (D, B) and fix the propagation scales c,
+η0, and k0 [4].
+Figure 1.6 displays the vacuum constitutive link: ε0 and µ0 map (E, H) to (D, B), fix wave
+speed c and impedance η0, and set the wavenumber k0 quoted in every later phase gradient and
+shell radius kr. Changing E without updating H through this closure violates Faraday’s law and
+breaks propagation consistency [1, 4].
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+11
+In harmonic vacuum, take an outgoing plane wave E = E0e−jkzˆx propagating in +ˆz. Faraday’s
+law gives H = (E0/η0) e−jkzˆy with η0 =
+√︁
+µ0/ε0: E and H are transverse to ˆz and locked by curl
+coupling, not independently assignable [4, 11]. Assigning an independent azimuthal phase to E
+alone violates ∇× E = −jωµ0H and breaks the propagation relation of Eq. (1.17).
+Harmonic fields use time factor exp(+jωt) in a piecewise smooth region Ω⊂R3 bounded by
+Γ = ∂Ω, with phasors E(r), H(r), impressed current Jimp(r), charge density ρ(r), and vacuum
+parameters ε0, µ0 in SI units [4]. At each point of the domain, Faraday’s and Ampère’s laws together
+with Gauss’s laws must close without contradiction [6, 4].
+The differential form states how those quantities couple locally; curl coupling forbids treating
+Ex, Ey, and Ez as independent scalar plots or assigning directional content to a single component
+in isolation [1]:
+∇× E = −jωµ0H,
+∇× H = Jimp + jωε0E,
+∇·(ε0E) = ρ,
+∇·(µ0H) = 0.
+(1.6)
+Faraday’s law makes E and H dynamically inseparable: a time-harmonic electric field cannot
+be specified without the magnetic field that its curl demands. Ampère–Maxwell introduces the
+impressed current Jimp and the displacement current jωε0E that closes the law in time-dependent
+form. Gauss’s electric law, ∇· (ε0E) = ρ, relates electric flux to free charge; it is not charge
+continuity itself. Gauss’s magnetic law, ∇· (µ0H) = 0, expresses the absence of magnetic monopoles.
+Charge continuity,
+∇· Jimp + jωρ = 0,
+(1.7)
+follows by taking the divergence of Ampère’s law and using ∇· (∇× H) = 0 [1, 4]. The impressed
+current and charge density are therefore linked by the field equations themselves, not by an auxiliary
+constraint.
+With nonzero k2
+0 and outgoing selection, the display describes radiative propagation; removing
+those terms leaves static or purely reactive storage that does not radiate on ΓR. Every later wave
+equation, flux law, stress balance, and angular-transport statement in this chapter is a consequence
+of Eq. (1.6) on a single Maxwell field pair [4].
+The vector equations are compact; the component form makes the coupling among field compo-
+nents explicit [4]:
+∂yEz −∂zEy = −jωµ0Hx,
+∂zHx −∂xHz = Jimp,y + jωε0Ey,
+∂x(ε0Ex) + ∂y(ε0Ey) + ∂z(ε0Ez) = ρ.
+(1.8)
+Eq. (1.8) exhibits a representative subset of the Cartesian component equations implied by Eq. (1.6):
+each displayed row is one curl or divergence test evaluated at a point in space [4]. Subscripts
+x, y, z denote fixed Cartesian axes; Jimp,y is the y-component of impressed current density Jimp [6].
+Physically, the display shows that a single-component Ez patch still couples to Hy through Faraday’s
+law and to ρ through Gauss’s law—angular labels assigned to Ez alone cannot be read independently
+of the paired H and charge fields [1]. The four rows of Eq. (1.6) must vanish simultaneously at
+each point: the curl laws couple E and H, Gauss’s electric law fixes ρ, and Gauss’s magnetic law
+expresses flux closure [1, 4]. Spurious ρ without matching Jimp breaks that closure even when field
+maps appear smooth [14].
+Taking the divergence of Ampère’s law and using ∇· (∇× H) = 0 recovers Eq. (1.7), the
+harmonic form of charge conservation under the exp(+jωt) convention adopted here [1, 4]. The
+impressed current and charge density are therefore linked by Maxwell’s equations themselves, not
+by an auxiliary constraint.
+12
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+Integrating Eq. (1.7) over a control volume V with boundary ∂V and outward normal ˆn yields
+∫︂
+∂V
+Jimp · ˆn dS + jω
+∫︂
+V
+ρ dV = 0.
+(1.9)
+The first term is net impressed current leaving V ; the second is harmonic charge variation inside
+V , with outward unit normal ˆn on ∂V [1]. Current outflow and charge accumulation balance on
+every control volume to which Eq. (1.9) applies: a feed that injects charge without matching current
+through the boundary violates the same continuity law that curl–divergence structure embeds in
+Eq. (1.6) [4].
+The integral form of Maxwell equations follows from Stokes and divergence theorems. For
+oriented surface S ⊂Ωwith boundary ∂S, oriented volume V ⊂Ω, line element dℓ, area element
+dS, and volume element dV ,
+∮︂
+∂S
+E · dℓ= −jωµ0
+∫︂
+S
+H · ˆn dS,
+∮︂
+∂S
+H · dℓ=
+∫︂
+S
+Jimp · ˆn dS + jωε0
+∫︂
+S
+E · ˆn dS,
+∫︂
+∂V
+ε0E · ˆn dS =
+∫︂
+V
+ρ dV,
+∫︂
+∂V
+µ0H · ˆn dS = 0.
+(1.10)
+These relations are exact finite-control statements of the same laws written locally in Eq. (1.6) [4].
+The fields are assumed sufficiently regular for the differential and integral forms to be connected
+by the usual integral theorems; idealized point or filament sources are understood as limiting
+representations of finite sources [4].
+Applying Stokes and divergence theorems to the local rows
+gives the integral rows; shrinking a control volume recovers the local laws at an interior point.
+Vacuum constitutive relations supply the completion that transforms field-intensity variables
+into flux-density variables:
+D = ε0E,
+B = µ0H,
+c =
+1
+√ε0µ0
+.
+(1.11)
+Here D is electric flux density, B magnetic flux density, and c vacuum wave speed [4]. Without
+Eq. (1.11), Maxwell balance laws remain under-closed in terms of unknowns (E, H, D, B). With
+completion, the model is fully evaluable for vacuum media.
+Derived vacuum scales follow directly:
+η0 =
+√︃µ0
+ε0
+,
+k0 = ω√µ0ε0 = ω
+c ,
+λ0 = 2π
+k0
+.
+(1.12)
+η0 is intrinsic impedance, k0 is wavenumber, and λ0 is wavelength. These scales set amplitude
+normalization and phase reference for every source-free vacuum propagation sector [4].
+Constitutive completion and wave propagation are not independent postulates. The constants
+that map E, H to D, B also set wave speed and impedance, so material assumptions and propagation
+predictions are intrinsically linked.
+To obtain the wave equation, apply the vector identity
+∇× (∇× E) = ∇(∇· E) −∇2E
+(1.13)
+valid for smooth fields [4]. With exp(+jωt) phasors, Faraday’s law is ∇× E = −jωµ0H and
+Ampère–Maxwell is ∇× H = Jimp + jωε0E. Operating with ∇× on Faraday’s law and substituting
+Ampère–Maxwell,
+∇× (∇× E) = −jωµ0Jimp + k2
+0E,
+(1.14)
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+13
+because ∇× H = Jimp + jωε0E and k2
+0 = ω2µ0ε0. Gauss’s law gives ∇· E = ρ/ε0, so Eq. (1.13)
+yields ∇(ρ/ε0) −∇2E = −jωµ0Jimp + k2
+0E. Rearranging,
+∇2E + k2
+0E = 1
+ε0
+∇ρ + jωµ0Jimp,
+∇2H + k2
+0H = −∇× Jimp.
+(1.15)
+The same route applied to H gives the magnetic companion. The ∇ρ and Jimp terms are charge-
+gradient and impressed-current forcing; the +jωµ0Jimp term is impressed-current forcing for E and
+the −∇× Jimp term is magnetic-source forcing for H, consistent with Eqs. (1.13)–(1.14) under
+exp(+jωt) [11, 4]. Equation (1.15) clarifies that spatial curvature and source gradients jointly shape
+field structure [4].
+In source-free vacuum, Eq. (1.15) reduces to
+∇2E + k2
+0E = 0,
+∇2H + k2
+0H = 0,
+(1.16)
+which is the vector Helmholtz pair. The reduction is valid only when both Jimp = 0 and ρ = 0, and
+when the constitutive completion remains vacuum linear isotropic. For a plane wave E = E0e−jk·r
+with k · E0 = 0, Eq. (1.16) gives ∇2E = −k2
+0E, satisfied when |k| = k0. Faraday’s law then requires
+H = (k × E)/(ωµ0) = ˆk × E/η0, and Ampère–Maxwell confirms transversality k · H = 0 [4, 11].
+Local plane-wave sectors therefore obey
+H = 1
+η0
+ˆk × E,
+ˆk · E = 0,
+ˆk · H = 0,
+(1.17)
+where ˆk is the unit propagation direction and η0 =
+√︁
+µ0/ε0 is vacuum intrinsic impedance [4]. The
+three lines state transverse closure: H is perpendicular to both E and ˆk, and both field vectors are
+transverse to propagation—the standard pattern of a TEM plane wave in free space [11].
+The same source-free physics may be written in curl-curl form:
+∇×
+(︂
+µ−1
+0 ∇× E
+)︂
+−ω2ε0E = 0,
+∇×
+(︂
+ε−1
+0 ∇× H
+)︂
+−ω2µ0H = 0.
+(1.18)
+Eq. (1.18) and Eq. (1.16) are equivalent in vacuum. Curl-curl form is often preferable in weak
+formulations because it interfaces naturally with tangential boundary data and variational bilinear
+forms [4].
+For a plane wave E = E0e−jk0zˆx under exp(+jωt), surfaces of constant phase satisfy ωt −k0z =
+const, hence dz/dt = ω/k0 > 0: the disturbance advances in +ˆz. The spatial factor e−jk0z is
+therefore the outgoing propagating branch for this time convention, not an arbitrary sign [4, 11].
+1.1.2
+From inhomogeneous Helmholtz equation to outgoing Green function
+A localized impressed current at r′ must communicate with the observation point r across the
+separation R = |r −r′|. In the time domain, causality requires the field at r to depend on the source
+history at retarded time t −R/c [4, 11]. Under exp(+jωt) that delay becomes the monochromatic
+phase factor e+jω(t−R/c) = e+jωte−jk0R, which is the outgoing spatial phase selected below [4].
+In a homogeneous source-free region the harmonic field satisfies the vector Helmholtz pair
+of Eq. (1.16). With impressed sources restored, the same frequency-domain structure becomes
+inhomogeneous:
+(∇2 + k2
+0) U(r) = −S(r),
+(1.19)
+where, in a homogeneous isotropic source-free region, each Cartesian component of E or H satisfies
+the homogeneous Helmholtz equation, and S collects the corresponding source terms when impressed
+14
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+r′
+r
+R
+ˆr
+e−jk0R/(4πR)
+far zone
+Figure 1.7: Localized impressed current at r′, observation point r, separation R = |r −r′|, observation
+direction ˆr, and outgoing Green-function phase e−jk0R/(4πR); in the far zone R ≈r −ˆr · r′ generates angular
+phase from source geometry [4, 11, 12].
+currents are restored [4, 11]. For source reconstruction, the Lorenz-gauge potentials provide the
+classical Green-function seed [4]. A localized impressed current therefore poses a reconstruction
+problem: given Jimp(r′) on finite support, determine the outgoing field at observation point r [1, 12].
+The classical answer is the retarded Green function. With outgoing selection under exp(+jωt),
+the scalar Helmholtz operator satisfies (∇2 + k2
+0)G(r, r′) = −δ(r −r′) [4, 11]. Using ∇2(1/R) =
+−4πδ(r −r′) for R = |r −r′| and the outgoing phase e−jk0R as R →∞, the normalized outgoing
+solution is
+G(r, r′) = e−jk0|r−r′|
+4π|r −r′|,
+(1.20)
+so a source element at r′ contributes phase e−jk0R/R with R = |r −r′| [4, 11, 12]. The vector
+potential in Lorenz gauge inherits the same outgoing phase:
+A(r) = µ0
+4π
+∫︂
+Jimp(r′) e−jk0|r−r′|
+|r −r′|
+d3r′,
+(1.21)
+Under Lorenz gauge with exp(+jωt),
+ϕ(r) =
+1
+4πε0
+∫︂
+ρ(r′) e−jk0|r−r′|
+|r −r′|
+d3r′,
+(1.22)
+with E = −∇ϕ −jωA and B = ∇× A [4, 11]. When charge continuity holds, the pair (ϕ, A)
+is consistent with the same (E, H) as the curl relations of Subsection 1.1.1 [1]. In the far zone
+R ≈r −ˆr · r′ and
+e−jk0R ≈e−jk0r e+jk0ˆr·r′,
+(1.23)
+so the second exponential is the first appearance of angular phase structure generated by source
+geometry—the seed of the multipole hierarchy developed later in this chapter [4, 11]. Chapter 2
+develops the full dyadic Green function, the radiation operator that selects the outgoing branch,
+and—under the same exp(+jωt) convention—the outgoing cylindrical Hankel family H(2)
+m versus
+the incoming branch H(1)
+m ; the present statement fixes only the causal outgoing spherical phase that
+every later reconstruction inherits [6, 12, 4].
+The same retarded phase underlies the multipole hierarchy of Subsection 1.6.4: far-zone expansion
+of e−jk0R/R yields the path factor ejk0ˆr·r′ that generates dipole, quadrupole, and higher moments
+from the source integral [11, 4]. Green function →retarded phase →source moments →multipoles
+is therefore one continuous classical chain, not three separate topics [4].
+Eqs. (1.6)–(1.11) describe field evolution in the presence of Jimp and ρ, but they do not yet
+specify which source distributions and boundary traces are physically realizable on a given Ω. A
+mathematically writable current need not belong to the finite-energy Maxwell class of Subsection 1.0.4;
+an interface condition written without tangential continuity can produce apparent angular flux that
+is pure specification inconsistency. Subsection 1.1.3 couples volume sources, interface jumps, and
+outer-boundary radiation specification into one complete Maxwell boundary-value problem [4].
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+15
+I0 ˆϕ
+b = 3 cm
+kr = 6.3
+kr = 0.63
+Figure 1.8: Azimuthal filament loop of radius b carrying I0 ˆϕ: charge-continuous impressed current on
+compact support driving dipole radiation in the far zone (kr = 6.3) from a reactive near shell (kr = 0.63).
+Figure 1.8 is the minimal charge-continuous source geometry: azimuthal current on a filament
+loop produces dipole radiation because ∇· Jimp = 0 on the support while the impressed current
+closes the Ampère row in Eq. (1.6). Replacing the loop by a tangential Et pattern on the same
+circle would satisfy a boundary display but not the source row unless a matching Jimp is prescribed
+[4, 6].
+With solenoidal Jimp, Eq. (1.15) yields a charge-continuous Maxwell field. Inserting a spurious
+ρ = ρ0δ(r) without adjusting Jimp violates Eq. (1.7) and breaks the Ampère–Gauss closure of
+Eqs. (1.6) [1, 4].
+Example 1.1 (An electrically small current loop). A filament loop of radius b = 3 cm carries phasor
+current I0 = 1 A at f = 100 MHz. Then λ0 = c/f = 3 m, k0 = 2π/λ0, and k0b = 0.063 ≪1: the
+source is electrically small. The impressed azimuthal current is charge-continuous (∇· Jimp = 0
+on the loop support), so Eq. (1.15) drives primarily magnetic-dipole radiation in the far zone
+(Subsection 1.2.5). At k0b = 0.063 the near reactive shell dominates; at k0r = 6.3 the r−1 radiation
+field already sets the angular pattern [4, 6].
+Dispersive media require frequency-dependent ε(ω) and µ(ω), breaking the algebraic completion
+of Eq. (1.11). Relativistic or quantum corrections lie outside the present harmonic class. Within
+the vacuum harmonic class, Eqs. (1.6)–(1.17) form the complete local law set every later angular
+argument inherits [1].
+Physically, Maxwell’s equations couple E and H locally, yet they do not by themselves determine
+which impressed currents and boundary traces belong to a realizable antenna [4]. Local curl–
+divergence closure holds at each point of a Maxwell solution; flux through enclosing surfaces after
+outgoing selection reproduces the same physics once source and boundary data are complete [6].
+Subsection 1.1.3 supplies the source, interface, and boundary data that convert local Maxwell laws
+into a fully defined boundary-value problem [4].
+1.1.3
+Sources, boundary conditions, and the Maxwell boundary-value problem
+No radiating structure exists without a feed and an outer world. Maxwell’s local equations, stated in
+Subsection 1.1.1, govern how (E, H) must behave pointwise; they do not, by themselves, determine
+which impressed currents, interface jumps, and outer-boundary data correspond to a physically
+realizable field [4]. The question that now arises is therefore immediate: given a tangential field on
+an aperture, does a finite impressed source, compatible interface data, and outgoing selection exist
+such that flux integrals on ΓR name the same physics as the Maxwell field launched by that source?
+Prescribing tangential Et on an aperture is not equivalent to specifying a source. Harrington [6]
+and Chu [7] showed repeatedly that finite extent and material boundaries restrict what tangential
+patterns can be synthesized. A Maxwell field is determined by the sources that produce it, the
+constitutive properties of the medium, and the boundary conditions imposed by the surrounding
+matter [1].
+16
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+Impressed sources inject current and charge; boundary conditions fix tangential traces and
+outgoing-wave selection. The finite-energy class of Subsection 1.0.4 requires source and boundary
+data to be mutually consistent [4]. Geometry Ω, boundary class Γ, constitutive data χ, impressed
+sources (Jimp, ρ), and angular frequency ω enter Maxwell’s boundary-value problem together [1].
+Finite antennas realize only a subset of mathematically smooth boundary data—a theme developed
+in Chapter 4 [4].
+A WR-90 feed, a dielectric window, and an open-range absorbing boundary are three different
+boundary conditions applied to the same Maxwell equations [4]. Tangential E or H continuity
+on metal enforces PEC or PMC traces; impedance sheets approximate thin coatings; Sommerfeld
+radiation selects outgoing waves. Consider a dielectric half-space with εr = 4, interface at z = 0,
+and a plane wave incident from z > 0 [4]. Tangential E and tangential H (apart from any impressed
+surface current Js) remain continuous across the interface: ˆz×(E1−E2) = 0 and ˆz×(H1−H2) = Js;
+with Js = 0, the reflected amplitude fixes how much power returns to the source region versus
+how much transmits [11]. Angular transport fails silently when sources are specified on one surface
+and flux is evaluated on another without matching traces—the half-space example is the minimal
+warning that charge continuity is a whole-domain statement, not a rim template [6].
+Let Ω⊂R3 be decomposed into piecewise smooth material subdomains {Ωa}NΩ
+a=1, and let
+Σab = ∂Ωa ∩∂Ωb be an interface with unit normal ˆnab directed from Ωa to Ωb. Let Da and Ba
+denote electric and magnetic flux-density phasors in Ωa, Js,ab the electric surface-current density on
+Σab, and ρs,ab the free surface-charge density on Σab [4].
+On Γ = ∂Ω, the boundary data fix the tangential field traces and outgoing-wave selection. Metal
+enforces vanishing tangential E; an impedance sheet relates ˆn × E to ˆn × H; at infinity the outgoing
+radiation condition selects the radiating branch [4]. Eq. (1.24) collects these relations in compact
+form:
+BΓ[E, H] = gΓ,
+(1.24)
+where gΓ is the prescribed boundary data on Γ [4]. Without compatible source, interface, and
+boundary data, flux integrals on ΓR are not physically defined [14].
+Interface transmission follows from Maxwell’s integral balances Eq. (1.10). Shrinking an Amperian
+loop straddling Σab forces the line integral of E to vanish, so tangential E is continuous across the
+interface. Shrinking a pillbox across the same surface relates the jump in normal D to free surface
+charge ρs,ab; with no magnetic monopoles, normal B is continuous and tangential H jumps by
+impressed surface current Js,ab [1, 11]. For piecewise smooth interfaces and no impressed magnetic
+sheet current, one obtains
+ˆnab × (Eb −Ea) = 0,
+ˆnab × (Hb −Ha) = Js,ab,
+ˆnab · (Db −Da) = ρs,ab,
+ˆnab · (Bb −Ba) = 0.
+(1.25)
+Eq. (1.25) is the transmission law on material partitions [4]. Tangential E is continuous because
+Faraday’s law integrates to zero circulation around a vanishing loop straddling Σab; tangential H
+jumps by impressed surface current Js,ab; normal D jumps by free surface charge ρs,ab; and normal
+B is continuous in the absence of magnetic monopoles [11]. A thin dielectric window between a
+waveguide port and free space is modelled by these jumps; omitting ρs,ab when a coated interface is
+present misstates reflected power [15]. Matching tangential E on both sides of an interface without
+enforcing Js,ab produces patterns that satisfy a local plot yet violate global power balance [4].
+Intermediate limiting relations leading to Eq. (1.25) follow from control-set shrinkage in Eq. (1.10):
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+17
+for a vanishing loop straddling Σab,
+lim
+δ→0
+∮︂
+∂Sδ
+E · dℓ= 0
+⇒
+ˆnab × (Eb −Ea) = 0,
+and for a vanishing pillbox,
+lim
+δ→0
+∫︂
+∂Vδ
+D · ˆn dS = ρs,ab
+⇒
+ˆnab · (Db −Da) = ρs,ab.
+The boundary selects which tangential and normal field components transmit flux and which are
+screened at material partitions [4].
+Metal walls, magnetic boundaries, and thin impedance coatings are the three standard outer
+termination models in classical electrodynamics [4]. A PEC wall suppresses tangential E and reflects
+power; a PMC wall suppresses tangential H; an impedance sheet Zs couples the two traces as on
+a thin absorber or dielectric coating [6]. The display below partitions Γ accordingly so that each
+boundary class selects one trace relation before open-region radiation is appended [4].
+Outer completion is specified by partitioning Γ = ΓPEC ∪ΓPMC ∪ΓZ, where ΓPEC is perfect-
+electric-conductor boundary, ΓPMC is perfect-magnetic-conductor boundary, and ΓZ is an impedance
+boundary with surface impedance Zs:
+ˆn × E = 0
+on ΓPEC,
+ˆn × H = 0
+on ΓPMC,
+ˆn × E = Zs (ˆn × H) × ˆn
+on ΓZ,
+(1.26)
+with ˆn the outward unit normal on Γ. Here ˆn × E and ˆn × H are tangential electric and magnetic
+traces, while (ˆn×H)× ˆn reorients tangential magnetic content into the impedance-coupled direction.
+Eq. (1.26) therefore functions as a boundary trace selector mathematically, and as a model of ideal
+reflection or finite surface dissipation physically.
+The three outer boundary classes in Eq. (1.26) are limiting responses for tangential field content.
+The PEC relation suppresses tangential electric trace, the PMC relation suppresses tangential
+magnetic trace, and the impedance relation preserves both while coupling them through Zs. This
+nesting determines which energy and momentum flux can pass through the boundary and which is
+reflected [4].
+For open-region antennas and scatterers, the outer world must not send incoming waves back
+toward the feed [4]. Absorber-lined truncations and Sommerfeld radiation conditions implement
+the same physical requirement: transverse fields on Γ must carry net power outward as R →∞,
+otherwise watt totals conflate radiative fields with incoming energy that no bounded source supplied
+[14]. The trace condition below is the asymptotic form of that outgoing selection [10].
+For open-region truncation, an outgoing-trace condition is often required:
+ˆn × H + η−1
+0 (ˆn × E) × ˆn = o(R−1),
+R →∞,
+(1.27)
+where η0 =
+√︁
+µ0/ε0 and R is truncation radius. Eq. (1.27) selects asymptotically outgoing transverse
+fields with Erad ∼E0(θ, ϕ) e−jk0R/R and Hrad = η−1
+0
+ˆn × Erad [4, 10]. The condition prevents
+unphysical incoming-wave completion in exterior problems [6].
+Every bounded source occupies finite support Ωs and must satisfy charge continuity Eq. (1.7),
+which follows from Ampère’s law and excludes non-conservative current prescriptions [1, 4]. Let
+Ωs ⊆Ωbe source support. The regular source class is
+Jimp ∈L2(Ωs)3,
+supp(Jimp) ⊆Ωs,
+∇· Jimp + jωρ = 0 in D′(Ω).
+(1.28)
+18
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+TE10
+Jimp
+a × b, PEC
+Figure 1.9: Rectangular waveguide cross section a × b with PEC sidewalls, TE10 transverse E profile, and
+charge-compatible impressed-current feed at the aperture.
+Eq. (1.28) defines a square-integrable impressed-current class,
+∫︁
+Ωs |Jimp|2 dV < ∞; it does not by
+itself guarantee finite electromagnetic field energy in the surrounding domain. The support condition
+enforces spatial localization of excitation; the distributional continuity relation enforces charge-
+current consistency under the adopted exp(+jωt) phasor convention. Taken together, these conditions
+exclude non-conservative source prescriptions that would violate Eq. (1.6). Ideal thin filaments used
+in worked examples are not square-integrable functions; they are treated as distributional sources in
+D′(Ω) that satisfy ∇· Jimp + jωρ = 0 in the distributional sense and arise as zero-thickness limits of
+charge-continuous toroidal currents of finite width. Unless that extended class is explicitly invoked,
+the regular source class means Jimp ∈L2(Ωs)3 as in Eq. (1.28). A delta charge inserted without
+matching Jimp violates charge continuity in either class, even when the near-field pattern appears
+smooth [4]. Numerical ports that enforce Et without charge-compatible Jimp produce fields that fail
+Eq. (1.29) at domain scale [14].
+Once impressed sources, constitutive data, interfaces, and outer traces are specified at angular
+frequency ω, a physically realizable Maxwell specification must close jointly through Eq. (1.28),
+interface data Eq. (1.25), outer traces Eq. (1.24), and global charge balance Eq. (1.29) [1, 4]. A
+waveguide feed with charge-compatible aperture current meets these requirements above cutoff; a
+prescribed tangential template without a matching Jimp extension does not, even if a numerical
+field solve returns smooth maps [15]. Inconsistent data can yield smooth numerical fields whose flux
+integrals no longer name one physical excitation [4].
+Global charge compatibility closes the Maxwell relations on whole-domain scale:
+∫︂
+Ω
+(∇· Jimp + jωρ) dV =
+∫︂
+Γ
+Jimp · ˆn dS + jω
+∫︂
+Ω
+ρ dV = 0.
+(1.29)
+Integrating Eq. (1.7) over Ωand applying the divergence theorem yields Eq. (1.29) [1]. The surface
+integral
+∫︁
+Γ Jimp·ˆn dS is net outward impressed-current flux through the domain boundary; jω
+∫︁
+Ωρ dV
+is the harmonic rate of charge storage inside Ω[4]. A source that injects current without matching
+interior charge variation violates global balance even when local curl equations appear satisfied
+on the mesh [6]. Inconsistent (Jimp, ρ) pairs can still produce smooth far patterns because curl
+departures are small while charge continuity fails at domain scale [14].
+If ∇· Jimp + jωρ̸ = 0, the impressed current and charge density cannot belong to the same
+harmonic Maxwell source [1, 4]. Compatible (Jimp, ρ), interface data Eq. (1.25), and outer traces
+Eq. (1.24) fix the class of fields on which flux integrals are defined [4].
+In Figure 1.9, the PEC rectangle enforces vanishing tangential E on the sidewalls, the feed
+aperture supplies charge-compatible impressed current, and the sinusoidal Ey profile is the TE10
+eigenmode of the closed cross section. Below cutoff the same geometry stores reactive energy
+without radiation; above cutoff β becomes real and the guide supports propagating power—the
+same Maxwell equations with a different boundary-class outcome [4, 6].
+Below cutoff, evanescent guide fields remain storage-dominated; radiative transport analysis
+applies only after Eq. (1.27) is satisfied [4]. Consider a hollow rectangular guide with cross section
+a × b and PEC walls. The dominant TE10 mode has E = E0 sin(πx/a) e−jβzˆy with cutoff ωc = πc/a
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+19
+and propagation constant β =
+√︂
+k2
+0 −(π/a)2 for k0 > π/a. Tangential E vanishes on x = 0, a and
+y = 0, b, satisfying Eq. (1.26) on ΓPEC. The impressed current that launches this mode is confined
+to the feed aperture at z = 0; with Jimp ∈L2(Ωs)3 and Eq. (1.29) enforced at the feed, the Maxwell
+problem is fully posed. At f = 10 GHz with a = 2.3 cm, ωc ≈6.52 GHz and the mode propagates
+with β/k0 ≈0.759. Applying angular-momentum integrals to the evanescent field below cutoff
+without revisiting Eq. (1.27) confuses storage-dominated guide physics with radiative fields [4].
+Power dissipated on an impedance boundary ΓZ follows from the complex Poynting theorem of
+Subsection 1.1.5. The cycle-averaged outward power density normal to ΓZ is
+PZ = 1
+2 Re{ˆn · (E × H∗)} = 1
+2 Re
+{︂
+Zs |(ˆn × H) × ˆn|2}︂
+,
+(1.30)
+where the second equality uses Eq. (1.26). When Re(Zs) > 0, Eq. (1.30) is nonnegative and
+supports the passive uniqueness route of Subsection 1.1.4. When Re(Zs) < 0 for active surfaces,
+Maxwell-closed must be revisited because energy can be injected through the boundary [4].
+With Jimp = 0, zero net ΦJ,out on Σ12 coexists with large reactive normal flux in the interface
+near zone [4].
+Example 1.2 (Reflection at a lossless dielectric interface). Let Ω1 be vacuum and Ω2 a semi-infinite
+dielectric with εr = 2.25 at interface Σ12 (z = 0). For a normally incident plane wave E = E0e−jk0zˆx,
+Γ = (1 −√εr)/(1 + √εr) = −0.2, R = |Γ|2 = 0.04, and for a lossless interface the transmitted power
+fraction is T = 1 −R = 0.96. Four percent of the incident power is reflected and ninety-six percent
+is transmitted; tangential E and H continuity at Σ12 fix the transmitted wavenumber k2 = k0√εr
+[4, 11].
+Eq. (1.25) presumes piecewise smooth interfaces, local linear constitutive laws, and boundary
+traces compatible with Eq. (1.24). Rough surfaces modeled by effective impedance and nonlinear sur-
+face response require enriched boundary models before torque integrals inherit the same conservation
+interpretation [4]. Within the harmonic Maxwell class treated here, uniqueness, Poynting balance,
+and angular transport claims presuppose the same source, interface, and boundary completion [1].
+1.1.4
+Boundary-Value Problems and Uniqueness
+Power and torque integrals name a physical field only if the source, boundary, and radiation data
+select one Maxwell solution [4, 10]. For two solutions with the same data, the difference field is
+source-free and satisfies BΓ[∆E, ∆H] = 0 [4]. Integrating S∆= 1
+2∆E × ∆H∗yields
+∫︂
+Γ
+ˆn · S∆dS = −2jω
+∫︂
+Ω
+(u∆H −u∆E) dV
+(1.31)
+for ∆Jimp = 0, with u∆E = 1
+4ε|∆E|2 and u∆H = 1
+4µ|∆H|2 [4]. On a bounded passive domain with
+loss, Eq. (1.31) forces ∆E = ∆H = 0 except at lossless cavity eigenfrequencies [4, 10]. On an
+exterior radiating domain, the outgoing condition of Eq. (1.27) is additionally required [10, 6].
+1.1.5
+Energy, linear momentum, and Maxwell stress tensor
+Energy and momentum are not postulates appended to Maxwell theory; they follow from the
+curl–divergence structure of (E, H) [2, 1]. Begin with the instantaneous vacuum fields. The identity
+∇· (E × H) = H · (∇× E) −E · (∇× H) together with Maxwell’s equations gives
+∇· (E × H) = −Jimp · E −∂
+∂t
+(︃ε0
+2 |E|2 + µ0
+2 |H|2
+)︃
+,
+(1.32)
+20
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+where Jimp is impressed current density [4]. Define instantaneous Poynting vector s = E × H and
+energy density u = 1
+2(ε0|E|2 + µ0|H|2); then ∇· s + ∂u/∂t + Jimp · E = 0. The term Jimp · E is
+power density at which the field performs work on impressed current per unit volume; ∇· s is net
+energy outflow from an infinitesimal volume. Integrating over volume V and applying the divergence
+theorem yields the power balance through ∂V [2].
+Instantaneous transport uses real fields: s = E × H, gem = ε0 E × B, and T(i) in Eqs. (1.39)–
+(1.40) [1, 2]. Harmonic phasors use Sc = 1
+2E × H∗, ⟨S⟩= Re Sc, and cycle-averaged stress ⟨T⟩of
+Eq. (1.42) with ⟨M⟩= r × ⟨T⟩[4]. The two descriptions are linked by exp(+jωt) but must not be
+interchanged when reading reactive storage or radiative flux.
+For harmonic fields with exp(+jωt), time averages reduce bilinear products to phasor forms.
+Define the complex Poynting vector Sc = 1
+2E × H∗, time-averaged real power flux ⟨S⟩= Re(Sc),
+and harmonic storage densities uE = 1
+4ε0E · E∗, uH = 1
+4µ0H · H∗. Applying ∇· (E × H∗) =
+H∗· (∇× E) −E· (∇× H∗) to the phasor Maxwell equations gives Eq. (1.34) below [4, 6]. Poynting
+[2] identified instantaneous power transport with E × H; Abraham and Minkowski [8, 9] addressed
+momentum storage in material media, while vacuum radiation pressure follows Maxwell’s stress and
+Poynting’s flux [1, 4]. On a normally incident plane wave striking a perfect absorber, p = ⟨Sz⟩/c in
+vacuum [4]. With ∇× E = −jωµ0H and ∇× H = Jimp + jωε0E, and ∇× H∗= J∗
+imp −jωε0E∗,
+∇· (E × H∗) = −E · J∗
+imp + jω
+(︁ε0E · E∗−µ0H∗· H
+)︁.
+(1.33)
+Under exp(+jωt), the complex Poynting vector is Sc = 1
+2E × H∗, where (·)∗denotes complex
+conjugation; time-averaged real power flux is ⟨S⟩= Re(Sc). The harmonic stored-energy densities
+are uE = 1
+4ε0E · E∗and uH = 1
+4µ0H · H∗, so ε0E · E∗−µ0H∗· H = 4(uE −uH) [4]. Dividing
+Eq. (1.33) by two then gives
+∇· Sc = −1
+2E · J∗
+imp −2jω (uH −uE) .
+(1.34)
+Physically, Eq. (1.34) states that net complex power leaving a differential volume equals electromag-
+netic work on impressed current plus harmonic exchange between electric and magnetic storage [2].
+The divergence term ∇· Sc is net complex-power outflow density from the control volume. The
+source term 1
+2E· J∗
+imp is the rate at which the field performs work on Jimp. The term −2jω(uH −uE)
+accounts for harmonic exchange between magnetic and electric stored energy: its real part vanishes
+in source-free regions, while its imaginary part tracks reactive storage imbalance and dominates in
+strongly reactive near zones [4]. Local transport, source exchange, and storage therefore appear in
+one Maxwell-derived statement rather than as separate postulates.
+Poynting’s original flux vector [2] predates the complex phasor form but already encoded the
+central idea: electromagnetic energy moves through space in a direction determined by E × H. The
+harmonic specialization Sc = 1
+2E × H∗with ⟨S⟩= Re(Sc) is the standard steady-state form used
+here [4]. When fields interact with material media, momentum balance acquires additional subtlety:
+Minkowski’s symmetric energy-momentum tensor [9] and Abraham’s alternative stress form disagree
+on how much momentum is stored in a dielectric, yet both reduce to the vacuum Maxwell stress in
+source-free exterior regions where the angular-momentum balance of Subsection 1.1.6 is evaluated
+[4]. Transport on vacuum-side control surfaces is developed first; material-specific momentum splits
+enter through Subsection 1.5 only where absorbers and polarizable matter exchange momentum
+with the field.
+∇· Re(Sc) = −1
+2 Re
+(︂
+E · J∗
+imp
+)︂
+,
+∇· Im(Sc) = −1
+2 Im
+(︂
+E · J∗
+imp
+)︂
+−2ω(uH −uE).
+(1.35)
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+21
+matter in Vm
+ˆn t = ⟨T⟩·ˆn
+r
+r × ⟨T⟩·ˆn
+Figure 1.10: Differential surface element with outward normal ˆn: cycle-averaged traction t = ⟨T⟩· ˆn on a
+material-enclosing control volume Vm [1, 4].
+∫︂
+∂V
+Sc · ˆn dS = −1
+2
+∫︂
+V
+E · J∗
+imp dV −2jω
+∫︂
+V
+(uH −uE) dV.
+(1.36)
+Here V ⊂Ωis a control volume with outward normal ˆn on ∂V [4]. The surface integral is net
+complex power through ∂V ; the volume terms are impressed work and reactive storage imbalance
+inside V [2]. Integrating the local balance over any finite region therefore relates power crossing the
+boundary to source work and stored reactive energy within the volume—the finite-volume form of
+Poynting’s theorem [4].
+Linear momentum follows from Lorentz force density on matter,
+fem = ρE + Jimp × B,
+(1.37)
+with charge density ρ and current density Jimp [1, 4]. Using Maxwell’s equations in vacuum to
+eliminate ρ and Jimp in favour of (E, B), one forms the electromagnetic momentum density
+gem = ε0 E × B = s/c2,
+(1.38)
+where s = E × H is the instantaneous Poynting vector [1, 2]. Radiation pressure on an absorber
+is momentum delivered through T(i) or, in harmonic form, through ⟨T⟩[1, 4]. The instantaneous
+symmetric Maxwell stress in Cartesian components is
+T (i)
+ij = ε0
+(︂
+EiEj −1
+2δijE2)︂
++ 1
+µ0
+(︂
+BiBj −1
+2δijB2)︂
+,
+(1.39)
+with E2 = E · E and B2 = B · B [1, 4]. Index contraction with Gauss’s and Ampère’s laws gives the
+local momentum balance
+∂gi
+∂t + fem,i = ∂jT (i)
+ij ,
+(1.40)
+equivalently ∂tgem + fem = ∇· T(i) [1, 11]. Throughout the stress, Poynting, and torque balances of
+Subsections 1.1.5–1.1.6, V denotes a control volume enclosing the matter whose mechanical force or
+torque is being evaluated, and ˆn is the unit normal outward from V [4]. Integrating over that V
+with outward normal ˆn,
+Fmatter =
+∫︂
+V
+fem dV =
+∫︂
+∂V
+T(i) · ˆn dS −d
+dt
+∫︂
+V
+gem dV,
+(1.41)
+where Fmatter is force delivered to matter inside V and T(i) · ˆn is instantaneous traction [4]. Traction
+must not be identified with momentum density gem or with Poynting flux Sc.
+Figure 1.10 shows cycle-averaged traction t = ⟨T⟩· ˆn on a material-enclosing volume Vm.
+For harmonic fields with exp(+jωt), time averaging yields the cycle-averaged dyadic
+⟨T⟩= 1
+2 Re
+[︃
+ε0 EE∗+ µ0 HH∗−1
+2I (ε0 E · E∗+ µ0 H · H∗)
+]︃
+,
+(1.42)
+22
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+Vf (z < 0)
+z
+z = 0
+ˆn
+k
+absorber
+pabs = |⟨S⟩|/c
+reflector
+prefl = 2|⟨S⟩|/c
+E H
+Figure 1.11: Uniform plane wave in +ˆz on field control volume Vf (z < 0): outward interface normal
+ˆn = +ˆz at z = 0; perfect absorber receives radiation pressure |⟨S⟩|/c, perfect reflector at normal incidence
+2|⟨S⟩|/c; transverse E, H, and ⟨S⟩remain right-handed [4, 1].
+where I is the identity dyad and juxtaposition such as EE∗is dyadic product. Operand by operand,
+the first two dyads are directional field intensity contributions, while the isotropic subtraction term
+1
+2I(· · · ) removes trace pressure so that directional tractions are represented correctly. The real-part
+operator keeps physically observable time-averaged transfer [4]. Together, Sc and ⟨S⟩give energetic
+flux densities and ⟨T⟩gives cycle-averaged mechanical traction; Subsection 1.1.6 uses ⟨M⟩= r × ⟨T⟩
+and stress-moment surface density ⟨M⟩· ˆn [2].
+On a material-enclosing volume Vm, traction t = ⟨T⟩· ˆn is cycle-averaged force per unit area on
+matter, and F =
+∫︁
+∂Vm⟨T⟩· ˆn dS [4]. For a plane wave in +ˆz incident on a perfectly absorbing sheet
+at z = 0 with vacuum control volume z < 0, the outward unit normal on the interface is ˆn = +ˆz.
+Radiation pressure on the absorber is pabs = |⟨S⟩|/c; a perfect reflector at normal incidence receives
+prefl = 2|⟨S⟩|/c [4, 1].
+Example 1.3 (Radiation pressure on an absorbing surface). With ⟨S⟩= (|E0|2/2η0)ˆz from
+Eq. (1.44), pabs = |E0|2/(2η0c). If |E0| = 100 V/m, then ⟨Sz⟩= 13.2 W/m2 and pabs ≈4.4 ×
+10−8 N/m2; a perfect reflector doubles the pressure [4].
+Integrating the momentum flux over a control volume yields the harmonic steady-state balance
+fem = ∇· ⟨T⟩,
+(1.43)
+where fem is the cycle-averaged Lorentz force density on matter and ∂t⟨gem⟩= 0 on the harmonic
+branch [4]. Eq. (1.43) is the steady phasor limit of Eq. (1.40).
+The plane wave provides the simplest standard example in which energy flow and momentum
+flow become visibly parallel [2, 4]. For an outgoing wave with k = kˆz and transverse electric field
+E = E0e−jkzˆx,
+H = 1
+η0
+ˆk × E,
+⟨S⟩= |E|2
+2η0
+ˆk,
+(1.44)
+where η0 =
+√︁
+µ0/ε0 is the vacuum intrinsic impedance [4]. The time-averaged Poynting vector
+and normal Maxwell traction then point along ˆk, with radiation pressure |t| = |⟨S⟩|/c on the
+same Maxwell branch. In structured near fields energetic and mechanical transport need not be
+co-directed—a common situation in reactive storage zones [4].
+Assume impressed sources, interface data, boundary completion, passive outer closure, and
+vacuum constitutive law. For the finite-energy Maxwell solution class assumed here, the same finite
+field norms make the integrated electromagnetic traction on ∂V finite; finite radiated real power
+alone does not provide that bound. When both fluxes are finite, they are determined by the same
+solution branch (E, H).
+Eq. (1.34) and Eq. (1.42) are quadratic forms of (E, H). Under charge continuity, outgoing
+selection, and passivity, field norms are finite in the control-volume class. Therefore both surface
+integrals remain finite, and both describe transport generated by one and the same field state—a
+consequence used throughout the angular-structure theory of this volume [4].
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+23
+Table 1.1: Fundamental harmonic electromagnetic quantities in vacuum (cycle-averaged where noted).
+Quantity
+Definition
+Physical meaning
+Conservation law
+Units
+Sc, ⟨S⟩
+Sc = 1
+2E × H∗, ⟨S⟩= Re Sc
+Energy flux density
+Poynting theorem
+W m−2
+gem, ⟨gem⟩
+gem = ε0 E × B; ⟨gem⟩=
+ε0µ0⟨S⟩
+Instantaneous vs cycle-
+averaged
+momentum
+density
+Momentum balance
+with T(i) / ⟨T⟩
+kg m−2 s−1
+T(i), ⟨T⟩
+Eqs. (1.39), (1.42)
+Instantaneous and cycle-
+averaged Maxwell stress
+tensors
+fem
+=
+∇· ⟨T⟩
+(steady)
+N m−2
+jem, ⟨jem⟩
+jem = r × gem; ⟨jem⟩= r ×
+⟨gem⟩
+Instantaneous
+vs
+cycle-averaged angular-
+momentum density
+Angular-
+momentum balance
+kg m−1 s−1
+M(i), ⟨M⟩
+M(i) = r × T(i); ⟨M⟩= r ×
+⟨T⟩
+Stress-moment density;
+surface density ⟨M⟩· ˆn
+T J =
+∮︁
+⟨M⟩· ˆn dS
+N m−1 (M(i),
+⟨M⟩);
+N m
+(T J)
+Table 1.2: Four angular concepts that answer different physical questions.
+Concept
+Physical question answered
+Azimuthal phase ejmϕ
+How is the transverse field organized in angle on a plane or chart?
+Polarization / helicity
+How does the electric vector rotate in the transverse plane?
+Angular-momentum
+density jem
+Where is rotational action stored in the harmonic field at a point?
+Angular-momentum
+flux ΦJ,out
+What signed angular-momentum transport crosses a closed radiative shell?
+Table 1.3: Near, transition, and far zones for an electric dipole (r > 0, source-free exterior).
+Region
+Dominant
+r-
+dependence
+Interpretation
+Poynting character
+Angular-momentum
+note
+Near (kr ≪
+1)
+r−3, r−2
+Static / induction struc-
+ture
+Large reactive Im(Sc ·
+ˆr)
+Stress integrals domi-
+nated by storage
+Transition
+(kr ∼1)
+Mixed
+Handover to radiation
+|Preac(r)|/Prad large
+Shell choice matters for
+reading flux
+Far (kr ≫1)
+r−1
+Outgoing wave
+Prad fixed on nested
+shells
+E, H transverse; U(θ) ∝
+sin2 θ
+Eqs. (1.34) and (1.42) presuppose harmonic averaging in passive media with local ε, µ. Dispersive,
+anisotropic, or strongly time-varying constitutive laws modify both storage terms and traction
+operators; active boundaries can inject net gain that invalidates the passive-balance route used in
+Subsection 1.1.4 [4].
+Figure 1.12 illustrates how the reactive–radiative distinction enters these balances.
+Figure 1.12 names three concentric shells around a small electric dipole at ka = 0.5. At kr = 0.5
+reactive storage dominates: Eq. (1.35) gives
+∫︁
+4π Re(Sc · ˆr) dS = Prad ≪
+∫︁
+4π | Im(Sc · ˆr)| dS = |Preac|,
+and traction on a small patch is oscillatory rather than proportional to Prad/c. At kr = 3 the
+transition regime begins; at kr = 10 outward Re(Sc) dominates and the shell supports radiation-
+pressure and torque integrals developed in section 1.6.4 [4, 7]. The conservation law holds on
+any admissible closed surface; a predominantly radiative shell is preferred when the purpose is to
+interpret the integral as outward radiated transport rather than local reactive exchange [7, 4].
+24
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+bounded source
+reactive
+P
+ΓR
+∮︁
+ΓR Re{Sc·ˆn} dS
+Figure 1.12: Concentric evaluation shells at kr = 0.5, kr = 3, and kr = 10 for a small dipole: reactive
+storage dominates on the inner shell, while outward ⟨S⟩and steady traction emerge on the radiative shell
+[4, 7].
+Using the uniform plane-wave example of Subsection 1.1.1, take Sc = (|E0|2/2η0)ˆz and evaluate
+power through a disk of radius a normal to ˆz:
+P(a) =
+∫︂2π
+0
+∫︂a
+0
+Re(Sc · ˆz) ρ dρ dϕ = πa2|E0|2
+2η0
+.
+(1.45)
+For a uniform plane wave, P(a) in Eq. (1.45) is the active power intercepted by a disk of radius a
+whose normal aligns with ⟨S⟩[2].
+Eqs. (1.34) and (1.42) assume harmonic time averaging, local linear constitutive laws, and
+passive boundaries unless gain is explicitly modeled. Dispersive media require frequency derivatives
+of ε, µ in the storage terms; pulsed excitation requires time-domain Poynting before cycle averaging
+[4]. Within the harmonic vacuum class treated here, the pair supplies the energetic and mechanical
+flux quantities that Subsection 1.1.6 rotates into angular form through ⟨M⟩= r × ⟨T⟩[9].
+The Maxwell stress tensor is therefore the local account of momentum exchange. Angular
+momentum conservation closes the mechanical picture by the same moment operation applied first
+to momentum density and then to traction [4, 2].
+1.1.6
+Angular momentum conservation and torque balance
+Instantaneous angular momentum follows the same Maxwell pair as linear momentum. From
+Eq. (1.40), multiply by the Levi-Civita symbol and position vector to obtain, in index notation,
+εijk rj(∂tgk + fem,k −∂lTkl) = 0.
+(1.46)
+The product rule expands the stress term as
+εijk rj ∂lTkl = ∂l(εijk rjTkl) −εijk Tkj,
+(1.47)
+and symmetry of the Maxwell stress tensor, Tkj = Tjk, makes the contraction εijkTkj = 0 [1, 4].
+Define the instantaneous stress-moment density M(i) = r × T(i) and angular-momentum density
+jem = r × gem. Eqs. (1.46)–(1.47) then yield
+∂jem
+∂t
++ τmatter = ∇· M(i),
+(1.48)
+with τmatter = r × fem [1, 3]. Eq. (1.48) is the instantaneous rotational counterpart of Eq. (1.40):
+stored field angular momentum changes when mechanical torque acts on matter or when stress-
+moment flux diverges.
+1.1. MAXWELL THEORY AND CONSERVATION LAWS
+25
+O
+r
+⟨gem⟩
+⟨jem⟩
+volume
+ΓR
+ˆn
+r
+⟨T⟩·ˆn
+r × (⟨T⟩·ˆn)
+surface
+Figure 1.13: Cycle-averaged angular-momentum geometry: at observation point r, ⟨gem⟩and ⟨jem⟩=
+r × ⟨gem⟩; on enclosing surface element with outward ˆn, traction ⟨T⟩· ˆn and stress moment r × (⟨T⟩· ˆn) that
+enters torque integrals [1, 3, 4].
+For time-harmonic fields under exp(+jωt), the same conservation laws may be cycle-averaged.
+Averaging Eq. (1.40) gives ∂t⟨gem⟩+ ⟨fmatter⟩= ∇· ⟨T⟩, and averaging Eq. (1.48) gives
+∂⟨jem⟩
+∂t
++ ⟨τmatter⟩= ∇· ⟨M⟩,
+(1.49)
+where ⟨M⟩= r × ⟨T⟩and ⟨jem⟩= r × ⟨gem⟩[4]. Angle brackets therefore mark cycle-averaged
+harmonic quantities; M(i) and ⟨M⟩are not interchangeable in the same displayed balance.
+In linear isotropic vacuum the cycle-averaged momentum density is
+⟨gem⟩= ε0µ0 ⟨S⟩= ε0µ0 Re(Sc),
+(1.50)
+and the corresponding angular-momentum density is
+⟨jem⟩= r × ⟨gem⟩.
+(1.51)
+Integrating Eq. (1.49) over a matter-enclosing control volume Vm with outward normal ˆn gives
+d
+dt
+∫︂
+Vm
+⟨jem⟩dV +
+∫︂
+Vm
+⟨τmatter⟩dV =
+∮︂
+∂Vm
+⟨M⟩· ˆn dS.
+(1.52)
+The surface term is the stress moment T J =
+∮︁⟨M⟩· ˆn dS [4]. At harmonic steady state, ∂t⟨jem⟩= 0
+and Eqs. (1.53) and (1.55) give ⟨τmatter⟩= T J = −ΦJ,out [3]. Beth [3] measured the corresponding
+torque on a wave plate in circularly polarized light; the prediction follows from stress integration,
+not from a phase portrait alone [4].
+Figure 1.13 shows the cycle-averaged chain at a field point and on a surface element: ⟨gem⟩,
+⟨jem⟩= r × ⟨gem⟩, traction ⟨T⟩· ˆn, and stress moment r × (⟨T⟩· ˆn) [1, 3].
+The cycle-averaged stress-moment density ⟨M⟩= r × ⟨T⟩satisfies ⟨M⟩· ˆn = r × (⟨T⟩· ˆn) on ∂V
+(stress-moment surface density). At harmonic steady state the cycle-averaged mechanical torque on
+matter enclosed in Vm is
+⟨τmatter⟩=
+∮︂
+∂Vm
+⟨M⟩· ˆn dS −d
+dt
+∫︂
+Vm
+⟨jem⟩dV =
+∮︂
+∂Vm
+r × (⟨T⟩· ˆn) dS −d
+dt
+∫︂
+Vm
+⟨jem⟩dV,
+(1.53)
+with outward ˆn on ∂V [3, 4]. The stress moment
+T J ≡
+∮︂
+∂V
+r × (⟨T⟩· ˆn) dS =
+∮︂
+∂V
+⟨M⟩· ˆn dS
+(1.54)
+enters the torque balance as ⟨τmatter⟩= T J −d⟨Jem⟩/dt.
+Outward electromagnetic angular-
+momentum flux is
+ΦJ,out ≡˙Jem,out = −T J = −
+∮︂
+∂V
+r × (⟨T⟩· ˆn) dS,
+(1.55)
+26
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+SR
+ˆz
+ˆn
+m=0 vs. m̸=0
+Figure 1.14: Spherical control shell SR with axis ˆz: axisymmetric radiation with azimuthal order m = 0 may
+carry zero ˙Jz,out while circular polarization still transports angular momentum through helicity; azimuthal
+modes with m̸ = 0 break the symmetry of j(out)
+J,z
+and can yield nonzero net flux on the same shell [3, 4].
+and equivalently ⟨τmatter⟩= −ΦJ,out −d⟨Jem⟩/dt. The stress moment T J is not the outward flux;
+outward transport is ΦJ,out = −T J [4, 3]. In harmonic steady state, ⟨τmatter⟩= T J = −ΦJ,out;
+τsource = −ΦJ,out and τload = +ΦJ,out [3].
+Belinfante’s 1940 field-theoretic analysis [13] showed that canonical energy–momentum and
+symmetric (kinetic) tensors differ by the divergence of a spin current; correspondingly, total angular
+momentum
+∫︁
+V jem dV and closed-surface flux
+∮︁⟨M⟩· ˆn dS are gauge invariant, whereas local spin–
+orbit splits are convention-dependent [13]. Primary quantities are jem = r × gem and stress-moment
+flux through ⟨M⟩· ˆn. A separate “residual spin” obtained by subtracting these identical definitions
+is not used. Detailed spin–orbit and canonical decompositions are representation-dependent and are
+developed where the modal basis is fixed (Chapter 3) [13, 13, 12]. Beth’s experiment on a wave plate
+under circular polarization [3] showed that the spin-associated part carries mechanical consequences;
+later orbital-indexed beam experiments [5] extended the vocabulary to spatial phase gradients; the
+measurable balance remains Eq. (1.52) [13].
+For torque about axis ˆu, project Eq. (1.52):
+τˆu(V ) = ˆu ·
+(︃∫︂
+∂V
+⟨M⟩· ˆn dS −d
+dt
+∫︂
+Vm
+⟨jem⟩dV
+)︃
+,
+(1.56)
+which is the axis-projected form of Eq. (1.52). Torque is therefore a projected surface integral of
+the stress moment, not a scalar read from a phase portrait [3, 4].
+To compare directional concentration of stress moment on a sphere of radius r, note that ⟨M⟩· ˆr
+states how the local stress moment projects onto each solid-angle sector. A main-lobe concentration
+in ∥⟨M⟩· ˆr∥does not by itself establish net torque about an axis until Eq. (1.56) is evaluated with
+the declared origin and surface [4, 3].
+Torque about axis ˆu is fixed once origin r0, axis ˆu, and control surface ∂V entering ⟨M⟩= r×⟨T⟩
+are declared [4]. Changing any of these geometric choices rotates flux projections without altering
+the underlying Maxwell pair; published torque values therefore state (r0, ˆu, ∂V ) alongside the field
+solution [3].
+Consider two Maxwell field states F1, F2 at common radius r, with equal total radiated power
+but different directional stress-moment densities M1·ˆr̸ = M2·ˆr on a subset of 4π of nonzero measure.
+Equal Prad constrains only the energetic integral; it does not fix the stress-moment distribution
+direction by direction. Projected torque through Eq. (1.56) can therefore differ between the two
+states even when their radiation patterns share the same total power [4].
+Figure 1.14 contrasts symmetric radiation with azimuthally phased radiation on the same
+spherical shell: when the stress flux integrand possesses definite azimuthal symmetry about ˆz, the
+solid-angle integral of [r × (⟨T⟩· ˆn)] · ˆz may vanish even though local phase structure is visible on a
+near-field display—the symmetry argument Beth exploited for circular polarization [3, 4].
+1.2. ANGULAR STRUCTURE OF ELECTROMAGNETIC FIELDS
+27
+For a matter-enclosing control volume Vm whose stress-evaluation surface lies in source-free
+vacuum, Eq. (1.52) reduces at harmonic steady state to τz,matter =
+∫︁
+∂V [r × (⟨T⟩· ˆn)] · ˆz dS and
+˙Jz,em,out = −τz,matter by Eq. (1.55). On sphere SR, use r = Rˆr and dS = R2 sin θ dθ dϕ. For
+axisymmetric radiation with azimuthal index m = 0, the far-zone pattern carries no azimuthal
+phase circulation about ˆz, so ˙Jz,out from orbital winding vanishes while Prad remains finite; circular
+polarization with helicity σ = ±1 can still yield ˙Jz,out = σPrad/ω in the separable mode of Eq. (1.83)
+[3, 4]. For the separable helical mode of Eq. (1.86), the total source-reaction torque is proportional
+to −(m + σ)Prad/ω in the stated modal description [4]. The same conclusion follows whether one
+integrates r × (⟨T⟩· ˆn) directly or projects through Eq. (1.56): torque is an integral consequence of
+the Maxwell stress tensor, not a local phase label [4].
+Eqs. (1.48) and (1.52) assume a fixed origin, a symmetric stress-tensor completion, and local
+linear constitutive behavior in the present regime; strongly nonlocal or dissipative media may require
+additional closure before torque partition is interpreted without ambiguity [4].
+Outward angular-momentum transport is ΦJ,out = −
+∮︁
+∂V r × (⟨T⟩· ˆn) dS by Eq. (1.55); T J
+denotes the stress-moment integral with the opposite sign [3, 4]. Mechanical torque on matter may
+vanish in source-free vacuum while ˙Jout still crosses a control surface enclosing a radiator; a vivid
+near-field phase portrait with ∥˙Jout∥≈0 gives zero net transport even when a harmonic display
+assigns a nonzero orbital index [4].
+1.2
+Angular Structure of Electromagnetic Fields
+Angular structure is the organization of the Maxwell field under rotations of physical space: spatial
+phase structure, polarization structure, directional radiation structure, angular-momentum density,
+and angular-momentum flux are distinct physical features [13, 2]. Azimuthal dependence exp(jmϕ)
+describes angular organization of the field; its relation to angular-momentum transport follows
+only under the separable or paraxial conditions developed below [5, 4]. Signed surface integrals of
+⟨M⟩= r × ⟨T⟩decide radiated rotational action [3].
+1.2.1
+Rotating source versus rotating pattern
+A spiral isophase map on outgoing sphere SR does not by itself fix radiated angular momentum,
+nor does it distinguish a mechanically rotating feed from a stationary phased array [3]. In one
+configuration the source—currents, polarization basis, or feed geometry—rotates in space about ˆz; in
+the other the feed stays fixed while an azimuthally progressive law exp(jmϕ) is imposed by phasing
+or modal synthesis [6]. Both may show the same spiral contours on SR; Maxwell stress integrals
+and torque on matter decide whether rotational action is transported [3, 4]. Equal counter-rotating
+superpositions with matched power cancel net signed flux while retaining strong phase structure
+(Subsection 1.6.2) [5].
+Figure 1.15 compares physical source rotation with a stationary feed carrying azimuthally
+progressive phase; both can yield the same spiral isophase pattern on SR, yet only the flux–torque
+pair of Eqs. (1.62) and (1.56) distinguishes radiated action from appearance.
+Panel (a) applies active rotation to a compact electric dipole p as in Subsection 1.0.3. A
+mechanically rotating source is generally time-dependent and can produce sidebands or other
+harmonic content depending on how the motion is modeled; the single-frequency phasor at fixed
+ω describes only a frozen orientation, a separated harmonic component, or another explicitly
+stated single-ω approximation [4]. Panel (b) keeps the feed stationary and sets aperture phasing
+Ea(ϕ) = E0 exp(jmϕ)ˆρ on a ring of radius a ≪λ. In the paraxial limit the same azimuthal index
+m appears in both cases, yet the source angular momentum balance differs: panel (a) requires a
+28
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+p
+(a) rotating source
+(b) phased feed
+SR
+Figure 1.15: Physical source rotation (a) versus stationary phased feed (b): both can yield identical spiral
+isophase contours on far-zone shell SR, yet signed flux and torque observables distinguish radiated angular
+action from appearance alone.
+motorized or mechanically constrained feed; panel (b) can be realized with a passive corrugated
+phased feed network whose elements are fixed in space [6].
+On sphere SR in the radiative zone, define the directional observables of Eqs. (1.59)–(1.62). For
+configuration (b) with single azimuthal index m and axisymmetric magnitude,
+E(R, θ, ϕ) ∝Eθ(θ) ejmϕ,
+˙Jz,em,out = m
+ω Prad
+(1.57)
+under the stated single-mode, radiative-shell assumption of Subsection 1.2.4; this is not a universal
+Maxwell identity for arbitrary full-vector fields [4, 5].
+Net outward angular flux under those
+assumptions is proportional to mPrad/ω as in Subsection 1.1.6. For configuration (a) at harmonic
+frequency ω with slow rotation Ωs ≪ω, the radiated field is a sideband superposition; when Ωs is
+commensurate with the phasor period the observed map on SR can match Eq. (1.57) at a snapshot,
+but the time-averaged torque on a Beth-type absorber includes the mechanical power supplied
+to rotate the feed. Beth’s experiment used a suspended half-wave plate; reversal of the circular
+polarization changes the angular momentum carried by the field, and the corresponding mechanical
+reaction appears as the measured torque on the plate [3]. A quarter-wave plate that converts circular
+polarization to linear polarization is a separate polarization-conversion example: it measures τz,load
+through Eq. (1.56) without invoking Beth’s original arrangement. The rotating-source case transfers
+torque from feed mechanics and from field flux, whereas the phase-pattern case transfers torque
+through field flux alone when the feed is passive [4].
+Closed-surface integrals, not the phase portrait alone, fix transport:
+˙Jz,em,out(R) = −
+∫︂
+4π
+jJ dΩ,
+τz,source(R) =
+∫︂
+SR
+[︁r × (⟨T⟩· ˆn)
+]︁· ˆz dS = −˙Jz,em,out(R).
+(1.58)
+Configuration (b) with |m| ≥1 and net reactive power subdominant on SR, so |Preac(R)|/Prad ≪1,
+yields both ∥ΦJ,out(R)∥> 0 and |τz,source(R)| > 0 on the same SR. Configuration (a) matched to
+the same snapshot pattern can share Ur(θ, ϕ; R) yet carry additional mechanical boundary terms on
+the feed support that do not appear in a pure phase-synthesis model; omitting those terms violates
+Eq. (1.52). Conversely, a balanced pair of counter-rotating phase ramps exp(±jmϕ) with equal power
+superpose to a standing azimuthal pattern
+√
+2 cos(mϕ) while ΦJ,out(R) = 0 by Eq. (1.63)—the
+phase-only counterexample of section 1.6.2 in miniature [5].
+Azimuthal index m organizes phase on a chart; Eqs. (1.58) measure transport. Panels (a) and (b)
+cannot be separated by phase on SR alone, but Ur, the stress integrand, and τz,source on the same
+surface can [4, 3].
+1.2.2
+Directional dependence and angular momentum
+Radiation intensity Ur and the Maxwell-stress angular-momentum integrand tie Poynting transport
+to torque on declared surfaces [2, 13, 3]. Modal labels are not substitutes for those integrals [4].
+1.2. ANGULAR STRUCTURE OF ELECTROMAGNETIC FIELDS
+29
+Radiated power and radiated angular momentum are resolved on the same sphere but through
+different field functionals [4, 3]. An axisymmetric dipole may carry finite Prad yet vanishing net
+z-flux when opposing sectors cancel [4]. Let ˆr = ˆr(θ, ϕ) be radial unit vector on a radius-r sphere
+and dΩ= sin θ dθ dϕ the solid-angle measure. With Sc from Eq. (1.1), the radiation intensity is
+Ur(r, θ, ϕ) = r2 Re{Sc(r, θ, ϕ) · ˆr} ,
+(1.59)
+in watts per steradian [2, 6]. The far-zone limit is U(θ, ϕ) = limr→∞Ur, total radiated power is
+Prad(r) =
+∫︂
+4π
+Ur(r, θ, ϕ) dΩ,
+(1.60)
+and directivity is
+D(θ, ϕ) = 4π U(θ, ϕ)
+Prad
+.
+(1.61)
+Equal integrated power does not imply equal directional angular-momentum structure [4].
+For rotational transport, define from Eq. (1.48)
+jJ(θ, ϕ; r) = r2 [︁r × (⟨T⟩· ˆr)
+]︁.
+(1.62)
+Here jJ is the directional stress-moment density (N m/sr): solid-angle resolution of ⟨M⟩= r × ⟨T⟩
+on a sphere of radius r [3, 4]. Radiation intensity Ur from Eq. (1.59) describes energetic transport;
+jJ describes the corresponding rotational transport density.
+The shell integrals are
+T J(r) =
+∫︂
+4π
+jJ(θ, ϕ; r) dΩ,
+ΦJ,out(r) = −T J(r).
+(1.63)
+This vector integral cannot replace direction-resolved structure because cancellation among opposing
+solid-angle sectors can leave a small total despite large directional flux magnitudes.
+A direction with outward Ur > 0 need not carry corresponding signed angular-momentum
+transport; the stress integrand and Ur must be evaluated separately on the same shell [4, 13].
+Let two radiative states F1, F2 at radius r satisfy P (1)
+rad(r) = P (2)
+rad(r). If there exists a set U ⊂4π
+of nonzero measure where j(1)
+J̸
+= j(2)
+J
+while both fields carry the same Prad on U, then the states are
+rotationally non-equivalent for direction-selective interactions.
+Equal Prad does not fix direction-resolved angular-momentum transport. Weighting jJ differently
+over solid angle changes the projected torque about a given axis even when total radiated power is
+unchanged [4].
+Integrated totals are terminal reductions of richer direction-resolved fields. Different solid-angle
+topology can produce nearly identical totals while yielding different torque outcomes.
+Origin declaration remains essential because angular transport is moment-based. Changing
+origin re-weights directional moments even when global balances remain unchanged. Directional
+flux and torque statements therefore require the same origin convention established in section 1.1.6.
+Directional observables represent physical transport only when outward flux is well-defined on
+the chosen shell and Eq. (1.65) holds for the field under study. In strongly reactive near zones,
+strongly nonlocal media, or rapidly modulated boundaries, extra decomposition terms may be
+necessary before Ur and jJ are treated as direct rotational-transfer observables [4].
+For fully polarized harmonic transverse fields, the two independent electric components Eθ and
+Eϕ on a chosen surface fix the oscillation ellipse. Left- and right-circular polarization correspond to
+E and H tracing the same rotation sense about the propagation direction [4]. Beth’s quartz-plate
+30
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+x
+y
+winding of arg E
++jJ
+−jJ
+ΓR
+ΦJ,out
+Figure 1.16: Phase topology on a transverse plane (left) and angular-flux transport on a control surface ΓR
+(right). Helical isophases show the winding of arg E; angular-momentum transport is established only when
+direction-resolved jJ integrates to nonzero ΦJ,out without cancellation between counter-rotating sectors [5, 3].
+experiment [3] is the mechanical consequence when such a field transfers angular momentum to
+matter through Maxwell stress at the interface.
+Directional dependence is a question of solid-angle structure: which sheet on S2 carries flux,
+and does that sheet carry nonzero signed angular-momentum flux before any Beth or OAM label
+is attached [13]? Circular polarization fixes the handedness of the transverse E–H triad locally;
+outward angular flux still requires a signed stress integral on an enclosing surface [4, 3]. Helical
+phase topology is separated from radiated action below [5].
+1.2.3
+Helical phase structure and transport
+A helical phase ramp on a transverse slice can look like orbital angular momentum by geometry
+alone [5]. The decisive quantity is not the winding of arg E on a plane but the signed solid-angle
+imbalance that survives integration of jJ on a control surface enclosing the source [13]. Allen et al.
+[5] gave paraxial optics a compact modal vocabulary; Stratton [4] and Beth [3] had already shown
+that flux and torque integrals, not phase portrait alone, close the physical argument.
+Helical phase on a paraxial slice fixes azimuthal winding locally; net angular-momentum transport
+appears only when direction-resolved flux on an enclosing surface does not cancel between sectors
+[5, 2]. A paraxial beam with m = +1 at the waist, followed by a λ/4 plate that converts to
+linear polarization, changes
+∮︁⟨M⟩· ˆn dS on ΓR even when the near-field phase portrait looks
+unchanged [5, 3]. A nonzero azimuthal index m fixes phase topology on the transverse plane; net
+angular transport on Γ still requires that the outward angular-flux integral not cancel between
+counter-rotating sectors of the same surface.
+On the left of Figure 1.16, helical isophases show how arg E winds about an axis. On the right,
+control surface ΓR encloses the source; outward arrows mark opposing angular-flux contributions
+whose solid-angle integral ΦJ,out = −
+∫︁
+4π jJ dΩmay vanish when counter-rotating sectors cancel—
+even though the transverse phase portrait looks identical to a transporting beam [5, 3].
+Allen et al. [5] identified paraxial modes; the following is a waist-plane paraxial modal factor
+with the outgoing axial phase retained for the present discussion, not the full propagated Laguerre–
+Gaussian solution with w(z), wavefront curvature, and Gouy phase [5].
+Eϕ(ρ, ϕ, z) = E0
+(︃ρ
+w0
+)︃|m|
+L|m|
+p
+(︄
+2ρ2
+w2
+0
+)︄
+e−ρ2/w2
+0 ej(mϕ−k0z),
+(1.64)
+where L|m|
+p
+is an associated Laguerre polynomial, w0 is beam waist, and integer m is azimuthal
+index. For p = 0 and |m| = 1, the intensity vanishes on the axis (ρ = 0), while the phase advances by
+2πm in one circuit about the axis. Phase topology is the winding structure of the transverse phase;
+transport is the outward real-power and angular-flux integral on Γ, and topology can persist while
+transport cancels on closed surfaces. The Poynting vector therefore has an appreciable azimuthal
+1.2. ANGULAR STRUCTURE OF ELECTROMAGNETIC FIELDS
+31
+component on the intensity ring even when the beam is predominantly collimated. Net structured
+angular-momentum transport requires a nonzero signed solid-angle integral: superposing the same
+outgoing modal factor of Eq. (1.64) with the opposite winding m →−m produces the same standing
+pattern as Eq. (1.90) in Subsection 1.6.2. Topology and polarization describe local field structure;
+transport is fixed only after the signed solid-angle integral of jJ is formed on a control surface [5].
+In the paraxial limit of Eq. (1.64) with p = 0 and |m| = 1, the leading-order relation H(0) ≈
+(ˆz × E(0))/η0 establishes the axial power flow. The first paraxial corrections to the Maxwell field
+generate the transverse, including azimuthal, Poynting component associated with the ∂ϕ phase
+gradient. The complex Poynting vector Sc = 1
+2E × H∗then has an axial part Sz ∝|E|2 that
+carries time-averaged power along +ˆz. The azimuthal component can appear in Re(Sc) as real
+energy-flow density associated with azimuthal phase winding; locally it may also contribute to
+Im(Sc) where electric and magnetic storage are out of phase [2]. The axial component integrates to
+outward power through a transverse plane. Phase winding therefore produces strong local Poynting
+circulation without by itself guaranteeing a nonzero
+∮︁⟨M⟩· ˆn dS on an enclosing sphere when
+opposing solid-angle sectors cancel [5, 2].
+Poynting circulation can be locally strong while the outward real-power integral on a surrounding
+shell remains small or unchanged: the complex Poynting vector separates reactive exchange through
+Im{Sc · ˆn} from time-averaged radiation through Re{Sc · ˆn} [2].
+Poynting’s original flow-line
+pictures [2] emphasized this distinction long before Stokes vectors were standard: circulation in
+P = ⟨S⟩= Re{Sc} marks directed energy flow and interference texture, while
+∮︁
+∂V ⟨M⟩· ˆn dS
+on an enclosing surface expresses outward angular-momentum transport when interpreted on a
+predominantly radiative shell [2, 3]. Subsection 1.2.4 develops the signed angular-momentum flux
+that follows from ⟨M⟩= r × ⟨T⟩[4].
+Directional dependence tracks radiation geometry on ΓR: the far-zone pattern may exhibit
+strong angular variation while source and field angular-momentum balances remain distinct objects
+tied to impressed currents and flux integrals [13].
+1.2.4
+Physical relations for angular-momentum transport
+Azimuthal phase structure and radiation intensity Ur are distinct: net outward angular-momentum
+transport follows from the Maxwell-stress balance and
+ΦJ,out(r) = −
+∮︂
+Sr
+r × (⟨T⟩· ˆn) dS = −
+∫︂
+4π
+jJ(θ, ϕ; r) dΩ,
+(1.65)
+with jJ = r2[r × (⟨T⟩· ˆr)] from Eq. (1.62) [4, 3]. Equal counter-rotating components with P+ = P−
+give
+˙Jz = (m/ω)(P+ −P−) = 0 while |Et| ∝| cos(mϕ)| may remain large (Subsection 1.6.2)
+[5]. Outward power in a sector requires
+∫︁
+∆ΩUr dΩ> 0; outward angular momentum requires
+ΦJ,out̸ = 0—neither implies the other [2].
+1.2.5
+Reactive and radiative field regimes
+The field of a finite electric dipole exhibits the classical 1/r3, 1/r2, and 1/r radial hierarchy in
+its exact exterior solution [4]. Higher multipoles possess their own higher-order near-field radial
+structure, while every radiating spherical multipole carries an outgoing 1/r branch at infinity [4, 14].
+Near the source the dipole 1/r3 and 1/r2 terms may be comparable with, or larger than, the 1/r
+radiation field. The near zone can therefore contain substantial electric–magnetic energy exchange
+and complicated phase structure while the outward real power through an enclosing sphere already
+equals the total radiated power of the source.
+32
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+dipole
+reactive
+r−3
+induction
+r−2
+radiation
+r−1
+kr ≪1 →kr ∼1 →kr ≫1
+Figure 1.17: Radial organization of a localized radiator: r−3 electrostatic storage, r−2 induction, and r−1
+radiation dominate at increasing distance. The boundaries are qualitative; all three terms coexist at every
+radius, but their relative weight shifts with kr [4, 2].
+Figure 1.17 matches the multipole counting developed in Subsection 1.6.4: moving outward does
+not create new radiated power, but changes which radial term carries the local Poynting and stress
+flux.
+At increasing distance the 1/r terms dominate. The electric and magnetic fields then approach
+the transverse relation characteristic of an outgoing wave, and the real Poynting flux becomes the
+principal carrier of energy away from the source [2]. Figure 1.12 illustrates this shell dependence:
+reactive circulation in Im{Sc · ˆn} can be large on a small-kr surface even when the net outward
+real power is unchanged, whereas on a large-kr surface the same source supports a field whose local
+phase relation is predominantly radiative.
+The distinction is evaluated on a spherical observation surface Sr of radius r with outward unit
+normal ˆn. Define
+Prad =
+∫︂
+Sr
+Re{Sc · ˆn} dS,
+Preac(r) =
+∫︂
+Sr
+Im{Sc · ˆn} dS,
+(1.66)
+where Sc = 1
+2E × H∗is the complex Poynting vector [2]. In a lossless source-free region between
+enclosing surfaces, Prad is independent of r [4]: it is the total time-averaged power radiated by the
+source. The integral Preac(r) measures reactive power associated with local oscillatory exchange
+between electric and magnetic storage on the chosen shell; |Preac(r)| generally varies with r even
+when Prad does not.
+The real and imaginary parts of the complex Poynting vector distinguish active power transport
+from reactive harmonic exchange because they weight different phase relationships between E and
+H. On a reactive shell, Im{Sc · ˆn} can integrate to a large |Preac(r)| while Prad remains fixed; on a
+radiative shell the ratio |Preac(r)|/Prad is typically small even though the same Prad crosses every
+enclosing sphere [2, 4].
+Near the source, with kr ≪1, the r−3 and r−2 multipole terms dominate and |Preac(r)|/Prad
+is typically much greater than unity: reactive circulation dominates the normal flux pattern on
+that shell even though Prad is unchanged [4]. At kr ∼1 the reactive and radiative contributions
+are comparable. In the far zone, kr ≫1, the r−1 radiation field dominates, |Preac(r)|/Prad ≪1,
+and the field on Sr is predominantly radiative [2, 4]. Any angular-momentum interpretation that
+ignores shell radius therefore risks attributing storage-dominated structure to propagative torque
+flux [4]. Reactive shells carry standing-wave structure whose phase rotates locally while time-
+averaged Poynting flux through the same surface may vanish [4]. The same small electric dipole at
+kr = 0.5 versus kr = 5 illustrates why shell placement matters: the inner shell is storage-dominated
+with |Preac(r)|/Prad ≫1; the outer shell carries |Preac(r)|/Prad ≪1 and exhibits a predominantly
+radiative field [6]. Subsection 1.6.4 develops the two-shell comparison on the same dipole using
+these integrals.
+1.3. ROTATIONAL COVARIANCE AND REFERENCE FRAMES
+33
+(a) source rotation
+ˆz
+ˆx
+Jimp
+E
+fixed reference axes
+(b) chart rotation
+ˆx′
+ˆy′
+Jimp
+E
+same source, relabeled axes
+Figure 1.18: Physical source rotation in a fixed reference frame (a) versus passive relabeling of coordinate
+axes while the impressed current remains fixed (b). Maxwell radiation changes in (a) when source, medium,
+and boundary do not share rotational symmetry; passive relabeling in (b) reorders field components without
+moving the source [14, 4].
+1.3
+Rotational covariance and reference frames
+Flux integrals in section 1.2 are evaluated in a fixed reference frame with fixed origin. If the source
+is rotated while laboratory axes remain fixed, the field is physically rotated only when the source,
+medium, and boundaries share the corresponding rotational symmetry [4, 14]. Relabeling coordinate
+axes while the impressed current stays fixed changes component charts but not the source. Vectors,
+the Maxwell stress tensor, and traction then transform as physical objects under rotation; gauge
+relabeling of potentials is a separate non-uniqueness treated in section 1.4 [13, 1].
+Active and passive rotations; transformation of vectors, tensors, and dyads
+Figure 1.18 separates transformations that are often conflated. In (a) the impressed current rotates
+while reference axes stay fixed; in (b) the source stays fixed while the component chart is relabeled.
+A third situation—watching azimuthal phase roll past a fixed observation direction without moving
+either source or axes—exhibits angular appearance in one frame; it is not automatically the same as
+(a) or (b) [14].
+For panel (a), when source, medium, and boundary geometry share the same rotational symmetry,
+rotating the impressed current and then solving Maxwell’s equations gives the same physical field as
+solving first and rotating the result [4, 14]. An anisotropic radome or azimuthally varying medium
+breaks that equivalence.
+Passive relabeling in (b) changes only the component chart. Traction t = ⟨T⟩· ˆn and its moment
+about a declared origin are built from ⟨T⟩(Eq. (1.42)). Vectors rotate with one application of R;
+⟨T⟩rotates as ⟨T⟩′ = R⟨T⟩R⊤[3, 4].
+For proper rotation R ∈SO(3), with R⊤R = I, det R = 1, let v = vjˆej be a vector in
+orthonormal basis ˆej. With the active convention used here, a physical rotation sends v′
+active = Rv.
+For a passive rotation of the basis by the same R, the components transform as v′
+passive = R⊤v.
+The two descriptions represent the same geometric vector when the active and passive rotations are
+taken as inverse operations. Eq. (1.67) states the active component law
+v′
+i = Rijvj.
+(1.67)
+For a finite rotation through angle φ about unit axis ˆu, the active Rodrigues formula reads
+R(φ, ˆu) v = v cos φ + (ˆu × v) sin φ + ˆu(ˆu · v)(1 −cos φ),
+(1.68)
+equivalent on vector fields to the generator exponential developed below and used in Chapter 3
+[11, 4].
+34
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+Rotating a field is not the same operation as rotating its component chart. For a proper rotation
+R ∈SO(3), the active action on a scalar field F and on a vector field F is
+(TRF)(r) = F(R−1r),
+(TRF)(r) = R F(R−1r),
+(1.69)
+so the spatial argument and the vector direction transform together [11]. Evaluating E at r after
+an active rotation is not equivalent to multiplying E(r) by R at fixed r unless the configuration is
+merely relabeled [4]. Maxwell’s equations in source-free vacuum are covariant under TR because
+∇× and ∇· commute with the spatial part of the rotation action when ε and µ are scalars [1];
+impressed sources and anisotropic media break that symmetry even though the transformation law
+itself remains valid [4].
+After an active source rotation, the same |E| on SR is expressed in rotated ˆx, ˆy components [14].
+Rotating the source (Subsection 1.0.3) changes Jimp and alters radiation when the source, medium,
+and boundary geometry do not share the required rotational symmetry; passively rotating the
+component chart while holding the source fixed relabels components without moving the excitation
+[4].
+The Maxwell stress tensor links T, ˆn, and t: each column of T specifies the traction that would
+act on a surface element whose normal points along a coordinate direction. Because T is a geometric
+object that maps normals to force densities, it must rotate with two applications of R—one for each
+index:
+⟨T⟩′ = R ⟨T⟩R⊤,
+T ′
+ij = RipRjqTpq.
+(1.70)
+The two factors Rip, Rjq rotate each tensor slot. Eq. (1.70) ensures that stress tensor Eq. (1.42)
+rotates as a single geometric object acting on surface normals, not as nine independent scalars.
+Mishandling this law—treating Tij as entries that rotate independently—is a frequent source of
+spurious torque when stress-integral results are compared with mechanical reaction on a polarizable
+body [3].
+When the reference frame rotates, the surface element rotates with it: traction on the rotated
+patch is still t = ⟨T⟩· ˆn, and
+t′ = ⟨T⟩′ · ˆn′ = Rt.
+(1.71)
+Eq. (1.71) states the mechanical consequence: the force per unit area on the rotated surface element
+is the same physical force density, expressed in the rotated reference basis [3]. Vacuum Maxwell
+stress is symmetric, ⟨T⟩= ⟨T⟩⊤, under R ∈SO(3) [1].
+For an axially symmetric field about ˆz, azimuthal dependence separates as ψ(ϕ) = ejmϕ, and the
+orbital angular index satisfies
+−j ∂ψ
+∂ϕ = m ψ.
+(1.72)
+Eq. (1.72) is the scalar harmonic index of azimuthal phase; it is not by itself the full vector-field
+angular-momentum operator on (E, H) [4]. Comparisons of torque on a polarizable body require a
+fixed convention: whether R acted on the source, on the component chart, or on both, together
+with a fixed reference origin [3, 4].
+Origin dependence
+Torque is always torque about a point. Translating the reference origin from r0 to r′
+0 = r0 + ∆r
+leaves the resultant force unchanged but adds the couple τr′
+0 = τr0 −∆r×F, with F =
+∮︁
+Sm⟨T⟩· ˆn dS,
+even when (E, H) and T on Sm are unchanged [3, 4]. Figure 1.19 shows that force is a property of
+the traction distribution, whereas torque depends on the chosen origin. Angular-momentum flux
+⟨M⟩= r × ⟨T⟩carries the same origin dependence [4].
+1.4. GAUGE STRUCTURE, HELICITY, AND SPIN–ORBIT LIMITS
+35
+O
+O′
+P
+material surface Sm
+t
+r r′
+∆r
+τO
+τO′
+Figure 1.19: Force density t at point P on Sm contributes to resultant force independent of origin, but
+torque τO about O differs from τO′ about O′ = O + ∆r because the moment arm changes [3].
+1.4
+Gauge structure, helicity, and spin–orbit limits
+Gauge freedom and angular structure
+Rotation and origin declaration fixed which mechanical reports built from (E, H) are objective.
+Potentials introduce a further question that rotation alone does not settle: can (A, ϕ) be changed
+without changing the physical field? On a compact range two field maps may disagree on A(r) at
+the same sample point yet reproduce identical tangential E and H on the scan surface [4, 14]. That
+non-uniqueness is not a failure of Maxwell theory; it is a property of the potential representation.
+Wattmeters, torsion balances, and stress integrals respond to (E, H), Sc, and ⟨T⟩; they do not read
+A directly [1, 3].
+The curl of A fixes B = µH; adding ∇χ to A and adjusting ϕ leaves (E, H) unchanged
+(Figure 1.20). Quantities built from (E, H) alone—including closed-surface flux and stress integrals—
+are gauge invariant; pointwise maps that invoke ϕ or A are not [4, 13].
+1.4.1
+Gauge-invariant observables, helicity, and dual symmetry
+Let the phasor field state be F = (E, H) in a linear isotropic region with scalar permittivity ε,
+scalar permeability µ, angular frequency ω, and intrinsic impedance η =
+√︁
+µ/ε. Let (A, ϕ) denote a
+potential pair related to the physical fields by
+E = −∇ϕ −jωA,
+B = ∇× A = µH,
+(1.73)
+The vector potential A is not a field observable; it is a convenience for solving Maxwell’s equations
+whose curl fixes B and whose combination with ϕ fixes E. Because ∇× ∇χ = 0, adding ∇χ to A
+changes A but not B; adjusting ϕ by −jωχ restores E:
+A′ = A + ∇χ,
+ϕ′ = ϕ −jωχ,
+E′ = E, H′ = H.
+(1.74)
+Substituting into E = −∇ϕ −jωA gives E′ = −∇(ϕ −jωχ) −jω(A + ∇χ) = −∇ϕ −jωA = E,
+with B′ = ∇× A′ = B unchanged. Eq. (1.74) is the relabeling shown in Figure 1.20. What
+remains observable are E, B, Sc, ⟨T⟩, and closed-surface integrals built from (E, H) without explicit
+potential dependence [1, 13].
+Potential-tagged local maps require an explicit gauge declaration [13].
+Coulomb and Lorenz gauges yield the same (E, H) yet different ϕ and ∇ϕ at interior points,
+so a potential-based local map need not agree pointwise between them even when traction and
+angular-flux integrals built from ⟨T⟩and ⟨M⟩= r × ⟨T⟩remain stable on declared surfaces [13, 1].
+For illustration, define the following gauge-dependent potential map. It is introduced only to
+demonstrate the non-uniqueness of potential-based local constructions; it is not an electromagnetic
+angular-momentum density.
+q(pot)
+loc
+= ε0
+jω r × ∇ϕ,
+(1.75)
+36
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+(a) A1
+E
+A1
+(b) A2 = A1 + ∇χ
+E
+A2
+same E, H; different A, ϕ
+Figure 1.20: Two potential pairs can describe the same physical field: A2 = A1 + ∇χ relabels the vector
+potential while E = −∇ϕ −jωA and H = ∇× A/µ remain unchanged [1].
+k
+E
+H
+same rotation sense ⇒definite helicity
+Figure 1.21: Circularly polarized plane wave: E and H rotate in the same handedness about propagation
+axis k. Helicity is the field-intrinsic sign of that handedness [4, 13].
+where ϕ is the scalar potential in the chosen gauge of Eq. (1.73). Under ϕ′ = ϕ −jωχ, ∇ϕ′ =
+∇ϕ −jω∇χ, so q(pot)
+loc
+shifts by −ε0 r × ∇χ. Eq. (1.75) is therefore a gauge-linked orbital map
+associated with ϕ, not the gauge-invariant electromagnetic angular-momentum density jem and not
+a Belinfante-class local spin density [13, 4].
+Within a control volume Vg of radius R = 2λ about a dipole, Coulomb and Lorenz gauges
+yield the same (E, H) on ∂Vg yet different ∇ϕ and therefore different Eq. (1.75) at interior points;
+∮︁
+∂Vg⟨M⟩· ˆn dS is unchanged [13, 4]. Helicity measures the handedness with which E and H rotate
+about the propagation direction. For a monochromatic circularly polarized plane wave, E and H
+trace the same sense of rotation while remaining orthogonal to k; right-handed and left-handed
+states differ by that sense, not by a change in radiated power [4]. Figure 1.21 shows the geometry
+before the density is written.
+The monochromatic vacuum electromagnetic helicity density used in this chapter is
+h(r) =
+1
+2ωc Im{E · H∗} ,
+(1.76)
+with exp(+jωt) phasors [4, 13, 12]. Dimensionally, [E · H∗] = W m−2 and [h] = J s m−3—angular
+momentum per unit volume—because ω carries rad s−1 and c carries m s−1. Eq. (1.76) must not
+be confused with optical chirality (Lipkin zilch) or with Stokes parameter S3: those are distinct
+pseudoscalars with different normalizations and conservation properties [4, 12]. Helicity h measures
+handedness of the transverse E–H triad; local spin–orbit partitions are fixed only under an explicit
+decomposition convention (section 1.4.2) [13, 4].
+For an outgoing circularly polarized plane wave E = (E0/
+√
+2)(ˆx+jσˆy) e−jkz with σ = ±1, k = kˆz,
+and right-handed coordinates (ˆx, ˆy, ˆz), Faraday’s law gives H = (1/η0) ˆz × E = (E0/η0
+√
+2)(ˆy −
+jσˆx) e−jkz. Then E · H∗= jσE2
+0/η0 and
+h = σE2
+0
+2ωcη0
+= σε0E2
+0
+2ω
+,
+(1.77)
+with opposite signs for opposite circular polarizations and h = 0 for linear polarization [4, 13].
+Handedness labels (σ = +1 vs. σ = −1) are fixed only after the spatial triad and time convention
+are stated; they are not interchangeable with Stokes S3 without an explicit sign map [4].
+1.4. GAUGE STRUCTURE, HELICITY, AND SPIN–ORBIT LIMITS
+37
+The dual rotation on field pairs is
+E′ = cos ξ E + sin ξ ηH,
+H′ = −sin ξ E/η + cos ξ H,
+ξ ∈R.
+(1.78)
+Eq. (1.78) is not a gauge transformation: it mixes E and H while leaving the source-free Maxwell
+system invariant in isotropic media. Infinitesimal dual variation ξ = δξ gives δE = δξ ηH and
+δH = −δξ E/η to first order. Dual symmetry is a property of the field equations in homogeneous
+regions. Under a continuous duality rotation Eq. (1.78), a helicity eigenfield retains its helicity sign
+and acquires only a phase within the same transverse sector; a rotation by ξ = π/2 exchanges electric
+and magnetic roles but does not map a +1 helicity eigenstate onto a −1 eigenstate [4]. Helicity
+claims require a fixed polarization, outgoing selection, and a field pair in which E and H remain
+phase-coherent. Duality is an exact symmetry of the source-free Maxwell pair only in homogeneous,
+isotropic, lossless media; spatial variation in ε or µ, conduction loss, impressed sources, or broken
+E–H phase coherence breaks that symmetry [4].
+Because Eq. (1.76) is built from (E, H), h is gauge invariant; potential-based canonical helicity
+definitions may shift under A′ = A+∇χ and are not interchangeable with Eq. (1.76) without stating
+the formalism [13, 12, 11]. For a circularly polarized plane wave, ⟨S⟩has the same magnitude for
+σ = ±1 while h changes sign with handedness; a linearly polarized wave gives h = 0 [4]. Chapter 1
+uses helicity as a field-based handedness scalar; a separate helicity continuity law is not developed
+here because energy, momentum, and angular momentum already carry the transport structure
+needed for radiation [4].
+Helicity and dual symmetry close the gauge discussion of section 1.4. Maxwell’s equations
+determine (E, H) once sources, constitutive data, boundary conditions, and outgoing selection
+are specified [1, 4]. On a declared surface, cycle-averaged power flux follows from ⟨S⟩= Re Sc,
+mechanical load from ⟨T⟩· ˆn, and angular action from ⟨M⟩= r × ⟨T⟩[2, 3].
+1.4.2
+Limits of local spin-orbit decompositions
+Total electromagnetic angular momentum is a conserved quantity tied to (E, H) through Eq. (1.48).
+Helicity, developed above, is a gauge-invariant sign of handedness in the field pair. Local “spin” and
+“orbit” labels partition jem into pointwise contributions useful for interpretation but not uniquely
+fixed by Maxwell’s equations alone [13, 4]. The total density jem is fixed by (E, H); convention-
+dependent sloc and lloc may redistribute under gauge choice without changing closed-surface flux
+[13, 4]. Measurable transport remains
+∮︁⟨M⟩· ˆn dS and the balance of Eq. (1.49); paraxial index m
+is developed in Chapter 2 [5].
+k
+helicity
+phase winding
+jem
+sloc
+lloc
+chosen split of one total
+Figure 1.22: Total angular-momentum density jem may be partitioned into spin-like sloc and orbital-like
+lloc contributions for a structured beam; helicity (polarization handedness) and azimuthal phase winding are
+distinct physical features, and the local split is a convention, not two separate substances [13, 5].
+38
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+Γ
+source
+⟨S⟩
+t
+r0
+Et
+flux, traction, and tangential field on one shell
+Figure 1.23: Maxwell field content on a closed surface Γ: outward cycle-averaged power flux ⟨S⟩enters
+power balance; stress traction t = ⟨T⟩· ˆn on a material patch enters force and torque about origin r0;
+tangential Et is part of the same field pair [2, 3, 4].
+1.5
+Surface flux, torque, and physical observation
+On a declared surface Γ, cycle-averaged power follows from ⟨S⟩= Re Sc, and mechanical force and
+torque from ⟨T⟩and ⟨M⟩[2, 1, 3]. Harmonic coefficients of Et organize the same field for synthesis
+in Chapter 2; they are not substitutes for flux integrals [4, 14].
+Field–matter coupling is where Maxwell predictions acquire mechanical consequence: traction
+t = ⟨T⟩· ˆn acts across conductor, dielectric, and polarizable interfaces, and the resulting force and
+torque express how absorption or polarization conversion redistributes angular action [3]. Beth’s
+quartz wave-plate experiment under circularly polarized light is the canonical instance: the plate
+face is the surface Sm for traction integration, and the observed twist follows from electromagnetic
+stress at that interface—not from an orbital mode index assigned in a harmonic chart [3, 5].
+Cycle-averaged Maxwell stress ⟨T⟩is the local flux of linear momentum [1, 4]. At a boundary
+between vacuum and matter, the traction
+t = ⟨T⟩· ˆn
+(1.79)
+is the force per unit area exerted by the field on the material surface element with outward normal
+ˆn. Integrating traction over a material patch Sm yields the net electromagnetic force
+F =
+∮︂
+Sm
+⟨T⟩· ˆn dS.
+(1.80)
+Angular momentum is the moment of linear momentum about a chosen origin r0. Multiplying each
+traction element by its moment arm (r −r0) and integrating gives the electromagnetic torque
+τr0 =
+∮︂
+Sm
+(r −r0) × (⟨T⟩· ˆn) dS.
+(1.81)
+Here r is measured from the same origin as in ⟨M⟩= r × ⟨T⟩; torque is the moment of the same
+momentum flux carried by ⟨T⟩[4, 3]. Because angular momentum is defined with respect to an
+origin, τr0 changes when r0 is translated even if (E, H) and ⟨T⟩on Sm are unchanged (Eq. (1.82)).
+Once the electromagnetic load F and τr0 are fixed by the Maxwell field on Sm, a polarizable
+body converts that load into measurable mechanical exchange through its constitutive and elastic
+response [3, 4].
+1.5.1
+Power flux, stress traction, and torque
+How does cycle-averaged power leave a radiative shell, and how does mechanical torque arise at a
+material boundary? At each point on a surface, Sc = 1
+2E × H∗gives the local complex harmonic
+energy transport [2, 4]. Its outward normal component Re{Sc · ˆn} = ⟨S⟩· ˆn is the cycle-averaged
+1.5. SURFACE FLUX, TORQUE, AND PHYSICAL OBSERVATION
+39
+power crossing the surface element dS; integrating over a closed surface enclosing the source yields net
+radiated power through Eq. (1.36). Near-field Poynting loops can be large while the outward integral
+on a radiative shell remains small—the reactive-versus-radiative distinction of section 1.2.5—and
+only the latter qualifies as outward radiated power [2].
+Mechanical exchange uses the same Maxwell stress tensor. Traction t = ⟨T⟩· ˆn is force per unit
+area on a boundary; integrating t yields net force, and integrating r × t about a fixed reference
+origin r0 yields torque [1, 3]. Force depends on the traction distribution alone; torque depends
+additionally on where moments are taken—the origin dependence established in section 1.3. Beth
+[3] observed mechanical rotation in quartz wave plates under circularly polarized light: the plate
+experienced torque because the field transferred angular action through stress at the material
+interface [5]. Stress-integral torque and Poynting flux on Γ follow from (E, H); harmonic labels
+assigned to Et require an explicit angular representation and are not interchangeable with either
+integral [4]. Subsection 1.6.1 returns to Beth’s pattern in fully worked form.
+A polarizable body at Sm converts the Maxwell load into observable mechanical motion through
+its constitutive response [3, 4]. The electromagnetic prediction remains the stress integral; the
+observed twist on a torsion wire is the mechanical signature of that load at the boundary.
+Origin declaration controls comparability of torque predictions. If origin changes from r0 to
+r′
+0 = r0 + ∆r, the deterministic torque integral satisfies
+T′
+det = Tdet −∆r × Fdet,
+(1.82)
+with Fdet =
+∫︁
+Sm⟨T⟩· ˆn dS and Tdet =
+∫︁
+Sm(r −r0) × (⟨T⟩· ˆn) dS. Eq. (1.82) is the surface form of
+origin dependence required before torque comparisons are meaningful [4].
+Example 1.4 (Why torque depends on the chosen origin). With r′ = r −∆r, the stress torque
+transforms as τ ′ = τ −∆r × F (Eq. (1.82)). On a thin plate with r0 at the centre, shifting the
+origin by ∆r = 2 mm ˆx while holding net force Fdet fixed changes the z-torque by ∆τz = −Fy ∆x
+when ˆuτ = ˆz [4]. Comparisons of stress torque with mechanical measurements must declare the
+same reference origin.
+Surface selection is part of the field problem, not an afterthought [4]. Any closed surface
+enclosing the same source support yields consistent force and torque resultants when Maxwell stress
+is evaluated on the same (E, H) solution; changing Sm while holding the field fixed changes only
+the geometric description of the same load [1, 4].
+Force and torque obtained from Maxwell stress integrals are meaningful in Chapter 1 only when
+the integration surface, reference origin, and torque axis are declared with the field solution [4, 3].
+Maxwell consistency fixes which field traces may carry flux on Frad [4].
+1.5.2
+Field quantities, instrument readings, and inferred structure
+Maxwell theory determines E and H from sources, constitutive relations, boundary data, and the
+outgoing radiation condition [1, 4]. A receiving structure samples the field through a physical
+coupling on a declared surface; an angular coefficient is obtained only after a basis and representation
+have been chosen [2, 3, 14]. Flux, traction, and stress-moment integrals are Maxwell field functionals;
+instrument readings and inferred modal labels are separate layers that must not be interchanged
+with those integrals without stating the connecting assumptions [4].
+1.5.3
+Apertures, angular charts, and later radiation mappings
+On a large sphere enclosing sources, tangential Et(θ, ϕ) and Ht(θ, ϕ) specify the outgoing field
+angularly [4]. A physical aperture selects directions and couples to E and H through its geometry
+40
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+and constitutive response [14]. Angular spectra and harmonic charts organize the same tangential
+data for propagation and synthesis; they are not substitutes for conservation integrals on declared
+surfaces [6, 4]. Chapter 2 connects this angular organization to radiation operators and dyadic
+Green functions on the outgoing branch fixed here [6, 12].
+Throughout Chapter 1, a reported number is either a Maxwell field functional on a declared
+surface—flux, traction, torque—or a quantity inferred from partial field information through a
+stated representation; the status must be clear [4].
+1.6
+Examples and Counterexamples
+1.6.1
+Angular momentum conservation in radiation
+Circular polarization gives the electromagnetic field a definite handedness about the direction
+of propagation: at each point the electric vector rotates in a fixed sense as the wave advances,
+and the magnetic field follows through the transverse Maxwell relation [4]. Such a field carries
+electromagnetic angular momentum because the Maxwell stress transports rotational action as well
+as linear momentum. For a monochromatic outgoing mode in the separable paraxial or dominant-
+mode description used below, with azimuthal index m and circular-polarization helicity σ = ±1, the
+ratio of angular-momentum flux to radiated power is
+˙Jz,em,out = m + σ
+ω
+Prad,
+(1.83)
+where ω is angular frequency in rad/s, Prad is outward time-averaged radiated power through the
+enclosing surface, and ˙Jz,em,out is the outward z-component of angular-momentum transport [4, 3].
+The additive form (m + σ)/ω is not a universal identity for arbitrary full-vector spherical modes; it
+belongs to the stated separable description in which m labels orbital azimuthal winding and σ labels
+polarization helicity [4]. For general vector spherical modes, total Jz follows from the appropriate
+total angular-momentum representation and the stress-flux integral [4].
+In steady harmonic operation, torque on the source support and outward field angular-momentum
+transport are related by opposite signs:
+τz,source = −˙Jz,em,out,
+τz,load = + ˙Jz,em,out.
+(1.84)
+Eq. (1.84) is the rotational face of Eqs. (1.52) and (1.55). Beth [3] made the conservation law
+visible as mechanical torque on a quartz wave plate under circularly polarized light: the plate,
+acting as load, receives angular momentum carried by the field through Maxwell stress at the
+interface. The torque is not inferred from the appearance of the polarization ellipse; it follows from
+the stress-moment balance [3, 4].
+The radiation example is a localized circularly polarized electric dipole on finite support enclosed
+by a far-zone sphere SR. On SR in the source-free exterior, Prad =
+∮︁
+SR Re{Sc · ˆn} dS is finite and
+independent of R on any enclosing sphere in the lossless source-free exterior [4, 3]. A predominantly
+radiative shell makes its interpretation as outward radiation especially transparent. For the dominant
+separable mode with azimuthal index m and circular-polarization helicity σ = ±1, Eq. (1.83) gives
+˙Jz,em,out = (m + σ)Prad/ω only under those modal assumptions [4].
+Figure 1.24 shows the helical radiator enclosed by far-zone sphere SR at stand-off R = 5λ, where
+|Preac(R)|/Prad ≪1 in the sense of Subsection 1.2.5—net reactive power no longer dominates the
+normal flux pattern on the shell—so the stress integral names radiation rather than near-zone
+oscillation [4].
+1.6. EXAMPLES AND COUNTEREXAMPLES
+41
+SR
+ˆz
+Sc
+τz
+torque on matter vs. flux through SR
+Figure 1.24: Circularly polarized radiation from a localized dipole enclosed by far-zone sphere SR: outward
+Poynting flux balances finite radiated power; stress integration gives T J and outward transport ΦJ,out = −T J;
+in steady operation the source support feels τsource = −ΦJ,out while an absorbing load feels τload = +ΦJ,out
+[3, 4].
+On a predominantly radiative shell, fields scale as |E| ∝1/R with the azimuthal phase of the
+dominant mode; Maxwell stress Eq. (1.42) with outward normal ˆn = ˆr supplies the integrand
+[r × (⟨T⟩· ˆn)] · ˆz. When multiple modes contribute, Eq. (1.87) sums separable (m, σ) contributions
+from Eqs. (1.59)–(1.62); each mode carries a definite (m + σ)/ω factor only under the stated modal
+assumptions [4]. Evaluating the same balance on R = λ without stating |Preac(r)|/Prad can attribute
+reactive-dominated storage exchange to far-zone transport [4].
+For steady harmonic operation, storage variation over one cycle-average window is small. The
+inherited angular-momentum balance therefore reduces to
+˙Jz,em,out = −
+∮︂
+SR
+[︁r × (⟨T⟩· ˆn)
+]︁· ˆz dS = −TJ,z,
+(1.85)
+where TJ,z is the z-component of the Maxwell-stress moment on SR. Outward transport ˙Jz,em,out =
+ΦJ,z,out is the negative of the stress-moment integral under the convention of Eq. (1.55).
+For an absorbing load on the mount, τz,load =
+˙Jz,em,out; for the enclosed source support,
+τz,source = −˙Jz,em,out = TJ,z in steady operation [3].
+For a single helical mode with azimuthal index m and circular-polarization helicity σ ∈{−1, +1}
+in the separable description of Eq. (1.83), the ratio ˙Jz/Prad has dimensions of time and equals
+(m + σ)/ω [4]. Substituting into Eq. (1.85) yields the application law
+τz,source ≈−m + σ
+ω
+Prad,
+τz,load ≈+m + σ
+ω
+Prad,
+(1.86)
+Eq. (1.86) is not a new conservation theorem; it is a regime-specific evaluator obtained by applying
+the conservation statement of Subsection 1.1.6 to a radiative control surface.
+For multimode radiation under the same separable assumptions,
+τz,source = −
+∑︂
+m,σ
+m + σ
+ω
+Pm,σ,
+(1.87)
+where Pm,σ is radiated power carried by mode (m, σ). Eq. (1.87) is a modal specialization of
+Eq. (1.85), not a universal identity for arbitrary full-vector fields [4].
+When several (m, σ) modes carry comparable power, the single-mode law Eq. (1.86) is insufficient:
+each mode contributes its own (m + σ)/ω factor in the stated description [4].
+The electromagnetic torque and the angular-momentum flux are two manifestations of the same
+conservation law when the material boundary is the surface across which the exchange occurs [3].
+Beth’s experiment demonstrated that circularly polarized radiation carries angular momentum whose
+mechanical counterpart is the torque exerted on matter through Maxwell stress at the interface [3].
+42
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+CP (σ= + 1)
+birefringent plate
+torsion wire
+τload
+Figure 1.25: Beth [3]: circularly polarized light incident on a wave plate on a torsion suspension; the plate
+receives torque through Maxwell stress at the interface.
+source
+So (open)
+ΓR (closed)
+Figure 1.26: Open transverse plane So (modal flux and power through the aperture) versus closed enclosing
+sphere ΓR (exact Maxwell stress-moment conservation on a control surface) [4, 3].
+Example 1.5 (Electromagnetic torque scale). For an absorbing load, a circularly polarized beam
+with m = 0 and σ = +1 in Eq. (1.83) gives ˙Jz = P/ω. For P = 1 W at f = 10 GHz, ω = 2πf and
+˙Jz = P/ω ≈1.59×10−11 N m. The load torque has the same sign as the outward angular-momentum
+flux, while the source reaction torque has the opposite sign [3, 4].
+On a predominantly radiative shell, outward angular-momentum flux and source reaction torque
+are opposite in steady harmonic operation (Eqs. (1.84) and (1.55)) [3]. The limitation is equally
+physical: evaluating the same balance on R = λ without stating |Preac(r)|/Prad as defined in
+Eq. (1.66) can mask reactive-dominated storage exchange as if it were far-zone radiation [4].
+1.6.2
+Phase structure without angular-momentum transport
+A field may possess nontrivial angular phase structure while its net angular-momentum transport
+vanishes. Consider two coherent components with azimuthal orders +m and −m on an open
+transverse observation plane So. The forward power and forward angular-momentum flux associated
+with the outgoing modal components crossing So are forward-propagating modal statements on that
+aperture; the exact global conservation law remains the closed-surface Maxwell-stress balance on
+an enclosing surface ΓR that bounds a control volume containing the source [4, 13]. Their signed
+modal fluxes have opposite signs; if their powers are equal, the signed orbital transport cancels even
+though intensity and phase remain strongly structured [5]. Signed orbital transport is proportional
+to the intensity difference I+ −I−, not to the visibility of azimuthal structure alone [4].
+With common radial envelope A(ρ), the transverse field on So exhibits strong azimuthal variation
+in both amplitude and phase. Allen et al. [5] showed that a single helical mode radiates definite
+orbital flux; equal counter-rotating weights remove net signed angular-momentum transport while
+retaining visible structure and substantial radiated power [2].
+Visible azimuthal structure does not determine net angular-momentum transport: when I+ = I−,
+signed flux through So vanishes while Ptot = P+ + P−may remain large (Figure 1.16) [3, 4].
+Component intensities follow from time-averaged Poynting flux:
+I±(ρ) = 1
+2 Re
+{︁E± × H∗
+±
+}︁· ˆz,
+(1.88)
+1.6. EXAMPLES AND COUNTEREXAMPLES
+43
+So (open plane)
++m
+−m
+P+ = P−
+˙Jz=0
+ˆz
+Figure 1.27: Counter-rotating beams with azimuthal indices m = +2 and m = −2 superpose on open
+aperture So to form a four-lobed standing intensity pattern. Matched orbital powers cancel the signed forward
+orbital angular-momentum flux associated with the modal components crossing So [5, 2].
+with H± = (1/η0) ˆz × E± on the outgoing transverse branch and Sc,± = 1
+2E± × H∗
+± [4]. For
+E± = (A(ρ)/
+√
+2)e±jmϕˆet, each component carries I±(ρ) = |A(ρ)|2/(4η0); matched amplitudes give
+equal power while signed outward fluxes cancel.
+Let a monochromatic transverse field on observation surface So be formed by superposing
+two coherent counter-rotating orbital components with common radial envelope A(ρ), cylindrical
+coordinates (ρ, ϕ), and integer order m > 0. Fix a linear transverse polarization unit vector ˆet. The
+±m components are
+E±(ρ, ϕ) = A±(ρ)
+√
+2
+e±jmϕ ˆet,
+(1.89)
+and their sum is
+Et(ρ, ϕ) = E+(ρ, ϕ) + E−(ρ, ϕ) =
+√
+2 A(ρ) cos(mϕ) ˆet
+(1.90)
+when A+ = A−= A. With H± = (1/η0) ˆz × E±, Eq. (1.88) gives I± = |A|2/(4η0) when amplitudes
+match. For each orbital component, the time-averaged angular-momentum flux through So scales as
+(±m/ω) times component power P± =
+∫︁
+So I± dS [4]. Summing components,
+˙Jz = m
+ω (P+ −P−) = m
+ω
+∫︂
+So
+(I+ −I−) dS,
+(1.91)
+which is Eq. (1.93). When I+ = I−, both P+ and P−are equal and ˙Jz = 0 even though |Et|2 =
+2|A|2 cos2(mϕ) exhibits 2m azimuthal nodes per cycle.
+Example 1.6 (Equal +m and −m components). Take m = 2 with equal component powers
+P+ = P−.
+Then
+˙Jz,out = (m/ω)(P+ −P−) = 0 under Eq. (1.93).
+A one-percent imbalance,
+P+ = 1.01P−, gives
+˙Jz,out = (m/ω)(0.01P−)̸ = 0: a small power asymmetry produces signed
+transport while the standing azimuthal pattern may remain visually similar [5, 4].
+Define complex amplitudes for the imbalance calculation:
+E+(ρ, ϕ) = A+(ρ)ejmϕ,
+E−(ρ, ϕ) = A−(ρ)e−jmϕ,
+(1.92)
+with intensities I±(ρ) = 1
+2 Re{E± × H∗
+±} · ˆz from Eq. (1.88), or equivalently I±(ρ) = |A±(ρ)|2/(4η0)
+on a uniform outgoing branch when |E±| = |A±|/
+√
+2. Let ˙Jz be net angular-momentum transport
+rate through So. The inherited balance law gives
+˙Jz = m
+ω
+∫︂
+So
+(︁I+ −I−
+)︁dS.
+(1.93)
+Here m/ω is the orbital angular-momentum-per-energy factor and I+ −I−is signed transport
+imbalance. Net transport is controlled by I+ −I−, not by |Et|2 or its azimuthal derivative [4]. The
+equal-amplitude counterexample is
+I+(ρ) = I−(ρ)
+∀ρ ∈So.
+(1.94)
+44
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+∂Vg
+dipoleLC
+LL
+M·ˆn
+same E, H; different local maps
+Figure 1.28: Ideal oscillating electric point dipole inside gauge sphere Vg: Coulomb and Lorenz gauges
+yield different gauge-dependent local maps at interior points while identical (E, H) on ∂Vg fixes the same
+stress-flux integral [13, 4].
+Substitution into Eq. (1.93) yields
+˙Jz = 0
+while
+Et(ρ, ϕ) =
+√
+2 A(ρ) cos(mϕ)̸ = 0.
+(1.95)
+If P+̸ = P−, a finite signed flux remains. In steady operation, section 1.5 gives
+τz,source = −˙Jz = 0
+under Eq. (1.94).
+(1.96)
+Let I+(ρ) = I0(ρ) + δI(ρ) and I−(ρ) = I0(ρ) −δI(ρ). Then
+˙Jz = 2m
+ω
+∫︂
+So
+δI(ρ) dS.
+(1.97)
+Under Eq. (1.94), Eqs. (1.95) and (1.96) give ˙Jz = 0 and τz,source = 0 even when |Et| and ∂ϕEt are
+large on So [4, 3]. A finite signed flux requires I+̸ = I−, as in Eq. (1.97). Unequal modal powers,
+polarization-selective loss, incomplete modal orthogonality, or aperture truncation can break exact
+cancellation; gauge relabeling cannot restore transport removed by balanced superposition [2, 6].
+1.6.3
+Gauge dependence of local angular-momentum densities
+Under A′ = A + ∇χ and ϕ′ = ϕ −jωχ, the fields E = −∇ϕ −jωA and B = ∇× A are unchanged
+[1]. Two potential descriptions can therefore represent exactly the same electromagnetic field. Any
+local density constructed from ϕ or A alone inherits gauge sensitivity; stress traction, Poynting flux,
+and total angular-momentum density built from (E, H) do not [13, 4].
+An ideal oscillating electric point dipole inside a spherical control volume Vg of radius R = 2λ
+illustrates the point. Coulomb and Lorenz gauges yield the same (E, H) on ∂Vg yet different ∇ϕ at
+interior points, so any potential-linked local map differs pointwise between them. Mechanical torque
+∮︁
+∂Vg r × (⟨T⟩· ˆn) dS and outward angular-momentum flux built from (E, H) remain unchanged
+[13, 4].
+Gauge relabeling shifts potential-based local maps; it does not shift Maxwell fields or gauge-
+invariant surface integrals built from (E, H) [1, 13]. Subsection 1.6.4 holds the same dipole fixed
+while moving the observation shell from reactive to radiative radius [4, 7].
+1.6.4
+Radial structure of a localized radiator
+What changes in the electromagnetic field as one moves away from a localized source? The source
+itself is fixed; only the observation radius increases. Maxwell’s outgoing solution then reorganizes its
+radial content: terms that decay as 1/r3 and 1/r2 dominate near the source, while the 1/r radiative
+term eventually sets the transverse far-zone form [4, 2]. Consider a z-directed electric dipole moment
+1.6. EXAMPLES AND COUNTEREXAMPLES
+45
+ˆz
+p
+kr=0.5
+near
+r−3
+kr∼1
+transition
+r−2
+kr=10
+far
+r−1
+Figure 1.29: Concentric observation shells: near zone (kr ≪1, r−3 and r−2), transition (kr ∼1), and far
+zone (kr ≫1, r−1 radiation) [4, 2].
+phasor p = p0ˆz at the origin with exp(+jωt) and outgoing factor e−jkr. In spherical coordinates
+(r, θ, ϕ) the exact source-free fields are [4, 6]
+Er = p0 cos θ
+4πε0
+e−jkr
+(︃2
+r3 + 2jk
+r2
+)︃
+,
+(1.98a)
+Eθ = p0 sin θ
+4πε0
+e−jkr
+(︄
+1
+r3 + jk
+r2 −k2
+r
+)︄
+,
+(1.98b)
+Hϕ = jkp0 sin θ
+4πε0η0
+e−jkr
+(︃1
+r2 + jk
+r
+)︃
+,
+(1.98c)
+with k = ω/c. The r−3 term is the quasi-static electric field, the r−2 term is the induction field,
+and the r−1 term in Eθ and Hϕ is the radiation field [4].
+Example 1.7 (Reading the three regions of a dipole field). At f = 300 MHz, k = 2π/λ ≈6.3 rad/m.
+At r = 0.5 m, kr ≈3.1 (transition); at r = 5 m, kr ≈31 ≫1 and the r−1 terms in Eqs. (1.98b)
+and (1.98c) dominate, giving transverse radiation with U(θ) ∝sin2 θ, Prad from Eq. (1.101), and
+D(θ) = 3
+2 sin2 θ [4, 6].
+For r > 0, ∇· E = 0 follows from the spherical-coordinate divergence condition
+∂rEr + 2
+rEr + 1
+r∂θEθ + cot θ
+r
+Eθ = 0
+when Eqs. (1.98a) and (1.98b) are substituted [4]. The remaining source-free Maxwell equations
+∇× E = −jωµ0H and ∇× H = +jωε0E follow consistently with only Hϕ present and Jimp = 0—
+equivalently the Er–Eθ–Hϕ triad closes the transverse–longitudinal split of the outgoing Hertzian
+template without altering the published coefficients [4, 6]. The same ideal point dipole at f = 1 GHz
+used in Subsection 1.6.3 illustrates shell dependence on two concentric spheres Sr1 and Sr2 with
+kr1 = 0.5 and kr2 = 5, as in Figure 1.17.
+In the standard multipole description of an outgoing field,
+E(r) = E3(θ, ϕ) r−3+E2(θ, ϕ) r−2+E1(θ, ϕ) r−1+· · · ,
+H(r) = H2(θ, ϕ) r−2+H1(θ, ϕ) r−1+· · · ,
+(1.99)
+where the angular factors En, Hn depend on direction but not on r in the source-free exterior [4].
+Near the source the r−3 and r−2 terms may be comparable with, or larger than, the r−1 radiation
+field. Those terms describe stored and induction fields: electric and magnetic energy oscillate locally,
+and the normal Poynting vector can be largely imaginary even though the source already radiates a
+definite outward power. At increasing distance the r−1 terms dominate, E and H approach the
+transverse relation of an outgoing wave, and the real Poynting flux carries energy away from the
+source [2].
+46
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+ˆz
+p
+θ
+θ=0
+θ=π
+max
+max
+U(θ) ∝sin2 θ
+Figure 1.30: Far-zone radiation intensity U(θ, ϕ) ∝sin2 θ for an electric dipole aligned with ˆz: intensity
+vanishes on axis and peaks in the equatorial plane. With Eq. (1.101), D(θ) = 3
+2 sin2 θ and D0 = 3
+2 [4, 6].
+The radial intensity of that flux follows from the field itself. With Sc = 1
+2E × H∗and Hϕ from
+Eq. (1.98c) (within Eq. (1.98)), the radial component is
+Re{(Sc · ˆr)} = 1
+2 Re
+{︂
+EθH∗
+ϕ
+}︂
+,
+(1.100)
+since H has only a ϕ-component [4]. On a sphere of radius r, the radiative part of Re(Sc,r) scales
+as 1/r2 because both E and H carry the 1/r factor. The element of area grows as r2, so
+Prad =
+∮︂
+Sr
+Re{Sc · ˆr} dS = ω4|p0|2
+12πε0c3 ,
+(1.101)
+remains constant in a lossless source-free region between enclosing surfaces [4]. The source has
+radiated the same total power all along; what changes with r is the local composition of the field
+through which that conserved power is carried.
+Figure 1.30 is the angular face of Eq. (1.101): Prad is fixed, but its solid-angle distribution
+is strongly non-uniform.
+Axisymmetric radiation carries finite power yet may carry zero net
+z-angular-momentum flux when the stress integrand is symmetric about ˆz [3].
+The complex normal flux separates reactive circulation from outward radiation. With Eq. (1.66),
+∫︂
+Sr
+Sc · ˆr dS = Prad + jPreac(r),
+(1.102)
+where Prad is the time-averaged outward power and Preac(r) =
+∫︁
+Sr Im{Sc · ˆr} dS is reactive power
+through the shell [2]. Because Prad is fixed in a lossless exterior while |Preac(r)| varies with shell
+radius, the ratio |Preac(r)|/Prad marks reactive dominance when it is much greater than unity and
+radiation dominance when it is much less than unity [4].
+On Sr1 with kr1 = 0.5, reactive circulation dominates the normal flux pattern even though Prad
+is unchanged: |Preac(r1)|/Prad ≫1. Phase winding and elliptical polarization can be vivid there
+while the field remains dominated by stored and induction terms. On Sr2 with kr2 = 5, the same
+source is seen through a predominantly radiative shell with |Preac(r2)|/Prad ≪1, and E–H approach
+the far-zone transverse relation
+H →1
+η0
+ˆr × E
+(1.103)
+under the outgoing branch and radiation condition stated in section 1.1 [4].
+Angular-momentum transport must be read with the same distinction. Outward field angular-
+momentum flux through Sr is
+˙Jz,em,out = −
+∮︂
+Sr
+[︁r × (⟨T⟩· ˆr)
+]︁· ˆz dS
+(1.104)
+1.7. SUMMARY
+47
+by Eqs. (1.55) and (1.54), and is conserved on nested source-free spheres in steady state when the
+same outgoing Maxwell branch is followed [4]. Moving the enclosing surface outward does not create
+angular momentum; it changes the local stress distribution through which the same signed flux
+is carried. By contrast, the integral of the magnitude
+∫︁
+Sr |[r × (⟨T⟩· ˆr)] · ˆz| dS may vary with r
+because near-zone reactive structure contributes differently to the stress moment than the far-zone
+radiative field—without implying growth of the conserved net flux [4, 3].
+Chu’s quality factor for a control volume V enclosing the source is
+QChu(V ) = 2ω max(We, Wm)
+Prad
+,
+(1.105)
+with cycle-averaged stored energies We, Wm and outward radiated power Prad [7]. At resonance,
+QChu = ω(We + Wm)/Prad. The shell integral Preac(r) is reactive power through Sr, not QChu [7, 4].
+For electrically small sources in Chu’s spherical-wave model,
+QLB =
+1
+(ka)3 + 1
+ka.
+(1.106)
+Local r−3, r−2, r−1 weighting changes with radius; Prad and nested-sphere ΦJ,out do not [2, 4].
+Chapter 2 develops angular-spectrum mappings for bounded sources [6].
+1.7
+Summary
+Maxwell’s equations, with compatible sources, boundary data, and outgoing selection, determine
+(E, H) except at lossless resonances [1, 4]. Poynting’s theorem governs energy flow; cycle-averaged
+Maxwell stress ⟨T⟩governs momentum and torque through ⟨M⟩= r × ⟨T⟩and ΦJ,out = −T J
+[2, 3]. Appearance of angular structure is not identical to transport of angular momentum [5].
+The retarded Green function connects localized sources to directional phase and angular radiation
+structure [12]. The exact dipole displays r−3, r−2, r−1 hierarchy and the chain U, Prad, D; Preac(r)
+is not QChu [4, 7]. Chapter 2 develops the angular-spectrum description on the outgoing branch
+fixed here [6].
+1.8
+Problems
+1. Maxwell conservation laws: Poynting, momentum, stress, and torque.
+Using
+Eqs. (1.34), (1.40), and (1.48) [2, 1, 4]: (a) Derive the real and imaginary parts in Eq. (1.35)
+and state physically what Re(Sc) and Im(Sc) measure. (b) Starting from Eq. (1.37), outline
+how index contraction with Maxwell’s equations yields Eq. (1.40). (c) Multiply Eq. (1.40) by
+r×, use Tkj = Tjk, and obtain Eq. (1.48); define M(i) = r × T(i) and ⟨M⟩= r × ⟨T⟩, with
+T J =
+∮︁⟨M⟩· ˆn dS and ΦJ,out = −T J; show τmatter = −ΦJ,out at steady state and distinguish
+τsource from τload [3]. (d) For the plane wave of Eq. (1.44) normally incident on a perfect
+absorber with vacuum control volume z < 0 and outward normal ˆn = +ˆz, verify pabs = |⟨S⟩|/c
+[4]. (e) For the same wave on a perfect reflector, show prefl = 2|⟨S⟩|/c and explain the factor
+of two physically [1, 4].
+2. Charge continuity and Green-function bridge. (a) Take the divergence of Ampère’s
+law under exp(+jωt) and obtain Eq. (1.7).
+Explain why impressed ρ cannot be chosen
+independently of Jimp [1, 4].
+(b) Integrate Eq. (1.7) over a source region and interpret
+Eq. (1.29). (c) Explain why longitudinal/transverse Helmholtz decomposition of Jimp is
+48
+CHAPTER 1. FOUNDATIONS OF ANGULAR ELECTROMAGNETIC STRUCTURE
+not the same as near-field versus far-field decomposition [4, 11]. [Chapter 2.]
+(d) State
+how Eqs. (1.19) and (1.20) connect localized sources to outgoing fields and how Eq. (1.23)
+introduces angular phase [12, 4].
+3. Boundary conditions and outgoing selection. (a) State PEC, PMC, and impedance
+boundary conditions of Eq. (1.26) [4]. (b) For a radiating exterior problem, explain the physical
+content of Eq. (1.27) and why it excludes incoming completion [10, 4]. (c) Using Eq. (1.31),
+summarize uniqueness on (i) bounded lossy domains, (ii) lossless cavities at eigenfrequency,
+and (iii) exterior radiating problems [4]. (d) Explain why compatible source, interface, and
+boundary data must be fixed before Poynting and torque integrals are physically defined [6].
+4. Angular spectrum. [Chapter 2.] Using only Eq. (1.23), explain how a localized source
+imprints direction-dependent phase on the outgoing field and why that phase structure is not
+yet a complete angular-spectrum representation [4, 16].
+5. Cylindrical waves. [Chapter 2.] Under exp(+jωt), state which cylindrical Hankel branch is
+outgoing and why constant-phase analysis must be used rather than sign inspection alone [4, 6].
+Relate azimuthal phase ejmϕ to angular dependence without claiming net angular-momentum
+transport [3].
+6. Spherical harmonics and VSH. [Chapter 3.] Explain why a tangential vector field on a
+sphere requires componentwise scalar harmonics or an explicit tangential vector basis, and
+why scalar Y m
+ℓ
+alone is not a complete electromagnetic basis [4, 14].
+7. Rotation, helicity, and limits of (m + σ)P/ω. (a) Distinguish active source rotation from
+passive coordinate rotation using Section 1.3 [3, 4]. (b) For Eq. (1.83), state the separable
+assumptions required and why the relation is not universal for arbitrary full-vector fields [4, 5].
+(c) For field-based helicity Eq. (1.76), explain why (E, H) built quantities are gauge invariant
+whereas potential-based canonical splits may not be [11, 13]. (d) Two equal-power outgoing
+components have azimuthal indices +m and −m on aperture So. The resulting field has a
+pronounced standing azimuthal pattern. Determine the net signed orbital angular-momentum
+flux under Eq. (1.93) and explain why the visible pattern does not determine the answer [5, 3].
+8. Fraunhofer and aperture patterns. [Chapter 2.] Starting from Eq. (1.23), state the
+Fraunhofer far-field condition r ≫a2/λ in words and explain the role of −ˆr · r′ in selecting
+observable direction [17, 16].
+9. Dipole fields, continuity, and Maxwell closure. (a) From Eq. (1.21), explain how the
+e−jk0R/R phase generates a dipole far field without re-deriving full multipole theory [11, 4].
+(b) Using Eq. (1.7), explain why an isolated localized source cannot support a time-varying
+radiating electric monopole while static Coulomb fields remain [1, 4]. (c) Using Eqs. (1.98a),
+(1.98b), and (1.98c) (within Eq. (1.98)), verify ∇· E = 0 for r > 0, ∇× E = −jωµ0H, and
+∇× H = +jωε0E in source-free spherical coordinates; identify r−3, r−2, r−1 zones and the
+sin2 θ intensity pattern [4]. (d) At f = 300 MHz, compute kr at r = 0.5 m and r = 5 m. State
+which radial terms dominate in each case and describe the corresponding Poynting behaviour
+(reactive versus radiative) [4, 2]. (e) Using Eqs. (1.59) and (1.61), show D(θ) = 3
+2 sin2 θ for
+the aligned dipole when Eq. (1.101) holds [6].
+10. Reactive shell, Chu quality factor, and finite size. (a) Distinguish Prad from Preac(r)
+in Eq. (1.66) and explain why |Preac(r)|/Prad depends on shell radius [2, 4].
+(b) Using
+QChu = 2ω max(We, Wm)/Prad from Eq. (1.105), explain why Preac(r) is not QChu and state
+1.8. PROBLEMS
+49
+the resonance form QChu = ω(We + Wm)/Prad [7]. (c) For the two-shell dipole comparison in
+Subsection 1.6.4, relate reactive dominance at kr1 = 0.5 to radiative dominance at kr2 = 5
+without changing Prad [4]. (d) State Chu’s small-ka scaling QLB ∼(ka)−3 under Eq. (1.106)
+[7, 6].
+Bibliography
+[1] J. C. Maxwell, A Treatise on Electricity and Magnetism, 1st ed.
+Clarendon Press, 1873.
+[2] J. H. Poynting, “On the transfer of energy in the electromagnetic field,” Philosophical Transac-
+tions of the Royal Society of London, vol. 175, pp. 343–361, 1884.
+[3] R. A. Beth, “Mechanical detection and measurement of the angular momentum of light,”
+Physical Review, vol. 50, no. 2, pp. 115–125, 1936.
+[4] J. A. Stratton, Electromagnetic Theory.
+McGraw-Hill, 1941.
+[5] L. Allen, M. W. Beijersbergen, R. J. C. Spreeuw, and J. P. Woerdman, “Orbital angular
+momentum of light and the transformation of laguerre-gaussian laser modes,” Physical Review
+A, vol. 45, no. 11, pp. 8185–8189, 1992.
+[6] R. F. Harrington, Time-Harmonic Electromagnetic Fields.
+Wiley-IEEE Press, 2001.
+[7] L. J. Chu, “Physical limitations of omni-directional antennas,” Journal of Applied Physics,
+vol. 19, no. 12, pp. 1163–1175, 1948.
+[8] M. Abraham, “Zur elektrodynamik bewegter körper,” Rendiconti del Circolo Matematico di
+Palermo, vol. 28, no. 1, pp. 1–28, 1910.
+[9] H. Minkowski, “Die grundgleichungen für die elektromagnetischen vorgänge in bewegten
+körpern,” Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-
+Physikalische Klasse, pp. 53–111, 1908.
+[10] A. Sommerfeld, Partial Differential Equations in Physics.
+Academic Press, 1949.
+[11] J. D. Jackson, Classical Electrodynamics, 3rd ed.
+Wiley, 1999.
+[12] C.-T. Tai, Dyadic Green Functions in Electromagnetic Theory, 2nd ed.
+IEEE Press, 1994.
+[13] F. J. Belinfante, “On the current and the density of the electric charge, the energy, the linear
+momentum and the angular momentum of arbitrary fields,” Physica, vol. 7, no. 5, pp. 449–474,
+1940.
+[14] J. E. Hansen, Spherical Near-Field Antenna Measurements.
+Peter Peregrinus, 1988.
+[15] R. E. Collin, Field Theory of Guided Waves, 2nd ed.
+IEEE Press, 1991.
+[16] S. Silver, Ed., Microwave Antenna Theory and Design, ser. MIT Radiation Laboratory Series.
+McGraw-Hill, 1949, vol. 12.
+[17] M. Born and E. Wolf, Principles of Optics, 7th ed.
+Cambridge University Press, 1999.
+50

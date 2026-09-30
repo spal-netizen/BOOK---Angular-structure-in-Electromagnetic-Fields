@@ -1,0 +1,73 @@
+% Stage 2.12 — three classical summary tables (Chapter 1)
+\begin{table}[t]
+\centering
+\caption{Fundamental harmonic electromagnetic quantities in vacuum (cycle-averaged where noted).}
+\label{tab:ch1.fundamental-quantities}
+\small
+\begin{tabular}{@{}p{0.14\linewidth}p{0.26\linewidth}p{0.22\linewidth}p{0.18\linewidth}p{0.12\linewidth}@{}}
+\toprule
+Quantity & Definition & Physical meaning & Conservation law & Units \\
+\midrule
+$\mathbf{S}_\mathrm{c}$, $\langle\mathbf{S}\rangle$
+& $\mathbf{S}_\mathrm{c}=\tfrac12\E\times\H^*$, $\langle\mathbf{S}\rangle=\Re\mathbf{S}_\mathrm{c}$
+& Energy flux density & Poynting theorem & W\,m$^{-2}$ \\
+$\mathbf{g}_{\mathrm{em}}$, $\langle\mathbf{g}_{\mathrm{em}}\rangle$
+& $\mathbf{g}_{\mathrm{em}}=\varepsilon_0\,\E\times\B$; $\langle\mathbf{g}_{\mathrm{em}}\rangle=\varepsilon_0\mu_0\langle\mathbf{S}\rangle$
+& Instantaneous vs cycle-averaged momentum density
+& Momentum balance with $\Tinst$ / $\Tavg$
+& kg\,m$^{-2}$\,s$^{-1}$ \\
+$\Tinst$, $\Tavg$
+& Eqs.~\eqref{eq:ch1.maxwell-stress-components}, \eqref{eq:ch1.maxwell-stress}
+& Instantaneous and cycle-averaged Maxwell stress tensors
+& $\mathbf{f}_{\mathrm{em}}=\divg\Tavg$ (steady)
+& N\,m$^{-2}$ \\
+$\mathbf{j}_{\mathrm{em}}$, $\langle\mathbf{j}_{\mathrm{em}}\rangle$
+& $\mathbf{j}_{\mathrm{em}}=\mathbf{r}\times\mathbf{g}_{\mathrm{em}}$; $\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{r}\times\langle\mathbf{g}_{\mathrm{em}}\rangle$
+& Instantaneous vs cycle-averaged angular-momentum density
+& Angular-momentum balance
+& kg\,m$^{-1}$\,s$^{-1}$ \\
+$\Minst$, $\Mavg$
+& $\Minst=\mathbf{r}\times\Tinst$; $\Mavg=\mathbf{r}\times\Tavg$
+& Stress-moment density; surface density $\Mavg\cdot\hat{\mathbf{n}}$
+& $\boldsymbol{\mathcal{T}}_J=\oint\Mavg\cdot\hat{\mathbf{n}}\,dS$
+& N\,m$^{-1}$ ($\Minst$, $\Mavg$); N\,m ($\boldsymbol{\mathcal{T}}_J$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Four angular concepts that answer different physical questions.}
+\label{tab:ch1.four-not-confused}
+\small
+\begin{tabular}{@{}p{0.22\linewidth}p{0.72\linewidth}@{}}
+\toprule
+Concept & Physical question answered \\
+\midrule
+Azimuthal phase $e^{\jj m\phi}$
+& How is the transverse field organized in angle on a plane or chart? \\
+Polarization / helicity
+& How does the electric vector rotate in the transverse plane? \\
+Angular-momentum density $\mathbf{j}_{\mathrm{em}}$
+& Where is rotational action stored in the harmonic field at a point? \\
+Angular-momentum flux $\boldsymbol{\Phi}_{J,\mathrm{out}}$
+& What signed angular-momentum transport crosses a closed radiative shell? \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Near, transition, and far zones for an electric dipole ($r>0$, source-free exterior).}
+\label{tab:ch1.near-far-zones}
+\small
+\begin{tabular}{@{}p{0.12\linewidth}p{0.18\linewidth}p{0.24\linewidth}p{0.20\linewidth}p{0.22\linewidth}@{}}
+\toprule
+Region & Dominant $r$-dependence & Interpretation & Poynting character & Angular-momentum note \\
+\midrule
+Near ($kr\ll1$) & $r^{-3}$, $r^{-2}$ & Static / induction structure & Large reactive $\Im(\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{r}})$ & Stress integrals dominated by storage \\
+Transition ($kr\sim1$) & Mixed & Handover to radiation & $|P_{\mathrm{reac}}(r)|/P_{\mathrm{rad}}$ large & Shell choice matters for reading flux \\
+Far ($kr\gg1$) & $r^{-1}$ & Outgoing wave & $P_{\mathrm{rad}}$ fixed on nested shells & $\E$, $\H$ transverse; $U(\theta)\propto\sin^2\theta$ \\
+\bottomrule
+\end{tabular}
+\end{table}

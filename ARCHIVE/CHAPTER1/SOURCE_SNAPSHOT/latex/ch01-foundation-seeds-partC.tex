@@ -1,0 +1,183 @@
+% Ch.1 PASS B/C — angular spectrum through ell vs m
+\subsection{Angular spectrum and plane-wave decomposition}
+\label{sec:ch01.2.5}
+
+A transverse field on the plane $z=0$ admits the angular-spectrum representation \cite{stratton1941,silver1949,bornwolf1999}
+\begin{equation}
+\label{eq:ch1.angular-spectrum}
+\E_t(x,y,0)
+=
+\frac{1}{(2\pi)^2}\iint \tilde{\E}_t(k_x,k_y)\,
+e^{\jj(k_x x+k_y y)}\,dk_x\,dk_y,
+\end{equation}
+with inverse
+\begin{equation}
+\label{eq:ch1.angular-spectrum-inverse}
+\tilde{\E}_t(k_x,k_y)
+=
+\iint \E_t(x,y,0)\,
+e^{-\jj(k_x x+k_y y)}\,dx\,dy.
+\end{equation}
+Each spectral component is a plane-wave sector of Maxwell's equations. With $k_0=\omega/c$ and
+\begin{equation}
+\label{eq:ch1.k-perp-kz}
+k_\rho^2=k_x^2+k_y^2,\qquad
+k_z^2=k_0^2-k_\rho^2,
+\end{equation}
+forward propagation in $+z$ carries $\exp(-\jj k_z z)$ under the global convention of Subsection~\ref{sec:ch01.1.1} \cite{stratton1941,felsen1994}. Transversality $\hat{\mathbf{k}}\cdot\E=0$ links the three field components through Eq.~\eqref{eq:ch1.local-plane-wave-relations}.
+
+In the far zone, an observation direction $(\theta,\phi)$ selects the propagating spectral components with \cite{stratton1941,silver1949}
+\begin{equation}
+\label{eq:ch1.far-field-k-relation}
+k_x=k_0\sin\theta\cos\phi,\qquad
+k_y=k_0\sin\theta\sin\phi,\qquad
+k_z=k_0\cos\theta.
+\end{equation}
+Thus an aperture distribution on $z=0$ maps to an angular spectrum, the propagating disk $|k_\rho|<k_0$ maps to real outgoing directions, and the far-field pattern is the visible portion of that spectrum \cite{stratton1941,bornwolf1999}.
+
+\ClassicalInkFig{fig:ch1.angular-spectrum-disk}{Angular spectrum in the $(k_x,k_y)$ plane: the disk $k_\rho<k_0$ supports propagating components with real $k_z$; the exterior $k_\rho>k_0$ supports evanescent components whose $+z$ dependence decays exponentially \cite{stratton1941,silver1949}.}{fig11-angular-spectrum}
+
+\subsection{Propagating and evanescent spectral components}
+\label{sec:ch01.2.6}
+
+When $k_\rho<k_0$, choose $k_z=\sqrt{k_0^2-k_\rho^2}>0$ so $\exp(-\jj k_z z)$ propagates obliquely into $+z$ \cite{stratton1941}. When $k_\rho>k_0$, the same dispersion relation gives $k_z=-\jj\alpha$ with $\alpha=\sqrt{k_\rho^2-k_0^2}>0$, hence
+\begin{equation}
+\label{eq:ch1.evanescent-decay}
+\exp(-\jj k_z z)=\exp(-\alpha z),
+\end{equation}
+and the component decays away from the aperture plane \cite{stratton1941,felsen1994}. Evanescent sectors carry fine transverse structure tied to the source; they do not transport net power to infinity in a homogeneous half-space \cite{stratton1941}.
+
+\ClassicalInkFig{fig:ch1.propag-evanescent}{Oblique propagating phase fronts reach the far zone, whereas evanescent sectors decay as $\exp(-\alpha z)$ away from the excitation plane \cite{stratton1941,silver1949}.}{fig11b-propag-evanescent}
+
+\subsection{Cylindrical waves: regular and outgoing radial structure}
+\label{sec:ch01.2.7}
+
+In cylindrical coordinates $(\rho,\phi,z)$ the scalar Helmholtz equation
+\begin{equation}
+\label{eq:ch1.scalar-helmholtz-cyl}
+\nabla^2\psi+k_0^2\psi=0
+\end{equation}
+separates as $\psi=R(\rho)\,\Phi(\phi)\,Z(z)$ \cite{stratton1941,harrington2001}. Rotational invariance about the $z$-axis gives
+\begin{equation}
+\label{eq:ch1.cyl-phi-separation}
+\Phi(\phi)=e^{\jj m\phi},\qquad m\in\mathbb{Z},
+\end{equation}
+and the radial factor satisfies Bessel's equation
+\begin{equation}
+\label{eq:ch1.bessel-equation}
+\rho^2 R''+\rho R'+(k_\rho^2\rho^2-m^2)R=0.
+\end{equation}
+Regularity at the axis selects $R(\rho)=J_m(k_\rho\rho)$; the separable \emph{regular cylindrical mode}
+\begin{equation}
+\label{eq:ch1.cylindrical-mode-regular}
+\psi=J_m(k_\rho\rho)\,e^{\jj m\phi}\,e^{-\jj k_z z},
+\qquad k_\rho^2+k_z^2=k_0^2,
+\end{equation}
+is finite on the axis only for integer $m$ \cite{stratton1941}. Away from the axis, outgoing radial transport is carried by the Hankel function $H_m^{(1)}(k_\rho\rho)$ under the manuscript outgoing convention, while $H_m^{(2)}$ is the incoming radial branch and $Y_m$ is the singular Neumann partner \cite{stratton1941,harrington2001}:
+\begin{equation}
+\label{eq:ch1.cylindrical-mode-outgoing}
+\psi^{(\mathrm{out})}=H_m^{(1)}(k_\rho\rho)\,e^{\jj m\phi}\,e^{-\jj k_z z}.
+\end{equation}
+Regularity at $\rho=0$ and radiation at large $\rho$ therefore select different radial factors for the same azimuthal order $m$ \cite{stratton1941}.
+
+\paragraph{Jacobi--Anger bridge.}
+A plane-wave phase factor in cylindrical coordinates,
+\begin{equation}
+\label{eq:ch1.plane-phase-cyl}
+e^{\jj q\rho\cos(\phi-\phi')},
+\qquad q=k_\rho,
+\end{equation}
+admits the exact expansion \cite{stratton1941,jackson1999}
+\begin{equation}
+\label{eq:ch1.jacobi-anger}
+e^{\jj q\rho\cos(\phi-\phi')}
+=
+\sum_{m=-\infty}^{\infty}\jj^{\,m}\,J_m(q\rho)\,e^{\jj m(\phi-\phi')},
+\end{equation}
+verified under the chapter phasor convention against the DLMF identity for $e^{\jj z\cos\theta}$ \cite{stratton1941}. Physically, an oblique plane-wave sector decomposes into azimuthal orders $e^{\jj m\phi}$ weighted by $J_m(k_\rho\rho)$. The angular spectrum therefore connects directly to cylindrical order $m$:
+\begin{equation}
+\label{eq:ch1.angular-to-cylindrical-bridge}
+\text{plane-wave / angular-spectrum sector}
+\;\longrightarrow\;
+J_m(k_\rho\rho)\,e^{\jj m\phi}.
+\end{equation}
+
+\ClassicalInkFig{fig:ch1.cylindrical-bessel}{Regular mode $J_m(k_\rho\rho)e^{\jj m\phi}$ is finite on the axis; outgoing radial radiation away from the axis uses $H_m^{(1)}(k_\rho\rho)$ under the outgoing convention \cite{stratton1941,harrington2001}.}{fig13-cylindrical-bessel}
+
+\subsection{Three coordinate organizations of the same wave}
+\label{sec:ch01.2.7b}
+
+Maxwell's equations in source-free homogeneous space reduce to the vector Helmholtz equation. That single differential structure admits three classical separations used throughout this volume \cite{stratton1941,hansen1988}:
+\begin{equation}
+\label{eq:ch1.three-rep-chain}
+\underbrace{e^{\jj\mathbf{k}\cdot\mathbf{r}}}_{\text{plane / angular spectrum}}
+\;\longleftrightarrow\;
+\underbrace{J_m(k_\rho\rho)\,e^{\jj m\phi}}_{\text{cylindrical}}
+\;\longleftrightarrow\;
+\underbrace{j_\ell(kr)\,Y_\ell^m(\theta,\phi)}_{\text{spherical}}.
+\end{equation}
+Eq.~\eqref{eq:ch1.jacobi-anger} supplies the first link; the plane-wave--spherical expansion supplies the second (Subsection~\ref{sec:ch01.2.9}). These are not three unrelated theories but three coordinate organizations of the same outgoing wave content \cite{stratton1941}. Chapter~\ref{ch:03} develops the full vector spherical construction; Chapter~\ref{ch:02} develops the source-to-field maps that select outgoing branches \cite{harrington2001,tai1994}.
+
+\ClassicalInkFig{fig:ch1.three-representations}{Plane-wave (angular-spectrum), cylindrical ($J_m/H_m^{(1)}$), and spherical/multipole organizations are different classical separations of the same Maxwell solutions \cite{stratton1941,hansen1988}.}{fig12-three-representations}
+
+\subsection{Phase winding and phase singularity}
+\label{sec:ch01.2.8}
+
+Write $\psi=A\,e^{\jj\chi}$ with real amplitude $A$ and phase $\chi$. For a closed contour $C$ that encloses a phase singularity but on which $\psi\neq 0$ everywhere,
+\begin{equation}
+\label{eq:ch1.phase-winding}
+\oint_C \nabla\chi\cdot d\mathbf{l}
+=\oint_C \nabla(\arg\psi)\cdot d\mathbf{l}
+=2\pi m,
+\end{equation}
+so
+\begin{equation}
+\label{eq:ch1.m-winding-integral}
+m=\frac{1}{2\pi}\oint_C \nabla(\arg\psi)\cdot d\mathbf{l}.
+\end{equation}
+\addtocounter{equation}{-1}\refstepcounter{equation}\label{eq:ch1.phase-winding-number}%
+\addtocounter{equation}{-1}\refstepcounter{equation}\label{eq:ch1.lg-vortex-field}%
+In a simply connected region where $\psi\neq 0$ throughout, the integral vanishes \cite{nye1999}. For $\psi=J_m(k_\rho\rho)e^{\jj m\phi}$ with $m\neq 0$, continuity requires $A(\rho=0)=0$ because $J_m(0)=0$; phase is undefined on the zero-amplitude axis \cite{stratton1941,nye1999}. The contour must enclose the singularity while remaining on $\psi\neq 0$; the winding number is integer-valued \cite{nye1999}. Phase winding counts topological organization of $\arg\psi$; net electromagnetic transport of $J_z$ still follows $\Psi_{J_z}^{\mathrm{(out)}}$ and Eq.~\eqref{eq:ch1.outward-am-flux} \cite{beth1936,stratton1941}.
+
+\ClassicalInkFig{fig:ch1.phase-winding-singularity}{Phase contours for $m=0,\pm1,\pm2$ with amplitude-zero core on the axis for $m\neq 0$ \cite{stratton1941,nye1999}.}{fig09-phase-winding}
+
+\subsection{Spherical order $\ell$ and azimuthal order $m$}
+\label{sec:ch01.2.9}
+
+Scalar spherical harmonics satisfy \cite{stratton1941,jackson1999}
+\begin{equation}
+\label{eq:ch1.L2-Lz-sh}
+\hat L^2 Y_\ell^m=\ell(\ell+1)Y_\ell^m,\qquad
+\hat L_z Y_\ell^m=m\,Y_\ell^m,\qquad |m|\le \ell,
+\end{equation}
+where $\hat L_z=-\jj\partial_\phi$ on the angular factor. The index $\ell$ controls total spherical angular complexity; $m$ controls azimuthal variation about the polar axis \cite{hansen1988}. Orthonormality on the unit sphere,
+\begin{equation}
+\label{eq:ch1.sh-orthonormality}
+\int_{4\pi} Y_\ell^m(\theta,\phi)\,Y_{\ell'}^{m'*}(\theta,\phi)\,d\Omega
+=\delta_{\ell\ell'}\,\delta_{mm'},
+\end{equation}
+makes the $Y_\ell^m$ an angular basis: any square-integrable pattern on the sphere decomposes into independent spherical orders \cite{jackson1999,stratton1941}. Low-order examples anchor memory:
+\begin{equation}
+\label{eq:ch1.sh-low-order}
+Y_0^0=\text{constant},\quad
+Y_1^0\propto\cos\theta,\quad
+Y_1^{\pm1}\propto\sin\theta\,e^{\pm\jj\phi},
+\end{equation}
+so $\ell=0$ is spherically symmetric, $\ell=1$ is dipolar in polar variation, and $|m|=1$ introduces one azimuthal cycle \cite{stratton1941}. Thus $Y_1^0$ is a single polar lobe with $m=0$, $Y_1^{\pm1}$ carries one azimuthal cycle, and $Y_2^0$ introduces polar structure absent at $\ell=1$ \cite{stratton1941}.
+
+\paragraph{Plane-wave to spherical bridge.}
+An outgoing plane-wave sector $e^{-\jj\mathbf{k}\cdot\mathbf{r}}$ admits the classical expansion \cite{jackson1999,stratton1941}
+\begin{equation}
+\label{eq:ch1.plane-to-spherical}
+e^{-\jj\mathbf{k}\cdot\mathbf{r}}
+=
+4\pi\sum_{\ell=0}^{\infty}\sum_{m=-\ell}^{\ell}
+\jj^{\,\ell}\,j_\ell(kr)\,
+Y_\ell^m(\theta,\phi)\,
+Y_\ell^{m*}(\theta_k,\phi_k),
+\end{equation}
+where $\hat{\mathbf{r}}=(\theta,\phi)$ and $\hat{\mathbf{k}}=(\theta_k,\phi_k)$, with $j_\ell$ the spherical Bessel function and normalization as in Eq.~\eqref{eq:ch1.sh-orthonormality} \cite{jackson1999}. Under the chapter convention the phase factor $\jj^\ell$ accompanies the regular spherical radial function selected by outgoing physical behaviour at the origin \cite{stratton1941}. Eq.~\eqref{eq:ch1.plane-to-spherical} completes the chain of Eq.~\eqref{eq:ch1.three-rep-chain}: a plane-wave sector carries definite spherical angular orders $(\ell,m)$, not merely cylindrical ones \cite{hansen1988}. The full vector spherical-wave construction belongs to Chapter~\ref{ch:03} \cite{stratton1941}.
+
+\ClassicalInkFig{fig:ch1.ell-vs-m}{$Y_1^0$, $Y_1^1$, $Y_2^0$, and $Y_2^2$ patterns distinguish polar order $\ell$ from azimuthal order $m$ \cite{stratton1941,hansen1988}.}{fig14-ell-vs-m}
+
+For a vector electromagnetic field, an infinitesimal rotation about $\hat{\mathbf{z}}$ acts on coordinates and on vector components. A scalar factor $e^{\jj m\phi}$ therefore labels azimuthal dependence of a component, not the full rotational action on $(\E,\H)$; the complete vector treatment belongs to Chapter~\ref{ch:03} \cite{hansen1988,stratton1941}.

@@ -1,0 +1,302 @@
+# Volume I forward architecture — FINAL TOC (Chapters 1–4)
+# Read with: TOC/volume-I-ch01-04-FINAL.txt
+
+meta:
+  volume: I
+  chapters: [1, 2, 3, 4]
+  time_convention: exp(-j*omega*t)
+  units: SI
+  subsections: 171
+  authoritative_toc: TOC/volume-I-ch01-04-FINAL.txt
+  review: TOC/VOLUME-I-FINAL-REVIEW.md
+  gcheck_policy: cumulative_updates_refine_existing_locks
+  drafting_flow: strict_forward_with_line_by_line_approval
+  subsection_bridge: optional_not_mandatory
+  heading_component_expansion: mandatory_student_friendly_expert_rigor
+  default_subsection_depth_target: approximately_five_pdf_pages
+  citation_placement: sentence_local_for_law_theorem_proven_reasoning
+  citation_priority_order: seminal_then_classical_then_validated_modern
+
+tag_rules:
+  HOME: define and prove once; never repeat in body
+  USE: cite as "Section SSx.y.z" or \ref{sec:chxyz}; no re-display of equations
+  DEFER: list only in section 1.7, 2.11, 3.11, 4.11
+  FIG_PROB: problem + captioned schematic + all steps + physical meaning
+  FIG_SCHEMATIC: include when theorem/equation readability materially improves; must have caption, label, and explicit in-body explanation
+
+chapter_1:
+  title: Foundations of Angular Electromagnetic Structure
+  status: COMPLETE_LOCKED
+  manuscript_signoff: TOC/CH01-MANUSCRIPT-SIGNOFF-LOCK.md
+  locked_date: 2026-06-07
+  forensic_edit: TOC/CH01-FORENSIC-EDIT-PROGRAM-LOCK.md
+  forensic_edit_complete: 2026-06-07
+  architectural_notebook: TOC/CH01-ARCHITECTURAL-CORRECTIONS-NOTEBOOK.md
+  toc_signoff: TOC/CH01-TOC-SIGNOFF-LOCK.md
+  toc_signed_off: 2026-05-29
+  audit_date: 2026-06-07
+  pdf_pages_body: ~115
+  pdf_total_main: 301
+  subsections: 32
+  drafting_status: CHAPTER_1_COMPLETE_LOCKED
+  build_status: exit_0
+  establishes:
+    - "1.1.1 maxwell_si_phasor"
+    - "1.1.4 stress_tensor_energy_momentum"
+    - "1.1.5 angular_momentum_conservation"
+    - "1.2 angular_structure_definition"
+    - "1.3 rotations_tensors_covariance"
+    - "1.4 gauge_helicity_spin_orbit_limits"
+    - "1.5 measurement_observables"
+  requires: []
+  forbidden_repeat: []
+  inheritance: "1.7"
+  examples: "1.6"
+  audit_notes:
+    - "Maxwell HOME §1.1.1; angular balance HOME §1.1.5; transport criteria §1.2.3–1.2.4"
+    - "No re-display of eq:ch1.maxwell-local outside §1.1.1; Ch.2+ USE by ref only"
+    - "Seminal citations only in Ch.1 body; governance jargon removed from prose"
+    - "Four-class taxonomy + accessibility narrative in §1.0; Ch.2 inevitability paragraph"
+    - "68 TikZ schematic figures (ch01-tikz-styles.tex); bibliography ch01.bbl"
+    - "Forensic re-lock 2026-06-07: Pass 1-7, polish, narrative elevation COMPLETE"
+  figure_audit:
+    status: COMPLETE_LOCKED
+    date: 2026-05-29
+    policy: all Ch.1 figures TikZ; shared styles in latex/ch01-tikz-styles.tex; labels external/no-overlap
+    labels: "fig:ch1.* concept maps; fig:ch1.wp-* worked-problem setups; fig:ch1.ex6* FIG+PROB"
+    tikz: "preamble.tex + ch01-tikz-styles.tex; 68/68 figures TikZ; layout polish AUTHOR-DEFERRED"
+
+chapter_2:
+  title: Maxwell Operators and Radiation Mappings
+  status: COMPLETE_LOCKED
+  manuscript_signoff: TOC/CH02-MANUSCRIPT-SIGNOFF-LOCK.md
+  locked_date: 2026-05-31
+  audit_fix_pass: 2026-05-31
+  toc_audit: TOC/CH02-TOC-AUDIT-FLOW-LOCK.md
+  toc_locked: 2026-05-29
+  subsections: 45
+  gcheck_master_locked: 2026-05-29
+  governance_locked: 2026-05-31
+  session_save: TOC/CH02-SESSION-SAVE-LOCK.md
+  session_save_date: 2026-05-31
+  next_subsection: "3.0.1"
+  drafted_through: "2.11.3"
+  forensic_remediation: 2026-05-29
+  physical_review_accepted: 2026-05-29
+  pdf_pages_main: 299
+  build_status: exit_0
+  drafting_status: "CHAPTER_2_COMPLETE_LOCKED"
+  fresh_restart: TOC/CH02-FRESH-RESTART-LOCK.md
+  gcheck_master: TOC/GCHECK-MASTER-CUMULATIVE.md
+  zero_deviation: true
+  establishes:
+    - "2.0 radiation_mapping_operator_form"
+    - "2.1 function_spaces_operators"
+    - "2.2 time_frequency_maxwell"
+    - "2.3 dyadic_green_functions"
+    - "2.4 sommerfeld_uniqueness"
+    - "2.5 radiation_integrals"
+    - "2.6 spectral_fredholm"
+    - "2.7 non_radiating_null_spaces"
+    - "2.8 reciprocity"
+    - "2.9 angular_spectrum_action"
+  requires: [chapter_1]
+  forbidden_repeat:
+    - full_maxwell_derivation
+    - angular_momentum_conservation_proof
+    - gauge_introduction
+  inheritance: "2.11"
+  examples: "2.10"
+  use_map:
+    "2.1.1": "1.0.3,1.1.2"
+    "2.1.4": "1.0.3"
+    "2.2.4": "1.2.4"
+    "2.4.1": "1.1.2"
+    "2.4.3": "1.1.3"
+    "2.5.3": "1.1.4,1.1.5,1.2.3"
+    "2.5.4": "1.2.4,2.2.4"
+    "2.6.2": "1.3"
+    "2.6.3": "2.1.3"
+    "2.9.4": "1.2.1,1.2.3"
+    "2.10.4": "1.2.2"
+  supplies_chapter_3:
+    - "2.1.1 function_spaces"
+    - "2.2.2 helmholtz_operator"
+    - "2.4 sommerfeld_uniqueness"
+    - "2.5.1 radiation_integrals"
+    - "2.6.1 spectral_decomposition"
+    - "2.9 angular_spectrum_filter"
+
+chapter_3:
+  title: Angular Momentum Eigenfields and Representation Theory
+  status: COMPLETE_DRAFT
+  kickoff_lock: TOC/CH03-DRAFTING-KICKOFF-LOCK.md
+  drafting_started: 2026-05-29
+  redraft_3_0_301: 2026-05-29
+  redraft_3_0_302: 2026-05-29
+  redraft_3_0_303: 2026-05-29
+  accepted_3_0_303: 2026-05-29
+  accepted_3_0_303_note: "P2 trim reciprocity/near-field dedup"
+  redraft_3_1_1: 2026-05-29
+  redraft_3_1_2: 2026-05-29
+  redraft_3_1_3: 2026-05-29
+  redraft_3_1_4: 2026-05-29
+  redraft_3_2_1: 2026-05-29
+  redraft_3_2_2: 2026-05-29
+  redraft_3_2_3: 2026-05-29
+  redraft_3_2_4: 2026-05-29
+  redraft_3_2_5: 2026-05-29
+  redraft_3_3_1: 2026-05-29
+  redraft_3_3_2: 2026-05-29
+  redraft_3_3_3: 2026-05-29
+  redraft_3_3_4: 2026-05-29
+  redraft_3_4_1: 2026-05-29
+  redraft_3_4_2: 2026-05-29
+  redraft_3_4_3: 2026-05-29
+  redraft_3_4_4: 2026-05-29
+  redraft_3_4_5: 2026-05-29
+  redraft_3_5_1: 2026-05-29
+  redraft_3_5_2: 2026-05-29
+  redraft_3_5_3: 2026-05-29
+  redraft_3_5_4: 2026-05-29
+  redraft_3_6_1: 2026-05-29
+  redraft_3_6_2: 2026-05-29
+  redraft_3_6_3: 2026-05-29
+  redraft_3_6_4: 2026-05-29
+  redraft_3_7_1: 2026-05-29
+  redraft_3_7_2: 2026-05-29
+  redraft_3_7_3: 2026-05-29
+  redraft_3_7_4: 2026-05-29
+  redraft_3_8_1: 2026-05-29
+  redraft_3_8_2: 2026-05-29
+  redraft_3_8_3: 2026-05-29
+  redraft_3_8_4: 2026-05-29
+  redraft_3_9_1: 2026-05-29
+  redraft_3_9_2: 2026-05-29
+  redraft_3_9_3: 2026-05-29
+  redraft_3_9_4: 2026-05-29
+  redraft_3_10_1: 2026-05-29
+  redraft_3_10_2: 2026-05-29
+  redraft_3_10_3: 2026-05-29
+  redraft_3_10_4: 2026-05-29
+  redraft_3_8_vocab_expansion: 2026-05-29
+  redraft_3_9_vocab_expansion: 2026-05-29
+  redraft_3_11_1: 2026-05-29
+  redraft_3_11_2: 2026-05-29
+  redraft_3_11_3: 2026-05-29
+  next_subsection: "4.0.1"
+  drafted_through: "3.11.3"
+  chapter_complete_draft: 2026-05-29
+  pdf_pages_main: 505
+  toc_audit: TOC/CH03-TOC-AUDIT-FLOW-LOCK.md
+  toc_locked: 2026-05-29
+  subsections: 48
+  establishes:
+    - "3.0 representation_bridge"
+    - "3.1 hilbert_rigged"
+    - "3.2 angular_momentum_SO3_Wigner"
+    - "3.3 vector_helmholtz_debye"
+    - "3.4 VSH_definitions_eigenfields"
+    - "3.5 normalization"
+    - "3.6 completeness_symmetry_breaking"
+    - "3.7 discrete_continuous_spectra"
+    - "3.8 basis_transformations"
+    - "3.9 paraxial_limits"
+  requires: [chapter_1, chapter_2]
+  forbidden_repeat:
+    - sommerfeld_full_proof
+    - green_function_construction
+    - maxwell_equations
+  inheritance: "3.11"
+  examples: "3.10"
+  use_map:
+    "3.0.2": "2.5.1,2.6.1"
+    "3.1.1": "2.1.1"
+    "3.1.2": "2.8.2"
+    "3.1.3": "2.6.1"
+    "3.2.1": "1.2.1,2.9.4"
+    "3.2.3": "1.3,2.6.2"
+    "3.2.4": "1.3.1"
+    "3.2.5": "1.4.3"
+    "3.3.1": "2.2.2"
+    "3.3.3": "2.4"
+    "3.4.3": "2.8.2"
+    "3.4.4": "3.2.2,3.3.4"
+    "3.4.5": "2.6.2"
+    "3.5.1": "2.5.3"
+    "3.5.2": "3.1.3"
+    "3.6.1": "3.4.3"
+    "3.7.1": "2.9.1,2.9.4"
+    "3.7.2": "3.6.3"
+    "3.7.4": "1.2.2"
+    "3.8.1": "2.9.1"
+    "3.8.3": "3.4,3.8.1,3.8.2"
+    "3.8.4": "1.4.5"
+    "3.9.1": "1.4"
+    "3.9.2": "1.4.3"
+    "3.9.4": "1.5.4"
+  supplies_chapter_4:
+    - "3.4 VSH_basis"
+    - "3.5 normalization"
+    - "3.6 truncation_symmetry_breaking"
+    - "3.7 angular_spectra"
+    - "3.8 basis_transformations"
+
+chapter_4:
+  title: Source Realizability and Spectral Truncation
+  establishes:
+    - "4.1 admissible_sources"
+    - "4.2 equivalence_apertures"
+    - "4.3 operator_chains_SVD"
+    - "4.4 bandlimits"
+    - "4.5 eigenfield_coupling"
+    - "4.6 truncation_scaling"
+    - "4.7 reconstruction_limits"
+    - "4.8 LPS_n_width"
+    - "4.9 physical_consequences"
+  requires: [chapter_2, chapter_3]
+  forbidden_repeat:
+    - VSH_construction
+    - hilbert_space_introduction
+    - NR_source_definition
+  inheritance: "4.11"
+  examples: "4.10"
+  use_map:
+    "4.0.2": "3.6.2"
+    "4.1.3": "2.3.2"
+    "4.2.3": "1.1.2"
+    "4.3.2": "2.1.3"
+    "4.4.1": "3.8.1,2.9.1"
+    "4.4.2": "2.2.4"
+    "4.4.3": "3.6.2"
+    "4.5.1": "3.4"
+    "4.5.2": "3.4.5,3.2.3"
+    "4.5.4": "3.5.4"
+    "4.6.1": "3.7.2"
+    "4.6.3": "3.5.3"
+    "4.7.1": "2.7"
+    "4.7.2": "2.7.3"
+    "4.7.4": "3.8.4,3.6.4"
+    "4.9.3": "1.5"
+    "4.10.1": "3.7.2,3.4"
+  transitions_to: volume_II_chapter_5
+
+volume_i_audit:
+  session_closed: 2026-06-08
+  session_save: TOC/VOL-I-SESSION-SAVE-LOCK.md
+  resume_command: GCHECK VOL-I-AUDIT-3-MASTERPIECE
+  pipeline_lock: TOC/VOLUME-I-AUDIT-PIPELINE-LOCK.md
+  pdf_pages: 751
+  pdf_live: latex/main.pdf
+  pdf_archive: review/Volume-I-Main-751pp-Audit2-Pass2-Monograph-2026-06-09.pdf
+  step_1: complete
+  step_2_pass_1: complete
+  step_2_pass_2: complete
+  step_3: reverify_recommended
+  step_4: prior_complete
+  step_5: not_started
+  manuscript_lines:
+    ch01: 10289
+    ch02: 17051
+    ch03: 18537
+    ch04: 12335

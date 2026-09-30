@@ -1,0 +1,48 @@
+% Scholarly-Production Volume I — see vol-i-time-convention.tex (authoritative +jωt)
+\newcommand{\jj}{\mathrm{j}}
+\newcommand{\eim}{\mathrm{e}^{+\jj\omega t}}
+
+% Phasor fields — bold spatial vectors (Jackson/Harrington/Stratton convention).
+% Harmonic time dependence exp(+j omega t) is defined in vol-i-time-convention.tex.
+\newcommand{\E}{\mathbf{E}}
+\renewcommand{\H}{\mathbf{H}}
+\newcommand{\D}{\mathbf{D}}
+\newcommand{\B}{\mathbf{B}}
+\newcommand{\Jimp}{\mathbf{J}_{\mathrm{imp}}}
+
+% Common operators
+\renewcommand{\curl}{\nabla\times}
+\newcommand{\divg}{\nabla\cdot}
+\newcommand{\HCurl}{\mathcal{H}_{\curl}}
+\newcommand{\Hdiv}{\mathcal{H}_{\mathrm{div}}}
+\renewcommand{\grad}{\nabla}
+
+% Units (siunitx)
+\DeclareSIUnit\angstrom{\text{\AA}}
+
+% Spherical harmonics (definitions in Sec. 3.4.1 only)
+\newcommand{\Ylm}{Y_{\ell}^{m}}
+\newcommand{\Mlm}{\mathbf{M}_{\ell m}}
+\newcommand{\Nlm}{\mathbf{N}_{\ell m}}
+% Maxwell stress: instantaneous T^{(i)} vs cycle-averaged \langle T\rangle (Ch.1)
+\newcommand{\Tinst}{\mathbf{T}^{(i)}}
+\newcommand{\Tavg}{\langle\mathbf{T}\rangle}
+\newcommand{\Minst}{\mathbf{M}^{(i)}}
+\newcommand{\Mavg}{\langle\mathbf{M}\rangle}
+\newcommand{\Mstress}{\mathbf{M}}
+\newcommand{\avgStressMoment}{\langle\Mstress\rangle}
+
+% Laboratory abbreviations (prose only)
+\newcommand{\VSWR}{\mathrm{VSWR}}
+\newcommand{\TE}{\mathrm{TE}}
+
+% Phase VIII-E — Physical Memory Corps (prose-only vignettes; no displayed math)
+\newenvironment{physicalvignette}[1][]{%
+  \par\smallskip
+  \noindent\textit{Physical memory}%
+  \ifx\relax#1\relax\else\ \emph{(#1)}\fi
+  \par\nopagebreak\smallskip
+  \noindent\ignorespaces
+}{%
+  \par\smallskip
+}

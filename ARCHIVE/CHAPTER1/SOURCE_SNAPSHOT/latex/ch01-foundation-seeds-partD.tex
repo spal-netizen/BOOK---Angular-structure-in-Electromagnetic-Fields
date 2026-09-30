@@ -1,0 +1,131 @@
+% Ch.1 PASS C — classical radiation bridges (§1.5.4 narrative)
+\subsection{From reciprocity to finite electrical size}
+\label{sec:ch01.5.4}
+
+Maxwell's equations imply Lorentz reciprocity for two harmonic source distributions $(\Jimp^{(1)},\Jimp^{(2)})$ and fields $(\E^{(1)},\H^{(1)})$, $(\E^{(2)},\H^{(2)})$ in a linear reciprocal medium \cite{stratton1941,harrington2001}. The derivation begins from the vector identity
+\begin{equation}
+\label{eq:ch1.vector-cross-div}
+\divg(\mathbf{A}\times\mathbf{B})
+=\mathbf{B}\cdot(\curl\mathbf{A})-\mathbf{A}\cdot(\curl\mathbf{B}),
+\end{equation}
+applied separately to $\mathbf{A}=\E^{(1)}$, $\mathbf{B}=\H^{(2)}$ and to $\mathbf{A}=\E^{(2)}$, $\mathbf{B}=\H^{(1)}$ \cite{stratton1941}. With phasor time factor $\exp(+\jj\omega t)$ and vacuum curl equations
+$\curl\E^{(n)}=-\jj\omega\mu_0\H^{(n)}$,
+$\curl\H^{(n)}=\Jimp^{(n)}+\jj\omega\varepsilon_0\E^{(n)}$,
+the first identity gives
+\begin{equation}
+\label{eq:ch1.reciprocity-step1}
+\divg(\E^{(1)}\times\H^{(2)})
+=-\jj\omega\mu_0\,\H^{(1)}\cdot\H^{(2)}
+-\E^{(1)}\cdot\Jimp^{(2)}
+-\jj\omega\varepsilon_0\,\E^{(1)}\cdot\E^{(2)},
+\end{equation}
+and the second gives
+\begin{equation}
+\label{eq:ch1.reciprocity-step2}
+\divg(\E^{(2)}\times\H^{(1)})
+=-\jj\omega\mu_0\,\H^{(2)}\cdot\H^{(1)}
+-\E^{(2)}\cdot\Jimp^{(1)}
+-\jj\omega\varepsilon_0\,\E^{(2)}\cdot\E^{(1)}.
+\end{equation}
+Subtracting Eq.~\eqref{eq:ch1.reciprocity-step2} from Eq.~\eqref{eq:ch1.reciprocity-step1} cancels the $\varepsilon_0$ and $\mu_0$ cross terms because $\E^{(1)}\cdot\E^{(2)}=\E^{(2)}\cdot\E^{(1)}$ and $\H^{(1)}\cdot\H^{(2)}=\H^{(2)}\cdot\H^{(1)}$, leaving
+\begin{equation}
+\label{eq:ch1.reciprocity-differential}
+\divg\!\left(\E^{(1)}\times\H^{(2)}-\E^{(2)}\times\H^{(1)}\right)
+=\E^{(2)}\cdot\Jimp^{(1)}-\E^{(1)}\cdot\Jimp^{(2)}.
+\end{equation}
+In a source-free region both impressed currents vanish and the divergence vanishes identically \cite{stratton1941}. Magnetic impressed currents $\mathbf{M}_{\mathrm{imp}}$ may be included as equivalent-source notation on surfaces; they are not physical magnetic monopoles and enter reciprocity only through the corresponding curl source term when such a formulation is adopted \cite{schelkunoff1943,harrington2001}. Integrating Eq.~\eqref{eq:ch1.reciprocity-differential} over a volume $V$ containing both sources and applying the divergence theorem gives
+\begin{equation}
+\label{eq:ch1.lorentz-reciprocity}
+\oint_{\partial V}\!\left(\E^{(1)}\times\H^{(2)}-\E^{(2)}\times\H^{(1)}\right)\cdot\hat{\mathbf{n}}\,dS
+=\int_V\!\left(\E^{(2)}\cdot\Jimp^{(1)}-\E^{(1)}\cdot\Jimp^{(2)}\right)dV,
+\end{equation}
+the surface--volume reciprocity relation \cite{harrington2001,silver1949}. Physically, the reaction of source~1 through field~2 equals that of source~2 through field~1 in a passive reciprocal medium: interchanging source and observation leaves the coupling unchanged \cite{stratton1941}. When $\partial V$ lies entirely in a source-free exterior and outgoing fields satisfy the radiation condition, the surface integral vanishes. Chapter~\ref{ch:02} develops the dyadic Green-function statement; Eq.~\eqref{eq:ch1.lorentz-reciprocity} records the classical symmetry on which coupling and scattering identities rest \cite{tai1994}.
+
+\ClassicalInkFig{fig:ch1.lorentz-reciprocity}{Interchanging source and observation points leaves the reciprocal coupling unchanged in a passive reciprocal exterior \cite{stratton1941,harrington2001}.}{fig16-reciprocity}
+
+A finite aperture in a conducting screen carries a prescribed tangential field on the opening. By Subsection~\ref{sec:ch01.1.2b}, that tangential field is a Huygens source \cite{stratton1941,silver1949}. At broadside every elemental portion of the aperture has the same path to the observation point; away from broadside, path lengths differ progressively across the aperture, and the resulting phase differences determine the angular pattern through interference \cite{silver1949,stratton1941}. Its angular spectrum on the aperture plane determines which propagating sectors reach the far zone through Eq.~\eqref{eq:ch1.far-field-k-relation}.
+
+\paragraph{Fraunhofer path expansion.}
+For an observation point at distance $r$ from a compact aperture, the distance from an aperture point $\mathbf{r}'$ is $R=|\mathbf{r}-\mathbf{r}'|$. In the far zone $r$ exceeds the aperture extent, and
+\begin{equation}
+\label{eq:ch1.fraunhofer-path}
+R\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}',
+\end{equation}
+so the outgoing phase factor becomes
+\begin{equation}
+\label{eq:ch1.fraunhofer-phase}
+e^{-\jj kR}\approx e^{-\jj kr}\,e^{\jj k\,\hat{\mathbf{r}}\cdot\mathbf{r}'}.
+\end{equation}
+The amplitude $1/R$ varies slowly over the aperture and is treated as constant in the Fraunhofer limit \cite{stratton1941,silver1949,bornwolf1999}. The physical approximation is therefore $kr\gg 1$ and $r$ large compared with the aperture diameter; the observable angular pattern is carried by the phase gradient across the aperture, not by absolute distance \cite{silver1949}.
+
+Consider a uniformly illuminated circular aperture of radius $a$ in the plane $z=0$, with constant tangential field amplitude $E_0$ over the opening. The far-zone field is proportional to the aperture transform \cite{stratton1941,silver1949,bornwolf1999}:
+\begin{equation}
+\label{eq:ch1.aperture-fraunhofer-start}
+E_{\mathrm{far}}(\theta,\phi)\propto
+\iint_A E_0\,e^{\jj k(x'\sin\theta\cos\phi+y'\sin\theta\sin\phi)}\,dx'\,dy'.
+\end{equation}
+With $x'=\rho\cos\phi'$ and $y'=\rho\sin\phi'$ in aperture polar coordinates, the phase factor becomes $e^{\jj k\rho\sin\theta\cos(\phi'-\phi)}$. The azimuthal integral
+\begin{equation}
+\label{eq:ch1.bessel-integral-identity}
+\int_0^{2\pi}e^{\jj q\rho\cos\alpha}\,d\alpha=2\pi J_0(q\rho),
+\qquad q=k\sin\theta,
+\end{equation}
+appears because the source geometry is circularly symmetric \cite{stratton1941,harrington2001}. The radial integral then gives
+\begin{equation}
+\label{eq:ch1.circular-radial-integral}
+\int_0^a \rho J_0(q\rho)\,d\rho=\frac{a}{q}\,J_1(qa),
+\end{equation}
+so that, after normalization at broadside,
+\begin{equation}
+\label{eq:ch1.circular-aperture-pattern}
+\frac{E_{\mathrm{far}}(\theta)}{E_{\mathrm{far}}(0)}
+=\frac{2J_1(ka\sin\theta)}{ka\sin\theta},
+\end{equation}
+where $J_1$ is the regular Bessel function of order one \cite{silver1949,stratton1941}. Eq.~\eqref{eq:ch1.circular-aperture-pattern} is the uniform scalar aperture-transform result for a scalar tangential excitation on a circular opening; full vector diffraction with obliquity and polarization coupling requires the complete vector formulation \cite{stratton1941,silver1949}. The broadside limit follows from $\lim_{x\to0}2J_1(x)/x=1$ \cite{stratton1941}; the first null satisfies $ka\sin\theta_0\approx 3.832$, the first zero of $J_1$ \cite{silver1949}. For small $\theta$, $\sin\theta\approx\theta$ gives $\theta_0\approx 3.832/(ka)$. Intensity scales as $|E_{\mathrm{far}}(\theta)|^2\propto[2J_1(ka\sin\theta)/(ka\sin\theta)]^2$, producing a central maximum, a first null, and sidelobe rings \cite{bornwolf1999}. Increasing the electrical aperture $a/\lambda$ compresses the entire diffraction structure into a narrower angular region while the normalized sidelobe structure of the uniform circular aperture remains that of the Bessel pattern \cite{silver1949,stratton1941}.
+
+\ClassicalInkFig{fig:ch1.aperture-radiation-bridge}{Tangential aperture field launches a plane-wave spectrum; propagating components set the far-zone angular distribution \cite{stratton1941,silver1949}.}{fig17-aperture-geometry}
+
+\ClassicalInkFig{fig:ch1.circular-aperture-bessel}{Circular aperture diffraction: main lobe at broadside, first null at $ka\sin\theta\approx 3.832$, sidelobe structure at larger $\theta$ \cite{silver1949,stratton1941}.}{fig18-circular-aperture}
+
+\paragraph{Two-source interference.}
+Two equal point sources separated by distance $d$ along the $z$-axis with relative excitation phase $\beta$ illuminate a far observation direction $\hat{\mathbf{r}}$ at angle $\theta$ from the axis. The path-length difference is $\Delta R=d\cos\theta$, hence the phase difference $\Delta\Phi=kd\cos\theta+\beta$ \cite{silver1949,stratton1941}. Constructive and destructive sectors follow from interference of the two spherical waves:
+\begin{equation}
+\label{eq:ch1.two-element-af}
+\mathrm{AF}(\theta)=1+e^{\jj(kd\cos\theta+\beta)}
+=2e^{\jj(kd\cos\theta+\beta)/2}\cos\!\left(\frac{kd\cos\theta+\beta}{2}\right).
+\end{equation}
+Spatial separation and phase therefore modulate angular interference without altering the underlying Maxwell propagation law \cite{stratton1941}.
+
+\ClassicalInkFig{fig:ch1.two-element-interference}{Two equal sources separated by $d$ with phase $\beta$; constructive and destructive sectors follow Eq.~\eqref{eq:ch1.two-element-af} \cite{silver1949}.}{fig19-two-source}
+
+When an incident field strikes a finite scatterer, the total field $\E_{\mathrm{tot}}=\E_{\mathrm{inc}}+\E_{\mathrm{sc}}$ and $\H_{\mathrm{tot}}=\H_{\mathrm{inc}}+\H_{\mathrm{sc}}$ enter the Maxwell stress tensor, which is quadratic in the fields \cite{stratton1941,beth1936}. The time-averaged stress therefore decomposes as
+\begin{equation}
+\label{eq:ch1.stress-total-decomposition}
+\mathbf{T}_{\mathrm{tot}}
+=
+\mathbf{T}_{\mathrm{inc}}
++\mathbf{T}_{\mathrm{sc}}
++\mathbf{T}_{\mathrm{int}},
+\end{equation}
+where $\mathbf{T}_{\mathrm{int}}$ contains the cross terms
+$\Re(\E_{\mathrm{inc}}\cdot\E_{\mathrm{sc}}^*)$ and $\Re(\H_{\mathrm{inc}}\cdot\H_{\mathrm{sc}}^*)$ that produce extinction/interference torque on the body \cite{stratton1941,beth1936}. Mechanical torque on matter inside a closed control surface $S$ follows from the total stress:
+\begin{equation}
+\label{eq:ch1.scattering-torque-total}
+\boldsymbol{\tau}_{\mathrm{matter}}
+=\oint_{S}\mathbf{r}\times(\mathbf{T}_{\mathrm{tot}}\cdot\hat{\mathbf{n}})\,dS.
+\end{equation}
+At harmonic steady state, Eq.~\eqref{eq:ch1.convention-am-balance} gives
+\begin{equation}
+\label{eq:ch1.scattering-am-balance-general}
+\oint_{S}\mathbf{M}_{\mathrm{tot}}\cdot\hat{\mathbf{n}}\,dS
+=\boldsymbol{\tau}_{\mathrm{matter}},
+\qquad
+\mathbf{M}_{\mathrm{tot}}=\mathbf{r}\times\mathbf{T}_{\mathrm{tot}}.
+\end{equation}
+Only after Eq.~\eqref{eq:ch1.scattering-torque-total} is established may incident, scattered, and interference contributions be separated under stated conditions \cite{beth1936,stratton1941}. For a passive non-absorbing scatterer with no impressed source in the exterior volume, a commonly used decomposition defines $\dot J_{z,\mathrm{inc}}>0$ as the magnitude of $z$-directed angular momentum flux associated with the incident field through $S$, $\dot J_{z,\mathrm{sc,out}}$ as the outward scattered flux, and $\tau_{z,\mathrm{matter}}$ as mechanical torque on the enclosed object; the interference term in $\mathbf{T}_{\mathrm{int}}$ must be included in the total before this split is interpreted \cite{beth1936}. In a lossy body, absorbed power appears as additional mechanical or thermal exchange and must not be counted twice as both absorbed flux and torque \cite{stratton1941}.
+
+\ClassicalInkFig{fig:ch1.scattering-am-balance}{Incident $z$-angular-momentum flux through a control surface equals scattered outgoing flux plus mechanical torque on the enclosed object \cite{stratton1941,beth1936}.}{fig20-scattering-am}
+
+A bounded source of characteristic radius $a$ has electrical size $ka$. For $ka\ll 1$, phase variation across the source is limited, and small-$ka$ asymptotics strongly suppress high spherical orders: the lowest nonvanishing multipoles dominate \cite{stratton1941,chu1948}. Increasing $ka$ permits progressively richer angular structure through finite phase variation across the source and the corresponding spherical-wave content \cite{stratton1941}. Chu's classical analysis \cite{chu1948} established that an electrically small radiator cannot realize arbitrary external radiation behaviour without a corresponding reactive-energy burden: small $ka$ restricts the available spherical-wave content and therefore imposes lower bounds on radiation $Q$ \cite{chu1948,stratton1941}. Chapter~\ref{ch:04} develops the realizability theory; the seed here is that finite support limits angular complexity \cite{stratton1941,hansen1988}.
+
+\ClassicalInkFig{fig:ch1.finite-source-ka}{Small $ka$ restricts radiated angular structure to lowest multipoles; larger $ka$ permits richer patterns \cite{stratton1941,chu1948}.}{fig23-finite-ka}

@@ -1,0 +1,58 @@
+% PASS F — global sign and phasor conventions (Chapter 1)
+\paragraph{Global conventions.}
+Harmonic fields use $\exp(+\jj\omega t)$ with angular frequency $\omega$ in rad/s, so $\partial_t\rightarrow +\jj\omega$ on phasors.
+Outgoing spherical/cylindrical waves carry spatial factors $\exp(-\jj kr)$ or $\exp(-\jj k_z z)$ in the forward-propagation branch.
+Maxwell's equations in vacuum SI form read
+$\curl\E=-\jj\omega\mu_0\H$,
+$\curl\H=\Jimp+\jj\omega\varepsilon_0\E$,
+$\divg(\varepsilon_0\E)=\rho$,
+$\divg(\mu_0\H)=0$.
+The complex Poynting vector is $\mathbf{S}_\mathrm{c}=\tfrac12\E\times\H^*$;
+time-averaged power flux is $\langle\mathbf{S}\rangle=\Re(\mathbf{S}_\mathrm{c})$.
+Time-averaged momentum density is $\mathbf{g}_{\mathrm{em}}=\varepsilon_0\mu_0\Re(\mathbf{S}_\mathrm{c})$.
+The symmetric Maxwell stress tensor $\mathbf{T}$ is given by Eq.~\eqref{eq:ch1.maxwell-stress-components} and Eq.~\eqref{eq:ch1.maxwell-stress}.
+Traction on a surface element with outward normal $\hat{\mathbf{n}}$ is $t_i=T_{ij}n_j$, equivalently $\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}$ \cite{stratton1941}.
+The Lorentz force density on matter is $\mathbf{f}_{\mathrm{matter}}=\rho\E+\mathbf{J}\times\B$; on impressed-source support $\mathbf{J}=\Jimp$.
+Local momentum balance: $\partial_t\mathbf{g}_{\mathrm{em}}-\divg\mathbf{T}=-\mathbf{f}_{\mathrm{matter}}$;
+integral form $\mathbf{F}_{\mathrm{matter}}=\oint \mathbf{T}\cdot\hat{\mathbf{n}}\,dS-(d/dt)\int \mathbf{g}_{\mathrm{em}}\,dV$.
+Mechanical torque density on matter is $\boldsymbol{\tau}_{\mathrm{matter}}=\mathbf{r}\times\mathbf{f}_{\mathrm{matter}}$.
+The stress moment is $\mathbf{M}=\mathbf{r}\times\mathbf{T}$.
+The outward field angular-momentum current is $\mathbf{J}_J=-\mathbf{M}$.
+Local angular-momentum balance: $\partial_t\mathbf{j}_{\mathrm{em}}-\divg\mathbf{M}=-\boldsymbol{\tau}_{\mathrm{matter}}$ with $\mathbf{j}_{\mathrm{em}}=\mathbf{r}\times\mathbf{g}_{\mathrm{em}}$, equivalently $\partial_t\mathbf{j}_{\mathrm{em}}+\divg\mathbf{J}_J=-\boldsymbol{\tau}_{\mathrm{matter}}$.
+At harmonic steady state on a control volume $V$ with outward $\hat{\mathbf{n}}$,
+\begin{equation}
+\label{eq:ch1.convention-am-balance}
+\frac{d}{dt}\int_V \mathbf{j}_{\mathrm{em}}\,dV
+-\oint_{\partial V}\mathbf{M}\cdot\hat{\mathbf{n}}\,dS
+=-\int_V \boldsymbol{\tau}_{\mathrm{matter}}\,dV,
+\end{equation}
+Mechanical torque on matter at the boundary is
+$\boldsymbol{\tau}_{\mathrm{matter}}=\oint_{\partial V}\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{n}})\,dS$,
+and outward field angular-momentum flux is
+$\dot{\mathbf{J}}_{\mathrm{out}}=-\boldsymbol{\tau}_{\mathrm{matter}}$
+when stored angular momentum in $V$ is constant \cite{stratton1941,beth1936}.
+The outward $z$-angular-momentum flux density per steradian is
+$\Psi_{J_z}^{\mathrm{(out)}}=-r^2[\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{r}})]\cdot\hat{\mathbf{z}}$;
+$\dot J_{z,\mathrm{out}}=\int_{4\pi}\Psi_{J_z}^{\mathrm{(out)}}\,d\Omega$ \cite{stratton1941}.
+The vector density $\boldsymbol{\Xi}_J=-r^2\,\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{r}})$ carries all three components when needed \cite{beth1936}.
+Under $\exp(+\jj\omega t)$, outgoing cylindrical radial waves use $H_m^{(2)}(k_\rho\rho)$ and outgoing spherical radial waves use $h_\ell^{(2)}(kr)$; $H_m^{(1)}$ and $h_\ell^{(1)}$ are incoming branches \cite{stratton1941,harrington2001}.
+Spatial Fourier transforms use
+$\tilde{f}(\mathbf{k})=\int f(\mathbf{r})\,e^{\jj\mathbf{k}\cdot\mathbf{r}}\,d^3r$
+and
+$f(\mathbf{r})=\int \tilde{f}(\mathbf{k})\,e^{-\jj\mathbf{k}\cdot\mathbf{r}}\,d^3k/(2\pi)^3$;
+the angular spectrum on $z=0$ uses the two-dimensional specialization of this convention in Eq.~\eqref{eq:ch1.angular-spectrum}.
+
+\noindent\fbox{\parbox{0.97\linewidth}{%
+\textbf{Stress and torque convention (Chapter~1).}\;
+Traction: $\mathbf{t}=\mathbf{T}\cdot\hat{\mathbf{n}}$ with outward $\hat{\mathbf{n}}$.
+$\partial_t\mathbf{g}_{\mathrm{em}}-\divg\mathbf{T}=-\mathbf{f}_{\mathrm{matter}}$.
+Stress moment: $\mathbf{M}=\mathbf{r}\times\mathbf{T}$.
+Outward field angular-momentum current: $\mathbf{J}_J=-\mathbf{M}$.
+Mechanical torque on matter at steady state:
+$\boldsymbol{\tau}_{\mathrm{matter}}=\oint_{\partial V}\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{n}})\,dS$.
+Outward field angular-momentum flux:
+$\dot{\mathbf{J}}_{\mathrm{out}}=-\boldsymbol{\tau}_{\mathrm{matter}}$ when $\dot{\mathbf{J}}_{\mathrm{em}}=0$.
+Outward flux density per steradian:
+$\Psi_{J_z}^{\mathrm{(out)}}=-r^2[\mathbf{r}\times(\mathbf{T}\cdot\hat{\mathbf{r}})]\cdot\hat{\mathbf{z}}$ with
+$\dot J_{z,\mathrm{out}}=\int_{4\pi}\Psi_{J_z}^{\mathrm{(out)}}\,d\Omega$.
+}}

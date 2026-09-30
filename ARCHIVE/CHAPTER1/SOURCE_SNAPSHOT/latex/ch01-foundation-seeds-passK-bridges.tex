@@ -1,0 +1,68 @@
+% Ch.1 PASS K — Green-function and cross-chapter bridges (Ch. 2–4 seeds)
+\subsection{From inhomogeneous Helmholtz equation to outgoing Green function}
+\label{sec:ch01.1.1c}
+
+A localized impressed current at $\mathbf{r}'$ must communicate with the observation
+point $\mathbf{r}$ across the separation $R=|\mathbf{r}-\mathbf{r}'|$. In the
+time domain, causality requires the field at $\mathbf{r}$ to depend on the source
+history at retarded time $t-R/c$ \cite{stratton1941,jackson1999}. Under
+$\exp(+\jj\omega t)$ that delay becomes the monochromatic phase factor
+$e^{+\jj\omega(t-R/c)}=e^{+\jj\omega t}e^{-\jj k_0 R}$, which is the outgoing
+spatial phase selected below \cite{stratton1941}.
+
+In a homogeneous source-free region the harmonic field satisfies the vector Helmholtz pair of Eq.~\eqref{eq:ch1.vacuum-helmholtz-pair}. With impressed sources restored, the same frequency-domain structure becomes inhomogeneous:
+\begin{equation}
+\label{eq:ch1.inhomogeneous-helmholtz}
+(\nabla^2+k_0^2)\,\mathbf{U}(\mathbf{r})
+=
+-\mathbf{S}(\mathbf{r}),
+\end{equation}
+where, in a homogeneous isotropic source-free region, each Cartesian component of $\E$ or $\H$ satisfies the homogeneous Helmholtz equation, and $\mathbf{S}$ collects the corresponding source terms when impressed currents are restored \cite{stratton1941,jackson1999}. For source reconstruction, the Lorenz-gauge potentials provide the classical Green-function seed \cite{stratton1941}. A localized impressed current therefore poses a reconstruction problem: given $\Jimp(\mathbf{r}')$ on finite support, determine the outgoing field at observation point $\mathbf{r}$ \cite{maxwell1873,tai1994}.
+
+The classical answer is the retarded Green function. With outgoing selection under $\exp(+\jj\omega t)$, the scalar Helmholtz operator satisfies
+$(\nabla^2+k_0^2)G(\mathbf{r},\mathbf{r}')=-\delta(\mathbf{r}-\mathbf{r}')$
+\cite{stratton1941,jackson1999}. Using $\nabla^2(1/R)=-4\pi\delta(\mathbf{r}-\mathbf{r}')$ for $R=|\mathbf{r}-\mathbf{r}'|$ and the outgoing phase $e^{-\jj k_0 R}$ as $R\to\infty$, the normalized outgoing solution is
+\begin{equation}
+\label{eq:ch1.scalar-green-outgoing}
+G(\mathbf{r},\mathbf{r}')
+=
+\frac{e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}}{4\pi|\mathbf{r}-\mathbf{r}'|},
+\end{equation}
+so a source element at $\mathbf{r}'$ contributes phase $e^{-\jj k_0 R}/R$ with $R=|\mathbf{r}-\mathbf{r}'|$ \cite{stratton1941,jackson1999,tai1994}. The vector potential in Lorenz gauge inherits the same outgoing phase:
+\begin{equation}
+\label{eq:ch1.vector-potential-retarded}
+\mathbf{A}(\mathbf{r})
+=
+\frac{\mu_0}{4\pi}\int
+\Jimp(\mathbf{r}')\,
+\frac{e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|}\,
+d^3r',
+\end{equation}
+Under Lorenz gauge with $\exp(+\jj\omega t)$,
+\begin{equation}
+\label{eq:ch1.lorenz-scalar-potential-retarded}
+\phi(\mathbf{r})
+=
+\frac{1}{4\pi\varepsilon_0}\int
+\rho(\mathbf{r}')\,
+\frac{e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}}{|\mathbf{r}-\mathbf{r}'|}\,
+d^3r',
+\end{equation}
+with $\E=-\nabla\phi-\jj\omega\mathbf{A}$ and $\B=\nabla\times\mathbf{A}$ \cite{stratton1941,jackson1999}.
+When charge continuity holds, the pair $(\phi,\mathbf{A})$ is consistent with the same $(\E,\H)$ as the curl relations of Subsection~\ref{sec:ch01.1.1} \cite{maxwell1873}. In the far zone $R\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}'$ and
+\begin{equation}
+\label{eq:ch1.green-far-zone-phase}
+e^{-\jj k_0 R}\approx e^{-\jj k_0 r}\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'},
+\end{equation}
+so the second exponential is the first appearance of angular phase structure generated
+by source geometry---the seed of the multipole hierarchy developed later in this chapter
+\cite{stratton1941,jackson1999}. Chapter~\ref{ch:02} develops the full dyadic Green function, the radiation operator that selects the outgoing branch, and---under the same $\exp(+\jj\omega t)$ convention---the outgoing cylindrical Hankel family $H_m^{(2)}$ versus the incoming branch $H_m^{(1)}$; the present statement fixes only the causal outgoing spherical phase that every later reconstruction inherits \cite{harrington2001,tai1994,stratton1941}.
+
+The same retarded phase underlies the multipole hierarchy of Subsection~\ref{sec:ch01.6.4}: far-zone expansion of $e^{-\jj k_0 R}/R$ yields the path factor $e^{\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}$ that generates dipole, quadrupole, and higher moments from the source integral \cite{jackson1999,stratton1941}. Green function $\rightarrow$ retarded phase $\rightarrow$ source moments $\rightarrow$ multipoles is therefore one continuous classical chain, not three separate topics \cite{stratton1941}.
+
+\begin{figure}[t]
+\centering
+\VolIPhysFig{\VolIPhysGreenFunctionGeometry}
+\caption{Localized impressed current at $\mathbf{r}'$, observation point $\mathbf{r}$, separation $R=|\mathbf{r}-\mathbf{r}'|$, observation direction $\hat{\mathbf{r}}$, and outgoing Green-function phase $e^{-\jj k_0 R}/(4\pi R)$; in the far zone $R\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}'$ generates angular phase from source geometry \cite{stratton1941,jackson1999,tai1994}.}
+\label{fig:ch1.green-function-seed}
+\end{figure}
