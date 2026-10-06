@@ -1,0 +1,104 @@
+% §2.4–2.5 — Green functions, outgoing condition
+
+\section{Green Functions and the Retarded Solution}
+\label{sec:ch02.4}
+
+\subsection{Why a dyadic Green function is required}
+\label{sec:ch02.4.1}
+
+A point electric current dipole oriented along $\hat{\mathbf{a}}$ produces, in general, both $\E$- and $\H$-components along directions other than $\hat{\mathbf{a}}$ because Maxwell's equations couple the vector components through curl. The field--source relation is therefore \emph{tensorial}: each Cartesian component of $\E(\mathbf{r})$ depends on all three components of $\Jimp(\mathbf{r}')$. The scalar Green function $G(\mathbf{r},\mathbf{r}')$ solving $(\nabla^2+k_0^2)G=-\delta(\mathbf{r}-\mathbf{r}')$ suffices only for the Lorenz-gauge potential of a scalar source; for the full vector problem one introduces the dyadic Green function $\boldsymbol{\Gamma}(\mathbf{r},\mathbf{r}')$ such that the electric field from an impressed current distribution is \cite{stratton1941,harrington2001}
+\begin{equation}
+\label{eq:ch2.E-from-dyadic}
+\E(\mathbf{r})=-\jj\omega\mu_0\int_{\Omega_s}\boldsymbol{\Gamma}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^3r',
+\end{equation}
+where $\mathbf{r}$ is the observation point, $\mathbf{r}'$ the source point, $\Omega_s=\operatorname{supp}\Jimp$, and $d^3r'$ the volume element (m$^3$). Equation~\eqref{eq:ch2.E-from-dyadic} is the frequency-domain statement of superposition: each infinitesimal current element radiates with outgoing phase and amplitude determined by $\boldsymbol{\Gamma}$.
+
+The dyadic satisfies the vector wave equation with a unit-strength dipole source at $\mathbf{r}'$:
+\begin{equation}
+\label{eq:ch2.dyadic-green-pde}
+\curl\curl\boldsymbol{\Gamma}(\mathbf{r},\mathbf{r}')-k_0^2\boldsymbol{\Gamma}(\mathbf{r},\mathbf{r}')=
+\mathbf{I}\,\delta(\mathbf{r}-\mathbf{r}'),
+\end{equation}
+where $\mathbf{I}$ is the $3\times3$ identity dyad. The singularity at $\mathbf{r}=\mathbf{r}'$ reflects the idealization of a point dipole; integrated against smooth $\Jimp$, the self-term requires regularization in numerical methods \cite{harrington2001}. The scalar outgoing kernel in vacuum satisfies
+\begin{equation}
+\label{eq:ch2.scalar-green-free-space}
+G_0(\mathbf{r},\mathbf{r}')=\frac{e^{-\jj k_0 R}}{4\pi R},
+\qquad
+R=|\mathbf{r}-\mathbf{r}'|,
+\end{equation}
+for $R>0$, with $k_0$ from Eq.~\eqref{eq:ch2.k0-eta0}. Equation~\eqref{eq:ch2.scalar-green-free-space} solves $(\nabla^2+k_0^2)G_0=-\delta(\mathbf{r}-\mathbf{r}')$ and represents a unit-strength monopole source radiating an outgoing spherical wave \cite{stratton1941,jackson1999}. Amplitude decay as $1/R$ and phase $e^{-\jj k_0 R}$ are the geometric signatures of propagation at distance $R$ under the $+\jj\omega t$ convention.
+
+In Lorenz gauge, the vector potential $\mathbf{A}$ (T$\cdot$m) driven by $\Jimp$ reduces each Cartesian component to the scalar Helmholtz equation with source $-\mu_0\Jimp$. The electric field is recovered without abandoning Maxwell coupling:
+\begin{equation}
+\label{eq:ch2.lorenz-E-from-A}
+\E(\mathbf{r})=+\jj\omega\mu_0\,\mathbf{A}(\mathbf{r})
++\frac{1}{+\jj\omega\varepsilon_0}\,\grad\,\divg\mathbf{A}(\mathbf{r}),
+\end{equation}
+after which $\H=(\curl\E)/(-\jj\omega\mu_0)$ from Faraday's law in Eq.~\eqref{eq:ch1.maxwell-local} \cite{stratton1941,harrington2001}. For impressed-current excitation, the electric dyadic $\overline{\mathbf{G}}_{E}$ is often more direct than $\mathbf{A}$ because it maps $\Jimp$ to $\E$ in one convolution \cite{harrington2001}. In free space with outgoing selection, $\overline{\mathbf{G}}_{E}$ is assembled from $G_0$ and its gradients; the far-zone limit yields transverse radiation proportional to $e^{-\jj k_0 r}/r$ \cite{stratton1941,jackson1999}.
+
+In the time domain, causality requires $\boldsymbol{\mathcal{G}}(\mathbf{r},\mathbf{r}',t-t')=\mathbf{0}$ for $t-t'<0$. The harmonic phasor $\boldsymbol{\Gamma}$ is the Fourier transform of that retarded impulse under the $+\jj\omega$ convention \cite{stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (rp) {Source\\$\mathbf{r}'$};
+ \node[ch1box, right=18mm of rp] (r) {Observation\\$\mathbf{r}$};
+ \node[ch1box, below=6mm of rp] (J) {$\Jimp(\mathbf{r}')$};
+ \draw[ch1flow] (J) -- (rp);
+ \draw[ch1flow,->] (rp) -- node[above,font=\scriptsize] {$\boldsymbol{\Gamma}(\mathbf{r},\mathbf{r}')$} (r);
+\end{tikzpicture}%
+}
+\caption{Geometry of the Green representation: impressed current at source point $\mathbf{r}'$ contributes to the observation field at $\mathbf{r}$ through the outgoing dyadic $\boldsymbol{\Gamma}$; superposition over $\Omega_s$ yields $\mathcal{S}_\omega[\Jimp]$.}
+\label{fig:ch2.source-observation-green}
+\end{figure}
+
+\subsection{The outgoing radiation condition}
+\label{sec:ch02.4.2}
+
+In an unbounded homogeneous exterior, the homogeneous Helmholtz equation admits both $\exp(-\jj k_0 r)/r$ and $\exp(+\jj k_0 r)/r$ spherical solutions. A localized source launched from finite support must select the branch whose phase fronts move outward with increasing $r$ in the time domain---equivalently, the factor $\exp(-\jj k_0 r)$ in the $+\jj\omega$ convention \cite{stratton1941}. Sommerfeld's radiation condition makes this precise: for scalar $\psi$,
+\begin{equation}
+\label{eq:ch2.sommerfeld-scalar}
+\lim_{r\to\infty} r\left(\frac{\partial}{\partial r}+\jj k_0\right)\psi(\mathbf{r})=0,
+\end{equation}
+with $r=|\mathbf{r}|$. For vector fields, the transverse radiative part of $\E$ and $\H$ must exhibit the same outgoing $k_0 r$ phase \cite{stratton1941,harrington2001}.
+
+The operator $\mathcal{O}_{\mathrm{out}}$ enforces this selection on completed field pairs: it annihilates incoming propagating content while leaving outgoing propagating content unchanged on the physical sheet. Composed with $\Pi_{\mathrm{prop}}$, which removes evanescent and non-propagating spectral parts from far-zone radiation claims, it defines $\Pi_{\mathrm{rad}}$ through Eq.~\eqref{eq:ch2.Pirad-composition}. On finite computational domains, absorbing boundaries approximate $\mathcal{O}_{\mathrm{out}}$; spurious reflections mean the numerical map is only an approximation to true outgoing radiation \cite{hansen1988}.
+
+Uniqueness: for fixed admissible $\Jimp$ and outgoing exterior condition, the Maxwell solution $\mathcal{S}_\omega[\Jimp]$ is unique \cite{stratton1941}. Radiative extraction then yields a unique $\mathcal{R}_\omega[\Jimp]$ in $\mathcal{F}_{\mathrm{rad}}$.
+
+\section{Near Fields, Far Fields, and Radiated Power}
+\label{sec:ch02.5}
+
+\subsection{Distance regimes and $1/r$ hierarchy}
+\label{sec:ch02.5.1}
+
+For compact $\operatorname{supp}\Jimp\subset\Omega_s$, the complete field $\mathcal{S}_\omega[\Jimp]$ contains quasi-static and induction terms decaying as $1/r^3$ and $1/r^2$ as well as radiative terms decaying as $1/r$ \cite{stratton1941,jackson1999}. The reactive shell---roughly within a wavelength of the source---stores energy exchanged with the source and terminations; its Poynting flux oscillates between source and field and need not integrate to net outward power on a finite sphere. The radiative component, selected by $\Pi_{\mathrm{rad}}$, carries transverse fields whose time-averaged Poynting vector is radial and $1/r^2$ in magnitude, so the power through a sphere of radius $R$,
+\begin{equation}
+\label{eq:ch2.radiated-power}
+P_{\mathrm{rad}}=\Re\oint_{S_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS,
+\qquad
+\mathbf{S}=\tfrac12\E\times\H^*,
+\end{equation}
+approaches a constant as $R\to\infty$ for outgoing radiative fields \cite{poynting1884}. Here $\hat{\mathbf{r}}=\mathbf{r}/r$ is the outward unit normal on sphere $S_R$, $dS$ is the area element (m$^2$), and $\Re\{\cdot\}$ extracts the time-averaged flux under the $+\jj\omega$ convention (Section~\ref{sec:ch01.1.4}).
+
+Physically, $1/r$ amplitude implies $1/r^2$ intensity; integrating over a sphere whose area grows as $4\pi r^2$ leaves finite power---the geometric reason radiation is measured on large spheres while near fields can be enormous yet export little \cite{stratton1941}. Pattern measurements report angular variation of the $1/r$ transverse field; mistaking reactive $1/r^2$ or $1/r^3$ structure for pattern content is a common compact-range error \cite{hansen1988}.
+
+\subsection{Far-zone approximation}
+\label{sec:ch02.5.2}
+
+When $r=|\mathbf{r}|$ is large compared with the source extent and $k_0 r\gg1$, the distance $R=|\mathbf{r}-\mathbf{r}'|$ in the Green integral satisfies $R\simeq r-\hat{\mathbf{r}}\cdot\mathbf{r}'$ in phase and $R\simeq r$ in amplitude to leading order \cite{stratton1941,jackson1999}. The observation direction $\hat{\mathbf{r}}$ then enters the exponent as a directional phase factor, and the far field becomes a superposition of source moments weighted by $e^{-\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}/r$. That structure is the physical origin of the \emph{angular} description developed in Section~\ref{sec:ch02.10}: the far-zone field is, in essence, a directional transform of the source distribution modulated by outgoing propagation.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (src) {Source\\region};
+ \node[ch1box, right=22mm of src] (near) {Reactive\\shell};
+ \node[ch1box, right=22mm of near] (far) {Far zone\\$kr\gg1$};
+ \draw[ch1flow] (src) -- (near) -- (far);
+\end{tikzpicture}%
+}
+\caption{Distance regimes for a compact source: reactive and induction fields dominate the near shell; the radiative $1/r$ transverse field defines the far zone where pattern measurements are taken.}
+\label{fig:ch2.distance-regimes}
+\end{figure}

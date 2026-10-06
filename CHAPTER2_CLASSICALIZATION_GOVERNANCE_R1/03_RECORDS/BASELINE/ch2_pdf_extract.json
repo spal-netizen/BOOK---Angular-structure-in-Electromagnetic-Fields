@@ -1,0 +1,250 @@
+{
+  "pdf_path": "C:\\Users\\S.Pal\\Downloads\\BOOK---Angular-structure-in-Electromagnetic-Fields\\Volume-I-Author-Review_SPLIT 4  CHAPTERS\\Volume-I-Author-Review-105-252.pdf",
+  "sha256": "52C7066D9096D35E6EBBEC8E587BD64C30602BB86B8D218CE70FDD5E47A3B3BE",
+  "pdf_page_count": 148,
+  "manuscript_page_range_label": "105-252 (split file)",
+  "equation_labels_found": 446,
+  "equation_min": "2.1",
+  "equation_max": "2.99",
+  "figures_found": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "tables_found": [],
+  "section_header_samples": [
+    {
+      "id": "2.0",
+      "title": "Introduction"
+    },
+    {
+      "id": "2.0.1",
+      "title": "Radiation as a source-to-field operator"
+    },
+    {
+      "id": "2.0.2",
+      "title": "Maxwell equations in operator form"
+    },
+    {
+      "id": "2.0.3",
+      "title": "Admissibility and Maxwell radiation sequence"
+    },
+    {
+      "id": "2.1",
+      "title": "Function Spaces and Maxwell Operators"
+    },
+    {
+      "id": "2.1.1",
+      "title": "Spaces for sources, fields, and distributions"
+    },
+    {
+      "id": "2.1.2",
+      "title": "Linear operators: domain, range, and adjoint"
+    },
+    {
+      "id": "2.1.3",
+      "title": "Boundedness, compactness, rank deficiency, spectral compression"
+    },
+    {
+      "id": "2.1.4",
+      "title": "Self-adjointness, completions, and admissibility"
+    },
+    {
+      "id": "2.2",
+      "title": "Time- and Frequency-Domain Maxwell Operators"
+    },
+    {
+      "id": "2.2.1",
+      "title": "Time-domain evolution"
+    },
+    {
+      "id": "2.2.2",
+      "title": "Frequency-domain Maxwell operators"
+    },
+    {
+      "id": "2.2.3",
+      "title": "Causality and time-frequency equivalence"
+    },
+    {
+      "id": "2.3",
+      "title": "Green Functions and Electromagnetic Inversion"
+    },
+    {
+      "id": "2.3.1",
+      "title": "Scalar, vector, and dyadic Green functions"
+    },
+    {
+      "id": "2.3.2",
+      "title": "Point electric dipole and the dyadic Green operator"
+    },
+    {
+      "id": "2.3.3",
+      "title": "Singularities, distributions, and regularization"
+    },
+    {
+      "id": "2.3.4",
+      "title": "Retardation and causal propagation"
+    },
+    {
+      "id": "2.3.5",
+      "title": "Inversion and solvability"
+    },
+    {
+      "id": "2.4",
+      "title": "Radiation Conditions and Uniqueness"
+    },
+    {
+      "id": "2.4.1",
+      "title": "Sommerfeld radiation condition"
+    },
+    {
+      "id": "2.4.2",
+      "title": "Outgoing-wave selection"
+    },
+    {
+      "id": "2.4.3",
+      "title": "Uniqueness of radiative solutions"
+    },
+    {
+      "id": "2.4.4",
+      "title": "Implications for source reconstruction"
+    },
+    {
+      "id": "2.5",
+      "title": "Radiation Integrals and Source-to-Field Representations"
+    },
+    {
+      "id": "2.5.1",
+      "title": "Source-to-field integral representations"
+    },
+    {
+      "id": "2.5.2",
+      "title": "Near, intermediate, and far regimes"
+    },
+    {
+      "id": "2.5.3",
+      "title": "Energy, momentum, angular-momentum flux, power, and operator norms"
+    },
+    {
+      "id": "2.5.4",
+      "title": "Radiative and non-radiative components"
+    },
+    {
+      "id": "2.6",
+      "title": "Spectral Theory of Radiation Operators"
+    },
+    {
+      "id": "2.6.1",
+      "title": "Compact circular aperture and singular-value decay"
+    },
+    {
+      "id": "2.6.2",
+      "title": "Eigenfunctions and spectral decomposition"
+    },
+    {
+      "id": "2.6.3",
+      "title": "Rotational symmetry and spectral degeneracy"
+    },
+    {
+      "id": "2.6.4",
+      "title": "Fredholm structure and pattern solvability"
+    },
+    {
+      "id": "2.6.5",
+      "title": "Geometric constraints on radiative spectra"
+    },
+    {
+      "id": "2.7",
+      "title": "Non-Radiating Sources and Null Spaces"
+    },
+    {
+      "id": "2.7.1",
+      "title": "Null spaces of radiation operators"
+    },
+    {
+      "id": "2.7.2",
+      "title": "Non-radiating current configurations"
+    },
+    {
+      "id": "2.7.3",
+      "title": "Evanescent overlap and non-reconstructability"
+    },
+    {
+      "id": "2.7.4",
+      "title": "Angular-spectrum consequences of null spaces"
+    },
+    {
+      "id": "2.8",
+      "title": "Reciprocity and Radiative Coupling"
+    },
+    {
+      "id": "2.8.1",
+      "title": "Lorentz reciprocity in operator form"
+    },
+    {
+      "id": "2.8.2",
+      "title": "Orthogonality and coupling of radiative modes"
+    },
+    {
+      "id": "2.8.3",
+      "title": "Reciprocity in radiation and reception"
+    },
+    {
+      "id": "2.9",
+      "title": "Action of Radiation Operators on Angular Spectra"
+    },
+    {
+      "id": "2.9.1",
+      "title": "Plane-wave angular spectrum and radiation operators"
+    },
+    {
+      "id": "2.9.2",
+      "title": "Retained, suppressed, and filtered angular components"
+    },
+    {
+      "id": "2.9.3",
+      "title": "Far-field angular accessibility"
+    },
+    {
+      "id": "2.10.1",
+      "title": "Compactness of radiation operators"
+    },
+    {
+      "id": "2.10.2",
+      "title": "Non-radiating source configurations"
+    },
+    {
+      "id": "2.10.3",
+      "title": "Evanescent suppression in the far field"
+    },
+    {
+      "id": "2.10.4",
+      "title": "Radiation from structured source states"
+    },
+    {
+      "id": "2.11.2",
+      "title": "Topics developed in later chapters"
+    },
+    {
+      "id": "2.11.3",
+      "title": "Relation to later chapters"
+    }
+  ],
+  "word_count_approx": 81813
+}

@@ -1,0 +1,36 @@
+% §2.8–2.9 — non-radiating sources, reciprocity
+
+\section{Non-Radiating Sources and Null Spaces}
+\label{sec:ch02.8}
+
+Can a nonzero current distribution produce a nonzero Maxwell field while radiating no power to infinity? Yes. A loop carrying equal and opposite currents on closely spaced arms, or certain closed reactive configurations, can support substantial near-zone $\E$ and $\H$ while the leading outgoing transverse field vanishes \cite{harrington2001,devaney2004}. Operationally, ``non-radiating'' means: the far-zone pattern meters read zero after outgoing selection, not that the source is zero.
+
+Mathematically, such currents lie in the null space of the radiation operator:
+\begin{equation}
+\label{eq:ch2.ker-Romega}
+\ker\mathcal{R}_\omega=\{\Jimp\in\mathcal{J}_\Omega:\mathcal{R}_\omega[\Jimp]=\mathbf{0}\ \text{in}\ \mathcal{F}_{\mathrm{rad}}\}.
+\end{equation}
+If $\Jimp_1\neq\Jimp_2$ but $\mathcal{R}_\omega[\Jimp_1]=\mathcal{R}_\omega[\Jimp_2]$, then $\Jimp_1-\Jimp_2\in\ker\mathcal{R}_\omega$. Source reconstruction from far data therefore determines $\Jimp$ only up to this null space; distinct sources can be \emph{equivalent} for radiation \cite{stratton1941,devaney2004}. The observation map $\Qomega$ inherits a larger null space:
+\begin{equation}
+\label{eq:ch2.ker-Qomega}
+\ker\Qomega\supseteq\ker\mathcal{R}_\omega,
+\end{equation}
+because finite probes cannot resolve all radiative degrees of freedom (Section~\ref{sec:ch01.5}).
+
+Evanescent fields tied to near-zone storage are generally not radiative, but evanescent content alone is not the same concept as $\ker\mathcal{R}_\omega$: the null space is defined by vanishing \emph{outgoing radiative} export, not by locality of energy \cite{stratton1941}.
+
+\section{Reciprocity}
+\label{sec:ch02.9}
+
+Lorentz reciprocity follows from Maxwell's equations and identifies how two source--field pairs couple. Let $(\E_1,\H_1,\Jimp_1)$ and $(\E_2,\H_2,\Jimp_2)$ be two harmonic states in a linear, reciprocal medium (typically vacuum or isotropic passive material with symmetric constitutive tensors). The standard vector identity
+\begin{equation}
+\label{eq:ch2.lorentz-integrand}
+\divg\big(\E_1\times\H_2-\E_2\times\H_1\big)
+=\Jimp_1\cdot\E_2-\Jimp_2\cdot\E_1
+\end{equation}
+follows from substituting Maxwell's equations for each state and expanding the divergence \cite{stratton1941,jackson1999}. Integrating over a volume $V$ containing both source supports and applying the divergence theorem yields a surface integral on $\partial V$ that vanishes under outgoing radiation conditions at infinity, leaving
+\begin{equation}
+\label{eq:ch2.lorentz-reciprocity}
+\int_V \Jimp_1\cdot\E_2\,dV=\int_V \Jimp_2\cdot\E_1\,dV,
+\end{equation}
+the Lorentz reciprocity relation. Physically, the coupling measured when source~1 excites field~2 equals that when source~2 excites field~1, under the stated assumptions \cite{stratton1941}. Antenna transmission and reception coefficients inherit this symmetry when media are reciprocal and normalization is consistent \cite{harrington2001}. Reciprocity constrains coupling; it does not remove $\ker\mathcal{R}_\omega$ or $\ker\Qomega$.

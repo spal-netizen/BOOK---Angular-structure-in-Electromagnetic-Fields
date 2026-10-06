@@ -1,0 +1,25 @@
+% §2.6–2.7 — radiation operators, finite geometry / spectral limits
+
+\section{Radiation Operators and Observable Fields}
+\label{sec:ch02.6}
+
+The composition $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is the central object of this chapter. Physically, $\mathcal{S}_\omega$ answers: ``If I drive this admissible current, what Maxwell field exists?'' The map $\Pi_{\mathrm{rad}}$ answers: ``Which part of that field is outgoing radiation in the Sommerfeld sense?'' Their composition answers: ``What radiative field does the source export to infinity?''
+
+Linearity on fixed boundary data implies
+\begin{equation}
+\label{eq:ch2.R-linearity}
+\mathcal{R}_\omega[a_1\Jimp^{(1)}+a_2\Jimp^{(2)}]
+=a_1\mathcal{R}_\omega[\Jimp^{(1)}]+a_2\mathcal{R}_\omega[\Jimp^{(2)}],
+\end{equation}
+for $a_1,a_2\in\mathbb{C}$ and $\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega$. Superposition of radiative images is legitimate only after each constituent satisfies charge continuity and outgoing selection \cite{maxwell1873,harrington2001}.
+
+The range $\operatorname{ran}\mathcal{R}_\omega\subset\mathcal{F}_{\mathrm{rad}}$ is strictly smaller than $\operatorname{ran}\mathcal{S}_\omega$ whenever reactive storage is nontrivial: many distinct near-zone states share the same far-zone pattern. Pattern measurements probe $\operatorname{ran}\mathcal{R}_\omega$; recovering $\Jimp$ from pattern data alone is an inverse problem with null space (Section~\ref{sec:ch02.8}).
+
+\section{Finite Radiators and Spectral Limitations}
+\label{sec:ch02.7}
+
+A bounded source of characteristic dimension $a$ cannot radiate arbitrary angular structure at wavelength $\lambda_0=2\pi/k_0$. Chu’s limit and the method-of-moments viewpoint both express the same physical fact: electrical size $k_0 a$ constrains how rapidly phase and amplitude may vary on the radiation sphere before stored energy dominates \cite{chu1948,harrington2001}. Mathematically, when $\mathcal{R}_\omega$ is restricted to fields on a bounded observation surface and viewed as a compact operator on appropriate Hilbert spaces, its singular values decay---small singular values correspond to source directions that couple weakly to the radiative field \cite{stratton1941}.
+
+Consider independent source excitations $\Jimp_1,\Jimp_2,\ldots$ and their radiative images $\mathcal{R}_\omega[\Jimp_n]$. If two combinations produce nearly identical far fields, the corresponding singular value is small; if a combination produces no far field at all, it lies in $\ker\mathcal{R}_\omega$. \emph{Effective rank} refers to the number of singular values above a measurement noise threshold; it is not identical to mathematical rank \cite{harrington2001}. A circular aperture of radius $a$ illustrates rapid SV decay beyond $k_0 a$, explaining why superdirectivity attempts trade against bandwidth and stored energy \cite{chu1948}.
+
+This chapter establishes that finite geometry restricts accessible angular content; Chapter~\ref{ch:04} develops realizability and synthesis constraints in greater depth.

@@ -1,0 +1,123 @@
+% §2.1–2.3 — source problem, harmonic Maxwell, mathematical setting
+
+\section{The Maxwell Source Problem}
+\label{sec:ch02.1}
+
+Chapter~\ref{ch:01} fixed what it means for an electromagnetic state to be \emph{Maxwell-consistent} on a declared domain: compatible traces on $\Gamma=\partial\Omega$, charge--current closure, and---when radiation is claimed---outgoing support at infinity \cite{maxwell1873,stratton1941}. The present chapter asks the complementary source question: \emph{given} an admissible impressed current $\Jimp$ on bounded support, what field does Maxwell theory determine, which part of that field constitutes outgoing \emph{radiation}, and what of that radiative structure can ever be inferred from finite measurements?
+
+A compact-range engineer already separates these ideas in practice. The feed synthesizes a current on a horn aperture; probes in the reactive shell record standing structure; a turntable far from the structure samples directional amplitude. The wattmeter on a enclosing sphere integrates power flux. None of these readings is interchangeable: near-field reactive storage can be large while far-zone export is weak, and a finite probe set cannot resolve arbitrary source detail \cite{harrington2001,hansen1988}. Maxwell's equations supply the common mathematical thread.
+
+\subsection{Harmonic conventions and admissible sources}
+\label{sec:ch02.1.1}
+
+We adopt the Volume~I harmonic convention locked in Chapter~\ref{ch:01} (MICROR1): physical fields vary as $\Re\{\mathbf{F}(\mathbf{r})\,\eim\}$ with angular frequency $\omega>0$ (rad/s), so $\partial_t\to+\jj\omega$ on complex phasors \cite{stratton1941}. Spatial phasors $\E(\mathbf{r})$ and $\H(\mathbf{r})$ (V/m and A/m) therefore represent the complex amplitudes in
+\begin{equation}
+\label{eq:ch2.real-time-fields}
+\E(\mathbf{r},t)=\Re\big\{\E(\mathbf{r})\,\eim\big\},
+\qquad
+\H(\mathbf{r},t)=\Re\big\{\H(\mathbf{r})\,\eim\big\}.
+\end{equation}
+Vacuum constitutive relations $\mathbf{D}=\varepsilon_0\E$, $\mathbf{B}=\mu_0\H$ apply in source-free exterior regions; $\varepsilon_0$ (F/m) and $\mu_0=4\pi\times10^{-7}$\,H/m are SI vacuum permittivity and permeability. The free-space wavenumber and intrinsic impedance are
+\begin{equation}
+\label{eq:ch2.k0-eta0}
+k_0=\omega\sqrt{\mu_0\varepsilon_0}\ \ (\mathrm{rad/m}),
+\qquad
+\eta_0=\sqrt{\mu_0/\varepsilon_0}\ \ (\Omega).
+\end{equation}
+An impressed current density $\Jimp(\mathbf{r})$ (A/m$^2$) and impressed charge density $\rho(\mathbf{r})$ (C/m$^3$) drive the field. Charge conservation in harmonic form follows from taking the divergence of Amp\`ere's law in Eq.~\eqref{eq:ch1.maxwell-local}:
+\begin{equation}
+\label{eq:ch2.charge-continuity-derived}
+\divg\Jimp=+\jj\omega\rho,
+\end{equation}
+which is Eq.~\eqref{eq:ch1.charge-continuity-harmonic} with the $+\jj\omega$ time rule \cite{maxwell1873}. A \emph{physically realizable} impressed source on $\Omega$ must satisfy Eq.~\eqref{eq:ch2.charge-continuity-derived} together with the boundary class declared on $\Gamma$ (Section~\ref{sec:ch01.1.2}). Chapter~\ref{ch:01} packaged this requirement in the admissibility map of Eq.~\eqref{eq:ch1.continuity-admissibility}; here we denote by $\mathcal{J}_\Omega$ the linear space of square-integrable impressed currents on $\Omega$ that satisfy that closure.
+
+\subsection{The Maxwell solution map}
+\label{sec:ch02.1.2}
+
+The local Maxwell system of Eq.~\eqref{eq:ch1.maxwell-local} can be written compactly as $\mathcal{M}_\omega[\mathbf{u}_\omega]=\mathbf{0}$ for $\mathbf{u}_\omega=(\E,\H)^\top$, where $\mathcal{M}_\omega$ is the harmonic Maxwell \emph{residual} operator of Eq.~\eqref{eq:ch1.maxwell-operator-block} \cite{stratton1941}. For a fixed boundary-value problem---volume $\Omega$ or exterior $\mathbb{R}^3\setminus\Omega_s$, boundary operator $\mathcal{B}_\Gamma$ on $\Gamma$, and outgoing or cavity-closure condition at infinity---the \emph{solution map}
+\begin{equation}
+\label{eq:ch2.Somega-def}
+\mathcal{S}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_\Omega,
+\qquad
+\Jimp\longmapsto (\E,\H),
+\end{equation}
+assigns to each admissible $\Jimp$ the unique field pair that satisfies Maxwell's equations with that source and the declared boundary class \cite{stratton1941}. The codomain $\mathcal{F}_\Omega$ is the space of Maxwell-closed field pairs on the problem domain; it contains both reactive near-zone structure and, when the exterior is open, outgoing radiative content.
+
+Linearity of $\mathcal{S}_\omega$ on fixed boundary data follows from the linearity of Maxwell's equations \cite{maxwell1873}. Injectivity fails in general: distinct currents related by non-radiating additions can produce identical far-zone patterns (Section~\ref{sec:ch02.8}). That non-uniqueness is not a defect of measurement---it is a property of the radiation map developed below.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box, minimum width=28mm] (j) {Admissible\\$\Jimp$};
+ \node[ch1box, minimum width=32mm, right=8mm of j] (s) {$\mathcal{S}_\omega$\\Maxwell BVP};
+ \node[ch1box, minimum width=32mm, right=8mm of s] (f) {Complete\\$(\E,\H)$};
+ \draw[ch1flow] (j) -- (s) -- (f);
+\end{tikzpicture}%
+}
+\caption{Source-to-field map: prescribe admissible impressed current $\Jimp$, impose Maxwell's equations with boundary and radiation data, obtain the full harmonic field pair $(\E,\H)$. Symbols: $\mathcal{S}_\omega$ is the solution operator; $\mathcal{F}_\Omega$ is the space of admissible field pairs.}
+\label{fig:ch2.source-to-maxwell-field}
+\end{figure}
+
+\subsection{Why radiation requires a second map}
+\label{sec:ch02.1.3}
+
+The pair $(\E,\H)=\mathcal{S}_\omega[\Jimp]$ answers ``what field exists?'' It does not, by itself, answer ``what propagates to infinity as radiation?'' In the vicinity of a compact source, $\E$ and $\H$ typically contain terms decaying as $1/r^3$, $1/r^2$, and $1/r$ with distinct physical roles (Section~\ref{sec:ch02.5}). Only the outgoing transverse $1/r$ component carries finite time-averaged power through spheres of arbitrarily large radius \cite{poynting1884,stratton1941}. Laboratory pattern measurements intentionally probe that asymptotic component after the reactive shell is left behind \cite{harrington2001}.
+
+We therefore introduce an \emph{outgoing radiative extraction map} $\Pi_{\mathrm{rad}}$ acting on completed field pairs, and the \emph{radiation operator}
+\begin{equation}
+\label{eq:ch2.Romega-composition}
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
+\end{equation}
+where $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omega$ is the subspace of pairs whose leading far-zone behavior is outgoing and transverse in the sense of Section~\ref{sec:ch02.4}. The map $\Pi_{\mathrm{rad}}$ is \emph{not} an unqualified orthogonal projection on all of $\mathcal{F}_\Omega$; it is the Sommerfeld-class restriction
+\begin{equation}
+\label{eq:ch2.Pirad-composition}
+\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}},
+\end{equation}
+where $\Pi_{\mathrm{prop}}$ selects propagating spectral content on a homogeneous background and $\mathcal{O}_{\mathrm{out}}$ retains the outgoing branch of that content (Section~\ref{sec:ch02.4}). On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ acts as the identity---applying extraction twice leaves a radiative state unchanged.
+
+Finite measurements compose with $\mathcal{R}_\omega$, not with $\mathcal{S}_\omega$, when the declared observable is a far-zone quantity. Let $\mathcal{O}_{\mathrm{far}}$ extract a pattern coefficient or polarization component from $\mathcal{F}_{\mathrm{rad}}$, and let $\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}$ model a finite probe bank of rank at most $N$. The laboratory readout map is
+\begin{equation}
+\label{eq:ch2.Qomega-def}
+\Qomega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega
+=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}},
+\qquad
+\Lambda_{\mathrm{rad}}=\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega.
+\end{equation}
+The symbol $\mathcal{M}_\omega$ is reserved for the Maxwell \emph{volume} operator of Eq.~\eqref{eq:ch1.maxwell-operator-block}; $\Qomega$ denotes finite-rank observation of radiative fields.
+
+\section{Harmonic Maxwell Theory and Causality}
+\label{sec:ch02.2}
+
+\subsection{From time domain to phasors}
+\label{sec:ch02.2.1}
+
+In the time domain, Maxwell's equations with impressed current $\mathbf{j}(\mathbf{r},t)$ read
+\begin{equation}
+\label{eq:ch2.maxwell-td}
+\curl\E(\mathbf{r},t)=-\,\partial_t\mathbf{B}(\mathbf{r},t),
+\qquad
+\curl\H(\mathbf{r},t)=\mathbf{j}(\mathbf{r},t)+\partial_t\mathbf{D}(\mathbf{r},t),
+\end{equation}
+with $\mathbf{D}=\varepsilon_0\E$, $\mathbf{B}=\mu_0\H$ in vacuum \cite{maxwell1873}. For single-frequency steady operation, substituting $\E(\mathbf{r},t)=\Re\{\E(\mathbf{r})\eim\}$ and using $\partial_t\to+\jj\omega$ yields Eq.~\eqref{eq:ch1.maxwell-local}. Faraday's law ties $\E$ and $\H$ through curl; Amp\`ere's law ties $\H$ to $\Jimp$ and $\E$. No component may be specified independently of its partners without violating local Maxwell structure \cite{stratton1941}.
+
+Taking the curl of Faraday's law and substituting Amp\`ere's law eliminates $\H$ and gives the vector wave equation for $\E$ in a homogeneous vacuum region:
+\begin{equation}
+\label{eq:ch2.vector-wave-E}
+\curl\curl\E(\mathbf{r})-k_0^2\E(\mathbf{r})=-\jj\omega\mu_0\Jimp(\mathbf{r}),
+\qquad
+k_0=\omega\sqrt{\mu_0\varepsilon_0}.
+\end{equation}
+Each symbol is defined at first appearance: $\mathbf{r}$ is the observation point (m); $k_0$ is the vacuum wavenumber (rad/m); the right-hand side is the impressed current source of transverse radiation in the absence of magnetic currents. In source-free regions, Eq.~\eqref{eq:ch2.vector-wave-E} reduces to the homogeneous Helmholtz equation $\curl\curl\E-k_0^2\E=\mathbf{0}$, whose nontrivial solutions include both incoming and outgoing spherical waves---hence the need for a radiation condition (Section~\ref{sec:ch02.4}).
+
+\subsection{Causality and the retarded branch}
+\label{sec:ch02.2.2}
+
+A frequency-domain phasor is physically meaningful only if it arises from causal time-domain evolution. For the retarded Green function, the field at $(\mathbf{r},t)$ depends on sources only at retarded times $t'<t$. The causal dyadic representation developed in Section~\ref{sec:ch02.4.1} implies that harmonic symbols used in $\mathcal{S}_\omega$ must be continued to the \emph{outgoing} Riemann sheet: spatial factors $\exp(-\jj k_0 r)$ on spheres of large radius, and propagating plane waves with $\Re\{k_z\}>0$ in the outward direction \cite{stratton1941,jackson1999}. Incoming partners satisfy the same homogeneous equation but violate the retarded link to a localized source.
+
+\section{Mathematical Setting for Fields and Sources}
+\label{sec:ch02.3}
+
+Electromagnetic energy and power involve integrals of quadratic field expressions. A Maxwell field with finite energy on a bounded region cannot be an arbitrary vector function: curls must be square-integrable in the sense required by Eqs.~\eqref{eq:ch2.vector-wave-E}--\eqref{eq:ch1.maxwell-local}. The standard Sobolev space $\HCurl(\Omega)=\{\mathbf{u}\in L^2(\Omega)^3:\curl\mathbf{u}\in L^2(\Omega)^3\}$ supplies that regularity \cite{stratton1941}. Tangential traces $\hat{\mathbf{n}}\times\E|_\Gamma$ live in fractional trace spaces on Lipschitz boundaries; impedance and outgoing conditions restrict which trace pairs belong to the physical problem (Section~\ref{sec:ch01.1.2}).
+
+For the arguments of this chapter, three spaces suffice conceptually: $\mathcal{J}_\Omega$ (admissible sources), $\mathcal{F}_\Omega$ (Maxwell-closed pairs), and $\mathcal{F}_{\mathrm{rad}}$ (outgoing radiative pairs). When compactness of $\mathcal{R}_\omega$ on bounded observation domains is invoked in Section~\ref{sec:ch02.7}, it is the mathematical expression of the physical fact that a finite radiator cannot excite infinitely many independent far-zone degrees of freedom \cite{chu1948,harrington2001}. We do not develop abstract functional analysis for its own sake; each space is tied to an identifiable electromagnetic object.

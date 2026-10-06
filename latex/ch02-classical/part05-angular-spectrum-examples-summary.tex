@@ -1,0 +1,33 @@
+% §2.10–2.12 — angular spectrum, examples, summary
+
+\section{Angular Spectrum of Radiation}
+\label{sec:ch02.10}
+
+The far-zone field varies with observation direction $\hat{\mathbf{r}}$. A plane wave with propagation vector $\mathbf{k}=k_0\hat{\mathbf{k}}$ satisfies the dispersion relation $|\mathbf{k}|=k_0$ in vacuum. Decomposing $\mathbf{k}$ into components parallel and perpendicular to a reference plane (e.g.\ $z=0$) gives transverse wavenumber $\mathbf{k}_t$ and longitudinal $k_z=\sqrt{k_0^2-k_t^2}$ on the propagating sheet. When $|\mathbf{k}_t|>k_0$, $k_z$ is imaginary and the mode is \emph{evanescent}: it decays exponentially away from the source-bearing region and does not transport power to infinity \cite{stratton1941,harrington2001}.
+
+The angular (plane-wave) spectrum represents the radiative field as a superposition of plane waves with amplitudes $\tilde{\E}(\mathbf{k}_t)$ on the $z=0$ plane (or another chosen surface). Propagating components with outgoing $k_z$ constitute the far-field directional content; evanescent components belong to near-zone storage. The action of $\mathcal{R}_\omega$ suppresses non-outgoing and non-propagating parts before pattern interpretation \cite{stratton1941}. This directional representation is the natural precursor to the vector spherical harmonic and $\mathrm{SO}(3)$ labeling developed in Chapter~\ref{ch:03}: once the radiative field is known direction by direction, the question becomes how to organize those directions by rotational symmetry \cite{stratton1941,harrington2001}.
+
+\section{Physical Examples}
+\label{sec:ch02.11}
+
+\subsection{Electrically small dipole}
+\label{sec:ch02.11.1}
+
+Consider a short straight wire of length $\ell\ll\lambda_0=2\pi/k_0$ along $\hat{\mathbf{z}}$, carrying uniform phasor current $I_0$ (A). The electrical size $k_0\ell\ll1$ implies a dominant electric dipole moment $\mathbf{p}=\hat{\mathbf{z}}\,I_0\ell/\jj\omega$ in the harmonic convention. The far-zone $\E$ scales as $k_0^2|\mathbf{p}|\sin\theta\,e^{-\jj k_0 r}/r$ in spherical coordinates $(r,\theta,\phi)$ with $\hat{\mathbf{r}}$ the observation direction \cite{jackson1999,stratton1941}. Near the wire, $1/r^3$ and $1/r^2$ terms dominate---reactive storage---while the $1/r$ term carries radiated power $P_{\mathrm{rad}}\propto k_0^4|p|^2/(\varepsilon_0 c)$ \cite{poynting1884}. The $\sin\theta$ pattern vanishes on axis, illustrating that radiation requires transverse acceleration of charge, not merely a nonzero current \cite{harrington2001}.
+
+\subsection{Non-radiating loop pair}
+\label{sec:ch02.11.2}
+
+Two equal and opposite current loops separated by a distance small compared with $\lambda_0$ can produce strong local $\H$ while canceling the leading dipole radiation moment. The far-zone pattern meters read zero: the configuration lies in (or near) $\ker\mathcal{R}_\omega$ for ideal cancellation \cite{devaney2004,harrington2001}. Adding any small asymmetry breaks exact nullity; the example shows why ``large near field'' does not imply ``strong radiation.''
+
+\section{Summary and Passage to Chapter~\ref{ch:03}}
+\label{sec:ch02.12}
+
+This chapter developed the source-to-radiation chain for admissible impressed currents. Maxwell's equations determine the complete field $\mathcal{S}_\omega[\Jimp]$; outgoing selection $\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}$ extracts the radiative component; $\mathcal{R}_\omega$ maps sources to that component; finite measurements implement $\Qomega$ with rank and null-space limitations. Non-radiating sources and reciprocity constrain inversion and coupling. The angular spectrum describes directional radiative content before harmonic bases are chosen.
+
+Chapter~\ref{ch:03} addresses the natural successor question: how should angular structure on the sphere be labeled and organized by rotational symmetry through vector spherical harmonics and angular-momentum operators? Chapter~\ref{ch:04} develops realizability and effective dimension of sources that produce prescribed radiative fields.
+
+\subsection{Results inherited by later chapters}
+\label{sec:ch02.12.1}
+
+The radiation operator $\mathcal{R}_\omega$, null space $\ker\mathcal{R}_\omega$, observation map $\Qomega$, and plane-wave angular spectrum are the primary exports to Chapters~\ref{ch:03}--\ref{ch:04}. Maxwell consistency, admissibility, and Poynting flux remain anchored in Chapter~\ref{ch:01} and are used here by reference \cite{maxwell1873,stratton1941}.
