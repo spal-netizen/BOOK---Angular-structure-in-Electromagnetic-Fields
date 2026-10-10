@@ -1,0 +1,344 @@
+% Stage 8 restored fragment — 2.5.1 Source-to-field integral representations (archive lines 6202-6550)
+\subsection{Source-to-field integral representations}
+\label{sec:ch251}
+
+Retarded source integrals are what method-of-moments codes discretize on antennas \cite{harrington2001}. Far-zone extraction is a limit on the same integral \cite{jackson1999}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+The representation begins from retarded potentials driven by $\Jimp$ on compact $\Omega_s$, not from a plane-wave expansion \cite{maxwell1873}. The quantity being organized is the outgoing field pair $(\E,\H)$; angular labels attach only after $\Pi_{\mathrm{rad}}$ \cite{sommerfeld1949}. An alternative route through static potentials would omit radiation damping and misstate reactive storage \cite{jackson1999}. On a horn range, this step is what a MoM mesh implements before any pattern plot \cite{harrington2001}.
+
+Before any volume quadrature is written, the range engineer already knows which observable the
+campaign will report \cite{harrington2001}. A calibrated pattern probe on $\Gamma_R$ integrates
+tangential $\E$ or $\H$ against a known polarization and yields a voltage proportional to a
+directional amplitude---a discrete sample of the far-zone pattern carried by
+$\mathcal{R}_\omega[\Jimp]$, not of the full pair $\mathcal{S}_\omega[\Jimp]$
+\cite{stratton1941}. A shell wattmeter closes the same budget through
+$\mathcal{P}_{\mathrm{rad}}$ on $\Gamma_R$ after $\Pi_{\mathrm{rad}}$ \cite{stratton1941}. Near-field
+scanners on a hull enclosing $\Omega_s$ record $\mathcal{S}_\omega[\Jimp]$ and require a transform
+before pattern meters apply \cite{hansen1988}. The volume integrals below are the constructive
+route to those meter readings: they assemble $(\E,\H)$ from impressed $\Jimp$, after which export
+selection maps the result to the pattern quantities the range records \cite{stratton1941}.
+Radiation integrals assemble far-zone fields as superpositions of current moments weighted by
+outgoing phase \cite{stratton1941}. Four laboratory settings motivate the
+representations that follow. On an antenna range, probes on a large sphere $\Gamma_R$ sample
+the field produced by a feed in the compact range; the measured voltage is a discretization of
+a surface integral over $\Gamma_R$, not a direct reading of impressed $\Jimp$
+\cite{harrington2001}. Horn illumination fixes $\Jimp$ on the mouth through a waveguide mode or
+aperture integral; the pattern on the range wall appears only after those currents convolve
+against the outgoing Green function \cite{collin2001}. Aperture radiation replaces the volume
+support by equivalent currents on $\Gamma_{\mathrm{eq}}$ when the interior is inaccessible
+\cite{stratton1941}. Near-field scanners reconstruct far-zone quantities from dense samples on
+a hull enclosing $\Omega_s$---a transform that succeeds only when outgoing uniqueness and export
+selection are respected \cite{hansen1988}.
+The representation begins from retarded potentials driven by $\Jimp$ on compact $\Omega_s$,
+organizes the outgoing pair $(\E,\H)$ before angular labels attach, and coincides with what
+method-of-moments codes discretize before far-zone extraction
+\cite{maxwell1873}. Static-potential routes omit radiation damping
+and misstate reactive storage; they are not used here \cite{jackson1999}. Outgoing kernels,
+regularization, and branch selection are presupposed from Sections~\ref{sec:ch23}--\ref{sec:ch24};
+distance-regime asymptotics and flux meters follow in the subsections below.
+Assumptions. Fix \(\omega>0\), compact \(\operatorname{supp}\Jimp=\Omega_s\Subset\Omega\), admissible
+data Eq.~\eqref{eq:ch1.admissible-data-class}, charge continuity
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, and outgoing radiation condition
+Eqs.~\eqref{eq:ch2.sommerfeld-outgoing-class}--\eqref{eq:ch2.outgoing-selector-def} on
+exterior problems \cite{stratton1941}. Observation points \(\mathbf{r}\) lie outside
+\(\Omega_s\) or on equivalent surfaces with trace matching declared below; coincidence
+limits use Subsection~\ref{sec:ch232} \cite{harrington2001}. Kernels
+\(\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}\),
+\(\overline{\mathbf{G}}_{H,\omega}^{\mathrm{(out)}}\), and scalar
+\(G_\omega^{\mathrm{(out)}}\) denote outgoing branches fixed by
+Eq.~\eqref{eq:ch2.outgoing-green-branch} \cite{stratton1941}.
+The electric volume integral is the constructive form of the dyadic convolution route: each
+source element \(\Jimp(\mathbf{r}')\,d^{3}r'\) contributes a dipole-like response that
+propagates outward with retarded phase, and the total field is their coherent sum
+\cite{stratton1941}. On a MoM mesh, patch currents discretize the same sum; on $\Gamma_R$, pattern
+probes sample the far-zone limit after $\mathcal{R}_\omega$ has removed reactive storage that the
+volume integral still carries at finite $r$ \cite{harrington2001}. In the symbols below,
+$\mathbf{r}$ is the observation coordinate, $\mathbf{r}'$ the source coordinate integrated over
+$\Omega_s$, $\E_{\mathrm{hom}}$ any exterior illumination not generated by $\Jimp$, and the
+prefactor $-\jj\omega\mu_0$ ties the integral to the locked phasor convention
+$\exp(-\jj\omega t)$ \cite{stratton1941}. The primary volume representation is
+\begin{equation}
+\label{eq:ch2.outgoing-electric-volume-integral}
+\E(\mathbf{r})
+=
+-\jj\omega\mu_0
+\int_{\Omega_s}
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+\;+\;\E_{\mathrm{hom}}(\mathbf{r}),
+\end{equation}
+\begin{equation}
+\label{eq:ch2.outgoing-magnetic-from-curl-integral}
+\H(\mathbf{r})
+=
+\frac{1}{\jj\omega\mu_0}\,\curl\E(\mathbf{r}),
+\end{equation}
+Equations~\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.outgoing-magnetic-from-curl-integral}
+package the dyadic route as an evaluable export map: the electric field is a volume
+convolution against the \emph{outgoing} dyad, while the magnetic field is a curl derived
+from that electric field in source-free observation regions \cite{stratton1941}. For a
+square loop of side \(2a\) with \(k_0 a=1.2\) observed at \(\mathbf{r}\) with
+\(k_0|\mathbf{r}|=6\), the integral typically requires \(16\)--\(64\) wavelength-scale
+subdivisions of \(\Omega_s\) for \(2\%\) amplitude accuracy when raw
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} is used patchwise; self-term corrections from
+Subsection~\ref{sec:ch232} dominate error when \(|\mathbf{r}|\to a\)
+\cite{harrington2001}. The homogeneous term \(\E_{\mathrm{hom}}\) carries exterior
+illumination and must vanish for pure radiation problems \cite{stratton1941}. Equations
+\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.outgoing-magnetic-from-curl-integral}
+specialize Eqs.~\eqref{eq:ch2.electric-dyadic-convolution}--\eqref{eq:ch2.magnetic-from-electric-dyad}
+with outgoing dyads for \(\mathbf{r}\notin\Omega_s\) on simply connected observation
+regions; they coincide with Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade} when
+\(\E_{\mathrm{hom}}=\mathbf{0}\) \cite{stratton1941}. The prefactor
+\(-\jj\omega\mu_0\) matches Eq.~\eqref{eq:ch2.helmholtz-forcing-map} and the locked
+phasor axis \cite{stratton1941}. What propagates to a distant probe is the coherent sum of
+outgoing dyadic responses $\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')$
+from each source element; what remains reactive at finite $r$ is the non-transverse and
+inverse-power content retained in $\mathcal{S}_\omega[\Jimp]$ until $\Pi_{\mathrm{rad}}$ and
+regime qualification isolate export \cite{stratton1941}. A near-field scanner
+records the full pair $\mathcal{S}_\omega[\Jimp]$; a pattern meter on $\Gamma_R$ with
+$k_0 R\gg 1$ approximates $\mathcal{R}_\omega[\Jimp]$ \cite{hansen1988}.
+When magnetic impressed sources
+\(\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{imp}}\) are primary, duality maps
+\(\varepsilon_0\E\leftrightarrow\mu_0\H\) and
+\(\Jimp\leftrightarrow\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{imp}}\) yields
+\begin{equation}
+\label{eq:ch2.outgoing-magnetic-volume-integral}
+\H(\mathbf{r})
+=
+\jj\omega\varepsilon_0
+\int_{\Omega_s}
+\overline{\mathbf{G}}_{H,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot
+\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{imp}}(\mathbf{r}')\,d^{3}r'
+\;+\;\H_{\mathrm{hom}}(\mathbf{r}),
+\end{equation}
+\begin{equation}
+\label{eq:ch2.outgoing-electric-from-curl-magnetic}
+\E(\mathbf{r})
+=
+-\frac{1}{\jj\omega\varepsilon_0}\,\curl\H(\mathbf{r}),
+\end{equation}
+with \(\overline{\mathbf{G}}_{H,\omega}^{\mathrm{(out)}}\) the magnetic dyad defined
+duality-wise from Subsection~\ref{sec:ch231} without re-tabulating its closed form
+\cite{stratton1941}. Equations
+\eqref{eq:ch2.outgoing-magnetic-volume-integral}--\eqref{eq:ch2.outgoing-electric-from-curl-magnetic}
+complete the dual route to Eqs.~\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.outgoing-magnetic-from-curl-integral}
+for aperture magnetic currents and dual-equivalent models \cite{stratton1941}.
+When both electric and magnetic impressed sources are present, superposition assembles the
+full Maxwell pair from the dual volume routes without re-opening gauge or static-potential
+paths \cite{stratton1941}. Superposition gives the coupled volume representation
+\begin{equation}
+\label{eq:ch2.combined-impressed-source-integral}
+\begin{aligned}
+\E(\mathbf{r})
+&=
+-\jj\omega\mu_0\!\int_{\Omega_s}\!
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+-\frac{1}{\jj\omega\varepsilon_0}\,\curl\H^{(\mathrm{mag})}(\mathbf{r})
++\E_{\mathrm{hom}}(\mathbf{r}),\\[4pt]
+\H(\mathbf{r})
+&=
+\jj\omega\varepsilon_0\!\int_{\Omega_s}\!
+\overline{\mathbf{G}}_{H,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot
+\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{imp}}(\mathbf{r}')\,d^{3}r'
++\frac{1}{\jj\omega\mu_0}\,\curl\E^{(\mathrm{elec})}(\mathbf{r})
++\H_{\mathrm{hom}}(\mathbf{r}),
+\end{aligned}
+\end{equation}
+where \(\E^{(\mathrm{elec})},\H^{(\mathrm{mag})}\) denote the single-source contributions
+from Eqs.~\eqref{eq:ch2.outgoing-electric-volume-integral} and
+\eqref{eq:ch2.outgoing-magnetic-volume-integral} \cite{stratton1941}.
+Equation~\eqref{eq:ch2.combined-impressed-source-integral} is the first-order Maxwell
+integral system on outgoing kernels; it reduces to either branch when one impressed
+source vanishes \cite{stratton1941}. Linearity
+Eq.~\eqref{eq:ch2.radiation-linearity} follows from Eq.~\eqref{eq:ch2.combined-impressed-source-integral}
+on fixed \(\mathcal{B}_\Gamma\) \cite{harrington2001}. The combined integral returns the full
+admissible Maxwell pair $\mathcal{S}_\omega[\mathfrak{D}]$: electric and magnetic impressed
+sources superpose at observation $\mathbf{r}$ with each contribution evaluated at source
+$\mathbf{r}'$ through the outgoing dyads $G$ and $\overline{\mathbf{G}}_{E}$,
+$\overline{\mathbf{G}}_{H}$. Pattern, gain, and shell wattmeters do not read this sum directly;
+they act on $\mathcal{R}_\omega[\mathfrak{D}]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\mathfrak{D}]$
+after export selection removes reactive and non-propagating fractions that the volume integral
+still carries at finite range \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (jev) {$\Jimp$ volume};
+ \node[ch1box, right=7mm of jev] (jmv) {$\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{imp}}$};
+ \node[ch1box, right=7mm of jmv] (surf) {Huygens\\$\Gamma_{\mathrm{eq}}$};
+ \node[ch1box, below=5mm of jmv] (ge) {$\overline{\mathbf{G}}_{E}^{\mathrm{(out)}}$};
+ \node[ch1box, below=5mm of surf] (gh) {$\overline{\mathbf{G}}_{H}^{\mathrm{(out)}}$};
+ \node[ch1box, right=7mm of jmv] (ef) {$(\E,\H)$};
+ \draw[ch1flow] (jev) -- (ge) -- (ef);
+ \draw[ch1flow] (jmv) -- (gh) -- (ef);
+ \draw[ch1flow] (surf.east) -- (surf.east |- ef.west);
+ \draw[ch1flow] (surf.east |- ef.west) -- (ef.west);
+\end{tikzpicture}%
+}
+\caption{Integral routes: electric volume, magnetic volume, and Huygens surface
+representations converge to the same \(\mathcal{S}_\omega\) image on the outgoing branch when
+trace matching holds.}
+\label{fig:ch2.source-to-field-integral-routes}
+\end{figure}
+When \(\divg\Jimp-\jj\omega\rho=0\) with nonzero \(\rho\), the complete electric field
+includes a scalar-potential gradient driven by \(\rho\):
+\begin{equation}
+\label{eq:ch2.charge-augmented-electric-integral}
+\E(\mathbf{r})
+=
+-\jj\omega\mu_0\!\int_{\Omega_s}\!
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+-\grad\!\int_{\Omega_s} G_\omega^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\,
+\frac{\rho(\mathbf{r}')}{\varepsilon_0}\,d^{3}r'
+\;+\;\E_{\mathrm{hom}}(\mathbf{r}),
+\end{equation}
+with \(G_\omega^{\mathrm{(out)}}\) the outgoing scalar kernel from
+Eq.~\eqref{eq:ch2.scalar-green-solution-operator} \cite{stratton1941}. Equation
+\eqref{eq:ch2.charge-augmented-electric-integral} enforces Gauss coupling without leaving
+\(\mathcal{J}_\Omega\); when Eq.~\eqref{eq:ch1.charge-continuity-harmonic} holds and
+\(\rho\) is determined by \(\Jimp\), the gradient term is fixed by the same impressed data
+\cite{stratton1941}. The charge-augmented integral still evaluates
+$\mathcal{S}_\omega[\mathfrak{D}]$: the scalar kernel $G_\omega^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')$
+propagates charge density from $\mathbf{r}'$ to scalar potential at $\mathbf{r}$, while the
+dyadic term propagates $\Jimp$; shell meters on $\mathcal{R}_\omega[\Jimp]$ remain insensitive
+to how reactive near storage partitions between the two contributions at finite $r$
+\cite{harrington2001}. Lorenz-gauge vector-potential reduction
+Eq.~\eqref{eq:ch2.lorenz-field-from-potential} collapses to
+Eq.~\eqref{eq:ch2.charge-augmented-electric-integral} on uniform exterior domains; gauge
+freedom is not re-opened \cite{harrington2001}.
+When the interior of a source region is inaccessible, equivalent currents on a enclosing
+surface reproduce the exterior field without resolving volume \(\Jimp\); the surface integrals
+below are the operator form of that laboratory substitution \cite{stratton1941}. Let
+\(\Gamma_{\mathrm{eq}}\) be a closed surface enclosing \(\Omega_s\), with outward
+normal \(\hat{\mathbf{n}}\) and equivalent surface densities
+\(\mathbf{J}_{s,\mathrm{eq}}\), \(\mathbf{K}_{s,\mathrm{eq}}\) on
+\(\Gamma_{\mathrm{eq}}\) in the trace class of Subsection~\ref{sec:ch211}. The exterior
+Huygens representation is
+\begin{equation}
+\label{eq:ch2.huygens-equivalent-integral}
+\E(\mathbf{r})
+=
+-\jj\omega\mu_0\!\int_{\Gamma_{\mathrm{eq}}}\!
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot
+\mathbf{J}_{s,\mathrm{eq}}(\mathbf{r}')\,dS'
++\int_{\Gamma_{\mathrm{eq}}}\!
+\nabla'\!G_\omega^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\times
+\mathbf{K}_{s,\mathrm{eq}}(\mathbf{r}')\,dS',
+\end{equation}
+\begin{equation}
+\label{eq:ch2.huygens-magnetic-integral}
+\H(\mathbf{r})
+=
+\jj\omega\varepsilon_0\!\int_{\Gamma_{\mathrm{eq}}}\!
+\overline{\mathbf{G}}_{H,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot
+\mathbf{K}_{s,\mathrm{eq}}(\mathbf{r}')\,dS'
+-\int_{\Gamma_{\mathrm{eq}}}\!
+\nabla'\!G_\omega^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\times
+\mathbf{J}_{s,\mathrm{eq}}(\mathbf{r}')\,dS',
+\end{equation}
+for \(\mathbf{r}\) outside the closed surface bounded by \(\Gamma_{\mathrm{eq}}\)
+\cite{stratton1941}. Equations
+\eqref{eq:ch2.huygens-equivalent-integral}--\eqref{eq:ch2.huygens-magnetic-integral} are
+the surface form of the same outgoing propagation operator;
+\(\nabla'\) acts on the source coordinate \(\mathbf{r}'\) \cite{stratton1941}. Tangential
+field matching
+\begin{equation}
+\label{eq:ch2.huygens-tangential-match}
+\hat{\mathbf{n}}\times\E\big|_{\Gamma_{\mathrm{eq}}^{+}}
+=
+\hat{\mathbf{n}}\times\E\big|_{\Gamma_{\mathrm{eq}}^{-}},
+\qquad
+\hat{\mathbf{n}}\times\H\big|_{\Gamma_{\mathrm{eq}}^{+}}
+=
+\hat{\mathbf{n}}\times\H\big|_{\Gamma_{\mathrm{eq}}^{-}}
+\end{equation}
+fixes \(\mathbf{J}_{s,\mathrm{eq}}=\hat{\mathbf{n}}\times(\H^{-}-\H^{+})\),
+\(\mathbf{K}_{s,\mathrm{eq}}=\hat{\mathbf{n}}\times(\E^{-}-\E^{+})\) in the stratified
+sense of Eq.~\eqref{eq:ch1.interface-conditions} \cite{stratton1941}.
+Equivalent-source non-uniqueness Eq.~\eqref{eq:ch2.equivalent-source-ambiguity} applies:
+distinct \((\mathbf{J}_{s,\mathrm{eq}},\mathbf{K}_{s,\mathrm{eq}})\) pairs related by
+\(\ker\mathcal{R}_\omega\) yield identical far-zone radiation \cite{harrington2001}. The
+Huygens surface integrals reproduce exterior fields from equivalent currents on
+$\Gamma_{\mathrm{eq}}$: observation $\mathbf{r}$ lies outside the closed surface, source
+$\mathbf{r}'$ ranges over $\Gamma_{\mathrm{eq}}$, and the same outgoing kernels
+$G_\omega^{\mathrm{(out)}}$ and $\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}$ propagate
+tangential data outward. What is measured on a distant range is still
+$\mathcal{R}_\omega[\Jimp]$ after $\Pi_{\mathrm{rad}}$; equivalent currents that differ only by
+$\ker\mathcal{R}_\omega$ leave that measurement unchanged while altering reactive near fields
+through $\mathcal{S}_\omega$ \cite{stratton1941}.
+\phantomsection\label{thm:ch2.source-to-field-integral}
+Let \(\mathfrak{D}=(\Jimp,\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{imp}},\rho,\mathcal{B}_\Gamma)\)
+be admissible with outgoing radiation condition on exterior problems. Then the physical solution
+\(\mathcal{S}_\omega[\mathfrak{D}]=(\E,\H)\) is given by
+Eqs.~\eqref{eq:ch2.combined-impressed-source-integral}--\eqref{eq:ch2.charge-augmented-electric-integral}
+with outgoing kernels, or by Eqs.~\eqref{eq:ch2.huygens-equivalent-integral}--\eqref{eq:ch2.huygens-tangential-match}
+when equivalent surface data replace volume sources \cite{stratton1941}.
+The representation agrees with Eq.~\eqref{eq:ch2.outgoing-solution-operator} and
+Green--BVP equivalence Eq.~\eqref{eq:ch2.green-bvp-equivalence} on the outgoing branch
+fixed by exterior radiative uniqueness (Subsection~\ref{sec:ch243}).
+Subsection~\ref{sec:ch231} defined dyadic kernels satisfying
+Eq.~\eqref{eq:ch2.dyadic-green-defining-operator}; Subsection~\ref{sec:ch232} justified
+convolution on \(\mathcal{J}_\Omega\); Section~\ref{sec:ch24} selected the outgoing
+branch. Substituting \(\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}\) into
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution} yields
+Eq.~\eqref{eq:ch2.outgoing-electric-volume-integral}. Magnetic and coupled forms follow
+from duality and superposition \cite{stratton1941}. Huygens formulas follow by replacing
+volume sources with surface distributions that reproduce the same tangential traces
+\cite{harrington2001}. Uniqueness on \(\mathcal{F}_{\mathrm{SF}}\) when exterior radiative
+uniqueness (Subsection~\ref{sec:ch243}) holds identifies the integral representation
+with \(\mathcal{S}_\omega\) \cite{stratton1941}.
+The volume and surface integrals above return the full admissible pair $\mathcal{S}_\omega[\mathfrak{D}]$;
+pattern meters and gain reports act only after export selection through $\mathcal{R}_\omega$ and
+$\Pi_{\mathrm{rad}}$ \cite{stratton1941}. Export selection follows evaluation:
+\begin{equation}
+\label{eq:ch2.integral-radiation-map}
+\mathcal{R}_\omega[\mathfrak{D}]
+=
+\Pi_{\mathrm{rad}}\,
+\Big(\E[\mathfrak{D}],\,\H[\mathfrak{D}]\Big),
+\end{equation}
+with \(\Pi_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}
+\cite{stratton1941}. Pattern cuts, gain reports, and shell power meters act on
+Eq.~\eqref{eq:ch2.integral-radiation-map}, not on the raw volume integral alone
+\cite{harrington2001}.
+On the outgoing branch,
+\begin{equation}
+\label{eq:ch2.integral-resolvent-equivalence}
+\mathcal{S}_\omega[\mathfrak{D}]
+=
+\mathcal{O}_{\mathrm{out}}\,
+\mathcal{L}_\omega^{-1}\!
+\begin{bmatrix}\mathbf{s}_\omega(\mathfrak{D})\\ \mathbf{g}_\Gamma\end{bmatrix}
+=
+\mathcal{O}_{\mathrm{out}}\,
+\Big(\mathcal{I}_{\mathrm{vol}}[\mathfrak{D}]\Big),
+\end{equation}
+with \(\mathcal{I}_{\mathrm{vol}}[\mathfrak{D}]\) the combined volume integrals
+Eqs.~\eqref{eq:ch2.combined-impressed-source-integral}--\eqref{eq:ch2.charge-augmented-electric-integral},
+connecting integral and operator routes through
+Eqs.~\eqref{eq:ch2.resolvent-green-equivalence}--\eqref{eq:ch2.outgoing-resolvent-selection}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.integral-resolvent-equivalence}
+is the constructive content of Eq.~\eqref{eq:ch2.green-bvp-equivalence} for evaluation
+purposes: a method-of-moments matrix implements the resolvent route while patch quadrature
+implements the integral route, and both must reference the same outgoing branch
+\cite{harrington2001}.
+When \(\Omega=\cup_j\Omega_j\) with interface traces from Subsection~\ref{sec:ch234},
+Eqs.~\eqref{eq:ch2.combined-impressed-source-integral}--\eqref{eq:ch2.charge-augmented-electric-integral}
+hold patchwise with local \(k_j\) and outgoing exterior completion on the infinite exterior
+region \cite{stratton1941}. Impressed \(\Jimp\) may vanish in passive exterior regions;
+equivalent currents on material boundaries enter through
+Eqs.~\eqref{eq:ch2.huygens-equivalent-integral}--\eqref{eq:ch2.huygens-tangential-match}
+with \(\Gamma_{\mathrm{eq}}\) on scatterer surfaces \cite{harrington2001}. Interior
+cavity problems replace outgoing \(G\) with standing-mode Green functions and require
+quotienting Eq.~\eqref{eq:ch2.coercivity-quotient}; those representations are excluded from
+the outgoing integral family developed here \cite{stratton1941}.
+Equations~\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.charge-augmented-electric-integral}
+require linear media, fixed \(\omega\), admissible \(\mathfrak{D}\), outgoing radiation
+condition on exterior problems, and observation points outside singular coincidence unless
+regularization from Subsection~\ref{sec:ch232} is applied \cite{stratton1941}. Incoming
+kernels produce different integrals violating
+Eq.~\eqref{eq:ch2.retarded-harmonic-kernel-theorem} \cite{jackson1999}. Anisotropic,
+moving, or nonlinear media require modified kernels beyond the locked patchwise-scalar class
+\cite{stratton1941}. Near-zone reactive dominance does not invalidate the integral; it
+signals that \(\mathcal{R}_\omega[\mathfrak{D}]\) may differ sharply from
+\(\mathcal{S}_\omega[\mathfrak{D}]\) until Eq.~\eqref{eq:ch2.regime-operator-screen} is
+satisfied \cite{harrington2001}.
+One operational distinction closes the display below: volume integrals construct the full Maxwell pair $\mathcal{S}_\omega[\mathfrak{D}]$, whereas pattern meters and watt integrators on $\Gamma_R$ read only after outgoing selection has isolated $\mathcal{R}_\omega[\mathfrak{D}]$. A method-of-moments matrix must not be read as a radiation report; Maxwell theory shows that the matrix implements whichever Green branch and boundary completion were declared, and reactive near-zone content may dominate local probes without contributing to qualified export \cite{stratton1941}. A measurement on a closed scan surface therefore records the complete field state unless a transform and regime qualification explicitly project onto the radiative sector. Synthesis, diagnosis, and inversion campaigns must name the same outgoing branch before any two routes---resolvent inversion and direct quadrature---are compared \cite{harrington2001}. Subsection~\ref{sec:ch252} next fixes distance labels that tell the engineer when far-zone asymptotics may replace the full integral without misreading reactive storage as radiated power.

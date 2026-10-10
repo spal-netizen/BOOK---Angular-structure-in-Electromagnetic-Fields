@@ -1,0 +1,311 @@
+% Stage 8 restored fragment — 2.4.4 Implications for source reconstruction (archive lines 5773-6089)
+\subsection{Implications for source reconstruction}
+\label{sec:ch244}
+
+A coax-fed pyramidal horn over a ground plane defines the impressed-current and boundary-data tuple technicians declare before Maxwell export is computed \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) fixes uniqueness of
+\(\mathcal{S}_\omega[\Jimp]\) on the outgoing branch. Subsection~\ref{sec:ch244}
+records the inverse-source consequences: field uniqueness does not imply source
+identifiability. Uniqueness of \((\E,\H)\) under outgoing conditions does not make
+$\mathcal{R}_\omega$ injective---distinct $\Jimp$ can share the same far pattern
+\cite{devaney2004}. Source reconstruction is a conditioned inverse, not a direct readout
+of coefficients \cite{hansen1988}.
+\medskip
+\(\mathcal{R}_\omega\) is generally non-injective, and finite observation channels
+compress rank further \cite{stratton1941}. Observation null-space
+Eq.~\eqref{eq:ch2.observation-null-space}, rank composition
+Eq.~\eqref{eq:ch2.rank-composition-law}, and non-radiating relation
+Eq.~\eqref{eq:ch2.null-radiation} from Subsection~\ref{sec:ch213} are
+presupposed; complete structure of \(\ker\mathcal{R}_\omega\) belongs to
+Section~\ref{sec:ch272} \cite{harrington2001}. Measurement classification from
+Section~\ref{sec:ch01.5} applies here; angular-momentum observables from
+Chapter~\ref{ch:01} are not re-opened \cite{stratton1941}. Field uniqueness versus source identifiability. Forward exterior completion yields
+
+\begin{equation}
+\label{eq:ch2.field-source-uniqueness-split}
+\underbrace{\mathcal{S}_\omega[\Jimp^{(1)}]=\mathcal{S}_\omega[\Jimp^{(2)}]}_{\text{same impressed data}}
+\ \Longrightarrow\
+\Jimp^{(1)}=\Jimp^{(2)}
+\quad\text{false in general},
+\end{equation}
+whereas exterior radiative uniqueness (Subsection~\ref{sec:ch243}) gives
+\begin{equation}
+\label{eq:ch2.field-uniqueness-forward}
+\mathcal{S}_\omega[\Jimp^{(1)}]=\mathcal{S}_\omega[\Jimp^{(2)}]
+\ \Longrightarrow\
+(\E_1,\H_1)=(\E_2,\H_2)
+\quad\text{on}\ \mathcal{F}_{\mathrm{SF}}
+\end{equation}
+for the same boundary class and outgoing branch \cite{stratton1941}. Equations
+\eqref{eq:ch2.field-source-uniqueness-split}--\eqref{eq:ch2.field-uniqueness-forward}
+separate \emph{state} uniqueness from \emph{excitation} uniqueness: many admissible
+currents can produce the same radiative exterior field once reactive degrees of
+freedom are quotiented \cite{harrington2001}. Inverse problems therefore target
+equivalence classes of \(\Jimp\), not individual source distributions
+\cite{stratton1941}.
+The radiative export map from Subsection~\ref{sec:ch201} is
+\begin{equation}
+\label{eq:ch2.radiation-forward-map}
+\mathcal{R}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
+\qquad
+\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp],
+\end{equation}
+restating Eq.~\eqref{eq:ch2.radiation-operator-def} after outgoing radiation condition
+Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique}
+\cite{stratton1941}. The source-side null space recorded in
+Eq.~\eqref{eq:ch2.null-radiation} is
+\begin{equation}
+\label{eq:ch2.ker-R-omega}
+\ker\mathcal{R}_\omega
+=
+\left\{
+\Jimp\in\mathcal{J}_\Omega:
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]=\mathbf{0}
+\right\},
+\end{equation}
+generally infinite-dimensional on open domains \cite{harrington2001}.
+Section~\ref{sec:ch272} develops the complete null-space analysis; Subsection~\ref{sec:ch244}
+records the reconstruction consequences of Eq.~\eqref{eq:ch2.ker-R-omega}
+without constructing non-radiating bases \cite{stratton1941}. Elements of
+\(\ker\mathcal{R}_\omega\) are invisible to far-zone radiative observables yet may
+carry substantial near-zone reactive energy through \(\mathcal{S}_\omega\)
+\cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=7mm of j] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=7mm of s] (f) {$\mathcal{F}_{\mathrm{SF}}$};
+ \node[ch1box, right=7mm of f] (r) {$\mathcal{F}_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of j] (ker) {$\ker\mathcal{R}_\omega$};
+ \draw[ch1flow] (j) -- (s) -- (f) -- node[above,font=\scriptsize] {$\Pi_{\mathrm{rad}}$} (r);
+ \draw[ch1flow, dashed] (ker.south) -- (j.north);
+\end{tikzpicture}%
+}
+\caption{Forward chain for reconstruction: \(\mathcal{S}_\omega\) is single-valued on
+\(\mathcal{F}_{\mathrm{SF}}\) after exterior radiative uniqueness (Subsection~\ref{sec:ch243});
+\(\mathcal{R}_\omega\) collapses many sources to the same radiative output.}
+\label{fig:ch2.reconstruction-forward-chain}
+\end{figure}
+Observation composition and inverse problem. Laboratory readouts compose with $\mathcal{R}_\omega$ before any source inversion
+is attempted: pattern probes and near-field scanners observe a finite-rank image of impressed
+currents, not $\Jimp$ itself \cite{hansen1988}. From
+Eq.~\eqref{eq:ch2.radiation-operator-composition} and finite-rank observation
+Eq.~\eqref{eq:ch2.finite-rank-observation},
+\begin{equation}
+\label{eq:ch2.reconstruction-observation-map}
+\mathcal{M}_\omega
+=
+\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega
+=
+\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}:
+\mathcal{J}_\Omega\longrightarrow\mathbb{C}^{N},
+\end{equation}
+with \(\Lambda_{\mathrm{rad}}=\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega\)
+\cite{stratton1941}. Given measurement vector
+\(\mathbf{y}\in\mathbb{C}^{N}\), the inverse source problem seeks
+\(\Jimp\in\mathcal{J}_\Omega\) such that
+\begin{equation}
+\label{eq:ch2.inverse-source-equation}
+\mathcal{M}_\omega[\Jimp]=\mathbf{y},
+\qquad
+\mathcal{D}_{J}[\Jimp]=1,
+\end{equation}
+subject to admissibility Eq.~\eqref{eq:ch2.source-admissibility}
+\cite{harrington2001}. Equation~\eqref{eq:ch2.inverse-source-equation} is ill-posed
+whenever \(\ker\mathcal{M}_\omega\neq\{\mathbf{0}\}\), which occurs if either
+\(\ker\mathcal{R}_\omega\neq\{\mathbf{0}\}\) or \(\ker\mathcal{O}_{\mathrm{meas}}\)
+is nontrivial on \(\operatorname{ran}\mathcal{R}_\omega\)
+\cite{stratton1941}. Rank cap Eq.~\eqref{eq:ch2.rank-composition-law} applies directly:
+\begin{equation}
+\label{eq:ch2.reconstruction-rank-cap}
+\mathrm{rank}(\mathcal{M}_\omega)
+\le
+\min\big\{N,\,\dim\mathcal{R}(\mathcal{R}_\omega)\big\},
+\end{equation}
+so no measurement protocol with \(N\) channels resolves more than \(N\) independent
+radiative degrees of freedom \cite{harrington2001}. The composed null space satisfies
+\begin{equation}
+\label{eq:ch2.reconstruction-null-space}
+\ker\mathcal{M}_\omega
+\supseteq
+\ker\mathcal{R}_\omega
+\ \cup\
+\mathcal{R}_\omega^{-1}\!\big(\ker\mathcal{O}_{\mathrm{meas}}\big),
+\end{equation}
+with set inclusion on admissible sources \cite{stratton1941}. Identifiable sources
+modulo null space form the quotient
+\begin{equation}
+\label{eq:ch2.source-identifiability-quotient}
+\mathcal{J}_\Omega\big/\ker\mathcal{M}_\omega
+\ \cong\
+\operatorname{ran}\mathcal{M}_\omega
+\subset\mathbb{C}^{N},
+\end{equation}
+so reconstruction recovers at best a finite-dimensional image, not a unique
+\(\Jimp(\mathbf{r})\) \cite{harrington2001}. Equivalent-current models that expand
+\(\Jimp\) on auxiliary surfaces inherit the same non-uniqueness: distinct surface
+distributions related by \(\ker\mathcal{R}_\omega\) produce identical far-zone
+patterns \cite{stratton1941}. Boundary-element inversion therefore
+requires regularization or additional constraints beyond Maxwell consistency alone
+\cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j1) {$\Jimp^{(1)}$};
+ \node[ch1box, right=7mm of j1] (j2) {$\Jimp^{(2)}$};
+ \node[ch1box, right=7mm of j2] (plus) {$\Jimp^{(1)}+\delta\Jimp$};
+ \node[ch1box, below=5mm of plus] (y) {Same $\mathbf{y}$};
+ \node[ch1box, below=5mm of j1] (delta) {$\delta\Jimp\in\ker\mathcal{M}_\omega$};
+ \draw[ch1flow] (j1.east) -- (j1.east |- plus.west);
+ \draw[ch1flow] (j1.east |- plus.west) -- (plus.west);
+ \draw[ch1flow] (delta.east) -- (delta.east |- plus.west);
+ \draw[ch1flow] (delta.east |- plus.west) -- (plus.west);
+ \draw[ch1flow] (plus.south) -- (plus.south |- y.north);
+ \draw[ch1flow] (plus.south |- y.north) -- (y.north);
+\end{tikzpicture}%
+}
+\caption{Non-uniqueness: adding \(\delta\Jimp\in\ker\mathcal{M}_\omega\) leaves
+measurement vector \(\mathbf{y}\) unchanged.}
+\label{fig:ch2.reconstruction-null-class}
+\end{figure}
+~\eqref{eq:ch2.observation-null-space} pulled back to source space through
+Eq.~\eqref{eq:ch2.reconstruction-observation-map} \cite{stratton1941}. When Eq.~\eqref{eq:ch2.inverse-source-equation} is ill-posed, stable inversion uses
+a penalized least-squares or Tikhonov template on admissible sources:
+\begin{equation}
+\label{eq:ch2.tikhonov-source-reconstruction}
+{\Jimp}_{\mathrm{reg}}
+=
+\arg\min_{\Jimp\in\mathcal{J}_\Omega}
+\left\{
+\|\mathcal{M}_\omega[\Jimp]-\mathbf{y}\|^{2}
++\alpha\,\mathcal{P}[\Jimp]
+\right\},
+\end{equation}
+with regularization parameter \(\alpha>0\) and penalty
+\(\mathcal{P}\) enforcing smoothness, minimum norm, or sparsity on an equivalent
+surface \cite{harrington2001}. Equation
+\eqref{eq:ch2.tikhonov-source-reconstruction} does not remove
+\(\ker\mathcal{M}_\omega\); it selects one representative from the affine coset
+\(\mathcal{M}_\omega^{-1}(\mathbf{y})\) \cite{stratton1941}. The choice of
+\(\mathcal{P}\) is physics-adjacent modeling, not a Maxwell identity; different
+penalties yield different \({\Jimp}_{\mathrm{reg}}\) with identical radiative
+predictions when \(\delta\Jimp\in\ker\mathcal{R}_\omega\) \cite{harrington2001}. Transport and angular reports attach to \(\mathcal{R}_\omega[\Jimp]\), not to raw
+\(\mathcal{S}_\omega[\Jimp]\), per Eq.~\eqref{eq:ch2.transport-qualified-radiation}
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} criteria
+whether \(\mathcal{R}_\omega[\Jimp]\) lies in the propagating sector on which
+far-zone observables were designed:
+\begin{equation}
+\label{eq:ch2.reconstruction-regime-criterion}
+\mathcal{D}_{J,\mathrm{reg}}=1
+\ \Longrightarrow\
+\text{inverse claims target}\ \mathcal{R}_\omega[\Jimp],
+\ \text{not reactive near fields},
+\end{equation}
+with \(\mathcal{D}_{J,\mathrm{reg}}\) from Eq.~\eqref{eq:ch1.regime-qualified-decision}
+\cite{stratton1941}. Attempting to reconstruct \(\Jimp\) from
+near-zone reactive samples without regime qualification conflates storage with export,
+the laboratory error flagged in Section~\ref{sec:ch01.2.4} \cite{stratton1941}. Outgoing
+uniqueness from exterior radiative uniqueness (Subsection~\ref{sec:ch243}) stabilizes the
+\emph{field} side of Eq.~\eqref{eq:ch2.inverse-source-equation}; it does not promote
+evanescent-dominated states to identifiable radiative sources
+\cite{harrington2001}.
+Formal adjoint back-projection provides a reconstruction \emph{template} without
+claiming uniqueness:
+\begin{equation}
+\label{eq:ch2.adjoint-backprojection}
+\widetilde{\Jimp}
+=
+\mathcal{M}_\omega^{\dagger}\,\mathbf{y},
+\end{equation}
+where \(\mathcal{M}_\omega^{\dagger}\) is the Hilbert-space adjoint on declared
+domains \cite{stratton1941}. Equation
+\eqref{eq:ch2.adjoint-backprojection} is useful for sensitivity analysis and
+iterative inversion but generally satisfies
+\(\mathcal{M}_\omega[\widetilde{\Jimp}]\neq\mathbf{y}\) when
+\(\ker\mathcal{M}_\omega\neq\{\mathbf{0}\}\) \cite{harrington2001}. Consistent
+reconstruction requires projecting onto \(\operatorname{ran}\mathcal{M}_\omega^{\dagger}\)
+or applying Eq.~\eqref{eq:ch2.tikhonov-source-reconstruction}
+\cite{stratton1941}. Full integral representations for
+Eq.~\eqref{eq:ch2.adjoint-backprojection} belong to Section~\ref{sec:ch251}; they are
+not repeated here \cite{harrington2001}.
+Equivalent sources and Huygens surfaces. Equivalent-current inversion on a closed surface \(\Gamma_{\mathrm{eq}}\) seeks
+\(\mathbf{J}_{\mathrm{eq}}\) on \(\Gamma_{\mathrm{eq}}\) such that exterior fields
+match measured data \cite{stratton1941}. Uniqueness of exterior
+\(\mathcal{S}_\omega\) from exterior radiative uniqueness (Subsection~\ref{sec:ch243})
+fixes the \emph{field} on \(\mathcal{F}_{\mathrm{SF}}\) but not
+\(\mathbf{J}_{\mathrm{eq}}\): any non-radiating tangential distribution on
+\(\Gamma_{\mathrm{eq}}\) can be added without changing far-zone samples
+\cite{harrington2001}. The operator form is
+\begin{equation}
+\label{eq:ch2.equivalent-source-ambiguity}
+\mathbf{J}_{\mathrm{eq},1}-\mathbf{J}_{\mathrm{eq},2}
+\in
+\ker\mathcal{R}_\omega\big|_{\Gamma_{\mathrm{eq}}},
+\end{equation}
+with restriction to surface currents in the trace class of
+Subsection~\ref{sec:ch211} \cite{stratton1941}. Numerical equivalence in
+Eq.~\eqref{eq:ch2.discrete-green-equivalence} inherits the same null-space structure
+at finite matrix rank \cite{harrington2001}.
+Near-field versus far-field data. Near-field scanning samples \(\mathcal{S}_\omega[\Jimp]\) on a surface enclosing
+\(\Omega_s\), not \(\mathcal{R}_\omega[\Jimp]\) alone \cite{stratton1941}. Because
+\(\mathcal{S}_\omega\) is injective on outgoing fields but many sources share the
+same \(\mathcal{R}_\omega\) image, near-field data can \emph{reduce} null-space
+dimension relative to far-zone-only inversion without eliminating
+\(\ker\mathcal{R}_\omega\) in general \cite{harrington2001}. Outgoing radiation condition still
+required: two incoming/outgoing superpositions with identical near traces on a finite
+surface need not agree in the far zone unless exterior radiative uniqueness (Subsection~\ref{sec:ch243})
+applies to the full exterior problem \cite{stratton1941}. Near-field
+inversion therefore couples Subsection~\ref{sec:ch243} field uniqueness with
+Subsection~\ref{sec:ch244} source non-uniqueness \cite{harrington2001}. Equations~\eqref{eq:ch2.inverse-source-equation}--\eqref{eq:ch2.tikhonov-source-reconstruction}
+require linear Maxwell theory, fixed \(\omega\), admissible
+Eq.~\eqref{eq:ch2.source-admissibility}, and outgoing forward completion
+Eq.~\eqref{eq:ch2.outgoing-resolvent-unique} \cite{stratton1941}.
+Nonlinear, time-varying, or dispersive inversion breaks the harmonic reduction of
+Subsection~\ref{sec:ch223}. Single-frequency inversion cannot resolve broadband
+excitation without superposition across \(\omega\) \cite{stratton1941}. Loss improves
+conditioning of Eq.~\eqref{eq:ch2.inverse-source-equation} by damping resonances but
+does not make \(\mathcal{R}_\omega\) injective on all of \(\mathcal{J}_\Omega\)
+\cite{harrington2001}. Complete null-space bases and NR source examples belong to
+Section~\ref{sec:ch27} \cite{stratton1941}.
+As a worked example, with \(N\) probe channels, Eq.~\eqref{eq:ch2.reconstruction-rank-cap} limits
+recoverable modal content to rank \(N\) regardless of mesh density
+\cite{stratton1941}. Refining a boundary-element mesh without adding independent
+measurements does not resolve components in
+\(\ker\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\)
+\cite{harrington2001}. This is the operator reading of
+Eq.~\eqref{eq:ch2.observation-null-space}, distinct from discretization error alone
+\cite{stratton1941}. As a worked example, a source with \(\mathcal{D}_{J,\mathrm{reg}}=0\) may produce strong near-zone
+\(\mathcal{S}_\omega[\Jimp]\) while \(\mathcal{R}_\omega[\Jimp]\approx\mathbf{0}\)
+\cite{stratton1941}. Inverting near samples without
+Eq.~\eqref{eq:ch2.reconstruction-regime-criterion} assigns spurious radiative labels to
+storage-dominated fields \cite{harrington2001}. regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} must precede angular-transport claims on
+reconstructed sources \cite{stratton1941}. \medskip
+\noindent
+Section~\ref{sec:ch24} closes with the excitation-to-flux sequence fixed for open regions:
+Sommerfeld asymptotics and outgoing class
+Eqs.~\eqref{eq:ch2.sommerfeld-outgoing-class}--\eqref{eq:ch2.sommerfeld-field-condition}
+(Subsection~\ref{sec:ch241}), outgoing selector and resolvent branch
+Eqs.~\eqref{eq:ch2.outgoing-selector-def}--\eqref{eq:ch2.outgoing-solution-operator}
+(Subsection~\ref{sec:ch242}), exterior radiative uniqueness
+Eq.~\eqref{eq:ch2.exterior-uniqueness-theorem} and resolvent injectivity
+Eq.~\eqref{eq:ch2.exterior-resolvent-injective} (Subsection~\ref{sec:ch243}), and
+inverse reconstruction limits
+Eqs.~\eqref{eq:ch2.inverse-source-equation}--\eqref{eq:ch2.ker-R-omega}
+(Subsection~\ref{sec:ch244}) \cite{stratton1941}. Green
+kernels from Section~\ref{sec:ch23} are now tied to a single physical branch;
+\(\mathcal{S}_\omega\) is single-valued on \(\mathcal{F}_{\mathrm{SF}}\), while
+\(\mathcal{R}_\omega\) and composed measurement readouts remain rank-deficient on
+\(\mathcal{J}_\Omega\) \cite{harrington2001}. Section~\ref{sec:ch25} evaluates
+radiation integrals, flux meters, and near/intermediate/far partitions on the
+qualified propagating subspace; Section~\ref{sec:ch27} completes non-radiating
+null-space structure \cite{stratton1941}. Regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} and transport criterion
+Eq.~\eqref{eq:ch2.transport-qualified-radiation} remain mandatory before
+angular-transport claims on operator outputs \cite{stratton1941}.
+Outgoing-wave selection fixes the exterior resolvent branch assumed throughout radiation
+integrals; realizability limits---which accessible modes finite geometry can
+excite---are established in \ref{ch:04} (\emph{Source $\mathcal{S}_{\mathrm{real}}$ and Spectral Truncation}).

@@ -1,0 +1,310 @@
+% Stage 8 restored fragment — 2.4.3 Uniqueness of radiative solutions (archive lines 5456-5772)
+\subsection{Uniqueness of radiative solutions}
+\label{sec:ch243}
+
+Outgoing selection is not a post hoc spatial mask: Sommerfeld radiation and uniqueness on $\mathcal{B}_\Gamma$ decide which Maxwell solutions carry watt-bearing export before harmonic charts attach \cite{sommerfeld1949,stratton1941}. Reactive near-field energy may be locally large while contributing negligibly to $P_{\mathrm{rad}}$ on $\Gamma_R$ once $\Pi_{\mathrm{rad}}$ is fixed \cite{harrington2001}.
+Without exterior uniqueness, two distinct field pairs could satisfy the same feed data while
+differing on the measurement sphere---a failure no wattmeter or pattern probe could resolve
+\cite{sommerfeld1949}. The proof below is therefore not a mathematical luxury
+imposed for elegance; it is the physical condition under which laboratory attribution of
+radiation to declared sources becomes meaningful. Outgoing selection is not a post hoc spatial
+mask: Sommerfeld radiation and uniqueness on
+$\mathcal{B}_\Gamma$ decide which Maxwell solutions carry watt-bearing export before harmonic
+charts attach \cite{sommerfeld1949}. On $\Gamma_R$, reactive near-field energy may be locally
+large while contributing negligibly to $P_{\mathrm{rad}}$ once $\mathcal{R}_\omega$ and
+$\Pi_{\mathrm{rad}}$ are fixed \cite{harrington2001}. Exterior uniqueness ties measured patterns
+to declared sources within the radiative class \cite{stratton1941}. Solvers that omit outgoing
+filters fit non-radiating currents that compact ranges cannot distinguish from export without
+watt completion on $\mathcal{R}_\omega[\Jimp]$ rather than on $\mathcal{S}_\omega[\Jimp]$ alone
+\cite{jackson1999}. The proof below imports the difference-field energy method from
+Subsection~\ref{sec:ch01.1.3} and specializes it to the Sommerfeld outgoing class fixed in
+Subsection~\ref{sec:ch241}.
+
+Subsection~\ref{sec:ch243} proves that exterior radiative solutions are unique on the
+outgoing branch, upgrading hypothesis
+Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis} to exterior radiative uniqueness
+\cite{stratton1941}. The difference-field reduction
+Eqs.~\eqref{eq:ch1.uniqueness-difference-system}--\eqref{eq:ch1.uniqueness-null} and
+energy identity Eq.~\eqref{eq:ch1.uniqueness-energy-identity} from
+Subsection~\ref{sec:ch01.1.3} are presupposed; the passive uniqueness argument and
+coercive estimate Eq.~\eqref{eq:ch1.uniqueness-estimate} are not re-proved.
+Subsection~\ref{sec:ch243} specializes the energy method to exterior domains with
+Eqs.~\eqref{eq:ch2.sommerfeld-field-condition}--\eqref{eq:ch2.sommerfeld-outgoing-class},
+outgoing resolvent selection
+Eqs.~\eqref{eq:ch2.outgoing-resolvent-selection}--\eqref{eq:ch2.outgoing-solution-operator},
+and radiation refinement Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}. Source
+reconstruction limits belong to Subsection~\ref{sec:ch244}. Let \(\Omega_{\mathrm{ext}}\) denote an exterior domain with compact
+\(\operatorname{supp}\Jimp\subset B_R(0)\), vacuum constants \(\varepsilon_0,\mu_0\)
+in the far zone, and fixed \(\omega>0\) in the harmonic band of
+Subsection~\ref{sec:ch223}. Data are admissible per
+Eq.~\eqref{eq:ch1.admissible-data-class} with outgoing radiation condition
+Eq.~\eqref{eq:ch2.sommerfeld-outgoing-class} at infinity, equivalently
+Eq.~\eqref{eq:ch1.radiation-trace-condition} on spherical shells
+\cite{stratton1941}. Constitutive response in the source region is passive:
+\(\Im\{\varepsilon\}\ge 0\), \(\Im\{\mu\}\ge 0\) or equivalent loss so homogeneous
+difference energy is dissipative \cite{stratton1941}. Incoming and advanced branches
+are excluded by Eq.~\eqref{eq:ch2.outgoing-selector-def} and
+Eq.~\eqref{eq:ch2.incoming-outgoing-complement} \cite{harrington2001}. Fields lie in
+\(\mathcal{F}_{\mathrm{SF}}\) as defined in Subsection~\ref{sec:ch241}; radiative
+export uses \(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}\) from
+Eq.~\eqref{eq:ch2.far-zone-transverse-radiation} \cite{stratton1941}.
+Uniqueness is established by showing that two outgoing solutions for the same impressed data
+cannot differ nontrivially: the proof therefore studies the homogeneous problem satisfied by
+their difference \cite{stratton1941}. Let \((\E_1,\H_1)\) and \((\E_2,\H_2)\) be two harmonic
+solutions on the outgoing branch for the same impressed data and \(\mathcal{B}_\Gamma\). Define
+\(\Delta\E=\E_1-\E_2\), \(\Delta\H=\H_1-\H_2\), and
+\(\mathbf{u}_\Delta=(\Delta\E,\Delta\H)\). Linearity and
+Eq.~\eqref{eq:ch1.uniqueness-difference-system} give the homogeneous exterior system
+\begin{equation}
+\label{eq:ch2.exterior-difference-system}
+\curl\Delta\E=-\jj\omega\mu\,\Delta\H,\quad
+\curl\Delta\H=\jj\omega\varepsilon\,\Delta\E,\quad
+\mathcal{B}_\Gamma[\Delta\E,\Delta\H]=\mathbf{0},
+\end{equation}
+with \(\varepsilon,\mu\) matching the physical model in \(\Omega_s\) and
+\(\varepsilon_0,\mu_0\) outside \cite{stratton1941}. Physically, if two outgoing solutions
+for the same feed existed, their difference would satisfy this homogeneous system while still
+carrying export on $\Gamma_R$---a situation the flux argument below excludes
+\cite{stratton1941}. Outgoing radiation condition requires
+\begin{equation}
+\label{eq:ch2.exterior-difference-outgoing}
+\mathcal{O}_{\mathrm{out}}[\mathbf{u}_\Delta]=\mathbf{u}_\Delta,
+\qquad
+\mathbf{u}_\Delta\in\mathcal{F}_{\mathrm{SF}},
+\end{equation}
+which is the exterior specialization of the third row of
+Eq.~\eqref{eq:ch1.uniqueness-difference-system} when
+\(\mathcal{B}_\Gamma\) includes Sommerfeld radiation \cite{harrington2001}. Equations
+\eqref{eq:ch2.exterior-difference-system}--\eqref{eq:ch2.exterior-difference-outgoing}
+state that uniqueness testing reduces to showing only the trivial pair satisfies the
+homogeneous outgoing problem \cite{stratton1941}. Incoming difference modes would
+violate Eq.~\eqref{eq:ch2.exterior-difference-outgoing} even if they satisfied the
+curl rows \cite{jackson1999}.
+On truncated exterior shells, form the complex Poynting vector for difference fields,
+\(\mathbf{S}_\Delta=\tfrac12\Delta\E\times\Delta\H^{*}\), as in
+Eq.~\eqref{eq:ch1.uniqueness-energy-identity} \cite{stratton1941}. For a large
+sphere \(\Gamma_R=\{r=R\}\) enclosing \(\Omega_s\), let
+\(\Omega_R=B_R\setminus\Omega_s\). The divergence theorem on \(\Omega_R\) yields
+\begin{equation}
+\label{eq:ch2.exterior-flux-identity}
+\int_{\Gamma_R}\hat{\mathbf{r}}\cdot\mathbf{S}_\Delta\,dS
+=
+-\jj\omega\!\int_{\Omega_R}
+\Big(u_{\Delta H}-u_{\Delta E}\Big)\,dV
+\;+\;\mathcal{P}_{\Delta,s},
+\end{equation}
+where \(u_{\Delta E}=\tfrac14\varepsilon|\Delta\E|^{2}\),
+\(u_{\Delta H}=\tfrac14\mu|\Delta\H|^{2}\), and \(\mathcal{P}_{\Delta,s}\) collects
+source-region passive dissipation when \(\Im\{\varepsilon\},\Im\{\mu\}>0\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.exterior-flux-identity}
+is Eq.~\eqref{eq:ch1.uniqueness-energy-identity} with \(\Delta\Jimp=\mathbf{0}\) and
+\(\Gamma=\Gamma_R\); its real part controls uniqueness through the sign of the
+boundary flux \cite{stratton1941}. On a compact range, the real part of the $\Gamma_R$ integral
+is what a wattmeter would read from the difference field if such a superposition were
+physically present; outgoing selection forces that reading to nonnegative export or zero
+\cite{harrington2001}. In lossless vacuum on
+\(\Omega_R\setminus\Omega_s\), the volume term is purely imaginary at steady state,
+so \(\Re\int_{\Gamma_R}\hat{\mathbf{r}}\cdot\mathbf{S}_\Delta\,dS\) is determined
+entirely by far-zone radiation \cite{harrington2001}.
+Sommerfeld condition Eq.~\eqref{eq:ch2.sommerfeld-field-condition} implies that on
+\(\Gamma_R\) with \(R\gg a=\max|\mathbf{r}|\) over \(\operatorname{supp}\Jimp\), the
+leading transverse contribution to \(\Delta\E,\Delta\H\) scales as
+\(e^{-\jj k_0 R}/R\) with \(k_0=\omega\sqrt{\varepsilon_0\mu_0}\)
+\cite{stratton1941}. The far-zone transverse radiation law
+Eq.~\eqref{eq:ch2.far-zone-transverse-radiation} then gives
+\begin{equation}
+\label{eq:ch2.exterior-flux-asymptotic}
+\Re\int_{\Gamma_R}\hat{\mathbf{r}}\cdot\mathbf{S}_\Delta\,dS
+=
+P_{\Delta,\mathrm{rad}}(R)
+=
+\frac{1}{2\eta_0}\oint_{\Gamma_R}
+\big|\mathbf{E}_{\Delta,t}\big|^{2}\,dS
+\;+\;\mathcal{O}(R^{-1}),
+\end{equation}
+with \(\eta_0=\sqrt{\mu_0/\varepsilon_0}\) and \(\mathbf{E}_{\Delta,t}\) the
+transverse spherical component of \(\Delta\E\) \cite{stratton1941}. Taking
+\(R\to\infty\) under outgoing radiation condition,
+\begin{equation}
+\label{eq:ch2.exterior-sommerfeld-flux-limit}
+\lim_{R\to\infty}P_{\Delta,\mathrm{rad}}(R)
+=
+P_{\Delta,\mathrm{rad}}\ge 0,
+\end{equation}
+where \(P_{\Delta,\mathrm{rad}}\) is the net outgoing power carried by the difference
+field \cite{stratton1941}. Equation
+\eqref{eq:ch2.exterior-sommerfeld-flux-limit} is the exterior boundary term induced
+by Eq.~\eqref{eq:ch1.radiation-trace-condition}: outgoing difference fields radiate
+nonnegative power to infinity, while incoming difference fields would produce negative
+flux and are excluded by \(\mathcal{O}_{\mathrm{out}}\)
+\cite{jackson1999}. Dyadic asymptotics
+Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic} are presupposed; they are not
+re-tabulated here \cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (s) {Compact\\$\Omega_s$};
+ \node[ch1box, right=16mm of s] (d) {$\Delta\E,\Delta\H$\\outgoing};
+ \node[ch1box, right=16mm of d] (gr) {$\Gamma_R$\\flux};
+ \node[ch1box, right=16mm of gr] (out) {$P_{\Delta,\mathrm{rad}}\ge 0$};
+ \draw[ch1flow] (s) -- (d) -- (gr) -- (out);
+\end{tikzpicture}%
+}
+\caption{Exterior uniqueness flux argument: homogeneous difference fields on the
+outgoing branch satisfy Eqs.~\eqref{eq:ch2.exterior-flux-identity}--\eqref{eq:ch2.exterior-sommerfeld-flux-limit}
+on spheres \(\Gamma_R\).}
+\label{fig:ch2.exterior-uniqueness-flux}
+\end{figure}
+Section~\ref{sec:ch01.3}: volume terms in
+Eq.~\eqref{eq:ch2.exterior-flux-identity} are controlled by passivity when loss is
+present, and vanish in lossless vacuum away from sources \cite{stratton1941}. \phantomsection\label{lem:ch2.zero-flux-difference}
+Let \(\mathbf{u}_\Delta=(\Delta\E,\Delta\H)\) satisfy
+Eqs.~\eqref{eq:ch2.exterior-difference-system}--\eqref{eq:ch2.exterior-difference-outgoing}
+on an exterior domain with vacuum far zone. If
+\(P_{\Delta,\mathrm{rad}}=0\) in Eq.~\eqref{eq:ch2.exterior-sommerfeld-flux-limit},
+then \(\mathbf{E}_{\Delta,t}=\mathbf{0}\) on every sphere \(\Gamma_R\) for
+\(R\) large enough, and \(\mathbf{u}_\Delta\) has no propagating outgoing content in
+\(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.
+Eq.~\eqref{eq:ch2.exterior-flux-asymptotic} with \(P_{\Delta,\mathrm{rad}}=0\) forces
+\(\oint_{\Gamma_R}|\mathbf{E}_{\Delta,t}|^{2}\,dS=0\) for all sufficiently large
+\(R\). Outgoing transverse fields with zero spherical flux cannot carry
+\(1/R\) radiation; the only remaining homogeneous outgoing transverse modes are
+identically zero on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}. \phantomsection\label{thm:ch2.exterior-radiative-uniqueness}
+Let \(\Omega_{\mathrm{ext}}\) be an exterior domain with compact impressed sources,
+vacuum far zone, and outgoing Sommerfeld completion
+Eqs.~\eqref{eq:ch2.sommerfeld-outgoing-class}--\eqref{eq:ch2.outgoing-selector-def}.
+If \((\E_1,\H_1)\) and \((\E_2,\H_2)\) are harmonic Maxwell solutions on the outgoing
+branch for the same admissible data, then \(\E_1=\E_2\) and \(\H_1=\H_2\).
+Equivalently,
+\begin{equation}
+\label{eq:ch2.exterior-uniqueness-theorem}
+\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}
+\ \text{and}\ 
+\mathbf{u}_\omega\in\mathcal{F}_{\mathrm{SF}}
+\ \Longrightarrow\
+\mathbf{u}_\omega=\mathbf{0},
+\end{equation}
+which upgrades Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis} to the Chapter~\ref{ch:02}
+definitive uniqueness statement \cite{stratton1941}.
+Let \(\mathbf{u}_\Delta\) be the difference of two outgoing solutions. Then
+Eqs.~\eqref{eq:ch2.exterior-difference-system}--\eqref{eq:ch2.exterior-difference-outgoing}
+hold. Apply Eq.~\eqref{eq:ch2.exterior-flux-identity} and take
+\(\Re\{\cdot\}\). In lossless vacuum outside \(\Omega_s\), the volume integral is
+purely imaginary, so \(\Re P_{\Delta,\mathrm{rad}}(R)\) equals the real boundary flux.
+Outgoing radiation condition forces \(\Re P_{\Delta,\mathrm{rad}}\ge 0\); passivity in
+\(\Omega_s\) adds nonnegative \(\Re\mathcal{P}_{\Delta,s}\), so the only way to
+satisfy Eq.~\eqref{eq:ch2.exterior-sommerfeld-flux-limit} with equality throughout is
+\(P_{\Delta,\mathrm{rad}}=0\) \cite{stratton1941}. The auxiliary relation (\ref{lem:ch2.zero-flux-difference})
+eliminates outgoing transverse content. Evanescent components remain in
+\(\mathcal{F}_{\mathrm{SF}}\) but are tied to the same source-free outgoing solution
+operator; with no radiative export and homogeneous forcing, the unique retarded
+exterior state is trivial by Eq.~\eqref{eq:ch2.outgoing-solution-operator} with
+\(\Jimp=\mathbf{0}\) \cite{harrington2001}. Hence
+\(\mathbf{u}_\Delta=\mathbf{0}\), proving Eq.~\eqref{eq:ch2.exterior-uniqueness-theorem}.
+Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) is the exterior counterpart of
+the passive uniqueness argument (Subsection~\ref{sec:ch01.1.3}): instead of a bounded passive
+\(\Gamma\) with coercivity Eq.~\eqref{eq:ch1.uniqueness-estimate}, the exterior uses
+Sommerfeld flux Eq.~\eqref{eq:ch2.exterior-sommerfeld-flux-limit} as the coercive
+boundary channel \cite{stratton1941}. The uniqueness index
+Eq.~\eqref{eq:ch1.uniqueness-condition-index} is finite on exterior outgoing problems
+away from embedded resonances in finite scatterers; it diverges on bounded cavities at
+Eq.~\eqref{eq:ch2.cavity-resonance-failure} \cite{harrington2001}. Exterior uniqueness
+therefore replaces bounded coercivity with an \emph{open} boundary condition that
+selects decaying outgoing phase \cite{stratton1941}.
+Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) makes the physical resolvent
+injective on the outgoing subspace:
+\begin{equation}
+\label{eq:ch2.exterior-resolvent-injective}
+\mathcal{L}_\omega^{-1}\big|_{\mathrm{phys}}:
+\mathcal{Y}_\omega\to\mathcal{F}_{\mathrm{SF}}
+\ \text{is single-valued},
+\qquad
+\mathcal{S}_\omega[\Jimp]
+=
+\mathcal{L}_\omega^{-1}\big|_{\mathrm{phys}}
+\begin{bmatrix}\mathbf{s}_\omega(\Jimp,\rho)\\ \mathbf{g}_\Gamma\end{bmatrix},
+\end{equation}
+consistent with Eq.~\eqref{eq:ch2.green-bvp-equivalence}, outgoing Green branch
+Eq.~\eqref{eq:ch2.outgoing-green-branch}, and solution selection
+Eq.~\eqref{eq:ch2.outgoing-solution-operator} \cite{stratton1941}.
+\phantomsection\label{cor:ch2.outgoing-green-unique}
+For fixed \(\Jimp\) in the admissible class, the exterior field
+\(\mathcal{S}_\omega[\Jimp]\) obtained from
+Eq.~\eqref{eq:ch2.outgoing-solution-operator} is unique in
+\(\mathcal{F}_{\mathrm{SF}}\) \cite{stratton1941}.
+Two convolutions differing by a homogeneous outgoing state violate
+exterior radiative uniqueness (Subsection~\ref{sec:ch243}) \cite{harrington2001}.
+Subsection~\ref{sec:ch201} declared \(\Pi_{\mathrm{rad}}\) idempotent on
+\(\mathcal{F}_{\mathrm{rad}}\); the joint property with outgoing radiation condition can now be
+stated precisely. On radiative states,
+\begin{equation}
+\label{eq:ch2.rad-idempotency-radiative}
+\Pi_{\mathrm{rad}}^2=\Pi_{\mathrm{rad}}
+\quad\text{on}\ \mathcal{F}_{\mathrm{rad}},
+\end{equation}
+as developed in Subsection~\ref{sec:ch201} \cite{stratton1941}. After
+exterior radiative uniqueness (Subsection~\ref{sec:ch243}), the measurement sequence
+Eq.~\eqref{eq:ch2.outgoing-radiation-refinement} defines a single-valued map
+\(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\) without branch
+ambiguity from duplicate outgoing decompositions \cite{harrington2001}. Evanescent
+components remain in \(\ker\Pi_{\mathrm{rad}}\) through
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent}; uniqueness of \(\mathcal{S}_\omega\) does
+not imply uniqueness of \(\mathcal{R}_\omega[\Jimp]\) when near-zone evanescent
+storage dominates export \cite{stratton1941}.
+Outgoing selector idempotency Eq.~\eqref{eq:ch2.outgoing-idempotency} and resolvent
+selection Eq.~\eqref{eq:ch2.outgoing-resolvent-selection} are consistent with
+exterior radiative uniqueness (Subsection~\ref{sec:ch243}):
+\begin{equation}
+\label{eq:ch2.outgoing-resolvent-unique}
+\mathcal{O}_{\mathrm{out}}\circ\mathcal{L}_\omega^{-1}
+=
+\mathcal{L}_\omega^{-1}\big|_{\mathrm{phys}}
+\quad\text{is unique on}\ \mathcal{Y}_\omega,
+\end{equation}
+because any two selections differing by a homogeneous outgoing mode would violate
+Eq.~\eqref{eq:ch2.exterior-uniqueness-theorem} \cite{stratton1941}.
+Equation~\eqref{eq:ch2.outgoing-resolvent-unique} closes the excitation-to-flux sequence of
+Figure~\ref{fig:ch2.outgoing-selector-measurement chain} on exterior domains: once data are
+fixed, \(\mathcal{O}_{\mathrm{out}}\), \(\mathcal{S}_\omega\), and
+\(\Pi_{\mathrm{rad}}\) act on a single field orbit in \(\mathcal{F}_{\mathrm{SF}}\)
+\cite{stratton1941}.
+On bounded domains with passive \(\mathcal{B}_\Gamma\), uniqueness follows from
+Eq.~\eqref{eq:ch2.lax-milgram-wellposed} and
+the passive uniqueness argument (Subsection~\ref{sec:ch01.1.3}) after quotienting
+Eq.~\eqref{eq:ch2.coercivity-quotient} \cite{stratton1941}. At cavity eigenfrequencies,
+\begin{equation}
+\label{eq:ch2.exterior-vs-cavity-uniqueness}
+\text{bounded PEC cavity:}\ \ker\mathcal{L}_\omega\neq\{\mathbf{0}\}
+\quad\text{vs.}\quad
+\text{exterior outgoing:}\ \ker\mathcal{L}_\omega|_{\mathcal{F}_{\mathrm{SF}}}=\{\mathbf{0}\},
+\end{equation}
+so Eq.~\eqref{eq:ch2.exterior-uniqueness-theorem} does not apply to closed resonators
+where Eq.~\eqref{eq:ch2.cavity-resonance-failure} holds \cite{harrington2001}.
+Exterior uniqueness is therefore a property of \(\mathcal{F}_{\mathrm{SF}}\) with
+Sommerfeld completion, not of arbitrary \(\mathcal{B}_\Gamma\) from
+Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}. A finite scatterer
+embedded in free space may support Mie resonances in the near field without breaking
+exterior uniqueness: those modes are driven by \(\Jimp\) and do not appear as free
+homogeneous outgoing states \cite{jackson1999}.
+Laboratory errors and non-applicability. Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) requires linear passive media,
+fixed \(\omega\) away from pathological embedded spectra, and exact outgoing radiation condition
+rather than approximate ABC alone \cite{stratton1941}. First-order
+absorbing boundaries that do not enforce Eq.~\eqref{eq:ch2.sommerfeld-field-condition}
+at large \(R\) can admit spurious incoming content; uniqueness is then a property of
+the \emph{augmented} truncated problem, not of the physical exterior
+\cite{harrington2001}. Anisotropic, moving, or nonlinear media require modified flux
+functionals; time-varying \(\mathcal{B}_\Gamma(t)\) breaks the harmonic reduction of
+Subsection~\ref{sec:ch223} \cite{stratton1941}. Uniqueness of \(\mathcal{S}_\omega\)
+does not imply uniqueness of \(\Jimp\) in \(\mathcal{R}_\omega\)---that is
+Subsection~\ref{sec:ch244} \cite{harrington2001}. Regime qualification for transport
+remains Eq.~\eqref{eq:ch2.regime-operator-screen}, independent of field uniqueness
+\cite{stratton1941}.
+As a worked example, truncating at finite \(R\) with a first-order ABC may return two numerically distinct
+fields that agree on \(\Gamma_R\) but differ in spurious incoming content reflected
+between \(\Omega_s\) and the ABC \cite{harrington2001}. Those differences are not
+counterexamples to exterior radiative uniqueness (Subsection~\ref{sec:ch243}) on
+\(\Omega_{\mathrm{ext}}\); they signal that the truncated BVP lacks
+Eq.~\eqref{eq:ch2.sommerfeld-outgoing-class}. Silver--Müller surrogates
+Eq.~\eqref{eq:ch2.silver-muller-trace-approx} improve the completion but still require
+\(R\gg\lambda_0\) for uniqueness in practice \cite{stratton1941}.

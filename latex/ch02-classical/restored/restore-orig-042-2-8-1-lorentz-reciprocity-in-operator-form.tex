@@ -1,0 +1,278 @@
+% Stage 8 restored fragment — 2.8.1 Lorentz reciprocity in operator form (archive lines 10306-10596)
+\subsection{Lorentz reciprocity in operator form}
+\label{sec:ch281}
+
+On a declared compact-range or anechoic campaign, technicians record frequency, outline, and probe geometry before any harmonic fit is trusted \cite{hansen1988}. Reciprocity links transmission and reception on the same passive structure \cite{stratton1941}. Two-port calibrations depend on it \cite{jackson1999}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Reciprocity is the laboratory fact that passive linear antennas exchange the same complex
+transfer when transmit and receive roles swap on a calibrated vector network analyzer
+\cite{stratton1941}. The adjoint radiation map extends that symmetry for continuous sources
+and traces, enabling source reconstruction and equivalence checks without re-solving unrelated
+models \cite{devaney2004}. Reflector feeds, horn coupling, and patch arrays are routinely tuned
+by comparing \(S_{21}\) and \(S_{12}\); persistent asymmetry after calibration usually signals a
+broken outgoing radiation condition or incorrect impressed-current normalization rather than a
+genuine non-reciprocal medium \cite{hansen1988}. Reciprocity cannot be set aside merely because
+``only the radiative image matters'': pattern, gain, and scattering matrices on passive hardware
+are reciprocity-linked observables tied to the same Maxwell operator
+\cite{stratton1941}. Lorentz reciprocity is therefore a consequence of passive
+linear Maxwell theory, not an optional post-check applied after the forward solve
+\cite{stratton1941}. Two-port calibrations and bistatic radar-cross-section matrices inherit the
+same exchange symmetry whenever media and boundaries satisfy the reciprocal class stated below
+\cite{jackson1999}. The volume identity that follows states the same swap observed on the
+VNA once impressed sources and test fields are paired through the Maxwell adjoint.
+\medskip
+Section~\ref{sec:ch28} established bilinear exchange symmetry through
+Eqs.~\eqref{eq:ch2.section28-reciprocity-chain}--\eqref{eq:ch2.lorentz-reciprocity}.
+Subsection~\ref{sec:ch281} supplies the definitive account of Lorentz reciprocity on
+\(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\), including the full proof of dyadic swap
+Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} deferred from Subsection~\ref{sec:ch231}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.maxwell-adjoint-pairing}, source dual pairing
+Eq.~\eqref{eq:ch2.dual-source-pairing}, outgoing radiation condition
+Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique},
+and outgoing source-to-field integrals of Subsection~\ref{sec:ch251} are presupposed;
+Green construction and Sommerfeld uniqueness are not re-opened \cite{stratton1941}. Modal
+orthogonality and coupling belong to Subsection~\ref{sec:ch282}; transmit--receive systems to
+Subsection~\ref{sec:ch283} \cite{harrington2001}.
+Assumptions. Fix \(\omega>0\), Lipschitz domain \(\Omega\) with piecewise smooth interfaces, impressed
+sources in \(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-space-refined} satisfying
+Eq.~\eqref{eq:ch2.source-admissibility}, and outgoing fields in
+\(\mathcal{F}_{\mathrm{SF}}\) Eq.~\eqref{eq:ch2.admissible-field-space}
+\cite{stratton1941}. Constitutive tensors are linear, local, and passive at
+\(\omega\), with symmetric permittivity and permeability in the sense
+
+\begin{equation}
+\label{eq:ch2.reciprocal-medium-class}
+\overline{\overline{\varepsilon}}(\mathbf{r})=\overline{\overline{\varepsilon}}^{\mathsf{T}}(\mathbf{r}),
+\qquad
+\overline{\overline{\mu}}(\mathbf{r})=\overline{\overline{\mu}}^{\mathsf{T}}(\mathbf{r}),
+\qquad
+\overline{\overline{\xi}}=\overline{\overline{\zeta}}=\mathbf{0},
+\end{equation}
+where \(\overline{\overline{\xi}}\), \(\overline{\overline{\zeta}}\) denote magneto-electric
+coupling blocks in the constitutive relation imported from Section~\ref{sec:ch01.1.2}
+\cite{stratton1941}. Boundary operator \(\mathcal{B}_\Gamma\) is passive
+Eq.~\eqref{eq:ch2.passive-impedance-class} and identical for both excitations
+\cite{stratton1941}. Field pairing \(\langle\cdot,\cdot\rangle_{\mathcal{U}}\)
+is induced by Eq.~\eqref{eq:ch2.field-energy-norm} on admissible Maxwell pairs
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
+interpretation of any bilinear quantity built from \(\Pi_{\mathrm{rad}}\)
+\cite{harrington2001}.
+Equation~\eqref{eq:ch2.reciprocal-medium-class} is the Chapter~\ref{ch:02} $\mathcal{D}_J=1$
+class for \emph{full} Lorentz reciprocity at fixed \(\omega\): symmetric \(\varepsilon\),
+\(\mu\) ensure time-reversal symmetry of the harmonic Maxwell system modulo outgoing
+selection, while vanishing magneto-electric blocks exclude non-reciprocal gyrotropic or
+Tellegen couplings \cite{stratton1941}. Isotropic lossless media are a special
+case with scalar \(\varepsilon\), \(\mu\). Lossy symmetric tensors preserve reciprocity
+relations stated below with complex conjugation on one slot of each pairing
+\cite{stratton1941}. Active or negative-real impedance portions of
+\(\mathcal{B}_\Gamma\) break passive symmetry and are excluded from the present theorem
+\cite{stratton1941}.
+Let \((\E_1,\H_1)=\mathcal{S}_\omega[\Jimp^{(1)}]\) and
+\((\E_2,\H_2)=\mathcal{S}_\omega[\Jimp^{(2)}]\) be outgoing admissible solutions for
+independent impressed currents \(\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega\)
+\cite{stratton1941}. Here \(\Jimp^{(k)}\) denotes the impressed electric current density in
+\(\mathrm{A\,m^{-2}}\), \(\E_k\) and \(\H_k\) are the induced phasor fields in \(\mathrm{V\,m^{-1}}\)
+and \(\mathrm{A\,m^{-1}}\), and \(\Gamma\) is the passive boundary on which the surface integral
+below is evaluated. Physically, the left member is the bilinear coupling measured when port labels
+are swapped on reciprocal hardware; the right member is the surface remainder after integration by
+parts. The classical Lorentz reciprocity relation reads
+\begin{equation}
+\label{eq:ch2.lorentz-volume-reciprocity}
+\int_\Omega
+\big(\E_1\cdot\Jimp^{(2)*}-\E_2\cdot\Jimp^{(1)*}\big)\,d^{3}r
+=
+\int_\Gamma
+\big(\hat{\mathbf{n}}\times\E_1\cdot\H_2^{*}
+-\hat{\mathbf{n}}\times\E_2\cdot\H_1^{*}\big)\,dS,
+\end{equation}
+when \(\overline{\overline{\varepsilon}}\), \(\overline{\overline{\mu}}\) satisfy
+Eq.~\eqref{eq:ch2.reciprocal-medium-class} and \(\mathcal{B}_\Gamma\) is passive
+\cite{stratton1941}. Equation~\eqref{eq:ch2.lorentz-volume-reciprocity}
+balances impressed-source bilinear forms against a boundary pairing generated by
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing}: the left member measures how each field couples
+to the other's source, while the right member is the surface term that remains after
+integration by parts on the Maxwell operator \cite{stratton1941}. Interpretation: when the
+boundary term vanishes on admissible outgoing pairs, the port-swap scalar observed on the VNA
+equals the volume contraction on the left. On domains where
+\(\mathcal{B}_\Gamma\) annihilates the boundary integrand for admissible outgoing pairs---PEC,
+homogeneous impedance with Eq.~\eqref{eq:ch2.passive-impedance-class}, and standard
+Sommerfeld exterior completions---the surface term vanishes and volume reciprocity closes
+\cite{stratton1941}.
+Derivation sketch (volume form). Substitute \(\mathbf{u}_\omega^{(1)}=(\E_1,\H_1)\) and \(\mathbf{u}_\omega^{(2)}=(\E_2,\H_2)\)
+into Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} and interchange the two states
+\cite{stratton1941}. Symmetry of \(\overline{\overline{\varepsilon}}\),
+\(\overline{\overline{\mu}}\) under Eq.~\eqref{eq:ch2.reciprocal-medium-class} makes the
+volume pairing sesquilinear form on \(\mathcal{M}_\omega[\mathbf{u}_\omega]\) invariant under
+label swap when sources are impressed currents in the Amp\`ere row
+\cite{stratton1941}. Subtracting the two adjoint identities eliminates
+\(\langle\mathcal{M}_\omega[\mathbf{u}_\omega^{(1)}],\mathbf{u}_\omega^{(2)}\rangle_{\Omega}\)
+and yields Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity} with the boundary term displayed
+\cite{stratton1941}. Charge continuity Eq.~\eqref{eq:ch1.charge-continuity-harmonic} and
+compatibility Eq.~\eqref{eq:ch2.source-compatibility} ensure that impressed \(\Jimp\) alone
+specifies the electric drive when \(\rho\) is tied to \(\Jimp\)
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j1) {$\Jimp^{(1)}$};
+ \node[ch1box, right=7mm of j1] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=7mm of s] (u1) {$\mathbf{u}_1$};
+ \node[ch1box, below=5mm of j1] (j2) {$\Jimp^{(2)}$};
+ \node[ch1box, below=5mm of s] (u2) {$\mathbf{u}_2$};
+ \node[ch1box, below=5mm of u1] (bil) {Bilinear\\pairing};
+ \draw[ch1flow] (j1) -- (s) -- (u1);
+ \draw[ch1flow] (j2) -- (s) -- (u2);
+ \draw[ch1flow, dashed] (u1.south) -- (bil.north);
+ \draw[ch1flow, dashed] (j2.east) -- (bil.west);
+ \draw[ch1flow, dashed] (u2.east) -- (bil.west);
+ \draw[ch1flow, dashed] (j1.east) -- (bil.west);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch281} Lorentz reciprocity: source labels interchange under
+\(\mathcal{S}_\omega\) when media satisfy Eq.~\eqref{eq:ch2.reciprocal-medium-class} and
+\(\mathcal{B}_\Gamma\) is passive on the outgoing branch.}
+\label{fig:ch2.lorentz-reciprocity-measurement chain}
+\end{figure}
+Figure interpretation. Sources $\Jimp^{(1)}$, $\Jimp^{(2)}$ induce fields $\mathbf{u}_1$, $\mathbf{u}_2$ through the same outgoing $\mathcal{S}_\omega$. The central bilinear node is symmetric under label interchange when media satisfy Eq.~\eqref{eq:ch2.reciprocal-medium-class} and $\mathcal{B}_\Gamma$ is passive. Dashed return arrows mark that reciprocity is proved on the difference system with identical boundary data, not by comparing unrelated forward and adjoint meshes. Projection to $\mathcal{R}_\omega$ preserves symmetry only after regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} \cite{stratton1941}. Figure~\ref{fig:ch2.lorentz-reciprocity-measurement chain} is the operator reading of
+Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity}: the bilinear functional is symmetric under
+label interchange $(\Jimp^{(1)},\mathbf{u}_1)\leftrightarrow(\Jimp^{(2)},\mathbf{u}_2)$ once
+boundary terms cancel \cite{stratton1941}.
+For vacuum observation points $\mathbf{r}_1$, $\mathbf{r}_2$ with $k_0|\mathbf{r}_1-\mathbf{r}_2|=2.5$, Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} requires $\overline{\mathbf{G}}_{E,0}(\mathbf{r}_1,\mathbf{r}_2)^{\mathsf{T}}=\overline{\mathbf{G}}_{E,0}(\mathbf{r}_2,\mathbf{r}_1)$ on the outgoing branch. Transverse block entries agree to machine precision; reactive $R^{-2}$, $R^{-3}$ blocks differ by sign under interchange yet cancel in the bilinear contraction when both sides use identical outgoing selectors \cite{stratton1941}. A practical verification proceeds in three steps: confirm the outgoing branch
+Eq.~\eqref{eq:ch2.outgoing-green-branch}; test swap symmetry on transverse dyad blocks;
+and project to $\mathcal{R}_\omega$ before port calibration \cite{jackson1999}.
+\phantomsection\label{thm:ch2.lorentz-reciprocity-operator}
+Let \(\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega\) be the outgoing solution
+map Eq.~\eqref{eq:ch2.maxwell-solution-map} on media satisfying
+Eq.~\eqref{eq:ch2.reciprocal-medium-class} with passive \(\mathcal{B}_\Gamma\)
+Eq.~\eqref{eq:ch2.passive-impedance-class}. For admissible
+\(\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega\), write
+\(\mathbf{u}_k=\mathcal{S}_\omega[\Jimp^{(k)}]\), \(k=1,2\). Then:
+\begin{enumerate}
+\item[(i)] Volume reciprocity Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity} holds with
+vanishing boundary term on admissible outgoing radiation conditions.
+\item[(ii)] Operator form: with \(\mathbf{u}_k=(\E_k,\H_k)\) the Maxwell pair induced by
+\(\Jimp^{(k)}\) and \(\langle\cdot,\cdot\rangle_{\mathcal{U}}\) the energy inner product on
+\(\mathcal{F}_{\mathrm{SF}}\),
+\begin{equation}
+\label{eq:ch2.lorentz-reciprocity-operator}
+\langle \mathbf{u}_1,\,\mathcal{S}_\omega[\Jimp^{(2)}]\rangle_{\mathcal{U}}
+=
+\langle \mathbf{u}_2,\,\mathcal{S}_\omega[\Jimp^{(1)}]\rangle_{\mathcal{U}}
+\end{equation}
+when the pairings are defined through impressed-current forcing functionals
+Eq.~\eqref{eq:ch2.forcing-functional-operator} and field norm
+Eq.~\eqref{eq:ch2.field-energy-norm} on \(\mathcal{F}_{\mathrm{SF}}\).
+\item[(iii)] Dyadic realization: outgoing electric dyads satisfy
+Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap}.
+\item[(iv)] Radiation reciprocity: projecting both sides of (ii) through the self-adjoint
+outgoing projector \(\Pi_{\mathrm{rad}}\) yields symmetric coupling on the radiative subspace
+\(\mathcal{F}_{\mathrm{rad}}\):
+\begin{equation}
+\label{eq:ch2.radiation-map-reciprocity}
+\langle \mathcal{R}_\omega[\Jimp^{(1)}],\,\mathcal{R}_\omega[\Jimp^{(2)}]\rangle_{\mathcal{U}}
+=
+\langle \mathcal{R}_\omega[\Jimp^{(2)}],\,\mathcal{R}_\omega[\Jimp^{(1)}]\rangle_{\mathcal{U}}
+\end{equation}
+on \(\mathcal{F}_{\mathrm{rad}}\) with \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\)
+Eq.~\eqref{eq:ch2.radiation-operator-def}.
+\end{enumerate}
+Part (i) follows from Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} and
+Eq.~\eqref{eq:ch2.reciprocal-medium-class} as in the derivation above; outgoing and passive
+boundary classes from Subsection~\ref{sec:ch214} cancel the surface integrand
+\cite{stratton1941}. Part (ii) identifies the volume impressed-current pairing
+with \(\langle\cdot,\cdot\rangle_{\mathcal{U}}\) on \(\mathcal{F}_{\mathrm{SF}}\) through
+Eq.~\eqref{eq:ch2.dual-source-pairing} and stability
+Eq.~\eqref{eq:ch2.solution-map-stability}, developing Eq.
+Eq.~\eqref{eq:ch2.lorentz-reciprocity} \cite{stratton1941}. Part (iii): for fixed
+\(\mathbf{r}\), Eq.~\eqref{eq:ch2.electric-dyadic-convolution} and part (i) with impulsive
+\(\Jimp^{(k)}\) aligned with Cartesian unit vectors yield column swap
+\(\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')=
+\overline{\mathbf{G}}_{E}^{\mathsf{T}}(\mathbf{r}',\mathbf{r})\) on the outgoing branch
+\cite{stratton1941}. Uniqueness exterior radiative uniqueness (Subsection~\ref{sec:ch243})
+extends the swap to all admissible \(\mathbf{r},\mathbf{r}'\) \cite{stratton1941}. Part (iv)
+applies \(\Pi_{\mathrm{rad}}\) to both sides of (ii); \(\Pi_{\mathrm{rad}}\) is self-adjoint
+on \(\mathcal{F}_{\mathrm{rad}}\) under Eq.~\eqref{eq:ch2.field-energy-norm} when outgoing
+selection is fixed \cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-map-reciprocity} is the export-projected
+form of the VNA symmetry: coupling reported on \(\mathcal{F}_{\mathrm{rad}}\) is unchanged when
+port labels swap, while reactive near-zone terms dropped by \(\Pi_{\mathrm{rad}}\) need not be
+symmetric even on reciprocal hardware \cite{stratton1941}.
+The bilinear functional
+\(\mathfrak{B}_\omega(\Jimp^{(1)},\Jimp^{(2)})=
+\langle \mathcal{S}_\omega[\Jimp^{(1)}],\,\mathcal{S}_\omega[\Jimp^{(2)}]\rangle_{\mathcal{U}}\)
+is symmetric on \(\mathcal{J}_\Omega\times\mathcal{J}_\Omega\) under reciprocal media
+\cite{stratton1941}. Algebraically, \(\mathcal{S}_\omega\) is not self-adjoint
+on \(\mathcal{J}_\Omega\) with source pairing Eq.~\eqref{eq:ch2.dual-source-pairing}; reciprocity
+instead couples the source space to the field space through the \emph{interchanged} labels in
+Eq.~\eqref{eq:ch2.lorentz-reciprocity-operator} \cite{stratton1941}. Physically, the far-zone
+pattern produced by \(\Jimp^{(1)}\) tested against the field of \(\Jimp^{(2)}\) equals the
+swap configuration: a receive pattern computed with \(\Jimp^{(2)}\) as probe matches a
+transmit map driven by \(\Jimp^{(1)}\) when hardware and media are reciprocal
+\cite{harrington2001}.
+Mathematical role of Eq.~\eqref{eq:ch2.radiation-map-reciprocity}. Equation~\eqref{eq:ch2.radiation-map-reciprocity} restricts Eq.~\eqref{eq:ch2.lorentz-reciprocity-operator}
+to \(\mathcal{F}_{\mathrm{rad}}\), the subspace on which flux meters and angular patterns are
+declared \cite{stratton1941}. Because \(\Pi_{\mathrm{rad}}\) annihilates
+non-export components Eq.~\eqref{eq:ch2.rad-null-on-evanescent}, reactive near-zone overlap
+does not enter Eq.~\eqref{eq:ch2.radiation-map-reciprocity} even when present in full
+Eq.~\eqref{eq:ch2.lorentz-reciprocity-operator} \cite{stratton1941}. regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} must still be satisfied before interpreting
+Eq.~\eqref{eq:ch2.radiation-map-reciprocity} as a transport channel
+\cite{harrington2001}. \phantomsection\label{prop:ch2.dyadic-reciprocity-home}
+Under Eq.~\eqref{eq:ch2.reciprocal-medium-class} with outgoing radiation condition, the electric dyad
+\(\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}\) in
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution} satisfies
+Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} for all \(\mathbf{r},\mathbf{r}'\) in the
+evaluation domain of outgoing source-to-field integrals of Subsection~\ref{sec:ch251}.
+Apply Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281})(iii); this is the proof deferred from
+Subsection~\ref{sec:ch231} \cite{stratton1941}. \phantomsection\label{prop:ch2.reciprocity-null-invariance}
+If \(\Jimp^{(1)}\) is arbitrary and \(\Jimp^{(2)}=\Jimp^{(1)}+\Jimp^{\mathrm{(NR)}}\) with
+\(\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega\), then
+Eq.~\eqref{eq:ch2.radiation-map-reciprocity} is unchanged when either argument is replaced by
+\(\Jimp^{(2)}\) on the radiative pairing
+\(\mathcal{R}_\omega[\Jimp^{(2)}]=\mathcal{R}_\omega[\Jimp^{(1)}]\) by
+Eq.~\eqref{eq:ch2.nr-superposition-law} \cite{stratton1941}. Full
+Eq.~\eqref{eq:ch2.lorentz-reciprocity-operator} may change by reactive content through
+\(\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) Eq.~\eqref{eq:ch2.nr-image-of-null-space}
+\cite{harrington2001}.
+On the outgoing branch, Eq.~\eqref{eq:ch2.lorentz-reciprocity-operator} is consistent with
+resolvent symmetry of the truncated Maxwell operator on reciprocal media:
+\begin{equation}
+\label{eq:ch2.resolvent-reciprocity-swap}
+\langle
+\mathcal{L}_\omega^{-1}[\mathbf{s}^{(1)}],\,\mathbf{s}^{(2)}
+\rangle_{\mathcal{Y}}
+=
+\langle
+\mathcal{L}_\omega^{-1}[\mathbf{s}^{(2)}],\,\mathbf{s}^{(1)}
+\rangle_{\mathcal{Y}}
+\end{equation}
+for compatible forcing pairs \(\mathbf{s}^{(k)}\) when \(\mathcal{L}_\omega\) is symmetric on
+\(\mathcal{D}(\mathcal{L}_\omega)\) and \(\mathcal{B}_\Gamma\) is passive
+\cite{stratton1941}. Equation~\eqref{eq:ch2.resolvent-reciprocity-swap} is not
+re-proved here; it is the operator backbone behind
+Eq.~\eqref{eq:ch2.integral-resolvent-equivalence} and Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281})(ii) \cite{stratton1941}. Numerical MoM matrices
+assembled from Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} inherit swap symmetry only when
+quadrature, outgoing branch, and material sampling preserve
+Eq.~\eqref{eq:ch2.reciprocal-medium-class} \cite{harrington2001}.
+Loss, anisotropy, and broken reciprocity. Complex symmetric \(\overline{\overline{\varepsilon}}\), \(\overline{\overline{\mu}}\) with
+\(\Im\{\overline{\overline{\varepsilon}}\}\succeq 0\), \(\Im\{\overline{\overline{\mu}}\}\succeq 0\)
+preserve Eqs.~\eqref{eq:ch2.lorentz-volume-reciprocity}--\eqref{eq:ch2.lorentz-reciprocity-operator}
+with conjugation on one slot \cite{stratton1941}. Magneto-electric coupling
+\(\overline{\overline{\xi}}\neq\mathbf{0}\) breaks Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap}
+and requires non-reciprocal Green operators \cite{stratton1941}. Active boundaries
+with \(\Re\{Z_s\}<0\) on portions of \(\Gamma_Z\) violate
+Eq.~\eqref{eq:ch2.passive-impedance-class} and invalidate Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}) \cite{stratton1941}. Incoming rather
+than outgoing radiation condition selects a different branch; swap identities hold only when both excitations
+use the same branch \cite{stratton1941}. Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}) assumes fixed \(\omega\), linear media
+Eq.~\eqref{eq:ch2.reciprocal-medium-class}, passive \(\mathcal{B}_\Gamma\), outgoing radiation condition,
+and admissible \(\mathcal{J}_\Omega\) \cite{stratton1941}. It does not assert
+reciprocity of raw near-zone reactive scans without specifying whether \(\Pi_{\mathrm{rad}}\)
+has been applied \cite{stratton1941}. It does not remove \(\ker\mathcal{R}_\omega\)
+null-space invariance of radiative reciprocity (Subsection~\ref{sec:ch281}); invisible currents alter full
+\(\mathcal{S}_\omega\) pairings while leaving radiative reciprocity unchanged
+\cite{harrington2001}. Nonlinear, time-varying, or moving media require the causal chain of
+Subsection~\ref{sec:ch223} \cite{stratton1941}.
+Subsection~\ref{sec:ch281} established Lorentz reciprocity on \(\mathcal{S}_\omega\) and
+\(\mathcal{R}_\omega\) through volume and operator identities
+Eqs.~\eqref{eq:ch2.lorentz-volume-reciprocity}--\eqref{eq:ch2.radiation-map-reciprocity}
+\cite{stratton1941}. The port-swap symmetry observed on reciprocal hardware is now available as a
+constraint on continuous source and field pairings; the next step is to express that constraint on
+the modal coordinates fixed in Section~\ref{sec:ch26}.

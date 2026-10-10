@@ -1,0 +1,259 @@
+% Stage 8 restored fragment — 2.2.1 Time-domain evolution (archive lines 2469-2734)
+\subsection{Time-domain evolution}
+\label{sec:ch221}
+
+Time-harmonic phasors match fixed-frequency range measurements; $\exp(-\j\omega t)$ fixes the sign of reactive terms \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+The physical problem is causal propagation: a switched feed, a pulsed radar, or a transient
+immunity test excites fields whose support in $(\mathbf{r},t)$ must respect finite signal
+speed \cite{maxwell1873}. Time-harmonic phasors are how network analyzers, compact
+ranges, and chamber receivers report steady-state radiation at each frequency step
+\cite{stratton1941}. The $\exp(-\jj\omega t)$ convention fixed in Chapter~\ref{ch:01} aligns
+Poynting flux with wattmeter readings and VNA phase references \cite{poynting1884}. Phasor
+analysis is best viewed as a steady-state reduction of a fundamentally causal theory rather
+than as the primary formulation of electromagnetic dynamics \cite{harrington2001}. Even small
+phase errors can rotate synthesized patterns when near-field data are back-propagated
+\cite{hansen1988}. The time-domain picture below states the causal support that every VNA tone
+must inherit when $\mathcal{L}_\omega$ is interpreted as a frequency slice rather than an
+independent postulate \cite{stratton1941}.
+
+Subsection~\ref{sec:ch221} supplies the time-domain foundation underlying every harmonic
+formulation used later in the chapter. It introduces the first-order Maxwell evolution
+system, the associated evolution operator, and the causal support restrictions that all
+physically admissible frequency-domain solutions must inherit \cite{stratton1941}.
+Time-domain evolution specifies retarded trajectories: the field observed at
+$(\mathbf{r},t)$ depends only on source events contained within the corresponding past
+light cone \cite{stratton1941}. Any numerical or analytical approximation that violates
+this support structure introduces nonphysical precursors and loses its connection to
+Maxwell causality \cite{harrington2001}. Local Maxwell balances remain those of
+Eq.~\eqref{eq:ch1.ibvp-time-domain}; they are cited. Function spaces from
+Section~\ref{sec:ch21} enter through time-dependent embeddings developed below; Sobolev and
+trace declarations are not repeated \cite{stratton1941}.
+Let \(\Omega\subset\mathbb{R}^{3}\) be a Lipschitz domain with boundary
+\(\Gamma=\partial\Omega\). Real time-domain fields
+\(\E(\mathbf{r},t)\), \(\H(\mathbf{r},t)\) use SI units and the same constitutive
+class as \ref{ch:01}.
+The evolution problem is posed on trajectories of the electromagnetic state rather
+than on isolated snapshots at a single frequency.
+A pulsed or switched excitation on a feed line makes the distinction visible: the field at
+$(\mathbf{r},t)$ cannot respond until source events inside the backward light cone have
+occurred. Time-domain evolution is therefore the laboratory picture behind every harmonic
+slice $\mathcal{S}_\omega$ used later in the chapter \cite{stratton1941}. The state vector
+$\mathbf{U}(t)$ packages the coupled $(\E,\H)$ fields at frozen time $t$ into a single
+object on which the Maxwell generator acts; this packaging mirrors the phasor state $\mathbf{u}_\omega$ of Eq.~\eqref{eq:ch2.maxwell-state-vector},
+with time retained rather than suppressed \cite{harrington2001}. Collect the
+electromagnetic state at time \(t\) as
+\begin{equation}
+\label{eq:ch2.time-state-vector}
+\mathbf{U}(t)
+=
+\begin{bmatrix}\E(\cdot,t)\\ \H(\cdot,t)\end{bmatrix}
+\in\mathcal{V}(\Omega),
+\end{equation}
+where \(\mathcal{V}(\Omega)\) is the time-dependent product space of square-integrable
+field pairs compatible with Eq.~\eqref{eq:ch1.admissible-space} at each frozen time
+slice \cite{stratton1941}. Equation~\eqref{eq:ch2.time-state-vector} is the
+time-domain analogue of Eq.~\eqref{eq:ch2.maxwell-state-vector}; phasor symbols are
+reserved for the \(\exp(-\jj\omega t)\) reduction in Subsection~\ref{sec:ch222}. The time-domain Maxwell
+system is the causal law from which every harmonic operator in Section~\ref{sec:ch22} is
+obtained by phasor substitution. Physically, Eqs.~\eqref{eq:ch2.time-maxwell-evolution}
+state that changing $\E$ in space drives $\H$ in time through Faraday's law, and changing
+$\H$ in space drives $\E$ in time through Amp\`ere's law with impressed current as external
+drive \cite{maxwell1873}. From an antenna engineer's perspective, this is the
+system that finite-difference time-domain codes march forward in time; the harmonic solvers
+of Subsection~\ref{sec:ch222} are steady-state limits of the same law when all data are
+single-frequency \cite{harrington2001}. The time-domain Maxwell system imported from
+Eq.~\eqref{eq:ch1.ibvp-time-domain} reads in vacuum constitutive form as
+\begin{equation}
+\label{eq:ch2.time-maxwell-evolution}
+\begin{aligned}
+\curl\E(\mathbf{r},t)&=-\mu_0\,\partial_t\H(\mathbf{r},t),\\
+\curl\H(\mathbf{r},t)&=\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)+\varepsilon_0\,\partial_t\E(\mathbf{r},t),\\
+\divg\E(\mathbf{r},t)&=\frac{\rho(\mathbf{r},t)}{\varepsilon_0},\qquad
+\divg\H(\mathbf{r},t)=0,
+\end{aligned}
+\end{equation}
+with impressed current density \(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)\) and charge
+density \(\rho(\mathbf{r},t)\). Equation~\eqref{eq:ch2.time-maxwell-evolution}
+packages local dynamics as a first-order system in \((\E,\H)\) and \(\partial_t\);
+the hyperbolic coupling is the time-domain face of the curl structure in
+Eq.~\eqref{eq:ch1.maxwell-operator-block} \cite{stratton1941}. Charge continuity
+requires
+\begin{equation}
+\label{eq:ch2.charge-continuity-time}
+\divg\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)+\partial_t\rho(\mathbf{r},t)=0
+\end{equation}
+in the sense of distributions when \(\rho\) is present \cite{stratton1941}. Pairs
+\((\mathbf{j}_{\mathrm{imp}},\rho)\) violating
+Eq.~\eqref{eq:ch2.charge-continuity-time} lie outside the time-domain admissible
+class parallel to Eq.~\eqref{eq:ch2.source-admissibility}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (ic) {Initial data\\$(\E_0,\H_0)$};
+ \node[ch1box, right=7mm of ic] (src) {Impressed\\$\mathbf{j}_{\mathrm{imp}}(\cdot,t)$};
+ \node[ch1box, right=7mm of src] (ev) {Evolution\\$\mathcal{T}(t)$};
+ \node[ch1box, right=7mm of ev] (st) {State $\mathbf{U}(t)$};
+ \draw[ch1flow] (ic.east) -- (ic.east |- ev.west);
+ \draw[ch1flow] (ic.east |- ev.west) -- (ev.west);
+ \draw[ch1flow] (src.east) -- (src.east |- ev.west);
+ \draw[ch1flow] (src.east |- ev.west) -- (ev.west);
+ \draw[ch1flow] (ev.east) -- (ev.east |- st.west);
+ \draw[ch1flow] (ev.east |- st.west) -- (st.west);
+\end{tikzpicture}%
+}
+\caption{Time-domain evolution: initial data and impressed sources drive the
+semigroup \(\mathcal{T}(t)\) to field state \(\mathbf{U}(t)\) under boundary class
+\(\mathcal{B}_\Gamma\).}
+\label{fig:ch2.time-evolution-measurement chain}
+\end{figure}
+Boundary data enter through the same 
+\(\mathcal{B}_\Gamma\) of Eq.~\eqref{eq:ch1.boundary-data-operator}, now evaluated
+on time-dependent traces \(\gamma_\tau[\mathbf{U}(t)]\in\mathcal{T}_\Gamma\) for
+each \(t\ge 0\) \cite{stratton1941}. The closed time-domain problem
+is to find \(\mathbf{U}(t)\) such that
+\begin{equation}
+\label{eq:ch2.time-ibvp-package}
+\begin{cases}
+\partial_t\mathbf{U}=\mathcal{A}\,\mathbf{U}+\mathbf{F}(t), & \mathbf{r}\in\Omega,\ t>0,\\
+\mathbf{U}(0)=\mathbf{U}_0, & \mathbf{r}\in\Omega,\\
+\mathcal{B}_\Gamma[\mathbf{U}(t)]=\mathbf{g}_\Gamma(t), & \mathbf{r}\in\Gamma,\ t\ge 0,
+\end{cases}
+\end{equation}
+where \(\mathcal{A}\) is the Maxwell generator induced by
+Eq.~\eqref{eq:ch2.time-maxwell-evolution} on
+\(\mathcal{D}(\mathcal{A})\subset\mathcal{V}(\Omega)\) and
+\(\mathbf{F}(t)\) collects impressed-source rows \cite{stratton1941}. Equation
+\eqref{eq:ch2.time-ibvp-package} is the time-domain counterpart of
+Eq.~\eqref{eq:ch2.closed-maxwell-bvp}; uniqueness on a fixed branch is inherited
+from Section~\ref{sec:ch01.1.3} when data classes coincide with the harmonic limit
+\cite{stratton1941}. Define the evolution operator (semigroup) \(\mathcal{T}(t)\) by
+\begin{equation}
+\label{eq:ch2.time-semigroup-definition}
+\mathcal{T}(t):\mathbf{U}_0\longmapsto \mathbf{U}(t),
+\qquad
+\mathcal{T}(0)=\mathrm{id},\qquad
+\mathcal{T}(t+s)=\mathcal{T}(t)\mathcal{T}(s),
+\end{equation}
+when \(\mathbf{F}\equiv\mathbf{0}\) and \(\mathcal{B}_\Gamma\) is homogeneous. With
+forcing,
+\begin{equation}
+\label{eq:ch2.time-evolution-forced}
+\mathbf{U}(t)
+=
+\mathcal{T}(t)\mathbf{U}_0
+\int_0^t \mathcal{T}(t-s)\,\mathbf{F}(s)\,ds,
+\end{equation}
+the Duhamel representation on \(\mathcal{D}(\mathcal{A})\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.time-evolution-forced}
+makes causality explicit: \(\mathbf{U}(t)\) depends only on
+\(\mathbf{F}(s)\) for \(s\le t\). The time-domain \emph{solution map} sends impressed
+data and initial state to trajectories:
+\begin{equation}
+\label{eq:ch2.time-domain-solution-map}
+\mathcal{S}_{t}:\big(\mathbf{U}_0,\mathbf{j}_{\mathrm{imp}}\big)\longmapsto
+\{\mathbf{U}(t)\}_{t\ge 0}.
+\end{equation}
+Harmonic \(\mathcal{S}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-solution-map} is a
+single-frequency slice of Eq.~\eqref{eq:ch2.time-domain-solution-map} when all data
+are proportional to \(\exp(-\jj\omega t)\) and \(\mathcal{B}_\Gamma\) is fixed
+\cite{stratton1941}; the equivalence is proved in Subsection~\ref{sec:ch223}.
+Retarded representation specializes Eq.~\eqref{eq:ch2.time-evolution-forced} when
+Green kernels exist:
+\begin{equation}
+\label{eq:ch2.retarded-convolution-form}
+\E(\mathbf{r},t)
+=
+\E_{\mathrm{hom}}(\mathbf{r},t)
+-\mu_0\,\partial_t
+\int_0^t\!\!\int_\Omega
+\mathcal{G}(\mathbf{r},\mathbf{r}',t-t')\cdot
+\mathbf{j}_{\mathrm{imp}}(\mathbf{r}',t')\,d^{3}r'\,dt',
+\end{equation}
+with \(\mathcal{G}(\mathbf{r},\mathbf{r}',t-t')=\mathbf{0}\) for \(t-t'<0\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.retarded-convolution-form} refines the
+Eq.~\eqref{eq:ch2.causality-retarded} without constructing \(\mathcal{G}\)
+here; kernel development is in Section~\ref{sec:ch23}. The support condition
+\begin{equation}
+\label{eq:ch2.causal-support-constraint}
+\operatorname{supp}_{(\mathbf{r},t)}\E
+\subseteq
+\big\{(\mathbf{r},t): t\ge t_{\mathrm{ret}}(\mathbf{r})\big\}
+\end{equation}
+expresses finite propagation speed \(c_0=1/\sqrt{\mu_0\varepsilon_0}\) on vacuum
+regions \cite{stratton1941}. Figure~\ref{fig:ch2.causal-light-cone}
+schematizes Eq.~\eqref{eq:ch2.causal-support-constraint}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \draw[ch1flow] (0,0) -- (2.2,2.2);
+ \draw[ch1flow] (0,0) -- (2.2,-2.2);
+ \node[ch1oncanvas, right=2mm] at (2.2,2.2) {$t=t_{\mathrm{ret}}$};
+ \node[ch1box] at (0,0) {Source event};
+\end{tikzpicture}%
+}
+\caption{Causal support: field at \((\mathbf{r},t)\) depends on sources inside the
+backward light cone; retarded integration uses \(t'\le t\) only.}
+\label{fig:ch2.causal-light-cone}
+\end{figure}
+Energy balance in time domain imports the Poynting and storage laws of
+Section~\ref{sec:ch01.1.4}. With volume energy density
+\begin{equation}
+\label{eq:ch2.time-energy-density}
+u(\mathbf{r},t)
+=
+\frac{\varepsilon_0}{2}\|\E(\mathbf{r},t)\|^2
++\frac{\mu_0}{2}\|\H(\mathbf{r},t)\|^2,
+\end{equation}
+integration over a control volume \(V\subset\Omega\) yields
+\begin{equation}
+\label{eq:ch2.time-poynting-balance}
+\frac{d}{dt}\int_V u\,dV
++\int_{\partial V}\mathbf{S}\cdot\hat{\mathbf{n}}\,dS
+=
+-\int_V \E\cdot\mathbf{j}_{\mathrm{imp}}\,dV,
+\end{equation}
+with \(\mathbf{S}=\E\times\H\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.time-poynting-balance} is cited; it supplies the physical
+reading of Eq.~\eqref{eq:ch2.time-evolution-forced}: impressed work on the right
+drives stored and exported energy on the left. Reactive exchange with boundaries
+appears in the surface term and motivates the regime split of
+Subsection~\ref{sec:ch224} \cite{harrington2001}. Harmonic operators follow from the substitution
+\(\E(\mathbf{r},t)=\Re\{\underline{\E}(\mathbf{r})\eim\}\) with
+\(\underline{\H}\) analogous, yielding
+\begin{equation}
+\label{eq:ch2.time-to-frequency-map}
+\partial_t \longrightarrow -\jj\omega,
+\qquad
+\mathcal{A}\longrightarrow \mathcal{M}_\omega,
+\qquad
+\mathcal{S}_t\big|_{\omega}\longrightarrow \mathcal{S}_\omega,
+\end{equation}
+on admissible data of Eq.~\eqref{eq:ch2.admissibility-embedding}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.time-to-frequency-map} is symbolic;
+Subsection~\ref{sec:ch223} states equivalence conditions under which frequency-domain
+solvers implement causal time-domain maps. Exterior domains require outgoing
+boundary conditions in time domain compatible with
+Eq.~\eqref{eq:ch1.radiation-trace-condition}; those completions are sharpened in
+Section~\ref{sec:ch243} \cite{stratton1941}.
+Time-domain Maxwell-closed couples Eq.~\eqref{eq:ch1.admissible-space} at each time
+slice to Eq.~\eqref{eq:ch2.charge-continuity-time}:
+\begin{equation}
+\label{eq:ch2.time-charge-continuous-coupling}
+\mathbf{U}(t)\in\mathcal{F}_\Omega\ \text{a.e.\ }t
+\ \wedge\
+(\mathbf{j}_{\mathrm{imp}},\rho)\ \text{satisfy charge continuity}
+\ \Longrightarrow\
+\mathbf{U}\in\mathcal{D}(\mathcal{S}_{t}).
+\end{equation}
+Finite-difference time-domain schemes discretize
+Eq.~\eqref{eq:ch2.time-maxwell-evolution} on staggered grids; stability requires
+discrete analogues of Eq.~\eqref{eq:ch2.causal-support-constraint} and consistent
+boundary enforcement of \(\mathcal{B}_\Gamma\) \cite{harrington2001}. Subsection
+~\ref{sec:ch221} states the continuous targets those schemes approximate.
+Subsection~\ref{sec:ch221} has posed the time-domain Maxwell system, the evolution
+semigroup \(\mathcal{T}(t)\), and the retarded convolution form that enforces causal
+support. Subsection~\ref{sec:ch222} carries the same physics into fixed-frequency
+operators and Helmholtz symbols on the spaces of Section~\ref{sec:ch21}
+\cite{stratton1941}.

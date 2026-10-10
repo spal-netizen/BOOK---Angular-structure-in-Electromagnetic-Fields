@@ -1,0 +1,194 @@
+% Stage 8 section framing — 2.9 Action of Radiation Operators on Angular Spectra
+\section{Action of Radiation Operators on Angular Spectra}
+\label{sec:ch29}
+Reciprocity in Section~\ref{sec:ch28} couples ports and probes. Section~\ref{sec:ch29} asks how
+radiation operators act on angular spectra---the language of pattern decomposition, near-field
+scanning, and plane-wave synthesis \cite{jackson1999}. Every qualified
+far-zone pattern is first a weighted sum of directional contributions: each term reports how much
+export reaches a unit direction $\widehat{\mathbf{k}}$ on the sphere after outgoing selection
+\cite{stratton1941}. That decomposition precedes any lateral Fourier transform;
+plane-wave spectra are one coordinate system on the same directional budget, not a separate
+physical layer \cite{jackson1999}. Maxwell propagation from compact support cannot populate
+every direction with equal strength: outgoing selection removes incoming admixture; evanescent
+sheets carry reactive content that decays with distance and does not survive the near-to-far map;
+finite apertures integrate over unresolved directions. The accessible amplitude
+$a(\widehat{\mathbf{k}})$ is therefore a compressed image of impressed structure, not a complete
+coordinate on $\mathcal{J}_\Omega$ \cite{stratton1941}. On the bench, a spherical
+near-field scanner records tangential $\E$ and $\H$ on a closed or planar surface at height $h$
+above the device under test; the angular-spectrum chart synthesizes outgoing plane-wave trials, back-propagates to
+the scan plane, and accepts residuals only after scan pitch, bandlimit, and probe correction are
+stated \cite{hansen1988}. The sequence scan--synthesize--bandlimit--report is what the
+theory encodes once radiation has been selected \cite{stratton1941}.
+
+
+
+
+Section~\ref{sec:ch28} closed the reciprocity chain
+Eq.~\eqref{eq:ch2.section28-reciprocity-chain}: Lorentz reciprocity (Subsection~\ref{sec:ch281}),
+modal orthogonality and coupling (Subsection~\ref{sec:ch282}), and radiation--reception
+interchange (Subsection~\ref{sec:ch283}) \cite{stratton1941}. That program fixed exchange
+symmetry on \(\operatorname{ran}\mathcal{R}_\omega\) and on port coordinates after projection.
+Section~\ref{sec:ch29} develops filter action in plane-wave coordinates: how
+\(\mathcal{R}_\omega\), \(\Pi_{\mathrm{rad}}\), and observation maps retain or suppress
+continuous angular content on \(S^{2}\), and how near-zone fields map to far-zone amplitudes
+\(a(\widehat{\mathbf{k}})\) \cite{stratton1941}. Preview expansion
+Eq.~\eqref{eq:ch2.angular-spectrum} from Subsection~\ref{sec:ch224} named the lateral
+spectral template; here that leading template is developed to locked statements compatible with outgoing
+criterion Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion} and far amplitude
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} \cite{stratton1941}. Explicit basis change to
+vector harmonics is developed in \ref{ch:03} Subsection~3.8.1; harmonic normalization belongs to
+Subsection~3.5.2 with citation of Subsection~\ref{sec:ch282} \cite{harrington2001}.
+Spectral decomposition in Subsection~\ref{sec:ch261} and continuous representation
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} fixed modal and plane-wave coordinates
+on \(\mathcal{F}_{\mathrm{rad}}\); null-space consequences in Subsection~\ref{sec:ch274} and
+angular budget Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} classified which directions
+\(a(\widehat{\mathbf{k}})\) may carry export \cite{stratton1941}. Reciprocity from
+Section~\ref{sec:ch28} constrains bilinear coupling on observable coordinates but does not
+replace angular filters: a reciprocal antenna may still have suppressed sheets
+Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} and finite observation rank
+Eq.~\eqref{eq:ch2.angular-spectrum-observation-rank} \cite{stratton1941}. Treating
+\(\mathcal{S}_\omega[\Jimp]\) near sources as if it were already \(a(\widehat{\mathbf{k}})\)
+repeats the regime error class of Section~\ref{sec:ch01.2.4} \cite{stratton1941}.
+Section~\ref{sec:ch29} separates plane-wave angular spectra, retained and suppressed
+components, near-to-far transformation, and far-field angular $\mathcal{E}_{\mathrm{acc}}^{(N)}$ without re-opening
+Green construction from Section~\ref{sec:ch23} \cite{stratton1941}.
+Let \(\omega>0\) be fixed, \(\Omega_s=\operatorname{supp}\Jimp\) be compact, and outgoing pairs
+lie in \(\mathcal{F}_{\mathrm{SF}}\) Eq.~\eqref{eq:ch2.admissible-field-space}. Section
+~\ref{sec:ch29} organizes analysis in four stages:
+\begin{equation}
+\label{eq:ch2.section29-angular-spectrum-chain}
+\text{plane-wave spectrum}
+\ \xrightarrow{\ \mathcal{R}_\omega,\Pi_{\mathrm{rad}}\ }
+\text{retained / suppressed}
+\ \xrightarrow{\ \text{near-to-far}\ }
+a(\widehat{\mathbf{k}})
+\ \xrightarrow{\ \text{probe rank}\ }
+\mathcal{K}_{\mathrm{acc}},
+\end{equation}
+where the first arrow is Subsection~\ref{sec:ch291}, the second is Subsection~\ref{sec:ch292},
+the third is Subsection~\ref{sec:ch293}, and the fourth is Subsection~\ref{sec:ch294}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.section29-angular-spectrum-chain}
+expresses Eq.~\eqref{eq:ch2.section27-nullspace-chain} and
+Eq.~\eqref{eq:ch2.section28-reciprocity-chain} at the angular level: null-space and reciprocity
+constraints from Sections~\ref{sec:ch27}--\ref{sec:ch28} bound which \(a(\widehat{\mathbf{k}})\)
+are physically meaningful; Section~\ref{sec:ch29} develops the operators that enforce those
+bounds on plane-wave coordinates \cite{stratton1941}. Transport criteria from
+Section~\ref{sec:ch01.2.3} and angular observables from Section~\ref{sec:ch01.2.1} enter
+Subsection~\ref{sec:ch294} by reference, not by re-derivation \cite{stratton1941}.
+Modal representation, not separate physics (Sections~2.6 and~2.9). Spectral and angular decompositions organize information about \(\mathcal{R}_\omega[\Jimp]\);
+they do not define angular structure \cite{stratton1941}. Observable angular structure remains
+primary: modes, plane-wave sheets, and harmonic labels are coordinates on export, not substitutes
+for Maxwell flux or qualified transport \cite{maxwell1873}. A nonzero modal coefficient or
+angular amplitude reports surviving source-generated content after propagation and outgoing
+selection; renaming that content does not create new physical degrees of freedom
+\cite{harrington2001}.
+The primary objects are radiation map
+Eq.~\eqref{eq:ch2.nullspace-operator-targets}, outgoing plane-wave criterion
+Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion}, and continuous angular amplitude
+\(a(\widehat{\mathbf{k}})\) from Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}
+\cite{stratton1941}. Secondary targets include propagating projectors
+Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent},
+observation composition Eq.~\eqref{eq:ch2.reconstruction-observation-map}, accessible sector
+Eq.~\eqref{eq:ch2.angular-accessibility-sector}, and composition law
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} \cite{stratton1941}. Section~\ref{sec:ch29}
+develops filters on the same outgoing branch fixed by
+Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique};
+incoming sheets remain excluded from \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{harrington2001}.
+Plane-wave angular spectrum and radiation operators (leading template). Subsection~\ref{sec:ch291} supplies the definitive account of plane-wave angular spectra
+and the action of \(\mathcal{R}_\omega\circ\Pi_{\mathrm{prop}}\) on spectral coefficients (Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} in Subsection~\ref{sec:ch291}): \begin{equation}
+\widetilde{\E}_{\mathrm{rad}}(k_x,k_y)
+=
+\mathcal{F}_{\mathrm{rad}}\big[\Pi_{\mathrm{rad}}\,\mathcal{R}_\omega[\Jimp]\big](k_x,k_y),
+\qquad
+k_z=k_z(k_t)\ \text{from Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion}},
+\end{equation}
+with \(\mathcal{F}_{\mathrm{rad}}\) the lateral Fourier transform on outgoing admissible fields
+\cite{stratton1941}. Equation~\eqref{eq:ch2.plane-wave-radiation-operator}
+develops Eq.~\eqref{eq:ch2.angular-spectrum} by inserting radiation selection;
+evanescent sheets satisfy \(\widetilde{\E}_{\mathrm{rad}}=0\) on export through
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Rigged-space normalization of
+plane-wave modes belongs to \ref{ch:03} Subsection~3.1.3 \cite{harrington2001}.
+Subsection~\ref{sec:ch292} partitions angular content into retained, suppressed, and
+observation-filtered sheets:
+\begin{equation}
+\label{eq:ch2.retained-suppressed-filter}
+a(\widehat{\mathbf{k}})
+=
+a_{\mathrm{ret}}(\widehat{\mathbf{k}})\,\chi_{\mathcal{K}_{\mathrm{acc}}}(\widehat{\mathbf{k}})
+\;+\;
+a_{\mathrm{sup}}(\widehat{\mathbf{k}})\,\chi_{\mathcal{K}_{\mathrm{sup}}}(\widehat{\mathbf{k}}),
+\qquad
+a_{\mathrm{filt}}=\mathcal{O}_{\mathrm{meas}}[a],
+\end{equation}
+using accessible sector Eq.~\eqref{eq:ch2.angular-accessibility-sector} and suppressed sheet
+Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} from Subsection~\ref{sec:ch274}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.retained-suppressed-filter}
+is the Section~\ref{sec:ch29} target for Subsection~\ref{sec:ch292} partition; geometric
+constraints on radiative spectra (Subsection~\ref{sec:ch264}) and observation rank
+Eq.~\eqref{eq:ch2.angular-spectrum-observation-rank} compose independently with
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} \cite{stratton1941}. Null modes annihilate
+\(a(\widehat{\mathbf{k}})\) through Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law} without
+altering near reactive content \cite{harrington2001}.
+Near-to-far transformation (leading template). Subsection~\ref{sec:ch293} records the operator map from near-zone admissible fields to far
+angular amplitudes:
+\begin{equation}
+\label{eq:ch2.near-to-far-transform}
+a(\widehat{\mathbf{k}})
+=
+\lim_{r\to\infty}
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp]\big](r,\widehat{\mathbf{k}}),
+\end{equation}
+with \(\mathcal{H}_{\mathrm{ff}}\) the far-zone extractor tied to
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} and the far-field approximation of source integrals (Subsection~\ref{sec:ch252}) \cite{stratton1941}.
+Equation~\eqref{eq:ch2.near-to-far-transform} does not promote evanescent storage to
+export: \(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\) is annihilated before
+Eq.~\eqref{eq:ch2.near-to-far-transform} when \(\mathcal{R}_\omega\) is unchanged
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} qualifies when the
+limit defines transport data \cite{harrington2001}.
+Subsection~\ref{sec:ch294} develops probe rank on \(S^{2}\) importing Section~\ref{sec:ch01.2.1}
+angular observables and Section~\ref{sec:ch01.2.3} transport criteria by reference
+\cite{stratton1941}:
+\begin{equation}
+\label{eq:ch2.far-angular-accessibility-preview}
+\widehat{\mathbf{k}}\in\mathcal{K}_{\mathrm{acc}}
+\ \Longleftrightarrow\
+a(\widehat{\mathbf{k}})\ \text{observable after}\ \mathcal{M}_\omega
+\ \text{and qualified by}\ \mathcal{D}_{J,\mathrm{reg}}=1,
+\end{equation}
+upgrading angular $\mathcal{E}_{\mathrm{acc}}^{(N)}$ on the far shell (Subsection~\ref{sec:ch264}) and composing with
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} \cite{stratton1941}. Equation
+\eqref{eq:ch2.far-angular-accessibility-preview} is the Section~\ref{sec:ch29} completion target;
+explicit plane-wave filters and measurement qualification is developed in Subsection~\ref{sec:ch294}
+\cite{harrington2001}. Reciprocity in radiation and reception (Subsection~\ref{sec:ch283}) constrains
+coupling on \(\mathcal{K}_{\mathrm{acc}}\) but does not enlarge it \cite{stratton1941}.
+\begin{equation}
+\label{eq:ch2.angular-action-composition}
+\Jimp\in\ker\mathcal{R}_\omega
+\ \Longrightarrow\
+a(\widehat{\mathbf{k}})=0
+\ \text{on export},
+\qquad
+\mathfrak{C}_\omega\ \text{symmetric on}\ \mathcal{K}_{\mathrm{acc}},
+\end{equation}
+importing Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law} and reciprocity in radiation and reception (Subsection~\ref{sec:ch283}) \cite{stratton1941}. Modal
+coordinates Eq.~\eqref{eq:ch2.radiation-map-modal-sum} and plane-wave coordinates
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} describe the same
+\(\operatorname{ran}\mathcal{R}_\omega\) on exterior domains; Section~\ref{sec:ch29} fixes
+plane-wave-side filters, while \ref{ch:03} Subsection~3.8.1 supplies basis
+change law \cite{stratton1941}. Finite-rank observation
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap} may remove angular content even when
+\(a(\widehat{\mathbf{k}})\neq 0\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.
+Several constructions deliberately remain outside Section~\ref{sec:ch29}. Vector spherical
+harmonic completeness and normalization are developed in \ref{ch:03}; Section~\ref{sec:ch29}
+records plane-wave radiation action without tabulating \(Y_\ell^m\)
+\cite{stratton1941}. Non-radiating catalogs remain in Section~\ref{sec:ch27};
+reciprocity constraints remain in Section~\ref{sec:ch28} \cite{stratton1941}. Section~\ref{sec:ch29}
+uses Fredholm structure, geometric constraints, and null-space structure from
+Sections~\ref{sec:ch26}--\ref{sec:ch27} \cite{harrington2001}.
+Regime logic from Section~\ref{sec:ch01.2.4} is unchanged: near-zone reactive dominance does not
+create far-zone angular transport without \(\mathcal{D}_{J,\mathrm{reg}}=1\) and outgoing
+qualification \cite{stratton1941}. Angular-transport claims must compose with
+Eq.~\eqref{eq:ch2.section29-angular-spectrum-chain}, angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law}, and regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} \cite{harrington2001}.

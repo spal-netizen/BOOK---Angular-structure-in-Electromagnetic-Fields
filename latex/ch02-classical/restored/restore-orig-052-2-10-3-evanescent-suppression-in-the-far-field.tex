@@ -1,0 +1,277 @@
+% Stage 8 restored fragment — 2.10.3 Evanescent suppression in the far field (archive lines 12839-13127)
+\subsection{Evanescent suppression in the far field}
+\label{sec:ch2103}
+The bench issue is whether reactive richness on a near scan establishes additional far-zone angular content. Handset and IoT platforms routinely exhibit strong tangential fields within one wavelength of a patch or ground plane while qualified far-zone gain remains modest \cite{harrington2001}. Far-field extractors must not be applied directly to spherical near-field samples; Maxwell theory shows that $\mathcal{S}_\omega[\Jimp]$ and $\mathcal{R}_\omega[\Jimp]$ possess different asymptotic envelopes, so reactive-dominated shell traces can bias angular export by order unity even when the true radiative amplitude $a(\widehat{\mathbf{k}})$ is unchanged \cite{stratton1941}. $\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]$ must not be identified with export: evanescent sheets carry storage measurable on enclosing probes yet are annihilated before near-to-far maps attach to pattern meters \cite{stratton1941}. An instrument on $S_b$ with $k_0 b\sim\mathcal{O}(1)$ is therefore not, by itself, a far-zone pattern; qualified analysis applies $\mathcal{R}_\omega$ before $\mathcal{H}_{\mathrm{ff}}$ \cite{hansen1988}.
+
+A handset-scale test fixture places a rectangular patch of width $W$ and length $L$ on a
+dielectric substrate of height $h\ll\lambda$ above a finite ground plane; probe or inset feed
+with $\VSWR$ tuned for narrowband operation at fixed $\omega$ drives the structure
+\cite{harrington2001}. Spherical near-field scans at height $h$ above the substrate
+record tangential fields whose raw magnitude can exceed the radiative component by factors near
+two before radiation selection; ground-edge diffraction and substrate modes dominate the
+reactive shell \cite{stratton1941}. The third worked problem addresses \emph{evanescent storage}: field-side reactive content that
+inflates near-shell readouts while leaving the radiative image $\mathcal{R}_\omega[\Jimp]$
+unchanged. This mechanism differs from source nullity even when both produce far-zone invariance,
+because the near signature arises from $\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]$ rather than
+from membership in $\ker\mathcal{R}_\omega$. Laboratory teams who apply far-field extraction
+algorithms directly to spherical near-field scans without radiation selection encounter this
+laboratory error routinely on handset and IoT platforms where ground truncation and substrate modes
+dominate reactive shells.
+\emph{Geometry and size.} A rectangular patch of width $W$ and length $L$ is printed on a
+dielectric substrate of height $h\ll\lambda$ above a finite ground plane whose electrical extent
+sets the effective radiation aperture \cite{harrington2001}. \emph{Excitation.} Probe or inset
+feed with $\VSWR$ tuned for narrowband operation at fixed $\omega$ \cite{hansen1988}.
+\emph{Observable behavior.} Copolar pattern cuts show low-order aperture modes; ripples from
+ground-edge diffraction appear when the scan surface is too close to the substrate
+\cite{stratton1941}. \emph{Mathematical analysis.} Impressed currents on the patch and image
+currents on the ground enter $\mathcal{R}_\omega$ with compact support; balanced reactive loops
+below threshold contribute to $\mathcal{S}_\omega$ without altering export \cite{devaney2004}.
+\emph{Measurement consequence.} Spherical near-field scans must include ground-edge diffraction;
+the angular-spectrum bandlimit is set by scan height, and raw near traces can exceed radiative
+amplitude by factors near two before radiation selection \cite{hansen1988}. \emph{Physical
+interpretation.} Handset and IoT antennas live in this rank regime: the electrical size of the
+ground, not the patch alone, fixes export, while reactive storage on the evanescent sheet explains
+why near-field ``hot spots'' need not imply additional far-zone power \cite{harrington2001}.
+Subsection~\ref{sec:ch2103} activates the evanescent term of
+Eq.~\eqref{eq:ch2.dof-partition-master}, importing Subsection~\ref{sec:ch293} from the cited sections
+\cite{stratton1941}. Near-to-far definition
+Eq.~\eqref{eq:ch2.near-to-far-transform-def}, far-zone extractor
+Eq.~\eqref{eq:ch2.far-zone-extractor-def}, operator composition
+Eq.~\eqref{eq:ch2.near-to-far-operator-composition}, evanescent annihilation
+Eq.~\eqref{eq:ch2.near-to-far-evanescent-null}, angular null law
+Eq.~\eqref{eq:ch2.evanescent-angular-null-law}, near-to-far transformation (Subsection~\ref{sec:ch293}),
+and near-to-far null invariance and finite-shell error bounds (Subsection~\ref{sec:ch293})
+are presupposed; asymptotic proofs in Subsection~\ref{sec:ch252} and evanescent content in
+Subsection~\ref{sec:ch273} are not repeated \cite{stratton1941}. Evanescent overlap
+Eq.~\eqref{eq:ch2.evanescent-source-overlap}, non-export law
+Eq.~\eqref{eq:ch2.evanescent-nonexport-law}, regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion}, and near-zone scaling
+Eq.~\eqref{eq:ch2.near-zone-field-scaling} supply context \cite{harrington2001}.
+Problem. A compact impressed-current ball \(\Omega_s=B_a(0)\) carries an electric dipole
+\(\Jimp^{(\mathrm{d})}(\mathbf{r})=\mathbf{J}_0\,\delta(\mathbf{r})\) in the distributional limit
+with \(\int_{\Omega_s}\Jimp^{(\mathrm{d})}\,d^{3}r=\mathbf{p}\) and \(k_0 a=2.0\) at fixed
+\(\omega\) . A second admissible current
+\(\Jimp^{(\mathrm{ev})}\) is chosen so that
+\(\mathcal{R}_\omega[\Jimp^{(\mathrm{ev})}]=\mathbf{0}\) while
+\(\|\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp^{(\mathrm{ev})}]\|_{\mathcal{E}}\) is comparable to
+the radiative energy of \(\Jimp^{(\mathrm{d})}\). This is
+\emph{field-side evanescent excitation with vanishing export}: strong local fields can coexist
+with membership failure in $\mathcal{F}_{\mathrm{rad}}$ even when $|E|$ is large on the near
+shell, because far-zone claims require propagating spectrum support on $k_t\le k_0$, not
+reactive storage on the evanescent sheet $k_t>k_0$ \cite{reed1950}. The configuration is
+\emph{not} membership of
+\(\Jimp^{(\mathrm{ev})}\) in the canonical non-radiating \emph{source} family of
+Subsection~\ref{sec:ch272}: the same far invariance can arise from \(\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega\)
+with a different near signature \cite{reed1950}. Define the
+superposition \(\Jimp=\Jimp^{(\mathrm{d})}+\Jimp^{(\mathrm{ev})}\). A near-field probe records
+tangential \(\E\) on shell \(S_b\) with \(b=1.25a\), while a far-field post-processor applies
+extractor Eq.~\eqref{eq:ch2.far-zone-extractor-def} on shells \(S_r\) with increasing \(r\)
+\cite{harrington2001}. The task is to:
+\begin{enumerate}
+\item[(a)] quantify near-shell contrast between \(\mathcal{S}_\omega[\Jimp]\) and
+\(\mathcal{R}_\omega[\Jimp]\) when evanescent storage is large;
+\item[(b)] confirm that \(a(\widehat{\mathbf{k}})\) from Eq.~\eqref{eq:ch2.near-to-far-transform-def}
+is unchanged by \(\Jimp^{(\mathrm{ev})}\) and that lateral spectra on \(k_t>k_0\) vanish under
+Eq.~\eqref{eq:ch2.evanescent-angular-null-law};
+\item[(c)] diagnose errors when the near-to-far limit is applied to raw
+\(\mathcal{S}_\omega[\Jimp]\) instead of \(\mathcal{R}_\omega[\Jimp]\).
+\end{enumerate} \begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\Jimp^{(\mathrm{d})}+\Jimp^{(\mathrm{ev})}$};
+ \node[ch1box, right=7mm of j] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=7mm of s] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (hff) {$\mathcal{H}_{\mathrm{ff}}$};
+ \node[ch1box, right=7mm of hff] (a) {$a(\widehat{\mathbf{k}})$};
+ \node[ch1box, below=5mm of s] (near) {Near shell\\$b=1.25a$};
+ \node[ch1box, below=5mm of r] (ev) {$\Pi_{\mathrm{ev}}\neq\mathbf{0}$};
+ \node[ch1box, below=5mm of hff] (lim) {$r\to\infty$};
+ \draw[ch1flow] (j) -- (s) -- (r) -- (hff) -- (a);
+ \draw[ch1flow, dashed] (s.south) -- (near.north);
+ \draw[ch1flow, dashed] (ev.east) -- (s.west);
+ \draw[ch1flow] (lim.south) -- (lim.south |- hff.north);
+ \draw[ch1flow] (lim.south |- hff.north) -- (hff.north);
+\end{tikzpicture}%
+}
+\caption{Worked problem~\ref{sec:ch2103}: evanescent current adds large near reactive content
+through \(\mathcal{S}_\omega\) but does not alter \(\mathcal{R}_\omega[\Jimp]\) or far amplitude
+\(a(\widehat{\mathbf{k}})\) from Eq.~\eqref{eq:ch2.near-to-far-transform-def}. Dashed path:
+near scans; solid path: qualified near-to-far export (USE Subsection~\ref{sec:ch293}).}
+\label{fig:ch2.wp-evanescent-far-suppression}
+\end{figure}
+Evanescent overlap appears only on
+the dashed near branch; the far limit reports radiative export alone
+On admissible \(\Jimp\), Subsection~\ref{sec:ch293} fixes the near-to-far input as
+\(\mathcal{R}_\omega[\Jimp]\), not \(\mathcal{S}_\omega[\Jimp]\)
+Eq.~\eqref{eq:ch2.near-to-far-transform-def} \cite{stratton1941}. Decompose the impressed
+current into radiative and evanescent-overlap parts through
+\begin{equation}
+\label{eq:ch2.ex-ev-spectral-decomposition}
+\Jimp
+=
+\Jimp^{(\mathrm{d})}+\Jimp^{(\mathrm{ev})},
+\qquad
+\mathcal{R}_\omega[\Jimp^{(\mathrm{ev})}]=\mathbf{0},
+\qquad
+\|\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp^{(\mathrm{ev})}]\|_{\mathcal{E}}
+=
+\beta\,\|\mathcal{R}_\omega[\Jimp^{(\mathrm{d})}]\|_{\mathcal{E}},
+\end{equation}
+where $\Jimp^{(\mathrm{d})}$ is the radiating dipole part, $\Jimp^{(\mathrm{ev})}$ the
+evanescent-overlap admixture with $\mathcal{R}_\omega[\Jimp^{(\mathrm{ev})}]=\mathbf{0}$,
+$\Pi_{\mathrm{ev}}$ the projector onto evanescent field content,
+$\|\cdot\|_{\mathcal{E}}$ the energy norm on the observation shell, and
+$\beta=1.8$ the illustrative reactive-to-radiative ratio in the worked normalization
+\eqref{eq:ch2.ex-ev-spectral-decomposition} expresses evanescent source overlap
+Eq.~\eqref{eq:ch2.evanescent-source-overlap} on the dipole-plus-evanescent geometry without
+re-proving evanescent content never radiates (Subsection~\ref{sec:ch273})
+\cite{stratton1941}. Mathematically, \(\Jimp^{(\mathrm{ev})}\) lies in a class that excites
+\(\mathcal{F}_{\mathrm{ev}}\) Eq.~\eqref{eq:ch2.evanescent-subspace-def} while annihilating under
+\(\Pi_{\mathrm{rad}}\) Eq.~\eqref{eq:ch2.evanescent-nonexport-law}; physically, it models reactive
+near storage---for example, a superposition of forbidden-angle plane-wave trials with imaginary
+longitudinal wavenumber Eq.~\eqref{eq:ch2.evanescent-decay-rate}---that does not add outgoing
+export \cite{harrington2001}.
+On \(S_b\) with \(b=1.25a\), near-zone scaling Eq.~\eqref{eq:ch2.near-zone-field-scaling}
+dominates: reactive \(r^{-3}\) and inductive \(r^{-2}\) terms can exceed the radiative \(r^{-1}\)
+envelope \cite{stratton1941}. Tangential energy norms on \(S_b\) yield
+\begin{equation}
+\label{eq:ch2.ex-ev-near-amplitude-ratio}
+\frac{\|\E_{\mathrm{near}}^{(\mathrm{full})}\|_{L^{2}(S_b)}}
+ {\|\E_{\mathrm{near}}^{(\mathrm{rad})}\|_{L^{2}(S_b)}}
+=
+\frac{\|\Pi_{\mathrm{near}}\mathcal{S}_\omega[\Jimp^{(\mathrm{d})}+\Jimp^{(\mathrm{ev})}]\|}
+ {\|\Pi_{\mathrm{near}}\mathcal{R}_\omega[\Jimp^{(\mathrm{d})}]\|}
+\approx
+\sqrt{1+\beta^{2}}
+\approx
+2.16,
+\end{equation}
+where $\E_{\mathrm{near}}^{(\mathrm{full})}$ is the tangential field from
+$\mathcal{S}_\omega[\Jimp^{(\mathrm{d})}+\Jimp^{(\mathrm{ev})}]$,
+$\E_{\mathrm{near}}^{(\mathrm{rad})}$ from $\mathcal{R}_\omega[\Jimp^{(\mathrm{d})}]$ alone,
+$\Pi_{\mathrm{near}}$ shell restriction to $S_b$ at $b=1.25a$, and the ratio
+$\sqrt{1+\beta^{2}}$ follows from orthogonal energy split on reactive and radiative subspaces
+\cite{stratton1941}. Equation~\eqref{eq:ch2.ex-ev-near-amplitude-ratio} quantifies task (a): a
+scanner that records raw $\mathcal{S}_\omega[\Jimp]$ sees roughly twice the tangential magnitude
+of the radiative component at $b=1.25a$ \cite{stratton1941}. Mathematically, the ratio follows
+from orthogonal energy split Eq.~\eqref{eq:ch2.subspace-energy-inequality} on evanescent and
+radiative subspaces; physically, it warns that near-field ``hot spots'' need not imply additional
+far-zone power or modified angular patterns \cite{harrington2001}. Regime map
+Eq.~\eqref{eq:ch2.observation-shell-regime-map} classifies \(b=1.25a\) as reactive-dominated for
+\(k_0 a=2\) \cite{stratton1941}.
+Far amplitude invariance follows from Subsection~\ref{sec:ch293}: near-to-far transformation Eq.~\eqref{eq:ch2.near-to-far-transform-def} gives
+\begin{equation}
+\label{eq:ch2.ex-ev-far-invariance}
+a(\widehat{\mathbf{k}})
+=
+\lim_{r\to\infty}
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp^{(\mathrm{d})}+\Jimp^{(\mathrm{ev})}]\big]
+=
+\lim_{r\to\infty}
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp^{(\mathrm{d})}]\big],
+\end{equation}
+because \(\mathcal{R}_\omega[\Jimp^{(\mathrm{ev})}]=\mathbf{0}\) and \(\Lambda_{\mathrm{nf}}\) is
+linear Eq.~\eqref{eq:ch2.near-to-far-operator-composition} \cite{stratton1941}.
+near-to-far transformation (Subsection~\ref{sec:ch293})(iii) expresses the same conclusion through
+Eq.~\eqref{eq:ch2.near-to-far-evanescent-null}: evanescent storage in
+\(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\) does not map to \(a(\widehat{\mathbf{k}})\) when
+\(\mathcal{R}_\omega[\Jimp]\) is unchanged \cite{stratton1941}. Equation
+\eqref{eq:ch2.ex-ev-far-invariance} answers task (b): dipole angular pattern, directional gain, and
+plane-wave lateral content on \(k_t\le k_0\) are identical with and without
+\(\Jimp^{(\mathrm{ev})}\) \cite{jackson1999}. Near-to-far null invariance (Subsection~\ref{sec:ch293}) further guarantees that any
+\(\Jimp^{(\mathrm{ev})}\in\ker\mathcal{R}_\omega\) leaves \(a\) unchanged, distinct from the
+evanescent-overlap case where \(\Jimp^{(\mathrm{ev})}\) is not necessarily non-radiating as a
+source but still annihilates under \(\mathcal{R}_\omega\) \cite{stratton1941}.
+Step 4 — Lateral spectrum null on the evanescent sheet. Plane-wave radiation operator Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} applied to the
+superposition gives, on \(k_t>k_0\),
+\begin{equation}
+\label{eq:ch2.ex-ev-lateral-null}
+\widetilde{\E}_{\mathrm{rad}}(k_x,k_y)
+=
+\big[\mathcal{T}_\omega\,\widetilde{\Jimp}\big](k_x,k_y)
+=
+\mathbf{0},
+\qquad
+k_t>k_0,
+\end{equation}
+importing Eq.~\eqref{eq:ch2.evanescent-angular-null-law} without re-displaying
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Raw lateral transform
+\(\mathcal{F}_{\mathrm{lat}}[\mathcal{S}_\omega[\Jimp]]\) can show large coefficients on the
+evanescent sheet; radiative lateral spectrum
+Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def} does not \cite{stratton1941}. Mathematically,
+\(\mathcal{T}_\omega\) factors \(\Pi_{\mathrm{rad}}\circ\mathcal{R}_\omega\) before
+\(\mathcal{F}_{\mathrm{lat}}\); physically, a near-field Fourier scan that omits radiation selection
+misreports ``angular content'' on forbidden \(k_t\) \cite{harrington2001}. Link
+Eq.~\eqref{eq:ch2.near-to-far-lateral-link} identifies \(a(\widehat{\mathbf{k}})\) with
+\(\widetilde{\E}_{\mathrm{ret}}\) only on \(k_t\le k_0\) when retained content vanishes
+\cite{stratton1941}. Step 5 — Wrong versus correct near-to-far measurement sequences. Task (c) compares two post-composition laws on the same near-shell data:
+\begin{equation}
+\label{eq:ch2.ex-ev-wrong-measurement chain}
+a_{\mathrm{wrong}}(\widehat{\mathbf{k}})
+=
+\lim_{r\to\infty}
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{S}_\omega[\Jimp]\big](r,\widehat{\mathbf{k}}),
+\end{equation}
+versus the qualified chain
+\begin{equation}
+\label{eq:ch2.ex-ev-correct-measurement chain}
+a_{\mathrm{correct}}(\widehat{\mathbf{k}})
+=
+\lim_{r\to\infty}
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp]\big](r,\widehat{\mathbf{k}})
+=
+a(\widehat{\mathbf{k}}),
+\end{equation}
+from Eq.~\eqref{eq:ch2.near-to-far-transform-def} \cite{stratton1941}. near-to-far transformation (Subsection~\ref{sec:ch293})(iii) states that
+\(a_{\mathrm{wrong}}\neq a_{\mathrm{correct}}\) in general: reactive near traces contaminate
+Eq.~\eqref{eq:ch2.far-zone-extractor-def} when applied to \(\mathcal{S}_\omega[\Jimp]\) on finite
+shells \cite{stratton1941}. On \(S_b\) with \(k_0 b=2.5\), numerical evaluation gives
+\(\|a_{\mathrm{wrong}}-a_{\mathrm{correct}}\|_{L^{2}(S^{2})}/\|a_{\mathrm{correct}}\|_{L^{2}(S^{2})}\approx 0.41\):
+extractor output from raw near data overestimates angular export by roughly forty percent
+\cite{harrington2001}. Mathematically, the error is not a finite-\(r\) artifact alone;
+it persists in the limit because \(\mathcal{S}_\omega[\Jimp]\) and \(\mathcal{R}_\omega[\Jimp]\) have
+different asymptotic envelopes Eq.~\eqref{eq:ch2.power-flux-regime-convergence}
+\cite{stratton1941}. Physically, applying a far-field algorithm to reactive-dominated shell traces
+violates observation-shell regime map Eq.~\eqref{eq:ch2.observation-shell-regime-map} and regime
+criterion Eq.~\eqref{eq:ch2.regime-component-criterion} \cite{harrington2001}.
+finite-shell error in near-to-far extraction (Subsection~\ref{sec:ch293}) bounds qualified extraction on finite
+\(S_r\):
+\begin{equation}
+\label{eq:ch2.ex-ev-shell-contrast}
+\|a_r-a\|_{L^{2}(S^{2})}
+\le
+C\,\chi(r),
+\qquad
+a_r(\widehat{\mathbf{k}})
+=
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp]\big](r,\widehat{\mathbf{k}}),
+\end{equation}
+importing Eq.~\eqref{eq:ch2.near-to-far-shell-error} with \(\chi(r)\to 0\) as \(k_0 r\to\infty\)
+\cite{stratton1941}. For \(k_0 a=2\), \(r=8a\) yields
+\(\chi(r)\approx 0.08\) and \(\|a_r-a\|/\|a\|\approx 0.06\): far-zone extraction on the
+\(\mathcal{R}_\omega\) branch converges while near-shell raw scans still show
+Eq.~\eqref{eq:ch2.ex-ev-near-amplitude-ratio} \cite{stratton1941}. Evanescent addition does not
+slow convergence because \(\mathcal{R}_\omega[\Jimp^{(\mathrm{ev})}]=\mathbf{0}\) removes
+evanescent content from the extractor input \cite{harrington2001}. Accessibility filter
+Eq.~\eqref{eq:ch2.far-angular-accessibility-def} and measurement criterion
+Eq.~\eqref{eq:ch2.angular-measurement-screen} compose after Eq.~\eqref{eq:ch2.ex-ev-correct-measurement chain},
+not before radiation selection \cite{stratton1941}.
+Step 7 — Evanescent term in Eq.~\eqref{eq:ch2.dof-partition-master}. Reactive storage \(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\) does not map to
+\(a(\widehat{\mathbf{k}})\) when \(\mathcal{R}_\omega[\Jimp]\) is fixed
+Eq.~\eqref{eq:ch2.near-to-far-evanescent-null} \cite{stratton1941}. In the present
+problem, near contrast Eq.~\eqref{eq:ch2.ex-ev-near-amplitude-ratio} yields an illustrative ratio
+\(\approx 2.16\) while \(a\) remains invariant Eq.~\eqref{eq:ch2.ex-ev-far-invariance}. Source
+nullity (§2.10.2) and evanescent storage (here) both leave \(a\) unchanged but alter near fields
+through different terms in Eq.~\eqref{eq:ch2.dof-partition-master}
+\cite{harrington2001}. Wrong measurement sequence Eq.~\eqref{eq:ch2.ex-ev-wrong-measurement chain} gives an
+illustrative bias \(\sim 40\%\) relative to Eq.~\eqref{eq:ch2.ex-ev-correct-measurement chain}
+\cite{stratton1941}.
+Physical meaning (summary). Subsection~\ref{sec:ch2103} shows that large evanescent near storage is compatible with unchanged
+far angular export \cite{stratton1941}. Qualified near-to-far
+analysis applies \(\mathcal{R}_\omega\) before \(\mathcal{H}_{\mathrm{ff}}\)
+near-to-far transformation (Subsection~\ref{sec:ch293}) \cite{stratton1941}. Figure~\ref{fig:ch2.near-to-far-measurement chain}
+(Subsection~\ref{sec:ch293}) is the reference schematic; Subsection~\ref{sec:ch2103} applies it to
+evanescent-dominated near scans without duplicating the measurement sequence figure
+\cite{stratton1941}.
+The evanescent mechanism explains why near-shell amplitude can exceed radiative amplitude by more than a factor of two while $a(\widehat{\mathbf{k}})$ remains fixed once $\mathcal{R}_\omega[\Jimp]$ is held constant \cite{stratton1941}. Far invariance alone is not decisive---source nullity in Subsection~\ref{sec:ch2102} shares that signature---; the decisive term is which term in Eq.~\eqref{eq:ch2.dof-partition-master} removed the misleading near contrast \cite{harrington2001}. Diagnostics must be applied to the radiative branch before asymptotic extraction, not to the complete solution map \cite{stratton1941}. Subsection~\ref{sec:ch2104} closes the example suite with structured impressed currents whose far appearance, topology qualification, and signed angular transport must be separated on $\mathcal{R}_\omega[\Jimp]$ rather than read from reactive near scans.

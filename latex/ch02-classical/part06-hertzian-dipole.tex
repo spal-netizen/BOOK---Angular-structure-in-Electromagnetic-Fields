@@ -1,0 +1,57 @@
+% §2.5.4 — Hertzian electric dipole (classical derivation)
+
+\subsection{The Hertzian Electric Dipole}
+\label{sec:ch02.5.4}
+
+Consider a straight filament of length $\ell$ (m) along $\hat{\mathbf{z}}$, carrying phasor current $I_0$ (A), with electrical size $k_0\ell\ll1$. The impressed current may be modeled as
+\begin{equation}
+\label{eq:ch2.hertzian-Jimp}
+\Jimp(\mathbf{r}')=\hat{\mathbf{z}}\,I_0\,\delta(\mathbf{r}'),
+\end{equation}
+on the support of a vanishingly thin wire, or equivalently through the dipole moment vector
+\begin{equation}
+\label{eq:ch2.dipole-moment}
+\mathbf{p}=\int_{\Omega_s}\Jimp(\mathbf{r}')\,d^3r'=\hat{\mathbf{z}}\,\frac{I_0\ell}{\jj\omega},
+\end{equation}
+with units C$\cdot$m when $\Jimp$ is the volume-averaged current density of a finite cross-section \cite{jackson1999,stratton1941}. The moment $\mathbf{p}$ summarizes the lowest-order multipole content at $k_0\ell\ll1$: the source is too small to sustain higher multipole radiation at comparable amplitude.
+
+Substituting Eq.~\eqref{eq:ch2.hertzian-Jimp} into the dyadic representation Eq.~\eqref{eq:ch2.E-from-dyadic} collapses the integral to evaluation of $\overline{\mathbf{G}}_{E}$ at the origin:
+\begin{equation}
+\label{eq:ch2.dipole-E-H}
+\E(\mathbf{r})=-\jj\omega\mu_0\,\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{0})\cdot\mathbf{p},
+\qquad
+\H(\mathbf{r})=\frac{1}{-\jj\omega\mu_0}\,\curl\E(\mathbf{r}),
+\end{equation}
+where $\overline{\mathbf{G}}_{E}$ is the outgoing electric dyadic of Eq.~\eqref{eq:ch2.dyadic-free-space}. Equation~\eqref{eq:ch2.dipole-E-H} is the complete Maxwell field $\mathcal{S}_\omega[\Jimp]$ for this idealized source \cite{stratton1941}.
+
+Expand $R=|\mathbf{r}|$ in spherical coordinates $(r,\theta,\phi)$ with $\hat{\mathbf{r}}$ the observation direction. The dyadic splits into $1/r^3$, $1/r^2$, and $1/r$ terms \cite{jackson1999}. Within one wavelength of the source, the $1/r^3$ and $1/r^2$ pieces dominate: they store reactive energy and represent induction fields tied to the oscillating dipole moment. When $k_0 r\gg1$, only the transverse $1/r$ term survives outgoing selection:
+\begin{equation}
+\label{eq:ch2.dipole-far-E}
+\E(\mathbf{r})\approx
+-\jj\omega\mu_0\,\frac{e^{-\jj k_0 r}}{4\pi r}\,
+\big(\mathbf{I}-\hat{\mathbf{r}}\hat{\mathbf{r}}\big)\cdot\mathbf{p},
+\end{equation}
+so $\hat{\mathbf{r}}\cdot\E\to0$ and the amplitude varies as $\sin\theta$ when $\mathbf{p}\parallel\hat{\mathbf{z}}$ \cite{stratton1941}. An observer on the dipole axis ($\theta=0,\pi$) sees no transverse radiation because the charge oscillation has no transverse acceleration component in that direction.
+
+The magnetic field in the far zone follows from $\H=(\curl\E)/(-\jj\omega\mu_0)$ and is transverse to both $\hat{\mathbf{r}}$ and $\E$, with magnitude related by $\eta_0$ \cite{stratton1941}. Radiated power follows Eq.~\eqref{eq:ch2.radiated-power-screen}:
+\begin{equation}
+\label{eq:ch2.dipole-P-rad}
+P_{\mathrm{rad}}=\frac{k_0^4|\mathbf{p}|^2}{12\pi\varepsilon_0 c},
+\end{equation}
+with $c=(\mu_0\varepsilon_0)^{-1/2}$ (m/s). The $k_0^4$ scaling at fixed $|\mathbf{p}|$ is the hallmark of electrically small radiation: moment fixed, power rises rapidly with frequency \cite{poynting1884,harrington2001}. Radiation resistance connects $P_{\mathrm{rad}}$ to $|I_0|^2$ through the equivalent circuit of the short wire \cite{harrington2001}.
+
+The far-zone amplitude in Eq.~\eqref{eq:ch2.dipole-far-E} is the spatial Fourier transform of the source at $\mathbf{k}=k_0\hat{\mathbf{r}}$ in the $k_0\ell\ll1$ limit---the directional pattern is fixed by how $\mathbf{p}$ projects onto the plane transverse to $\hat{\mathbf{r}}$ \cite{jackson1999}. That link foreshadows the angular-spectrum development of Section~\ref{sec:ch29}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (p) {Dipole $\mathbf{p}\parallel\hat{\mathbf{z}}$};
+ \node[ch1box, right=10mm of p] (near) {$1/r^3,\,1/r^2$\\reactive shell};
+ \node[ch1box, right=10mm of near] (far) {$1/r$ transverse\\$k_0r\gg1$};
+ \draw[ch1flow] (p) -- (near) -- (far);
+\end{tikzpicture}%
+}
+\caption{Hertzian dipole: reactive and induction terms dominate near the source; outgoing selection isolates the transverse $1/r$ field used in pattern and power measurements.}
+\label{fig:ch2.hertzian-dipole-regimes}
+\end{figure}

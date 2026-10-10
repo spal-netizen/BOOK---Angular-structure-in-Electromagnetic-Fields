@@ -1,0 +1,285 @@
+% Stage 8 restored fragment — 2.4.1 Sommerfeld radiation condition (archive lines 4939-5230)
+\subsection{Sommerfeld radiation condition}
+\label{sec:ch241}
+Before Sommerfeld asymptotics are written, the physical ambiguity must be named. Harmonic
+Helmholtz solutions on open domains superpose $e^{-\jj k_0 r}/r$ outgoing and
+$e^{+\jj k_0 r}/r$ incoming spherical waves with equal standing rights in the volume
+equations alone \cite{sommerfeld1949}. A near-field scan or pattern cut on
+$\Gamma_R$ cannot distinguish these completions without an explicit outgoing selection: wattmeters
+and probes then read mixtures of export, storage, and energy arriving from the computational or
+chamber boundary \cite{hansen1988}. Sommerfeld radiation condition is the asymptotic
+statement that restores laboratory identification---radiation launched locally and leaving the
+domain---before any uniqueness argument or far-zone integral is evaluated
+\cite{sommerfeld1949}.
+
+Before any asymptotic formula is written, the range engineer already decides whether the
+measurement enclosure behaves as an open exterior domain \cite{hansen1988}.
+A compact range places the device under test inside an anechoic chamber whose absorbing
+linings are designed to let export escape instead of reflecting back as multipath
+\cite{collin2001}. Pattern probes on a large sphere $\Gamma_R$ and shell wattmeters report
+tangential field and power only when chamber absorption and computational termination both
+approximate free-space outgoing behavior \cite{poynting1884}. Incomplete
+absorption produces ripple on azimuth cuts; unstable spherical near-field transforms when
+spectra are truncated show the same branch failure at the data-processing stage
+\cite{hansen1988}. Until outgoing selection is restored, $\Gamma_R$ meters read cavity
+storage and standing-wave content rather than watt-bearing export \cite{maxwell1873}.
+Sommerfeld radiation condition below is the asymptotic mathematical statement of what the
+range engineer already assumes when attributing a measured pattern to the device under test
+rather than to energy arriving from infinity \cite{sommerfeld1949}.
+An open antenna measurement is meaningful only if the field on the range can be identified
+with radiation from the device under test rather than with energy arriving from infinity.
+Sommerfeld outgoing selection enforces that identification: disturbances launched locally
+propagate outward and are not returned from the far boundary of the model
+\cite{sommerfeld1949}. When the condition is omitted, the same near-field scan or pattern
+cut admits formal completions with incoming or standing-wave content, and inversion may
+assign equivalent sources that would require excitation mechanisms absent from the physical
+problem and therefore lie outside the admissible solution class \cite{devaney2004}.
+Free-space kernels
+Eqs.~\eqref{eq:ch2.free-space-scalar-green} and~\eqref{eq:ch2.free-space-dyadic-green}
+supply the asymptotic templates; outer-boundary classes from Chapter~\ref{ch:01} are
+presupposed. Uniqueness proofs and reconstruction limits belong to
+Subsections~\ref{sec:ch243} and~\ref{sec:ch244}.
+Let \(\Omega_{\mathrm{ext}}\) denote an exterior region surrounding compact \(\operatorname{supp}\Jimp\subset\Omega_s\), with \(\omega>0\) fixed and vacuum
+constants \(\varepsilon_0,\mu_0\) in the far zone. Spherical coordinates
+\((r,\theta,\phi)\) are centered so that \(\Omega_s\subset B_R(0)\) for some
+\(R_0>0\). Fields are phasors under \(\exp(-\jj\omega t)\); outgoing means
+\(e^{-\jj k_0 r}/r\) decay with \(k_0=\omega\sqrt{\mu_0\varepsilon_0}\) from
+Eq.~\eqref{eq:ch2.helmholtz-symbol} \cite{stratton1941}. Interior interfaces and
+finite domains use Eq.~\eqref{eq:ch1.outer-boundary-classes}; Sommerfeld completion
+applies on artificial or physical spheres at large \(r\) \cite{harrington2001}.
+On $\Gamma_R$ with $R\gg\lambda_0$, a range engineer expects the measured phase to advance as
+$k_0 r$ increases---outgoing fronts receding from the enclosure---and the amplitude to fall no
+faster than $r^{-1}$ in three dimensions \cite{jackson1999}. That observation is what
+Sommerfeld selection encodes at infinity: the scalar template states what every outgoing Helmholtz
+response must look like at large distance from a localized source. Phase fronts recede with the
+observer; amplitude decay compatible with energy export to infinity is $r^{-1}$ in three
+dimensions \cite{jackson1999}. For scalar potentials and Helmholtz kernels, outgoing radiation
+requires, with $r=|\mathbf{r}|$ the observation radius from an origin enclosing the source,
+$k_0=\omega\sqrt{\mu_0\varepsilon_0}$ the vacuum wavenumber (rad\,m$^{-1}$), and
+$A(\theta,\phi,\mathbf{r}')$ the angular amplitude that carries directional information while
+$\mathbf{r}'$ labels the fixed source point during the limit $r\to\infty$:
+\begin{equation}
+\label{eq:ch2.sommerfeld-scalar-asymptotic}
+G(\mathbf{r},\mathbf{r}')
+=
+A(\theta,\phi,\mathbf{r}')\,\frac{e^{-\jj k_0 r}}{r}
+\;+\;
+\mathcal{O}(r^{-2}),
+\qquad
+r=|\mathbf{r}|\to\infty,
+\end{equation}
+The remainder \(\mathcal{O}(r^{-2})\) collects subleading reactive and curvature corrections
+that need not vanish at finite range \cite{stratton1941}. Equation
+\eqref{eq:ch2.sommerfeld-scalar-asymptotic} is the Chapter~\ref{ch:02} scalar
+Sommerfeld condition: it excludes incoming \(e^{+\jj k_0 r}/r\) and standing
+\(e^{\pm\jj k_0 r}/r\) superpositions that degenerate exterior uniqueness
+\cite{harrington2001}. The free-space template Eq.~\eqref{eq:ch2.free-space-scalar-green}
+satisfies Eq.~\eqref{eq:ch2.sommerfeld-scalar-asymptotic} for fixed \(\mathbf{r}'\)
+\cite{stratton1941}. Physically, Eq.~\eqref{eq:ch2.sommerfeld-scalar-asymptotic}
+states that monopole-like responses propagate outward with phase fronts
+\(k_0 r=\mathrm{const}\) and amplitude decay \(r^{-1}\), the only radial
+combination compatible with energy flux to infinity in three dimensions
+\cite{jackson1999}.
+Vector fields must satisfy a transverse impedance relation at infinity: the electric and
+magnetic components that carry export must stand in the same ratio as a plane wave
+propagating along \(\hat{\mathbf{r}}\), with vacuum impedance \(\eta_0\) as the proportionality
+constant \cite{stratton1941}. For harmonic Maxwell fields in vacuum far from sources,
+\begin{equation}
+\label{eq:ch2.sommerfeld-field-condition}
+\mathbf{r}\times\E
+\;+\;
+\eta_0\,(\mathbf{r}\times\H)\times\hat{\mathbf{r}}
+=
+\mathbf{o}(1),
+\qquad
+r\to\infty,
+\end{equation}
+with \(\eta_0=\sqrt{\mu_0/\varepsilon_0}\) the vacuum wave impedance,
+\(\hat{\mathbf{r}}=\mathbf{r}/r\) the unit radial direction, and \(\mathbf{o}(1)\) denoting
+any vector whose Cartesian components vanish in the limit \(r\to\infty\)
+\cite{stratton1941}. Physically, Eq.~\eqref{eq:ch2.sommerfeld-field-condition} requires that
+the transverse electric field and the transverse magnetic field on a distant sphere lock
+phase and magnitude as if energy were leaving the domain along \(\hat{\mathbf{r}}\), rather
+than arriving from infinity \cite{harrington2001}. Equation~\eqref{eq:ch2.sommerfeld-field-condition}
+is the Chapter~\ref{ch:02} vector Sommerfeld radiation condition. It implies
+transverse radiative fields with asymptotic ratio
+\begin{equation}
+\label{eq:ch2.sommerfeld-impedance-ratio}
+\H_{\mathrm{rad}}
+\sim
+\eta_0^{-1}\,\hat{\mathbf{r}}\times\E_{\mathrm{rad}},
+\qquad
+r\to\infty,
+\end{equation}
+and matches the outgoing-trace condition Eq.~\eqref{eq:ch1.radiation-trace-condition}
+from Subsection~\ref{sec:ch01.1.2} when tangential traces are taken on a sphere of
+large radius \cite{stratton1941}. Mathematically,
+Eq.~\eqref{eq:ch2.sommerfeld-field-condition} selects the subspace on which the
+exterior Laplacian/Helmholtz resolvent coincides with retarded Green functions
+Eq.~\eqref{eq:ch2.retarded-harmonic-kernel-theorem}; physically, it enforces
+power flow outward rather than inward at infinity \cite{harrington2001}.
+Far-zone transversality and propagation. Sommerfeld-admissible fields decompose at leading order as
+\begin{equation}
+\label{eq:ch2.far-zone-transverse-radiation}
+\E(\mathbf{r})
+=
+\E_0(\theta,\phi)\,\frac{e^{-\jj k_0 r}}{r}
+\;+\;\mathcal{O}(r^{-2}),
+\qquad
+\E_0\cdot\hat{\mathbf{r}}=0,
+\end{equation}
+with \(\E_0\) the radiation amplitude pattern and \(\E_0\cdot\hat{\mathbf{r}}=0\)
+the transversality constraint \cite{stratton1941}. Equation
+\eqref{eq:ch2.far-zone-transverse-radiation} connects Sommerfeld completion to
+\(\Pi_{\mathrm{prop}}\) from Subsection~\ref{sec:ch224}: far-zone content lies on
+the propagating sheet with real \(k_r=k_0\) and outgoing phase
+\cite{harrington2001}. Evanescent and reactive components may still be large at
+finite \(r\) while satisfying Eq.~\eqref{eq:ch2.sommerfeld-field-condition}; regime
+qualification Eq.~\eqref{eq:ch2.regime-operator-screen} remains separate from
+Sommerfeld selection \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (src) {Compact\\$\Omega_s$};
+ \node[ch1box, right=16mm of src] (near) {Near/reactive\\$kr\lesssim 1$};
+ \node[ch1box, right=16mm of near] (far) {Sommerfeld\\$e^{-jk_0 r}/r$};
+ \node[ch1box, below=5mm of near] (ev) {$\Pi_{\mathrm{ev}}$};
+ \draw[ch1flow] (src) -- (near) -- (far);
+ \draw[ch1flow] (near.south) -- (near.south |- ev.north);
+ \draw[ch1flow] (near.south |- ev.north) -- (ev.north);
+\end{tikzpicture}%
+}
+\caption{Sommerfeld far zone Eq.~\eqref{eq:ch2.sommerfeld-field-condition}: compact
+sources drive near fields with evanescent content; at large \(r\) only outgoing
+transverse \(e^{-jk_0 r}/r\) waves satisfy exterior completion.}
+\label{fig:ch2.sommerfeld-far-zone}
+\end{figure}
+Equation~\eqref{eq:ch2.sommerfeld-field-condition} is a local impedance statement at
+infinity: transverse \(\E\) and \(\H\) must satisfy the plane-wave ratio
+Eq.~\eqref{eq:ch2.sommerfeld-impedance-ratio} with \(\eta_0\) from
+Eq.~\eqref{eq:ch1.vacuum-impedance-wavenumber}. Mathematically, it selects the
+eigensheet of the exterior Helmholtz resolvent with outgoing radial phase; physically,
+it enforces net power flow toward infinity rather than inward from infinity. On a
+truncation sphere \(\Gamma_R\) with \(R=8\lambda_0\) enclosing a source with \(k_0 a=1.5\),
+Silver--M\"uller surrogate Eq.~\eqref{eq:ch2.silver-muller-trace-approx} typically
+introduces spurious reflected power below \(1\%\) of \(P_{\mathrm{rad}}\) while reactive
+near fields at \(r=1.2a\) may differ by \(\mathcal{O}(1)\) from the exact Sommerfeld solution
+\cite{harrington2001}. Sommerfeld completion is therefore necessary but not
+sufficient for transport claims---regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen}
+remains mandatory \cite{stratton1941}. Figure~\ref{fig:ch2.sommerfeld-far-zone} separates Sommerfeld completion from regime qualification. Subsection~\ref{sec:ch241} fixes the asymptotic \emph{boundary at
+infinity}; Subsection~\ref{sec:ch224} and Section~\ref{sec:ch01.2.4} govern when
+far-zone samples may be interpreted as transport \cite{stratton1941}. Green-function asymptotics. Dyadic kernels from Subsection~\ref{sec:ch231} inherit scalar Sommerfeld decay.
+For \(r=|\mathbf{r}-\mathbf{r}'|\to\infty\) at fixed \(\mathbf{r}'\),
+\begin{equation}
+\label{eq:ch2.sommerfeld-dyadic-asymptotic}
+\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{r}')
+=
+\overline{\mathbf{G}}_{\infty}(\theta,\phi,\mathbf{r}')\,
+\frac{e^{-\jj k_0 r}}{r}
+\;+\;\mathcal{O}(r^{-2}),
+\end{equation}
+with \(\overline{\mathbf{G}}_{\infty}\) transverse in the \(\mathbf{r}\)-direction
+\cite{stratton1941}. Equation~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic}
+is the kernel form of Eq.~\eqref{eq:ch2.sommerfeld-field-condition} under
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution}: impressed currents that satisfy
+Eq.~\eqref{eq:ch1.source-admissibility} generate fields whose far zone is built from
+outgoing dyadic radiation \cite{stratton1941}. The leading \(r^{-1}\) term in
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} is the explicit vacuum instance of
+Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic} \cite{jackson1999}. Subsection~\ref{sec:ch242}
+promotes Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic} to an operator selector on
+\(\mathcal{S}_\omega\); Subsection~\ref{sec:ch243} uses it in uniqueness energy
+integrals \cite{harrington2001}.
+Collecting the asymptotic and impedance conditions above yields the admissible function class
+on which exterior uniqueness arguments and radiation export are defined. A field pair belongs
+to this class only if it satisfies the vector Sommerfeld condition and the transverse far-zone
+template simultaneously; incoming or standing-wave completions are excluded by construction
+\cite{harrington2001}. Define the Sommerfeld outgoing subspace on an exterior shell
+\(\Gamma_R=\{r=R\}\):
+\begin{equation}
+\label{eq:ch2.sommerfeld-outgoing-class}
+\mathcal{F}_{\mathrm{SF}}
+=
+\left\{
+(\E,\H)\in\HCurl(\Omega_{\mathrm{ext}}):
+\text{Eqs.~\eqref{eq:ch2.sommerfeld-field-condition}--\eqref{eq:ch2.far-zone-transverse-radiation} hold}
+\right\}.
+\end{equation}
+In Eq.~\eqref{eq:ch2.sommerfeld-outgoing-class},
+\(\mathcal{F}_{\mathrm{SF}}\subset\HCurl(\Omega_{\mathrm{ext}})\) is the Sommerfeld
+outgoing field class on exterior \(\Omega_{\mathrm{ext}}\): pairs \((\E,\H)\) whose
+far-zone asymptotics satisfy outgoing phase and transverse radiation templates;
+incoming and standing-wave completions are excluded by membership in this set.
+Equation~\eqref{eq:ch2.sommerfeld-outgoing-class} embeds Eq.~\eqref{eq:ch1.radiation-trace-condition}
+into the Chapter~\ref{ch:02} function-space setting of
+Eq.~\eqref{eq:ch2.admissible-field-space} \cite{stratton1941}. The physical
+solution operator \(\mathcal{S}_\omega\) maps \(\mathcal{J}_\Omega\) into
+\(\mathcal{F}_{\mathrm{SF}}\) when \(\mathcal{B}_\Gamma\) includes outgoing radiation condition
+\cite{harrington2001}. Incoming solutions lie outside
+\(\mathcal{F}_{\mathrm{SF}}\) even if they satisfy volume Maxwell rows; that exclusion is the Sommerfeld radiation condition \cite{stratton1941}.
+Finite computations cannot place a boundary at infinity; the Silver--M\"uller trace below
+approximates the Sommerfeld impedance relation on a truncation sphere large enough that
+spurious reflections are small compared with exported power \cite{harrington2001}. On a finite
+truncation sphere \(\Gamma_R\), Eq.~\eqref{eq:ch2.sommerfeld-impedance-ratio}
+motivates the first-order absorbing condition
+\begin{equation}
+\label{eq:ch2.silver-muller-trace-approx}
+\hat{\mathbf{n}}\times\H
+\;-\;
+\eta_0^{-1}(\hat{\mathbf{n}}\times\E)\times\hat{\mathbf{n}}
+=
+\mathbf{0}\quad\text{on }\Gamma_R,
+\end{equation}
+which approximates Eq.~\eqref{eq:ch1.radiation-trace-condition} at finite \(R\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.silver-muller-trace-approx}
+is not identical to Sommerfeld completion at infinity: spurious reflections from
+\(\Gamma_R\) contaminate near fields unless \(R\) is large compared with source
+extent and wavelength \cite{harrington2001}. Section~\ref{sec:ch24} treats
+Eq.~\eqref{eq:ch2.silver-muller-trace-approx} as a practical surrogate; the
+continuous target remains Eq.~\eqref{eq:ch2.sommerfeld-field-condition}
+\cite{stratton1941}. Perfectly matched layers and radiation boundary integrals are
+discrete refinements of the same outgoing-trace logic \cite{harrington2001}.
+Once Sommerfeld closure is in place, the radiation export map $\mathcal{R}_\omega$ and projector
+$\Pi_{\mathrm{rad}}$ act on the same outgoing class the range attributes to measured patterns:
+$\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]$ with full field pair
+$\mathcal{S}_\omega[\Jimp]$ carrying reactive content that $\Pi_{\mathrm{rad}}$ removes before
+far-zone metering \cite{stratton1941}. The outgoing selector \(\Pi_{\mathrm{rad}}\) of
+Eq.~\eqref{eq:ch2.radiation-operator-def} is idempotent on fields satisfying
+Eq.~\eqref{eq:ch2.sommerfeld-outgoing-class} once uniqueness is established in
+Subsection~\ref{sec:ch243} \cite{stratton1941}. Prior to that proof, Sommerfeld
+closure defines the domain on which \(\Pi_{\mathrm{rad}}\) acts as projection rather than heuristic windowing \cite{harrington2001}. Composition with
+Eq.~\eqref{eq:ch2.transport-qualified-radiation} yields
+\begin{equation}
+\label{eq:ch2.sommerfeld-radiation-composition}
+\mathcal{R}_\omega[\Jimp]
+=
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp],
+\qquad
+\mathcal{S}_\omega[\Jimp]\in\mathcal{F}_{\mathrm{SF}},
+\end{equation}
+with transport qualification from Section~\ref{sec:ch01.2.4} applied after
+Eq.~\eqref{eq:ch2.sommerfeld-radiation-composition} \cite{stratton1941}. Equation
+\eqref{eq:ch2.sommerfeld-radiation-composition} expresses
+Eq.~\eqref{eq:ch2.radiation-time-frequency-equiv} on the Sommerfeld domain without
+re-proving causality from Subsection~\ref{sec:ch223} \cite{harrington2001}. Consequence for
+range practice: pattern meters and gain reports must compose with $\mathcal{R}_\omega$, not with
+raw $\mathcal{S}_\omega[\Jimp]$, whenever reactive near fields are non-negligible on the
+measurement shell \cite{stratton1941}. Subsection~\ref{sec:ch241} therefore states
+what the compact range already assumes before any far-zone integral is evaluated in
+Section~\ref{sec:ch25} \cite{stratton1941}.
+Equations~\eqref{eq:ch2.sommerfeld-scalar-asymptotic}--\eqref{eq:ch2.sommerfeld-outgoing-class}
+require linear vacuum far zones, fixed \(\omega>0\), and compact \(\operatorname{supp}\Jimp\).
+They fail for anisotropic or magneto-electric exterior media without modified
+asymptotics, for lossless closed cavities where Eq.~\eqref{eq:ch1.outer-boundary-classes}
+uses PEC rather than outgoing radiation condition, and for time-harmonic fields with net incoming
+power at infinity \cite{stratton1941}. Loss shifts
+Eq.~\eqref{eq:ch2.sommerfeld-scalar-asymptotic} to complex \(k_0\) but preserves
+outgoing \emph{selection} as distinct from incoming \cite{stratton1941}.
+As a worked example, replace Eq.~\eqref{eq:ch2.sommerfeld-field-condition} by
+Eq.~\eqref{eq:ch2.silver-muller-trace-approx} on \(\Gamma_R\) with \(R=5\lambda_0\).
+Fields inside \(\Omega_s\) differ from the exact Sommerfeld solution by
+\(\mathcal{O}((k_0 R)^{-1})\) in typical radiative components while reactive near
+content may differ by order unity \cite{stratton1941}. Declaring a
+transport channel from \(\Gamma_R\) probes without
+Eq.~\eqref{eq:ch2.regime-operator-screen} conflates truncation error with angular
+transport \cite{stratton1941}.

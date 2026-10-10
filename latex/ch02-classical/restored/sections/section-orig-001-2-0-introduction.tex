@@ -1,0 +1,40 @@
+% Stage 8 section framing — 2.0 Introduction (Stage 10 classical integration pass)
+\section{Introduction}
+\label{sec:ch20}
+
+At a fixed angular frequency, antenna design, compact-range measurement, and inverse scattering all ask two coupled questions: given an impressed current on a bounded support, what electromagnetic field does Maxwell theory determine, and given a field observed on a finite instrument, what can legitimately be inferred about the source that produced the radiative part of that field \cite{harrington2001,stratton1941}? The first is a forward boundary-value problem; the second is an inverse problem whose solvability is constrained by null spaces, finite aperture, and noise in ways that no post-processing can remove \cite{devaney2004}. Chapter~2 organizes the harmonic theory needed to keep reactive storage, outgoing radiation, and measurement rank separate in both questions \cite{maxwell1873}.
+
+Chapter~\ref{ch:01} already fixed the data of a Maxwell problem---domain, constitutive response, impressed sources, boundary traces, and charge continuity under the volume harmonic convention $\eim$ (Eqs.~\eqref{eq:ch1.maxwell-local} and~\eqref{eq:ch1.charge-continuity-harmonic}). The present chapter does not introduce new local laws. It develops the operator maps through which admissible sources are connected to complete field pairs, outgoing radiative export, and finite observables \cite{stratton1941}. Historically, the exterior problem was made calculable by Green's retarded representations and Sommerfeld's outgoing condition \cite{stratton1941}; Poynting's flux integral turned power through a closed surface into a primary measured quantity \cite{poynting1884}; later work on finite support and electrical size clarified that bounded sources cannot export arbitrary angular complexity at fixed bandwidth \cite{chu1948,harrington2001}.
+
+The central distinction is \emph{radiation as accessibility}, not merely field existence. The harmonic \emph{solution map} $\mathcal{S}_\omega$ sends an admissible impressed current $\Jimp\in\mathcal{J}_\Omega$ to the Maxwell field pair $(\E,\H)$ consistent with the declared boundary class \cite{stratton1941}. The pair generally contains reactive and stored structure as well as outward-propagating content. Outgoing selection on the exterior domain defines a \emph{radiation map}
+\begin{equation}
+\label{eq:ch2.intro-Romega}
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
+\end{equation}
+where $\Pi_{\mathrm{rad}}$ retains the Sommerfeld-outgoing, far-zone transverse component and $\mathcal{F}_{\mathrm{rad}}$ is the corresponding radiative image space \cite{stratton1941}. The operator $\Pi_{\mathrm{rad}}$ is an outgoing selector on completed field pairs; it is not an orthogonal projection on all of $\mathcal{F}_\Omega$ unless additional Hilbert-space structure is imposed and proved (Subsections~\ref{sec:ch201} and~\ref{sec:ch292}). Composition with a finite measurement map gives the laboratory-accessible rank studied in Sections~\ref{sec:ch26} and~\ref{sec:ch29}.
+
+\phantomsection\label{prin:ch2.radiative-accessibility}
+\emph{Radiative accessibility.} Far-zone observability is a composed map: radiation selection, geometric regime, and finite measurement rank act in sequence. Evanescent and reactive content may dominate near scans without enlarging the angular rank-$N$ recovery of export on $\mathcal{F}_{\mathrm{rad}}$ \cite{stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box, minimum width=28mm] (src) {Finite\\sources};
+ \node[ch1box, minimum width=28mm, below=of src] (max) {Maxwell\\operator};
+ \node[ch1box, minimum width=28mm, below=of max] (grn) {Green\\propagation};
+ \node[ch1box, minimum width=28mm, below=of grn] (bnd) {Boundary\\closure};
+ \node[ch1box, minimum width=28mm, below=of bnd] (out) {Outgoing\\selection};
+ \node[ch1box, minimum width=28mm, below=of out] (rad) {Radiation\\operator};
+ \node[ch1box, minimum width=28mm, below=of rad] (meas) {Measurement\\operator};
+ \node[ch1box, minimum width=28mm, below=of meas] (ang) {Observable\\angular structure};
+ \draw[ch1flow] (src) -- (max) -- (grn) -- (bnd) -- (out) -- (rad) -- (meas) -- (ang);
+\end{tikzpicture}%
+}
+\caption{Admissible impressed currents drive Maxwell's equations; Green representation and boundary data select a physical branch; outgoing selection defines radiative export $\mathcal{R}_\omega$; finite instruments observe only a compressed image on $\mathcal{F}_{\mathrm{rad}}$ \cite{maxwell1873,stratton1941}.}
+\label{fig:ch2.master-spine}
+\end{figure}
+
+A coaxial stub and a center-fed dipole in the same cell at $1\,\mathrm{GHz}$ may exhibit comparable near-field magnitude on a small scan surface, yet only the open structure sustains net outward power through a large enclosing sphere once outgoing qualification is enforced \cite{stratton1941,harrington2001}. Reactive diagnostics belong to $\mathcal{S}_\omega[\Jimp]$; wattmeter and pattern reports belong to $\mathcal{R}_\omega[\Jimp]$ after the appropriate regime screen from Chapter~\ref{ch:01}. Three structural facts recur throughout the chapter: not every Maxwell-consistent field radiates; not every radiated component is observable with finite aperture and signal-to-noise ratio; and radiative equivalence of sources does not imply uniqueness of $\Jimp$ \cite{devaney2004,stratton1941}.
+
+Subsections~\ref{sec:ch201}--\ref{sec:ch203} name the maps, write Maxwell's equations in operator form, and record admissibility and export criteria inherited from Chapter~\ref{ch:01}. Section~\ref{sec:ch21} supplies the function spaces and operator domains; later sections develop time--frequency equivalence, Green functions, uniqueness and inversion limits, flux integrals, spectral structure, null spaces, reciprocity, and angular spectra in the order required by the forward chain above.

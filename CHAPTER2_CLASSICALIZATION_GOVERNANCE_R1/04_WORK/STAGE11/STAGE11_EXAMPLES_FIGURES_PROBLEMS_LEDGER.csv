@@ -1,0 +1,4 @@
+location,purpose,derivation_status,disposition,reason
+part06-hertzian-dipole.tex,Hertzian dipole far zone + power,verified_stage10,retain,dyadic labels bridged
+part09-worked-problems.tex,Problems A–G,verified_stage10,retain,J_imp subscript fix
+fig:ch2.master-spine,Operator spine,complete,retain,TikZ in §2.0

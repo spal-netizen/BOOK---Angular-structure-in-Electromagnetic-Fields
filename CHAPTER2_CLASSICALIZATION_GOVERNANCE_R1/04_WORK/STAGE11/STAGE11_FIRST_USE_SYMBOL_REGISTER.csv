@@ -1,0 +1,7 @@
+symbol,meaning,first_location,definition_status
+\HCurl(\Omega),curl-Sobolev fields,sec:ch211,complete
+\Hdiv(\Omega),divergence-Sobolev fields,sec:ch211,complete
+\mathcal{S}_\omega,harmonic Maxwell solution map,sec:ch201,complete
+\Pi_{\mathrm{rad}},outgoing selector (not proved orthogonal),sec:ch201,complete
+\mathcal{R}_\omega,radiation map,sec:ch201,complete
+\eim,exp(-jωt) time factor,ch02-stage9-preamble,complete

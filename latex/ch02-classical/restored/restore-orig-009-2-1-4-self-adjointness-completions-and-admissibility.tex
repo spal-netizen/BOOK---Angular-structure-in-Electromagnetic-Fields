@@ -1,0 +1,202 @@
+% Stage 8 restored fragment — 2.1.4 Self-adjointness, completions, and admissibility (archive lines 2205-2412)
+\subsection{Self-adjointness, completions, and admissibility}
+\label{sec:ch214}
+The physical problem is passive realizability on bounded hardware: cavity walls, matched
+terminations, and dissipative linings must not permit unbounded storage of reactive energy
+under admissible excitation \cite{stratton1941}. Friedrichs and other
+completions extend domains just enough that $\curl$ and $\hat{\mathbf{n}}\times$ are
+simultaneously closed on the same space---precisely what finite-element antenna models
+require when sheet sources sit on interior interfaces \cite{harrington2001}. Improper
+domain extension predicts unphysical growth of reactive storage---a numerical symptom that
+must be corrected before radiation maps are trusted \cite{maxwell1873}. Completion
+choices are radiation-physics choices about which reactive storage remains inside $\Omega$
+and which energy is exported \cite{sommerfeld1949}.
+
+Subsections~\ref{sec:ch211}--\ref{sec:ch213} supplied spaces, solution domains,
+compactness, and spectral compression templates. Subsection~\ref{sec:ch214}
+identifies self-adjoint and coercive realizations of truncated Maxwell operators
+on bounded domains, records completion and quotient constructions that remove cavity
+kernels, and states the $\mathcal{D}_J=1$ embedding that links Chapter~\ref{ch:01}
+finite-energy criteria to the solution domains declared here
+\cite{stratton1941}. Weak and energy forms
+Eqs.~\eqref{eq:ch2.maxwell-energy-form}--\eqref{eq:ch2.maxwell-weak-form} and the
+adjoint pairing Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} are presupposed; they
+are \cite{stratton1941}.
+A densely defined operator \(T\) on Hilbert space \(\mathcal{H}\) is
+\emph{symmetric} if
+\(\langle T\mathbf{u},\mathbf{v}\rangle=\langle\mathbf{u},T\mathbf{v}\rangle\)
+for all \(\mathbf{u},\mathbf{v}\in\mathcal{D}(T)\), and \emph{self-adjoint} if
+\(\mathcal{D}(T^{\dagger})=\mathcal{D}(T)\) with equality of adjoints
+\cite{stratton1941}. Maxwell operators are symmetric on suitable domains because
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} cancels boundary pairings when
+\(\mathcal{B}_\Gamma\) is passive and homogeneous on test states. Self-adjointness
+requires matching domain and range of adjoints; that match fails on exterior
+domains without restricting to outgoing subspaces \cite{harrington2001}. On bounded \(\Omega\) with passive \(\mathcal{B}_\Gamma\), the sesquilinear form
+\(\mathfrak{a}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-energy-form} is coercive on
+the quotient by cavity modes:
+\begin{equation}
+\label{eq:ch2.coercivity-quotient}
+\mathfrak{a}_\omega(\mathbf{u},\mathbf{u})
+\ge
+\alpha\,\|\mathbf{u}\|_{\mathcal{U}}^{2},
+\qquad
+\mathbf{u}\in\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega,
+\end{equation}
+for some \(\alpha>0\) when \(\ker\mathcal{L}_\omega\) is finite-dimensional and
+consists of divergence-free resonances compatible with boundary class
+\cite{stratton1941}. Equation~\eqref{eq:ch2.coercivity-quotient}
+is the Lax--Milgram hypothesis that makes
+Eq.~\eqref{eq:ch2.maxwell-weak-form} well posed on the quotient. Coercivity fails
+on the unquotiented space because cavity modes satisfy
+\(\mathfrak{a}_\omega(\mathbf{u},\mathbf{u})=0\) while
+\(\|\mathbf{u}\|_{\mathcal{U}}>0\).
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (u) {$\mathcal{U}_\omega^{0}$}; \node[ch1box, right=15mm of u] (q) {$\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega$};
+ \node[ch1box, below=5mm of q] (sol) {Unique weak solution};
+ \draw[ch1flow] (u.east) -- node[above,font=\scriptsize]{quotient} (q.west);
+ \draw[ch1flow] (q.south) -- (q.south |- sol.north);
+ \draw[ch1flow] (q.south |- sol.north) -- (sol.north);
+\end{tikzpicture}%
+}
+\caption{Cavity-mode quotient: coercivity and uniqueness hold on the quotient space
+after removing \(\ker\mathcal{L}_\omega\).}
+\label{fig:ch2.cavity-quotient-schematic}
+\end{figure}
+Physical excitation at a cavity frequency
+requires impedance or source coupling that breaks pure standing-wave balance;
+Subsection~\ref{sec:ch214} records the linear-algebraic quotient; Section~\ref{sec:ch263}
+develops spectral consequences \cite{stratton1941}. Impedance and Leontovich completions from
+Eq.~\eqref{eq:ch2.boundary-impedance-operator} yield self-adjoint boundary
+realizations when surface impedance is passive:
+\begin{equation}
+\label{eq:ch2.passive-impedance-class}
+\Re\{Z_s\}\ge 0\ \text{on}\ \Gamma_Z
+\quad\Longrightarrow\quad
+\mathcal{B}_\Gamma\ \text{symmetric on}\ \mathcal{T}_\Gamma.
+\end{equation}
+Passive \(\Re\{Z_s\}\ge 0\) dissipates power through the boundary rather than
+injecting net energy; active or negative-real parts require revisiting Maxwell-closed
+as noted in Section~\ref{sec:ch01.1.2} \cite{stratton1941}. Perfect conductors
+select Eq.~\eqref{eq:ch2.pec-subspace}; impedance boundaries enlarge
+\(\mathcal{D}(\mathcal{B}_\Gamma)\) while preserving symmetry when
+Eq.~\eqref{eq:ch2.passive-impedance-class} holds \cite{harrington2001}.
+When \(\mathcal{B}_\Gamma\) is symmetric but the Maxwell operator is only densely
+defined, the Friedrichs extension supplies a self-adjoint realization:
+\begin{equation}
+\label{eq:ch2.friedrichs-extension}
+\mathcal{L}_\omega^{\mathrm{F}}
+=
+\overline{\mathcal{L}_\omega}\big|_{\mathcal{D}(\mathfrak{a}_\omega)},
+\end{equation}
+the completion of \(\mathcal{L}_\omega\) on the energy domain of
+\(\mathfrak{a}_\omega\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.friedrichs-extension} is the locked definition for for
+self-adjoint Maxwell truncations on bounded domains. Exterior outgoing problems
+use a different completion template: restrict to the outgoing subspace selected in
+Section~\ref{sec:ch243} rather than applying Eq.~\eqref{eq:ch2.friedrichs-extension}
+to all of \(\mathcal{U}_\omega\) \cite{harrington2001}. Well-posedness on the quotient combines coercivity and bounded forcing:
+\begin{equation}
+\label{eq:ch2.lax-milgram-wellposed}
+\exists!\,\mathbf{u}_\omega\in\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega:
+\mathfrak{a}_\omega(\mathbf{u}_\omega,\mathbf{v})
+=
+\mathfrak{f}_\omega(\mathbf{v})
+\quad\forall\,\mathbf{v}\in\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega,
+\end{equation}
+with \(\mathfrak{f}_\omega\) from Eq.~\eqref{eq:ch2.forcing-functional-operator}.
+Stability follows from Eqs.~\eqref{eq:ch2.coercivity-quotient} and
+\eqref{eq:ch2.solution-map-stability} \cite{stratton1941}. Resolvent bound
+Eq.~\eqref{eq:ch2.resolvent-bounded} holds on the quotient when
+\(\mathcal{L}_\omega^{\mathrm{F}}\) is bijective there.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (a) {$\mathfrak{a}_\omega$};
+ \node[ch1box, right=7mm of a] (lm) {Lax--Milgram};
+ \node[ch1box, right=7mm of lm] (sw) {$\mathcal{S}_\omega$};
+ \node[ch1box, below=5mm of a] (b) {$\mathcal{B}_\Gamma$ passive};
+ \draw[ch1flow] (a) -- (lm) -- (sw);
+ \draw[ch1flow] (b.south) -- (b.south |- a.north);
+ \draw[ch1flow] (b.south |- a.north) -- (a.north);
+\end{tikzpicture}%
+}
+\caption{Self-adjoint completion pathway on bounded domains: passive
+\(\mathcal{B}_\Gamma\) supports coercive \(\mathfrak{a}_\omega\) and stable
+\(\mathcal{S}_\omega\) on the cavity quotient.}
+\label{fig:ch2.self-adjoint-closure-pathway}
+\end{figure}
+Changing \(\mathcal{B}_\Gamma\) while leaving
+\(\mathfrak{a}_\omega\) formally unchanged can destroy coercivity or symmetry;
+that sensitivity was already visible in the resolvent-branch illustration of
+Subsection~\ref{sec:ch212} \cite{stratton1941}. charge-continuous from Subsection~\ref{sec:ch01.0.3} embeds into solution domains.
+The \ref{ch:01} finite-energy class
+Eq.~\eqref{eq:ch1.admissible-space} requires
+\((\E,\H)\in L^{2}(\Omega)^{3}\times L^{2}(\Omega)^{3}\) with compatible boundary
+and source data \cite{stratton1941}. The Chapter~\ref{ch:02} refinement is
+\begin{equation}
+\label{eq:ch2.admissibility-embedding}
+\mathcal{X}_{\mathrm{ch1}}(\Omega)\cap\mathcal{U}_\omega
+\subseteq
+\mathcal{F}_\Omega
+\subseteq
+\mathcal{D}(\mathcal{L}_\omega),
+\end{equation}
+with strict inclusions in general because \(\HCurl\) control and trace membership
+strengthen \(L^{2}\) Maxwell-closed without replacing
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic} \cite{stratton1941}. Equation
+\eqref{eq:ch2.admissibility-embedding} specializes
+Eq.~\eqref{eq:ch2.continuity-operator-domain}: when
+\(\mathcal{D}_{\mathrm{ch1}}=1\), impressed data lie in \(\mathcal{J}_\Omega\) and
+closed solutions lie in \(\mathcal{F}_\Omega\). Operator Maxwell-closed adds
+graph-norm control:
+\begin{equation}
+\label{eq:ch2.graph-charge-continuous-criterion}
+\mathbf{u}_\omega\in\mathcal{F}_\Omega
+\ \Longrightarrow\
+\|\mathbf{u}_\omega\|_{\mathrm{gr}(\mathcal{L}_\omega)}<\infty
+\ \text{when}\ \mathcal{L}_\omega[\mathbf{u}_\omega]\ \text{is defined}.
+\end{equation}
+Inequality~\eqref{eq:ch2.source-admissibility} is the quantitative form of
+``physically realizable'' field pairs for variational solvers
+\cite{harrington2001}.
+Source-side Maxwell-closed remains coupled to
+Eq.~\eqref{eq:ch2.source-space-refined} and
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic} by reference. Completion operators must not
+introduce incompatible traces:
+\begin{equation}
+\label{eq:ch2.closure-admissibility-lock}
+\mathcal{B}_\Gamma\ \text{admissible}
+\iff
+\mathcal{R}(\gamma_\tau|_{\mathcal{F}_\Omega})\supseteq
+\mathcal{D}(\mathcal{B}_\Gamma).
+\end{equation}
+Failure of Eq.~\eqref{eq:ch2.closure-admissibility-lock} means prescribed
+\(\mathbf{g}_\Gamma\) is not the trace of any \(\HCurl\) field, reproducing the
+trace-mismatch illustration of Subsection~\ref{sec:ch211} \cite{stratton1941}. Exterior domains: outgoing radiation condition from Section~\ref{sec:ch243} defines a
+\emph{physically self-adjoint} branch rather than a Hilbert self-adjoint operator
+on all of \(\mathcal{U}_\omega\):
+\begin{equation}
+\label{eq:ch2.outgoing-nonselfadjoint-split}
+\mathcal{U}_\omega
+=
+\mathcal{U}_{\mathrm{out}}\oplus\mathcal{U}_{\mathrm{re}},
+\qquad
+\mathcal{L}_\omega\ \text{coercive on}\ \mathcal{U}_{\mathrm{out}},
+\end{equation}
+with reactive storage content in \(\mathcal{U}_{\mathrm{re}}\) controlled by
+regime criteria of Section~\ref{sec:ch01.2.4} rather than by full coercivity on
+\(\mathcal{U}_\omega\) \cite{stratton1941}. Conflating
+Eq.~\eqref{eq:ch2.friedrichs-extension} with exterior radiation problems produces
+incorrect cavity-like spectra in open regions.
+With Subsections~\ref{sec:ch211}--\ref{sec:ch214} complete, Section~\ref{sec:ch21}
+has moved from minimal declarations in Section~\ref{sec:ch20} to a closed operator
+calculus on Sobolev spaces: traces, adjoints, compactness, and self-adjoint
+truncations compatible with \ref{ch:01} charge-continuous \cite{stratton1941}.
+Section~\ref{sec:ch22} applies those spaces to time--frequency equivalences;
+Sections~\ref{sec:ch23}--\ref{sec:ch24} inherit $\mathcal{D}(\mathcal{L}_\omega)$ and
+$\mathcal{F}_\Omega$ as fixed input classes. \ref{ch:04} states which operator outputs
+survive finite source support and manufacturable geometry \cite{devaney2004}.

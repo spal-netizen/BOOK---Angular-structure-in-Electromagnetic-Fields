@@ -1,0 +1,281 @@
+% Stage 8 restored fragment — 2.7.3 Evanescent overlap and non-reconstructability (archive lines 9570-9849)
+\subsection{Evanescent overlap and non-reconstructability}
+Subsections~\ref{sec:ch271}--\ref{sec:ch272} fixed $\ker\mathcal{R}_\omega$ and canonical
+non-radiating impressed currents Eq.~\eqref{eq:ch2.nr-current-def}. Evanescent sheets are a
+distinct field-side deficit: reactive storage that never passes $\Pi_{\mathrm{rad}}$ even when
+the source radiates. Subsection~\ref{sec:ch273} supplies the definitive account of evanescent
+subspaces, their overlap with non-radiating source content, and reconstructability limits under
+finite observation rank---developing Eq.
+Eq.~\eqref{eq:ch2.evanescent-nonreconstruct} from Section~\ref{sec:ch27}
+\cite{stratton1941}. Propagation projectors
+Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent} from
+Subsection~\ref{sec:ch224}, non-propagating split
+Eq.~\eqref{eq:ch2.nonpropagating-component-def} from Subsection~\ref{sec:ch254}, measurement
+null-space extension measurement null-space extension (Subsection~\ref{sec:ch271}) from
+Subsection~\ref{sec:ch271}, and rank cap Eq.~\eqref{eq:ch2.reconstruction-rank-cap} from
+Subsection~\ref{sec:ch244} are presupposed; projector algebra and inverse-source templates are
+not re-proved \cite{stratton1941}. Angular-spectrum consequences belong to Subsection
+~\ref{sec:ch274}; plane-wave filters to Section~\ref{sec:ch29} \cite{harrington2001}.
+Assumptions. Fix \(\omega>0\), admissible \(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-admissibility},
+outgoing radiation condition Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique},
+field pairs in \(\mathcal{F}_{\mathrm{SF}}\subset\mathcal{F}_\Omega\), and spectral completion
+supporting Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra}
+\cite{stratton1941}. Observation map
+\(\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\) from
+Eq.~\eqref{eq:ch2.reconstruction-observation-map} is finite rank with
+\(\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})=N\) Eq.~\eqref{eq:ch2.finite-rank-observation}
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
+reports on any recovered radiative component \cite{harrington2001}. On the spectral completion \(\widehat{\mathcal{F}}_\Omega\), the \emph{evanescent subspace} is
+\begin{equation}
+\label{eq:ch2.evanescent-subspace-def}
+\mathcal{F}_{\mathrm{ev}}
+=
+\left\{
+\mathbf{u}\in\widehat{\mathcal{F}}_\Omega:
+\Pi_{\mathrm{ev}}\mathbf{u}=\mathbf{u}
+\right\},
+\end{equation}
+with \(\Pi_{\mathrm{ev}}\) from Eq.~\eqref{eq:ch2.spectral-projectors}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.evanescent-subspace-def} is the
+Subsection~\ref{sec:ch273} field-side label for modes with imaginary longitudinal
+wavenumber Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split} and decay rate
+Eq.~\eqref{eq:ch2.evanescent-decay-rate} \cite{stratton1941}. The companion \emph{non-propagating} subspace combines evanescent and
+below-cutoff content through Eq.~\eqref{eq:ch2.nonpropagating-component-def}
+\cite{harrington2001}. Evanescent sheets carry reactive structure bound to apertures; they decay
+exponentially with scan height and satisfy Eq.~\eqref{eq:ch2.rad-null-on-evanescent} without
+re-derivation here \cite{stratton1941}.
+For admissible \(\Jimp\in\mathcal{J}_\Omega\), the evanescent projector \(\Pi_{\mathrm{ev}}\)
+selects field content whose lateral wavenumber exceeds the vacuum propagation circle
+\(k_t>k_0\): such modes decay exponentially with distance from the source and carry reactive
+storage rather than qualified export. Define the evanescent field content
+\begin{equation}
+\label{eq:ch2.evanescent-source-overlap}
+\mathbf{u}_{\mathrm{ev}}
+=
+\Pi_{\mathrm{ev}}\,\mathcal{S}_\omega[\Jimp],
+\qquad
+\|\mathbf{u}_{\mathrm{ev}}\|_{\mathcal{E}}
+=
+\|\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\|_{\mathcal{E}},
+\end{equation}
+with energy norm Eq.~\eqref{eq:ch2.field-energy-norm} \cite{stratton1941}.
+Equation~\eqref{eq:ch2.evanescent-source-overlap} measures reactive storage excited by
+\(\Jimp\) that never passes through \(\Pi_{\mathrm{rad}}\) because
+\begin{equation}
+\label{eq:ch2.evanescent-nonexport-law}
+\Pi_{\mathrm{rad}}\,\mathbf{u}_{\mathrm{ev}}=\mathbf{0},
+\qquad
+\mathcal{R}_\omega[\Jimp]\ \text{depends only on}\ \Pi_{\mathrm{prop}}\mathcal{S}_\omega[\Jimp]
+\ \text{after outgoing selection},
+\end{equation}
+by Eqs.~\eqref{eq:ch2.rad-null-on-evanescent} and~\eqref{eq:ch2.rad-projection-composition}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.evanescent-nonexport-law} upgrades the second
+line of Eq.~\eqref{eq:ch2.evanescent-nonreconstruct}: evanescent overlap is
+field-side non-export, distinct from source-side \(\Jimp\in\ker\mathcal{R}_\omega\)
+Eq.~\eqref{eq:ch2.radiation-nullspace-def} \cite{harrington2001}. A source may satisfy
+\(\|\mathbf{u}_{\mathrm{ev}}\|\gg\|\mathcal{R}_\omega[\Jimp]\|\) while still radiating
+\cite{stratton1941}.
+Eq.~\eqref{eq:ch2.evanescent-nonreconstruct} separates export annihilation from
+finite-rank readout loss. Source nullity \(\ker\mathcal{R}_\omega\) is strict export failure;
+measurement nullity \(\ker\mathcal{M}_\omega\) additionally loses directions that radiate but
+the aperture cannot resolve \cite{stratton1941}:
+\begin{equation}
+\label{eq:ch2.radiation-vs-measurement-nullity-split}
+\underbrace{\ker\mathcal{R}_\omega}_{\text{no export}}
+\ \subseteq\
+\underbrace{\ker\mathcal{M}_\omega}_{\text{no finite readout}},
+\qquad
+\ker\mathcal{M}_\omega
+\supsetneq
+\ker\mathcal{R}_\omega
+\ \text{when}\ 
+\ker\mathcal{O}_{\mathrm{meas}}\big|_{\operatorname{ran}\mathcal{R}_\omega}\neq\{\mathbf{0}\},
+\end{equation}
+with strict inclusion typical for finite apertures
+Eq.~\eqref{eq:ch2.observation-null-space}
+\begin{equation}
+\label{eq:ch2.measurement-nullspace-composition}
+\ker\mathcal{M}_\omega
+=
+\ker\mathcal{R}_\omega
+\ \cup\
+\mathcal{R}_\omega^{-1}\!\big(\ker\mathcal{O}_{\mathrm{meas}}\big|_{\operatorname{ran}\mathcal{R}_\omega}\big),
+\end{equation} \cite{stratton1941}. Equation
+\eqref{eq:ch2.radiation-vs-measurement-nullity-split} expresses measurement null-space extension (Subsection~\ref{sec:ch271}) and
+Eq.~\eqref{eq:ch2.measurement-nullspace-composition} without re-proof: evanescent storage
+contributes to the first factor only when it annihilates export; finite rank contributes to
+the second factor even when export is nonzero \cite{stratton1941}. Tikhonov reconstruction
+Eq.~\eqref{eq:ch2.tikhonov-source-reconstruction} stabilizes ill-conditioned inversions on
+\(\operatorname{ran}\mathcal{M}_\omega^{\dagger}\) but does not shrink
+\(\ker\mathcal{M}_\omega\) \cite{harrington2001}.
+Define the \emph{non-reconstructable set} at observation rank \(N\):
+\begin{equation}
+\label{eq:ch2.nonreconstruct-observation-kernel}
+\mathcal{K}_{\mathrm{nrec}}(N)
+=
+\left\{
+\Jimp\in\mathcal{J}_\Omega:
+\mathcal{M}_\omega[\Jimp]=\mathbf{0}
+\right\}
+=
+\ker\mathcal{M}_\omega,
+\end{equation}
+equivalently the kernel of Eq.~\eqref{eq:ch2.inverse-source-equation} for generic
+\(\mathbf{y}\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.nonreconstruct-observation-kernel} is the Subsection~\ref{sec:ch273} constructive account of
+reconstructability label: sources in \(\mathcal{K}_{\mathrm{nrec}}(N)\) are invisible to the
+declared measurement bank regardless of near-zone \(|\E|\) \cite{stratton1941}. Rank bound
+\begin{equation}
+\label{eq:ch2.reconstructability-rank-law}
+\dim\operatorname{ran}\mathcal{M}_\omega
+\le
+N
+<
+\infty
+\ \Longrightarrow\
+\dim\mathcal{K}_{\mathrm{nrec}}(N)=\infty
+\ \text{on typical open domains},
+\end{equation}
+follows from Eq.~\eqref{eq:ch2.reconstruction-rank-cap} and infinite-dimensional
+\(\mathcal{J}_\Omega\) \cite{stratton1941}. Geometric sector constraints
+Eq.~\eqref{eq:ch2.accessible-modal-sector} and composition law
+Eq.~\eqref{eq:ch2.constraint-composition-law} further restrict recoverable coordinates
+independently of Eq.~\eqref{eq:ch2.nonreconstruct-observation-kernel}
+\cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=7mm of j] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=7mm of s] (ev) {$\Pi_{\mathrm{ev}}$};
+ \node[ch1box, right=7mm of ev] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (m) {$\mathcal{M}_\omega$};
+ \node[ch1box, below=5mm of ev] (uev) {$\mathbf{u}_{\mathrm{ev}}$};
+ \node[ch1box, below=5mm of m] (kn) {$\mathcal{K}_{\mathrm{nrec}}$};
+ \draw[ch1flow] (j) -- (s) -- (ev) -- (r) -- (m);
+ \draw[ch1flow] (ev.south) -- (ev.south |- uev.north);
+ \draw[ch1flow] (ev.south |- uev.north) -- (uev.north);
+ \draw[ch1flow] (m.south) -- (m.south |- kn.north);
+ \draw[ch1flow] (m.south |- kn.north) -- (kn.north);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch273} measurement sequence: evanescent overlap
+Eq.~\eqref{eq:ch2.evanescent-source-overlap} never exports through
+Eq.~\eqref{eq:ch2.evanescent-nonexport-law}; finite-rank observation maps
+\(\mathcal{J}_\Omega\) to \(\mathcal{K}_{\mathrm{nrec}}(N)\)
+Eq.~\eqref{eq:ch2.nonreconstruct-observation-kernel}.}
+\label{fig:ch2.evanescent-nonreconstruct-measurement chain}
+\end{figure}
+The measurement sequence orders radiation selection, evanescent overlap, and finite-rank observation. $\Pi_{\mathrm{ev}}$ content may dominate $|\E|$ on inner shells yet satisfies Eq.~\eqref{eq:ch2.evanescent-nonexport-law} on qualified flux meters. $\mathcal{O}_{\mathrm{meas}}$ with rank $N$ collapses recoverable modes into $\mathcal{K}_{\mathrm{nrec}}(N)$: export can exist while the aperture cannot resolve it. Dashed branches mark observation deficits distinct from source nullity $\ker\mathcal{R}_\omega$ \cite{stratton1941}. \phantomsection\label{thm:ch2.evanescent-nonreconstructability}
+Let \(\Jimp\in\mathcal{J}_\Omega\) be admissible with evanescent content
+Eq.~\eqref{eq:ch2.evanescent-source-overlap} and observation map
+\(\mathcal{M}_\omega\) of rank \(N\). Then:
+\begin{enumerate}
+\item[(i)] \(\Pi_{\mathrm{rad}}\mathbf{u}_{\mathrm{ev}}=\mathbf{0}\) and
+\(\mathbf{u}_{\mathrm{ev}}\) carries no qualified far-zone export
+Eq.~\eqref{eq:ch2.evanescent-nonexport-law}.
+\item[(ii)] \(\ker\mathcal{R}_\omega\subseteq\ker\mathcal{M}_\omega=\mathcal{K}_{\mathrm{nrec}}(N)\).
+\item[(iii)] Near-field data on a finite enclosing surface reduce but do not in general
+eliminate \(\mathcal{K}_{\mathrm{nrec}}(N)\): if \(\mathcal{M}_{\mathrm{near}}\) samples
+\(\mathcal{S}_\omega[\Jimp]\) on \(\Gamma_{\mathrm{enc}}\), then
+\begin{equation}
+\label{eq:ch2.near-field-nullity-reduction}
+\ker\mathcal{M}_{\mathrm{near}}
+\subsetneq
+\ker\mathcal{M}_\omega
+\ \text{when}\ \Gamma_{\mathrm{enc}}\ \text{resolves more modes than far-zone aperture},
+\end{equation}
+while \(\ker\mathcal{R}_\omega\) is unchanged \cite{stratton1941}.
+\item[(iv)] Reconstructability budget:
+\begin{equation}
+\label{eq:ch2.reconstructability-budget}
+\mathcal{N}_{\mathrm{reportable}}
+\subseteq
+\mathcal{N}_{\mathrm{acc}}
+\cap
+\{n:\ \text{resolvable by}\ \mathcal{M}_\omega\}
+\cap
+\{n:\ \lambda_n\neq 0\},
+\end{equation}
+with \(\mathcal{N}_{\mathrm{acc}}\) from Eq.~\eqref{eq:ch2.accessible-modal-sector} and modal
+indices from Subsection~\ref{sec:ch261} \cite{stratton1941}.
+\end{enumerate}
+Part (i) is Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Part (ii) follows
+from measurement null-space extension (Subsection~\ref{sec:ch271}) and definition
+Eq.~\eqref{eq:ch2.nonreconstruct-observation-kernel} \cite{harrington2001}. Part (iii) uses
+near- versus far-field sampling logic from Subsection~\ref{sec:ch244}: \(\mathcal{S}_\omega\) is
+single-valued on outgoing fields while \(\mathcal{R}_\omega\) remains non-injective
+\cite{stratton1941}. Part (iv) composes
+Eq.~\eqref{eq:ch2.constraint-composition-law} with rank cap
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap} \cite{stratton1941}.
+\phantomsection\label{prop:ch2.evanescent-never-exports}
+For all admissible \(\Jimp\),
+\begin{equation}
+\label{eq:ch2.evanescent-radiation-annihilation}
+\mathcal{R}_\omega[\Jimp]
+=
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]
+=
+\Pi_{\mathrm{rad}}\,\Pi_{\mathrm{prop}}\,\mathcal{S}_\omega[\Jimp],
+\end{equation}
+and \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{ev}}=\mathbf{0}\) on \(\mathcal{F}_\Omega\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.evanescent-radiation-annihilation}
+implies \(\mathbf{u}_{\mathrm{ev}}\) from Eq.~\eqref{eq:ch2.evanescent-source-overlap} does
+not alter \(\mathcal{R}_\omega[\Jimp]\); adding evanescent excitation to an otherwise
+radiating source changes \(\mathbf{u}_{\mathrm{nr}}\) and local power
+Eq.~\eqref{eq:ch2.component-power-budget} without changing far patterns when export is
+unchanged \cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} still
+forbids reporting \(\mathbf{u}_{\mathrm{ev}}\) as transport \cite{harrington2001}. Substitute Eqs.~\eqref{eq:ch2.rad-null-on-evanescent} and~\eqref{eq:ch2.rad-projection-composition}
+into \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\)
+\cite{stratton1941}. Near-zone energy follows from
+Eq.~\eqref{eq:ch2.nonpropagating-component-def} \cite{harrington2001}.
+\phantomsection\label{prop:ch2.near-field-nullity-reduction}
+Let \(\Gamma_{\mathrm{enc}}\) be a closed surface enclosing \(\Omega_s\) and let
+\(\mathcal{M}_{\mathrm{near}}\) sample tangential \(\E\), \(\H\) on \(\Gamma_{\mathrm{enc}}\).
+Then \(\ker\mathcal{M}_{\mathrm{near}}\subseteq\ker\mathcal{M}_\omega\) when far-zone
+observations are a subset of near-field functionals, but
+\begin{equation}
+\label{eq:ch2.near-field-kernel-inclusion}
+\ker\mathcal{R}_\omega
+\subseteq
+\ker\mathcal{M}_{\mathrm{near}}
+\subseteq
+\ker\mathcal{M}_\omega
+\end{equation}
+with strict inclusions possible at each step \cite{stratton1941}. Equation
+\eqref{eq:ch2.near-field-kernel-inclusion} expresses Subsection~\ref{sec:ch244} near- versus
+far-field data without re-opening uniqueness exterior radiative uniqueness (Subsection~\ref{sec:ch243}) \cite{stratton1941}. Outgoing radiation condition remains
+mandatory: identical near traces on a finite surface do not imply identical far zones without
+exterior selection \cite{harrington2001}.
+If \(\mathcal{M}_\omega[\Jimp]=\mathbf{0}\), then far functionals vanish; near samples may
+still vanish on \(\Gamma_{\mathrm{enc}}\) for non-radiating additions in
+\(\ker\mathcal{R}_\omega\) \cite{stratton1941}. Additional near resolution shrinks the
+observation null space on \(\operatorname{ran}\mathcal{R}_\omega\) but leaves \(\ker\mathcal{R}_\omega\) unchanged Eq.~\eqref{eq:ch2.radiation-nullspace-def}
+\cite{harrington2001}.
+When Eq.~\eqref{eq:ch2.cutoff-condition} fails, modal content lies in
+\(\Pi_{\mathrm{non}}\mathcal{S}_\omega[\Jimp]\) or \(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\)
+\cite{stratton1941}. Such storage satisfies
+Eq.~\eqref{eq:ch2.evanescent-nonexport-law} and may dominate
+Eq.~\eqref{eq:ch2.component-power-budget} on sub-wavelength shells while
+\(\mathcal{P}_{\mathrm{rad}}=0\) \cite{stratton1941}. Applying far-zone pattern formulas to
+below-cutoff modes violates Eq.~\eqref{eq:ch2.regime-operator-screen} as in the TE\(_{10}\)
+illustration referenced from Section~\ref{sec:ch01.1.2} \cite{harrington2001}. Subsection
+~\ref{sec:ch273} records operator consequences; guide nomenclature is not re-tabulated
+\cite{stratton1941}. Non-radiating configurations Eq.~\eqref{eq:ch2.nr-current-def} may carry large
+\(\|\mathbf{u}_{\mathrm{ev}}\|\) when \(\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) is
+evanescent-dominated \cite{stratton1941}. Conversely, large
+\(\|\mathbf{u}_{\mathrm{ev}}\|\) does not imply \(\Jimp\in\ker\mathcal{R}_\omega\): a radiating
+source may store substantial evanescent energy near \(\Omega_s\) while exporting through
+\(\Pi_{\mathrm{prop}}\) \cite{stratton1941}. Subsections~\ref{sec:ch272} and~\ref{sec:ch273}
+address orthogonal deficits---source nullity versus reactive storage versus finite-rank readout
+\cite{harrington2001}.
+Subsection~\ref{sec:ch273} assumes linear Maxwell theory at fixed
+\(\omega\), outgoing radiation condition, and declared finite-rank \(\mathcal{O}_{\mathrm{meas}}\)
+\cite{stratton1941}. Loss modifies evanescent decay
+Eq.~\eqref{eq:ch2.evanescent-decay-rate} without promoting \(\Pi_{\mathrm{ev}}\) content to
+\(\Pi_{\mathrm{rad}}\) export \cite{stratton1941}. Dispersive or broadband superposition
+requires Subsection~\ref{sec:ch223}; harmonic evanescent labels here are fixed-frequency slices
+\cite{harrington2001}. Subsection~\ref{sec:ch274} translates non-reconstructability to
+continuous angular spectra Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}
+\cite{stratton1941}.

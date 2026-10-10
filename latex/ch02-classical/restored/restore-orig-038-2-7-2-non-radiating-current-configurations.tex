@@ -1,0 +1,191 @@
+% Stage 8 restored fragment — 2.7.2 Non-radiating current configurations (archive lines 9366-9569)
+\subsection{Non-radiating current configurations}
+The section introduction displayed balanced loops, counter-directed pairs, and below-cutoff
+guides as laboratory signatures of $\ker\mathcal{R}_\omega$. Subsection~\ref{sec:ch272}
+gives the definitive constructive account: admissible $\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega$
+with $\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\neq\mathbf{0}$, developing Eq.
+Eq.~\eqref{eq:ch2.nr-current-template} \cite{stratton1941}. Radiation integrals, Huygens surface forms
+Eqs.~\eqref{eq:ch2.huygens-equivalent-integral}--\eqref{eq:ch2.huygens-tangential-match}, and
+equivalent-source ambiguity Eq.~\eqref{eq:ch2.equivalent-source-ambiguity} from
+Subsections~\ref{sec:ch251} and~\ref{sec:ch244} are presupposed; dyadic kernel tabulations from Subsection~\ref{sec:ch231} are not repeated \cite{stratton1941}. Evanescent overlap and
+measurement nullity belong to Subsection~\ref{sec:ch273}; worked example examples appear in
+Subsection~\ref{sec:ch2102} by reference \cite{harrington2001}.
+Assumptions. Fix \(\omega>0\), compact support \(\Omega_s\), admissible impressed data
+Eq.~\eqref{eq:ch2.source-admissibility}, charge continuity
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, outgoing radiation condition
+Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique},
+and null space Eq.~\eqref{eq:ch2.radiation-nullspace-def}
+\cite{stratton1941}. All configurations below are required to satisfy
+\(\mathcal{D}_{J}[\Jimp^{\mathrm{(NR)}}]=1\) and \(\divg\Jimp^{\mathrm{(NR)}}-\jj\omega\rho=0^{\mathrm{(NR)}}\)
+with \(\rho^{\mathrm{(NR)}}\) compatible with boundary class
+Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}. regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} governs whether near-zone reactive content may be
+reported as transport data \cite{harrington2001}. Non-radiating current (locked definition). A \emph{non-radiating current configuration} is an admissible impressed current
+\begin{equation}
+\label{eq:ch2.nr-current-def}
+\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega,
+\qquad
+\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\neq\mathbf{0}\ \text{in general},
+\end{equation}
+with radiative component \(\mathbf{u}_{\mathrm{rad}}=\mathbf{0}\) and non-radiative component
+\(\mathbf{u}_{\mathrm{nr}}=\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) from
+Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.nr-current-def} is the Subsection
+~\ref{sec:ch272} development of Eq.~\eqref{eq:ch2.nr-current-template} and
+expresses Eq.~\eqref{eq:ch2.null-radiation} with explicit $\mathcal{D}_J=1$: far-zone export
+vanishes through Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade}, while near-zone fields
+may remain substantial kernel image on field space (Subsection~\ref{sec:ch271})
+\cite{stratton1941}. Linearity Eq.~\eqref{eq:ch2.radiation-linearity} implies
+admissible superpositions of non-radiating configurations remain non-radiating when charge
+continuity is preserved \cite{stratton1941}.
+Maxwell-closed constraints. Non-radiating configurations are not arbitrary curl fields. Impressed data must satisfy
+\begin{equation}
+\label{eq:ch2.nr-current-admissibility-law}
+\Jimp^{\mathrm{(NR)}}\in L^{2}(\Omega_s)^{3},
+\quad
+\divg\Jimp^{\mathrm{(NR)}}-\jj\omega\rho=0^{\mathrm{(NR)}},
+\quad
+\Jimp^{\mathrm{(NR)}}\ \text{BC-compatible on}\ \Gamma,
+\end{equation}
+as in Eq.~\eqref{eq:ch2.source-admissibility} \cite{stratton1941}. Equation
+\eqref{eq:ch2.nr-current-admissibility-law} excludes discontinuous \(\Jimp^{\mathrm{(NR)}}\) that
+violate Eq.~\eqref{eq:ch1.charge-continuity-harmonic} before Maxwell field specification is attempted
+\cite{stratton1941}. Surface-equivalent realizations on \(\Gamma_{\mathrm{eq}}\) inherit trace
+class constraints from Subsection~\ref{sec:ch211} \cite{harrington2001}. Membership in
+\(\ker\mathcal{R}_\omega\) is an \emph{export} statement; Eq.~\eqref{eq:ch2.nr-current-admissibility-law}
+is a \emph{source} statement---both are required \cite{stratton1941}.
+Let \(\mathcal{C}\subset\Omega_s\) be a closed admissible circulation path enclosing negligible
+magnetic flux linkage at \(\omega\), with oppositely directed arms \(\mathcal{C}_+\) and
+\(\mathcal{C}_-\) carrying equal magnitude currents. Physically, picture a wire loop in the
+\(xy\)-plane with counter-directed segments along \(\pm\hat{\mathbf{x}}\): each arm radiates a
+leading \(1/r\) transverse field, but the net electric dipole moment vanishes when the
+circulation closes. When far-zone transverse contributions from the two arms cancel under
+outgoing propagation,
+\begin{equation}
+\label{eq:ch2.nr-loop-cancellation}
+\int_{\mathcal{C}_+}\!\mathbf{J}_{\mathrm{loop}}\cdot d\boldsymbol{\ell}
+\int_{\mathcal{C}_-}\!\mathbf{J}_{\mathrm{loop}}\cdot d\boldsymbol{\ell}
+=0
+\ \Longrightarrow\
+\mathcal{R}_\omega[\Jimp^{(\mathrm{loop})}]=\mathbf{0},
+\end{equation}
+for the associated volume current \(\Jimp^{(\mathrm{loop})}\) obtained by compact support
+regularization on \(\mathcal{C}\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.nr-loop-cancellation} is the dipole-moment cancellation law at the source level:
+vanishing leading \(1/r\) transverse term in
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} when the net moment vanishes
+\cite{jackson1999}. Near-zone reactive fields from \(\mathcal{S}_\omega[\Jimp^{(\mathrm{loop})}]\)
+need not vanish; Eq.~\eqref{eq:ch2.regime-component-criterion} still applies \cite{stratton1941}.
+Two compact sources \(\Jimp^{(+)}\), \(\Jimp^{(-)}\) with supports \(\Omega_\pm\) separated by
+distance \(d\ll\lambda_0\) can form a non-radiating pair when their outgoing far patterns
+interfere destructively. A concrete arrangement is a pair of equal-strength electric dipoles
+along \(\hat{\mathbf{z}}\), separated by \(d=\lambda_0/20\), driven in opposite phase so the
+leading \(1/r\) terms cancel on \(S^{2}\) while reactive overlap remains in the gap:
+\begin{equation}
+\label{eq:ch2.nr-counterprop-pair}
+\Jimp^{\mathrm{(NR,cp)}}=\Jimp^{(+)}+\Jimp^{(-)},
+\qquad
+\E_{0,+}(\theta,\phi)+\E_{0,-}(\theta,\phi)=\mathbf{0}
+\ \text{on}\ S^{2},
+\end{equation}
+with \(\E_{0,\pm}\) far amplitudes from Eq.~\eqref{eq:ch2.far-field-amplitude-integral} for
+each component \cite{stratton1941}. Equation
+\eqref{eq:ch2.nr-counterprop-pair} realizes Eq.~\eqref{eq:ch2.nr-current-def} when phase and
+polarization of \(\Jimp^{(\pm)}\) are tuned so \(\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp^{(\pm)}]\)
+cancel on the outgoing branch \cite{stratton1941}. The pair may store substantial reactive
+energy in the overlap region through Eq.~\eqref{eq:ch2.component-power-budget} while
+\(\mathcal{P}_{\mathrm{rad}}=0\) on qualified shells \cite{harrington2001}.
+On a closed equivalent surface \(\Gamma_{\mathrm{eq}}\) enclosing radiating sources, tangential
+non-radiating distributions satisfy Eq.~\eqref{eq:ch2.equivalent-source-ambiguity}:
+\begin{equation}
+\label{eq:ch2.nr-surface-tangential-null}
+\mathbf{J}_{s,\mathrm{eq}}^{\mathrm{(NR)}}
+\in
+\ker\mathcal{R}_\omega\big|_{\Gamma_{\mathrm{eq}}},
+\qquad
+\mathbf{J}_{s,\mathrm{eq}}^{\mathrm{(NR)}}\cdot\hat{\mathbf{n}}=0
+\ \text{on}\ \Gamma_{\mathrm{eq}},
+\end{equation}
+with \(\hat{\mathbf{n}}\) the outward normal \cite{stratton1941}. Equation
+\eqref{eq:ch2.nr-surface-tangential-null} is the Subsection~\ref{sec:ch272} constructive realization of
+Huygens equivalence ambiguity: exterior fields on \(\mathcal{F}_{\mathrm{SF}}\) are fixed by
+exterior radiative uniqueness (Subsection~\ref{sec:ch243}), but equivalent surface currents are unique
+only up to additions in Eq.~\eqref{eq:ch2.nr-surface-tangential-null}
+\cite{stratton1941}. Integrals Eqs.~\eqref{eq:ch2.huygens-equivalent-integral}--\eqref{eq:ch2.huygens-tangential-match}
+realize the same \(\mathcal{S}_\omega\) image for equivalent and non-radiating tangential
+perturbations \cite{harrington2001}.
+When radiation eigenpairs with \(\lambda_n=0\) are declared in
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def},
+\begin{equation}
+\label{eq:ch2.nr-modal-eigenrealization}
+\Jimp^{\mathrm{(NR,mod)}}
+=
+\sum_{n\in\mathcal{N}_{\mathrm{null}}}
+\alpha_n\,\Jimp^{(n)},
+\qquad
+\mathcal{R}_\omega[\Jimp^{\mathrm{(NR,mod)}}]=\mathbf{0},
+\end{equation}
+for coefficients \(\alpha_n\in\mathbb{C}\) such that the superposition satisfies
+Eq.~\eqref{eq:ch2.nr-current-admissibility-law} \cite{stratton1941}. Equation
+\eqref{eq:ch2.nr-modal-eigenrealization} specializes Eq.~\eqref{eq:ch2.modal-null-sector-reduction}
+from Subsection~\ref{sec:ch271} to constructive sources: each \(\Jimp^{(n)}\) with
+\(\lambda_n=0\) is a modal non-radiating generator when admissible
+\cite{stratton1941}. On exterior domains \(\mathcal{N}_{\mathrm{null}}\) need not span all of
+\(\ker\mathcal{R}_\omega\) Eq.~\eqref{eq:ch2.nullspace-dimensional-classification}
+\cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (loop) {Loop\\cancellation};
+ \node[ch1box, right=7mm of loop] (cp) {Counter-\\prop pair};
+ \node[ch1box, right=7mm of cp] (surf) {Surface\\tangential};
+ \node[ch1box, right=7mm of surf] (mod) {Modal\\$\lambda_n=0$};
+ \node[ch1box, below=5mm of cp] (ker) {$\ker\mathcal{R}_\omega$};
+ \node[ch1box, below=5mm of loop] (j) {$\Jimp^{\mathrm{(NR)}}$};
+ \draw[ch1flow] (loop.east) -- (loop.east |- ker.west);
+ \draw[ch1flow] (loop.east |- ker.west) -- (ker.west);
+ \draw[ch1flow] (cp.south) -- (cp.south |- ker.north);
+ \draw[ch1flow] (cp.south |- ker.north) -- (ker.north);
+ \draw[ch1flow] (surf.east) -- (surf.east |- ker.west);
+ \draw[ch1flow] (surf.east |- ker.west) -- (ker.west);
+ \draw[ch1flow] (mod.east) -- (mod.east |- ker.west);
+ \draw[ch1flow] (mod.east |- ker.west) -- (ker.west);
+ \draw[ch1flow] (j.south) -- (j.south |- loop.north);
+ \draw[ch1flow] (j.south |- loop.north) -- (loop.north);
+ \draw[ch1flow] (j.east) -- (j.east |- cp.west);
+ \draw[ch1flow] (j.east |- cp.west) -- (cp.west);
+ \draw[ch1flow] (j.east) -- (j.east |- surf.west);
+ \draw[ch1flow] (j.east |- surf.west) -- (surf.west);
+ \draw[ch1flow] (j.east) -- (j.east |- mod.west);
+ \draw[ch1flow] (j.east |- mod.west) -- (mod.west);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch272} canonical non-radiating families: loop cancellation
+Eq.~\eqref{eq:ch2.nr-loop-cancellation}, counter-propagating pair
+Eq.~\eqref{eq:ch2.nr-counterprop-pair}, surface tangential null
+Eq.~\eqref{eq:ch2.nr-surface-tangential-null}, and modal eigenrealization
+Eq.~\eqref{eq:ch2.nr-modal-eigenrealization}, all mapping to
+\(\ker\mathcal{R}_\omega\).}
+\label{fig:ch2.nr-current-configurations}
+\end{figure}
+The four upper nodes are constructive \emph{families}, not interchangeable templates. Loop cancellation annihilates the leading $1/r$ transverse moment; counter-propagating pairs cancel on $S^{2}$ through phase interference; surface tangential nulls exploit Huygens equivalence ambiguity; modal $\lambda_n=0$ generators realize the spectral slice Eq.~\eqref{eq:ch2.modal-null-sector-reduction}. All four converge on $\ker\mathcal{R}_\omega$, yet each leaves distinct reactive near fields $\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\neq\mathbf{0}$---the schematic warns that near-zone scans cannot distinguish families once far patterns vanish \cite{stratton1941}. Figure~\ref{fig:ch2.nr-current-configurations} orders constructive families before
+evanescent and measurement extensions in Subsection~\ref{sec:ch273}. Equivalent-current solvers on \(\Gamma_{\mathrm{eq}}\) seek \(\mathbf{J}_{\mathrm{eq}}\) matching
+near or far data \cite{stratton1941}. Canonical non-radiating configurations (Subsection~\ref{sec:ch272}) and Eq.~\eqref{eq:ch2.nr-surface-tangential-null}
+show why such inversions are ill-posed even when forward fields are unique: any solution may
+be shifted by tangential \(\mathbf{J}_{s,\mathrm{eq}}^{\mathrm{(NR)}}\) without changing
+\(\mathcal{R}_\omega[\Jimp]\) \cite{stratton1941}. Tikhonov regularization
+Eq.~\eqref{eq:ch2.tikhonov-source-reconstruction} selects a particular representative but does
+not eliminate the equivalence class \cite{harrington2001}. Subsection~\ref{sec:ch273} separates
+this source nullity from finite-rank observation nullity
+Eq.~\eqref{eq:ch2.measurement-nullspace-composition} \cite{stratton1941}. Subsection~\ref{sec:ch272} assumes linear Maxwell theory at fixed
+\(\omega\), outgoing radiation condition, and admissible sources Eq.~\eqref{eq:ch2.nr-current-admissibility-law}
+\cite{stratton1941}. Lossy media modify loop and pair conditions through complex
+\(k(\mathbf{r})\) without promoting evanescent storage to export
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Canonical families generate
+\emph{explicit} members of \(\ker\mathcal{R}_\omega\); they do not exhaust
+\(\dim\ker\mathcal{R}_\omega=\infty\) on exterior domains
+Eq.~\eqref{eq:ch2.nullspace-dimensional-classification} \cite{harrington2001}.
+regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} remains mandatory: large near-zone
+\(|\E|\) from \(\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) is not export without
+\(\Pi_{\mathrm{rad}}\) qualification \cite{stratton1941}. \phantomsection\label{sec:ch273}

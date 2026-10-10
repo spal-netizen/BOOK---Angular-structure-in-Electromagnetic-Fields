@@ -1,0 +1,310 @@
+% Stage 8 section framing — 2.7 Non-Radiating Sources and Null Spaces
+\section{Non-Radiating Sources and Null Spaces}
+\label{sec:ch27}
+Spectral theory in Section~\ref{sec:ch26} ranked export directions and recoverable rank.
+Section~\ref{sec:ch27} addresses the complementary laboratory question: \emph{How can current
+exist without observable radiation?} \cite{devaney2004}
+
+
+
+
+Laboratory signatures. Three configurations recur before any kernel is displayed. A balanced wire loop in vacuum,
+driven at fixed \(\omega\) with vanishing net electric dipole moment, stores reactive \(\E\) and
+\(\H\) within \(\lambda_0\) of the conductor while a qualified wattmeter on \(\Gamma_R\) at
+\(R\gg\lambda_0\) records zero outgoing transverse flux once \(\Pi_{\mathrm{rad}}\) selection is
+enforced \cite{stratton1941}. A counter-directed dipole pair separated by
+\(d\ll\lambda_0\) can annihilate leading \(1/r\) transverse fields on \(S^{2}\) while reactive
+overlap remains in the gap \cite{jackson1999}. A waveguide section below cutoff carries standing
+reactive fields at ports yet contributes no propagating sheet to exterior flux meters
+\cite{stratton1941}. In each case Maxwell permits substantial local structure while
+\(\mathcal{R}_\omega[\Jimp]=\mathbf{0}\): rich near-zone data, null far-zone export---not a
+solver artifact \cite{jackson1999}.
+The \emph{radiation kernel} collects every admissible impressed current whose outgoing
+radiative image vanishes: currents that reorganize near-zone energy without qualified far-zone
+flux \cite{devaney2004}. Near-field scanners sample
+\(\mathcal{S}_\omega[\Jimp]\) on enclosing shells; far-zone flux meters and angular integrators
+read only after \(\Pi_{\mathrm{rad}}\) has removed non-export content
+\cite{hansen1988}. A source invisible to the latter may remain vivid to the
+former---the central diagnostic that separates reactive storage from qualified export. Campaigns
+that report singular values without kernel awareness merge synthesis with invisible modes
+\cite{jackson1999}.
+By the \emph{radiation null space} \(\ker\mathcal{R}_\omega\) we mean precisely this kernel:
+admissible impressed currents whose radiative image vanishes under the outgoing map
+\(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\)---physically realizable
+sources that store energy locally yet export no qualified far-zone power
+\cite{devaney2004}. Membership in \(\ker\mathcal{R}_\omega\) is an export
+statement; it does not require \(\mathcal{S}_\omega[\Jimp]=\mathbf{0}\). The balanced loop
+above is a constructive instance: \(\mathcal{R}_\omega[\Jimp^{\mathrm{(loop)}}]=\mathbf{0}\)
+while \(\mathcal{S}_\omega[\Jimp^{\mathrm{(loop)}}]\) remains measurable on near probes
+\cite{devaney2004}.
+Non-radiating sources are the central electromagnetic proof that existence does not imply
+observability. A current distribution may generate substantial near-zone $\E$ and $\H$ while
+exporting zero far-zone power: $\mathcal{R}_\omega$ is not injective, and
+$\ker\mathcal{R}_\omega$ is generally infinite-dimensional on open domains. Different impressed
+currents may therefore produce identical radiative images, angular spectra, and reciprocity
+readouts while differing in reactive storage and evanescent overlap. Hidden electromagnetic
+structure is not a modelling defect but a consequence of Maxwell propagation from compact
+sources through outgoing selection to finite instruments \cite{stratton1941}. The absence of
+radiated signatures does not imply the absence of electromagnetic structure; it identifies
+source configurations whose field content remains inaccessible to far-zone observation.
+Section~\ref{sec:ch26} closed the spectral chain
+Eq.~\eqref{eq:ch2.section26-spectral-chain}: radiation eigenmodes, rotational degeneracy,
+Fredholm solvability, and geometric filters on admissible modal sectors
+\cite{stratton1941}. That program organized
+\(\mathcal{R}_\omega[\Jimp]\) in modal coordinates and explained which far-zone patterns are
+reachable, degenerate, or symmetry-forbidden. Section~\ref{sec:ch27} addresses the
+complementary \emph{source-side} question named above: which impressed currents produce no radiative
+export at all, how those currents relate to evanescent and non-propagating field content,
+and what null-space structure implies for inverse problems and angular spectra
+\cite{stratton1941}. Eq.~\eqref{eq:ch2.ker-R-omega} from
+Subsection~\ref{sec:ch244} named \(\ker\mathcal{R}_\omega\); the subsections below develop
+constructive catalog, canonical non-radiating configurations, and reconstructability
+limits without re-opening Green construction, Sommerfeld completion, or radiation integrals from
+Sections~\ref{sec:ch23}--\ref{sec:ch25} \cite{stratton1941}. Reciprocity constraints on
+coupled modes belong to Section~\ref{sec:ch28}; plane-wave angular-spectrum action to
+Section~\ref{sec:ch29}; explicit harmonic bases to \ref{ch:03}
+\cite{harrington2001}. Nullity, $\mathcal{E}_{\mathrm{acc}}^{(N)}$, and realizability. Three deficits are often merged in inverse problems and structured-beam reporting
+\cite{devaney2004}. \emph{Nullity} is source-side membership in
+\(\ker\mathcal{R}_\omega\): far data cannot detect additions satisfying
+Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} \cite{reed1950}.
+\emph{probe rank} is field-side: which directions in the angular spectrum survive
+geometric, transport, and regime qualifications even when \(\mathcal{R}_\omega[\Jimp]\neq\mathbf{0}\)
+\cite{harrington2001}. \emph{$\mathcal{S}_{\mathrm{real}}$}---whether a target pattern is
+\(\mathcal{R}_\omega[\Jimp]\) for some admissible \(\Jimp\)---is not decided by rank-$N$ recovery
+alone; \ref{ch:04} develops synthesizable proofs while Section~\ref{sec:ch27} supplies the
+forward null-space catalog that constrains every claim \cite{colton1992}.
+A source may store reactive energy nearby yet export no far-zone power---the radiation map annihilates whole families of impressed currents. Field-level
+uniqueness after outgoing radiation condition (exterior radiative uniqueness (Subsection~\ref{sec:ch243})) does
+not imply source identifiability: many admissible \(\Jimp\in\mathcal{J}_\Omega\) can share
+the same \(\mathcal{R}_\omega[\Jimp]\) through Eq.~\eqref{eq:ch2.ker-R-omega}
+\cite{stratton1941}. Spectral mode \(\lambda_n=0\) in
+Eq.~\eqref{eq:ch2.modal-eigenvalue-equation} marks a radiative eigen-direction with
+vanishing export, yet \(\ker\mathcal{R}_\omega\) is generally infinite-dimensional on open
+domains and is not exhausted by finitely many modal labels
+\cite{harrington2001}. Using cavity modal books or truncated harmonic sums to
+\emph{approximate} \(\ker\mathcal{R}_\omega\) misstates identifiability even when outgoing
+source-to-field integrals from Subsection~\ref{sec:ch251} are evaluated exactly
+\cite{jackson1999}. Section~\ref{sec:ch27} separates operator null spaces,
+field-side non-radiative components Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def},
+and observation null spaces Eq.~\eqref{eq:ch2.observation-null-space}, then forwards
+reciprocity and angular-spectrum filters to Sections~\ref{sec:ch28}--\ref{sec:ch29}
+\cite{stratton1941}. Let \(\Omega_s=\operatorname{supp}\Jimp\) be compact, \(\omega>0\) fixed, and outgoing field
+pairs lie in \(\mathcal{F}_{\mathrm{SF}}\) from
+Eq.~\eqref{eq:ch2.admissible-field-space}. Section~\ref{sec:ch27} organizes analysis in four
+stages:
+\begin{equation}
+\label{eq:ch2.section27-nullspace-chain}
+\ker\mathcal{R}_\omega
+\ \xrightarrow{\ \text{operator structure}\ }
+\text{null-space bases}
+\ \xrightarrow{\ \text{canonical sources}\ }
+\text{NR current families}
+\ \xrightarrow{\ \text{evanescent overlap}\ }
+\text{non-reconstructability}
+\ \xrightarrow{\ \text{angular spectra}\ }
+\text{suppressed sheets},
+\end{equation}
+where the first arrow is Subsection~\ref{sec:ch271}, the second is Subsection~\ref{sec:ch272},
+the third is Subsection~\ref{sec:ch273}, and the fourth is Subsection~\ref{sec:ch274}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.section27-nullspace-chain}
+expresses Eq.~\eqref{eq:ch2.section26-spectral-chain} at the source level: spectral
+\(\lambda_n=0\) modes from Eq.~\eqref{eq:ch2.spectral-resolution-composition} lie in
+\(\mathbf{u}_{\mathrm{nr}}\), but complete \(\ker\mathcal{R}_\omega\) requires impressed-data
+coordinates on \(\mathcal{J}_\Omega\), not only far-zone modal shapes
+\cite{stratton1941}.
+Equation~\eqref{eq:ch2.section27-nullspace-chain} is the source-side restatement
+of the spectral chain Eq.~\eqref{eq:ch2.section26-spectral-chain}: operator
+nullity precedes constructive NR catalogs, which precede evanescent
+non-reconstructability, which precede angular-spectrum consequences.
+Mathematically, each arrow preserves linearity of \(\mathcal{R}_\omega\);
+physically, each stage removes a distinct laboratory error from inverse-source
+charting. On a cube of side \(2a\) with \(k_0 a=2\), evanescent overlap with
+\(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\) can exceed \(25\%\) of the
+near-field energy on \(S_R\) with \(R=a\) while contributing zero to
+\(a(\widehat{\mathbf{k}})\); mistaking that storage for NR nullity violates
+Eq.~\eqref{eq:ch2.evanescent-nonexport-law} \cite{stratton1941}.
+\ref{ch:01} flux laws enter only after \(\Pi_{\mathrm{rad}}\)
+\cite{harrington2001}.
+Composition law Eq.~\eqref{eq:ch2.constraint-composition-law} still
+applies: geometric annihilation Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def} and
+observation rank Eq.~\eqref{eq:ch2.reconstruction-rank-cap} are independent of, and
+composable with, source null-space membership \cite{harrington2001}.
+The laboratory examples and kernel reading above fix the measurement ordering before any
+operator display. Near-field probes sample \(\mathcal{S}_\omega[\Jimp]\); flux meters read only
+after \(\Pi_{\mathrm{rad}}\) \cite{stratton1941}. With that ordering in place,
+keep three spaces in view throughout Section~\ref{sec:ch27}: impressed currents
+\(\Jimp\in\mathcal{J}_\Omega\) on compact support \(\Omega_s\), full Maxwell fields
+\(\mathcal{S}_\omega[\Jimp]\in\mathcal{F}_\Omega\), and the radiative image on which far-zone
+instruments read. The primary object remains the radiation map that projects the latter from the
+former:
+\begin{equation}
+\label{eq:ch2.nullspace-operator-targets}
+\mathcal{R}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
+\qquad
+\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp],
+\end{equation}
+from Eqs.~\eqref{eq:ch2.radiation-operator-def}--\eqref{eq:ch2.outgoing-radiation-refinement}
+\cite{stratton1941}. The displayed map is the mathematical encoding of the wattmeter reading:
+only \(\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]\) enters \(\mathcal{F}_{\mathrm{rad}}\), so
+near-zone energy in \(\mathcal{S}_\omega[\Jimp]\setminus\mathcal{F}_{\mathrm{rad}}\) cannot be
+inferred from far data alone \cite{stratton1941}. Secondary targets include the observation map
+\(\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\) from
+Eq.~\eqref{eq:ch2.reconstruction-observation-map}, the non-radiative field projector
+\(\mathrm{id}-\Pi_{\mathrm{rad}}\) on \(\mathcal{F}_\Omega\), and evanescent/non-propagating
+selectors Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.nonpropagating-component-def}
+from Subsection~\ref{sec:ch224} \cite{stratton1941}. Inverse source Eq.~\eqref{eq:ch2.inverse-source-equation}
+is ill-posed whenever \(\ker\mathcal{M}_\omega\neq\{\mathbf{0}\}\), which occurs if
+\(\ker\mathcal{R}_\omega\neq\{\mathbf{0}\}\) or \(\ker\mathcal{O}_{\mathrm{meas}}\) is
+nontrivial on \(\operatorname{ran}\mathcal{R}_\omega\) \cite{harrington2001}.
+reciprocity-based solvability Eq.~\eqref{eq:ch2.radiation-solvability-criterion} governs reachability
+of a \emph{target} radiative field; Section~\ref{sec:ch27} classifies sources that map to
+\(\mathbf{0}\in\mathcal{F}_{\mathrm{rad}}\) regardless of solvability for nonzero targets
+\cite{stratton1941}.
+Radiation null space (leading template). Subsection~\ref{sec:ch271} develops Eq.~\eqref{eq:ch2.ker-R-omega} to
+structural statements on \(\ker\mathcal{R}_\omega\) and \(\ker\mathcal{R}_\omega^{\dagger}\).
+Locally, \(\ker\mathcal{R}_\omega\) collects impressed currents annihilated by export;
+\(\ker\mathcal{R}_\omega^{\dagger}\) collects far-side test directions orthogonal to every
+radiative image; and \(\mathrm{coker}\,\mathcal{R}_\omega=\mathcal{F}_{\mathrm{rad}}/\operatorname{ran}\mathcal{R}_\omega\)
+labels pattern targets that no admissible source can realize \cite{stratton1941}. The leading template
+below records admissibility and typical infinite dimensionality on open domains:
+\begin{equation}
+\label{eq:ch2.radiation-nullspace-structure}
+\ker\mathcal{R}_\omega
+=
+\left\{
+\Jimp\in\mathcal{J}_\Omega:
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]=\mathbf{0},
+\ \mathcal{D}_{J}[\Jimp]=1
+\right\},
+\qquad
+\dim\ker\mathcal{R}_\omega=\infty\ \text{typ. on open domains},
+\end{equation}
+with $\mathcal{D}_J=1$ Eq.~\eqref{eq:ch2.source-admissibility} enforced throughout
+\cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-nullspace-structure}
+does not re-define Eq.~\eqref{eq:ch2.ker-R-omega}; it records the Chapter~\ref{ch:02}
+primary target for constructive characterization of nullity, dimensionality, and pairing with cokernel
+directions obstructing inversion Eq.~\eqref{eq:ch2.spectral-solvability}
+\cite{stratton1941}. Modal sectors with \(\lambda_n=0\) in
+Eq.~\eqref{eq:ch2.spectral-resolution-composition} supply a finite-dimensional \emph{slice}
+of \(\ker\mathcal{R}_\omega\) only when eigenmodes are declared on outgoing subspaces
+\cite{harrington2001}.
+Non-radiating current configurations (leading template). Subsection~\ref{sec:ch272} develops canonical impressed currents that realize
+Eq.~\eqref{eq:ch2.null-radiation}:
+\begin{equation}
+\label{eq:ch2.nr-current-template}
+\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega,
+\qquad
+\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\neq\mathbf{0},
+\qquad
+\|\mathbf{u}_{\mathrm{nr}}\|\ \text{may be large near}\ \Omega_s,
+\end{equation}
+with \(\mathbf{u}_{\mathrm{nr}}\) from Eq.~\eqref{eq:ch2.nonradiative-component-def}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.nr-current-template}
+specializes Eq.~\eqref{eq:ch2.nr-image-of-null-space} to constructive families---loop modes,
+counter-propagating pairs, and equivalent-surface cancellations compatible with
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic}---without tabulating dyadic kernels from
+Subsection~\ref{sec:ch231} \cite{stratton1941}. Such currents are invisible to far-zone flux
+meters Eq.~\eqref{eq:ch2.power-flux-functional} yet may dominate near-zone energy budgets
+Eq.~\eqref{eq:ch2.component-power-budget} \cite{harrington2001}.
+Evanescent overlap and non-reconstructability (leading template). Subsection~\ref{sec:ch273} links \(\ker\mathcal{R}_\omega\) to evanescent subspaces and
+finite observation rank. Evanescent content is field-side reactive storage with
+\(\Pi_{\mathrm{rad}}\mathbf{u}_{\mathrm{ev}}=\mathbf{0}\); it must not be conflated with
+source-side \(\Jimp\in\ker\mathcal{R}_\omega\), although both deficits can coexist on the same
+excitation \cite{stratton1941}. The relation records the measurement inclusion and
+the evanescent non-export law:
+\begin{equation}
+\label{eq:ch2.evanescent-nonreconstruct}
+\ker\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega
+\supseteq
+\ker\mathcal{R}_\omega,
+\qquad
+\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]
+\ \text{never exports through}\ \Pi_{\mathrm{rad}},
+\end{equation}
+using Eqs.~\eqref{eq:ch2.rad-null-on-evanescent} and~\eqref{eq:ch2.reconstruction-rank-cap}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.evanescent-nonreconstruct}
+separates \emph{radiation nullity} (no outgoing transverse export) from \emph{measurement
+nullity} (unobservable even when export is nonzero) \cite{stratton1941}. Tikhonov stabilization
+Eq.~\eqref{eq:ch2.tikhonov-source-reconstruction} does not shrink \(\ker\mathcal{R}_\omega\);
+regularization only damps ill-conditioned directions on \(\operatorname{ran}\mathcal{R}_\omega\)
+\cite{harrington2001}. Accessible modal sector
+Eq.~\eqref{eq:ch2.accessible-modal-sector} from Subsection~\ref{sec:ch264} further restricts
+recoverable content independently of evanescent storage \cite{stratton1941}.
+Angular-spectrum consequences (leading template). Subsection~\ref{sec:ch274} records how null-space structure propagates to continuous angular
+spectra Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}:
+\begin{equation}
+\label{eq:ch2.angular-spectrum-null}
+a(\widehat{\mathbf{k}})=0
+\ \text{on suppressed sheets}\ \mathcal{K}_{\mathrm{sup}}
+\ \Longrightarrow\
+\Jimp\ \text{may still carry reactive content in}\ \Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp],
+\end{equation}
+with \(a(\widehat{\mathbf{k}})\) the far angular amplitude and
+\(\mathcal{K}_{\mathrm{sup}}\) the complement of accessible sector
+Eq.~\eqref{eq:ch2.angular-accessibility-sector} \cite{stratton1941}. Equation
+\eqref{eq:ch2.angular-spectrum-null} links Section~\ref{sec:ch27} to
+Section~\ref{sec:ch29}: plane-wave filters and retained/suppressed components in
+Subsections~\ref{sec:ch291}--\ref{sec:ch294} presuppose the
+source-side null-space catalog developed here \cite{stratton1941}. Angular probe rank on the far shell (Subsection~\ref{sec:ch264}) is not re-proved here;
+Subsection~\ref{sec:ch274} states angular-spectrum \emph{consequences} of
+Eq.~\eqref{eq:ch2.ker-R-omega} \cite{harrington2001}.
+\begin{equation}
+\label{eq:ch2.nullspace-spectral-composition}
+\Jimp\in\ker\mathcal{R}_\omega
+\ \Longrightarrow\
+a_n(\Jimp)=0\ \text{for all exporting modes with}\ \lambda_n\neq 0,
+\end{equation}
+while geometric constraints Eq.~\eqref{eq:ch2.accessible-modal-sector} may force additional
+\(a_n=0\) for \(\Jimp\notin\ker\mathcal{R}_\omega\) \cite{stratton1941}.
+Equation~\eqref{eq:ch2.nullspace-spectral-composition} follows from
+Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} and linearity
+Eq.~\eqref{eq:ch2.radiation-linearity}; it is cited in Section~\ref{sec:ch27}
+\cite{stratton1941}. Inverse problems must budget \(\ker\mathcal{R}_\omega\),
+\(\ker\mathcal{O}_{\mathrm{meas}}\), and forbidden sectors from
+geometric constraints on radiative spectra (Subsection~\ref{sec:ch264}) separately
+\cite{harrington2001}.
+Several constructions deliberately remain outside Section~\ref{sec:ch27}. Reciprocity
+identities and modal orthogonality belong to Section~\ref{sec:ch28}; plane-wave angular-spectrum
+operators and near-to-far transforms to Section~\ref{sec:ch29}; vector spherical harmonic
+completeness and explicit \(\mathbf{f}_n\) to \ref{ch:03}; range membership of
+unreachable modes to \ref{ch:04} \cite{stratton1941}. Section~\ref{sec:ch27}
+Subsection~\ref{sec:ch261} supplies spectral decomposition;
+Fredholm structure of radiation operators (Subsection~\ref{sec:ch263}), or geometric constraints
+on radiative spectra (Subsection~\ref{sec:ch264}); it classifies invisible sources on the
+maps those results presuppose \cite{stratton1941}. Worked non-radiating examples appear
+in Subsection~\ref{sec:ch2102} by reference to Subsection~\ref{sec:ch272}
+\cite{harrington2001}.
+Regime logic from Section~\ref{sec:ch01.2.4} is unchanged. Null-space membership does not
+override transport qualification: a current in \(\ker\mathcal{R}_\omega\) has
+\(\mathcal{P}_{\mathrm{rad}}=0\) on qualified shells, while reactive near fields from
+\(\mathcal{S}_\omega[\Jimp]\) may still violate naive flux interpretations if
+Eq.~\eqref{eq:ch2.regime-operator-screen} is ignored \cite{stratton1941}.
+Far-zone dominance far-zone radiative dominance (Subsection~\ref{sec:ch254}) applies only to
+exporting sources; it does not trivialize \(\ker\mathcal{R}_\omega\) \cite{stratton1941}.
+Compression error Eq.~\eqref{eq:ch2.compression-error-bound} bounds modal truncation on
+\(\operatorname{ran}\mathcal{R}_\omega\) independently of null-space dimension
+\cite{harrington2001}.
+As a worked example, consider a thin rectangular wire loop of perimeter \(2\pi b\) with \(b\ll\lambda_0\), embedded in
+free space and driven at angular frequency \(\omega\) so that the impressed current completes one
+closed circulation with equal and opposite arms along the loop's long sides. The physical setup is
+a balanced dipole pair folded into a single closed contour: magnetic flux linkage is negligible at
+\(\omega\), yet the loop stores reactive energy in the near zone. A closed admissible loop carrying
+oppositely directed arms can cancel far-zone transverse radiation through
+Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade} while maintaining nonzero
+\(\mathcal{S}_\omega[\Jimp]\) near the loop \cite{stratton1941}.
+Subsection~\ref{sec:ch272} classifies such families; here the point is that
+Eq.~\eqref{eq:ch2.null-radiation} is realizable with
+\(\mathcal{D}_{J}[\Jimp]=1\), not merely a formal kernel direction
+\cite{harrington2001}. Pattern-matching algorithms that fit only
+\(\operatorname{ran}\mathcal{R}_\omega\) assign spurious modal labels to invisible loop content
+\cite{stratton1941}.
+As a worked example, take a compact spherical source of radius \(a\) with \(k_0 a=1.5\) and truncate the exterior modal
+book at \(N=12\) radiation eigenpairs. A single \(\lambda_n=0\) eigenmode from
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def} contributes to \(\ker\mathcal{R}_\omega\) when
+realized by admissible \(\Jimp^{(n)}\) \cite{stratton1941}. On the range, the truncated
+index \(n\le N\) labels only a finite slice of invisible degrees; the full kernel on open
+\(\mathcal{J}_\Omega\) is generally much larger. On exterior problems the modal index set is not finite;
+truncating to the first \(N\) modes underestimates \(\dim\ker\mathcal{R}_\omega\) and
+overstates identifiability of inverse Eq.~\eqref{eq:ch2.inverse-source-equation}
+\cite{harrington2001}. Subsection~\ref{sec:ch271} states the correct operator
+bookkeeping \cite{stratton1941}.

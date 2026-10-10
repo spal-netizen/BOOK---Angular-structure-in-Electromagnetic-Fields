@@ -1,0 +1,156 @@
+% Stage 8 restored fragment — 2.6.1 Compact circular aperture and singular-value decay (archive lines 7474-7642)
+\subsection{Compact circular aperture and singular-value decay}
+\label{sec:ch26.signature-aperture}
+Before any eigenvalue formula is written, it helps to watch the phenomenon on a range. On a dish
+compact range, place a feed above a circular scan disk on plane $z=0$ and sample tangential field on
+$S_r$; on a spherical near-field scanner, place probes on a hull at $R\approx 2\lambda_0$ and
+transform to far-zone coefficients \cite{hansen1988}. In either campaign, count how
+many independent beam directions remain above the receiver noise floor. The answer depends on disk
+or scan radius $a_{\mathrm{ap}}$ and source electrical size, not on how many spherical harmonics a
+post-processor can index \cite{chu1948}. Electrical size and scan extent fix a
+recoverable rank; singular values $\sigma_n$ of $\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$
+measure the radiation efficiency of each independent source organization through the aperture and
+receiver chain, and fall off once the modal index exceeds what the geometry can resolve
+\cite{stratton1941}. Synthesis harmonic caps therefore overstate physical rank when $\sigma_n$ has already fallen below the
+noise floor---harmonics in a post-processor are labels, not independent export channels. Compact
+decay of $\sigma_n(\mathcal{K})$ and the finite recoverable rank it defines are stated here once;
+later subsections invoke Subsection~\ref{sec:ch26.signature-aperture} by reference rather than
+repeating the measurement narrative \cite{harrington2001}.
+
+Consider a circular scan aperture of radius \(a_{\mathrm{ap}}\) on plane \(z=0\) sampling the
+far-zone tangential field from a compact source with \(k_0 a=1.5\). The measurement composition
+$\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ is compact on the source and
+field spaces declared in Section~\ref{sec:ch213}; its singular values $\sigma_n$ rank radiation
+efficiency of source organizations and decay, defining a practical recoverable rank and finite
+effective dimension before any harmonic label is attached
+\cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigGeo{%
+\begin{tikzpicture}[ch1geo, scale=0.90]
+ \draw[ch1shell] (0,0) circle (0.75);
+ \node[ch1oncanvas, below=8mm] at (0,-0.85) {aperture radius $a_{\mathrm{ap}}$};
+ \draw[ch1shellB, dashed] (0,0) circle (0.97);
+ \node[ch1oncanvas, right=10mm] at (1.35,0) {$S_r$ far zone};
+ \draw[->, thick, gray] (0.6,0.2) -- (1.2,0.35);
+ \node[ch1oncanvas, font=\scriptsize] at (0.9,0.55) {$\sigma_n$ decay};
+\end{tikzpicture}%
+}
+\caption{Finite circular aperture: compact observation operator on far-zone fields;
+singular-value decay marks angular harmonics that fall below instrument threshold.}
+\label{fig:ch2.signature-aperture-svd}
+\end{figure}
+Compactness from Subsection~\ref{sec:ch213} yields \(\sigma_n(\mathcal{K})\to 0\); for disk
+apertures the decay is approximately exponential in modal index when \(k_0 a_{\mathrm{ap}}\) is
+moderate \cite{stratton1941}. In practice the engineer reads off a knee in the singular-value
+curve: retain modes above the knee for synthesis or inversion; discard the tail and accept the
+residual sidelobe floor as a geometry-limited artifact rather than a tuning defect
+\cite{hansen1988}. What practical criterion tells the engineer where to truncate
+the spectrum? Retaining every mode is impossible: instrument noise, finite aperture extent, and
+finite scan count cap recoverable rank, and singular-value decay controls which source
+organizations remain physically realizable through the actual receiver chain
+\cite{stratton1941}. Truncation is therefore inevitable; the engineering question is
+where the knee lies. Truncating at \(N\) modes with
+\begin{equation}
+\label{eq:ch2.signature-aperture-truncation}
+\frac{\|\mathcal{K}-\mathcal{K}_N\|}{\|\mathcal{K}\|}
+\le
+\frac{\sigma_{N+1}}{\sigma_1},
+\end{equation}
+where $\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ is the full measurement
+chain from source to recorded samples, $\mathcal{K}_N$ is its rank-$N$ truncated approximation,
+$\sigma_1$ is the largest singular value (dominant export channel), and $\sigma_{N+1}$ is the
+first discarded singular value \cite{harrington2001}. The ratio $\sigma_{N+1}/\sigma_1$ is the
+relative strength of the strongest discarded radiation channel compared with the dominant
+channel---a direct laboratory readout of how much pattern error truncation will introduce
+\cite{hansen1988}. Eq.~\eqref{eq:ch2.compression-error-bound} bounds pattern error on \(S_r\). At
+\(k_0 a_{\mathrm{ap}}=3\), retaining \(N=9\) singular modes typically captures \(95\%\)
+of the radiated power resolvable through the disk; harmonics beyond \(N\approx 12\) lie
+below a \(-20\,\mathrm{dB}\) threshold relative to \(\sigma_1\)
+\cite{harrington2001}.
+Figure~\ref{fig:ch2.signature-aperture-svd} foreshadows Chapter~\ref{ch:04}: realizability
+and spectral truncation ask which angular components survive compression by
+\(\mathcal{K}\), not which indices a formal expansion can list
+\cite{devaney2004}. Laboratory reports therefore inherit a finite rank from
+geometry before source inversion is attempted; improving SNR without enlarging
+\(a_{\mathrm{ap}}\) cannot recover modes annihilated by \(\sigma_n\) below measurement
+noise \cite{hansen1988}.
+Local notation ($\sigma_n$, recoverable rank). Compose the measurement operator $\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$
+on declared source and field spaces. Its singular values $\sigma_n$---ordered
+$\sigma_1\ge\sigma_2\ge\cdots\to 0$---are the radiation efficiencies of independent source
+organizations as seen through the actual aperture and receiver chain \cite{stratton1941}. The
+\emph{recoverable rank} is the largest $N$ for which $\sigma_N$ remains above the instrument noise
+floor; modes beyond that cliff are mathematically listable in a harmonic post-processor yet
+physically indistinguishable from clutter on $\Gamma_R$ \cite{chu1948}. Compact
+$\sigma_n$ decay and finite dimension on $\mathcal{K}$ are fixed in the display below; elsewhere
+invoke Subsection~\ref{sec:ch26.signature-aperture} by reference only \cite{harrington2001}.
+The spectral relations developed below restate three laboratory facts in compact form before the eigenbasis is
+constructed. A \emph{radiation mode} is a normalized far-zone pattern direction
+$\mathbf{u}_n$; its \emph{source mode} $\Jimp^{(n)}$ is an admissible current that excites it.
+The \emph{export eigenvalue} $\lambda_n$ of the radiation operator $\mathcal{R}_\omega$---not a
+correlation-operator eigenvalue unless later stated---ranks how efficiently that radiation mode
+reaches qualified flux on $\Gamma_R$ \cite{stratton1941}. each radiating mode carries export efficiency
+$|\lambda_n|$ measured by coupled power in that direction. Second, not every desired far-zone
+target can be synthesized: obstructions appear as orthogonality conditions on outgoing
+solutions. Third, when geometry possesses rotational symmetry, rotating the hardware reorients
+modal coefficients without changing eigenvalue ordering within degenerate blocks. The introductory relation
+equations record these facts; the subsections that follow interpret them in measurement
+language \cite{stratton1941}.
+On a compact range, a \emph{radiation mode} appears as a principal far-zone pattern direction
+---a normalized cut on $S_r$ that carries qualified export power---while its \emph{source mode}
+is the admissible current distribution that excites it \cite{harrington2001}. Dominant beams
+correspond to modes with large $|\lambda_n|$ because those organizations couple most efficiently
+to the wattmeter on $\Gamma_R$ \cite{stratton1941}. The eigenpair relation below states the
+experimentally familiar observation that certain current organizations radiate much more
+effectively than others \cite{collin2001}. On a family of radiating modes, the eigenvalue template reads
+\begin{equation}
+\label{eq:ch2.modal-eigenvalue-equation}
+\mathcal{R}_\omega[\Jimp^{(n)}]=\lambda_n\,\mathbf{u}_n,
+\qquad
+\mathbf{u}_n=P_n\mathcal{S}_\omega[\Jimp^{(n)}],
+\end{equation}
+with \(\lambda_n\) measuring radiative export efficiency of mode \(n\) from finite impressed
+current \(\Jimp^{(n)}\) \cite{stratton1941}. In synthesis and inversion, $\mathbf{g}$ denotes the
+desired far-zone radiated field one wishes to realize; solvability fails when $\mathbf{g}$ carries
+a component along cokernel directions---an \emph{orthogonality obstruction} that no admissible
+source can remove \cite{stratton1941}. Experimentally, such failure appears as a synthesis target
+that refuses to converge, a measured residual orthogonal to every reachable pattern, or a
+pattern null that persists despite port tuning \cite{harrington2001}. Solvability on outgoing radiative solutions satisfies
+\begin{equation}
+\label{eq:ch2.spectral-solvability}
+\mathcal{R}_\omega+K
+\ \text{solvable on}\ \mathcal{J}_\Omega
+\iff
+\mathbf{g}\perp\ker(\mathcal{R}_\omega+K)^{\dagger},
+\end{equation}
+with \(K\) compact on the graph domain of impressed sources \cite{stratton1941}.
+When a symmetry group \(G\) commutes with \(\mathcal{R}_\omega\), the equation below expresses
+a simple laboratory fact: rotating the hardware and then measuring the pattern gives the same
+result as measuring first and rotating the resulting pattern \cite{harrington2001}.
+\begin{equation}
+\label{eq:ch2.degeneracy-covariance}
+\mathcal{R}_\omega\,\mathcal{D}(R)[\Jimp]
+=
+\mathcal{D}(R)\,\mathcal{R}_\omega[\Jimp],
+\qquad R\in G,
+\end{equation}
+with \(\mathcal{D}(R)\) the field representation induced from
+Eq.~\eqref{eq:ch1.active-rotation-action} on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941}. Modal projectors compose with radiation selection through
+$\Pi_{\mathrm{rad}}$ acting as the radiation filter that passes only exportable content,
+$P_n$ as mode-selection lenses that isolate individual beam families from a measured pattern,
+and $\Pi_{\mathrm{ev}}$, $\Pi_{\mathrm{non}}$ as projectors onto evanescent and
+non-propagating sectors that qualified far-zone meters cannot resolve
+\cite{stratton1941}.
+\begin{equation}
+\label{eq:ch2.spectral-resolution-composition}
+\Pi_{\mathrm{rad}}
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}} P_n,
+\qquad
+P_n\Pi_{\mathrm{ev}}=P_n\Pi_{\mathrm{non}}=\mathbf{0},
+\end{equation}
+using Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent} by reference
+\cite{stratton1941}. Spectral decompositions \emph{organize} export; they do not
+\emph{create} angular structure---see Subsection~\ref{sec:ch26.signature-aperture} for the
+harmonics-versus-modes distinction stated once in measurement terms \cite{stratton1941}.

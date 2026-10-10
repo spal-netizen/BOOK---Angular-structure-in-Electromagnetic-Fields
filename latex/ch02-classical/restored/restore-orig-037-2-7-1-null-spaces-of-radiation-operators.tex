@@ -1,0 +1,225 @@
+% Stage 8 restored fragment — 2.7.1 Null spaces of radiation operators (archive lines 9114-9365)
+\subsection{Null spaces of radiation operators}
+\label{sec:ch271}
+
+On a declared compact-range or anechoic campaign, technicians record frequency, outline, and probe geometry before any harmonic fit is trusted \cite{hansen1988}. Non-radiating currents store reactive energy without far-zone export \cite{stratton1941}. Near-field richness must not be reported as far-zone diversity \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Section~\ref{sec:ch27} opened with laboratory signatures---balanced loops, counter-directed
+pairs, below-cutoff guides---and named the radiation kernel in plain language. Subsection
+~\ref{sec:ch271} now supplies the operator account: structural properties of
+$\ker\mathcal{R}_\omega$, adjoint null spaces, cokernel pairings, and modal null sectors,
+developing Eq.~\eqref{eq:ch2.ker-R-omega} from Subsection~\ref{sec:ch244}
+\cite{stratton1941}. The loop and scanner patterns cited in the section introduction are not
+re-derived here; they motivate the locked definition below.
+
+Assumptions. Fix \(\omega>0\), admissible source space \(\mathcal{J}_\Omega\)
+Eq.~\eqref{eq:ch2.source-space-refined}, charge continuity and boundary compatibility
+Eq.~\eqref{eq:ch2.source-admissibility}, outgoing radiation condition on exterior problems
+Eqs.~\eqref{eq:ch2.sommerfeld-outgoing-class}--\eqref{eq:ch2.outgoing-radiation-refinement},
+and radiation map \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\) from
+Eqs.~\eqref{eq:ch2.radiation-operator-def}--\eqref{eq:ch2.outgoing-radiation-refinement}
+\cite{stratton1941}. Dual pairings on sources and fields are
+Eqs.~\eqref{eq:ch2.dual-source-pairing} and~\eqref{eq:ch2.maxwell-adjoint-pairing}
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
+reports on any recovered radiative component \cite{harrington2001}.
+Radiation null space (locked definition). Physically, $\ker\mathcal{R}_\omega$ is the set of impressed currents that produce no qualified
+far-zone pattern: the wattmeter reading is null even when near probes are not
+\cite{stratton1941}. Formally, the \emph{radiation null space} is the source-side kernel
+\begin{equation}
+\label{eq:ch2.radiation-nullspace-def}
+\ker\mathcal{R}_\omega
+=
+\left\{
+\Jimp\in\mathcal{J}_\Omega:
+\mathcal{R}_\omega[\Jimp]=\mathbf{0}\in\mathcal{F}_{\mathrm{rad}},
+\ \mathcal{D}_{J}[\Jimp]=1
+\right\},
+\end{equation}
+equivalently \(\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]=\mathbf{0}\) on the outgoing
+branch \cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-nullspace-def}
+is the Subsection~\ref{sec:ch271} development of Eq.
+Eq.~\eqref{eq:ch2.ker-R-omega}: $\mathcal{D}_J=1$ is explicit, and membership is
+defined on \(\mathcal{J}_\Omega\) rather than on formal test directions
+\cite{stratton1941}. Elements of \(\ker\mathcal{R}_\omega\) produce no qualified far-zone
+export through Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade} yet may satisfy
+\(\mathcal{S}_\omega[\Jimp]\neq\mathbf{0}\) Eq.~\eqref{eq:ch2.nr-image-of-null-space}
+\cite{harrington2001}. Consequence for inversion: any far-zone datum fixes
+\(\mathcal{R}_\omega[\Jimp]\) only up to additions in \(\ker\mathcal{R}_\omega\). Linearity
+Eq.~\eqref{eq:ch2.radiation-linearity} makes \(\ker\mathcal{R}_\omega\) a linear subspace of
+\(\mathcal{J}_\Omega\) closed under admissible superposition \cite{stratton1941}.
+Adjoint null space and cokernel. Targets in \(\mathrm{coker}\,\mathcal{R}_\omega\) are far-zone patterns orthogonal to every
+reachable image; they obstruct solvability even when no near-field anomaly is visible
+\cite{stratton1941}. Let \(\mathcal{R}_\omega^{\dagger}:\mathcal{F}_{\mathrm{rad}}\to\mathcal{J}_\Omega\) denote
+the adjoint induced by Eqs.~\eqref{eq:ch2.dual-source-pairing} and
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} defines the adjoint pairing. Define
+\begin{equation}
+\label{eq:ch2.radiation-adjoint-nullspace}
+\ker\mathcal{R}_\omega^{\dagger}
+=
+\left\{
+\mathbf{w}\in\mathcal{F}_{\mathrm{rad}}:
+\langle \mathbf{w},\,\mathcal{R}_\omega[\Jimp]\rangle_{\mathcal{U}}=0
+\ \ \forall\ \Jimp\in\mathcal{J}_\Omega
+\right\},
+\end{equation}
+and the cokernel quotient
+\begin{equation}
+\label{eq:ch2.radiation-cokernel-def}
+\mathrm{coker}\,\mathcal{R}_\omega
+=
+\mathcal{F}_{\mathrm{rad}}\big/\operatorname{ran}\mathcal{R}_\omega,
+\end{equation}
+with \(\operatorname{ran}\mathcal{R}_\omega\subset\mathcal{F}_{\mathrm{rad}}\) the radiative
+image \cite{stratton1941}. Equations~\eqref{eq:ch2.radiation-adjoint-nullspace}--\eqref{eq:ch2.radiation-cokernel-def}
+pair with \(\ker\mathcal{R}_\omega\) through reciprocity-based solvability
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion} imported from Subsection~\ref{sec:ch263}:
+targets \(\mathbf{g}\in\mathcal{F}_{\mathrm{rad}}\) orthogonal to
+\(\ker\mathcal{R}_\omega^{\dagger}\) are reachable, while obstructions lie in cokernel
+directions \cite{stratton1941}. Biorthogonality Eq.~\eqref{eq:ch2.radiation-biorthogonality}
+expresses the same pairing on modal coordinates without re-deriving adjoint modes here
+\cite{harrington2001}.
+When \(\mathcal{R}_\omega\) is Fredholm in the sense of Fredholm structure of radiation operators (Subsection~\ref{sec:ch263}),
+\begin{equation}
+\label{eq:ch2.fredholm-nullspace-alternative}
+\dim\ker\mathcal{R}_\omega<\infty
+\ \Longleftrightarrow\
+\dim\ker\mathcal{R}_\omega^{\dagger}<\infty,
+\end{equation}
+and index Eq.~\eqref{eq:ch2.radiation-fredholm-index-def} counts the imbalance
+\cite{stratton1941}. Equation~\eqref{eq:ch2.fredholm-nullspace-alternative}
+does not re-prove Fredholm structure of radiation operators (Subsection~\ref{sec:ch263}); it records the
+Chapter~\ref{ch:02} null-space bookkeeping used in inversion
+Eq.~\eqref{eq:ch2.inverse-source-equation} \cite{stratton1941}. On exterior domains with
+compact \(\Omega_s\), \(\dim\ker\mathcal{R}_\omega\) is typically infinite even when
+\(\mathcal{R}_\omega\) is Fredholm on truncated subspaces
+Eq.~\eqref{eq:ch2.spectral-compression-operator} \cite{harrington2001}.
+On the orthonormal basis of spectral decomposition of the radiation operator (Subsection~\ref{sec:ch261}), define
+the \emph{modal null index set}
+\begin{equation}
+\label{eq:ch2.modal-null-index-set}
+\mathcal{N}_{\mathrm{null}}
+=
+\left\{
+n\in\mathcal{N}_{\mathrm{rad}}:
+\lambda_n=0
+\right\},
+\end{equation}
+with \(\lambda_n\) from Eq.~\eqref{eq:ch2.radiation-eigenpair-def}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.modal-null-index-set} is the
+spectral slice of \(\ker\mathcal{R}_\omega\) on declared eigenmodes:
+\begin{equation}
+\label{eq:ch2.modal-null-sector-reduction}
+\sum_{n\in\mathcal{N}_{\mathrm{null}}}
+c_n[\mathfrak{D}]\,\Jimp^{(n)}
+\in\ker\mathcal{R}_\omega
+\quad\text{when admissible superpositions exist},
+\end{equation}
+using source coefficients Eq.~\eqref{eq:ch2.source-modal-amplitude} and eigenpairs
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def} \cite{stratton1941}. Equation
+\eqref{eq:ch2.modal-null-sector-reduction} does not exhaust \(\ker\mathcal{R}_\omega\) on
+exterior problems because \(\mathcal{N}_{\mathrm{rad}}\) need not span all invisible source
+degrees \cite{harrington2001}. modal invertibility on the radiative range (Subsection~\ref{sec:ch263})
+already states that coefficients on \(\ker\mathcal{R}_\omega\) remain free in
+Eq.~\eqref{eq:ch2.modal-particular-solution}; Subsection~\ref{sec:ch271} identifies the
+modal-labeled portion \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (f) {$\mathcal{F}_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of j] (ker) {$\ker\mathcal{R}_\omega$};
+ \node[ch1box, below=5mm of f] (adj) {$\ker\mathcal{R}_\omega^{\dagger}$};
+ \draw[ch1flow] (j) -- (r) -- (f);
+ \draw[ch1flow, dashed] (ker.south) -- (j.north);
+ \draw[ch1flow, dashed] (adj.south) -- (f.north);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch271} null-space measurement sequence: source kernel
+Eq.~\eqref{eq:ch2.radiation-nullspace-def}, radiative image, and adjoint kernel
+Eq.~\eqref{eq:ch2.radiation-adjoint-nullspace} paired by solvability
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion}.}
+\label{fig:ch2.radiation-nullspace-measurement chain}
+\end{figure}
+Figure interpretation. Read $\mathcal{J}_\Omega$ as the impressed-source Hilbert space and $\mathcal{F}_{\mathrm{rad}}$ as the outgoing radiative image. The forward arrow $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is the only laboratory-export channel; dashed $\ker\mathcal{R}_\omega$ feeds back into $\mathcal{J}_\Omega$ as invisible source degrees that annihilate far-zone patterns Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law}. The lower adjoint kernel $\ker\mathcal{R}_\omega^{\dagger}$ pairs with cokernel directions through reciprocity-based solvability Eq.~\eqref{eq:ch2.radiation-solvability-criterion}: a nonzero cokernel obstruction means no impressed current can realize the target far field, independent of mesh resolution \cite{stratton1941}. Figure~\ref{fig:ch2.radiation-nullspace-measurement chain} separates kernel and cokernel data before observation composition Eq.~\eqref{eq:ch2.observation-fredholm-composition}.
+\phantomsection\label{thm:ch2.radiation-nullspace-structure}
+Let \(\mathcal{R}_\omega\) satisfy Eq.~\eqref{eq:ch2.radiation-nullspace-def} on admissible
+\(\mathcal{J}_\Omega\) with outgoing radiation condition. Then:
+\begin{enumerate}
+\item[(i)] \(\ker\mathcal{R}_\omega\) is a linear subspace of \(\mathcal{J}_\Omega\) and
+\(\mathcal{R}_\omega[\Jimp]=\mathbf{0}\) iff \(\Jimp\in\ker\mathcal{R}_\omega\).
+\item[(ii)] Solvability of \(\mathcal{R}_\omega[\Jimp]=\mathbf{g}\) is equivalent to
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion} on declared pairings.
+\item[(iii)] On the spectral basis of Subsection~\ref{sec:ch261},
+\(\mathcal{N}_{\mathrm{null}}\) Eq.~\eqref{eq:ch2.modal-null-index-set} labels modes with
+\(P_n\mathcal{R}_\omega=\mathbf{0}\); modal superpositions
+Eq.~\eqref{eq:ch2.modal-null-sector-reduction} lie in \(\ker\mathcal{R}_\omega\) when
+admissible.
+\item[(iv)] Domain class fixes dimensionality:
+\begin{equation}
+\label{eq:ch2.nullspace-dimensional-classification}
+\begin{aligned}
+\text{bounded cavity + discrete book:}\ &
+\dim\ker\mathcal{R}_\omega\ \text{finite on truncated}\ \mathcal{R}_\omega^{(N)};\\
+\text{exterior + compact}\ \Omega_s:\ &
+\dim\ker\mathcal{R}_\omega=\infty\ \text{typ. on full}\ \mathcal{J}_\Omega.
+\end{aligned}
+\end{equation}
+\end{enumerate}. Part (i) follows from linearity Eq.~\eqref{eq:ch2.radiation-linearity} and definition
+Eq.~\eqref{eq:ch2.radiation-nullspace-def} \cite{stratton1941}. Part (ii) is Fredholm structure of radiation operators (Subsection~\ref{sec:ch263}) and
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion}, cited without re-proof
+\cite{harrington2001}. Part (iii) uses Eq.~\eqref{eq:ch2.modal-fredholm-reduction} and
+\(\lambda_n=0\) in Eq.~\eqref{eq:ch2.radiation-eigenpair-def} \cite{stratton1941}. Part (iv)
+contrasts discrete cavity spectra Eq.~\eqref{eq:ch2.cavity-discrete-radiation-spectrum} with
+continuous exterior angular content Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}
+\cite{jackson1999}.
+\phantomsection\label{prop:ch2.null-kernel-field-image}
+If \(\Jimp\in\ker\mathcal{R}_\omega\), then radiative and non-radiative components satisfy
+\(\mathbf{u}_{\mathrm{rad}}=\mathbf{0}\) and
+\(\mathbf{u}_{\mathrm{nr}}=\mathcal{S}_\omega[\Jimp]\) from
+Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def};
+near-zone energy in \(\mathbf{u}_{\mathrm{nr}}\) may be large while qualified export vanishes
+\cite{stratton1941}.
+Composition with spectral and geometric filters. Null-space membership implies modal annihilation on exporting sectors:
+\phantomsection\label{eq:ch2.geometric-modal-annihilation}
+\begin{equation}
+\label{eq:ch2.nullspace-modal-annihilation-law}
+\Jimp\in\ker\mathcal{R}_\omega
+\ \Longrightarrow\
+a_n(\Jimp)=0
+\ \text{for all}\ n\ \text{with}\ \lambda_n\neq 0,
+\end{equation}
+with far coefficients \(a_n\) from Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.nullspace-modal-annihilation-law}
+expresses Eq.~\eqref{eq:ch2.nullspace-spectral-composition} from Section~\ref{sec:ch27} without
+re-deriving the modal expansion \cite{stratton1941}. Geometric constraints
+geometric constraints on radiative spectra (Subsection~\ref{sec:ch264}) may force additional \(a_n=0\) for sources
+outside \(\ker\mathcal{R}_\omega\) \cite{harrington2001}. Composition law
+Eq.~\eqref{eq:ch2.constraint-composition-law} budgets identifiability deficits separately
+\cite{stratton1941}.
+Fredholm index Eq.~\eqref{eq:ch2.radiation-fredholm-index-def} is unchanged under compact
+perturbations Eq.~\eqref{eq:ch2.radiation-fredholm-decomposition} and under Tikhonov
+regularization Eq.~\eqref{eq:ch2.tikhonov-source-reconstruction} on the range side
+\cite{stratton1941}. Regularization stabilizes
+Eq.~\eqref{eq:ch2.modal-particular-solution} for small \(|\lambda_n|\) but leaves
+\(\ker\mathcal{R}_\omega\) unchanged: invisible source components cannot be recovered from
+far-zone data at any regularization level \cite{stratton1941}. Compression truncation
+Eq.~\eqref{eq:ch2.compression-error-bound} approximates \(\operatorname{ran}\mathcal{R}_\omega\),
+not \(\ker\mathcal{R}_\omega\) \cite{harrington2001}.
+Null-space structure of radiation operators (Subsection~\ref{sec:ch271}) assumes linear media at fixed \(\omega\),
+outgoing radiation condition, and admissible \(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-admissibility}
+\cite{stratton1941}. Loss modifies \(\lambda_n\) and may merge modal null sectors
+without promoting evanescent content to export through
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Nonlinear or time-varying
+sources require the causal chain of Subsection~\ref{sec:ch223}; harmonic null spaces here are
+fixed-frequency slices \cite{harrington2001}. regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} remains mandatory before interpreting near-zone
+reactive dominance as null-space membership \cite{stratton1941}.
+\medskip
+\noindent
+Subsection~\ref{sec:ch271} fixed operator null-space structure through
+Eq.~\eqref{eq:ch2.radiation-nullspace-def}, adjoint and cokernel pairings, and the modal null
+sector Eqs.~\eqref{eq:ch2.modal-null-index-set}--\eqref{eq:ch2.modal-null-sector-reduction}
+\cite{stratton1941}. Constructive non-radiating current families that realize the kernel in the
+laboratory develop next.
+\phantomsection\label{sec:ch272}

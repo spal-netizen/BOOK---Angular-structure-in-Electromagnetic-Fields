@@ -1,0 +1,327 @@
+% Stage 8 restored fragment — 2.10.4 Radiation from structured source states (archive lines 13128-13466)
+\subsection{Radiation from structured source states}
+\label{sec:ch2104}
+
+A coax-fed pyramidal horn over a ground plane defines the impressed-current and boundary-data tuple technicians declare before Maxwell export is computed \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Structured sources raise whether organized amplitude, phase, and polarization at the feed imply organized \emph{transport} in the far zone. Recent campaigns often report azimuthal phase in $a_\sigma(\widehat{\mathbf{k}})$ or Poynting vorticity near the aperture as evidence of orbital angular momentum; Maxwell propagation with outgoing selection shows that appearance and export are related but not identical \cite{belinfante1940}. Stokes texture or $\|\boldsymbol{\Omega}_P\|$ measured on a reactive shell must not be promoted to a transport label; however, balanced counter-rotating excitations can produce rich far-zone phase while signed angular flux vanishes until a modest amplitude imbalance restores export \cite{harrington2001}. Structured source parameters Eq.~\eqref{eq:ch2.structured-source-state-def}, topology qualification on $\mathcal{R}_\omega[\Jimp]$, and regime-gated transport indices must be distinguished imported from Chapter~\ref{ch:01} \cite{stratton1941}. What a laboratory measurement actually establishes is therefore the radiative image after $\Pi_{\mathrm{rad}}$, not the raw near reactive map $\mathcal{S}_\omega[\Jimp]$ \cite{maxwell1873}. The ring-array comparison below makes the distinction measurable: balanced counter-rotating phases produce rich far-zone texture while signed flux cancels, and a modest amplitude imbalance restores export without changing phase structure dramatically \cite{belinfante1940}.
+An offset feed horn illuminates a parabolic reflector of diameter $D\gg\lambda$ in a
+radio-telescope or compact-range campaign; spillover and rim currents share the same radiation
+integrals as the feed mouth \cite{stratton1941}. Dual-polarization horn feed with
+calibrated $S_{21}$ reciprocity checks between feed port and far-zone probe drives the campaign
+\cite{harrington2001}. Feed spillover and edge taper set sidelobe shoulders; secondary
+illumination compresses the angular spectrum onto the focal region, so near-field scans on the
+feed alone differ qualitatively from full-dish campaigns \cite{hansen1988}. Equivalent currents on
+the feed mouth compose with radiation integrals from induced rim currents; reciprocity ties port
+coupling to far-zone amplitude on qualified shells \cite{harrington2001}. Reflector systems
+separate field \emph{generation} on the feed from field \emph{recovery} on the focal surface---two
+finite-geometry limits on one measurement campaign---and thereby exemplify why structured-source
+parameters must pass through $\mathcal{R}_\omega$ before Stokes, Poynting, or angular-flux
+diagnostics are reported \cite{maxwell1873}.
+Subsection~\ref{sec:ch2104} activates the structured-source and geometric-suppression terms of
+Eq.~\eqref{eq:ch2.dof-partition-master}, giving the definitive packaging of
+\emph{structured source states}---impressed currents with explicit amplitude, phase, and
+polarization organization---and illustrating their radiation through \(\mathcal{R}_\omega\),
+importing Subsection~\ref{sec:ch01.2.2} amplitude--phase--polarization--Poynting diagnostics
+from the cited sections \cite{stratton1941}. Radiation map
+Eq.~\eqref{eq:ch2.radiation-operator-composition}, near-to-far limit
+Eq.~\eqref{eq:ch2.near-to-far-transform-def}, exterior spectral integral
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}, regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen}, and angular-flux functional
+Eq.~\eqref{eq:ch2.angular-momentum-flux-vector} are presupposed; \ref{ch:01} Stokes,
+Poynting, and topology qualification Eqs.~\eqref{eq:ch1.transverse-components}--\eqref{eq:ch1.topology-qualified-gate}
+and the topology--transport separation (Subsection~\ref{sec:ch01.2.2}) are cited without re-proof
+\cite{stratton1941}. Vector harmonic labeling of structured modes belongs to
+\ref{ch:03} \cite{stratton1941}.
+On compact support \(\Omega_s\Subset\Omega\), a \emph{structured source state} is an admissible
+impressed current \(\Jimp\in\mathcal{J}_\Omega\) admitting the parametric representation
+
+\begin{equation}
+\label{eq:ch2.structured-source-state-def}
+\Jimp(\mathbf{r}')
+=
+\sum_{n=1}^{N}
+A_n\,\chi_n(\mathbf{r}')\,
+e^{\jj\Phi_n(\mathbf{r}')}\,
+\mathbf{p}_n(\mathbf{r}'),
+\qquad
+\mathbf{p}_n\cdot\hat{\mathbf{k}}_n=0,
+\end{equation}
+where \(A_n\ge 0\) are channel amplitudes, \(\Phi_n\) are spatial phase laws,
+\(\chi_n\) are nonnegative envelopes with \(\operatorname{supp}\chi_n\subseteq\Omega_s\),
+and \(\mathbf{p}_n\) are transverse polarization vectors on each channel support
+\cite{stratton1941}. Equation~\eqref{eq:ch2.structured-source-state-def} is the
+Subsection~\ref{sec:ch2104} operator-side label for sources whose angular organization is
+specified before radiation selection: amplitude fixes channel weight, phase fixes interference
+geometry, and \(\mathbf{p}_n\) fixes local vector state, paralleling the field-side chain of
+Subsection~\ref{sec:ch01.2.2} \cite{stratton1941}. The sum is understood in the
+distributional sense when \(\chi_n\) includes point or sheet supports
+\cite{stratton1941}. Non-uniqueness of Eq.~\eqref{eq:ch2.structured-source-state-def}
+under gauge-equivalent reparameterizations is inherited from impressed-current equivalence classes
+Eq.~\eqref{eq:ch2.source-admissibility} and does not alter \(\mathcal{R}_\omega[\Jimp]\)
+\cite{harrington2001}. Structured radiation coefficient. Define the \emph{structured radiation coefficient} of channel \(n\) in direction
+\(\widehat{\mathbf{k}}\) and polarization \(\sigma\in\{1,2\}\) by
+\begin{equation}
+\label{eq:ch2.structured-source-radiation-coefficient}
+c_{n,\sigma}(\widehat{\mathbf{k}})
+=
+-\jj\omega\mu_0\,\frac{1}{4\pi}
+\int_{\Omega_s}
+A_n\,\chi_n(\mathbf{r}')\,
+e^{\jj\Phi_n(\mathbf{r}')}\,
+\mathbf{p}_n(\mathbf{r}')\cdot\mathbf{e}_\sigma(\widehat{\mathbf{k}})\,
+e^{-\jj k_0\widehat{\mathbf{k}}\cdot\mathbf{r}'}\,d^{3}r',
+\end{equation}
+with \(\mathbf{e}_\sigma\) transverse unit vectors from
+Eq.~\eqref{eq:ch2.exterior-angular-eigenmode} \cite{stratton1941}. The far angular
+amplitude is
+\begin{equation}
+\label{eq:ch2.structured-source-far-amplitude}
+a_\sigma(\widehat{\mathbf{k}})
+=
+\sum_{n=1}^{N} c_{n,\sigma}(\widehat{\mathbf{k}}),
+\qquad
+a_\sigma=\Lambda_{\mathrm{nf}}[\Jimp]_\sigma,
+\end{equation}
+importing Eq.~\eqref{eq:ch2.near-to-far-transform-def} and consistency
+Eq.~\eqref{eq:ch2.near-to-far-integral-agreement} \cite{stratton1941}.
+Equations~\eqref{eq:ch2.structured-source-radiation-coefficient}--\eqref{eq:ch2.structured-source-far-amplitude}
+linearize structured sources through \(\mathcal{R}_\omega\): each channel contributes a
+directional radiation coefficient fixed by outgoing radiation condition, and superposition holds on the
+exporting branch \cite{stratton1941}. Physically, Eq.~\eqref{eq:ch2.structured-source-far-amplitude}
+is the operator restatement of ``structured beam'' labels: azimuthal phase ramps in
+\(\Phi_n\) appear in \(c_{n,\sigma}\) through the plane-wave kernel, but only after radiation
+selection \cite{allen1992}.
+\phantomsection\label{prop:ch2.structured-source-topology-diagnostic}
+Let \(\Jimp\) satisfy Eq.~\eqref{eq:ch2.structured-source-state-def} with
+\((\E_{\mathrm{rad}},\H_{\mathrm{rad}})=\mathcal{R}_\omega[\Jimp]\). Transverse components,
+Stokes parameters, Poynting vector, and Poynting vorticity computed from
+\((\E_{\mathrm{rad}},\H_{\mathrm{rad}})\) in the far zone inherit the diagnostic chain of
+Subsection~\ref{sec:ch01.2.2} Eqs.~\eqref{eq:ch1.transverse-components}--\eqref{eq:ch1.poynting-vorticity}.
+Local topology markers are rotationally relevant only where
+\begin{equation}
+\label{eq:ch2.structured-source-topology-criterion}
+\mathcal{Q}_{\mathrm{str}}(\widehat{\mathbf{k}})
+=
+\mathcal{Q}_{\mathrm{top}}(\mathbf{r})
+\ \text{evaluated on}\ (\E_{\mathrm{rad}},\H_{\mathrm{rad}})\ \text{with}\ 
+\mathcal{D}_{J,\mathrm{reg}}=1,
+\end{equation}
+importing Eq.~\eqref{eq:ch1.topology-qualified-gate} and regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} \cite{stratton1941}. Nontrivial
+Stokes texture, phase winding, or \(\boldsymbol{\Omega}_P\neq\mathbf{0}\) on
+\(\mathcal{S}_\omega[\Jimp]\) without passing through \(\mathcal{R}_\omega\) do not qualify
+for transport reports \cite{stratton1941}.
+Apply the topology--transport separation (Subsection~\ref{sec:ch01.2.2}) to far-zone traces of
+\(\mathcal{R}_\omega[\Jimp]\) and identify \(\mathcal{Q}_{\mathrm{top}}\) with
+Eq.~\eqref{eq:ch2.transport-qualified-radiation} \cite{stratton1941}. Reactive
+components removed by \(\mathcal{R}_\omega\) cannot satisfy
+Eq.~\eqref{eq:ch2.structured-source-topology-criterion} \cite{harrington2001}.
+Problem. A circular ring array of \(N=36\) impressed-current elements lies on
+\(\rho=\rho_0=0.8a\), \(z=0\), with compact ball support \(\Omega_s=B_a(0)\), \(k_0 a=3.0\),
+and \(\omega\) fixed . Each element carries amplitude
+\(A_n=A_0\), envelope \(\chi_n=\delta(\mathbf{r}'-\boldsymbol{\rho}_n)\), and transverse
+polarization \(\mathbf{p}_n=\hat{\boldsymbol{\phi}}\) at azimuth \(\phi_n=2\pi(n-1)/N\).
+Two structured configurations are compared:
+\begin{enumerate}
+\item[(a)] \emph{Balanced counter-rotating pair:} half the elements carry
+\(\Phi_n=\ell\phi_n\) with \(\ell=+1\), half carry \(\Phi_n=-\ell\phi_n\), matching the
+channel template Eq.~\eqref{eq:ch1.ex62-counter-rotating-superposition} after radiation mapping;
+\item[(b)] \emph{Imbalanced single winding:} all elements carry \(\Phi_n=+\ell\phi_n\) with
+\(\ell=+1\) but amplitudes satisfy \(A_n=A_0(1+\eta\cos\phi_n)\), \(\eta=0.35\).
+\end{enumerate}
+Far-zone diagnostics use \(\mathcal{R}_\omega[\Jimp]\), extractor
+Eq.~\eqref{eq:ch2.far-zone-extractor-def}, and shell \(r=10a\) . Tasks:
+\begin{enumerate}
+\item[(i)] compute structured coefficients Eq.~\eqref{eq:ch2.structured-source-radiation-coefficient}
+and far amplitudes Eq.~\eqref{eq:ch2.structured-source-far-amplitude} for both configurations;
+\item[(ii)] evaluate Stokes parameters and \(\boldsymbol{\Omega}_P\) on the radiative branch
+(Subsection~\ref{sec:ch01.2.2}) and state whether \(\mathcal{Q}_{\mathrm{str}}=1\);
+\item[(iii)] compute net angular-flux proxy \(\Lambda_J\) from
+Eq.~\eqref{eq:ch2.angular-momentum-flux-vector} and compare with
+Eq.~\eqref{eq:ch1.ex62-zero-transport-result} and imbalance sensitivity
+Eq.~\eqref{eq:ch1.ex62-imbalance-sensitivity} (Subsections~\ref{sec:ch01.2.2}--\ref{sec:ch01.2.3}).
+\end{enumerate}
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {Structured $\Jimp$\\state def.};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (a) {$a_\sigma(\widehat{\mathbf{k}})$};
+ \node[ch1box, right=7mm of a] (diag) {Stokes / $\mathbf{P}$ / $\boldsymbol{\Omega}_P$};
+ \node[ch1box, right=7mm of diag] (criterion) {$\mathcal{Q}_{\mathrm{str}}$};
+ \node[ch1box, below=5mm of diag] (c1) {Subsection~\ref{sec:ch01.2.2}};
+ \draw[ch1flow] (j) -- (r) -- (a) -- (diag) -- (criterion);
+ \draw[ch1flow, dashed] (c1.south) -- (diag.north);
+\end{tikzpicture}%
+}
+\caption{Worked problem~\ref{sec:ch2104}: structured source parameters pass through
+\(\mathcal{R}_\omega\) to far amplitudes; amplitude--phase--polarization--Poynting diagnostics
+(USE Subsection~\ref{sec:ch01.2.2}) apply only on the radiative branch before topology criterion
+Eq.~\eqref{eq:ch2.structured-source-topology-criterion}.}
+\label{fig:ch2.wp-structured-source-radiation}
+\end{figure}
+The dashed
+link marks imported \ref{ch:01} diagnostic definitions . Step 1 — Structured coefficients for configuration (a). Insert the counter-rotating phase law into Eq.~\eqref{eq:ch2.structured-source-radiation-coefficient}:
+\begin{equation}
+\label{eq:ch2.ex-str-counterprop-coefficient}
+c_{n,\sigma}(\widehat{\mathbf{k}})
+=
+-\jj\omega\mu_0\,\frac{A_0}{4\pi}\,
+e^{\jj \ell s_n \phi_n}\,
+\mathbf{p}_n\cdot\mathbf{e}_\sigma(\widehat{\mathbf{k}})\,
+e^{-\jj k_0\widehat{\mathbf{k}}\cdot\boldsymbol{\rho}_n},
+\qquad
+s_n=
+\begin{cases}
++1, & n=1,\ldots,18,\\
+-1, & n=19,\ldots,36,
+\end{cases}
+\end{equation}
+with \(\ell=+1\) . Summing over the ring,
+\begin{equation}
+\label{eq:ch2.ex-str-far-amplitude-symmetry}
+a_\sigma(\widehat{\mathbf{k}})
+=
+\sum_{n=1}^{36} c_{n,\sigma}(\widehat{\mathbf{k}})
+\ \approx\
+A_0\,J_1(k_0\rho_0\sin\theta)\,e^{\jj\ell\phi}\,f_\sigma(\theta),
+\end{equation}
+where \(J_1\) is the azimuthal ring factor from discrete \(\phi_n\) sampling and
+\(f_\sigma\) is transverse polarization weight . Equation
+\eqref{eq:ch2.ex-str-far-amplitude-symmetry} shows nonzero azimuthal phase in
+\(a_\sigma(\widehat{\mathbf{k}})\): the far pattern is \emph{structured} in the sense of
+Eq.~\eqref{eq:ch2.structured-source-far-amplitude} . Mathematically, equal
+\(A_0\) and balanced \(s_n=\pm 1\) enforce symmetry under \(\ell\to-\ell\) channel exchange;
+physically, the configuration mimics counter-rotating orbital labels on the source before export
+Step 2 --- Angular-flux cancellation (Subsections~\ref{sec:ch01.2.2}--\ref{sec:ch01.2.3}). Net angular export uses radiative flux Eq.~\eqref{eq:ch2.angular-momentum-flux-vector} on
+\(S_r\):
+\begin{equation}
+\label{eq:ch2.ex-str-transport-quotient-a}
+\Lambda_J^{(\mathrm{a})}
+=
+\frac{\int_{S_r}\widehat{\mathbf{r}}\cdot\mathbf{M}_{\mathrm{rad}}[\Jimp^{(\mathrm{a})}]\,dS}
+ {\int_{S_r}\Re\{\widehat{\mathbf{r}}\cdot\mathbf{S}_{\mathrm{rad}}[\Jimp^{(\mathrm{a})}]\}\,dS}
+\ \approx\ 0,
+\end{equation}
+importing Eq.~\eqref{eq:ch1.ex62-zero-transport-result} after mapping balanced channels through
+Eq.~\eqref{eq:ch2.structured-source-far-amplitude} \cite{stratton1941}. Channel
+power amplitudes satisfy \(I_+=I_-\) in the notation of
+Eq.~\eqref{eq:ch1.ex62-equal-channel-condition}, so
+Eq.~\eqref{eq:ch1.ex62-net-am-transport} yields vanishing signed export despite nonzero
+\(|a_\sigma(\widehat{\mathbf{k}})|\) \cite{stratton1941}. regime qualification
+\(\mathcal{D}_{J,\mathrm{reg}}=1\) holds on \(S_r\) for \(k_0 r=30\), but
+\(\mathcal{Q}_{\mathrm{str}}=0\) because directional angular-flux support cancels
+\cite{harrington2001}. Configuration (a) therefore exhibits structured \emph{appearance} without
+transport-qualified export \cite{stratton1941}.
+On \(S_r\), extract transverse components Eq.~\eqref{eq:ch1.transverse-components} from
+\(\E_{\mathrm{rad}}\) and form Stokes parameters Eq.~\eqref{eq:ch1.stokes-local}:
+\begin{equation}
+\label{eq:ch2.ex-str-stokes-contrast}
+S_0^{(\mathrm{a})}(\widehat{\mathbf{k}})\approx 2A_0^2|f_\sigma(\theta)|^2,\quad
+S_3^{(\mathrm{a})}(\widehat{\mathbf{k}})\approx 0,\quad
+\Delta\varphi^{(\mathrm{a})}=\arg a_+-\arg a_-\ \text{varies with}\ \phi,
+\end{equation}
+because counter-rotating source phases produce azimuthal organization in \(a_\sigma\) while
+circular Stokes component \(S_3\) averages toward zero on the balanced ring
+\cite{stratton1941}. Poynting vector Eq.~\eqref{eq:ch1.poynting-average} and vorticity
+Eq.~\eqref{eq:ch1.poynting-vorticity} yield
+\begin{equation}
+\label{eq:ch2.ex-str-poynting-vorticity}
+\|\boldsymbol{\Omega}_P^{(\mathrm{a})}\|_{L^{\infty}(S_r)}
+\ \sim\
+\mathcal{O}(\ell\beta),
+\qquad
+\beta=k_0\rho_0=2.4,
+\end{equation}
+with \(\boldsymbol{\Omega}_P^{(\mathrm{a})}\neq\mathbf{0}\) near the pattern peak
+\cite{stratton1941}. Mathematically, local circulation and phase winding can coexist
+with \(\Lambda_J^{(\mathrm{a})}\approx 0\); physically, this is the operator-side restatement of
+the topology--transport separation (Subsection~\ref{sec:ch01.2.2}) on structured sources
+\cite{belinfante1940}. Students must not infer orbital index from
+\(\|\boldsymbol{\Omega}_P\|\) alone without Eq.~\eqref{eq:ch2.structured-source-topology-criterion}
+\cite{harrington2001}.
+Step 4 — Imbalanced configuration (b). Amplitude modulation \(A_n=A_0(1+\eta\cos\phi_n)\) breaks channel equality:
+\begin{equation}
+\label{eq:ch2.ex-str-imbalanced-export}
+\Lambda_J^{(\mathrm{b})}
+\ \approx\
+\frac{\eta\,\ell}{1+\eta^{2}/2}\,\Lambda_J^{(\mathrm{ref})},
+\qquad
+\Lambda_J^{(\mathrm{ref})}
+=
+\frac{k_0 A_0^2 J_1^2(k_0\rho_0\sin\theta_{\max})}{2},
+\end{equation}
+importing imbalance sensitivity Eq.~\eqref{eq:ch1.ex62-imbalance-sensitivity} with
+\(\eta=0.35\) \cite{stratton1941}. Illustratively,
+\(|\Lambda_J^{(\mathrm{b})}/\Lambda_J^{(\mathrm{ref})}|\approx 0.30\): a thirty-percent fractional
+imbalance in source amplitude produces order-unity fractional export relative to the reference
+single-winding ring \cite{stratton1941}. Far amplitude magnitude
+\(|a_\sigma^{(\mathrm{b})}|\) differs from \(|a_\sigma^{(\mathrm{a})}|\) by only
+\(\sim 8\%\) (illustrative) because phase structure is identical; export changes because signed channel content
+is unequal Eq.~\eqref{eq:ch1.ex62-net-am-transport} \cite{stratton1941}. Here
+\(\mathcal{Q}_{\mathrm{str}}=1\) on the principal lobe and
+Eq.~\eqref{eq:ch1.transport-qualified-decision} returns \(\mathcal{D}_J=1\)
+\cite{stratton1941}. Step 5 — Raw near map versus radiative diagnostics. Applying Stokes and Poynting formulas to \(\mathcal{S}_\omega[\Jimp]\) on \(r=1.5a\) inflates
+texture metrics (illustrative ratios):
+\begin{equation}
+\label{eq:ch2.ex-str-near-overread}
+\frac{\|\boldsymbol{\Omega}_P\|_{L^{2}(S_{1.5a})}^{(\mathrm{raw})}}
+ {\|\boldsymbol{\Omega}_P\|_{L^{2}(S_r)}^{(\mathrm{rad})}}
+\ \approx\ 1.9,
+\qquad
+\frac{S_0^{(\mathrm{raw})}}{S_0^{(\mathrm{rad})}}
+\ \approx\ 2.3,
+\end{equation}
+by the same reactive contamination mechanism as Eq.~\eqref{eq:ch2.ex-ev-near-amplitude-ratio}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.ex-str-near-overread} shows that
+structured-source labels read from near reactive scans overstate Poynting topology relative to
+\(\mathcal{R}_\omega[\Jimp]\) \cite{stratton1941}. Correct measurement sequence: parametrize
+Eq.~\eqref{eq:ch2.structured-source-state-def}, map
+Eq.~\eqref{eq:ch2.structured-source-far-amplitude}, then apply §1.2.2 diagnostics on
+\((\E_{\mathrm{rad}},\H_{\mathrm{rad}})\) \cite{harrington2001}.
+Structured far appearance \(|a_\sigma(\widehat{\mathbf{k}})|\neq 0\) does not imply
+\(\mathcal{Q}_{\mathrm{str}}=1\) Eq.~\eqref{eq:ch2.structured-source-topology-criterion}, and qualified
+topology does not imply signed export \(\Lambda_J\neq 0\)
+Eqs.~\eqref{eq:ch1.ex62-zero-transport-result},~\eqref{eq:ch1.ex62-imbalance-sensitivity}
+\cite{stratton1941}. Configuration (a) occupies the first failure;
+configuration (b) satisfies export once imbalance is present. Non-radiating additions
+Subsection~\ref{sec:ch2102} and evanescent storage Subsection~\ref{sec:ch2103} modify near
+diagnostics without changing \(a_\sigma\) when \(\mathcal{R}_\omega[\Jimp]\) is fixed
+\cite{stratton1941}. Accessibility budget
+Eq.~\eqref{eq:ch2.accessible-angular-budget} may further shrink observed structure inside
+\(\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}\) \cite{stratton1941}.
+Physical meaning (summary). Subsection~\ref{sec:ch2104} establishes that ``structured source states'' are operator objects
+Eq.~\eqref{eq:ch2.structured-source-state-def} mapped to far coefficients
+Eq.~\eqref{eq:ch2.structured-source-far-amplitude}, not merely descriptive beam names
+\cite{stratton1941}. Balanced counter-rotating rings produce azimuthal
+phase in \(a_\sigma(\widehat{\mathbf{k}})\) Eq.~\eqref{eq:ch2.ex-str-far-amplitude-symmetry} yet
+vanishing \(\Lambda_J\) Eq.~\eqref{eq:ch2.ex-str-transport-quotient-a}, reproducing
+\ref{ch:01} phase-without-transport logic on the radiation operator
+\cite{stratton1941}. Stokes and Poynting textures
+Eqs.~\eqref{eq:ch2.ex-str-stokes-contrast}--\eqref{eq:ch2.ex-str-poynting-vorticity} can be
+rich while export cancels; amplitude imbalance Eq.~\eqref{eq:ch2.ex-str-imbalanced-export} is the
+control knob for signed angular flux \cite{stratton1941}. structured-source topology diagnostics (Subsection~\ref{sec:ch210}) and criterion
+Eq.~\eqref{eq:ch2.structured-source-topology-criterion} require diagnostics on
+\(\mathcal{R}_\omega[\Jimp]\) with regime qualification before any OAM or helicity label is
+promoted to transport \cite{harrington2001}. Near reactive overread
+Eq.~\eqref{eq:ch2.ex-str-near-overread} parallels Subsection~\ref{sec:ch2103}: structure in
+\(\mathcal{S}_\omega\) is not structure in export \cite{stratton1941}.
+Structured sources close the example suite by showing that the most elaborate near-zone organization does not override selection: phase winding in $a_\sigma(\widehat{\mathbf{k}})$ can coexist with vanishing signed angular flux until amplitude imbalance restores transport on the radiative branch \cite{belinfante1940}. OAM or vortex labels attached to impressed currents remain hypotheses until $\mathcal{R}_\omega$, regime qualification, and topology criteria from \ref{ch:01} have been applied \cite{harrington2001}. Section~\ref{sec:ch210} therefore ends with four distinct bench mechanisms; Section~\ref{sec:ch02.11} collects the chapter results and states what \ref{ch:03} will relabel Maxwell or outgoing foundations proved here.
+The four worked problems in Subsections~\ref{sec:ch2101}--\ref{sec:ch2104} are not independent
+demonstrations but coordinated activations of Eq.~\eqref{eq:ch2.dof-partition-master}
+\cite{stratton1941}. Compact truncation
+(Subsection~\ref{sec:ch2101}) compresses spectral rank without creating NR nullity or evanescent
+sheets; NR superposition (Subsection~\ref{sec:ch2102}) annihilates export through
+\(\ker\mathcal{R}_\omega\) while leaving near signatures accessible
+\cite{bleszynski1996}; evanescent storage (Subsection~\ref{sec:ch2103}) inflates near
+reactive readouts without altering \(a(\widehat{\mathbf{k}})\) when the radiation image is fixed
+\cite{mandel1995}; structured sources (Subsection~\ref{sec:ch2104}) separate far
+appearance, topology qualification, and signed transport on the radiative branch
+\cite{belinfante1940}. Order-of-magnitude estimates in Section~\ref{sec:ch210} quantify
+order-of-magnitude separations only; they must not be read as reported measurements
+\cite{hansen1988}. Qualified reporting always applies \(\mathcal{R}_\omega\) (equivalently
+\(\Pi_{\mathrm{rad}}\) after Subsection~\ref{sec:ch224}) before Stokes, Poynting, or angular-flux functionals, and
+composes with regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} inherited from
+\ref{ch:01} \cite{stratton1941}. Section~\ref{sec:ch02.11} closes the chapter with the radiation-selection conclusions developed above \cite{stratton1941}.
+The electrically small dipole of Subsection~\ref{sec:ch2101} illustrates spectral compression: a finite probe bank on $S_b$ resolves at most a rank-limited subset of $\mathcal{R}_\omega[\Jimp]$, and truncation error tracks singular values of the compact Green part rather than membership in $\ker\mathcal{R}_\omega$ \cite{harrington2001}. High-index modes below the probe-rank threshold are lost to finite-geometry observability, not to source nullity; increasing modal order without raising $N$ or $b/a$ may shrink a fitting residual that owes nothing to physics \cite{hansen1988}. The loop-superposition problem of Subsection~\ref{sec:ch2102} illustrates the complementary source-side mechanism: $\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega$ leaves $a(\widehat{\mathbf{k}})$ and qualified far-zone flux unchanged while near probes register superposed reactive content \cite{devaney2004}. Far data fix $\mathcal{R}_\omega[\Jimp]$ but not $\Jimp$; existence of near fields does not imply flux report of their source detail \cite{stratton1941}. The evanescent-overlap configuration of Subsection~\ref{sec:ch2103} shows that reactive storage can inflate near-shell amplitude by more than a factor of two while $a(\widehat{\mathbf{k}})$ remains fixed when the radiation image is held constant; applying far extractors to $\mathcal{S}_\omega[\Jimp]$ without prior $\mathcal{R}_\omega$ selection can bias angular export by order forty percent on illustrative geometries \cite{hansen1988}. Near richness is not far-zone angular structure. The structured ring array of Subsection~\ref{sec:ch2104} separates far appearance, topology qualification, and signed transport: azimuthal organization in $a_\sigma(\widehat{\mathbf{k}})$ can coexist with vanishing $\Lambda_J$ until amplitude imbalance restores export on the qualified radiative branch \cite{belinfante1940}. Structured appearance is not export; radiation operators select transport-capable content \cite{stratton1941}.

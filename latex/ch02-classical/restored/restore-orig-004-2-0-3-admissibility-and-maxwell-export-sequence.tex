@@ -1,0 +1,181 @@
+% Stage 8 restored fragment — 2.0.3 Admissibility and Maxwell export sequence (archive lines 917-1113)
+\subsection{Admissibility and Maxwell export sequence}
+\label{sec:ch203}
+
+A coax-fed pyramidal horn over a ground plane defines the impressed-current and boundary-data tuple technicians declare before Maxwell export is computed \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Subsections~\ref{sec:ch201}--\ref{sec:ch202} introduced the radiation maps and Maxwell
+export sequence; the display below invokes \ref{ch:01} $\mathcal{D}_J=1$
+\cite{stratton1941}. The present chapter builds on
+established in \ref{ch:01}. Rather, it applies those foundations to radiation problems
+\cite{maxwell1873}. The Maxwell-closed criteria, conservation laws, and
+measurement principles developed previously remain in force; the present chapter introduces
+the operator calculus through which admissible sources are connected to observable
+radiative fields \cite{harrington2001}. The operators $\mathcal{S}_\omega$,
+$\mathcal{R}_\omega$, and $\mathcal{L}_\omega$ are applied on admissible inputs without
+reopening the \ref{ch:01} proofs \cite{stratton1941}. Impressed data enter the
+solution domain only when the \ref{ch:01} source conditions hold; radiative
+reports attach to \(\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]\),
+not to the full solution pair by default \cite{stratton1941}.
+The continuity relations below restate, in operator language, the \ref{ch:01}
+regime and measurement criteria that qualify when angular-flux and transport reports may
+attach to \(\mathcal{R}_\omega[\Jimp]\) rather than to the unreconstructed solution pair
+\cite{stratton1941}. Physically, this means that near-field reactive content diagnosed on
+\(\mathcal{S}_\omega[\Jimp]\) must not be reported as exported radiative flux unless the
+regime screen \(\mathcal{D}_{J,\mathrm{reg}}\) from \ref{ch:01} is satisfied on
+the measurement shell \cite{harrington2001}.
+
+\begin{equation}
+\label{eq:ch2.continuity-operator-domain}
+\mathcal{D}_{\mathrm{ch1}}=1
+\ \Longrightarrow\
+\Jimp\in\mathcal{J}_\Omega
+\ \wedge\
+\mathcal{S}_\omega[\Jimp]\in\mathcal{F}_\Omega,
+\end{equation}
+\begin{equation}
+\label{eq:ch2.transport-qualified-radiation}
+\mathcal{D}_{J,\mathrm{reg}}=1
+\ \Longrightarrow\
+\text{angular-flux reports attach to}\ \mathcal{R}_\omega[\Jimp],
+\ \text{not to}\ \mathcal{S}_\omega[\Jimp]\ \text{by default},
+\end{equation}
+% Forward registry: \ref{ch:01} labels imported at Ch.~2 continuity (proofs remain in Ch.~1).
+\begin{equation}
+\label{eq:ch1.local-regime-decomposition}
+\Pi(\theta,\phi;r)
+=
+\Pi_{\mathrm{a}}(\theta,\phi;r)+\Pi_{\mathrm{re}}(\theta,\phi;r),
+\qquad
+\Pi_{\mathrm{a}}=\Re\{\mathbf{S}\cdot\hat{\mathbf{n}}\},
+\end{equation}
+with reactive sector \(\Pi_{\mathrm{re}}\) the remainder on the declared control surface.
+\begin{equation}
+\label{eq:ch1.reactive-flux-sphere}
+Q_{\mathrm{re}}(r)
+=
+\Im\oint_{S_r}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS,
+\qquad
+P_{\mathrm{rad}}(r)
+=
+\Re\oint_{S_r}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS,
+\end{equation}
+\begin{equation}
+\label{eq:ch1.regime-index}
+\chi(r)
+=
+\frac{|Q_{\mathrm{re}}(r)|}{P_{\mathrm{rad}}(r)+\epsilon_P},
+\qquad \epsilon_P>0.
+\end{equation}
+\begin{equation}
+\label{eq:ch1.radiative-regime-condition}
+P_{\mathrm{rad}}(r)>0
+\ \wedge\
+\chi(r)\le\chi_{\mathrm{th}},
+\end{equation}
+\begin{equation}
+\label{eq:ch1.crossover-radius}
+r_c:\ \chi(r_c)=\chi_{\mathrm{th}},
+\end{equation}
+\begin{equation}
+\label{eq:ch1.regime-qualified-decision}
+\mathcal{D}_{J,\mathrm{reg}}(r)=1
+\iff
+\Big(\chi(r)\le\chi_{\mathrm{th}}\ \wedge\ \mathcal{D}_J(r)=1\Big),
+\end{equation}
+\begin{equation}
+\label{eq:ch1.rotation-power-invariance}
+\oint_{S_r}\Re\{\mathbf{S}_R\cdot\hat{\mathbf{r}}\}\,dS
+=
+\oint_{S_r}\Re\{\mathbf{S}\cdot\hat{\mathbf{r}}\}\,dS,
+\end{equation}
+\begin{equation}
+\label{eq:ch1.scalar-observable-invariance}
+\mathcal{I}\big[\mathcal{P}_R\mathcal{F}\big]=\mathcal{I}[\mathcal{F}],
+\end{equation}
+for scalar observables \(\mathcal{I}\) under passive frame rotation \(\mathcal{P}_R\).
+\begin{equation}
+\label{eq:ch1.covariance-residual}
+\mathcal{R}_{\mathcal{F}}
+=
+\left\|
+\mathcal{R}_\omega\big[\mathcal{T}_{R,\mathbf{a}}\Jimp\big]
+-
+\mathcal{T}_{R,\mathbf{a}}\,\mathcal{R}_\omega[\Jimp]
+\right\|,
+\end{equation}
+\begin{equation}
+\label{eq:ch1.intrinsic-angular-observable}
+\mathbf{J}_{\mathrm{int}}
+=
+\mathbf{J}_{\mathrm{em}}
+-
+(\mathbf{r}-\mathbf{r}_c)\times\mathbf{P}_{\mathrm{tot}},
+\end{equation}
+\begin{equation}
+\label{eq:ch1.transverse-components}
+\E_\perp
+=
+\E-(\hat{\mathbf{r}}\cdot\E)\hat{\mathbf{r}},
+\qquad
+\H_\perp
+=
+\H-(\hat{\mathbf{r}}\cdot\H)\hat{\mathbf{r}},
+\end{equation}
+\begin{equation}
+\label{eq:ch1.stokes-local}
+S_0=|E_x|^2+|E_y|^2,\quad
+S_1=|E_x|^2-|E_y|^2,\quad
+S_2=2\Re(E_x E_y^*),\quad
+S_3=2\Im(E_x E_y^*),
+\end{equation}
+\begin{equation}
+\label{eq:ch1.poynting-vorticity}
+\Omega_P
+=
+\hat{\mathbf{n}}\cdot(\nabla\times\mathbf{P}),
+\qquad
+\mathbf{P}=\Re\{\mathbf{S}\},
+\end{equation}
+where \(\mathcal{D}_{J,\mathrm{reg}}\) is the regime flag from
+Eq.~\eqref{eq:ch1.regime-qualified-decision}.
+The laboratory chain composes inherited \ref{ch:01} constraints with radiation
+selection and finite observation:
+\begin{equation}
+\label{eq:ch2.continuity-composition-law}
+\mathfrak{A}_{\mathrm{ch2}}^{\mathrm{(report)}}
+=
+\mathfrak{A}_{\mathrm{meas}}
+\circ
+\mathfrak{A}_{\mathrm{g}}
+\circ
+\mathfrak{A}_{\mathrm{cov}}
+\circ
+\mathfrak{A}_{\mathrm{tr}}
+\circ
+\Pi_{\mathrm{rad}}
+\circ
+\mathcal{S}_\omega,
+\end{equation}
+\begin{equation}
+\label{eq:ch2.operational-measurement-chain}
+\Lambda_{\mathrm{lab}}
+=
+\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega,
+\qquad
+\mathcal{Q}\in\{\text{direct},\ \text{surrogate},\ \text{inference}\},
+\end{equation}
+% Missing labeled equations restored at natural narrative anchors (math frozen).
+\begin{equation}
+\label{eq:ch2.covariance-operator-test}
+\mathcal{R}_\omega\big[\mathcal{T}_{R,\mathbf{a}}\Jimp\big]
+=
+\mathcal{T}_{R,\mathbf{a}}\,\mathcal{R}_\omega[\Jimp]
+\quad\text{on admissible data,}
+\end{equation}
+with residual Eq.~\eqref{eq:ch1.covariance-residual} serving as the numerical diagnostic when
+discretization breaks Eq.~\eqref{eq:ch2.covariance-operator-test} \cite{stratton1941}.
+Function spaces, Green functions, and radiation operators exist because Maxwell field
+specification requires them---not as parallel formulations \cite{maxwell1873}. Section~\ref{sec:ch20}
+has established the radiation maps, Maxwell export sequence, and \ref{ch:01}
+continuity; Section~\ref{sec:ch21} now supplies the Hilbert and Sobolev apparatus through
+which those maps acquire precise domains, traces, and adjoints \cite{stratton1941}.

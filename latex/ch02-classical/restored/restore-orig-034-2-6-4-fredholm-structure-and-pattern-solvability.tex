@@ -1,0 +1,276 @@
+% Stage 8 restored fragment — 2.6.4 Fredholm structure and pattern solvability (archive lines 8332-8619)
+\subsection{Fredholm structure and pattern solvability}
+\label{sec:ch263}
+Pattern synthesis and source inversion are the inverse problems every antenna laboratory
+eventually confronts. One specifies a desired far-zone amplitude distribution and asks which
+feed currents will produce it; or one measures near fields on a scanner and asks which sources
+could have generated them \cite{harrington2001}. When these inversions fail, the
+failure is rarely mysterious in hindsight: non-radiating components lie in
+$\ker\mathcal{R}_\omega$---the set of admissible impressed currents annihilated by export---and
+leave no far-zone signature, so no finite measurement set can resolve them without additional
+excitation or constraints \cite{devaney2004}. Recoverable rank from
+Subsection~\ref{sec:ch26.signature-aperture} caps the truncated modal system even when a
+continuous target is mathematically consistent \cite{hansen1988}. Fredholm theory names
+kernel, cokernel, and index after the eigenbasis and rotational structure above are in place
+\cite{stratton1941}.
+
+Assumptions. Fix \(\omega>0\), bounded or exterior problem class with outgoing radiation condition on open problems,
+physically realizable \(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-space-refined}, export map
+Eq.~\eqref{eq:ch2.spectral-operator-targets}, and the radiation eigenbasis developed above
+\cite{stratton1941}. Source pairing uses dual space
+Eq.~\eqref{eq:ch2.dual-source-pairing}; field pairing uses
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} \cite{stratton1941}. Compact perturbations are
+taken in operator norm on \(\mathcal{J}_\Omega\) for sources with compact support
+\(\Omega_s\) \cite{harrington2001}. Regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen}
+governs whether recovered \(\mathbf{g}\) may be reported as transport data
+\cite{stratton1941}.
+The \emph{radiation kernel} $\ker\mathcal{R}_\omega$ collects impressed currents invisible to
+qualified far-zone meters. The \emph{cokernel}
+$\mathrm{coker}\,\mathcal{R}_\omega=\mathcal{F}_{\mathrm{rad}}/\operatorname{ran}\mathcal{R}_\omega$
+labels far-zone pattern targets that no admissible source can realize---equivalently, directions
+orthogonal to every radiative image under the adjoint pairing \cite{stratton1941}. The
+\emph{Fredholm index}
+$\mathrm{ind}\,\mathcal{R}_\omega=\dim\ker\mathcal{R}_\omega-\dim\mathrm{coker}\,\mathcal{R}_\omega$
+counts the net imbalance between invisible source degrees and unreachable pattern obstructions;
+it is stable under the compact perturbations recorded below \cite{harrington2001}. In the
+laboratory, kernel membership explains why two distinct feeds can match the same far pattern;
+cokernel membership explains why a synthesis target refuses to converge no matter how many ports
+are tuned \cite{stratton1941}.
+Source inversion is difficult because radiation smooths fine source detail: the far-zone map
+retains only exportable content and discards non-radiating degrees in $\ker\mathcal{R}_\omega$
+\cite{devaney2004}. The export map inherits the Green-function split of Section~\ref{sec:ch23}: a leading outgoing
+propagation part $\mathcal{R}_{0,\omega}$ plus a compact smoothing part $K_{\mathrm{rad}}$ at
+finite separation on bounded source classes \cite{stratton1941}. Physically,
+$\mathcal{R}_{0,\omega}$ is the dominant far-zone propagation law and $K_{\mathrm{rad}}$ collects
+the compact corrections that smooth fine source structure into resolvable pattern content
+\cite{harrington2001}. That split is the operator-side restatement of the range observation that
+far-zone data smooth fine source detail. Formally,
+\begin{equation}
+\label{eq:ch2.radiation-fredholm-decomposition}
+\mathcal{R}_\omega
+=
+\mathcal{R}_{0,\omega}+K_{\mathrm{rad}},
+\qquad
+K_{\mathrm{rad}}\ \text{compact on}\ \mathcal{J}_\Omega,
+\end{equation}
+where \(\mathcal{R}_{0,\omega}\) captures leading outgoing singular propagation and
+\(K_{\mathrm{rad}}\) collects compact smoothing at finite separation on bounded source classes
+\cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-fredholm-decomposition}
+specializes Eq.~\eqref{eq:ch2.fredholm-split} to the radiation image
+Eq.~\eqref{eq:ch2.integral-radiation-map} after Sections~\ref{sec:ch23}--\ref{sec:ch25}
+\cite{stratton1941}. On exterior domains with compact
+\(\Omega_s\), \(K_{\mathrm{rad}}\) is compact while \(\mathcal{R}_{0,\omega}\) carries the
+non-compact far-zone propagation; on bounded cavities, both parts reduce to discrete modal
+books Eq.~\eqref{eq:ch2.cavity-discrete-radiation-spectrum} \cite{harrington2001}.
+The Fredholm index counts the net imbalance between invisible source degrees
+($\ker\mathcal{R}_\omega$) and unreachable pattern targets
+($\mathrm{coker}\,\mathcal{R}_\omega$). On the range, kernel membership means different
+feeds may produce identical far patterns; cokernel membership means a synthesis target lies
+outside the reachable subspace no matter how many ports are tuned \cite{stratton1941}.
+For closed operators with finite-dimensional kernel and cokernel, define the Fredholm index
+\begin{equation}
+\label{eq:ch2.radiation-fredholm-index-def}
+\mathrm{ind}\,\mathcal{R}_\omega
+=
+\dim\ker\mathcal{R}_\omega
+-
+\dim\mathrm{coker}\,\mathcal{R}_\omega,
+\end{equation}
+with \(\mathrm{coker}\,\mathcal{R}_\omega=\mathcal{F}_{\mathrm{rad}}/\operatorname{ran}\mathcal{R}_\omega\)
+on the declared quotient by outgoing radiation condition \cite{stratton1941}. Equation
+\eqref{eq:ch2.radiation-fredholm-index-def} counts independent non-radiating source degrees
+Eq.~\eqref{eq:ch2.ker-R-omega} minus obstructions to reaching a target far pattern
+\(\mathbf{g}\in\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}. Index is stable under compact
+perturbations in Eq.~\eqref{eq:ch2.radiation-fredholm-decomposition}
+\cite{harrington2001}. Observation rank cap Eq.~\eqref{eq:ch2.reconstruction-rank-cap}
+is independent of \(\mathrm{ind}\,\mathcal{R}_\omega\) but composes with it in inversion
+budgets \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (f) {$\mathcal{F}_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of r] (k) {$K_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of f] (c) {$\mathrm{coker}$};
+ \draw[ch1flow] (j) -- (r) -- (f);
+ \draw[ch1flow] (k.south) -- (k.south |- r.north);
+ \draw[ch1flow] (k.south |- r.north) -- (r.north);
+ \draw[ch1flow] (c.south) -- (c.south |- f.north);
+ \draw[ch1flow] (c.south |- f.north) -- (f.north);
+\end{tikzpicture}%
+}
+\caption{Fredholm measurement sequence: compact perturbation
+Eq.~\eqref{eq:ch2.radiation-fredholm-decomposition}, kernel
+\(\ker\mathcal{R}_\omega\), and cokernel obstructions to solvability
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion}.}
+\label{fig:ch2.fredholm-radiation-measurement chain}
+\end{figure}
+~\eqref{eq:ch2.rank-composition-law} \cite{stratton1941}.
+The Fredholm alternative states that a target far-zone field is synthesizable only if it
+carries no component along cokernel directions invisible to the adjoint export map
+\cite{stratton1941}. Consequence: a measured pattern residual that is orthogonal to every
+reachable image is not a calibration fault---it signals membership in
+$\mathrm{coker}\,\mathcal{R}_\omega$ or in a geometrically forbidden sector from
+Subsection~\ref{sec:ch264} \cite{harrington2001}. The forward radiation equation $\mathcal{R}_\omega[\Jimp]=\mathbf{g}$
+is solvable iff the target $\mathbf{g}\in\mathcal{F}_{\mathrm{rad}}$ is orthogonal to the
+cokernel of the adjoint map on declared pairings:
+\begin{equation}
+\label{eq:ch2.radiation-solvability-criterion}
+\mathcal{R}_\omega[\Jimp]=\mathbf{g}
+\ \text{solvable}
+\iff
+\langle \mathbf{g},\,\mathbf{w}\rangle_{\mathcal{U}}=0
+\ \ \forall\ \mathbf{w}\in\ker\mathcal{R}_\omega^{\dagger},
+\end{equation}
+with \(\mathcal{R}_\omega^{\dagger}\) the adjoint on
+\((\mathcal{J}_\Omega,\mathcal{F}_{\mathrm{rad}})\) induced by
+Eqs.~\eqref{eq:ch2.dual-source-pairing} and~\eqref{eq:ch2.maxwell-adjoint-pairing}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-solvability-criterion}
+develops Eq.~\eqref{eq:ch2.spectral-solvability} and aligns with biorthogonality
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} on modal adjoints
+\cite{stratton1941}. When \(\mathbf{g}\) arises from far-pattern data, solvability is
+further capped by Eq.~\eqref{eq:ch2.reconstruction-rank-cap} even if
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds in the continuous model
+\cite{harrington2001}.
+\phantomsection\label{thm:ch2.radiation-fredholm-structure}
+Let \(\mathcal{R}_\omega\) satisfy Eq.~\eqref{eq:ch2.radiation-fredholm-decomposition} on
+\(\mathcal{J}_\Omega\) with \(\mathcal{R}_{0,\omega}\) Fredholm of index zero on the outgoing
+quotient and \(K_{\mathrm{rad}}\) compact. Then \(\mathcal{R}_\omega\) is Fredholm,
+\begin{equation}
+\label{eq:ch2.radiation-index-stability}
+\mathrm{ind}\,\mathcal{R}_\omega
+=
+\mathrm{ind}\,\mathcal{R}_{0,\omega},
+\end{equation}
+and Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds. For finite-rank observation
+\(\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}\),
+\begin{equation}
+\label{eq:ch2.observation-fredholm-composition}
+\mathcal{O}_{\mathrm{meas}}\mathcal{R}_\omega
+\ \text{is Fredholm on}\ \mathcal{J}_\Omega
+\ \Longleftrightarrow\
+\mathcal{R}_\omega\ \text{Fredholm and}\ 
+\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})=N,
+\end{equation}
+with rank bound Eq.~\eqref{eq:ch2.rank-composition-law}
+Compact perturbation stability of Fredholm property and index follows from standard operator
+theory applied to Eq.~\eqref{eq:ch2.radiation-fredholm-decomposition}; Subsection
+~\ref{sec:ch213} recorded the embedding inputs without computing index here
+\cite{stratton1941}. Solvability criterion
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion} is the Fredholm alternative for
+\(\mathcal{R}_\omega\). Composition with finite-rank \(\mathcal{O}_{\mathrm{meas}}\) preserves
+Fredholm class and adjusts index by at most \(N\) on the range side, yielding
+Eq.~\eqref{eq:ch2.observation-fredholm-composition} and
+Eq.~\eqref{eq:ch2.rank-composition-law} \cite{stratton1941}.
+The modal fredholm reduction proceeds as follows: on the orthonormal radiation eigenbasis developed above,
+\begin{equation}
+\label{eq:ch2.modal-fredholm-reduction}
+\mathcal{R}_\omega
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+\lambda_n\,P_n\circ\mathcal{S}_\omega,
+\qquad
+\lambda_n\neq 0
+\ \Longleftrightarrow\
+\text{mode }n\ \text{exporting},
+\end{equation}
+so solvability of \(\mathcal{R}_\omega[\Jimp]=\mathbf{g}\) reduces to matching coefficients
+\(c_n[\mathfrak{D}]\) Eq.~\eqref{eq:ch2.source-modal-amplitude} on modes with
+\(\lambda_n\neq 0\) \cite{stratton1941}. Modes with \(\lambda_n=0\) lie in
+\(\ker\mathcal{R}_\omega\) at the source level Eq.~\eqref{eq:ch2.ker-R-omega}; modes
+with \(\mathbf{g}\) unsupported on \(\operatorname{ran}\mathcal{R}_\omega\) generate cokernel
+obstructions in Eq.~\eqref{eq:ch2.radiation-solvability-criterion}
+\cite{stratton1941}. Truncation to \(\mathcal{R}_\omega^{(N)}\) from
+Eq.~\eqref{eq:ch2.spectral-compression-operator} yields approximate solvability with error
+Eq.~\eqref{eq:ch2.compression-error-bound} controlled by \(\sigma_{N+1}(K_{\mathrm{rad}})\)
+\cite{harrington2001}. \phantomsection\label{prop:ch2.modal-invertibility-equivalence}
+Let \(\mathbf{g}\in\operatorname{ran}\mathcal{R}_\omega\) and expand
+\(\mathbf{g}=\sum_n g_n\,\mathbf{u}_n\) with \(\{\mathbf{u}_n\}\) from
+Subsection~\ref{sec:ch261}. Then Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds if
+and only if \(g_n=0\) whenever \(\lambda_n=0\). A particular solution is determined by
+\begin{equation}
+\label{eq:ch2.modal-particular-solution}
+c_n
+=
+\frac{g_n}{\lambda_n}
+\quad\text{for}\ \lambda_n\neq 0,
+\end{equation}
+with arbitrary coefficients on \(\ker\mathcal{R}_\omega\) not fixed by far-zone data
+\cite{stratton1941}. Equation~\eqref{eq:ch2.modal-particular-solution}
+is the spectral form of Eq.~\eqref{eq:ch2.inverse-source-equation} on the radiative range;
+Tikhonov and regularized inversions from Subsection~\ref{sec:ch244} damp ill-conditioned
+\(\lambda_n\) without altering Fredholm index \cite{stratton1941}.
+Substitute Eq.~\eqref{eq:ch2.radiation-map-modal-sum} into
+\(\mathcal{R}_\omega[\Jimp]=\mathbf{g}\) and use orthogonality of \(\{\mathbf{u}_n\}\) in
+\(\mathcal{U}\) \cite{stratton1941}. Modes with \(\lambda_n=0\) do not appear in the range;
+modes with \(\lambda_n\neq 0\) invert mode-wise yielding
+Eq.~\eqref{eq:ch2.modal-particular-solution}. Kernel directions remain free because
+\(\mathcal{R}_\omega\) is not injective on \(\mathcal{J}_\Omega\)
+Eq.~\eqref{eq:ch2.ker-R-omega} \cite{harrington2001}.
+Cokernel elements pair with unreachable far-zone content: if \(\mathbf{w}\in\ker\mathcal{R}_\omega^{\dagger}\),
+then \(\langle \mathbf{g},\mathbf{w}\rangle_{\mathcal{U}}=0\) is required for solvability
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion} \cite{stratton1941}. On exterior domains,
+continuous angular spectra Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} imply
+infinite-dimensional cokernel constraints in principle; finite apertures replace them with
+rank-\(N\) projections through Eq.~\eqref{eq:ch2.observation-fredholm-composition}
+\cite{harrington2001}. Far-pattern coefficients from the eigenbasis express
+\(\mathbf{g}\) through \(\mathbf{f}_n\); solvability requires consistency of measured
+coefficients with Eq.~\eqref{eq:ch2.modal-particular-solution} on exporting modes only
+\cite{stratton1941}.
+On the outgoing branch, solvability of \(\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{s}_\omega\)
+and solvability of \(\mathcal{R}_\omega[\Jimp]=\mathbf{g}\) are linked through
+Eq.~\eqref{eq:ch2.integral-resolvent-equivalence}: forward field construction is single-valued
+on \(\mathcal{F}_{\mathrm{SF}}\) while source inversion remains rank-deficient
+\cite{stratton1941}. ~\eqref{eq:ch2.coercivity-quotient} is not identical to
+\(\mathrm{ind}\,\mathcal{R}_\omega\); export selection removes non-radiative degrees before
+pattern inversion \cite{stratton1941}. The Fredholm analysis above treats
+\(\mathcal{R}_\omega\) as the primary object for far-zone inverse problems
+\cite{harrington2001}.
+Fredholm structure on $\mathcal{R}_\omega$ requires linear media, fixed \(\omega\),
+outgoing radiation condition, and compactness of \(K_{\mathrm{rad}}\) on the declared source class
+\cite{stratton1941}. Resonant cavities violate invertibility of
+\(\mathcal{L}_0\) unless quotiented Eq.~\eqref{eq:ch2.coercivity-quotient}; radiation index
+must be computed on the outgoing subspace after Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}
+\cite{stratton1941}. Loss regularizes small \(\lambda_n\) but does not remove
+\(\ker\mathcal{R}_\omega\) Eq.~\eqref{eq:ch2.ker-R-omega} \cite{harrington2001}.
+regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} remains mandatory before transport claims
+on recovered \(\mathbf{g}\) \cite{stratton1941}.
+As a worked example, a spherical near-field scanner with $N=50$ probe channels is a concrete inversion budget.
+The physical configuration places fifty probes on a sphere of radius $R\approx 2\lambda_0$ around
+a compact horn feed; each channel records tangential $\E$ or $\H$ depending on probe design
+\cite{hansen1988}. After transformation to far-zone coefficients, the composition
+$\mathcal{O}_{\mathrm{meas}}\mathcal{R}_\omega$ has rank at most $50$
+Eq.~\eqref{eq:ch2.rank-composition-law} \cite{stratton1941}. The observable behavior is
+instructive: the first few reconstructed modes match direct far-field cuts taken on the compact
+range, while coefficients beyond the fiftieth singular direction track noise rather than new
+beam structure.
+Even when Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds for a continuous target
+$\mathbf{g}$, discrete recovery satisfies only a truncated modal system; tail error is bounded
+by Eq.~\eqref{eq:ch2.compression-error-bound} with the first neglected singular value of the
+measurement composition cited from Subsection~\ref{sec:ch26.signature-aperture}
+\cite{harrington2001}. The lesson for laboratory planning is direct: adding probes without
+enlarging scan radius or improving SNR cannot recover modes the geometry has already annihilated.
+Scanner rank is a hard cap that composes with, but does not replace, Fredholm obstructions from
+$\ker\mathcal{R}_\omega$ \cite{stratton1941}.
+As a worked example, suppose a synthesis target $\mathbf{g}\neq\mathbf{0}$ specifies a far-zone pattern that is
+orthogonal to every exporting mode reachable from the declared source class---for example, a
+forbidden parity combination above a ground plane when only even sectors are physically
+accessible \cite{collin2001}. No amount of feed optimization will satisfy forward
+export: the obstruction appears as inconsistent far-zone coefficients in
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion}, not as slow convergence of a numerical
+solver \cite{harrington2001}. By contrast, when $\mathbf{g}=\mathbf{0}$, the equation is always
+solvable with $\Jimp\in\ker\mathcal{R}_\omega$ \cite{stratton1941}; the balanced-loop example
+shows that such sources may be strongly measurable in the near zone yet invisible on $\Gamma_R$.
+Mode-wise invertibility on the radiative range detects obstructions through $g_n$ on
+$\lambda_n=0$ sectors \cite{stratton1941}. Geometric sector constraints on recoverable spectra
+are developed next; complete non-radiating classification belongs to Section~\ref{sec:ch272}
+\cite{stratton1941}.
+\medskip
+\noindent
+Subsection~\ref{sec:ch263} closed the Fredholm account: compact perturbation, kernel and
+cokernel pairings, solvability criterion, and modal reduction on the radiation eigenbasis.
+Kernel membership explains invisible source degrees; cokernel membership explains unreachable
+pattern targets; recoverable rank from Subsection~\ref{sec:ch26.signature-aperture} caps what
+finite instruments can resolve even when continuous solvability holds \cite{stratton1941}.

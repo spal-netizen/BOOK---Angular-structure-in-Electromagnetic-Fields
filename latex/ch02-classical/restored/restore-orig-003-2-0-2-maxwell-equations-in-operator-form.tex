@@ -1,0 +1,361 @@
+% Stage 8 restored fragment — 2.0.2 Maxwell equations in operator form (archive lines 550-916)
+\subsection{Maxwell equations in operator form} \label{sec:ch202}
+
+A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Maxwell equations in operator form'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Subsection~\ref{sec:ch201} named the solution map $\mathcal{S}_\omega$ and the outgoing
+selector $\Pi_{\mathrm{rad}}$; the display below identifies the Maxwell operator whose
+inversion, under declared boundary completion, produces that map \cite{stratton1941}. The governing question is which field pair $(\E,\H)$ is
+consistent with impressed currents $\Jimp$ and with the termination class $\mathcal{B}_\Gamma$
+on $\Gamma=\partial\Omega$---the same question every full-wave solver answers before any
+pattern is extracted \cite{harrington2001}. Harmonic Maxwell theory on $\Omega$ is packaged
+as a first-order residual system on a six-component state,
+augmented by boundary traces through the operator
+Eq.~\eqref{eq:ch1.boundary-data-operator} imported from
+Section~\ref{sec:ch01.1.2}. Local curl and divergence balances remain those of
+Eq.~\eqref{eq:ch1.maxwell-operator-block}; the Maxwell export sequence developed here does not
+alter those local balances \cite{stratton1941}.
+First-order Maxwell theory couples electric and magnetic fields through circulation;
+packaging both components in a single state vector is the standard device that permits
+resolvent notation and variational formulations without abandoning the physical coupling
+\cite{stratton1941}. \(\mathbf{u}_\omega\) is
+not an arbitrary six-vector: each admissible state satisfies Gauss constraints and carries
+tangential traces compatible with the boundary class declared with the impressed data tuple
+\(\mathfrak{D}\). From an antenna engineer's perspective, \(\mathbf{u}_\omega\) is what a
+full-wave solver stores at each mesh node---the coupled \((\E,\H)\) phasor pair at fixed
+\(\omega\)---before any post-processing extracts patterns or port quantities
+\cite{harrington2001}. Collect phasor fields into the Maxwell state
+
+\begin{equation}
+\label{eq:ch2.maxwell-state-vector}
+\mathbf{u}_\omega=
+\begin{bmatrix}\E\\ \H\end{bmatrix}
+\in\mathcal{F}_\Omega,
+\end{equation}
+where \(\mathbf{u}_\omega\) denotes the six-component Maxwell state at fixed
+\(\omega\), with \(\E\) and \(\H\) carrying the SI units noted above and lying in
+the admissible field space \(\mathcal{F}_\Omega\) declared in Subsection~\ref{sec:ch201}.
+The pair \((\E,\H)\) is constrained jointly: divergence
+rows of Eq.~\eqref{eq:ch1.maxwell-operator-block} must hold, and tangential traces on
+\(\Gamma=\partial\Omega\) must lie in the domain of the boundary class declared with
+\(\mathfrak{D}\). Treating \(\mathbf{u}_\omega\) as a single unknown is what permits
+resolvent notation, variational forms, and the spectral compression developed in
+Section~\ref{sec:ch26} \cite{harrington2001}.
+Every boundary-value problem begins by distinguishing prescribed quantities from unknown
+quantities. In Maxwell theory the impressed currents, charges, and boundary data constitute
+the prescribed excitation, whereas the electromagnetic field remains the unknown state to
+be determined \cite{maxwell1873}. The operator formulation merely records this
+distinction in a compact mathematical form suitable for analysis \cite{harrington2001}.
+Impressed data enter through a forcing vector aligned with the Maxwell residual rows.
+The forcing packages charge and current drive on the rows where impressed sources
+appear, leaving divergence constraints to be satisfied by the field unknown.
+For
+the tuple Eq.~\eqref{eq:ch1.data-specification-tuple},
+\begin{equation}
+\label{eq:ch2.maxwell-forcing-vector}
+\mathbf{s}_\omega(\mathfrak{D})=
+\begin{bmatrix}\mathbf{0}\\ -\Jimp\\ -\rho\\ \mathbf{0}\end{bmatrix},
+\end{equation}
+In Eq.~\eqref{eq:ch2.maxwell-forcing-vector},
+\(\mathbf{s}_\omega(\mathfrak{D})\) is the Maxwell forcing six-vector (SI units per row)
+assembled from the data tuple \(\mathfrak{D}\);
+\(\Jimp\) enters the Amp\`ere row (A\,m\(^{-2}\)) and \(\rho\) the Gauss row
+(C\,m\(^{-3}\)); the remaining rows are zero for the impressed-current class treated here;
+row order matches Eq.~\eqref{eq:ch1.maxwell-operator-block}. Equation
+\eqref{eq:ch2.maxwell-forcing-vector} records drive on the Amp\`ere and Gauss rows
+only for the impressed-current class treated here; sheet and magnetic excitations
+extend the vector through Eq.~\eqref{eq:ch1.interface-conditions} when trace spaces
+are enriched in Section~\ref{sec:ch211} \cite{stratton1941}. The forcing is \emph{data}, not a
+field variable: it specifies how \(\mathcal{S}_\omega\) is sourced while
+\(\mathbf{u}_\omega\) remains the unknown. Operator language separates \emph{states}
+\((\E,\H)\) from \emph{data} \((\Jimp,\rho,\mathfrak{D})\): the feed specifies what is
+driven, the solver returns what Maxwell allows, and radiation operators report what is
+exported \cite{maxwell1873}. Treating a tangential-field template as independent forcing
+without a matching current repeats the realizability failure already flagged in
+Chapter~1 \cite{stratton1941}.
+Let \(\mathcal{M}_\omega\) denote the harmonic Maxwell operator of
+Eq.~\eqref{eq:ch1.maxwell-operator-block}. The volume subsystem reads
+\begin{equation}
+\label{eq:ch2.maxwell-driven-operator}
+\mathcal{M}_\omega[\mathbf{u}_\omega]=\mathbf{s}_\omega(\mathfrak{D}),
+\end{equation}
+and is satisfied when each residual row vanishes. Linearity in \(\mathbf{u}_\omega\)
+follows from linearity of Eq.~\eqref{eq:ch1.maxwell-local}; spatially varying
+\(\varepsilon(\mathbf{r})\) and \(\mu(\mathbf{r})\) modify coefficients inside
+\(\mathcal{M}_\omega\) without changing the first-order block shape
+(Section~\ref{sec:ch222}) \cite{stratton1941}. In uniform vacuum regions,
+\(\mathcal{M}_\omega\) has translation-invariant symbol, the property exploited by
+dyadic Green kernels in Section~\ref{sec:ch23}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (vol) {Volume\\$\mathcal{M}_\omega\mathbf{u}=\mathbf{s}$};
+ \node[ch1box, below=5mm of vol] (bnd) {Boundary\\$\mathcal{B}_\Gamma\gamma_\Gamma\mathbf{u}=\mathbf{g}$};
+ \node[ch1box, left=18mm of vol] (u) {State $\mathbf{u}_\omega$};
+ \draw[ch1flow] (u.west) -- (u.west |- vol.east);
+ \draw[ch1flow] (u.west |- vol.east) -- (vol.east);
+ \draw[ch1flow] (u.east) -- (u.east |- bnd.west);
+ \draw[ch1flow] (u.east |- bnd.west) -- (bnd.west);
+\end{tikzpicture}%
+}
+\caption{Parallel volume and boundary channels for the closed harmonic problem:
+\(\mathbf{u}_\omega\) simultaneously satisfies Maxwell residuals and prescribed
+traces.}
+\label{fig:ch2.maxwell-boundary-stack}
+\end{figure}
+~\eqref{eq:ch2.maxwell-driven-operator} and
+\eqref{eq:ch1.boundary-data-operator}. A solver that enforces only volume rows
+produces a formal solution compatible with Maxwell \emph{sources} but not necessarily
+with termination physics; conversely, boundary data without volume balance violate
+conservation. Subsection~\ref{sec:ch201} applies \(\mathcal{R}_\omega\) only after
+both channels are closed \cite{harrington2001}. Tangential traces are extracted by the restriction
+\begin{equation}
+\label{eq:ch2.trace-restriction}
+\gamma_\Gamma:\mathcal{F}_\Omega\to\mathcal{T}_\Gamma,
+\qquad
+\gamma_\Gamma[\mathbf{u}_\omega]=
+\begin{bmatrix}
+\left.\hat{\mathbf{n}}\times\E\right|_{\Gamma}\\
+\left.\hat{\mathbf{n}}\times\H\right|_{\Gamma}
+\end{bmatrix},
+\end{equation}
+with outward unit normal \(\hat{\mathbf{n}}\) on \(\Gamma\) and trace space
+\(\mathcal{T}_\Gamma\) induced by interior states. The map
+\(\gamma_\Gamma\) is not defined on arbitrary \(L^{2}\) six-tuples; Sobolev and
+distribution refinements in Section~\ref{sec:ch211} specify its domain
+\cite{stratton1941}. The closed operator stacks volume and boundary residuals:
+\begin{equation}
+\label{eq:ch2.maxwell-boundary-composite}
+\mathcal{L}_\omega[\mathbf{u}_\omega]=
+\begin{bmatrix}
+\mathcal{M}_\omega[\mathbf{u}_\omega]\\
+\mathcal{B}_\Gamma[\gamma_\Gamma[\mathbf{u}_\omega]]
+\end{bmatrix}.
+\end{equation}
+A physically closed harmonic problem requires both volume Maxwell balance and boundary
+termination to hold simultaneously; neither channel alone suffices
+\cite{stratton1941}. The composite operator \(\mathcal{L}_\omega\) encodes that joint
+requirement: its first block tests whether \((\E,\H)\) satisfies the curl--curl structure
+with impressed sources removed to the forcing vector, while its second block tests whether
+tangential traces on \(\Gamma\) match the declared termination (PEC, impedance, or outgoing)
+\cite{harrington2001}. Experimentally, a solver that minimizes volume residuals while
+ignoring port or chamber walls produces a formal Maxwell solution that may disagree with
+what a network analyzer reports on the same structure \cite{stratton1941}. The harmonic
+boundary-value problem is to find \(\mathbf{u}_\omega\in\mathcal{F}_\Omega\)
+such that
+\begin{equation}
+\label{eq:ch2.closed-maxwell-bvp}
+\mathcal{L}_\omega[\mathbf{u}_\omega]=
+\begin{bmatrix}\mathbf{s}_\omega(\mathfrak{D})\\ \mathbf{g}_\Gamma\end{bmatrix}.
+\end{equation}
+Perfect conductors impose \(\hat{\mathbf{n}}\times\E=\mathbf{0}\); radiation and
+Leontovich completions encode outgoing or dissipative relations on
+\(\gamma_\Gamma[\mathbf{u}_\omega]\). The operator \(\mathcal{L}_\omega\) is the
+Maxwell balance operator for this coupled system \cite{harrington2001}.
+Hence $\mathcal{L}_\omega$ enforces Maxwell balance with impressed drive and boundary termination; without outgoing selection it does not distinguish export from storage, and every near-field probe reading $\mathcal{S}_\omega[\Jimp]$ presupposes its inversion on the declared domain \cite{stratton1941}.
+Equation~\eqref{eq:ch2.maxwell-solution-map} is the resolvent relation
+\begin{equation}
+\label{eq:ch2.solution-map-resolvent}
+\mathcal{S}_\omega[\Jimp]=\mathbf{u}_\omega
+\quad\text{with}\quad
+\mathcal{L}_\omega[\mathbf{u}_\omega]=
+\begin{bmatrix}\mathbf{s}_\omega(\Jimp,\rho)\\ \mathbf{g}_\Gamma\end{bmatrix},
+\end{equation}
+where \(\rho\) is tied to \(\Jimp\) through
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic} when only electric impressed currents
+drive the system. Invertibility of \(\mathcal{L}_\omega\) is not universal: existence
+and uniqueness depend on \(\mathcal{B}_\Gamma\) and on whether outgoing selection is
+imposed (Section~\ref{sec:ch243} for exterior domains; Section~\ref{sec:ch261} for
+cavities) \cite{stratton1941}. \(\mathcal{S}_\omega\) is therefore a \emph{physical
+branch} of \(\mathcal{L}_\omega^{-1}\), not an abstract algebraic inverse on all of
+\(\mathcal{F}_\Omega\). \begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=10mm]
+ \node[ch1box] (E) at (0,6mm) {$\curl\E$};
+ \node[ch1box] (H) at (0,-6mm) {$\curl\H$};
+ \node[ch1box, right=20mm of E] (r1) {$-\jj\omega\mu_0\H$};
+ \node[ch1box, right=20mm of H] (r2) {$\Jimp+\jj\omega\varepsilon_0\E$};
+ \draw[ch1flow] (E.east) -- (E.east |- r1.west);
+ \draw[ch1flow] (E.east |- r1.west) -- (r1.west);
+ \draw[ch1flow] (H.east) -- (H.east |- r2.west);
+ \draw[ch1flow] (H.east |- r2.west) -- (r2.west);
+ \draw[ch1flow, dashed] (r1.south) to[bend left=25] (H.east);
+ \draw[ch1flow, dashed] (r2.north) to[bend left=25] (E.east);
+\end{tikzpicture}%
+}
+\caption{Circulation coupling in \(\mathcal{M}_\omega\): each curl row feeds the
+partner field; \(\Jimp\) appears as external drive on the magnetic row.}
+\label{fig:ch2.first-order-curl-coupling}
+\end{figure}
+Single-field Helmholtz reductions equivalent to
+Eqs.~\eqref{eq:ch1.vacuum-wave-source-driven}--\eqref{eq:ch1.vacuum-curl-second-order}
+are used later when a scalar symbol simplifies kernels; the elimination belongs to
+\ref{ch:01} and is not repeated. The electric-wave symbol used in
+Chapter~\ref{ch:02} is recorded as
+\begin{equation}
+\label{eq:ch2.electric-wave-operator}
+\mathcal{W}_{E,\omega}\E\equiv
+\curl\!\left(\mu_0^{-1}\curl\E\right)-\omega^2\varepsilon_0\E
+= -\jj\omega\mu_0\Jimp+\mu_0^{-1}\curl\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{eff}},
+\end{equation}
+with \(\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{eff}}\) collecting equivalent magnetic
+drive when present \cite{stratton1941}. Subsection~\ref{sec:ch222} supplies the
+magnetic counterpart and material-weighted generalizations. Variational structure is inherited from Section~\ref{sec:ch01.1.4}. For test state
+\(\mathbf{v}_\omega=(\E',\H')\),
+\begin{equation}
+\label{eq:ch2.maxwell-energy-form}
+\mathfrak{a}_\omega(\mathbf{u}_\omega,\mathbf{v}_\omega)=
+\int_\Omega\Big[\mu_0\,\H\!\cdot\!\curl\E'-\varepsilon_0\,\E\!\cdot\!\curl\H'\Big]d^{3}r.
+\end{equation}
+Integration by parts connects Eq.~\eqref{eq:ch2.maxwell-energy-form} to surface
+fluxes and to the weak formulation
+\begin{equation}
+\label{eq:ch2.maxwell-weak-form}
+\mathfrak{a}_\omega(\mathbf{u}_\omega,\mathbf{v}_\omega)=\mathfrak{f}_\omega(\mathbf{v}_\omega)
+\quad\forall\,\mathbf{v}_\omega\in\mathcal{F}_\Omega^{0},
+\end{equation}
+where \(\mathcal{F}_\Omega^{0}\) carries homogeneous boundary traces compatible with
+\(\mathcal{B}_\Gamma\) and \(\mathfrak{f}_\omega\) is induced by
+\(\mathbf{s}_\omega(\mathfrak{D})\) \cite{poynting1884}. Equation
+\eqref{eq:ch2.maxwell-weak-form} is the variational face of
+Eq.~\eqref{eq:ch2.closed-maxwell-bvp}; finite-element discretizations favor this
+route when material coefficients are piecewise constant
+\cite{harrington2001}.
+Well-posedness of Eq.~\eqref{eq:ch2.maxwell-weak-form} is not automatic on
+unbounded domains or on multiply connected cavities. On a bounded region with
+passive \(\mathcal{B}_\Gamma\) and homogeneous traces in
+\(\mathcal{F}_\Omega^{0}\), coercivity fails only along divergence-free
+cavity modes that satisfy both curl-curl balance and homogeneous tangential
+data---precisely the null space that Section~\ref{sec:ch214} isolates before
+imposing gauge or polarization fixes \cite{harrington2001}. For
+exterior problems, coercivity is recovered only after restricting to the
+outgoing subspace selected by Sommerfeld-type completion; without that restriction,
+the bilinear form is indefinite and the weak problem admits non-physical
+growing solutions. The practical rule for antenna analysis is therefore
+threefold: declare \(\mathcal{D}(\mathcal{L}_\omega)\), specify
+\(\mathcal{B}_\Gamma\) on every connected piece of \(\Gamma\), and confirm that
+the impressed tuple lies in the compatible range of
+Eq.~\eqref{eq:ch2.source-compatibility}. Numerical codes that enforce volume
+Maxwell rows on truncated domains but leave exterior faces open implement an
+\emph{implicit} \(\mathcal{B}_\Gamma\); unless that implicit completion matches
+the laboratory termination, \(\mathcal{S}_\omega\) in the code is a different
+operator from the one measured on the bench \cite{harrington2001}. Domain specification cannot remain at \(C^\infty\) when sources are distributional.
+The minimal energy class declared here is
+\begin{equation}
+\label{eq:ch2.operator-domain-declaration}
+\mathcal{D}(\mathcal{L}_\omega)\subset
+\big\{\mathbf{u}_\omega=(\E,\H):
+\E,\H\in L^{2}(\Omega)^{3},\ \curl\E,\curl\H\in L^{2}(\Omega)^{3}\big\},
+\end{equation}
+where $\mathcal{L}_\omega$ is the composite Maxwell operator on the six-component state
+$\mathbf{u}_\omega=(\E,\H)$, $\mathcal{D}(\mathcal{L}_\omega)$ its domain of square-integrable
+curl fields compatible with $\mathcal{B}_\Gamma$, and $\Omega$ the analysis region
+\cite{stratton1941}. Section~\ref{sec:ch211} refines embeddings and compactness; evaluating
+Eq.~\eqref{eq:ch2.maxwell-driven-operator} outside
+\(\mathcal{D}(\mathcal{L}_\omega)\) generates spurious boundary terms that corrupt
+flux identities \cite{stratton1941}.
+Piecewise smooth \(\varepsilon(\mathbf{r})\) and \(\mu(\mathbf{r})\) modify
+coefficients inside \(\mathcal{M}_\omega\) while preserving the block template of
+Eq.~\eqref{eq:ch1.maxwell-operator-block}. Interface jumps satisfy
+Eq.~\eqref{eq:ch1.interface-conditions}; multi-region Green operators in
+Section~\ref{sec:ch234} realize \(\mathcal{L}_\omega^{-1}\) on composite domains
+\cite{stratton1941}. The coupling structure described above extends naturally to practical
+terminal conditions. Finite feed structures and external circuits frequently impose
+impedance relations between tangential field components on the boundary
+\cite{harrington2001}:
+\begin{equation}
+\label{eq:ch2.boundary-impedance-operator}
+\mathcal{Z}_\Gamma\!
+\begin{bmatrix}
+\left.\hat{\mathbf{n}}\times\E\right|_{\Gamma}\\
+\left.\hat{\mathbf{n}}\times\H\right|_{\Gamma}
+\end{bmatrix}=\mathbf{0},
+\end{equation}
+In Eq.~\eqref{eq:ch2.boundary-impedance-operator},
+\(\mathcal{Z}_\Gamma\) is a linear boundary impedance operator (SI units absorbed in its
+definition) acting on the tangential Maxwell traces
+\(\hat{\mathbf{n}}\times\E|_{\Gamma}\) and \(\hat{\mathbf{n}}\times\H|_{\Gamma}\) on
+\(\Gamma=\partial\Omega\); admissible states satisfy the terminal or absorbing relation
+\(\mathcal{Z}_\Gamma[\text{traces}]=\mathbf{0}\).
+encoding Leontovich, absorbing, or mode-matched completions \cite{harrington2001}.
+When Eq.~\eqref{eq:ch2.boundary-impedance-operator} replaces explicit
+\(\mathbf{g}_\Gamma\) in Eq.~\eqref{eq:ch2.closed-maxwell-bvp}, admissible states
+satisfy the impedance manifold on \(\Gamma\). Exterior outgoing problems correspond
+to a limit in which \(\mathcal{Z}_\Gamma\) selects the Sommerfeld branch of
+Section~\ref{sec:ch243}; conflating a finite-chamber termination with that limit
+without normalization corrupts far-zone patterns \cite{stratton1941}.
+Forcing must lie in the range implied by charge conservation. Divergence of the
+Amp\`ere row together with Eq.~\eqref{eq:ch1.charge-continuity-harmonic} yields
+\begin{equation}
+\label{eq:ch2.source-compatibility}
+\divg\mathbf{s}_{\omega,2}+\jj\omega\,\mathbf{s}_{\omega,3}=0
+\end{equation}
+on the second and third blocks of Eq.~\eqref{eq:ch2.maxwell-forcing-vector}.
+Inconsistent \((\Jimp,\rho)\) pairs lie outside physically realizable drive;
+numerical solvers may still return vectors that violate
+Eq.~\eqref{eq:ch2.source-compatibility} \cite{stratton1941}. A compact
+current filament with vanishing \(\rho\) automatically satisfies
+Eq.~\eqref{eq:ch2.source-compatibility} because \(\mathbf{s}_{\omega,3}=0\).
+When a volumetric \(\rho\) is prescribed independently of \(\Jimp\), the pair
+must be adjusted so that their divergence balance matches the Amp\`ere--Gauss
+rows; otherwise the closed problem is mathematically posed but physically
+inconsistent. Feed models that inject \(\Jimp\) without updating \(\rho\) are
+common in method-of-moments implementations; they remain valid only when the
+discretization enforces continuity on the impressed grid or when the problem
+is magnetostatic in the relevant band \cite{harrington2001}.
+Linking to Subsection~\ref{sec:ch201}, radiation acts on closed solutions:
+\begin{equation}
+\label{eq:ch2.maxwell-radiation-composition}
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega
+=\Pi_{\mathrm{rad}}\circ\mathcal{L}_\omega^{-1}\circ
+\begin{bmatrix}\mathbf{s}_\omega(\cdot)\\ \mathbf{g}_\Gamma\end{bmatrix},
+\end{equation}
+with \(\mathcal{L}_\omega^{-1}\) understood on the outgoing-admissible branch fixed by
+\(\mathcal{B}_\Gamma\) and with \(\Pi_{\mathrm{rad}}\) from
+Eq.~\eqref{eq:ch2.radiation-operator-def} \cite{stratton1941}. Completion must precede
+radiative selection: applying \(\Pi_{\mathrm{rad}}\) to non-closed states mixes
+reactive content into far-zone observables \cite{harrington2001}.
+The energy form supports an integration-by-parts identity
+\begin{equation}
+\label{eq:ch2.maxwell-adjoint-pairing}
+\mathfrak{a}_\omega(\mathbf{u}_\omega,\mathbf{v}_\omega)=
+\langle\mathcal{M}_\omega[\mathbf{u}_\omega],\mathbf{v}_\omega\rangle_{\Omega}
++\int_\Gamma\big(\hat{\mathbf{n}}\times\E\cdot\H'-\hat{\mathbf{n}}\times\E'\cdot\H\big)dS,
+\end{equation}
+where \(\langle\cdot,\cdot\rangle_{\Omega}\) is the componentwise \(L^{2}\) pairing
+\cite{stratton1941}. Self-adjoint truncations on bounded domains require that
+\(\mathcal{B}_\Gamma\) cancel the boundary integrand on admissible traces; criteria
+are supplied in Section~\ref{sec:ch214}. Equation
+\eqref{eq:ch2.maxwell-adjoint-pairing} is the local spine for those arguments.
+Fredholm structure note: for bounded \(\Omega\) with passive \(\mathcal{B}_\Gamma\), \(\mathcal{L}_\omega\) is a Fredholm operator on
+\(\mathcal{D}(\mathcal{L}_\omega)\) modulo cavity modes, with index tied to
+topology and boundary class. Exterior domains replace discrete spectra with
+continuous radiation modes, and \(\mathcal{L}_\omega^{-1}\) becomes a resolvent on
+the outgoing subspace rather than an ordinary inverse. Section~\ref{sec:ch263}
+develops the spectral/Fredholm foundation; here the point is that invertibility questions
+for \(\mathcal{S}_\omega\) are questions about \(\mathcal{L}_\omega\) on the
+\emph{declared} domain, not about formal elimination of \(\H\) alone
+\cite{harrington2001}.
+Linearity of \(\mathcal{L}_\omega\) in \(\mathbf{u}_\omega\) implies that
+superposition holds for fixed boundary class: if
+\(\mathcal{L}_\omega[\mathbf{u}_\omega^{(a)}]=[\mathbf{s}^{(a)},\mathbf{g}^{(a)}]\)
+and \(\mathcal{L}_\omega[\mathbf{u}_\omega^{(b)}]=[\mathbf{s}^{(b)},\mathbf{g}^{(b)}]\)
+with identical \(\mathcal{B}_\Gamma\), then
+\(\mathcal{L}_\omega[\mathbf{u}_\omega^{(a)}+\mathbf{u}_\omega^{(b)}]=
+[\mathbf{s}^{(a)}+\mathbf{s}^{(b)},\mathbf{g}^{(a)}+\mathbf{g}^{(b)}]\).
+Changing \(\mathcal{B}_\Gamma\) while holding \(\Jimp\) fixed breaks this
+principle because boundary rows are part of the operator, not of the drive.
+Laboratory comparisons that swap terminations without re-solving the coupled
+system therefore compare different \(\mathcal{L}_\omega\), not different
+``modes'' of the same map \cite{stratton1941}. The radiation
+operator \(\mathcal{R}_\omega\) inherits the same sensitivity: composition
+Eq.~\eqref{eq:ch2.maxwell-radiation-composition} is linear in impressed data
+only after \(\mathcal{B}_\Gamma\) and the outgoing branch are held fixed
+\cite{stratton1941}.
+Subsection~\ref{sec:ch202} has packaged harmonic Maxwell theory as the composite operator
+\(\mathcal{L}_\omega\), recorded its resolvent relation to \(\mathcal{S}_\omega\), and
+linked radiation composition Eq.~\eqref{eq:ch2.maxwell-radiation-composition} to operator
+inversion on the outgoing-admissible branch. Subsection~\ref{sec:ch203} records how those
+maps inherit the admissibility, regime, and measurement criteria established in
+\ref{ch:01}.

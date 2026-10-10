@@ -1,0 +1,65 @@
+% Stage 8 section framing — 2.10 Examples
+\section{Examples}
+\label{sec:ch210}
+% CH02-NARR-EXP:02.210
+The four worked cases trace propagation, export, spectral rank, and instrument access in fixed order: compact dipole truncation, loop nullity, evanescent contamination, and structured-source topology \cite{stratton1941,harrington2001,devaney2004}. Each closes with an explicit verdict on what is radiated, null, or merely reactive before harmonic headlines enter \cite{chu1948,poynting1884}.
+Angular-spectrum action in Section~\ref{sec:ch29} states what finite instruments resolve on outgoing fields. Section~\ref{sec:ch210} returns to named hardware---apertures, dipoles, arrays, and scans---with the same tolerance discipline \cite{stratton1941}. Each example is one integrated exercise, not a problem sheet \cite{collin2001}.
+
+
+
+
+The preceding sections developed radiation operators, null spaces, near-to-far limits, and
+rank-$N$ instrument readouts as abstract objects on exterior domains. A graduate reader may accept the
+algebra while still wondering how the distinctions appear on a laboratory bench: when a
+spherical near-field scanner reports thirty-six complex samples, which part of the pattern
+residual owes to modal truncation, which to source nullity, and which to reactive contamination
+that never reaches the far zone? The four worked configurations below answer that question in
+fixed order---compact dipole truncation, loop nullity, evanescent contamination, and
+structured-source topology---each closing with an explicit verdict on what is radiated, null, or
+merely reactive before harmonic headlines enter \cite{stratton1941}.
+Subsections~\ref{sec:ch2101}--\ref{sec:ch2104} isolate compact truncation, source nullity,
+evanescent near-to-far contamination, and structured-source topology--transport separation,
+respectively \cite{stratton1941}. Every numerical ratio
+quoted below is \emph{illustrative}: values follow author-calibrated discretizations of the stated
+geometries and are not reported measurement data; they are included only to show order-of-magnitude
+separation among mechanisms \cite{hansen1988}. Master DOF partition. Radiation reports can fail for distinct reasons that must not be merged in harmonic charts or laboratory
+interpretation \cite{marengo2000}. Before the subsections activate individual terms, it is
+useful to name the full partition once: each summand below removes degrees of freedom from
+qualified radiation reports through a \emph{distinct} physical mechanism, and conflating them
+produces remedies that treat symptoms rather than causes.
+\begin{equation}
+\label{eq:ch2.dof-partition-master}
+\underbrace{\ker\mathcal{R}_\omega}_{\text{source nullity (NR)}}
+\ \oplus\
+\underbrace{\ker\mathcal{O}_{\mathrm{meas}}\big|_{\operatorname{ran}\mathcal{R}_\omega}}_{\text{aperture rank}}
+\ \oplus\
+\underbrace{\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\mathcal{J}_\Omega]}_{\text{evanescent storage}}
+\ \oplus\
+\underbrace{\text{tail of compact/ modal truncation}}_{\text{spectral compression}}
+\ \oplus\
+\underbrace{\mathcal{K}_{\mathrm{sup}}}_{\text{geometric suppression}},
+\end{equation}
+with rank-$N$ recovery \(\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}\) from
+Eq.~\eqref{eq:ch2.accessible-angular-budget} acting after Eq.~\eqref{eq:ch2.dof-partition-master}
+\cite{stratton1941}. Subsections~\ref{sec:ch2101}--\ref{sec:ch2104} each activate a
+different term in Eq.~\eqref{eq:ch2.dof-partition-master}; cross-references replace repeated
+local split displays \cite{stratton1941}.
+Equation~\eqref{eq:ch2.dof-partition-master} is the diagnostic synthesis of
+Chapter~\ref{ch:02}: each direct summand names a distinct mechanism that removes
+degrees of freedom from qualified radiation reports. Source nullity
+\(\ker\mathcal{R}_\omega\) is invisible to all far data; aperture rank
+\(\ker\mathcal{O}_{\mathrm{meas}}\) removes resolvable content even when export
+is nonzero; evanescent storage inflates near readouts without altering
+\(a(\widehat{\mathbf{k}})\); spectral compression tail controls modal truncation
+error; geometric suppression \(\mathcal{K}_{\mathrm{sup}}\) removes directions
+by symmetry before measurement acts. On a single hardware test with \(k_0 a=1.5\),
+a \(15\%\) pattern residual might decompose as \(7\%\) compact tail, \(5\%\) aperture
+rank, \(3\%\) geometric suppression, and \(0\%\) NR nullity---four different remedies
+apply to four different terms \cite{stratton1941}.
+Here $\mathcal{R}_\omega$ is the radiation operator at angular frequency $\omega$,
+$\mathcal{O}_{\mathrm{meas}}$ the finite-rank rank-$N$ instrument readout on the radiative range,
+$\Pi_{\mathrm{ev}}$ the projector onto evanescent spectral content,
+$\mathcal{K}_{\mathrm{sup}}$ the geometric angular-suppression set from symmetry or blockage,
+and the compact/modal tail the spectral compression induced by electrically small support and
+finite probe banks \cite{stratton1941}. Flux meters from Section~\ref{sec:ch01.1.4} enter only on
+\(\mathcal{R}_\omega[\Jimp]\) after Eq.~\eqref{eq:ch2.regime-operator-screen}

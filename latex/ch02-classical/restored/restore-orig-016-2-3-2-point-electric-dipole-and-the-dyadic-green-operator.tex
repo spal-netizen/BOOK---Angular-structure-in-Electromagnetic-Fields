@@ -1,0 +1,126 @@
+% Stage 8 restored fragment — 2.3.2 Point electric dipole and the dyadic Green operator (archive lines 3953-4085)
+\subsection{Point electric dipole and the dyadic Green operator}
+\label{sec:ch23.signature-dipole}
+Engineering reading (Hertzian chain). \emph{Physical setup:} a short wire or probe feed whose electrical size satisfies
+\(k_0a\ll 1\) on a turntable range.
+\emph{Objective:} verify rank-one far-zone export before multipole catalogs are applied
+to larger apertures.
+\emph{Expected intuition:} a transverse \(\sin\theta\) pattern with a single dominant
+radiative channel.
+\emph{Measurement:} watt closure on a sphere \(\Gamma_R\) and turntable invariance of the
+total radiated power \cite{jackson1999}.
+\emph{Misconception:} equating mesh unknowns in a numerical model with the radiative rank
+of the physical source \cite{chu1948}.
+
+On a turntable compact range, the dipole test is performed before any aperture catalog:
+rotate the electrically small feed, integrate $|\E|^2$ on $\Gamma_R$, and confirm that the
+total radiated power is invariant and that the far-zone pattern carries a single transverse
+lobe \cite{hansen1988}. That watt closure is the laboratory observation that
+precedes the dyadic formulas of Subsection~\ref{sec:ch231}; when it fails, the fault lies
+in calibration, outgoing branch selection, or source admissibility---not in the multipole
+catalog applied later \cite{stratton1941}.
+The Hertzian dipole is the canonical image of the dyadic Green operator: a localized
+source, a retarded kernel, a radiation map, and a far-zone angular spectrum linked in
+one closed calculation \cite{stratton1941}. Short-wire or probe feeds at $k_0a\ll1$ on
+a turntable should reproduce transverse $\sin\theta$ export and turntable-invariant watt
+totals before multipole catalogs are applied to larger apertures
+\cite{jackson1999}. Every compact feed should be checked against
+this lowest-dimensional outgoing test at low $ka$ \cite{chu1948}.
+The range observation fixed above---watt closure on $\Gamma_R$, turntable invariance,
+and a single transverse lobe---is what a correct Green propagation must reproduce before
+any multipole catalog is trusted on larger structures \cite{hansen1988}.
+Only after that calibration does it pay to write the dyadic convolution in closed form:
+replace the extended source $\Jimp(\mathbf{r}')$ by a rank-one impulse and read off the
+field pair that every method-of-moments code must match at electrically small $k_0 a$
+\cite{harrington2001}.
+The Hertzian dipole is chosen as the canonical calibration source because it is the
+smallest oriented radiator that still exercises the full dyadic structure: one moment
+vector, one propagation direction, and a transverse far-zone pattern that every radiation
+theory must reproduce \cite{jackson1999}. Compact feeds on turntable ranges,
+probe references, and method-of-moments self-tests all reduce to this limit at
+$k_0 a\ll 1$; when a code or measurement sequence cannot match the dipole field pair, no
+larger aperture catalog built on the same Green operator should be trusted
+\cite{hansen1988}.
+The dipole moment \(\mathbf{p}=\int \Jimp\,d^{3}r'\) (units: A\,m, equivalently C\,m for
+equivalent polarization sources) localizes the impressed current at the origin; $\mathbf{r}$
+denotes the observation point and $\mathbf{r}'$ the source coordinate in the display below.
+Substituting \(\Jimp(\mathbf{r}')=\mathbf{I}\,\delta(\mathbf{r}')\) into
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution} collapses the volume integral to a single
+dyadic--vector product and yields the closed-form field pair
+\begin{equation}
+\label{eq:ch2.signature-dipole-field}
+\E(\mathbf{r})
+=
+-\jj\omega\mu_0\,\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{0})\cdot\mathbf{p},
+\qquad
+\H(\mathbf{r})=\frac{1}{\jj\omega\mu_0}\,\curl\E(\mathbf{r}),
+\end{equation}
+with outgoing dyad Eq.~\eqref{eq:ch2.free-space-dyadic-green}. This is
+\(\mathcal{S}_\omega[\Jimp]\) in closed form; \(\mathcal{R}_\omega[\Jimp]\) is the
+same pair after outgoing selection on the exterior domain
+\cite{stratton1941}. Physically, Eq.~\eqref{eq:ch2.signature-dipole-field} states that
+every Cartesian component of $\mathbf{p}$ excites a column of $\overline{\mathbf{G}}_{E,0}$,
+so polarization coupling is already present in the rank-one source that calibrates compact
+feeds \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (p) {Dipole $\mathbf{p}$};
+ \node[ch1box, right=7mm of p] (g) {$\overline{\mathbf{G}}_{E,0}$};
+ \node[ch1box, right=7mm of g] (e) {$\E,\H$};
+ \node[ch1box, right=7mm of e] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (a) {$a(\widehat{\mathbf{k}})$};
+ \draw[ch1flow] (p) -- (g) -- (e) -- (r) -- (a);
+\end{tikzpicture}%
+}
+\caption{Signature chain for a Hertzian dipole: impressed moment convolves with the
+outgoing dyadic Green function, producing \((\E,\H)\); the radiation map extracts the
+far-zone amplitude and angular spectrum.}
+\label{fig:ch2.signature-hertzian-dipole}
+\end{figure}
+In the radiative far zone \(k_0 r\gg 1\), with \(r=|\mathbf{r}|\) the observation radius
+in metres, the reactive \(R^{-2}\) and \(R^{-3}\) terms in
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} become negligible and
+Eq.~\eqref{eq:ch2.signature-dipole-field} reduces to
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} with
+\begin{equation}
+\label{eq:ch2.signature-dipole-far-field}
+\E(\mathbf{r})\approx
+-\jj\omega\mu_0\,\frac{e^{-\jj k_0 r}}{4\pi r}\,
+\overline{\mathbf{I}}-\widehat{\mathbf{r}}\widehat{\mathbf{r}}\,\cdot\mathbf{p},
+\end{equation}
+so the transverse radiative image is fixed by \(\widehat{\mathbf{r}}\times(\widehat{\mathbf{r}}\times\mathbf{p})\).
+This expression reveals that only transverse components survive at large distance. The far
+field therefore forgets most local source details and retains only radiatively accessible
+information---precisely the content a compact-range pattern measurement can resolve on
+$\Gamma_R$ \cite{stratton1941}.
+Power through sphere \(S_r\) follows Eq.~\eqref{eq:ch2.radiated-power-screen} with
+\(P_{\mathrm{rad}}\propto k_0^{4}|\mathbf{p}|^{2}\) in the electrically small limit
+\cite{stratton1941}. Experimentally, the angular spectrum is the decomposition of the
+far-zone field into plane waves propagating in different directions $\widehat{\mathbf{k}}$:
+each outgoing direction receives a distinct amplitude fixed by how the dipole moment
+projects transversely onto that direction \cite{hansen1988}. Pattern measurements on a
+spherical scanner therefore sample this angular distribution; synthesis codes invert the
+same lateral Fourier image when reconstructing aperture fields from far-zone data
+\cite{stratton1941}. The plane-wave angular spectrum of
+Subsection~\ref{sec:ch291} reads
+\begin{equation}
+\label{eq:ch2.signature-dipole-angular-spectrum}
+a(\widehat{\mathbf{k}})
+=
+-\jj k_0^{2}\,\sqrt{\mu_0/\varepsilon_0}\,
+\big(\overline{\mathbf{I}}-\widehat{\mathbf{k}}\widehat{\mathbf{k}}\big)\cdot\mathbf{p},
+\end{equation}
+where \(a(\widehat{\mathbf{k}})\) is the far-zone plane-wave amplitude (V\,m\(^{-1}\))
+associated with propagation direction \(\widehat{\mathbf{k}}\) (dimensionless unit vector)
+and \(\widehat{\mathbf{k}}\) parametrizes the angular-spectrum parametrization of
+Subsection~\ref{sec:ch291}. Equation~\eqref{eq:ch2.signature-dipole-angular-spectrum}
+is the lateral Fourier image of the same export channel: each outgoing direction receives
+transverse amplitude fixed by $(\overline{\mathbf{I}}-\widehat{\mathbf{k}}\widehat{\mathbf{k}})\cdot\mathbf{p}$.
+One source, one kernel, one radiation map, one far field, one angular spectrum---every
+abstract operator statement in Chapter~\ref{ch:02} reduces to this geometry when
+\(\Jimp=\mathbf{p}\,\delta(\mathbf{r}')\) \cite{stratton1941}. The dipole test on
+$\Gamma_R$ is therefore not a numerical afterthought; it is the lowest-dimensional
+witness that $G$, $\overline{\mathbf{G}}_{E}$, $\mathcal{S}_\omega$, and
+$\mathcal{R}_\omega$ describe the same hardware \cite{hansen1988}.

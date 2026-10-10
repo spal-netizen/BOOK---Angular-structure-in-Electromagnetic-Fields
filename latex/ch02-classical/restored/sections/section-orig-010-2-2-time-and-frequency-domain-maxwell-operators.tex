@@ -1,0 +1,51 @@
+% Stage 8 section framing — 2.2 Time- and Frequency-Domain Maxwell Operators
+\section{Time- and Frequency-Domain Maxwell Operators}
+\label{sec:ch22}
+Function spaces and Maxwell operators in Section~\ref{sec:ch21} fix admissible sources and field pairs before time-harmonic reduction. Section~\ref{sec:ch22} carries the same physics into frequency-domain maps used on every fixed-frequency range \cite{stratton1941}. The laboratory never measures abstract Hilbert norms; it measures phasor fields at declared $\omega$ \cite{maxwell1873}. An oscilloscope trace records $\E(\mathbf{r},t)$ and $\H(\mathbf{r},t)$ as functions of time; a vector network analyzer records complex amplitudes at each stepped tone. Both instruments interrogate the same structure, but only the time-domain picture makes retarded support visible before any phasor reduction is declared \cite{harrington2001}.
+
+
+Fixed-$\omega$ phasors are frequency slices of retarded evolution, valid when excitation
+and media are narrowband on the declared interval \cite{stratton1941}.
+Each harmonic operator $\mathcal{L}_\omega$ is a labeled
+cross-section of a single causal evolution law, not as an independent postulate.
+A vector network
+analyzer sweep therefore samples one harmonic operator family $\mathcal{L}_\omega$ at each
+tone---not a separate physics from time-domain causality
+\cite{maxwell1873}. Every compact-range calibration and harmonic
+finite-difference cell presupposes that reduction.
+The harmonic operators $\mathcal{L}_\omega$ and $\mathcal{S}_\omega$ introduced earlier
+describe individual frequency slices of Maxwell evolution. The purpose of the present
+section is to show how those slices emerge from a single causal time-domain theory
+\cite{stratton1941}. Section~\ref{sec:ch22} develops the time--frequency equivalences that
+connect harmonic operators to causal evolution, Helmholtz symbols, and
+propagating-versus-evanescent splits under the $\exp(-\jj\omega t)$ convention locked in
+\ref{ch:01}. It records when that reduction is valid, how retarded time-domain maps
+relate to $\mathcal{R}_\omega$, and which spectral components carry far-zone transport
+content importable from Section~\ref{sec:ch01.2.4}.
+Harmonic Maxwell theory in Section~\ref{sec:ch20} treated $\omega>0$ as a fixed parameter.
+Time-domain formulations restore the full operator pencil $\partial/\partial t$ and clarify
+why frequency-domain solvers implement causal limits when inversion is performed correctly.
+Subsection~\ref{sec:ch221} gives the Chapter~\ref{ch:02} account of time-domain evolution;
+Subsection~\ref{sec:ch222} packages frequency-domain Maxwell and curl--curl Helmholtz
+operators without re-displaying Eq.~\eqref{eq:ch1.maxwell-local}; Subsection~\ref{sec:ch223}
+proves equivalence between retarded Green propagation and $\mathcal{S}_\omega$ stated in
+Eq.~\eqref{eq:ch2.causality-retarded}; Subsection~\ref{sec:ch224} applies the
+reactive-radiative partition of Section~\ref{sec:ch01.2.4} to propagating, evanescent, and
+non-propagating subspaces in operator form \cite{stratton1941}.
+Several related constructions are deferred deliberately. In particular, dyadic
+Green-function development and inversion theory are postponed until Section~\ref{sec:ch23},
+where the harmonic operators introduced here acquire explicit integral representations
+\cite{stratton1941}. Section~\ref{sec:ch22} does not re-open function-space declarations
+from Section~\ref{sec:ch21} or local Maxwell derivations from \ref{ch:01}.
+Helmholtz and curl--curl reductions developed in Subsection~\ref{sec:ch222} are
+single-field tools: they simplify kernel construction but do not replace the first-order
+$\mathcal{L}_\omega$ packaging of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} when
+boundary rows and impedance closures must be enforced jointly \cite{harrington2001}.
+Within the locked harmonic band, $\mathcal{S}_\omega$ is the $\omega$-slice of a causal
+time-domain map whenever impressed data and $\mathcal{B}_\Gamma$ are held fixed across the
+transform \cite{stratton1941}. Finite-difference time-domain schemes approximate
+Subsection~\ref{sec:ch221}; frequency-domain finite-element solvers approximate
+Subsection~\ref{sec:ch222} on the domains of Eq.~\eqref{eq:ch2.domain-refinement-L}.
+Modal and plane-wave decompositions in Subsection~\ref{sec:ch224} filter which components
+of $\mathcal{S}_\omega[\Jimp]$ may enter $\mathcal{R}_\omega$ under
+Eq.~\eqref{eq:ch2.transport-qualified-radiation} \cite{harrington2001}.

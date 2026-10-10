@@ -1,0 +1,29 @@
+% Stage 8 section framing — 2.3 Green Functions and Electromagnetic Inversion
+\section{Green Functions and Electromagnetic Inversion}
+\label{sec:ch23}
+Time- and frequency-domain operators in Section~\ref{sec:ch22} specify how impressed currents enter Maxwell's equations. Section~\ref{sec:ch23} supplies Green-function propagation---the computational heart of method-of-moments and near-field scanners \cite{stratton1941}. Propagation must be understood before radiation is selected \cite{sommerfeld1949}.
+
+
+Maxwell's equations couple impressed currents to fields throughout a domain; in practice one
+needs the field at a specified observation point produced by sources elsewhere.
+The Green function is the impulse response that reduces that coupling to a single
+propagator integral rather than a fresh boundary-value solve at every new observation
+coordinate \cite{stratton1941}. Before dyadic kernels are tabulated, fix the
+lowest-dimensional laboratory calibration every range engineer uses: a short dipole or probe
+feed at $k_0 a\ll 1$ on a turntable, with watt closure on a sphere $\Gamma_R$ and a
+transverse $\sin\theta$ pattern that is invariant under rotation \cite{jackson1999}.
+That Hertzian test is the physical image of $\mathcal{S}_\omega[\Jimp]$ when
+$\Jimp$ collapses to a point dipole moment; Subsection~\ref{sec:ch23.signature-dipole}
+closes the calculation, but the range observation precedes the dyad formulas
+\cite{stratton1941}. Two laboratory questions follow. Given currents on a feed
+or equivalent surface, how is the field computed at an observation point? Given field
+samples on a scan surface or range contour, how may the equivalent source be recovered?
+Method-of-moments assembly, near-field back-propagation, compact-range transformation, and
+microwave imaging differ in discretization yet implement the same propagation law
+\cite{harrington2001}. Scalar, vector, and dyadic kernels, singular
+regularization, retarded causality, and inversion on composite domains are developed below;
+outgoing selection at infinity belongs to Section~\ref{sec:ch24}. The export map below
+$\mathcal{S}_\omega[\Jimp]$ realized through $G$ and $\overline{\mathbf{G}}_{E}$ is the
+physical response of the medium to declared impressed currents; radiation export through
+$\mathcal{R}_\omega$ and $\Pi_{\mathrm{rad}}$ is deferred until Section~\ref{sec:ch24} has fixed
+the outgoing branch on which those operators act \cite{stratton1941}.

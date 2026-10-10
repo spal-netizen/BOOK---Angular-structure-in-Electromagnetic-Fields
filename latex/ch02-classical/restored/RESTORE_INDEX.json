@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ORIG-002",
+    "file": "restore-orig-002-2-0-1-radiation-as-a-source-to-field-operator.tex",
+    "title": "2.0.1 Radiation as a source-to-field operator",
+    "words": 2658
+  },
+  {
+    "id": "ORIG-003",
+    "file": "restore-orig-003-2-0-2-maxwell-equations-in-operator-form.tex",
+    "title": "2.0.2 Maxwell equations in operator form",
+    "words": 2140
+  },
+  {
+    "id": "ORIG-004",
+    "file": "restore-orig-004-2-0-3-admissibility-and-maxwell-export-sequence.tex",
+    "title": "2.0.3 Admissibility and Maxwell export sequence",
+    "words": 503
+  },
+  {
+    "id": "ORIG-006",
+    "file": "restore-orig-006-2-1-1-spaces-for-sources-fields-and-distributions.tex",
+    "title": "2.1.1 Spaces for sources, fields, and distributions",
+    "words": 2191
+  },
+  {
+    "id": "ORIG-007",
+    "file": "restore-orig-007-2-1-2-linear-operators-domain-range-and-adjoint.tex",
+    "title": "2.1.2 Linear operators: domain, range, and adjoint",
+    "words": 1409
+  },
+  {
+    "id": "ORIG-008",
+    "file": "restore-orig-008-2-1-3-boundedness-compactness-rank-deficiency-spectral-compr.tex",
+    "title": "2.1.3 Boundedness, compactness, rank deficiency, spectral compression",
+    "words": 1458
+  },
+  {
+    "id": "ORIG-009",
+    "file": "restore-orig-009-2-1-4-self-adjointness-completions-and-admissibility.tex",
+    "title": "2.1.4 Self-adjointness, completions, and admissibility",
+    "words": 939
+  },
+  {
+    "id": "ORIG-011",
+    "file": "restore-orig-011-2-2-1-time-domain-evolution.tex",
+    "title": "2.2.1 Time-domain evolution",
+    "words": 1256
+  },
+  {
+    "id": "ORIG-012",
+    "file": "restore-orig-012-2-2-2-frequency-domain-maxwell-operators.tex",
+    "title": "2.2.2 Frequency-domain Maxwell operators",
+    "words": 1356
+  },
+  {
+    "id": "ORIG-013",
+    "file": "restore-orig-013-2-2-3-causality-and-time-frequency-equivalence.tex",
+    "title": "2.2.3 Causality and time-frequency equivalence",
+    "words": 2192
+  },
+  {
+    "id": "ORIG-015",
+    "file": "restore-orig-015-2-3-1-scalar-vector-and-dyadic-green-functions.tex",
+    "title": "2.3.1 Scalar, vector, and dyadic Green functions",
+    "words": 2962
+  },
+  {
+    "id": "ORIG-016",
+    "file": "restore-orig-016-2-3-2-point-electric-dipole-and-the-dyadic-green-operator.tex",
+    "title": "2.3.2 Point electric dipole and the dyadic Green operator",
+    "words": 869
+  },
+  {
+    "id": "ORIG-017",
+    "file": "restore-orig-017-2-3-3-singularities-distributions-and-regularization.tex",
+    "title": "2.3.3 Singularities, distributions, and regularization",
+    "words": 1923
+  },
+  {
+    "id": "ORIG-018",
+    "file": "restore-orig-018-2-3-4-retardation-and-causal-propagation.tex",
+    "title": "2.3.4 Retardation and causal propagation",
+    "words": 1038
+  },
+  {
+    "id": "ORIG-019",
+    "file": "restore-orig-019-2-3-5-inversion-and-solvability.tex",
+    "title": "2.3.5 Inversion and solvability",
+    "words": 1150
+  },
+  {
+    "id": "ORIG-021",
+    "file": "restore-orig-021-2-4-1-sommerfeld-radiation-condition.tex",
+    "title": "2.4.1 Sommerfeld radiation condition",
+    "words": 1791
+  },
+  {
+    "id": "ORIG-022",
+    "file": "restore-orig-022-2-4-2-outgoing-wave-selection.tex",
+    "title": "2.4.2 Outgoing-wave selection",
+    "words": 1030
+  },
+  {
+    "id": "ORIG-023",
+    "file": "restore-orig-023-2-4-3-uniqueness-of-radiative-solutions.tex",
+    "title": "2.4.3 Uniqueness of radiative solutions",
+    "words": 1693
+  },
+  {
+    "id": "ORIG-024",
+    "file": "restore-orig-024-2-4-4-implications-for-source-reconstruction.tex",
+    "title": "2.4.4 Implications for source reconstruction",
+    "words": 1403
+  },
+  {
+    "id": "ORIG-026",
+    "file": "restore-orig-026-2-5-1-source-to-field-integral-representations.tex",
+    "title": "2.5.1 Source-to-field integral representations",
+    "words": 1996
+  },
+  {
+    "id": "ORIG-027",
+    "file": "restore-orig-027-2-5-2-near-intermediate-and-far-regimes.tex",
+    "title": "2.5.2 Near, intermediate, and far regimes",
+    "words": 1499
+  },
+  {
+    "id": "ORIG-028",
+    "file": "restore-orig-028-2-5-3-energy-momentum-angular-momentum-flux-power-and-operat.tex",
+    "title": "2.5.3 Energy, momentum, angular-momentum flux, power, and operator norms",
+    "words": 1244
+  },
+  {
+    "id": "ORIG-029",
+    "file": "restore-orig-029-2-5-4-radiative-and-non-radiative-components.tex",
+    "title": "2.5.4 Radiative and non-radiative components",
+    "words": 953
+  },
+  {
+    "id": "ORIG-031",
+    "file": "restore-orig-031-2-6-1-compact-circular-aperture-and-singular-value-decay.tex",
+    "title": "2.6.1 Compact circular aperture and singular-value decay",
+    "words": 1177
+  },
+  {
+    "id": "ORIG-032",
+    "file": "restore-orig-032-2-6-2-eigenfunctions-and-spectral-decomposition.tex",
+    "title": "2.6.2 Eigenfunctions and spectral decomposition",
+    "words": 2649
+  },
+  {
+    "id": "ORIG-033",
+    "file": "restore-orig-033-2-6-3-rotational-symmetry-and-spectral-degeneracy.tex",
+    "title": "2.6.3 Rotational symmetry and spectral degeneracy",
+    "words": 1466
+  },
+  {
+    "id": "ORIG-034",
+    "file": "restore-orig-034-2-6-4-fredholm-structure-and-pattern-solvability.tex",
+    "title": "2.6.4 Fredholm structure and pattern solvability",
+    "words": 1661
+  },
+  {
+    "id": "ORIG-035",
+    "file": "restore-orig-035-2-6-5-geometric-constraints-on-radiative-spectra.tex",
+    "title": "2.6.5 Geometric constraints on radiative spectra",
+    "words": 894
+  },
+  {
+    "id": "ORIG-037",
+    "file": "restore-orig-037-2-7-1-null-spaces-of-radiation-operators.tex",
+    "title": "2.7.1 Null spaces of radiation operators",
+    "words": 1269
+  },
+  {
+    "id": "ORIG-038",
+    "file": "restore-orig-038-2-7-2-non-radiating-current-configurations.tex",
+    "title": "2.7.2 Non-radiating current configurations",
+    "words": 1191
+  },
+  {
+    "id": "ORIG-039",
+    "file": "restore-orig-039-2-7-3-evanescent-overlap-and-non-reconstructability.tex",
+    "title": "2.7.3 Evanescent overlap and non-reconstructability",
+    "words": 1195
+  },
+  {
+    "id": "ORIG-040",
+    "file": "restore-orig-040-2-7-4-angular-spectrum-consequences-of-null-spaces.tex",
+    "title": "2.7.4 Angular-spectrum consequences of null spaces",
+    "words": 1322
+  },
+  {
+    "id": "ORIG-042",
+    "file": "restore-orig-042-2-8-1-lorentz-reciprocity-in-operator-form.tex",
+    "title": "2.8.1 Lorentz reciprocity in operator form",
+    "words": 1805
+  },
+  {
+    "id": "ORIG-043",
+    "file": "restore-orig-043-2-8-2-orthogonality-and-coupling-of-radiative-modes.tex",
+    "title": "2.8.2 Orthogonality and coupling of radiative modes",
+    "words": 1579
+  },
+  {
+    "id": "ORIG-044",
+    "file": "restore-orig-044-2-8-3-reciprocity-in-radiation-and-reception.tex",
+    "title": "2.8.3 Reciprocity in radiation and reception",
+    "words": 1445
+  },
+  {
+    "id": "ORIG-046",
+    "file": "restore-orig-046-2-9-1-plane-wave-angular-spectrum-and-radiation-operators.tex",
+    "title": "2.9.1 Plane-wave angular spectrum and radiation operators",
+    "words": 1515
+  },
+  {
+    "id": "ORIG-047",
+    "file": "restore-orig-047-2-9-2-retained-suppressed-and-filtered-angular-components.tex",
+    "title": "2.9.2 Retained, suppressed, and filtered angular components",
+    "words": 2577
+  },
+  {
+    "id": "ORIG-048",
+    "file": "restore-orig-048-2-9-3-far-field-angular-accessibility.tex",
+    "title": "2.9.3 Far-field angular accessibility",
+    "words": 1104
+  },
+  {
+    "id": "ORIG-050",
+    "file": "restore-orig-050-2-10-1-compactness-of-radiation-operators.tex",
+    "title": "2.10.1 Compactness of radiation operators",
+    "words": 1587
+  },
+  {
+    "id": "ORIG-051",
+    "file": "restore-orig-051-2-10-2-non-radiating-source-configurations.tex",
+    "title": "2.10.2 Non-radiating source configurations",
+    "words": 1398
+  },
+  {
+    "id": "ORIG-052",
+    "file": "restore-orig-052-2-10-3-evanescent-suppression-in-the-far-field.tex",
+    "title": "2.10.3 Evanescent suppression in the far field",
+    "words": 1812
+  },
+  {
+    "id": "ORIG-053",
+    "file": "restore-orig-053-2-10-4-radiation-from-structured-source-states.tex",
+    "title": "2.10.4 Radiation from structured source states",
+    "words": 2103
+  },
+  {
+    "id": "ORIG-055",
+    "file": "restore-orig-055-2-11-1-results.tex",
+    "title": "2.11.1 Results",
+    "words": 202
+  },
+  {
+    "id": "ORIG-056",
+    "file": "restore-orig-056-2-11-2-topics-developed-in-later-chapters.tex",
+    "title": "2.11.2 Topics developed in later chapters",
+    "words": 96
+  },
+  {
+    "id": "ORIG-057",
+    "file": "restore-orig-057-2-11-3-relation-to-later-chapters.tex",
+    "title": "2.11.3 Relation to later chapters",
+    "words": 207
+  }
+]

@@ -1,0 +1,235 @@
+% Stage 8 restored fragment — 2.8.3 Reciprocity in radiation and reception (archive lines 10909-11155)
+\subsection{Reciprocity in radiation and reception}
+\label{sec:ch283}
+
+A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Reciprocity in radiation and reception'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Two-port antenna measurements are the everyday face of reciprocity. A horn coupled to a compact
+range, a patch fed from a coax port, or a dual-polarized reflector feed all reduce---after
+calibration---to the same question the vector network analyzer answers: does the complex coupling
+from port~$A$ to port~$B$ equal the reversed coupling when cables, standards, and probe
+normalization are exchanged? Subsection~\ref{sec:ch283} gives the Chapter~\ref{ch:02} definitive
+account of that interchange in operator form: transmit--receive operator symmetry, two-port
+coupling bilinears, and measurement-qualified reciprocity on
+\(\operatorname{ran}\mathcal{R}_\omega\), developing Eq.
+Eq.~\eqref{eq:ch2.transmit-receive-swap} \cite{stratton1941}. Observation
+composition Eq.~\eqref{eq:ch2.reconstruction-observation-map}, finite-rank readouts
+Eq.~\eqref{eq:ch2.finite-rank-observation}, rank cap
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap}, and null-space laws
+Eqs.~\eqref{eq:ch2.reconstruction-null-space}--\eqref{eq:ch2.nr-superposition-law} are
+presupposed; inverse-source regularization is not re-developed \cite{stratton1941}.
+Plane-wave angular-spectrum filters belong to Section~\ref{sec:ch29}; explicit port circuit
+models are not tabulated \cite{stratton1941}.
+Assumptions. Fix \(\omega>0\), reciprocal media Eq.~\eqref{eq:ch2.reciprocal-medium-class}, passive
+boundary Eq.~\eqref{eq:ch2.passive-impedance-class}, outgoing radiation condition, and admissible sources
+\(\Jimp^{\mathrm{(tx)}},\Jimp^{\mathrm{(rx)}}\in\mathcal{J}_\Omega\) on ports \(A\) and \(B\)
+\cite{stratton1941}. Each port carries a finite-rank observation functional
+\(\mathcal{O}_{\mathrm{meas}}^{(P)}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}\) or
+\(\mathbb{C}^{N_P}\) of the form Eq.~\eqref{eq:ch2.finite-rank-observation}
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} and transport
+qualification Eq.~\eqref{eq:ch2.transport-qualified-radiation} govern when port outputs may be
+reported as radiative transport \cite{harrington2001}. The same \(\mathcal{B}_\Gamma\), outgoing
+branch, and material data are used for both excitations \cite{stratton1941}.
+For port \(P\in\{A,B\}\), define the \emph{port radiation--reception operator}
+
+\begin{equation}
+\label{eq:ch2.port-radiation-reception-operator}
+\mathcal{M}_P
+=
+\mathcal{O}_{\mathrm{meas}}^{(P)}\circ\Lambda_{\mathrm{rad}},
+\qquad
+\Lambda_{\mathrm{rad}}=\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega,
+\end{equation}
+consistent with Eq.~\eqref{eq:ch2.reconstruction-observation-map}
+\cite{stratton1941}. When \(\mathcal{O}_{\mathrm{meas}}^{(P)}\) is scalar,
+\(\mathcal{M}_P[\Jimp]\in\mathbb{C}\) is the complex port response induced by impressed
+\(\Jimp\); when vector-valued, \(\mathcal{M}_P[\Jimp]\in\mathbb{C}^{N_P}\) lists channel
+readouts \cite{stratton1941}. The \emph{transmit map} at port \(B\) due to excitation at
+port \(A\) is the composition \(\Jimp^{\mathrm{(tx)}}\mapsto
+\mathcal{M}_B[\Jimp^{\mathrm{(tx)}}]\); the \emph{receive map} at port \(A\) due to excitation
+at port \(B\) is \(\Jimp^{\mathrm{(rx)}}\mapsto\mathcal{M}_A[\Jimp^{\mathrm{(rx)}}]\)
+\cite{harrington2001}. Algebraically, both are finite-rank linear functionals of
+\(\mathcal{R}_\omega[\Jimp]\); physically, reciprocity constrains their interchange when
+hardware and media are reciprocal \cite{stratton1941}.
+Under Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}) and self-adjoint port
+functionals \(\mathcal{O}_{\mathrm{meas}}^{(P)}\) on \(\mathcal{F}_{\mathrm{rad}}\), the
+complex port response at \(B\) induced by excitation at \(A\) equals the response at \(A\) when
+the impressed source and receive probe are exchanged on reciprocal hardware:
+\begin{equation}
+\label{eq:ch2.transmit-receive-reciprocity}
+\mathcal{M}_B\big[\Jimp^{\mathrm{(tx)}}\big]
+=
+\mathcal{M}_A\big[\Jimp^{\mathrm{(rx)}}\big]
+\quad\text{when}\ 
+\Jimp^{\mathrm{(tx)}}\ \text{and}\ \Jimp^{\mathrm{(rx)}}\ \text{are reciprocal port excitations},
+\end{equation}
+developing Eq.~\eqref{eq:ch2.transmit-receive-swap}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.transmit-receive-reciprocity}
+is the operator reading of the VNA experiment: excite \(A\), read \(B\); swap roles on reciprocal
+media and obtain the same complex port coupling on observable coordinates. It states that the
+observable induced at \(B\) by the transmit source at \(A\) equals the observable at \(A\) when
+the roles of impressed source and probe are exchanged on reciprocal media
+\cite{stratton1941}. It is not a claim that \(\mathcal{M}_B=\mathcal{M}_A\) as
+operators on \(\mathcal{J}_\Omega\): ports may have distinct apertures and channel counts
+\cite{harrington2001}. It \emph{is} a claim that the \emph{bilinear} port coupling is symmetric
+when qualified by Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} on
+\(\operatorname{ran}\mathcal{R}_\omega\) \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (tx) {Port \(A\)\\$\Jimp^{\mathrm{(tx)}}$};
+ \node[ch1box, right=7mm of tx] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (ob) {$\mathcal{O}_{\mathrm{meas}}^{(B)}$};
+ \node[ch1box, right=7mm of ob] (rxout) {Rx at \(B\)};
+ \node[ch1box, below=5mm of tx] (rx) {Port \(B\)\\$\Jimp^{\mathrm{(rx)}}$};
+ \node[ch1box, below=5mm of ob] (ob2) {$\mathcal{O}_{\mathrm{meas}}^{(A)}$};
+ \node[ch1box, below=5mm of rxout] (txout) {Rx at \(A\)};
+ \draw[ch1flow] (tx) -- (r) -- (ob) -- (rxout);
+ \draw[ch1flow] (rx) -- (r) -- (ob2) -- (txout);
+ \draw[ch1flow, dashed] (rxout) to[bend left=20] node[right,font=\scriptsize] {swap} (txout);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch283} transmit--receive measurement sequence: excitation at one port and
+readout at the other interchange under Eq.~\eqref{eq:ch2.transmit-receive-reciprocity} on
+reciprocal media.}
+\label{fig:ch2.transmit-receive-measurement chain}
+\end{figure}
+Figure interpretation. Transmit port $\Jimp^{\mathrm{(tx)}}$ and receive probe $\Jimp^{\mathrm{(rx)}}$ compose through the same $\mathcal{R}_\omega$ and observation $\mathcal{O}_{\mathrm{meas}}$. Swap symmetry Eq.~\eqref{eq:ch2.transmit-receive-swap} holds on observable coordinates after projection onto $\operatorname{ran}\mathcal{R}_\omega$; additions in $\ker\mathcal{R}_\omega$ leave port coupling unchanged. The schematic separates reciprocity-qualified S-parameters from raw near-field cross terms that may violate apparent symmetry while far-zone reciprocity remains valid \cite{stratton1941}. Figure~\ref{fig:ch2.transmit-receive-measurement chain} displays the two compositions constrained by
+Eq.~\eqref{eq:ch2.transmit-receive-reciprocity}. Both paths pass through the same
+\(\mathcal{R}_\omega\); port asymmetry enters only through \(\mathcal{O}_{\mathrm{meas}}^{(A)}\),
+\(\mathcal{O}_{\mathrm{meas}}^{(B)}\) \cite{stratton1941}.
+\phantomsection\label{thm:ch2.radiation-reception-reciprocity}
+Let media satisfy Eq.~\eqref{eq:ch2.reciprocal-medium-class} with passive
+Eq.~\eqref{eq:ch2.passive-impedance-class} completion, and let port operators
+\(\mathcal{M}_P=\mathcal{O}_{\mathrm{meas}}^{(P)}\circ\Lambda_{\mathrm{rad}}\) be defined by
+Eq.~\eqref{eq:ch2.port-radiation-reception-operator} with self-adjoint
+\(\mathcal{O}_{\mathrm{meas}}^{(P)}\) on \(\mathcal{F}_{\mathrm{rad}}\). For admissible port
+sources \(\Jimp^{\mathrm{(tx)}}\), \(\Jimp^{\mathrm{(rx)}}\):
+\begin{enumerate}
+\item[(i)] Scalar reciprocity Eq.~\eqref{eq:ch2.transmit-receive-reciprocity} holds when port
+excitations are paired through Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}).
+\item[(ii)] Bilinear port coupling
+\begin{equation}
+\label{eq:ch2.port-coupling-bilinear}
+\mathfrak{C}_{AB}
+=
+\langle \mathcal{O}_{\mathrm{meas}}^{(B)}[\mathcal{R}_\omega[\Jimp^{\mathrm{(tx)}}]],\,
+\mathcal{O}_{\mathrm{meas}}^{(A)}[\mathcal{R}_\omega[\Jimp^{\mathrm{(rx)}}]]\rangle
+\end{equation}
+is symmetric under interchange of port labels when inner products are those induced by
+Eq.~\eqref{eq:ch2.field-energy-norm} on \(\mathcal{F}_{\mathrm{rad}}\).
+\item[(iii)] Two-port impedance matrix \(\mathbf{Z}\) with entries
+\(Z_{PQ}=\mathcal{M}_P[\Jimp^{(Q)}]\) on matched reciprocal ports satisfies
+\begin{equation}
+\label{eq:ch2.reciprocal-impedance-matrix}
+Z_{PQ}=Z_{QP}.
+\end{equation}
+\item[(iv)] Adding \(\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega\) to either port excitation
+leaves Eqs.~\eqref{eq:ch2.transmit-receive-reciprocity}--\eqref{eq:ch2.reciprocal-impedance-matrix}
+unchanged on observable coordinates.
+\end{enumerate}
+Part (i) applies Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281})(iv) to
+\(\mathcal{R}_\omega[\Jimp^{\mathrm{(tx)}}]\), \(\mathcal{R}_\omega[\Jimp^{\mathrm{(rx)}}]\),
+then self-adjointness of \(\mathcal{O}_{\mathrm{meas}}^{(P)}\)
+\cite{stratton1941}. Part (ii) is
+Eq.~\eqref{eq:ch2.coupling-bilinear-symmetry} with observation weights inserted; symmetry of
+\(\mathfrak{C}_\omega\) from orthogonality and coupling of radiative modes (Subsection~\ref{sec:ch282})(iii)
+\cite{stratton1941}. Part (iii) specializes (ii) to matched port basis vectors
+\cite{harrington2001}. Part (iv) uses
+\(\mathcal{R}_\omega[\Jimp^{\mathrm{(NR)}}]=\mathbf{0}\) and
+null-space invariance of radiative reciprocity (Subsection~\ref{sec:ch281}) \cite{stratton1941}.
+Mathematical role of Eq.~\eqref{eq:ch2.port-coupling-bilinear}. Equation~\eqref{eq:ch2.port-coupling-bilinear} packages mutual coupling as a bilinear form on
+\(\operatorname{ran}\mathcal{R}_\omega\) after port projection \cite{stratton1941}. It reduces
+to Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} when
+\(\mathcal{O}_{\mathrm{meas}}^{(A)}=\mathcal{O}_{\mathrm{meas}}^{(B)}=\mathrm{id}\) on the
+observed subspace \cite{stratton1941}. Physically, \(\mathfrak{C}_{AB}\) is the
+operator form of mutual impedance or scattering amplitude between declared ports when regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} is satisfied \cite{harrington2001}. Finite
+rank Eq.~\eqref{eq:ch2.reconstruction-rank-cap} limits the number of independent entries
+\(\mathfrak{C}_{AB}\) can resolve \cite{stratton1941}.
+On orthonormal modes Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}, port responses expand as
+\begin{equation}
+\label{eq:ch2.port-modal-response-expansion}
+\mathcal{M}_P[\Jimp]
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+w_{P,n}\,\lambda_n\,c_n[\Jimp],
+\end{equation}
+with port weights \(w_{P,n}=\langle \mathbf{f}_P,\mathbf{u}_n\rangle_{\mathcal{U}}\) inherited
+from Eq.~\eqref{eq:ch2.finite-rank-observation} and amplitudes \(c_n\) from
+Eq.~\eqref{eq:ch2.source-modal-amplitude} \cite{stratton1941}. Mutual coupling
+between ports \(A\) and \(B\) becomes
+\begin{equation}
+\label{eq:ch2.port-modal-coupling-sum}
+\mathfrak{C}_{AB}
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+|\lambda_n|^{2}\,w_{A,n}^{*}\,w_{B,n}\,
+c_n[\Jimp^{\mathrm{(tx)}}]^{*}\,c_n[\Jimp^{\mathrm{(rx)}}],
+\end{equation}
+using Eq.~\eqref{eq:ch2.modal-coupling-sum-diagonal} \cite{stratton1941}. Equation
+\eqref{eq:ch2.port-modal-coupling-sum} shows that reciprocity symmetry is diagonal in a mode
+basis but may be dense in fixed laboratory coordinates when degenerate multiplets from
+Subsection~\ref{sec:ch262} are expressed in non-eigenvector bases
+\cite{harrington2001}.
+\phantomsection\label{prop:ch2.measurement-reciprocity}
+For full rank-$N$ instrument readout \(\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\)
+Eq.~\eqref{eq:ch2.reconstruction-observation-map}, reciprocity implies
+\(\mathcal{M}_\omega[\Jimp^{\mathrm{(tx)}}]\) and \(\mathcal{M}_\omega[\Jimp^{\mathrm{(rx)}}]\)
+obey the same swap law Eq.~\eqref{eq:ch2.transmit-receive-reciprocity} on
+\(\operatorname{ran}\mathcal{O}_{\mathrm{meas}}\) \cite{stratton1941}. Sources
+in \(\ker\mathcal{M}_\omega\) leave all port readouts unchanged
+Eq.~\eqref{eq:ch2.reconstruction-null-space}; reciprocity does not resolve those equivalence
+classes \cite{stratton1941}. Rank cap Eq.~\eqref{eq:ch2.reconstruction-rank-cap} bounds
+independent reciprocal channels \cite{harrington2001}.
+Apply reciprocity in radiation and reception (Subsection~\ref{sec:ch283})(i) with
+\(\mathcal{O}_{\mathrm{meas}}^{(A)}=\mathcal{O}_{\mathrm{meas}}^{(B)}=\mathcal{O}_{\mathrm{meas}}\)
+\cite{stratton1941}. Null-space invariance is
+measurement null-space extension (Subsection~\ref{sec:ch271}) \cite{stratton1941}. \phantomsection\label{prop:ch2.accessible-sector-reciprocity}
+Let accessible modal sector Eq.~\eqref{eq:ch2.accessible-modal-sector} restrict far-zone content
+to \(\mathcal{K}_{\mathrm{acc}}\). Then Eqs.~\eqref{eq:ch2.transmit-receive-reciprocity}--\eqref{eq:ch2.reciprocal-impedance-matrix}
+hold on \(\mathcal{K}_{\mathrm{acc}}\) after projection, while suppressed directions
+Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} remain unobservable independently of reciprocity
+\cite{stratton1941}. Angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} composes with port reciprocity without
+eliminating null-space or geometric deficits \cite{stratton1941}.
+Reciprocity acts on \(\operatorname{ran}\mathcal{R}_\omega\); geometric and observation
+constraints from geometric constraints on radiative spectra (Subsection~\ref{sec:ch264}) and
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} restrict reported coordinates only
+Laboratory errors and broken reciprocity. Magneto-electric media, active surfaces, and non-reciprocal port calibrations break
+Eq.~\eqref{eq:ch2.transmit-receive-reciprocity} even when export maps differ
+\(\mathcal{S}_\omega\) are accurate \cite{stratton1941}. Near-zone reactive
+coupling measured without \(\Pi_{\mathrm{rad}}\) can appear non-reciprocal while For matched half-wave dipole ports at $k_0 a=1.2$ with $d=4a$, Eq.~\eqref{eq:ch2.reciprocal-impedance-matrix} requires $Z_{12}=Z_{21}$ when entries are extracted from $\mathcal{R}_\omega[\Jimp^{\mathrm{(tx)}}]$ on the far-zone branch. A typical reciprocity check gives $|Z_{12}-Z_{21}|/|Z_{11}|<0.02$ in reciprocal vacuum; swapping transmit and receive probes while holding $\mathcal{O}_{\mathrm{meas}}$ fixed reproduces the same mutual entry within numerical tolerance \cite{jackson1999}. If near-field probes at $k_0 r=1.5$ report $|Z_{12}/Z_{21}-1|\approx0.18$, the discrepancy is a regime failure, not a Lorentz violation: re-meter on $\mathcal{R}_\omega[\cdot]$ with $k_0 r>3$ before asserting broken reciprocity \cite{harrington2001}. Eq.~\eqref{eq:ch2.radiation-map-reciprocity} holds on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{harrington2001}. Using different outgoing branches or terminations for
+transmit and receive models violates the shared-operator assumption behind reciprocity in radiation and reception (Subsection~\ref{sec:ch283}) \cite{stratton1941}. Tikhonov inversion
+Eq.~\eqref{eq:ch2.tikhonov-source-reconstruction} does not restore reciprocity where
+\(\ker\mathcal{M}_\omega\) is nontrivial \cite{harrington2001}.
+Subsection~\ref{sec:ch283} requires linear reciprocal media at fixed \(\omega\), passive
+\(\mathcal{B}_\Gamma\), self-adjoint port functionals, and outgoing radiation condition
+\cite{stratton1941}. It does not identify unique \(\Jimp\) from port data when
+Eq.~\eqref{eq:ch2.reconstruction-null-space} is nontrivial \cite{stratton1941}. It does not
+replace angular-spectrum operators in Section~\ref{sec:ch29} or harmonic bases in
+\ref{ch:03} \cite{stratton1941}. Regime
+qualification Eq.~\eqref{eq:ch2.regime-operator-screen} remains mandatory before transport
+interpretation of port coupling \cite{stratton1941}. \medskip
+\noindent
+Section~\ref{sec:ch28} closes the reciprocity chain begun in its introduction:
+Lorentz reciprocity in operator form (Subsection~\ref{sec:ch281}),
+orthogonality and coupling of radiative modes (Subsection~\ref{sec:ch282}), and
+reciprocity in radiation and reception (Subsection~\ref{sec:ch283})
+\cite{stratton1941}. Spectral coordinates
+from Section~\ref{sec:ch26} and null-space structure from Section~\ref{sec:ch27} now meet
+exchange symmetry: bilinear coupling on \(\operatorname{ran}\mathcal{R}_\omega\) is constrained
+by Eqs.~\eqref{eq:ch2.lorentz-reciprocity-operator}--\eqref{eq:ch2.reciprocal-impedance-matrix},
+while \(\ker\mathcal{R}_\omega\), finite observation rank
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap}, and angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} explain deficits reciprocity alone does not
+remove \cite{stratton1941}. Section~\ref{sec:ch29} develops plane-wave action and
+retained/suppressed angular components on the same outgoing branch; Subsection~\ref{sec:ch294}
+refines far-field angular accessibility; \ref{ch:03} supplies explicit harmonic
+orthogonality used by reference through Subsection~3.4.3
+\cite{harrington2001}. Transport and port-coupling claims must compose with
+Eq.~\eqref{eq:ch2.section28-reciprocity-chain}, regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen}, and null-space chain
+Eq.~\eqref{eq:ch2.section27-nullspace-chain}, not with raw \(\mathcal{S}_\omega[\Jimp]\) or
+unqualified near-zone reactive content \cite{stratton1941}.

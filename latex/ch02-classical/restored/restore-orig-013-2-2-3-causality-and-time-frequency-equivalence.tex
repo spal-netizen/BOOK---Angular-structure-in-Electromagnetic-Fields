@@ -1,0 +1,462 @@
+% Stage 8 restored fragment — 2.2.3 Causality and time-frequency equivalence (archive lines 3006-3480)
+\subsection{Causality and time-frequency equivalence}
+\label{sec:ch223}
+
+A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Causality and time-frequency equivalence'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+The physical problem is retarded response: no field at $(\mathbf{r},t)$ may depend on source
+events that have not yet had time to propagate from $\mathbf{r}'$ to $\mathbf{r}$
+\cite{maxwell1873}. On the range, this is the difference between a
+measured impulse response that vanishes before the light-travel delay and an unphysical
+advanced template that leads the feed. A pulsed compact-range measurement makes the
+distinction visible: energy arrives only after transit time $|\mathbf{r}-\mathbf{r}'|/c_0$;
+a single-frequency phasor can hide violations that broadband synthesis would expose
+\cite{harrington2001}. Causality is therefore the principle that links time-domain evolution
+to harmonic analysis before any Laplace or resolvent notation is introduced
+\cite{stratton1941}. A time-domain operator is causal when no response can occur before the
+corresponding excitation \cite{stratton1941}. In electromagnetics this requirement appears
+through retarded propagation: disturbances generated at one location influence another only
+after the finite transit time imposed by the speed of light \cite{sommerfeld1949}.
+Subsection~\ref{sec:ch223} supplies the definitive proof that $\mathcal{S}_\omega$ and
+$\mathcal{R}_\omega$ are the frequency-domain images of causal time-domain maps when
+impressed data, media, and boundary class are held fixed \cite{stratton1941}. The retarded
+Eq.~\eqref{eq:ch2.causality-retarded} and symbolic relation
+Eq.~\eqref{eq:ch2.time-to-frequency-map} are upgraded to an equivalence theorem;
+Green-function construction remains in Section~\ref{sec:ch23} \cite{stratton1941}.
+Causal support. A time-domain operator \(\mathcal{K}\) is \emph{causal} if
+
+\begin{equation}
+\label{eq:ch2.causal-operator-support}
+\mathcal{K}[f](t)=0\ \text{for}\ t<t_0
+\quad\text{whenever}\ 
+\operatorname{supp}_t f\subseteq[t_0,\infty),
+\end{equation}
+for admissible test functions \(f\) \cite{stratton1941}. Retarded propagation forbids
+response before transit time $|\mathbf{r}-\mathbf{r}'|/c$; frequency-domain Green
+functions used on ranges are analytic continuations of that support, while broadband
+pulses expose violations that single-frequency phasors can hide \cite{sommerfeld1949}.
+The retarded dyadic kernel
+in Eq.~\eqref{eq:ch2.retarded-convolution-form} satisfies
+\begin{equation}
+\label{eq:ch2.retarded-kernel-support}
+\mathcal{G}(\mathbf{r},\mathbf{r}',t-t')=\mathbf{0}\quad\text{for}\ t-t'<0,
+\end{equation}
+which enforces Eq.~\eqref{eq:ch2.causal-support-constraint} on \(\E\)
+\cite{stratton1941}. Advanced kernels with
+\(\mathcal{G}(\mathbf{r},\mathbf{r}',t-t')\neq\mathbf{0}\) for \(t-t'<0\) violate
+Eq.~\eqref{eq:ch2.causal-operator-support} and are excluded from the equivalence
+class treated here.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (td) {$\mathcal{S}_t$\\time domain};
+ \node[ch1box, right=7mm of td] (lt) {Laplace\\$s=-\jj\omega$};
+ \node[ch1box, right=7mm of lt] (fd) {$\mathcal{S}_\omega$\\harmonic};
+ \draw[ch1flow] (td) -- (lt) -- (fd);
+\end{tikzpicture}%
+}
+\caption{Causality link: causal \(\mathcal{S}_t\) maps to harmonic
+\(\mathcal{S}_\omega\) under Laplace/Fourier evaluation on the locked phasor axis
+\(s=-\jj\omega\), \(\omega>0\).}
+\label{fig:ch2.laplace-resolvent-linkage}
+\end{figure}
+Let
+\(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)\) be an impressed current with compact
+support in \(\Omega_s\times[0,\infty)\) and let \(\mathbf{U}_0=\mathbf{0}\) for
+simplicity. The Laplace transform in \(s\) with \(\Re\{s\}\) sufficiently large is
+\begin{equation}
+\label{eq:ch2.laplace-source-transform}
+\widetilde{\mathbf{j}}(\mathbf{r},s)
+=
+\int_0^\infty \mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)\,e^{-st}\,dt.
+\end{equation}
+On the phasor axis \(s=-\jj\omega\) with \(\omega>0\),
+\begin{equation}
+\label{eq:ch2.fourier-phasor-identification}
+\widetilde{\mathbf{j}}(\mathbf{r},-\jj\omega)
+=
+\int_0^\infty \mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)\,e^{\jj\omega t}\,dt,
+\end{equation}
+which is the Fourier transform restricted to causal support
+\cite{stratton1941}. For \(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)=\Re\{\underline{\mathbf{j}}(\mathbf{r})e^{-\jj\omega_0 t}\}\)
+with fixed \(\omega_0>0\), Eq.~\eqref{eq:ch2.fourier-phasor-identification}
+selects the phasor \(\underline{\mathbf{j}}\) under the locked convention
+\(\exp(-\jj\omega t)\) \cite{stratton1941}. Applying the Laplace transform to Eq.~\eqref{eq:ch2.time-ibvp-package} with fixed
+\(\mathcal{B}_\Gamma\) and homogeneous initial data yields, formally,
+\begin{equation}
+\label{eq:ch2.laplace-maxwell-resolvent}
+\widetilde{\mathbf{U}}(\mathbf{r},s)
+=
+\mathcal{R}(s)\,\widetilde{\mathbf{F}}(s),
+\qquad
+\mathcal{R}(s)=\mathcal{L}_s^{-1},
+\end{equation}
+where \(\mathcal{L}_s\) is the Laplace-domain Maxwell operator obtained from
+\(\mathcal{A}\) by Eq.~\eqref{eq:ch2.frequency-substitution-rule} with
+\(\partial_t\to s\) \cite{stratton1941}. On the axis \(s=-\jj\omega\),
+\(\mathcal{L}_s=\mathcal{L}_\omega\) from Eq.~\eqref{eq:ch2.composite-operator-domain},
+so
+\begin{equation}
+\label{eq:ch2.resolvent-green-equivalence}
+\mathcal{R}(-\jj\omega)=\mathcal{L}_\omega^{-1}
+\quad\text{on the outgoing/resolvent branch,}
+\end{equation}
+and the retarded convolution Eq.~\eqref{eq:ch2.retarded-convolution-form} is the
+inverse Laplace transform of Eq.~\eqref{eq:ch2.laplace-maxwell-resolvent} when
+\(\mathcal{G}\) is the causal Green operator constructed in Section~\ref{sec:ch23}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.resolvent-green-equivalence}
+is the operator form of Eq.~\eqref{eq:ch2.causality-retarded}: harmonic
+inversion is not an independent postulate but the \(s=-\jj\omega\) evaluation of a
+causal resolvent.
+The equivalence theorem requires explicit assumptions:
+\begin{equation}
+\label{eq:ch2.equivalence-assumptions}
+\begin{aligned}
+&\text{(i)}\ \mathcal{B}_\Gamma\ \text{and}\ \varepsilon,\mu\ \text{fixed in time},\\
+&\text{(ii)}\ \mathbf{j}_{\mathrm{imp}}\ \text{causal with}\ \operatorname{supp}_t\subseteq[0,\infty),\\
+&\text{(iii)}\ \text{outgoing/resolvent branch selected for exterior domains},\\
+&\text{(iv)}\ \mathbf{U}_0=\mathbf{0}\ \text{or compatible with harmonic steady limit}.
+\end{aligned}
+\end{equation}
+Under Eqs.~\eqref{eq:ch2.equivalence-assumptions},
+\begin{equation}
+\label{eq:ch2.harmonic-equivalence-theorem}
+\mathcal{S}_\omega[\underline{\mathbf{j}}]
+=
+\eval{\widetilde{\mathbf{U}}(\mathbf{r},s)}_{s=-\jj\omega}
+=
+\eval{\mathcal{L}_\omega^{-1}\widetilde{\mathbf{F}}(s)}_{s=-\jj\omega},
+\end{equation}
+where \(\underline{\mathbf{j}}\) is the phasor of
+\(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)=\Re\{\underline{\mathbf{j}}(\mathbf{r})e^{-\jj\omega t}\}\)
+and \(\widetilde{\mathbf{F}}\) is the Laplace forcing induced by
+\(\widetilde{\mathbf{j}}\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.harmonic-equivalence-theorem} is the formal statement that
+frequency-domain solvers implement causal time-domain maps when
+Eqs.~\eqref{eq:ch2.equivalence-assumptions} hold \cite{harrington2001}. For
+single-frequency excitation with damping or outgoing radiation,
+\begin{equation}
+\label{eq:ch2.steady-state-harmonic-limit}
+\lim_{t\to\infty}\mathbf{U}(t)
+=
+\Re\big\{\mathcal{S}_\omega[\underline{\mathbf{j}}]\,e^{-\jj\omega t}\big\},
+\end{equation}
+which justifies steady-state phasor measurements after switch-on transients decay
+\cite{stratton1941}. Because $\Pi_{\mathrm{rad}}$ is linear and commutes with harmonic
+extraction on the outgoing subspace,
+\begin{equation}
+\label{eq:ch2.radiation-time-frequency-equiv}
+\mathcal{R}_\omega[\underline{\mathbf{j}}]
+=
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\underline{\mathbf{j}}],
+\end{equation}
+with transport and regime qualifications from
+Eq.~\eqref{eq:ch2.transport-qualified-radiation} unchanged
+\cite{stratton1941}. Frequency-domain codes that invert $\mathcal{L}_\omega$ without
+outgoing or passive completion implement a different resolvent branch than the causal
+retarded $\mathcal{G}$ of Eq.~\eqref{eq:ch2.retarded-convolution-form}
+\cite{harrington2001}. Advanced Green functions satisfy
+\begin{equation}
+\label{eq:ch2.advanced-kernel-violation}
+\mathcal{G}_{\mathrm{adv}}(\mathbf{r},\mathbf{r}',t-t')\neq\mathbf{0}
+\ \text{for some}\ t-t'<0,
+\end{equation}
+and cannot satisfy Eq.~\eqref{eq:ch2.harmonic-equivalence-theorem} for any causal
+$\mathbf{j}_{\mathrm{imp}}$ \cite{stratton1941}. Broadband synthesis requires
+superposition over $\omega$, and time-varying $\mathcal{B}_\Gamma(t)$ breaks assumption
+(i) in Eq.~\eqref{eq:ch2.equivalence-assumptions} \cite{stratton1941}.
+Subsections~\ref{sec:ch221}--\ref{sec:ch223} fixed evolution, harmonic operators, and
+causality. Subsection~\ref{sec:ch224} supplies spectral partitions into propagating,
+evanescent, and non-propagating subspaces in operator form \cite{stratton1941}.
+Reactive versus radiative regime criteria from Section~\ref{sec:ch01.2.4} are invoked by
+reference; the outgoing selector $\Pi_{\mathrm{rad}}$ of
+Eq.~\eqref{eq:ch2.radiation-operator-def} is refined spectrally, not replaced
+\cite{poynting1884}.
+The physical problem is spectral transport: a near-field scanner records both traveling and
+decaying longitudinal content, yet only outgoing propagating modes may enter far-zone power
+reports \cite{hansen1988}. Subsection~\ref{sec:ch224} defines propagating, evanescent, and non-propagating spectral
+subspaces and refines \(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\)
+so that only outgoing propagating content qualifies for far-zone transport reports
+\cite{stratton1941}. Recall that $\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega$ produces the
+full harmonic field pair, $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$
+retains only radiative content, and $\Pi_{\mathrm{rad}}$ acts after propagating selection
+\cite{harrington2001}. A near-field scanner routinely measures both propagating and evanescent spectral content.
+The distinction becomes visible when reconstructed fields are propagated away from the
+measurement surface: propagating components persist, whereas evanescent components decay
+exponentially with distance \cite{hansen1988}. The spectral decomposition
+developed below states that experimentally familiar observation in spectral language.
+In a homogeneous region with symbol \(k_0\) from Eq.~\eqref{eq:ch2.helmholtz-symbol},
+plane-wave trials decompose the field into lateral and longitudinal wavenumber components.
+The dispersion relation below is the local criterion that
+separates traveling from decaying longitudinal behavior: when lateral wavenumber
+\(k_t=\sqrt{k_x^2+k_y^2}\) exceeds \(k_0\), no real propagating longitudinal root exists
+and the mode becomes evanescent \cite{stratton1941}. Experimentally one would observe that
+near-field scan content with \(k_t>k_0\) dies away within a penetration depth
+\(\delta_{\mathrm{ev}}=1/\alpha(k_t)\) as the field is propagated outward
+\cite{hansen1988}. Plane-wave trials \(\mathbf{u}_{\mathbf{k}}(\mathbf{r})=\mathbf{u}_0\,e^{-\jj\mathbf{k}\cdot\mathbf{r}}\)
+satisfy the Helmholtz condition when
+\begin{equation}
+\label{eq:ch2.dispersion-relation}
+|\mathbf{k}|=k_0,\qquad
+k_z^2=k_0^2-k_x^2-k_y^2,
+\end{equation}
+with lateral wavenumber \(k_t=\sqrt{k_x^2+k_y^2}\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.dispersion-relation} splits spectral content by longitudinal behavior:
+\begin{equation}
+\label{eq:ch2.longitudinal-wavenumber-split}
+k_z=
+\begin{cases}
+\pm\sqrt{k_0^2-k_t^2}, & k_t\le k_0\ \text{(propagating)},\\[4pt]
+-\jj\,\alpha(k_t), & k_t>k_0\ \text{(evanescent)},\ \alpha>0,
+\end{cases}
+\end{equation}
+where the evanescent root is chosen with decay in the \(+z\) half-space
+\cite{stratton1941}. For \(k_t>k_0\) the decay rate is
+\begin{equation}
+\label{eq:ch2.evanescent-decay-rate}
+\alpha(k_t)=\sqrt{k_t^2-k_0^2},
+\end{equation}
+so a pure evanescent trial on \(z>0\) scales as
+\(e^{-\alpha(k_t)z}\) with penetration depth \(\delta_{\mathrm{ev}}=1/\alpha(k_t)\)
+\cite{stratton1941}. Propagating modes carry real \(k_z=\pm\sqrt{k_0^2-k_t^2}\) and
+oscillatory phase along the longitudinal axis; evanescent modes carry imaginary
+\(k_z\) and store reactive energy in the near zone without far-zone power export
+\cite{harrington2001}. At fixed \((k_x,k_y)\), the Helmholtz symbol
+\(\mathcal{L}_\omega\) from Subsection~\ref{sec:ch222} acts on each longitudinal
+branch as a scalar multiplier in the plane-wave basis, which is why spectral
+partitions commute with harmonic extraction once outgoing radiation condition is fixed on the
+propagating sheet \cite{stratton1941}.
+Transverse polarization completes the mode description. For a trial electric field
+\(\widetilde{\E}(k_x,k_y)\,e^{-\jj(k_x x+k_y y+k_z z)}\), source-free admissibility
+requires \(\mathbf{k}\cdot\widetilde{\E}=0\) in the homogeneous region
+\cite{stratton1941}. Decompose \(\mathbf{k}=\mathbf{k}_t+k_z\hat{\mathbf{z}}\)
+with \(\mathbf{k}_t=k_x\hat{\mathbf{x}}+k_y\hat{\mathbf{y}}\). Then
+\begin{equation}
+\label{eq:ch2.transverse-polarization-constraint}
+k_x\widetilde{E}_x+k_y\widetilde{E}_y+k_z\widetilde{E}_z=0,
+\end{equation}
+which leaves two independent transverse amplitudes on each branch of
+Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split}. On the propagating sheet,
+Eq.~\eqref{eq:ch2.transverse-polarization-constraint} supports traveling power
+along \(\hat{\mathbf{z}}\) when outgoing \(k_z\) is selected; on the evanescent sheet
+the same constraint forces predominantly tangential storage with longitudinal
+\(E_z\) tied to \(\alpha(k_t)\) \cite{stratton1941}. Subsection~\ref{sec:ch224}
+does not classify TE/TM guide nomenclature---that labeling is deferred to
+waveguide sections---but Eq.~\eqref{eq:ch2.transverse-polarization-constraint}
+is the local polarization criterion paired with the dispersion criterion of
+Eq.~\eqref{eq:ch2.dispersion-relation} \cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (kt) {$k_t$};
+ \node[ch1box, right=7mm of kt] (prop) {$k_t\le k_0$\\propagating};
+ \node[ch1box, below=5mm of kt] (ev) {$k_t>k_0$\\evanescent};
+ \draw[ch1flow] (kt.east) -- (kt.east |- prop.west);
+ \draw[ch1flow] (kt.east |- prop.west) -- (prop.west);
+ \draw[ch1flow] (kt.south) -- (kt.south |- ev.north);
+ \draw[ch1flow] (kt.south |- ev.north) -- (ev.north);
+\end{tikzpicture}%
+}
+\caption{Dispersion split Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split}: lateral
+wavenumber \(k_t\) selects propagating versus evanescent longitudinal behavior at
+fixed \(k_0\).}
+\label{fig:ch2.propagating-evanescent-split}
+\end{figure}
+Angular-spectrum representations in
+Section~\ref{sec:ch29} expand fields in these modes; here the subspaces are defined
+as solution domains \cite{stratton1941}. Let \(\mathcal{F}_{\mathrm{prop}}\subset\mathcal{F}_\Omega\) be the completion of
+finite superpositions of propagating plane waves with outgoing \(k_z\) selected by
+exterior completion, let \(\mathcal{F}_{\mathrm{ev}}\subset\mathcal{F}_\Omega\) be the
+closure of evanescent superpositions, and let
+\(\mathcal{F}_{\mathrm{non}}\subset\mathcal{F}_\Omega\) collect modes that are
+neither outgoing-propagating nor evanescent-decaying in the declared half-space---for
+example cutoff guide modes and purely reactive standing content tied to terminals
+\cite{stratton1941}. 
+\phantomsection\label{sec:ch224}
+Orthogonal spectral projectors (formal) satisfy
+
+\begin{equation}
+\label{eq:ch2.spectral-projectors}
+\Pi_{\mathrm{prop}}+\Pi_{\mathrm{ev}}+\Pi_{\mathrm{non}}=\mathrm{id}
+\quad\text{on}\ \widehat{\mathcal{F}}_\Omega,
+\end{equation}
+with \(\widehat{\mathcal{F}}_\Omega\) the spectral completion of admissible states
+\cite{stratton1941}. Idempotency and mutual annihilation read
+\begin{equation}
+\label{eq:ch2.spectral-projector-algebra}
+\Pi_{\mathrm{prop}}^2=\Pi_{\mathrm{prop}},\quad
+\Pi_{\mathrm{ev}}^2=\Pi_{\mathrm{ev}},\quad
+\Pi_{\mathrm{non}}^2=\Pi_{\mathrm{non}},\quad
+\Pi_{\mathrm{prop}}\Pi_{\mathrm{ev}}=\Pi_{\mathrm{ev}}\Pi_{\mathrm{prop}}=0,
+\end{equation}
+with analogous zero products for \(\Pi_{\mathrm{non}}\) \cite{stratton1941}. On
+\(\mathcal{D}(\mathcal{L}_\omega)\) from Subsection~\ref{sec:ch222}, each projector
+block is an invariant subspace of the scalar Helmholtz symbol in the plane-wave
+basis,
+\medskip
+Equations~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra} are
+\emph{formal} on the spectral completion \(\widehat{\mathcal{F}}_\Omega\): idempotency and
+orthogonality are justified in the rigged Hilbert space treatment of Chapter~3 (\emph{Angular Momentum Operators and SO(3)})
+Subsections~3.1.3--3.5.2 \cite{stratton1941}. Until that completion,
+projector algebra is used only on admissible finite superpositions and on
+\(\mathcal{R}_\omega[\Jimp]\), where outgoing selection is already enforced
+\cite{harrington2001}. \begin{equation}
+\label{eq:ch2.helmholtz-subspace-commutation}
+\mathcal{L}_\omega\big(\Pi_{\mathrm{prop}}\mathbf{u}\big)
+=
+\Pi_{\mathrm{prop}}\big(\mathcal{L}_\omega\mathbf{u}\big),
+\end{equation}
+and similarly for \(\Pi_{\mathrm{ev}}\) and \(\Pi_{\mathrm{non}}\) when boundary
+closure does not mix sheets \cite{harrington2001}. Equation
+\eqref{eq:ch2.helmholtz-subspace-commutation} is the operator reason harmonic
+solvers can treat propagating and evanescent content separately before radiation
+selection; Sommerfeld outgoing radiation condition in Section~\ref{sec:ch24} acts only on
+\(\Pi_{\mathrm{prop}}\) \cite{stratton1941}.
+The decomposition
+\begin{equation}
+\label{eq:ch2.propagating-evanescent-decomposition}
+\mathcal{S}_\omega[\Jimp]
+=
+\Pi_{\mathrm{prop}}\mathcal{S}_\omega[\Jimp]
++\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]
++\Pi_{\mathrm{non}}\mathcal{S}_\omega[\Jimp]
+\end{equation}
+holds when the impressed spectrum excites all three classes. Only
+\(\Pi_{\mathrm{prop}}\mathcal{S}_\omega[\Jimp]\) is eligible for far-zone radiation
+content after outgoing radiation condition; evanescent and non-propagating components remain in
+reactive storage exchange \cite{stratton1941}. Energy norms from
+Eq.~\eqref{eq:ch2.field-energy-norm} decompose orthogonally in the spectral basis
+when the impressed angular spectrum has sufficient decay in \((k_x,k_y)\)
+\cite{stratton1941}.
+\begin{equation}
+\label{eq:ch2.rad-projection-composition}
+\Pi_{\mathrm{rad}}
+=
+\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}},
+\end{equation}
+where \(\mathcal{O}_{\mathrm{out}}\) enforces outgoing selection on propagating
+content compatible with Eq.~\eqref{eq:ch1.radiation-trace-condition}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.rad-projection-composition} refines
+\(\Pi_{\mathrm{rad}}\): radiative subspace \(\mathcal{F}_{\mathrm{rad}}\) is a
+subset of \(\Pi_{\mathrm{prop}}\mathcal{F}_\Omega\), not of all of
+\(\mathcal{F}_\Omega\) \cite{harrington2001}. Evanescent and non-propagating
+components lie in the null space of far-zone radiation:
+\begin{equation}
+\label{eq:ch2.rad-null-on-evanescent}
+\Pi_{\mathrm{rad}}\Pi_{\mathrm{ev}}=0,\qquad
+\Pi_{\mathrm{rad}}\Pi_{\mathrm{non}}=0,
+\end{equation}
+while \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}=\Pi_{\mathrm{rad}}\) after outgoing
+closure \cite{stratton1941}. Equations~\eqref{eq:ch2.rad-null-on-evanescent} and
+\eqref{eq:ch2.rad-projection-composition} restate, in projector form, the regime
+logic of Section~\ref{sec:ch01.2.4}: reactive near fields may be large even when
+\(\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]=\mathbf{0}\) \cite{harrington2001}.
+Causality from Subsection~\ref{sec:ch223} ensures retarded support but does not,
+by itself, promote evanescent content into \(\mathcal{F}_{\mathrm{rad}}\).
+\medskip
+For all \(r>r_{\min}(a,\lambda_0)\) and every transport, flux, near-to-far, and angular-spectrum
+statement in Sections~\ref{sec:ch25}--\ref{sec:ch210},
+\begin{equation*}
+\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}
+\quad\text{as in Eq.~\eqref{eq:ch2.rad-projection-composition}.}
+\end{equation*}
+Earlier uses of \(\Pi_{\mathrm{rad}}\) in Section~\ref{sec:ch20} are to be read through this
+refinement \cite{stratton1941}. Transport qualification from Section~\ref{sec:ch01.2.4} enters as an operator criterion:
+\begin{equation}
+\label{eq:ch2.regime-operator-screen}
+\mathcal{D}_{J,\mathrm{reg}}=1
+\ \Longrightarrow\
+\text{transport reports use}\ 
+\Pi_{\mathrm{prop}}\mathcal{R}_\omega[\Jimp],
+\ \text{not}\ \Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp],
+\end{equation}
+with \(\mathcal{D}_{J,\mathrm{reg}}\) from
+Eq.~\eqref{eq:ch1.regime-qualified-decision} \cite{stratton1941}. Equation
+\eqref{eq:ch2.regime-operator-screen} is the operator restatement of
+Eq.~\eqref{eq:ch2.transport-qualified-radiation}; regime indices \(\chi(r)\) and
+\(\chi_\Omega\) diagnose when Eq.~\eqref{eq:ch2.regime-operator-screen} fails on a
+measurement shell \cite{stratton1941}.
+Waveguide and cutoff structures illustrate non-propagating subspaces. For a uniform
+guide with lateral eigenvalue \(\kappa_n\), mode \(n\) propagates only when
+\begin{equation}
+\label{eq:ch2.cutoff-condition}
+k_0^2>\kappa_n^2
+\quad\Longleftrightarrow\quad
+\omega>\omega_{c,n}=\frac{c_0\kappa_n}{\sqrt{\varepsilon_r\mu_r}},
+\end{equation}
+with \(\omega_{c,n}\) the cutoff angular frequency \cite{stratton1941}. Below
+cutoff, the mode lies in \(\mathcal{F}_{\mathrm{ev}}\) or
+\(\mathcal{F}_{\mathrm{non}}\) depending on boundary termination; applying far-zone
+transport formulas to such fields violates Eq.~\eqref{eq:ch2.regime-operator-screen}
+as in the TE\(_{10}\) illustration of Section~\ref{sec:ch01.1.2}
+\cite{harrington2001}. In a rectangular guide of width \(a\), lateral eigenvalues
+\(\kappa_{m,n}=\sqrt{(m\pi/a)^2+(n\pi/b)^2}\) replace \(k_t\) in
+Eq.~\eqref{eq:ch2.cutoff-condition}; each mode index \((m,n)\) switches from
+\(\mathcal{F}_{\mathrm{non}}\) to \(\mathcal{F}_{\mathrm{prop}}\) only when
+\(\omega\) exceeds its cutoff \cite{stratton1941}. Near cutoff the propagating
+group velocity vanishes and stored reactive energy dominates even though the mode
+has crossed into \(\Pi_{\mathrm{prop}}\); Eq.~\eqref{eq:ch1.radiative-regime-condition}
+remains the far-zone transport criterion, not Eq.~\eqref{eq:ch2.cutoff-condition} alone
+\cite{harrington2001}.
+Angular-spectrum expansion: expand \(\E(\mathbf{r})\) on \(z=\mathrm{const}\) as
+\begin{equation}
+\label{eq:ch2.angular-spectrum}
+\E(\mathbf{r})
+=
+\int\!\!\int \widetilde{\E}(k_x,k_y)\,
+e^{-\jj(k_x x+k_y y+k_z(k_t) z)}\,dk_x\,dk_y,
+\end{equation}
+with \(k_z(k_t)\) from Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.angular-spectrum} is the
+Chapter~\ref{ch:02} spectral template for Section~\ref{sec:ch29}; full radiation
+operator action on angular spectra is developed there. Subsection~\ref{sec:ch224} only
+defines the propagating/evanescent partition induced by
+Eq.~\eqref{eq:ch2.dispersion-relation} \cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (s) {$\mathcal{S}_\omega[\Jimp]$};
+ \node[ch1box, right=7mm of s] (pp) {$\Pi_{\mathrm{prop}}$};
+ \node[ch1box, right=7mm of pp] (pr) {$\Pi_{\mathrm{rad}}$}; \node[ch1box, below=5mm of s] (pe) {$\Pi_{\mathrm{ev}}$};
+ \node[ch1box, below=5mm of pe] (pn) {$\Pi_{\mathrm{non}}$};
+ \draw[ch1flow] (s) -- (pp) -- (pr);
+ \draw[ch1flow] (s.south) -- (s.south |- pe.north);
+ \draw[ch1flow] (s.south |- pe.north) -- (pe.north);
+ \draw[ch1flow] (s.east) -- (s.east |- pn.west);
+ \draw[ch1flow] (s.east |- pn.west) -- (pn.west);
+\end{tikzpicture}%
+}
+\caption{Spectral criterion: only \(\Pi_{\mathrm{prop}}\) content passes to
+\(\Pi_{\mathrm{rad}}\); evanescent and non-propagating components remain reactive.}
+\label{fig:ch2.spectral-radiation-criterion}
+\end{figure}
+Figure~\ref{fig:ch2.source-radiation-sequence}. Causality from
+Subsection~\ref{sec:ch223} does not automatically place evanescent energy in
+\(\mathcal{F}_{\mathrm{rad}}\); spectral and regime qualifications are additional
+\cite{stratton1941}. Near-zone reactive fields decompose into large evanescent and non-propagating
+fractions even when \(\mathcal{S}_\omega[\Jimp]\) is exact. As \(r\to\infty\),
+\(\Pi_{\mathrm{prop}}\) content dominates \(P_{\mathrm{rad}}\) when
+Eq.~\eqref{eq:ch1.radiative-regime-condition} holds \cite{stratton1941}. Operator
+norms on subspaces satisfy
+\begin{equation}
+\label{eq:ch2.subspace-energy-inequality}
+\|\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\|_{\mathcal{U}}
+\gg
+\|\Pi_{\mathrm{prop}}\mathcal{S}_\omega[\Jimp]\|_{\mathcal{U}}
+\quad\text{on near shells,}
+\end{equation}
+while the reverse inequality governs far-zone radiative observables
+\cite{harrington2001}. Subsection~\ref{sec:ch224} does not compute
+shell integrals; it supplies the spectral vocabulary for
+Section~\ref{sec:ch252} and flux operators in Section~\ref{sec:ch25}.
+With Subsections~\ref{sec:ch221}--\ref{sec:ch224} complete, Section~\ref{sec:ch22}
+has connected time-domain evolution, harmonic Maxwell and Helmholtz operators,
+causal equivalence, and propagating--evanescent spectral split on the function spaces
+of Section~\ref{sec:ch21}. Green-function inversion in Section~\ref{sec:ch23}
+realizes \(\mathcal{L}_\omega^{-1}\) and \(\mathcal{G}_{E,\omega}\) with retarded
+causality; Sommerfeld selection in Section~\ref{sec:ch24} fixes outgoing branches for
+\(\Pi_{\mathrm{prop}}\) and \(\Pi_{\mathrm{rad}}\); radiation integrals in
+Section~\ref{sec:ch25} meter flux on the propagating subspace qualified by
+Eq.~\eqref{eq:ch2.regime-operator-screen} \cite{stratton1941}.

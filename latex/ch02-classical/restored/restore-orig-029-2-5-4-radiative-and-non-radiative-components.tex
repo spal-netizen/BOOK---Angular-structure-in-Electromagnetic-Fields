@@ -1,0 +1,222 @@
+% Stage 8 restored fragment — 2.5.4 Radiative and non-radiative components (archive lines 7127-7360)
+\subsection{Radiative and non-radiative components}
+\label{sec:ch254}
+A compact-range engineer can measure strong electric and magnetic fields within one wavelength
+of a horn mouth while the far-zone gain remains modest: reactive energy stored near the feed
+is large, yet little of it crosses a distant measurement sphere as export
+\cite{poynting1884}. Conversely, currents in $\ker\mathcal{R}_\omega$ can sustain
+elaborate near-field structure while producing no far-field signature---the classical
+non-radiating source \cite{harrington2001}. Inverse synthesis and scattering campaigns inherit
+this split: near-field scans and angle-resolved data constrain only the radiative image
+$\mathcal{R}_\omega[\Jimp]$, leaving non-radiative content invisible until additional
+excitation or realizability constraints are imposed; Chapter~\ref{ch:04} develops that
+$\mathcal{S}_{\mathrm{real}}$ question spectrally \cite{stratton1941}.
+
+The component partition below imports reactive--radiative logic from
+Section~\ref{sec:ch01.2.4} and spectral projectors
+Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent} without
+re-proving projector algebra \cite{stratton1941}. Complete non-radiating null-space
+classification belongs to Section~\ref{sec:ch27}.
+Let \(\mathbf{u}_\omega=(\E,\H)=\mathcal{S}_\omega[\mathfrak{D}]\) and
+\(\mathbf{u}_{\mathrm{rad}}=\mathcal{R}_\omega[\mathfrak{D}]\) be as in
+Eq.~\eqref{eq:ch2.section25-evaluation-chain} \cite{stratton1941}. Spectral
+projectors \(\Pi_{\mathrm{prop}}\), \(\Pi_{\mathrm{ev}}\), \(\Pi_{\mathrm{non}}\) act on
+\(\widehat{\mathcal{F}}_\Omega\) as in Subsection~\ref{sec:ch224}; outgoing selector
+\(\mathcal{O}_{\mathrm{out}}\) and radiation map satisfy
+Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.rad-projection-composition}
+\cite{stratton1941}. Regime qualification uses
+\(\mathcal{D}_{J,\mathrm{reg}}\) from Eq.~\eqref{eq:ch1.regime-qualified-decision} and
+criterion Eq.~\eqref{eq:ch2.regime-operator-screen} \cite{stratton1941}.
+On admissible \(\mathfrak{D}\),
+\begin{equation}
+\label{eq:ch2.integral-spectral-decomposition}
+\mathcal{S}_\omega[\mathfrak{D}]
+=
+\Pi_{\mathrm{prop}}\mathcal{S}_\omega[\mathfrak{D}]
++\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\mathfrak{D}]
++\Pi_{\mathrm{non}}\mathcal{S}_\omega[\mathfrak{D}],
+\end{equation}
+restating Eq.~\eqref{eq:ch2.propagating-evanescent-decomposition} on the integral outputs
+constructed above \cite{stratton1941}.
+Define the \emph{non-propagating} component
+\begin{equation}
+\label{eq:ch2.nonpropagating-component-def}
+\mathbf{u}_{\mathrm{np}}
+=
+\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\mathfrak{D}]
++\Pi_{\mathrm{non}}\mathcal{S}_\omega[\mathfrak{D}],
+\end{equation}
+and the \emph{propagating} component
+\(\mathbf{u}_{\mathrm{prop}}=\Pi_{\mathrm{prop}}\mathcal{S}_\omega[\mathfrak{D}]\)
+\cite{stratton1941}. Only \(\mathbf{u}_{\mathrm{prop}}\) is eligible for outgoing radiation
+selection; evanescent and non-propagating content satisfies
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{harrington2001}. Equation
+\eqref{eq:ch2.integral-spectral-decomposition} applies the \ref{ch:01} partition to
+integral outputs: reactive dominance on near shells corresponds to large
+\(\|\mathbf{u}_{\mathrm{np}}\|\) relative to \(\|\mathbf{u}_{\mathrm{prop}}\|\) in the sense
+of Eq.~\eqref{eq:ch2.subspace-energy-inequality} \cite{stratton1941}.
+The radiative component is
+\begin{equation}
+\label{eq:ch2.radiative-component-def}
+\mathbf{u}_{\mathrm{rad}}
+=
+\mathcal{R}_\omega[\mathfrak{D}]
+=
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\mathfrak{D}]
+=
+\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\,\mathcal{S}_\omega[\mathfrak{D}],
+\end{equation}
+using Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement} and~\eqref{eq:ch2.rad-projection-composition}
+\cite{stratton1941}. The complementary \emph{non-radiative} component is
+\begin{equation}
+\label{eq:ch2.nonradiative-component-def}
+\mathbf{u}_{\mathrm{nr}}
+=
+\mathcal{S}_\omega[\mathfrak{D}]-\mathbf{u}_{\mathrm{rad}}
+=
+\big(\mathrm{id}-\Pi_{\mathrm{rad}}\big)\mathcal{S}_\omega[\mathfrak{D}].
+\end{equation}
+Equations~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def}
+partition every admissible field pair into export and non-export parts without altering
+Maxwell dynamics: \(\mathbf{u}_\omega=\mathbf{u}_{\mathrm{rad}}+\mathbf{u}_{\mathrm{nr}}\)
+\cite{stratton1941}. Non-radiative content includes evanescent, non-propagating, and
+incoming-propagating fractions annihilated by $\Pi_{\mathrm{rad}}$; large near-field
+magnitude therefore does not establish export \cite{stratton1941}. Sources in
+$\ker\mathcal{R}_\omega$ produce $\mathbf{u}_{\mathrm{rad}}=\mathbf{0}$ while
+$\mathbf{u}_{\mathrm{nr}}\neq\mathbf{0}$ (Eq.~\eqref{eq:ch2.ker-R-omega})
+\cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (s) {$\mathcal{S}_\omega[\mathfrak{D}]$};
+ \node[ch1box, right=7mm of s] (pp) {$\Pi_{\mathrm{prop}}$};
+ \node[ch1box, right=7mm of pp] (pr) {$\Pi_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of s] (np) {$\mathbf{u}_{\mathrm{nr}}$};
+ \node[ch1box, below=5mm of pp] (ev) {$\Pi_{\mathrm{ev}}+\Pi_{\mathrm{non}}$};
+ \draw[ch1flow] (s) -- (pp) -- (pr);
+ \draw[ch1flow] (s.south) -- (s.south |- np.north);
+ \draw[ch1flow] (s.south |- np.north) -- (np.north);
+ \draw[ch1flow] (s.east) -- (s.east |- ev.west);
+ \draw[ch1flow] (s.east |- ev.west) -- (ev.west);
+\end{tikzpicture}%
+}
+\caption{Radiative/non-radiative split: \(\mathbf{u}_{\mathrm{rad}}\) is
+\(\Pi_{\mathrm{rad}}\mathcal{S}_\omega\); \(\mathbf{u}_{\mathrm{nr}}\) collects all
+non-export content including Eq.~\eqref{eq:ch2.nonpropagating-component-def}.}
+\label{fig:ch2.rad-nr-component-split}
+\end{figure}
+Figure~\ref{fig:ch2.spectral-radiation-criterion} from Subsection~\ref{sec:ch224} on integral
+outputs \cite{stratton1941}. Using energy norm Eq.~\eqref{eq:ch2.field-energy-norm}, define
+\begin{equation}
+\label{eq:ch2.radiative-energy-functional}
+\mathcal{E}_{\mathrm{rad}}[\mathfrak{D}]
+=
+\|\mathbf{u}_{\mathrm{rad}}\|_{\mathcal{E}}^{2},
+\qquad
+\mathcal{E}_{\mathrm{nr}}[\mathfrak{D}]
+=
+\|\mathbf{u}_{\mathrm{nr}}\|_{\mathcal{E}}^{2},
+\end{equation}
+with \(\|\cdot\|_{\mathcal{E}}\) from Eq.~\eqref{eq:ch2.radiation-energy-norm} on each
+component \cite{stratton1941}. Shell power splits analogously:
+\begin{equation}
+\label{eq:ch2.component-power-budget}
+\mathcal{P}_{\mathrm{tot}}(r)
+=
+\mathcal{P}_{\mathrm{rad}}(r;\Jimp)
++\mathcal{P}_{\mathrm{nr}}(r;\Jimp),
+\end{equation}
+where \(\mathcal{P}_{\mathrm{rad}}\) is Eq.~\eqref{eq:ch2.power-flux-functional} and
+\begin{equation}
+\label{eq:ch2.nonradiative-power-functional}
+\mathcal{P}_{\mathrm{nr}}(r;\Jimp)
+=
+\Re\oint_{S_r}\hat{\mathbf{r}}\cdot\mathbf{S}_{\mathrm{nr}}[\Jimp]\,dS,
+\qquad
+\mathbf{S}_{\mathrm{nr}}
+=
+\tfrac12\,\E_{\mathrm{nr}}\times\H_{\mathrm{nr}}^{*},
+\end{equation}
+with \((\E_{\mathrm{nr}},\H_{\mathrm{nr}})=\mathbf{u}_{\mathrm{nr}}\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.component-power-budget} is not
+a new conservation law; it decomposes Eq.~\eqref{eq:ch2.radiated-power-screen} when both
+components are evaluated on the same shell \cite{stratton1941}. In the far zone,
+\(\mathcal{P}_{\mathrm{nr}}(r)\to 0\) and \(\mathcal{P}_{\mathrm{rad}}(r)\to P_\infty\) under
+Eq.~\eqref{eq:ch1.radiative-regime-condition} \cite{stratton1941}. Near-zone
+shells with \(\chi(r)\gg 1\) from Eq.~\eqref{eq:ch1.regime-index} typically have
+\(|\mathcal{P}_{\mathrm{nr}}|\gg|\mathcal{P}_{\mathrm{rad}}|\) \cite{stratton1941}.
+Regime qualification from Section~\ref{sec:ch01.2.4} becomes
+\begin{equation}
+\label{eq:ch2.regime-component-criterion}
+\mathcal{D}_{J,\mathrm{reg}}=1
+\ \Longrightarrow\
+\text{transport uses}\ \mathbf{u}_{\mathrm{rad}},\
+\mathcal{P}_{\mathrm{rad}},\
+\mathbf{M}_{\mathrm{rad}}[\Jimp],
+\end{equation}
+and forbids interpreting \(\mathbf{u}_{\mathrm{nr}}\), \(\mathcal{P}_{\mathrm{nr}}\), or
+\(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\mathfrak{D}]\) as export channels
+\cite{stratton1941}. Equation~\eqref{eq:ch2.regime-component-criterion} is the
+component form of Eq.~\eqref{eq:ch2.regime-operator-screen} after
+Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def}.
+Laboratory errors from Section~\ref{sec:ch01.2.4}---near-zone reactive scans, cutoff-guide
+modes, evanescent dominance---appear as large \(\mathcal{E}_{\mathrm{nr}}\) or
+\(\|\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\mathfrak{D}]\|\) with small
+\(\mathcal{P}_{\mathrm{rad}}\) \cite{stratton1941}. Link to radiation null space. Non-radiative components encode source-side invisible content:
+\begin{equation}
+\label{eq:ch2.nr-image-of-null-space}
+\Jimp\in\ker\mathcal{R}_\omega
+\ \Longrightarrow\
+\mathbf{u}_{\mathrm{rad}}=\mathbf{0},
+\quad
+\mathbf{u}_{\mathrm{nr}}=\mathcal{S}_\omega[\Jimp]\neq\mathbf{0}\ \text{in general},
+\end{equation}
+as recorded in Eq.~\eqref{eq:ch2.null-radiation} \cite{harrington2001}.
+Conversely, \(\mathbf{u}_{\mathrm{nr}}=\mathbf{0}\) does not imply trivial
+\(\mathcal{S}_\omega[\mathfrak{D}]\): a pure outgoing propagating state may have
+\(\mathbf{u}_{\mathrm{rad}}=\mathbf{u}_\omega\) \cite{stratton1941}. Section~\ref{sec:ch272}
+classifies \(\ker\mathcal{R}_\omega\); here only the field-side split
+Eq.~\eqref{eq:ch2.nonradiative-component-def} is identified as the operator image of
+non-export content \cite{harrington2001}.
+\phantomsection\label{prop:ch2.far-zone-radiative-dominance}
+Let \(\mathcal{D}_{J,\mathrm{reg}}=1\) and let \(r\) lie in the far zone of
+Eq.~\eqref{eq:ch2.distance-regime-definitions}. Then
+\begin{equation}
+\label{eq:ch2.far-zone-component-dominance}
+\frac{\mathcal{E}_{\mathrm{nr}}[\mathfrak{D}]}{\mathcal{E}_{\mathrm{rad}}[\mathfrak{D}]+\epsilon}
+\to 0,
+\qquad
+\frac{|\mathcal{P}_{\mathrm{nr}}(r)|}{\mathcal{P}_{\mathrm{rad}}(r)+\epsilon}\to 0,
+\end{equation}
+as \(r\to\infty\) for fixed \(\mathfrak{D}\), with \(\epsilon>0\) regularizing zero export
+\cite{stratton1941}. Equivalently, \(\mathbf{u}_\omega\to\mathbf{u}_{\mathrm{rad}}\) in
+far-zone observables metered by Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.power-flux-functional}.
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} annihilates evanescent and non-propagating
+contributions in \(\Pi_{\mathrm{rad}}\). Far-zone asymptotics and flux stabilization on
+large shells give \(\mathcal{P}_{\mathrm{rad}}(r)\to P_\infty>0\) while reactive terms decay
+relatively \cite{stratton1941}. Regime condition
+Eq.~\eqref{eq:ch1.radiative-regime-condition} removes reactive dominance in the limit.
+Below guide cutoff Eq.~\eqref{eq:ch2.cutoff-condition}, modal content lies in
+\(\Pi_{\mathrm{non}}\mathcal{S}_\omega[\mathfrak{D}]\) or
+\(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\mathfrak{D}]\) \cite{stratton1941}. Applying
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} or transport indices to such modes violates
+Eq.~\eqref{eq:ch2.regime-component-criterion} as in the TE\(_{10}\) illustration of
+Section~\ref{sec:ch01.1.2} \cite{harrington2001}. Spectral projectors and regime logic must
+therefore be applied together on the same integral outputs \cite{stratton1941}.
+Equations~\eqref{eq:ch2.integral-spectral-decomposition}--\eqref{eq:ch2.far-zone-component-dominance}
+require linear media, fixed \(\omega\), outgoing radiation condition, and spectral completion sufficient
+for Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra}
+\cite{stratton1941}. Sharp boundaries between subspaces may blur when
+loss, anisotropy, or coupled interfaces mix propagating and evanescent sheets
+\cite{stratton1941}. Component splits are diagnostic on shells, not substitutes for
+exterior radiative uniqueness (Subsection~\ref{sec:ch243}) on the full field
+\cite{harrington2001}.
+Outgoing source-to-field integrals map impressed data to evaluable fields; distance-regime
+labels fix where asymptotic reductions apply; flux and operator-norm meters act on
+$\mathcal{R}_\omega[\Jimp]$ after regime qualification; and the radiative--non-radiative split
+Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.regime-component-criterion}
+separates export from storage on the same integral outputs \cite{stratton1941}. Section~\ref{sec:ch26}
+develops spectral decomposition of radiation operators on the representations constructed here
+\cite{harrington2001}.
+The radiative--non-radiative split is what separates a wattmeter that has been qualified on $\Gamma_R$ from a near-field probe that still sees storage and evanescent overlap in $\mathcal{S}_\omega[\Jimp]$ \cite{harrington2001}. Both components coexist in one Maxwell solution until projectors and outgoing selection name which part export meters may integrate \cite{poynting1884}. Evanescent sheets must not be dismissed as mere mathematical artifacts; however, Maxwell theory shows they carry reactive energy measurable on enclosing scans while remaining null under far-zone angular accessibility maps developed in Section~\ref{sec:ch29} \cite{stratton1941}. Section~\ref{sec:ch26} now organizes the radiative image itself into eigenmodes and recoverable rank on the integral representations constructed in Sections~\ref{sec:ch23}--\ref{sec:ch25}.

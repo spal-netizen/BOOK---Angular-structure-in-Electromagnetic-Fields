@@ -1,0 +1,9 @@
+% Stage 9 — baseline-aligned section numbering (Introduction prints as §2.0)
+\setcounter{section}{-1}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+% State Volume I harmonic convention once per chapter (00-NOTATION.md; frozen Ch.~1)
+\noindent\textbf{Harmonic convention.}\ 
+Fields use $\Re\{\mathbf{F}(\mathbf{r})\,\eim\}$ with $\eim=\exp(-\jj\omega t)$, so $\partial_t\to-\jj\omega$ on phasors and Maxwell's equations are Eq.~\eqref{eq:ch1.maxwell-local} with charge closure Eq.~\eqref{eq:ch1.charge-continuity-harmonic}.
+\par\medskip

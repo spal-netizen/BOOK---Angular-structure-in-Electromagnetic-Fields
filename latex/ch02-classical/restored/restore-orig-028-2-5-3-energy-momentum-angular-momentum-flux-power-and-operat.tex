@@ -1,0 +1,288 @@
+% Stage 8 restored fragment — 2.5.3 Energy, momentum, angular-momentum flux, power, and operator norms (archive lines 6827-7126)
+\subsection{Energy, momentum, angular-momentum flux, power, and operator norms}
+\label{sec:ch253}
+With outgoing integrals and distance labels in place, the display below evaluates what an
+observer can meter on large shells. The radiation operator does not merely transport fields:
+it transports measurable physical quantities---energy, momentum, and angular
+momentum---which ultimately determine what an observer can detect
+\cite{poynting1884}. On a calibrated compact range, the wattmeter on $\Gamma_R$
+is the primary pattern-adjacent meter: it integrates $\hat{\mathbf{r}}\cdot\mathbf{S}$ on the
+radiative branch $\mathcal{R}_\omega[\Jimp]$ after $\Pi_{\mathrm{rad}}$, not on the full
+$\mathcal{S}_\omega[\Jimp]$ pair that near-field probes sample at $r\sim a$
+\cite{stratton1941}. Power budgets on $\Gamma_R$ must close before torque or
+angular-flux claims are promoted \cite{belinfante1940}.
+Complex Poynting flux from Eq.~\eqref{eq:ch1.poynting-complex} applies to any admissible
+field pair, but power budgets for transport claims use the radiative branch:
+
+\begin{equation}
+\label{eq:ch2.flux-on-radiative-branch}
+P_{\mathrm{rad}}(R)
+=
+\Re\oint_{\Gamma_R}\hat{\mathbf{r}}\cdot\mathbf{S}\big[\mathcal{R}_\omega[\Jimp]\big]\,dS,
+\end{equation}
+with \(\mathbf{S}[\cdot]\) the Poynting vector functional imported from
+Subsection~\ref{sec:ch01.1.4} and \(\Gamma_R=\{r=R\}\) large enough for far-zone reduction
+when reporting export \cite{stratton1941}. Equation~\eqref{eq:ch2.flux-on-radiative-branch}
+specializes Eq.~\eqref{eq:ch2.radiated-power-screen} to the outgoing selector chain; it is
+not equivalent to integrating \(\mathbf{S}[\mathcal{S}_\omega[\Jimp]]\) unless reactive
+content has been shown negligible or orthogonal to the declared observable
+\cite{harrington2001}. Poynting balance Eq.~\eqref{eq:ch1.poynting-complex}, Maxwell stress
+Eq.~\eqref{eq:ch1.maxwell-stress}, angular balance
+Eqs.~\eqref{eq:ch1.angular-momentum-balance}--\eqref{eq:ch1.angular-balance-integral}, and
+transport indices Eqs.~\eqref{eq:ch1.continuity-admissibility}--\eqref{eq:ch1.transport-qualified-decision}
+are presupposed from Chapter~\ref{ch:01} \cite{stratton1941}. Radiative--non-radiative
+splitting is taken up in the closing subsection below.
+Let \((\E,\H)=\mathcal{S}_\omega[\mathfrak{D}]\) and
+\((\E_{\mathrm{rad}},\H_{\mathrm{rad}})=\mathcal{R}_\omega[\mathfrak{D}]\) be as in the
+evaluation chain Eq.~\eqref{eq:ch2.section25-evaluation-chain} \cite{stratton1941}. Flux meters on
+spherical shells \(S_r=\{|\mathbf{r}|=r\}\) assume \(r\) lies in the far zone of
+Eq.~\eqref{eq:ch2.distance-regime-definitions} unless noted otherwise, with
+\(\mathcal{D}_{J,\mathrm{reg}}=1\) from Eq.~\eqref{eq:ch1.regime-qualified-decision}
+\cite{stratton1941}. Complex Poynting vector
+\(\mathbf{S}=\tfrac12\E\times\H^*\) and stress tensor \(\mathbf{T}\) follow
+Eqs.~\eqref{eq:ch1.poynting-complex} and~\eqref{eq:ch1.maxwell-stress} \cite{stratton1941}.
+Angular-flux tensor \(\mathbf{M}=\mathbf{r}\times\mathbf{T}\) uses origin \(\mathbf{r}_0\)
+declared in Subsection~\ref{sec:ch01.1.5} \cite{belinfante1940}.
+Flux functionals on the radiative branch. Define the radiative Poynting functional
+\begin{equation}
+\label{eq:ch2.poynting-functional-radiative}
+\mathbf{S}_{\mathrm{rad}}[\Jimp]
+=
+\frac{1}{2}\,\E_{\mathrm{rad}}\times\H_{\mathrm{rad}}^{*},
+\qquad
+(\E_{\mathrm{rad}},\H_{\mathrm{rad}})=\mathcal{R}_\omega[\Jimp],
+\end{equation}
+with \(\E_{\mathrm{rad}},\H_{\mathrm{rad}}\) the field components selected by
+Eq.~\eqref{eq:ch2.outgoing-radiation-refinement} \cite{stratton1941}. Equation
+\eqref{eq:ch2.poynting-functional-radiative} specializes
+Eq.~\eqref{eq:ch1.poynting-complex} to the operator output on which export claims are
+allowed per Eq.~\eqref{eq:ch2.transport-qualified-radiation} \cite{harrington2001}. The
+reactive counterpart \(\mathbf{S}_{\mathrm{re}}=\tfrac12(\E-\E_{\mathrm{rad}})\times(\H-\H_{\mathrm{rad}})^*\)
+is not a transport meter unless separately qualified \cite{stratton1941}. Stress and
+angular-flux functionals on the radiative branch are
+\begin{equation}
+\label{eq:ch2.stress-functional-radiative}
+\mathbf{T}_{\mathrm{rad}}[\Jimp]
+=
+\mathbf{T}(\E_{\mathrm{rad}},\H_{\mathrm{rad}}),
+\qquad
+\mathbf{M}_{\mathrm{rad}}[\Jimp]
+=
+\mathbf{r}\times\mathbf{T}_{\mathrm{rad}}[\Jimp],
+\end{equation}
+with \(\mathbf{T}(\cdot,\cdot)\) the Maxwell stress map Eq.~\eqref{eq:ch1.maxwell-stress}
+\cite{stratton1941}. Equations
+\eqref{eq:ch2.poynting-functional-radiative}--\eqref{eq:ch2.stress-functional-radiative}
+specialize \ref{ch:01} flux objects; they introduce no new conservation law
+\cite{stratton1941}.
+Shell power on the radiative branch is the bounded linear functional
+\begin{equation}
+\label{eq:ch2.power-flux-functional}
+\mathcal{P}_{\mathrm{rad}}(r;\Jimp)
+=
+\Re\oint_{S_r}\hat{\mathbf{r}}\cdot\mathbf{S}_{\mathrm{rad}}[\Jimp]\,dS,
+\end{equation}
+which coincides with Eq.~\eqref{eq:ch2.flux-on-radiative-branch} and
+Eq.~\eqref{eq:ch2.radiated-power-screen} when \((\E,\H)\) in those equations is replaced
+by \(\mathcal{R}_\omega[\Jimp]\) \cite{stratton1941}. In the far zone,
+Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
+give
+\begin{equation}
+\label{eq:ch2.far-zone-power-from-pattern}
+\mathcal{P}_{\mathrm{rad}}(r;\Jimp)
+=
+\frac{1}{2\eta_0}\oint_{S_r}
+\big|\E_0(\theta,\phi)\big|^{2}\,d\Omega
+\;+\;\mathcal{O}(r^{-1}),
+\end{equation}
+with \(\eta_0=\sqrt{\mu_0/\varepsilon_0}\) and \(\E_0\) from
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} \cite{stratton1941}. Equation
+\eqref{eq:ch2.far-zone-power-from-pattern} is the operator form of
+Eq.~\eqref{eq:ch2.power-flux-regime-convergence} and
+Eq.~\eqref{eq:ch1.radiative-regime-condition} \cite{stratton1941}. On a calibrated compact
+range, \(\mathcal{P}_{\mathrm{rad}}\) is the wattmeter reading on \(\Gamma_R\) after export
+selection---the quantity an antenna engineer reports as radiated power \cite{harrington2001}.
+Evaluating \(\mathcal{P}_{\mathrm{rad}}\) on \(\mathcal{S}_\omega[\Jimp]\) before
+\(r\gtrsim r_c\) from Eq.~\eqref{eq:ch1.crossover-radius} imports reactive storage into
+the power budget \cite{harrington2001}.
+Linear momentum flux meter. Net momentum export through \(S_r\) is
+\begin{equation}
+\label{eq:ch2.momentum-flux-functional}
+\mathbf{F}_{\mathrm{rad}}(r;\Jimp)
+=
+\Re\oint_{S_r}\mathbf{T}_{\mathrm{rad}}[\Jimp]\cdot\hat{\mathbf{r}}\,dS,
+\end{equation}
+the time-averaged force functional inherited from
+Eq.~\eqref{eq:ch1.linear-momentum-balance} \cite{stratton1941}. In the far zone with
+Eq.~\eqref{eq:ch2.sommerfeld-impedance-ratio},
+\begin{equation}
+\label{eq:ch2.far-zone-momentum-flux}
+\mathbf{F}_{\mathrm{rad}}(r;\Jimp)
+=
+\frac{1}{c}\,\hat{\mathbf{r}}\,\mathcal{P}_{\mathrm{rad}}(r;\Jimp)
+\;+\;\mathcal{O}(r^{-1}),
+\end{equation}
+linking momentum export to radiated power on the propagating branch
+\cite{stratton1941}. A scattering analyst interpreting radiation pressure on a target uses
+\(\mathbf{F}_{\mathrm{rad}}\) as the time-averaged force carried by the outgoing wave
+\cite{stratton1941}. Equation~\eqref{eq:ch2.far-zone-momentum-flux} expresses
+Eq.~\eqref{eq:ch1.energy-momentum-directional-ratio} in the far-zone limit for unit
+\(\hat{\mathbf{q}}=\hat{\mathbf{r}}\) \cite{stratton1941}. Momentum meters attach to
+\(\mathcal{R}_\omega[\Jimp]\), not to reactive near-zone circulation in
+\(\mathcal{S}_\omega[\Jimp]\setminus\mathcal{R}_\omega[\Jimp]\)
+\cite{harrington2001}.
+Angular-momentum flux meter. Axis torque about unit direction \(\hat{\mathbf{u}}\) is the functional
+\begin{equation}
+\label{eq:ch2.angular-flux-functional}
+\tau_{\hat{\mathbf{u}}}(r;\Jimp)
+=
+-\hat{\mathbf{u}}\cdot\Re\oint_{S_r}
+\mathbf{M}_{\mathrm{rad}}[\Jimp]\cdot\hat{\mathbf{r}}\,dS,
+\end{equation}
+specializing Eq.~\eqref{eq:ch1.torque-observable} at harmonic steady state to the
+radiative branch \cite{belinfante1940}. Net angular-momentum flux through
+\(S_r\) is
+\begin{equation}
+\label{eq:ch2.angular-momentum-flux-vector}
+\mathbf{J}_{\mathrm{rad}}(r;\Jimp)
+=
+\Re\oint_{S_r}\mathbf{M}_{\mathrm{rad}}[\Jimp]\cdot\hat{\mathbf{r}}\,dS,
+\end{equation}
+with \(\tau_{\hat{\mathbf{u}}}=-\hat{\mathbf{u}}\cdot\mathbf{J}_{\mathrm{rad}}\)
+\cite{stratton1941}. Orbital--spin splits Eq.~\eqref{eq:ch1.angular-density-split} are
+not re-derived; any angular report must close through
+Eq.~\eqref{eq:ch1.angular-balance-integral} on the declared control volume
+\cite{belinfante1940}. Directional concentration uses
+Eq.~\eqref{eq:ch1.angular-flux-directional-index} evaluated on
+\(\mathbf{M}_{\mathrm{rad}}[\Jimp]\) \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\Jimp$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (f) {Flux\\functionals};
+ \node[ch1box, right=7mm of f] (n) {Norms};
+ \node[ch1box, below=5mm of f] (p) {$\mathcal{P}_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of r] (reg) {$\mathcal{D}_{J,\mathrm{reg}}$};
+ \draw[ch1flow] (j) -- (r) -- (f) -- (n);
+ \draw[ch1flow] (f.south) -- (f.south |- p.north);
+ \draw[ch1flow] (f.south |- p.north) -- (p.north);
+ \draw[ch1flow] (reg.south) -- (reg.south |- r.north);
+ \draw[ch1flow] (reg.south |- r.north) -- (r.north);
+\end{tikzpicture}%
+}
+\caption{Flux measurement sequence: regime qualification, then radiative-branch meters only.}
+\label{fig:ch2.flux-meter-measurement chain}
+\end{figure}
+Subsection~\ref{sec:ch01.2.3} fixed transport $\mathcal{D}_J=1$ through conditions
+\(\mathcal{C}_1\)--\(\mathcal{C}_3\) on field states. On operator outputs,
+\begin{equation}
+\label{eq:ch2.transport-triad-on-R}
+\begin{aligned}
+\mathcal{C}_1[\Jimp]
+&\iff
+\text{Eq.~\eqref{eq:ch1.am-net-transport-condition} holds on}\ \mathbf{M}_{\mathrm{rad}}[\Jimp],\\
+\mathcal{C}_2[\Jimp]
+&\iff
+\text{Eq.~\eqref{eq:ch1.angular-balance-integral} holds for}\ (\E_{\mathrm{rad}},\H_{\mathrm{rad}}),\\
+\mathcal{C}_3[\Jimp]
+&\iff
+\text{Eq.~\eqref{eq:ch1.propagative-support} holds with}\ 
+\Pi=\Pi_{\mathrm{rad}}\mathcal{R}_\omega[\Jimp],
+\end{aligned}
+\end{equation}
+with indices \(\Lambda_J\), \(\mathcal{K}_J\), and \(\mathcal{R}_\tau\) from
+Eqs.~\eqref{eq:ch1.continuity-admissibility}--\eqref{eq:ch1.torque-consistency-residual}
+evaluated on the same radiative fields \cite{stratton1941}. Operational acceptance
+\(\mathcal{D}_J=1\) in Eq.~\eqref{eq:ch1.transport-qualified-decision} therefore means
+transport interpretation is attached to \(\mathcal{R}_\omega[\Jimp]\) after
+\(\mathcal{D}_{J,\mathrm{reg}}=1\), not to raw \(\mathcal{S}_\omega[\Jimp]\)
+\cite{stratton1941}. The transport qualification of Section~\ref{sec:ch01.2.3}
+applies unchanged once \((\E_{\mathrm{rad}},\H_{\mathrm{rad}})\) replaces the full pair on
+the measurement shell \cite{stratton1941}.
+Radiation operator norms. Field energy on the radiative branch uses the inherited bilinear form
+Eq.~\eqref{eq:ch2.maxwell-energy-form} restricted to \(\mathcal{F}_{\mathrm{rad}}\):
+\begin{equation}
+\label{eq:ch2.radiation-energy-norm}
+\|\mathbf{u}_{\mathrm{rad}}\|_{\mathcal{E}}^{2}
+=
+\mathfrak{a}_\omega\big(\mathbf{u}_{\mathrm{rad}},\mathbf{u}_{\mathrm{rad}}\big),
+\qquad
+\mathbf{u}_{\mathrm{rad}}=(\E_{\mathrm{rad}},\H_{\mathrm{rad}}),
+\end{equation}
+with \(\mathfrak{a}_\omega\) from Subsection~\ref{sec:ch202} \cite{stratton1941}. Shell
+\(L^{2}\) power density norms for pattern reporting are
+\begin{equation}
+\label{eq:ch2.radiation-pattern-norm}
+\|\E_0\|_{L^{2}(S_r)}^{2}
+=
+\oint_{S_r}\big|\E_0(\theta,\phi)\big|^{2}\,d\Omega,
+\qquad
+\|\Jimp\|_{\mathcal{J}}=\Big(\int_{\Omega_s}|\Jimp|^{2}\,dV\Big)^{1/2},
+\end{equation}
+linking source amplitude to far pattern through
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} \cite{harrington2001}. The
+radiation operator norm on admissible sources is
+\begin{equation}
+\label{eq:ch2.radiation-operator-norm}
+\|\mathcal{R}_\omega\|_{\mathrm{op}}
+=
+\sup_{\|\Jimp\|_{\mathcal{J}}=1}
+\|\mathcal{R}_\omega[\Jimp]\|_{\mathcal{E}},
+\end{equation}
+bounded on fixed outgoing domains when resolvent bound
+Eq.~\eqref{eq:ch2.resolvent-bounded} holds \cite{stratton1941}. Observation
+maps compose on the right, yielding
+\begin{equation}
+\label{eq:ch2.flux-meter-composition}
+\Lambda_{\mathrm{meas}}
+=
+\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega,
+\qquad
+\|\Lambda_{\mathrm{meas}}\|_{\mathrm{op}}
+\le
+\|\mathcal{O}_{\mathrm{meas}}\|_{\mathrm{op}}\,
+\|\mathcal{R}_\omega\|_{\mathrm{op}},
+\end{equation}
+consistent with Eq.~\eqref{eq:ch2.reconstruction-observation-map} and rank cap
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap} \cite{stratton1941}. For a range engineer,
+\(\|\mathcal{R}_\omega\|_{\mathrm{op}}\) bounds how strongly a unit-amplitude feed can excite
+the far pattern; the composition \(\Lambda_{\mathrm{meas}}\) in
+Eq.~\eqref{eq:ch2.flux-meter-composition} is the formal image of gain calibration followed
+by pattern sampling on \(S_r\) \cite{harrington2001}.
+\phantomsection\label{prop:ch2.far-zone-flux-stabilization}
+Let \(\Jimp\) be admissible with \(\mathcal{D}_{J,\mathrm{reg}}=1\) and let \(r\) lie
+in the far zone of Eq.~\eqref{eq:ch2.distance-regime-definitions}. Then
+\(\mathcal{P}_{\mathrm{rad}}(r;\Jimp)\), \(\mathbf{F}_{\mathrm{rad}}(r;\Jimp)\), and
+\(\mathbf{J}_{\mathrm{rad}}(r;\Jimp)\) satisfy
+Eqs.~\eqref{eq:ch2.far-zone-power-from-pattern}--\eqref{eq:ch2.far-zone-momentum-flux}
+with errors \(\mathcal{O}(r^{-1})\), and \(\mathcal{P}_{\mathrm{rad}}(r;\Jimp)\to P_\infty>0\)
+whenever Eq.~\eqref{eq:ch1.radiative-regime-condition} holds on the radiative branch
+\cite{stratton1941}.
+Substitute Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
+into Eqs.~\eqref{eq:ch2.poynting-functional-radiative}--\eqref{eq:ch2.momentum-flux-functional}
+and integrate on \(S_r\). Sommerfeld ratio Eq.~\eqref{eq:ch2.sommerfeld-impedance-ratio}
+gives Eq.~\eqref{eq:ch2.far-zone-momentum-flux}; power integral reduces to
+Eq.~\eqref{eq:ch2.far-zone-power-from-pattern} \cite{stratton1941}. Convergence
+follows from Eq.~\eqref{eq:ch2.power-flux-regime-convergence} \cite{stratton1941}.
+Equations~\eqref{eq:ch2.poynting-functional-radiative}--\eqref{eq:ch2.radiation-operator-norm}
+require harmonic steady state, linear passive media, outgoing radiation condition, and regime-qualified
+shells \cite{stratton1941}. They fail on reactive-dominated shells with
+\(\chi(r)\gg 1\) from Eq.~\eqref{eq:ch1.regime-index}, in cutoff guides, and when
+\(\mathcal{S}_\omega[\Jimp]\) is used without \(\mathcal{R}_\omega\) projection
+\cite{stratton1941}. Material stress debates (Minkowski versus Abraham) are not re-opened;
+vacuum-side shells use Eq.~\eqref{eq:ch1.maxwell-stress} \cite{stratton1941}. Gauge-dependent
+near-zone angular densities are excluded from \(\mathbf{M}_{\mathrm{rad}}[\Jimp]\) unless
+closure through Eq.~\eqref{eq:ch1.angular-balance-integral} is verified
+\cite{belinfante1940}.
+As a worked example, compute \(\Lambda_J(r)\) from Eq.~\eqref{eq:ch1.transport-charge-continuous-index} using
+\(\mathbf{M}_{\mathrm{rad}}[\Jimp]\) on \(S_r\) with \(k_0 r=10\) and compare to
+\(k_0 r=0.5\) \cite{stratton1941}. Only the outer shell with
+\(\mathcal{D}_{J,\mathrm{reg}}=1\) and \(\mathcal{C}_1\)--\(\mathcal{C}_3\) satisfied
+admits transport interpretation per Eq.~\eqref{eq:ch1.transport-qualified-decision}
+\cite{stratton1941}. Flux meters are therefore downstream observables: they presuppose the
+integral evaluation chain, the far-zone reduction when applicable, and export selection through
+$\mathcal{R}_\omega$ before any watt, momentum, or angular-momentum budget is reported on
+$\Gamma_R$ \cite{harrington2001}.
+Flux and norm functionals are not independent postulates added to Maxwell theory; they are laboratory readouts that presuppose the same export selection already enforced on pattern meters. Power measured on a reactive shell must be distinguished from power reported after $\Pi_{\mathrm{rad}}$: the former samples $\mathcal{S}_\omega[\Jimp]$, the latter the transverse outgoing sector carried by $\mathcal{R}_\omega[\Jimp]$ \cite{stratton1941}. Momentum and angular-momentum budgets add not new dynamics but conserved-flux accounting on the qualified radiative image once regime screens from \ref{ch:01} are satisfied \cite{belinfante1940}. Subsection~\ref{sec:ch254} decomposes the same solution map into radiative and non-radiative components.

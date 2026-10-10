@@ -1,0 +1,5 @@
+claim_or_equation,label,claim_type,source_file,assumptions,verification_method,outcome,correction,downstream_dependencies,author_input_required
+HCurl definition,eq:ch2.hcurl-space,definition,restore-orig-006 + sec203,Lipschitz Ω; exp(-jωt); SI,source_inspection,passed,none,sec:ch23–ch25,no
+Hdiv definition,eq:ch2.hdiv-space,definition,restore-orig-006 + sec203,Lipschitz Ω; exp(-jωt); SI,source_inspection,passed,none,sec:ch23–ch25,no
+Charge continuity screen,eq:ch2.continuity-operator-domain,derived,restore-orig-006 + sec203,Lipschitz Ω; exp(-jωt); SI,source_inspection,passed,matches -jωt package,sec:ch23–ch25,no
+Maxwell weak form,eq:ch2.maxwell-weak-form,derived,restore-orig-006 + sec203,Lipschitz Ω; exp(-jωt); SI,source_inspection,blocked,requires Batch B Green section audit,sec:ch23–ch25,no

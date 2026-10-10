@@ -1,0 +1,284 @@
+% Stage 8 restored fragment — 2.1.2 Linear operators: domain, range, and adjoint (archive lines 1625-1915)
+\subsection{Linear operators: domain, range, and adjoint}
+\label{sec:ch212}
+The physical problem is operator accountability: a network analyzer, finite-element solver, or
+near-field scanner implicitly assumes that each map in the source-to-field pathway accepts
+only admissible excitations and returns only measurable field pairs \cite{stratton1941}.
+Every linear map---$\mathcal{S}_\omega$, $\mathcal{L}_\omega$, $\mathcal{R}_\omega$, and
+finite-rank measurement surrogates---requires explicit domain, range, and adjoint pairings
+\cite{stratton1941}. Recall that $\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega$
+is the harmonic solution map, $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$
+selects outgoing radiative content, and $\mathcal{L}_\omega$ packages volume and boundary
+residuals jointly \cite{harrington2001}. Reciprocity is a symmetry principle of accessibility:
+network analyzers swap transmit and receive ports, and the adjoint is the mathematical shadow
+of that hardware symmetry when sources remain passive \cite{harrington2001}. Treating ``adjoint''
+as jargon detached from range calibration misses this link \cite{devaney2004}. When a synthesis
+residual persists under port reversal, the fault often lies in domain mismatch between trial
+currents and measured tangential data \cite{hansen1988}.
+Continuity and divergence constraints tie impressed currents to charge conservation on real feeds \cite{maxwell1873}.
+When those constraints are violated, numerical solvers may still return finite vectors,
+but the corresponding fields exhibit unphysical reactive blow-up that no anechoic
+termination can absorb.
+Domain, range, and adjoint language records which excitations the operator accepts and
+which field pairs are returned \cite{stratton1941}.
+Subsection~\ref{sec:ch211} fixed the Hilbert and trace spaces on which Maxwell maps
+act. Subsection~\ref{sec:ch212} treats those maps as linear operators with explicit
+domains, ranges, and adjoints \cite{stratton1941}. The volume
+operator \(\mathcal{M}_\omega\), boundary operator \(\mathcal{B}_\Gamma\), composite
+\(\mathcal{L}_\omega\), and solution map \(\mathcal{S}_\omega\) introduced in
+Subsections~\ref{sec:ch201}--\ref{sec:ch202} are not re-defined; their
+Maxwell field structure is recorded here as the definitive construction of
+domain--range--adjoint theory. Weak and energy forms of
+Eqs.~\eqref{eq:ch2.maxwell-weak-form} and
+\eqref{eq:ch2.maxwell-adjoint-pairing} supply the duality pairings below and are
+cited, \cite{stratton1941}.
+Let \(\mathcal{X}\) and \(\mathcal{Y}\) be Hilbert spaces. The linear map representing
+\(T:\mathcal{D}(T)\to\mathcal{Y}\) is specified by its domain
+\(\mathcal{D}(T)\subseteq\mathcal{X}\) and range
+\(\mathcal{R}(T)=T\mathcal{D}(T)\subseteq\mathcal{Y}\). For Maxwell operators,
+\(\mathcal{X}=\mathcal{U}_\omega\) from Eq.~\eqref{eq:ch2.maxwell-product-space}
+and \(\mathcal{Y}\) is a product of volume and boundary data spaces. When a finite-element
+solver reports residual norms, it is effectively measuring a graph norm: how large the
+field is in \(\mathcal{U}_\omega\) together with how large Maxwell's residuals become when
+that field is inserted into \(\mathcal{L}_\omega\). Engineers should read the graph norm
+as a joint flux measurement record of field energy and equation balance, not as a single \(L^{2}\)
+amplitude \cite{harrington2001}. A trial vector that is small in \(L^{2}\) but drives
+large curl residuals cannot lie in \(\mathcal{D}(\mathcal{L}_\omega)\) on the physical
+branch; conversely, a state with controlled graph norm is the continuous target that
+Galerkin discretizations on edge elements approximate \cite{stratton1941}. The graph
+norm
+
+\begin{equation}
+\label{eq:ch2.graph-norm}
+\|\mathbf{u}\|_{\mathrm{gr}(T)}^{2}
+=
+\|\mathbf{u}\|_{\mathcal{X}}^{2}+\|T\mathbf{u}\|_{\mathcal{Y}}^{2},
+\qquad
+\mathbf{u}\in\mathcal{D}(T),
+\end{equation}
+turns \(\mathcal{D}(T)\) into a Hilbert space when \(T\) is closed
+\cite{stratton1941}. Equation~\eqref{eq:ch2.graph-norm} is the diagnostic used in
+Subsection~\ref{sec:ch214} to construct self-adjoint completions; here it organizes
+domain control for \(\mathcal{L}_\omega\). 
+Each Maxwell map acts from a declared domain of admissible states into a data space of residuals or traces; that domain--range discipline applies to each Maxwell map once
+\(\mathcal{X}\) and \(\mathcal{Y}\) are chosen. Confusing \(\mathcal{D}(T)\) with
+all of \(\mathcal{X}\) is a common source of spurious boundary terms in flux
+identities \cite{stratton1941}.
+The volume Maxwell operator $\mathcal{M}_\omega$ packages the four local Maxwell balance
+rows that a harmonic solver tests row by row; it returns residuals in
+$\mathcal{Y}_{\mathrm{vol}}$, not the field itself, and therefore acts only on states whose
+curls are controlled enough that those residuals lie in $L^{2}$ \cite{stratton1941}. When a
+finite-element log reports ``Maxwell residual,'' the engineer is observing an approximate
+norm of $\mathcal{M}_\omega[\mathbf{u}_\omega]$; convergence to zero on the physical
+branch is the numerical signature of membership in $\mathcal{D}(\mathcal{L}_\omega)$
+\cite{harrington2001}. The volume Maxwell operator of Eq.~\eqref{eq:ch2.maxwell-driven-operator} acts as
+\begin{equation}
+\label{eq:ch2.volume-operator-domain-range}
+\mathcal{M}_\omega:\mathcal{D}(\mathcal{M}_\omega)\longrightarrow
+\mathcal{Y}_{\mathrm{vol}},
+\qquad
+\mathcal{Y}_{\mathrm{vol}}=L^{2}(\Omega)^{3}\times L^{2}(\Omega)^{3}
+\times L^{2}(\Omega)\times L^{2}(\Omega)^{3},
+\end{equation}
+with \(\mathcal{D}(\mathcal{M}_\omega)\subset\mathcal{F}_\Omega\) the subspace on
+which all four residual rows of Eq.~\eqref{eq:ch1.maxwell-operator-block} lie in
+\(\mathcal{Y}_{\mathrm{vol}}\) \cite{stratton1941}. Operand interpretation:
+\(\mathcal{M}_\omega\) evaluates curl-coupled Maxwell residuals pointwise in the
+\(L^{2}\) sense; physically, it returns whether a candidate \((\E,\H)\) satisfies
+local Maxwell balance with impressed data removed to the forcing vector
+Eq.~\eqref{eq:ch2.maxwell-forcing-vector}. The map is linear in
+\(\mathbf{u}_\omega\) and bounded on bounded subsets of
+\(\mathcal{D}(\mathcal{M}_\omega)\) but is not bounded on all of
+\(\mathcal{U}_\omega\) because curl norms are not controlled by \(L^{2}\) norms alone
+\cite{harrington2001}.
+Tangential traces form bounded boundary operators on \(\HCurl(\Omega)\):
+\begin{equation}
+\label{eq:ch2.trace-operator-bounded}
+\gamma_\tau:\HCurl(\Omega)\longrightarrow H^{-1/2}(\Gamma)^{3},
+\qquad
+\gamma_\tau[\mathbf{u}]=\hat{\mathbf{n}}\times\mathbf{u}|_{\Gamma},
+\end{equation}
+with \(\|\gamma_\tau\|_{\mathrm{op}}<\infty\) on Lipschitz \(\Gamma\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.trace-operator-bounded} specializes
+Eqs.~\eqref{eq:ch2.tangential-trace-maps}--\eqref{eq:ch2.tangential-trace-magnetic}
+to a single template. The boundary operator of
+Eq.~\eqref{eq:ch1.boundary-data-operator} is
+\begin{equation}
+\label{eq:ch2.boundary-operator-domain-range}
+\mathcal{B}_\Gamma:\mathcal{D}(\mathcal{B}_\Gamma)\longrightarrow\mathcal{Y}_\Gamma,
+\qquad
+\mathcal{D}(\mathcal{B}_\Gamma)\subseteq\mathcal{T}_\Gamma,
+\end{equation}
+where \(\mathcal{T}_\Gamma\) and \(\mathcal{Y}_\Gamma\) are from
+Subsection~\ref{sec:ch211}. Impedance and outgoing classes from
+Eqs.~\eqref{eq:ch1.outer-boundary-classes}--\eqref{eq:ch1.radiation-trace-condition}
+restrict \(\mathcal{D}(\mathcal{B}_\Gamma)\) to admissible trace pairs compatible
+with Eq.~\eqref{eq:ch1.admissible-data-class} \cite{stratton1941}.
+The composite operator of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} is
+\begin{equation}
+\label{eq:ch2.composite-operator-domain}
+\mathcal{L}_\omega:\mathcal{D}(\mathcal{L}_\omega)\longrightarrow
+\mathcal{Y}_{\mathrm{vol}}\times\mathcal{Y}_\Gamma,
+\end{equation}
+with \(\mathcal{D}(\mathcal{L}_\omega)\) given by
+Eq.~\eqref{eq:ch2.domain-refinement-L}. Range membership is \emph{coupled}: a state
+cannot satisfy volume rows while violating boundary rows in the product sense of
+Eq.~\eqref{eq:ch2.closed-maxwell-bvp}. The graph norm
+\eqref{eq:ch2.graph-norm} on \(\mathcal{L}_\omega\) controls both residuals
+simultaneously and is the natural norm for convergence tests in numerical Maxwell
+solvers \cite{harrington2001}.
+The harmonic solution map is an operator on source space:
+\begin{equation}
+\label{eq:ch2.solution-operator-domain}
+\mathcal{S}_\omega:\mathcal{D}(\mathcal{S}_\omega)\longrightarrow\mathcal{F}_\Omega,
+\qquad
+\mathcal{D}(\mathcal{S}_\omega)=\mathcal{J}_\Omega,
+\end{equation}
+defined by Eq.~\eqref{eq:ch2.solution-map-resolvent} as
+\(\mathcal{L}_\omega[\mathcal{S}_\omega[\Jimp]]=[\mathbf{s}_\omega(\Jimp),\mathbf{g}_\Gamma]\).
+Well-posedness requires invertibility of \(\mathcal{L}_\omega\) on the physical
+branch selected by \(\mathcal{B}_\Gamma\); then
+\begin{equation}
+\label{eq:ch2.resolvent-operator}
+\mathcal{S}_\omega=\mathcal{L}_\omega^{-1}\circ
+\big(\mathbf{s}_\omega(\cdot),\mathbf{g}_\Gamma\big),
+\end{equation}
+with \(\mathcal{L}_\omega^{-1}\) understood as the outgoing or cavity-truncated
+resolvent of Sections~\ref{sec:ch243} and~\ref{sec:ch263}, not as an algebraic
+inverse on all of \(\mathcal{U}_\omega\) \cite{stratton1941}. Radiation and
+observation operators compose accordingly:
+\begin{equation}
+\label{eq:ch2.radiation-operator-composition}
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega,
+\qquad
+\Lambda_{\mathrm{rad}}=\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega,
+\end{equation}
+with \(\Pi_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.radiation-operator-def} and
+\(\mathcal{O}_{\mathrm{far}}\) from Subsection~\ref{sec:ch201}
+\cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=7mm of j] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=7mm of s] (f) {$\mathcal{F}_\Omega$};
+ \node[ch1box, right=7mm of f] (r) {$\mathcal{R}_\omega$};
+ \draw[ch1flow] (j) -- (s) -- (f) -- node[above,font=\scriptsize] {$\Pi_{\mathrm{rad}}$} (r);
+\end{tikzpicture}%
+}
+\caption{Excitation-to-flux sequence on declared domains:
+\(\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega\),
+\(\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}\).}
+\label{fig:ch2.solution-radiation-operator-composition}
+\end{figure}
+~\eqref{eq:ch2.measurement chain-composition} in domain--range language. Each arrow is meaningful only on the declared domain; extending \(\mathcal{S}_\omega\) to
+non-admissible sources produces elements of \(\mathcal{U}_\omega\) that need not
+lie in \(\mathcal{F}_\Omega\) \cite{stratton1941}. Adjoints are defined through duality pairings compatible with
+Eq.~\eqref{eq:ch2.dual-source-pairing}. For the volume operator, the formal adjoint
+\( \mathcal{M}_\omega^{\dagger}\) satisfies
+\begin{equation}
+\label{eq:ch2.volume-adjoint-definition}
+\langle\mathcal{M}_\omega[\mathbf{u}_\omega],\mathbf{v}_\omega\rangle_{\mathrm{vol}}
+=
+\langle\mathbf{u}_\omega,\mathcal{M}_\omega^{\dagger}[\mathbf{v}_\omega]\rangle_{\mathcal{U}}
++\mathcal{B}_{\mathrm{surf}}(\mathbf{u}_\omega,\mathbf{v}_\omega),
+\end{equation}
+where \(\langle\cdot,\cdot\rangle_{\mathrm{vol}}\) is the componentwise
+\(L^{2}\) pairing on \(\mathcal{Y}_{\mathrm{vol}}\),
+\(\langle\cdot,\cdot\rangle_{\mathcal{U}}\) is induced by
+Eq.~\eqref{eq:ch2.field-energy-norm}, and
+\(\mathcal{B}_{\mathrm{surf}}\) collects boundary terms from integration by parts
+\cite{stratton1941}. On \(\mathcal{D}(\mathcal{M}_\omega)\cap\mathcal{U}_\omega^{\mathrm{PEC}}\)
+from Eq.~\eqref{eq:ch2.pec-subspace}, Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing}
+identifies \(\mathcal{B}_{\mathrm{surf}}\) with the tangential trace pairing of
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing}; that identity is imported, not
+re-proved \cite{stratton1941}. The composite adjoint satisfies the block structure
+\begin{equation}
+\label{eq:ch2.composite-adjoint-block}
+\mathcal{L}_\omega^{\dagger}
+=
+\begin{bmatrix}
+\mathcal{M}_\omega^{\dagger} & 0\\
+0 & \mathcal{B}_\Gamma^{\dagger}
+\end{bmatrix}
+\quad\text{on compatible pairs,}
+\end{equation}
+with cross-coupling entering only through shared trace data when boundary and
+volume domains are not synchronized. Self-adjoint \emph{realizations} of truncated
+Maxwell problems require choosing \(\mathcal{B}_\Gamma\) so that
+\(\mathcal{B}_{\mathrm{surf}}\) cancels on \(\mathcal{D}(\mathcal{L}_\omega)\);
+Forcing functionals induced by impressed data are bounded linear operators on test
+spaces. The map
+\begin{equation}
+\label{eq:ch2.forcing-functional-operator}
+\mathfrak{f}_\omega:\mathcal{U}_\omega^{0}\longrightarrow\mathbb{C},
+\qquad
+\mathfrak{f}_\omega[\mathbf{v}_\omega]=
+\langle\mathbf{s}_\omega(\mathfrak{D}),\mathbf{v}_\omega\rangle_{\mathrm{vol}},
+\end{equation}
+is continuous when \(\mathbf{s}_\omega\in\mathcal{Y}_{\mathrm{vol}}\) and
+\(\mathbf{v}_\omega\in\mathcal{U}_\omega^{0}\) carries homogeneous boundary traces
+compatible with \(\mathcal{B}_\Gamma\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.forcing-functional-operator} is the operator reading of the right-hand
+side of Eq.~\eqref{eq:ch2.maxwell-weak-form}. Source-to-field operators inherit
+continuity on bounded subsets: if \(\|\Jimp\|_{\mathcal{J}}\le C\) and
+\(\mathcal{L}_\omega\) is boundedly invertible on a fixed branch, then
+\begin{equation}
+\label{eq:ch2.solution-map-stability}
+\|\mathcal{S}_\omega[\Jimp]\|_{\mathcal{U}}
+\le
+C_{\mathrm{res}}\,\|\mathbf{s}_\omega(\Jimp)\|_{\mathrm{vol}},
+\end{equation}
+with \(C_{\mathrm{res}}=\|\mathcal{L}_\omega^{-1}\|\) on the selected subspace
+\cite{harrington2001}. Inequality~\eqref{eq:ch2.solution-map-stability}
+is the operator form of solver stability under source perturbations.
+Kernel and range spaces are recorded for later null-space analysis:
+\begin{equation}
+\label{eq:ch2.kernel-range-L}
+\ker\mathcal{L}_\omega
+=
+\left\{
+\mathbf{u}_\omega\in\mathcal{D}(\mathcal{L}_\omega):
+\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}
+\right\},
+\end{equation}
+\begin{equation}
+\label{eq:ch2.range-L}
+\mathcal{R}(\mathcal{L}_\omega)
+=
+\left\{
+[\mathbf{s},\mathbf{g}]^{\mathsf{T}}\in
+\mathcal{Y}_{\mathrm{vol}}\times\mathcal{Y}_\Gamma:
+\exists\,\mathbf{u}_\omega\in\mathcal{D}(\mathcal{L}_\omega):\
+\mathcal{L}_\omega[\mathbf{u}_\omega]=[\mathbf{s},\mathbf{g}]^{\mathsf{T}}
+\right\}.
+\end{equation}
+On bounded domains with passive \(\mathcal{B}_\Gamma\), \(\ker\mathcal{L}_\omega\)
+contains cavity modes; on exterior domains with outgoing radiation condition,
+\(\ker\mathcal{L}_\omega\) is trivial on the outgoing branch
+\cite{stratton1941}. Section~\ref{sec:ch272} analyzes
+\(\ker\mathcal{R}_\omega\); Subsection~\ref{sec:ch213} treats compactness and
+Fredholm index on \(\mathcal{R}(\mathcal{L}_\omega)\).
+Extension operators lift boundary data into volume fields. A right inverse
+\(E_\Gamma:\mathcal{Y}_\Gamma\to\HCurl(\Omega)\) satisfying
+\(\gamma_\tau\circ E_\Gamma=\mathrm{id}\) on compatible subclasses exists only for
+\(\mathbf{g}_\Gamma\) in the range of \(\gamma_\tau\); otherwise no
+\(\mathbf{u}_\omega\in\mathcal{F}_\Omega\) meets the boundary row
+\cite{stratton1941}. Extension operators enter Calder\'on preconditioners and
+boundary-element formulations developed in later sections; here they clarify that
+\(\mathcal{B}_\Gamma\) acts on traces, not on arbitrary \(L^{2}\) boundary vectors
+\cite{harrington2001}.
+As a worked example, fix \(\Jimp\in\mathcal{J}_\Omega\) and two distinct outgoing radiation conditions
+\(\mathcal{B}_\Gamma^{(a)}\) and \(\mathcal{B}_\Gamma^{(b)}\) on the same exterior
+domain. The operators \(\mathcal{L}_\omega^{(a)}\) and
+\(\mathcal{L}_\omega^{(b)}\) have the same volume domain but different boundary
+domains; Eq.~\eqref{eq:ch2.resolvent-operator} yields two resolvents
+\(\mathcal{S}_\omega^{(a)}\neq\mathcal{S}_\omega^{(b)}\) in general. Comparing
+analysis to measurement without matching \(\mathcal{D}(\mathcal{B}_\Gamma)\) is
+therefore a comparison of different operators, not of different discretizations of
+one operator \cite{stratton1941}.
+Subsection~\ref{sec:ch212} has packaged domain, range, graph norm, adjoint pairings, and
+the composition $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ on declared
+spaces. Subsection~\ref{sec:ch213} records boundedness, compact embeddings, and the rank
+deficiency that finite instruments impose on $\mathcal{F}_{\mathrm{rad}}$ \cite{stratton1941}.

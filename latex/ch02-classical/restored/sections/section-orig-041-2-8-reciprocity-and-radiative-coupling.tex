@@ -1,0 +1,149 @@
+% Stage 8 section framing — 2.8 Reciprocity and Radiative Coupling
+\section{Reciprocity and Radiative Coupling}
+\label{sec:ch28}
+Null-space structure explains invisible near-field rearrangements; reciprocity explains why passive hardware nevertheless reports the same complex coupling when transmit and receive roles are exchanged \cite{stratton1941}. On a calibrated vector network analyzer the practitioner excites port~$A$, reads the complex response at port~$B$, then exchanges cables, standards, and probe normalization so that port~$B$ drives and port~$A$ receives; on reciprocal antennas and reciprocal media the normalized scattering entries $S_{21}$ and $S_{12}$ must agree once outgoing qualification and impressed-current normalization are held fixed \cite{hansen1988}. Two-port impedance matrices $\mathbf{Z}$ and scattering matrices $\mathbf{S}$ inherit the same interchange symmetry whenever terminations and reference planes are declared consistently \cite{collin2001}. That bench fact precedes every volume identity below: reciprocity is what the network analyzer already presupposes when a passive feed is tuned by comparing forward and reverse coupling \cite{stratton1941}.
+
+
+
+
+Section~\ref{sec:ch27} closed the null-space chain
+Eq.~\eqref{eq:ch2.section27-nullspace-chain}: operator kernels, canonical non-radiating
+currents, evanescent non-reconstructability, and angular-spectrum consequences
+(Subsection~\ref{sec:ch274}) \cite{stratton1941}. That program classified invisible and
+partially observable source content on \(\mathcal{R}_\omega\) and \(\mathcal{M}_\omega\).
+Section~\ref{sec:ch28} addresses exchange symmetry: when transmit and receive maps coincide,
+how radiative modes couple under bilinear pairings, and which orthogonality relations constrain
+coupled spectra on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}. Reciprocity ties
+transmission and reception on passive hardware before angular spectra are filtered; broken
+reciprocity after probe correction usually traces to inconsistent normalization or missing
+outgoing tails \cite{hansen1988}. Preview swap Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap}
+from Subsection~\ref{sec:ch231} named kernel interchange; Section~\ref{sec:ch28} upgrades
+reciprocity to operator form on \(\mathcal{S}_\omega\), \(\mathcal{R}_\omega\), and modal
+coordinates from Sections~\ref{sec:ch26}--\ref{sec:ch27} \cite{stratton1941}. Plane-wave
+angular-spectrum action belongs to Section~\ref{sec:ch29}; explicit harmonic orthogonality
+and completeness belong to \ref{ch:03} Subsection~3.4.3; continuous-spectrum normalization
+belongs to Subsection~3.5.2 by reference to Subsection~\ref{sec:ch282}
+\cite{harrington2001}.
+Spectral decomposition in Subsection~\ref{sec:ch261} and biorthogonality
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} fixed modal coordinates on
+\(\mathcal{F}_{\mathrm{rad}}\); null-space structure in Subsection~\ref{sec:ch271} showed that
+many sources share the same radiative image \cite{stratton1941}. Reciprocity does not remove
+\(\ker\mathcal{R}_\omega\), but it constrains how coupling coefficients between declared modes
+behave when impressed sources and test probes are swapped \cite{stratton1941}. Treating antenna
+transmit and receive as unrelated maps violates Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} even
+when outgoing source-to-field integrals from Subsection~\ref{sec:ch251} are numerically accurate
+\cite{harrington2001}. Section~\ref{sec:ch28} separates Lorentz reciprocity in operator form,
+modal orthogonality and coupling, and radiation--reception interchange without re-opening Green
+construction from Section~\ref{sec:ch23} \cite{stratton1941}.
+Fix angular frequency \(\omega>0\), impressed sources in \(\mathcal{J}_\Omega\), and outgoing
+field pairs in \(\mathcal{F}_{\mathrm{SF}}\) Eq.~\eqref{eq:ch2.admissible-field-space}.
+The section develops reciprocity in three stages that mirror the measurement sequence excite--couple--swap:
+\begin{equation}
+\label{eq:ch2.section28-reciprocity-chain}
+\text{Lorentz reciprocity}
+\ \xrightarrow{\ \text{operator form}\ }
+\mathcal{S}_\omega,\mathcal{R}_\omega
+\ \xrightarrow{\ \text{modal}\ }
+\text{orthogonality / coupling}
+\ \xrightarrow{\ \text{systems}\ }
+\text{radiation \& reception},
+\end{equation}
+where the first arrow is Subsection~\ref{sec:ch281}, the second is Subsection~\ref{sec:ch282},
+and the third is Subsection~\ref{sec:ch283} \cite{stratton1941}. Equation
+\eqref{eq:ch2.section28-reciprocity-chain} expresses Eq.~\eqref{eq:ch2.section26-spectral-chain}
+and Eq.~\eqref{eq:ch2.section27-nullspace-chain} at the bilinear level: spectral modes from
+Section~\ref{sec:ch26} supply coordinates; null-space quotients from Section~\ref{sec:ch27}
+explain non-uniqueness; reciprocity constrains \emph{symmetric} parts of coupling on
+\(\operatorname{ran}\mathcal{R}_\omega\) \cite{stratton1941}. Angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} and regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} remain mandatory before transport claims on coupled
+modes \cite{harrington2001}.
+Denote by $\mathcal{M}_A$ and $\mathcal{M}_B$ the finite-rank port maps that compose radiation
+selection with probe functionals on $\mathcal{F}_{\mathrm{rad}}$; the port-swap experiment asserts
+$\mathcal{M}_B[\Jimp^{\mathrm{(tx)}}]=\mathcal{M}_A[\Jimp^{\mathrm{(rx)}}]$ on reciprocal
+excitations before any volume contraction is invoked \cite{harrington2001}. Maxwell adjoint pairing
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing}, source dual pairing
+Eq.~\eqref{eq:ch2.dual-source-pairing}, and radiation map
+Eq.~\eqref{eq:ch2.spectral-operator-targets} supply the continuous objects that finite port
+matrices sample; dyadic reciprocity swap Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} and modal
+biorthogonality Eq.~\eqref{eq:ch2.radiation-biorthogonality} specialize the same symmetry on
+outgoing branches fixed by
+Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique}
+\cite{stratton1941}. Subsection~\ref{sec:ch281} upgrades the bench fact to
+sesquilinear form on $\mathcal{S}_\omega$ and $\mathcal{R}_\omega$; the identity below states the
+operator identity the VNA experiment already presupposes.
+Lorentz reciprocity (leading template). Subsection~\ref{sec:ch281} supplies the definitive operator statement: for
+admissible source pairs \((\Jimp^{(1)},\Jimp^{(2)})\) and induced fields
+\((\mathbf{u}_1,\mathbf{u}_2)\),
+\begin{equation}
+\label{eq:ch2.lorentz-reciprocity}
+\langle \mathbf{u}_1,\,\mathcal{S}_\omega[\Jimp^{(2)}]\rangle_{\mathcal{U}}
+=
+\langle \mathbf{u}_2,\,\mathcal{S}_\omega[\Jimp^{(1)}]\rangle_{\mathcal{U}}
+\end{equation}
+on passive linear media without magneto-electric coupling, with pairing induced from
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} on outgoing admissible states
+\cite{stratton1941}. Equation~\eqref{eq:ch2.lorentz-reciprocity}
+packages the port-swap symmetry as a sesquilinear identity on admissible Maxwell pairs: field
+one tested against source two equals field two tested against source one when media and
+boundaries belong to the reciprocal class \cite{stratton1941}. It develops Eq.
+Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} from kernel swap to full source--field reciprocity
+on \(\mathcal{S}_\omega\); restrictions on loss, anisotropy, and boundary class are stated in
+Subsection~\ref{sec:ch281} \cite{stratton1941}. Reciprocity on
+\(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\) follows by projection when
+both sides satisfy regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion}
+\cite{harrington2001}.
+On radiation eigenmodes Eq.~\eqref{eq:ch2.radiation-eigenpair-def}, Subsection~\ref{sec:ch282}
+develops orthogonality and coupling coefficients:
+\begin{equation}
+\label{eq:ch2.modal-orthogonality}
+\langle \mathbf{u}_m,\,\mathbf{u}_n\rangle_{\mathcal{U}}
+=
+\delta_{mn},
+\qquad
+C_{mn}
+=
+\langle \widetilde{\mathbf{u}}_m,\,\mathcal{R}_\omega[\Jimp^{(n)}]\rangle_{\mathcal{U}},
+\end{equation}
+with \(\widetilde{\mathbf{u}}_m\) adjoint modes tied to
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} \cite{stratton1941}. Equation
+\eqref{eq:ch2.modal-orthogonality} is the Section~\ref{sec:ch28} target for
+Subsection~\ref{sec:ch282} orthogonality and coupling on \(\mathcal{F}_{\mathrm{rad}}\);
+explicit vector harmonic normalization belongs to \ref{ch:03}
+\cite{stratton1941}. Modes with \(\lambda_n=0\) lie in null sectors
+Eq.~\eqref{eq:ch2.modal-null-index-set}; reciprocity constraints apply on exporting modes
+with \(\lambda_n\neq 0\) \cite{harrington2001}.
+Radiation and reception (leading template). Subsection~\ref{sec:ch283} records transmit--receive interchange for coupled systems:
+\begin{equation}
+\label{eq:ch2.transmit-receive-swap}
+\mathcal{M}_{\mathrm{rx}}[\Jimp^{\mathrm{(tx)}}]
+=
+\mathcal{M}_{\mathrm{tx}}[\Jimp^{\mathrm{(rx)}}]
+\quad\text{under reciprocity-qualified pairings},
+\end{equation}
+with \(\mathcal{M}_{\mathrm{tx}}\), \(\mathcal{M}_{\mathrm{rx}}\) finite-rank compositions of
+\(\mathcal{R}_\omega\) and \(\mathcal{O}_{\mathrm{meas}}\) Eq.~\eqref{eq:ch2.reconstruction-observation-map}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.transmit-receive-swap}
+does not eliminate \(\ker\mathcal{R}_\omega\) or \(\mathcal{K}_{\mathrm{nrec}}(N)\); it
+constrains \emph{symmetric} coupling on observable coordinates after projection onto
+\(\operatorname{ran}\mathcal{R}_\omega\) \cite{stratton1941}. Geometric forbidden sectors
+Eq.~\eqref{eq:ch2.accessible-modal-sector} and angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} compose independently
+\cite{harrington2001}.
+Radiative coupling bilinear form (leading template). Coupling between two radiating subsystems is tracked by
+\begin{equation}
+% label eq:ch2.radiative-coupling-bilinear defined in Subsection~\ref{sec:ch282}
+\mathfrak{C}_\omega(\Jimp^{(1)},\Jimp^{(2)})
+=
+\langle \mathcal{R}_\omega[\Jimp^{(1)}],\,\mathcal{R}_\omega[\Jimp^{(2)}]\rangle_{\mathcal{U}}
+\quad\text{on}\ \mathcal{F}_{\mathrm{rad}},
+\end{equation}
+with reciprocity implying \(\mathfrak{C}_\omega(\Jimp^{(1)},\Jimp^{(2)})=\mathfrak{C}_\omega(\Jimp^{(2)},\Jimp^{(1)})\)
+under Eq.~\eqref{eq:ch2.lorentz-reciprocity} and passive media
+\cite{stratton1941}. Equation~\eqref{eq:ch2.radiative-coupling-bilinear}
+measures export overlap, not raw near-zone reactive overlap
+\(\langle \mathcal{S}_\omega[\Jimp^{(1)}],\,\mathcal{S}_\omega[\Jimp^{(2)}]\rangle\), which may include
+\(\Pi_{\mathrm{ev}}\) content annihilated by Eq.~\eqref{eq:ch2.rad-null-on-evanescent}
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} qualifies when
+\(\mathfrak{C}_\omega\) may be reported as transport data \cite{harrington2001}.
+The three subsections that follow develop Lorentz reciprocity, modal orthogonality and coupling, and transmit--receive exchange in sequence.

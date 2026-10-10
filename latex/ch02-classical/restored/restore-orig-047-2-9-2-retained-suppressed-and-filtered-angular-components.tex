@@ -1,0 +1,504 @@
+% Stage 8 restored fragment — 2.9.2 Retained, suppressed, and filtered angular components (archive lines 11621-12149)
+\subsection{Retained, suppressed, and filtered angular components}
+\phantomsection\label{sec:ch292}
+Section~\ref{sec:ch29} developed angular partitioning through
+Eq.~\eqref{eq:ch2.retained-suppressed-filter} and linked it to accessible sector
+Eq.~\eqref{eq:ch2.angular-accessibility-sector} and suppressed sheet
+Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} from Subsection~\ref{sec:ch274}
+\cite{stratton1941}. Subsection~\ref{sec:ch292} gives the definitive account of retained,
+suppressed, and observation-filtered angular components on the outgoing branch established in
+Subsection~\ref{sec:ch291}. Near-field scanners record tangential fields that mix propagating
+export with evanescent storage; the partition below separates what geometry permits to radiate,
+what symmetry forbids, and what finite aperture resolves---three filters that must not be merged
+in harmonic charts or laboratory interpretation \cite{hansen1988}.
+\medskip
+Plane-wave lateral spectra
+Eqs.~\eqref{eq:ch2.radiative-lateral-spectrum-def}--\eqref{eq:ch2.plane-wave-radiation-operator},
+evanescent null law Eq.~\eqref{eq:ch2.evanescent-angular-null-law}, angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law}, and observation rank
+Eq.~\eqref{eq:ch2.angular-spectrum-observation-rank} are presupposed; Subsection~\ref{sec:ch274}
+proofs are not repeated \cite{stratton1941}. Continuous amplitude
+\(a(\widehat{\mathbf{k}})\) from Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} and
+rank-$N$ instrument readout Eq.~\eqref{eq:ch2.reconstruction-observation-map} supply the angular and
+laboratory coordinates in which the partition is stated \cite{stratton1941}.
+Near-to-far extraction belongs to Subsection~\ref{sec:ch293}; explicit $\mathcal{E}_{\mathrm{acc}}^{(N)}$ filters on
+\(S^{2}\) belong to Subsection~\ref{sec:ch294} \cite{stratton1941}. Assumptions. Fix \(\omega>0\), admissible \(\Jimp\in\mathcal{J}_\Omega\), outgoing radiative field
+\(\mathbf{u}_\omega=\mathcal{R}_\omega[\Jimp]\in\mathcal{F}_{\mathrm{rad}}\), and angular
+amplitude \(a(\widehat{\mathbf{k}})\) from
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} on the exporting transverse sheet
+\cite{stratton1941}. Accessible sector
+\(\mathcal{K}_{\mathrm{acc}}\) Eq.~\eqref{eq:ch2.angular-accessibility-sector} and suppressed
+sheet \(\mathcal{K}_{\mathrm{sup}}=S^{2}\setminus\mathcal{K}_{\mathrm{acc}}\) from
+Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} are fixed by geometry and symmetry of
+\((\Omega_s,\Gamma,\varepsilon,\mu)\) \cite{stratton1941}. Finite-rank observation
+\(\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\) from
+Eq.~\eqref{eq:ch2.reconstruction-observation-map} is presupposed; regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} qualifies transport interpretation of any reported
+component \cite{harrington2001}.
+The accessible sheet \(\mathcal{K}_{\mathrm{acc}}\subset S^{2}\) collects directions that
+geometry and symmetry permit to carry qualified export; its complement
+\(\mathcal{K}_{\mathrm{sup}}\) is suppressed before any instrument samples the pattern.
+Define the \emph{retained angular amplitude} as the exportable content supported on the
+accessible sheet. On a directional antenna bench, this is the portion of the far-zone pattern
+that symmetry and blockage permit to carry qualified export; directions on
+\(\mathcal{K}_{\mathrm{sup}}\) are zero by geometry before any instrument samples the pattern
+\cite{stratton1941}:
+
+\begin{equation}
+\label{eq:ch2.retained-angular-amplitude-def}
+a_{\mathrm{ret}}(\widehat{\mathbf{k}})
+=
+\chi_{\mathcal{K}_{\mathrm{acc}}}(\widehat{\mathbf{k}})\,
+a(\widehat{\mathbf{k}}),
+\qquad
+\chi_{\mathcal{K}_{\mathrm{acc}}}(\widehat{\mathbf{k}})
+=
+\begin{cases}
+1, & \widehat{\mathbf{k}}\in\mathcal{K}_{\mathrm{acc}},\\
+0, & \widehat{\mathbf{k}}\in\mathcal{K}_{\mathrm{sup}},
+\end{cases}
+\end{equation}
+with \(a(\widehat{\mathbf{k}})\) from
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} after
+Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} \cite{stratton1941}.
+Equation~\eqref{eq:ch2.retained-angular-amplitude-def} is the Subsection~\ref{sec:ch292} locked definition of
+development of the retained factor in Eq.
+Eq.~\eqref{eq:ch2.retained-suppressed-filter}: only directions not annihilated by
+\(\mathcal{C}_{\mathrm{geo}}\) angular rank-$N$ recovery on the far shell (Subsection~\ref{sec:ch264}) carry
+qualified transport data \cite{stratton1941}. Mathematically, \(a_{\mathrm{ret}}\) is the pointwise
+product of the full angular measure with the accessible indicator; physically, it is the portion
+of the far-zone angular distribution that geometry permits to propagate as export after radiation
+selection \cite{harrington2001}. Null-space additions
+Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} leave \(a_{\mathrm{ret}}\) unchanged
+\cite{stratton1941}. Suppressed angular amplitude. Define the \emph{suppressed angular amplitude} as the complementary sheet content:
+\begin{equation}
+\label{eq:ch2.suppressed-angular-amplitude-def}
+a_{\mathrm{sup}}(\widehat{\mathbf{k}})
+=
+\chi_{\mathcal{K}_{\mathrm{sup}}}(\widehat{\mathbf{k}})\,
+a(\widehat{\mathbf{k}}),
+\qquad
+\chi_{\mathcal{K}_{\mathrm{sup}}}=1-\chi_{\mathcal{K}_{\mathrm{acc}}}
+\ \text{a.e.\ on}\ S^{2},
+\end{equation}
+using suppressed sheet Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.suppressed-angular-amplitude-def}
+completes Eq.~\eqref{eq:ch2.retained-suppressed-filter}: for radiating export,
+geometric forbidding Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def} typically forces
+\(a_{\mathrm{sup}}=\mathbf{0}\) even when near-zone scans show energy in related directions
+\cite{stratton1941}. Suppression is therefore not synonymous with
+\(\Jimp\in\ker\mathcal{R}_\omega\): Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law} annihilates
+\(a\) everywhere, whereas Eq.~\eqref{eq:ch2.suppressed-angular-amplitude-def} removes selected
+directions while \(a_{\mathrm{ret}}\) may remain nonzero \cite{harrington2001}.
+Evanescent lateral content Eq.~\eqref{eq:ch2.evanescent-angular-null-law} does not populate
+\(a_{\mathrm{sup}}\) on export: \(\Pi_{\mathrm{ev}}\) is removed before angular readout
+\cite{stratton1941}.
+Laboratory observation applies a finite-rank criterion to far-zone angular content. Define the
+\emph{filtered angular amplitude} by
+\begin{equation}
+\label{eq:ch2.filtered-angular-amplitude-def}
+a_{\mathrm{filt}}(\widehat{\mathbf{k}})
+=
+\big[\mathcal{P}_{\mathrm{meas}}\,a\big](\widehat{\mathbf{k}}),
+\qquad
+\mathcal{P}_{\mathrm{meas}}
+=
+\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{H}_{\mathrm{ang}}^{-1},
+\end{equation}
+where \(\mathcal{H}_{\mathrm{ang}}\) maps \(a(\widehat{\mathbf{k}})\) to the corresponding
+far-zone transverse field on \(S^{2}\) and \(\mathcal{O}_{\mathrm{far}}\) is the far extractor
+from Eq.~\eqref{eq:ch2.reconstruction-observation-map} \cite{stratton1941}.
+Equation~\eqref{eq:ch2.filtered-angular-amplitude-def} is the angular-side restatement of the
+third line in Eq.~\eqref{eq:ch2.retained-suppressed-filter}. When
+\(\mathcal{O}_{\mathrm{meas}}\) is a finite set of plane-wave or modal probes,
+\(\mathcal{P}_{\mathrm{meas}}\) has rank at most \(N\) and
+\(\ker\mathcal{P}_{\mathrm{meas}}\supseteq\ker\mathcal{O}_{\mathrm{meas}}\big|_{\operatorname{ran}\mathcal{R}_\omega}\)
+Eq.~\eqref{eq:ch2.observation-null-space} \cite{stratton1941}. Physically,
+\(a_{\mathrm{filt}}\) is what a finite instrument resolves after aperture, noise, and processing;
+it may vanish on subsets of \(\mathcal{K}_{\mathrm{acc}}\) where \(a_{\mathrm{ret}}\) is nonzero
+\cite{harrington2001}.
+\begin{equation}
+\label{eq:ch2.filtered-rank-bound}
+\mathrm{rank}(\mathcal{P}_{\mathrm{meas}})
+\le
+N,
+\qquad
+\dim\operatorname{span}\{a_{\mathrm{filt}}(\widehat{\mathbf{k}})\}
+\le
+N,
+\end{equation}
+Combining Eqs.~\eqref{eq:ch2.retained-angular-amplitude-def}--\eqref{eq:ch2.filtered-angular-amplitude-def}
+yields the Chapter~\ref{ch:02} partition
+\begin{equation}
+\label{eq:ch2.angular-component-partition}
+a(\widehat{\mathbf{k}})
+=
+a_{\mathrm{ret}}(\widehat{\mathbf{k}})
+a_{\mathrm{sup}}(\widehat{\mathbf{k}}),
+\qquad
+a_{\mathrm{filt}}
+=
+\mathcal{P}_{\mathrm{meas}}\big[a_{\mathrm{ret}}+a_{\mathrm{sup}}\big],
+\end{equation}
+with \(a_{\mathrm{ret}}\) and \(a_{\mathrm{sup}}\) supported on disjoint sheets
+\(\mathcal{K}_{\mathrm{acc}}\) and \(\mathcal{K}_{\mathrm{sup}}\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.angular-component-partition} upgrades
+Eq.~\eqref{eq:ch2.retained-suppressed-filter} to explicit locked definitions and
+inserts the measurement projector \(\mathcal{P}_{\mathrm{meas}}\). The first line is an angular
+decomposition of export; the second line states that observation acts on the sum after radiation
+selection, not on raw near spectra \cite{stratton1941}. Budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} constrains
+\(\operatorname{supp}(a)\subseteq\mathcal{K}_{\mathrm{acc}}\cap\{\text{resolvable by}\ \mathcal{M}_\omega\}\),
+so \(a_{\mathrm{filt}}\) cannot recover directions outside that intersection even when raw
+lateral transforms appear rich \cite{harrington2001}.
+On the plane-wave side of Subsection~\ref{sec:ch291}, define the \emph{retained lateral spectrum}
+\begin{equation}
+\label{eq:ch2.retained-lateral-spectrum-def}
+\widetilde{\E}_{\mathrm{ret}}(k_x,k_y)
+=
+\mathcal{F}_{\mathrm{lat}}\big[\mathcal{H}_{\mathrm{ang}}[a_{\mathrm{ret}}]\big](k_x,k_y)
+\quad\text{on}\ k_t\le k_0,
+\end{equation}
+and the \emph{filtered lateral spectrum}
+\begin{equation}
+\label{eq:ch2.filtered-lateral-spectrum-def}
+\widetilde{\E}_{\mathrm{filt}}(k_x,k_y)
+=
+\mathcal{F}_{\mathrm{lat}}\big[\mathcal{H}_{\mathrm{ang}}[a_{\mathrm{filt}}]\big](k_x,k_y),
+\end{equation}
+with \(\mathcal{F}_{\mathrm{lat}}\) from Eq.~\eqref{eq:ch2.plane-wave-angular-spectrum-def}
+\cite{stratton1941}. Equations~\eqref{eq:ch2.retained-lateral-spectrum-def}--\eqref{eq:ch2.filtered-lateral-spectrum-def}
+connect Subsection~\ref{sec:ch291} lateral readout to the angular partition without re-displaying
+Eq.~\eqref{eq:ch2.plane-wave-radiation-operator}: \(\widetilde{\E}_{\mathrm{rad}}\) from
+Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def} agrees with
+\(\widetilde{\E}_{\mathrm{ret}}\) on the propagating outgoing sheet when
+\(a_{\mathrm{sup}}=\mathbf{0}\) \cite{stratton1941}. On the evanescent sheet
+\(k_t>k_0\), retained and filtered lateral spectra vanish through
+Eq.~\eqref{eq:ch2.evanescent-angular-null-law} independently of raw
+\(\mathcal{F}_{\mathrm{lat}}[\mathcal{S}_\omega[\Jimp]]\) \cite{stratton1941}.
+regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} applies to
+\(\widetilde{\E}_{\mathrm{filt}}\) before any transport claim \cite{harrington2001}.
+On \(\mathcal{K}_{\mathrm{sup}}\),
+\begin{equation}
+\label{eq:ch2.suppressed-lateral-null-law}
+a_{\mathrm{sup}}(\widehat{\mathbf{k}})=\mathbf{0}
+\ \Longrightarrow\
+\widetilde{\E}_{\mathrm{ret}}(k_x,k_y)=\widetilde{\E}_{\mathrm{rad}}(k_x,k_y)
+\ \text{on}\ k_t\le k_0,
+\end{equation}
+and any lateral energy attributed to \(\mathcal{K}_{\mathrm{sup}}\) after
+Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} is removed by geometry, not by
+\(\mathcal{P}_{\mathrm{meas}}\) \cite{stratton1941}. Equation~\eqref{eq:ch2.suppressed-lateral-null-law}
+expresses that suppression precedes finite aperture cannot resurrect directions
+forbidden by Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def}
+\cite{harrington2001}. Reciprocity in radiation and reception (Subsection~\ref{sec:ch283})
+constrains bilinear couplings on \(\mathcal{K}_{\mathrm{acc}}\) but does not enlarge
+\(\operatorname{supp}(a_{\mathrm{ret}})\) \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (a) {$a(\widehat{\mathbf{k}})$};
+ \node[ch1box, right=7mm of a] (ret) {$a_{\mathrm{ret}}$};
+ \node[ch1box, right=7mm of ret] (filt) {$a_{\mathrm{filt}}$};
+ \node[ch1box, below=5mm of a] (sup) {$a_{\mathrm{sup}}$};
+ \node[ch1box, below=5mm of ret] (kacc) {$\mathcal{K}_{\mathrm{acc}}$};
+ \node[ch1box, below=5mm of sup] (ksup) {$\mathcal{K}_{\mathrm{sup}}$};
+ \node[ch1box, left=7mm of a] (rad) {$\Pi_{\mathrm{rad}}\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of filt] (lat) {$\widetilde{\E}_{\mathrm{filt}}$};
+ \draw[ch1flow] (rad.west) -- (rad.west |- a.east);
+ \draw[ch1flow] (rad.west |- a.east) -- (a.east);
+ \draw[ch1flow] (a) -- (ret) -- (filt) -- (lat);
+ \draw[ch1flow] (a.south) -- (a.south |- sup.north);
+ \draw[ch1flow] (a.south |- sup.north) -- (sup.north);
+ \draw[ch1flow] (kacc.south) -- (kacc.south |- ret.north);
+ \draw[ch1flow] (kacc.south |- ret.north) -- (ret.north);
+ \draw[ch1flow] (ksup.south) -- (ksup.south |- sup.north);
+ \draw[ch1flow] (ksup.south |- sup.north) -- (sup.north);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch292} partition measurement sequence:
+Eq.~\eqref{eq:ch2.angular-component-partition} splits \(a(\widehat{\mathbf{k}})\) into retained
+and suppressed sheets, then applies observation filter
+Eq.~\eqref{eq:ch2.filtered-angular-amplitude-def} before lateral readout
+Eq.~\eqref{eq:ch2.filtered-lateral-spectrum-def}.}
+\label{fig:ch2.retained-suppressed-filter-measurement chain}
+\end{figure}
+Figure interpretation. Radiative amplitude $a(\widehat{\mathbf{k}})$ splits into retained sheet $\mathcal{K}_{\mathrm{acc}}$ and suppressed sheet $\mathcal{K}_{\mathrm{sup}}$ before observation filter $\mathcal{P}_{\mathrm{meas}}$. Retained content survives geometric and parity criteria; suppressed content is zero by constraint, not by source nullity. Filtered lateral spectrum $\widetilde{\E}_{\mathrm{filt}}$ is the aperture-limited readout: finite rank may remove angular content even when $a\neq 0$ on $\mathcal{F}_{\mathrm{rad}}$ \cite{stratton1941}. Figure~\ref{fig:ch2.retained-suppressed-filter-measurement chain} orders radiation selection, angular
+partition, measurement filter, and plane-wave readout. Suppression acts on
+\(\mathcal{K}_{\mathrm{sup}}\) before \(\mathcal{P}_{\mathrm{meas}}\); evanescent sheets are
+removed by Eq.~\eqref{eq:ch2.evanescent-angular-null-law} before lateral readout
+\cite{stratton1941}.
+Mathematical role of Eq.~\eqref{eq:ch2.angular-component-partition}. Equation~\eqref{eq:ch2.angular-component-partition} separates three stages that are often
+conflated in angular-spectrum discussions: radiation export, geometric $\mathcal{E}_{\mathrm{acc}}^{(N)}$, and finite
+observation \cite{stratton1941}. The retained factor encodes what the source radiates
+on \(\mathcal{K}_{\mathrm{acc}}\); the suppressed factor marks directions removed before
+measurement; the filtered factor applies \(\mathcal{P}_{\mathrm{meas}}\) \cite{stratton1941}.
+Plane-wave coefficients \(\widetilde{\E}_{\mathrm{rad}}\) from
+Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def} describe the same retained content in lateral
+coordinates when \(a_{\mathrm{sup}}=\mathbf{0}\) \cite{jackson1999}. Null additions
+plane-wave null invariance (Subsection~\ref{sec:ch291}) alter neither \(a_{\mathrm{ret}}\) nor
+\(a_{\mathrm{filt}}\) when \(\mathcal{M}_\omega\) is unchanged \cite{stratton1941}.
+Mathematical role of Eq.~\eqref{eq:ch2.filtered-angular-amplitude-def}. Equation~\eqref{eq:ch2.filtered-angular-amplitude-def} makes explicit that instruments observe
+\(\mathcal{P}_{\mathrm{meas}}[a]\), not raw \(\mathcal{F}_{\mathrm{lat}}[\mathcal{S}_\omega[\Jimp]]\)
+\cite{stratton1941}. Rank cap Eq.~\eqref{eq:ch2.filtered-rank-bound} prevents
+attributing unobserved angular structure to source nullity: a pattern gap on
+\(\mathcal{K}_{\mathrm{acc}}\) may arise from \(\mathcal{P}_{\mathrm{meas}}\) alone
+\cite{harrington2001}. Reciprocity in radiation and reception (Subsection~\ref{sec:ch283}) constrains
+coupling among observed channels but does not increase
+\(\dim\operatorname{span}\{a_{\mathrm{filt}}\}\) \cite{stratton1941}. Regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} remains mandatory before interpreting
+\(a_{\mathrm{filt}}\) as transport \cite{harrington2001}. Modal reportability Eq.~\eqref{eq:ch2.constraint-composition-law} and angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} are the modal and continuous forms of the
+same constraint chain Subsection~\ref{sec:ch292} displays in
+Eq.~\eqref{eq:ch2.angular-component-partition} \cite{stratton1941}. plane-wave radiation-operator action (Subsection~\ref{sec:ch291}) supplies lateral coordinates; retained, suppressed, and filtered angular components (Subsection~\ref{sec:ch292}) supplies angular-sheet coordinates; \ref{ch:03}
+Subsection~3.8.1 will change basis without altering
+\(\operatorname{supp}(a_{\mathrm{ret}})\) \cite{stratton1941}. Inverse obstruction
+angular spectra and inverse problems (Subsection~\ref{sec:ch274}) applies to
+\(a_{\mathrm{filt}}\), not to raw lateral transforms \cite{harrington2001}. Retained, suppressed, and filtered angular components (Subsection~\ref{sec:ch292}) assumes linear media, fixed \(\omega\), outgoing
+closure, and stationary \(\mathcal{C}_{\mathrm{geo}}\) \cite{stratton1941}. Time-varying
+or nonlinear \(\mathcal{P}_{\mathrm{meas}}\) requires separate treatment; the static rank bound
+Eq.~\eqref{eq:ch2.filtered-rank-bound} is an upper limit \cite{stratton1941}. Loss modifies
+amplitudes but not the partition logic on \(\mathcal{K}_{\mathrm{acc}}\cup\mathcal{K}_{\mathrm{sup}}\)
+\cite{stratton1941}. Cavity and waveguide spectra remain outside the exterior partition; discrete
+books Eq.~\eqref{eq:ch2.cavity-discrete-radiation-spectrum} are not substituted for
+Eq.~\eqref{eq:ch2.angular-component-partition} on unbounded domains \cite{jackson1999}.
+\phantomsection\label{sec:ch293}
+Section~\ref{sec:ch29} developed the near-to-far map through
+Eq.~\eqref{eq:ch2.near-to-far-transform} and tied it to far-zone reduction
+Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
+and the far-field approximation of source integrals (Subsection~\ref{sec:ch252}) from Subsection~\ref{sec:ch252} \cite{stratton1941}. Subsection~\ref{sec:ch293} gives the
+Chapter~\ref{ch:02} account of the operator that extracts far angular amplitudes
+\(a(\widehat{\mathbf{k}})\) from radiative fields after
+Subsections~\ref{sec:ch291}--\ref{sec:ch292}. Plane-wave lateral spectra
+Eqs.~\eqref{eq:ch2.radiative-lateral-spectrum-def}--\eqref{eq:ch2.plane-wave-radiation-operator},
+angular partition Eq.~\eqref{eq:ch2.angular-component-partition}, evanescent null law
+Eq.~\eqref{eq:ch2.evanescent-angular-null-law}, and continuous representation
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} are presupposed; asymptotic proofs in
+Subsection~\ref{sec:ch252} are not repeated \cite{stratton1941}. Observation-shell regime map
+Eq.~\eqref{eq:ch2.observation-shell-regime-map} and regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} qualify when the limit defines transport data
+\cite{harrington2001}. Far-field angular probe rank belongs to
+Subsection~\ref{sec:ch294} \cite{stratton1941}.
+Assumptions. Fix \(\omega>0\), admissible \(\Jimp\in\mathcal{J}_\Omega\), outgoing radiative field
+\(\mathbf{u}_\omega=\mathcal{R}_\omega[\Jimp]\in\mathcal{F}_{\mathrm{rad}}\), and distance
+thresholds from Eq.~\eqref{eq:ch2.distance-regime-definitions} with \(r>r_{\min}(a,\lambda_0)\)
+for source support radius \(a\) \cite{stratton1941}. Angular amplitude
+\(a(\widehat{\mathbf{k}})\) is measured on the unit sphere with outgoing transverse polarization
+\cite{stratton1941}. Regime qualification \(\mathcal{D}_{J,\mathrm{reg}}=1\) from
+Eq.~\eqref{eq:ch2.regime-operator-screen} is presupposed before interpreting any near-to-far
+output as transport \cite{harrington2001}. \begin{equation}
+\label{eq:ch2.near-to-far-shell-error}
+\|a_r-a\|_{L^{2}(S^{2})}
+\le
+C\,\chi(r),
+\qquad
+a_r(\widehat{\mathbf{k}})
+=
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp]\big](r,\widehat{\mathbf{k}}),
+\end{equation}
+
+\begin{equation}
+\label{eq:ch2.near-to-far-integral-agreement}
+\lim_{r\to\infty}
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp]\big](r,\widehat{\mathbf{k}})
+=
+a(\widehat{\mathbf{k}}),
+\end{equation}
+On observation shells \(S_r=\{|\mathbf{r}|=r\}\) with \(r\gg a\) for source radius \(a\), the
+far-zone post-processor must isolate the transverse \(e^{-\jj k_0 r}/r\) coefficient of
+\(\E(\mathbf{r})\) in direction \(\widehat{\mathbf{k}}=\mathbf{r}/r\). Define the
+\emph{far-zone extractor} \(\mathcal{H}_{\mathrm{ff}}\) by
+\begin{equation}
+\label{eq:ch2.far-zone-extractor-def}
+\mathcal{H}_{\mathrm{ff}}[\mathbf{u}_\omega](r,\widehat{\mathbf{k}})
+=
+r\,e^{\jj k_0 r}\,
+\widehat{\mathbf{k}}\times\Big(\widehat{\mathbf{k}}\times\E(\mathbf{r})\Big)\Big|_{|\mathbf{r}|=r},
+\qquad
+\mathbf{r}=r\,\widehat{\mathbf{k}},
+\end{equation}
+with \(\E\) the electric phasor in \(\mathbf{u}_\omega=(\E,\H)\) and transversality enforced by
+the double cross product \cite{stratton1941}. Equation
+\eqref{eq:ch2.far-zone-extractor-def} is the Subsection~\ref{sec:ch293} definitive specification of the
+extractor stated in Eq.~\eqref{eq:ch2.near-to-far-transform}: it isolates the
+outgoing radiative envelope compatible with Eq.~\eqref{eq:ch2.far-field-integral-reduction}
+\cite{stratton1941}. Mathematically, \(\mathcal{H}_{\mathrm{ff}}\) is a linear functional on
+shell traces; physically, it is the standard far-field post-processor that removes reactive
+\(r^{-2}\) and \(r^{-3}\) contamination when \(k_0 r\gg 1\)
+\cite{harrington2001}. The extractor acts on \(\mathcal{R}_\omega[\Jimp]\), not on raw
+\(\mathcal{S}_\omega[\Jimp]\) Eq.~\eqref{eq:ch2.observation-shell-regime-map}
+\cite{stratton1941}.
+The far-zone limit extracts the \(e^{-\jj k_0 r}/r\) transverse envelope from
+\(\mathcal{R}_\omega[\Jimp]\) on observation shells \(S_r\); the angular amplitude
+\(a(\widehat{\mathbf{k}})\) is the coefficient of that envelope in direction
+\(\widehat{\mathbf{k}}\). Define the \emph{near-to-far transformation} on admissible sources by
+\begin{equation}
+\label{eq:ch2.near-to-far-transform-def}
+a(\widehat{\mathbf{k}})
+=
+\lim_{r\to\infty}
+\mathcal{H}_{\mathrm{ff}}\big[\mathcal{R}_\omega[\Jimp]\big](r,\widehat{\mathbf{k}}),
+\end{equation}
+with \(a(\widehat{\mathbf{k}})\) the angular amplitude entering
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} \cite{stratton1941}.
+Equation~\eqref{eq:ch2.near-to-far-transform-def} develops Eq.
+Eq.~\eqref{eq:ch2.near-to-far-transform} to explicit extractor
+Eq.~\eqref{eq:ch2.far-zone-extractor-def} and fixes the radiation map input
+\cite{stratton1941}. The limit exists and is independent of the particular
+\(r\)-path when the far-field approximation of source integrals (Subsection~\ref{sec:ch252}) applies; error on finite shells
+scales as in Eq.~\eqref{eq:ch2.power-flux-regime-convergence}
+\cite{stratton1941}. Mathematically, Eq.~\eqref{eq:ch2.near-to-far-transform-def} is the
+angular-side completion of far-zone template
+Eq.~\eqref{eq:ch2.far-field-integral-reduction}; physically, it states that far angular content
+is determined by the radiative branch alone after outgoing selection, independent of reactive
+storage that may dominate on inner shells \cite{stratton1941}. Observation consequence: SNF and
+compact-range transforms that skip \(\mathcal{R}_\omega\) before extraction inherit
+Eq.~\eqref{eq:ch2.near-to-far-evanescent-null} errors documented in
+Subsection~\ref{sec:ch2103} \cite{hansen1988}. Regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} remains mandatory before interpreting the limit as
+transport data \cite{harrington2001}.
+Package Eq.~\eqref{eq:ch2.near-to-far-transform-def} as the composed operator
+\begin{equation}
+\label{eq:ch2.near-to-far-operator-composition}
+\Lambda_{\mathrm{nf}}
+=
+\mathcal{H}_{\mathrm{ang}}\circ\mathcal{H}_{\mathrm{ff}}^{\infty}\circ\mathcal{R}_\omega,
+\qquad
+a(\widehat{\mathbf{k}})=\Lambda_{\mathrm{nf}}[\Jimp](\widehat{\mathbf{k}}),
+\end{equation}
+where \(\mathcal{H}_{\mathrm{ff}}^{\infty}\) denotes the \(r\to\infty\) limit in
+Eq.~\eqref{eq:ch2.near-to-far-transform-def} and \(\mathcal{H}_{\mathrm{ang}}\) maps the
+transverse far vector in Eq.~\eqref{eq:ch2.far-zone-extractor-def} to scalar polarization
+amplitudes \(a_\sigma(\widehat{\mathbf{k}})\) in
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.near-to-far-operator-composition}
+aligns with far readout
+\(\Lambda_{\mathrm{rad}}=\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega\) from
+Eq.~\eqref{eq:ch2.reconstruction-observation-map} when \(\mathcal{O}_{\mathrm{far}}\) implements
+Eq.~\eqref{eq:ch2.far-zone-extractor-def} on the angular side \cite{stratton1941}. Measurement
+\(\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\) therefore factors
+near-to-far extraction before finite-rank observation
+\cite{harrington2001}. Null additions \(\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega\)
+leave \(\Lambda_{\mathrm{nf}}[\Jimp]\) unchanged through
+Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} \cite{stratton1941}.
+On the propagating outgoing sheet \(k_t\le k_0\), the near-to-far output agrees with retained
+lateral content from Subsection~\ref{sec:ch292}:
+\begin{equation}
+\label{eq:ch2.near-to-far-lateral-link}
+a(\widehat{\mathbf{k}})
+\ \longleftrightarrow\
+\widetilde{\E}_{\mathrm{ret}}(k_x,k_y)
+\ \text{under}\ (k_x,k_y)\mapsto\widehat{\mathbf{k}},
+\end{equation}
+when \(a_{\mathrm{sup}}=\mathbf{0}\) and plane-wave continuous-spectrum consistency (Subsection~\ref{sec:ch291}) applies \cite{stratton1941}.
+Equation~\eqref{eq:ch2.near-to-far-lateral-link} connects Subsection~\ref{sec:ch293} angular
+limit to Subsection~\ref{sec:ch291} lateral spectra without re-displaying
+Eq.~\eqref{eq:ch2.plane-wave-radiation-operator}: both describe
+\(\Pi_{\mathrm{rad}}\mathcal{R}_\omega[\Jimp]\) in different coordinates
+\cite{stratton1941}. Filtered content satisfies
+\(a_{\mathrm{filt}}=\mathcal{P}_{\mathrm{meas}}[a]\) with \(a\) from
+Eq.~\eqref{eq:ch2.near-to-far-transform-def} \cite{stratton1941}.
+Evanescent annihilation before near-to-far. Evanescent near storage does not enter Eq.~\eqref{eq:ch2.near-to-far-transform-def}:
+\begin{equation}
+\label{eq:ch2.near-to-far-evanescent-null}
+\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]
+\ \not\mapsto\
+a(\widehat{\mathbf{k}})
+\quad\text{when}\quad
+\mathcal{R}_\omega[\Jimp]\ \text{is unchanged},
+\end{equation}
+by Eqs.~\eqref{eq:ch2.evanescent-angular-null-law},~\eqref{eq:ch2.evanescent-angular-decoupling},
+and~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Equation
+\eqref{eq:ch2.near-to-far-evanescent-null} expresses Eq.
+Eq.~\eqref{eq:ch2.near-to-far-transform}: reactive \(\Pi_{\mathrm{ev}}\) content may be
+large in the near zone Eq.~\eqref{eq:ch2.near-zone-field-scaling} while the far limit reports
+only qualified export \cite{stratton1941}. regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} forbids promoting \(\Pi_{\mathrm{ev}}\) storage to
+\(a(\widehat{\mathbf{k}})\) \cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\Jimp$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (near) {Near shell\\$r\sim r_c$};
+ \node[ch1box, right=7mm of near] (hff) {$\mathcal{H}_{\mathrm{ff}}$};
+ \node[ch1box, right=7mm of hff] (a) {$a(\widehat{\mathbf{k}})$};
+ \node[ch1box, below=5mm of r] (pi) {$\Pi_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of near] (ev) {$\Pi_{\mathrm{ev}}=\mathbf{0}$};
+ \draw[ch1flow] (j) -- (r) -- (near) -- (hff) -- (a);
+ \draw[ch1flow] (pi.south) -- (pi.south |- r.north);
+ \draw[ch1flow] (pi.south |- r.north) -- (r.north);
+ \draw[ch1flow, dashed] (ev.south) -- (near.north);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch293} near-to-far measurement sequence:
+Eq.~\eqref{eq:ch2.near-to-far-transform-def} applies \(\mathcal{H}_{\mathrm{ff}}\) on
+\(\mathcal{R}_\omega[\Jimp]\) after \(r\to\infty\); evanescent content does not feed
+Eq.~\eqref{eq:ch2.near-to-far-evanescent-null}.}
+\label{fig:ch2.near-to-far-measurement chain}
+\end{figure}
+Figure interpretation. Near shell observation at $r\sim r_c$ samples $\mathcal{R}_\omega[\Jimp]$ after $\Pi_{\mathrm{rad}}$, not raw $\mathcal{S}_\omega[\Jimp]$. Extractor $\mathcal{H}_{\mathrm{ff}}$ implements the $r\to\infty$ limit of the far-field approximation of source integrals (Subsection~\ref{sec:ch252}); dashed $\Pi_{\mathrm{ev}}=\mathbf{0}$ marks evanescent content that may be large on the inner shell yet does not feed $a(\widehat{\mathbf{k}})$. The measurement sequence confirms when a near-field-to-far-field transform is structurally valid versus when reactive storage corrupts the asymptotic limit \cite{stratton1941}.
+Figure~\ref{fig:ch2.near-to-far-measurement chain} orders radiation selection, finite-shell observation,
+far-zone extraction, and angular amplitude. Near reactive content is dashed: it may appear on
+inner shells but is annihilated in the limit when export is unchanged
+Mathematical role of Eq.~\eqref{eq:ch2.near-to-far-transform-def}. Equation~\eqref{eq:ch2.near-to-far-transform-def} is the angular-spectrum-side completion of the
+far-zone template Eq.~\eqref{eq:ch2.far-field-integral-reduction}: it converts radiative fields
+to continuous amplitudes \(a(\widehat{\mathbf{k}})\) used in
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} \cite{stratton1941}. The
+map is not an optional post-processor on raw near data: input is
+\(\mathcal{R}_\omega[\Jimp]\), consistent with observation-shell map
+Eq.~\eqref{eq:ch2.observation-shell-regime-map} \cite{stratton1941}. Plane-wave lateral spectra
+Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def} and angular limit
+Eq.~\eqref{eq:ch2.near-to-far-lateral-link} are equivalent coordinate descriptions of the same
+export \cite{jackson1999}. Reciprocity in radiation and reception (Subsection~\ref{sec:ch283}) constrains bilinear couplings built from
+\(a(\widehat{\mathbf{k}})\) but does not modify Eq.~\eqref{eq:ch2.near-to-far-evanescent-null}
+\cite{stratton1941}. Mathematical role of Eq.~\eqref{eq:ch2.far-zone-extractor-def}. Equation~\eqref{eq:ch2.far-zone-extractor-def} makes explicit how laboratory far-field
+algorithms isolate \(\E_0(\theta,\phi)\) before pattern integration or modal projection
+\cite{stratton1941}. Applying the extractor to
+\(\mathcal{S}_\omega[\Jimp]\) on near shells confuses reactive and radiative scaling
+Eq.~\eqref{eq:ch2.near-zone-field-scaling}; applying it to \(\mathcal{R}_\omega[\Jimp]\) aligns
+with power-flux convergence Eq.~\eqref{eq:ch2.power-flux-regime-convergence}
+\cite{stratton1941}. Filtered observation
+Eq.~\eqref{eq:ch2.filtered-angular-amplitude-def} composes after
+Eq.~\eqref{eq:ch2.near-to-far-transform-def}, not before radiation selection
+\cite{harrington2001}. Modal far pattern Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} and angular limit
+Eq.~\eqref{eq:ch2.near-to-far-transform-def} describe the same \(\operatorname{ran}\mathcal{R}_\omega\)
+content under far-pattern coefficients from spectral modes (Subsection~\ref{sec:ch261})
+\cite{stratton1941}. Retained/suppressed partition retained, suppressed, and filtered angular components (Subsection~\ref{sec:ch292}) constrains \(\operatorname{supp}(a)\) independently of
+the near-to-far limit procedure \cite{stratton1941}. \ref{ch:03} harmonic
+bases change coordinates without altering Eq.~\eqref{eq:ch2.near-to-far-operator-composition}
+\cite{stratton1941}. Example~\ref{sec:ch2103} applies
+Eq.~\eqref{eq:ch2.near-to-far-evanescent-null} in a worked setting \cite{stratton1941}. Near-to-far transformation (Subsection~\ref{sec:ch293}) assumes linear homogeneous or piecewise-homogeneous
+media, fixed \(\omega\), outgoing radiation condition, and observation outside \(\Omega_s\)
+\cite{stratton1941}. It fails in cutoff guides, cavity standing waves,
+and lossless open resonances without outgoing selection \cite{stratton1941}. Surface waves and
+strong anisotropy require modified extractors beyond
+Eq.~\eqref{eq:ch2.far-zone-extractor-def} \cite{harrington2001}. The theorem does not assert
+source uniqueness---only field asymptotics and angular amplitudes on the outgoing branch
+\cite{stratton1941}. Cavity discrete spectra Eq.~\eqref{eq:ch2.cavity-discrete-radiation-spectrum}
+do not replace Eq.~\eqref{eq:ch2.near-to-far-transform-def} on exterior domains
+\cite{jackson1999}.
+Section~\ref{sec:ch29} developed far-field angular rank-$N$ recovery through
+Eq.~\eqref{eq:ch2.far-angular-accessibility-def} and required USE of directional
+observables from Section~\ref{sec:ch01.2.1} and transport criteria from
+Section~\ref{sec:ch01.2.3} \cite{stratton1941}. Subsection~\ref{sec:ch294} supplies the definitive completion for which directions on \(S^{2}\) carry
+qualified, observable far-zone angular content after Subsections~\ref{sec:ch291}--\ref{sec:ch293}.
+Near-to-far map Eq.~\eqref{eq:ch2.near-to-far-transform-def}, angular partition
+Eq.~\eqref{eq:ch2.angular-component-partition}, accessible sector
+Eq.~\eqref{eq:ch2.angular-accessibility-sector}, composition law
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law}, and observation rank
+Eq.~\eqref{eq:ch2.angular-spectrum-observation-rank} are presupposed; angular rank-$N$ recovery on the far shell (Subsection~\ref{sec:ch264}) is upgraded, not re-proved
+\cite{stratton1941}. Directional flux maps Eqs.~\eqref{eq:ch1.directional-power-density}--\eqref{eq:ch1.directional-am-flux}
+and transport triad Eq.~\eqref{eq:ch1.transport-qualified-decision} enter from the cited sections
+\cite{stratton1941}. Explicit harmonic filters belong to \ref{ch:03};
+Assumptions. Fix \(\omega>0\), admissible \(\Jimp\in\mathcal{J}_\Omega\), outgoing radiative field
+\(\mathbf{u}_\omega=\mathcal{R}_\omega[\Jimp]\), angular amplitude \(a(\widehat{\mathbf{k}})\) from
+Eq.~\eqref{eq:ch2.near-to-far-transform-def}, and regime qualification
+\(\mathcal{D}_{J,\mathrm{reg}}=1\) from Eq.~\eqref{eq:ch2.regime-operator-screen}
+\cite{stratton1941}. Accessible sector \(\mathcal{K}_{\mathrm{acc}}\) and
+suppressed sheet \(\mathcal{K}_{\mathrm{sup}}\) are fixed by
+Eqs.~\eqref{eq:ch2.angular-accessibility-sector}--\eqref{eq:ch2.suppressed-angular-sheet-def}
+\cite{stratton1941}. Finite-rank measurement \(\mathcal{M}_\omega\) from
+Eq.~\eqref{eq:ch2.reconstruction-observation-map} is presupposed \cite{harrington2001}.

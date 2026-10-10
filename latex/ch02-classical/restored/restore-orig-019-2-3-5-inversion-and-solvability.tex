@@ -1,0 +1,248 @@
+% Stage 8 restored fragment — 2.3.5 Inversion and solvability (archive lines 4662-4915)
+\subsection{Inversion and solvability}
+\label{sec:ch234}
+
+A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Inversion and solvability'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Subsection~\ref{sec:ch234} supplies the definitive account of constructive inversion and
+solvability on single- and multi-region domains with interface data from
+Eq.~\eqref{eq:ch1.interface-conditions} \cite{stratton1941}. Weak well-posedness on
+bounded quotients through Eqs.~\eqref{eq:ch2.lax-milgram-wellposed} and~\eqref{eq:ch2.coercivity-quotient}
+from Subsection~\ref{sec:ch214} is presupposed; Lax--Milgram and Friedrichs arguments
+are not repeated. Outgoing uniqueness on exterior domains is finalized in
+Section~\ref{sec:ch243}; here the resolvent branch and its Green realization are
+stated as hypotheses \cite{stratton1941}. Material Helmholtz symbols
+Eqs.~\eqref{eq:ch2.material-helmholtz-electric}--\eqref{eq:ch2.material-helmholtz-magnetic}
+and trace spaces Eqs.~\eqref{eq:ch2.interface-trace-space}--\eqref{eq:ch2.domain-refinement-L}
+from Sections~\ref{sec:ch211}--\ref{sec:ch222} are fixed input classes.
+
+Let \(\Omega=\cup_{j=1}^{N_p}\Omega_j\) be a finite union of Lipschitz patches with
+pairwise interfaces \(\Sigma_{ab}=\overline{\Omega_a}\cap\overline{\Omega_b}\),
+piecewise constants \(\varepsilon_j,\mu_j>0\) on \(\Omega_j\), and outer boundary
+\(\Gamma=\partial\Omega\). Impressed data satisfy
+\(\Jimp\in\mathcal{J}_\Omega\), charge continuity
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, and boundary class
+\(\mathcal{B}_\Gamma\) compatible with Eq.~\eqref{eq:ch2.admissible-field-space}.
+Regularized convolutions follow Subsection~\ref{sec:ch232}; retarded causality follows
+Subsection~\ref{sec:ch233} \cite{stratton1941}.
+Composite domain and patchwise inversion. Inversion separates invertible propagation from compact perturbations and null directions
+\cite{stratton1941}. Ill-posed spherical near-field campaigns often fail here: the
+export map is well defined, but the inverse amplifies noise along small singular values
+\cite{hansen1988}.
+On a composite domain the impressed-source region is partitioned into material patches
+\(\Omega_j\) separated by interfaces \(\Sigma_{ab}\); each patch carries its own wavenumber
+\(k_j=\omega\sqrt{\mu_j\varepsilon_j}\) (rad\,m\(^{-1}\)).
+Decompose the solution map as
+\begin{equation}
+\label{eq:ch2.composite-domain-decomposition}
+\Omega
+=
+\bigsqcup_{j=1}^{N_p}\Omega_j
+\ \cup\
+\bigsqcup_{a<b}\Sigma_{ab},
+\qquad
+k_j=\omega\sqrt{\mu_j\varepsilon_j},
+\end{equation}
+with wavenumbers \(k_j\) from Eq.~\eqref{eq:ch2.helmholtz-symbol} on each patch
+\cite{stratton1941}. On \(\Omega_j\), the electric field satisfies the patchwise
+Helmholtz drive of Eq.~\eqref{eq:ch2.material-helmholtz-electric} and is represented
+by the regularized dyadic convolution stated below; the patch kernel
+\(\overline{\mathbf{G}}_{E}^{(j)}\) incorporates local \(\varepsilon_j,\mu_j\) and the
+finite-part prescription of Subsection~\ref{sec:ch232} when observation approaches the
+source support:
+\begin{equation}
+\label{eq:ch2.patchwise-dyadic-inversion}
+\E(\mathbf{r})
+=
+\E_{\mathrm{hom}}(\mathbf{r})
++\jj\omega\mu_j
+\int_{\Omega_j}
+\overline{\mathbf{G}}_{E}^{(j)}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r',
+\qquad
+\mathbf{r}\in\Omega_j,
+\end{equation}
+where \(\overline{\mathbf{G}}_{E}^{(j)}\) satisfies
+Eq.~\eqref{eq:ch2.material-dyadic-defining-operator} with patch coefficients and
+finite-part evaluation when \(\mathbf{r}\in\Omega_j\) approaches
+\(\operatorname{supp}\Jimp\) \cite{harrington2001}. In Eq.~\eqref{eq:ch2.patchwise-dyadic-inversion},
+$\mathbf{r}$ is the observation point in patch $\Omega_j$ and $\mathbf{r}'$ the source point
+integrated over the impressed support; $\overline{\mathbf{G}}_{E}^{(j)}(\mathbf{r},\mathbf{r}')$
+is the patchwise outgoing response function \cite{stratton1941}. Equation
+\eqref{eq:ch2.patchwise-dyadic-inversion} is the constructive content of
+Eq.~\eqref{eq:ch2.solution-map-dyadic-realization} on uniform subdomains; it does
+not yet enforce interface jumps across \(\Sigma_{ab}\) \cite{stratton1941}.
+Fields in adjacent patches are linked by tangential continuity and normal-flux jumps
+imported from Eq.~\eqref{eq:ch1.interface-conditions} \cite{stratton1941}.
+The unit normal \(\hat{\mathbf{n}}_{ab}\) on interface \(\Sigma_{ab}\) points from patch
+\(a\) into patch \(b\); tangential \(\E\) and \(\H\) must match across the interface so
+that the composite field remains a single physical solution.
+In
+operator form,
+\begin{equation}
+\label{eq:ch2.interface-dyadic-continuity}
+\hat{\mathbf{n}}_{ab}\times\E^{(a)}\big|_{\Sigma_{ab}}
+=
+\hat{\mathbf{n}}_{ab}\times\E^{(b)}\big|_{\Sigma_{ab}},
+\qquad
+\hat{\mathbf{n}}_{ab}\times\H^{(a)}\big|_{\Sigma_{ab}}
+=
+\hat{\mathbf{n}}_{ab}\times\H^{(b)}\big|_{\Sigma_{ab}},
+\end{equation}
+with \(\E^{(j)}\) from Eq.~\eqref{eq:ch2.patchwise-dyadic-inversion} and
+\(\H^{(j)}\) from Eq.~\eqref{eq:ch2.magnetic-from-electric-dyad} when valid
+\cite{harrington2001}. Equations~\eqref{eq:ch2.interface-dyadic-continuity} replace
+free-space Eq.~\eqref{eq:ch2.free-space-dyadic-green} by patch Green functions
+\(\overline{\mathbf{G}}_{E}^{(j)}\) plus interface unknowns on
+\(\mathcal{T}_{\Sigma_{ab}}\) from Eq.~\eqref{eq:ch2.interface-trace-space}
+\cite{stratton1941}. The assembled multi-region system is
+\begin{equation}
+\label{eq:ch2.multi-region-inversion-system}
+\begin{bmatrix}
+\mathcal{I}+\mathcal{K}_{11} & \cdots & \mathcal{K}_{1N_p}\\
+\vdots & \ddots & \vdots\\
+\mathcal{K}_{N_p1} & \cdots & \mathcal{I}+\mathcal{K}_{N_pN_p}
+\end{bmatrix}
+\begin{bmatrix}\mathbf{x}_1\\ \vdots\\ \mathbf{x}_{N_p}\end{bmatrix}
+=
+\begin{bmatrix}\mathbf{b}_1\\ \vdots\\ \mathbf{b}_{N_p}\end{bmatrix},
+\end{equation}
+where \(\mathbf{x}_j\) collects tangential field or equivalent surface currents on
+patch boundaries, \(\mathcal{K}_{jk}\) are dyadic layer potentials generated by
+\(\overline{\mathbf{G}}_{E}^{(k)}\), and \(\mathbf{b}_j\) encodes impressed sources
+and outer \(\mathcal{B}_\Gamma\) data \cite{harrington2001}.
+Equation~\eqref{eq:ch2.multi-region-inversion-system} is the constructive statement of
+multi-region solvability: invertibility of the block operator is the
+Green-function analogue of Eq.~\eqref{eq:ch2.lax-milgram-wellposed} on composite
+domains \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (p1) {$\Omega_1$\\$k_1$};
+ \node[ch1box, right=7mm of p1] (sig) {$\Sigma_{12}$};
+ \node[ch1box, right=7mm of sig] (p2) {$\Omega_2$\\$k_2$};
+ \node[ch1box, below=5mm of sig] (g) {$\overline{\mathbf{G}}_{E}^{(j)}$};
+ \node[ch1box, below=5mm of p2] (bc) {$\mathcal{B}_\Gamma$};
+ \draw[ch1flow] (p1) -- (sig) -- (p2);
+ \draw[ch1flow] (g.east) -- (g.east |- p1.west);
+ \draw[ch1flow] (g.east |- p1.west) -- (p1.west);
+ \draw[ch1flow] (g.east) -- (g.east |- p2.west);
+ \draw[ch1flow] (g.east |- p2.west) -- (p2.west);
+ \draw[ch1flow] (bc.south) -- (bc.south |- p2.north);
+ \draw[ch1flow] (bc.south |- p2.north) -- (p2.north);
+\end{tikzpicture}%
+}
+\caption{Multi-region inversion Eq.~\eqref{eq:ch2.multi-region-inversion-system}:
+patchwise dyadic kernels coupled by interface continuity
+Eq.~\eqref{eq:ch2.interface-dyadic-continuity} and exterior
+\(\mathcal{B}_\Gamma\).}
+\label{fig:ch2.multi-region-green-assembly}
+\end{figure}
+Subsection~\ref{sec:ch232} supplies
+self-term regularization on each patch; Subsection~\ref{sec:ch233} supplies causal
+time marching when Eq.~\eqref{eq:ch2.multi-region-inversion-system} is embedded in
+\(\mathcal{S}_t\) \cite{harrington2001}. On a bounded Lipschitz domain with passive \(\mathcal{B}_\Gamma\) satisfying
+Eq.~\eqref{eq:ch2.passive-impedance-class}, coercivity on the quotient
+\(\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega\) from
+Eq.~\eqref{eq:ch2.coercivity-quotient} implies existence of a unique weak solution
+Eq.~\eqref{eq:ch2.lax-milgram-wellposed} \cite{stratton1941}. Green-function
+inversion is equivalent when the regularized operator
+\begin{equation}
+\label{eq:ch2.green-bvp-equivalence}
+\mathcal{S}_\omega[\Jimp]
+=
+\mathbf{u}_\omega
+\quad\Longleftrightarrow\quad
+\mathcal{L}_\omega[\mathbf{u}_\omega]
+=
+\begin{bmatrix}\mathbf{s}_\omega(\Jimp,\rho)\\ \mathbf{g}_\Gamma\end{bmatrix},
+\end{equation}
+with \(\mathbf{u}_\omega=(\E,\H)\) obtained from
+Eqs.~\eqref{eq:ch2.patchwise-dyadic-inversion}--\eqref{eq:ch2.mom-self-term-regularized}
+on simply connected patches and from
+Eq.~\eqref{eq:ch2.multi-region-inversion-system} otherwise
+\cite{harrington2001}. Equation~\eqref{eq:ch2.green-bvp-equivalence}
+expresses Eq.~\eqref{eq:ch2.solution-map-resolvent} with constructive kernels; stability
+is controlled by Eq.~\eqref{eq:ch2.solution-map-stability} and resolvent bound
+Eq.~\eqref{eq:ch2.resolvent-bounded} on the physical branch
+\cite{stratton1941}.
+On exterior \(\Omega\) with compact \(\operatorname{supp}\Jimp\), existence of
+\(\mathcal{S}_\omega\) requires outgoing Green functions whose far zone matches
+Section~\ref{sec:ch24} \cite{stratton1941}. Without that selection, the block system
+Eq.~\eqref{eq:ch2.multi-region-inversion-system} admits incoming solutions violating
+Eq.~\eqref{eq:ch2.retarded-harmonic-kernel-theorem} \cite{harrington2001}. Uniqueness
+on the outgoing branch is
+\begin{equation}
+\label{eq:ch2.exterior-uniqueness-hypothesis}
+\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}
+\ \text{and outgoing}\ \mathcal{B}_\Gamma
+\ \Longrightarrow\
+\mathbf{u}_\omega=\mathbf{0},
+\end{equation}
+with \(\mathbf{u}_\omega=(\E,\H)\) the total field phasor pair. Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis} is the solvability criterion for
+exterior Green inversion \cite{stratton1941}. The split
+Eq.~\eqref{eq:ch2.outgoing-nonselfadjoint-split} reminds that exterior problems are
+not Friedrichs self-adjoint on all of \(\mathcal{U}_\omega\)
+\cite{harrington2001}.
+Resonant cavity spectra. Bounded cavities with PEC walls possess discrete spectra \(\{\omega_n\}\).
+At a resonant frequency \(\omega=\omega_n\) the Helmholtz operator acquires a
+non-trivial null space and the Green resolvent ceases to be bounded on the full
+admissible field space:
+\begin{equation}
+\label{eq:ch2.cavity-resonance-failure}
+\ker\mathcal{L}_\omega\neq\{\mathbf{0}\}
+\quad\Longrightarrow\quad
+\mathcal{L}_\omega^{-1}\ \text{unbounded on}\ \mathcal{U}_\omega,
+\end{equation}
+and Eq.~\eqref{eq:ch2.green-bvp-equivalence} fails unless quotienting by standing
+modes as in Eq.~\eqref{eq:ch2.coercivity-quotient} or introducing loss
+\cite{stratton1941}. Poles of the resolvent appear as
+\begin{equation}
+\label{eq:ch2.resolvent-pole-cavity}
+\det\big(\mathcal{I}+\mathcal{K}\big)=0
+\quad\Longleftrightarrow\quad
+\omega=\omega_n,
+\end{equation}
+for the coupled operator \(\mathcal{K}\) in
+Eq.~\eqref{eq:ch2.multi-region-inversion-system} on closed resonant structures
+\cite{stratton1941}. Impressed \(\Jimp\) at resonance requires compatibility with
+\(\ker\mathcal{L}_\omega\); otherwise amplitudes diverge even when Green formulas
+are formally applied \cite{harrington2001}. Incoming exterior excitation produces a
+distinct failure: Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis} is violated
+without additional incident-field subtraction in Section~\ref{sec:ch251}
+\cite{stratton1941}.
+Numerical equivalence. Finite-element stiffness systems and boundary-element impedance matrices are
+Galerkin discretizations of Eq.~\eqref{eq:ch2.maxwell-weak-form} and
+Eq.~\eqref{eq:ch2.multi-region-inversion-system}, respectively:
+\begin{equation}
+\label{eq:ch2.discrete-green-equivalence}
+\mathbf{Z}\mathbf{I}=\mathbf{V}
+\quad\Longleftrightarrow\quad
+\mathcal{K}\mathbf{x}=\mathbf{b},
+\end{equation}
+when basis functions match trace spaces and self-terms implement
+Eq.~\eqref{eq:ch2.mom-self-term-regularized} \cite{harrington2001}. Equation
+\eqref{eq:ch2.discrete-green-equivalence} is the same inversion problem in matrix form.
+Ill-conditioning near
+Eq.~\eqref{eq:ch2.resolvent-pole-cavity} mirrors practical difficulty at cavity
+modes and near-spurious resonances in open-region formulations
+\cite{harrington2001}.
+Equations~\eqref{eq:ch2.patchwise-dyadic-inversion}--\eqref{eq:ch2.multi-region-inversion-system}
+require Lipschitz interfaces, passive linear media on each patch, and fixed
+\(\omega\) in the harmonic band. They fail for time-varying boundaries, nonlinear
+constitutive laws, and anisotropic magneto-electric coupling without retensoring
+\(\overline{\mathbf{G}}_{E}^{(j)}\) \cite{stratton1941}. Point sources without
+Subsection~\ref{sec:ch232} regularization produce formal but non-admissible fields;
+\(\Jimp\) must remain in \(\mathcal{J}_\Omega\) \cite{harrington2001}. With Subsections~\ref{sec:ch231}--\ref{sec:ch234} complete, Section~\ref{sec:ch23}
+has constructed scalar, vector, and dyadic Green kernels, regularized their
+singular convolutions, tied them to retarded causal propagation, and stated
+constructive inversion on composite domains compatible with
+Eq.~\eqref{eq:ch2.resolvent-operator}. Sommerfeld outgoing selection in
+Section~\ref{sec:ch24} fixes the exterior branch assumed in
+Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis}; radiation integrals in
+Section~\ref{sec:ch25} evaluate far-zone observables from the propagating subspace
+qualified by Eq.~\eqref{eq:ch2.regime-operator-screen}; spectral and Fredholm
+consequences of Eq.~\eqref{eq:ch2.green-compact-split} continue in
+Section~\ref{sec:ch263} \cite{stratton1941}. Green-function inversion recovers field
+states from sources under declared completion; whether a desired angular pattern is
+source-realizable under finite impressed currents is established in Chapter~\ref{ch:04}
+(\emph{Source Realizability and Spectral Truncation}) \cite{devaney2004}.

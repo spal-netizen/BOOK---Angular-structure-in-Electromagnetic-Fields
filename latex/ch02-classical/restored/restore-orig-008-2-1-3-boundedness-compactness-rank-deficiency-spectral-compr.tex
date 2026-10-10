@@ -1,0 +1,282 @@
+% Stage 8 restored fragment — 2.1.3 Boundedness, compactness, rank deficiency, spectral compression (archive lines 1916-2204)
+\subsection{Boundedness, compactness, rank deficiency, spectral compression}
+\label{sec:ch213}
+
+Spectral compression on compact support limits how sharply a finite aperture can beam \cite{jackson1999}. Sidelobe floors on a range trace the same law \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+The physical problem is observability under finite geometry: a compact source, a bounded
+domain, and a finite aperture cannot couple to infinitely many independent field degrees of
+freedom \cite{hansen1988}. Subsections~\ref{sec:ch211}--\ref{sec:ch212} fixed spaces and operator domains.
+Subsection~\ref{sec:ch213} records boundedness and compactness properties, rank
+deficiency of observation maps, and the viewpoint from which Section~\ref{sec:ch26}
+develops spectral compression for radiation operators \cite{stratton1941}. The physical
+content is familiar on a compact range: finite sources and finite probes cannot couple to
+infinitely many independent far-zone degrees of freedom, so accessible rank is limited by
+geometry and observation extent \cite{hansen1988}. Fredholm index computation
+and complete spectral decomposition remain in Sections~\ref{sec:ch263}
+and~\ref{sec:ch261}; here the constructive development establishes the lemmas on
+boundedness, compactness, and rank deficiency those sections invoke by reference
+\cite{stratton1941}.
+In the display below, $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omega$ denotes the
+outgoing radiative subspace selected by $\Pi_{\mathrm{rad}}$; $\mathcal{S}_\omega$ and
+$\mathcal{R}_\omega$ are the solution and radiation maps on $\mathcal{J}_\Omega$
+\cite{harrington2001}.
+The linear map representing \(T:\mathcal{X}\to\mathcal{Y}\) between Hilbert spaces is
+\emph{bounded} if
+
+\begin{equation}
+\label{eq:ch2.operator-boundedness}
+\|T\|_{\mathrm{op}}
+=
+\sup_{\|\mathbf{x}\|_{\mathcal{X}}=1}\|T\mathbf{x}\|_{\mathcal{Y}}
+<\infty.
+\end{equation}
+Boundedness is equivalent to continuity at the origin and is the default
+hypothesis for composition with measurement readouts \cite{stratton1941}. On the
+Maxwell chain, operators split into bounded and unbounded classes. Trace and observation maps are bounded on declared spaces. The tangential trace
+Eq.~\eqref{eq:ch2.trace-operator-bounded} satisfies
+\(\|\gamma_\tau\|_{\mathrm{op}}<\infty\) from \(\HCurl(\Omega)\) to
+\(H^{-1/2}(\Gamma)^{3}\) \cite{stratton1941}. Far-zone readouts from
+Subsection~\ref{sec:ch201} define bounded functionals when restricted to
+\(\mathcal{F}_{\mathrm{rad}}\):
+\begin{equation}
+\label{eq:ch2.far-observation-bounded}
+\|\mathcal{O}_{\mathrm{far}}\|_{\mathrm{op}}
+=
+\sup_{\|\mathbf{u}\|_{\mathcal{U}}=1}
+\big|\mathcal{O}_{\mathrm{far}}[\mathbf{u}]\big|
+<\infty
+\quad\text{on}\ \mathcal{F}_{\mathrm{rad}}.
+\end{equation}
+Laboratory maps \(\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\) in
+Eq.~\eqref{eq:ch2.operational-measurement-chain} are bounded on the same subspace
+because composition of bounded operators is bounded \cite{harrington2001}.
+Volume and composite Maxwell operators are unbounded on full
+\(\mathcal{U}_\omega\). The map \(\mathcal{M}_\omega\) of
+Eq.~\eqref{eq:ch2.volume-operator-domain-range} has
+\(\|\mathcal{M}_\omega\|_{\mathrm{op}}=\infty\) when
+\(\mathcal{D}(\mathcal{M}_\omega)=\mathcal{U}_\omega\) because controlling
+\(\|\mathcal{M}_\omega[\mathbf{u}]\|_{\mathrm{vol}}\) would require uniform curl
+bounds beyond \(L^{2}\) control \cite{stratton1941}. Restriction to
+\(\mathcal{D}(\mathcal{L}_\omega)\) with graph norm
+Eq.~\eqref{eq:ch2.graph-norm} restores boundedness of the \emph{resolvent}
+\(\mathcal{L}_\omega^{-1}\) on the physical branch where invertibility holds:
+\begin{equation}
+\label{eq:ch2.resolvent-bounded}
+\|\mathcal{L}_\omega^{-1}\|_{\mathrm{op}}
+<\infty
+\quad\Longleftrightarrow\quad
+\mathcal{L}_\omega\ \text{bijective on}\ \mathcal{D}(\mathcal{L}_\omega)/\ker\mathcal{L}_\omega.
+\end{equation}
+Equation~\eqref{eq:ch2.resolvent-bounded} specializes
+Eq.~\eqref{eq:ch2.solution-map-stability}; exterior outgoing problems use
+resolvent bounds on weighted subspaces rather than on all of
+\(\mathcal{U}_\omega\) \cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (hc) {$\HCurl(\Omega)$};
+ \node[ch1box, right=16mm of hc] (l2) {$L^{2}(\Omega)^{3}$};
+ \node[ch1box, below=5mm of l2] (tr) {$H^{-1/2}(\Gamma)^{3}$};
+ \draw[ch1flow] (hc.east) -- node[above,font=\scriptsize]{compact} (l2.west);
+ \draw[ch1flow] (hc.south) -- node[right,font=\scriptsize]{$\gamma_\tau$} (tr.north);
+\end{tikzpicture}%
+}
+\caption{Compact embedding \(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) on
+bounded \(\Omega\); trace map is bounded but not compact
+(Eq.~\eqref{eq:ch2.embedding-chain}).}
+\label{fig:ch2.compact-embedding-schematic}
+\end{figure}
+~\eqref{eq:ch2.embedding-chain}. Rellich-type compactness for
+\(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) on bounded domains implies
+that bounded sequences in \(\HCurl\) have \(L^{2}\)-convergent subsequences
+\cite{stratton1941}. Finite geometry cannot export arbitrarily fine angular complexity;
+propagation therefore acts as a compression mechanism on electromagnetic structure.
+An operator \(K:\mathcal{X}\to\mathcal{Y}\) is
+\emph{compact} if bounded sets in \(\mathcal{X}\) map to relatively compact sets
+in \(\mathcal{Y}\):
+\begin{equation}
+\label{eq:ch2.compact-operator-def}
+K\ \text{compact}
+\iff
+K(B_{\mathcal{X}}(0,1))\ \text{has compact completion in}\ \mathcal{Y}.
+\end{equation} 
+Compact perturbations of identity produce Fredholm structure used in
+Section~\ref{sec:ch263}; Subsection~\ref{sec:ch213} records the embedding lemmas
+without computing index \cite{harrington2001}.
+Radiation and Green maps on fixed bounded domains often decompose as
+\begin{equation}
+\label{eq:ch2.green-compact-split}
+\mathcal{S}_\omega
+=
+G_{\mathrm{sing}}+K_{\mathrm{cpt}},
+\end{equation}
+with \(G_{\mathrm{sing}}\) capturing singular near-field kernels and
+\(K_{\mathrm{cpt}}\) compact on \(\mathcal{J}_\Omega\) when sources have compact
+support and \(\Omega\) is bounded \cite{stratton1941}. Equation
+\eqref{eq:ch2.green-compact-split} is the operator template for
+Section~\ref{sec:ch23}; kernel construction is not repeated here. The split
+separates non-compact singular behavior at coincident points from compact
+smoothing at finite separation \cite{harrington2001}. Rank deficiency enters through finite observation. An aperture-limited measurement
+map \(\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}\)
+has finite-dimensional range with \(N<\infty\):
+\begin{equation}
+\label{eq:ch2.finite-rank-observation}
+\mathcal{O}_{\mathrm{meas}}
+=
+\sum_{n=1}^{N}\langle\cdot,\mathbf{f}_n\rangle_{\mathcal{U}}\,\mathbf{e}_n,
+\end{equation}
+for dual vectors \(\mathbf{f}_n\) and coordinate directions \(\mathbf{e}_n\).
+Therefore \(\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})\le N\) and
+\begin{equation}
+\label{eq:ch2.observation-null-space}
+\ker\mathcal{O}_{\mathrm{meas}}
+=
+\left\{
+\mathbf{u}\in\mathcal{F}_{\mathrm{rad}}:
+\mathcal{O}_{\mathrm{meas}}[\mathbf{u}]=\mathbf{0}
+\right\}
+\end{equation}
+is infinite-dimensional whenever \(\mathcal{F}_{\mathrm{rad}}\) is
+infinite-dimensional \cite{stratton1941}. Equation
+\eqref{eq:ch2.observation-null-space} is the operator form of the measurement
+instrument rank limits in Section~\ref{sec:ch01.5}: finite modal sets cannot resolve all
+angular content. Rank deficiency is structural, not a discretization artifact alone; the
+spectral compression and singular-value decay law for radiation maps on compact support are
+owned by Section~\ref{sec:ch26} \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (f) {$\mathcal{F}_{\mathrm{rad}}$};
+ \node[ch1box, right=7mm of f] (o) {$\mathcal{O}_{\mathrm{meas}}$};
+ \node[ch1box, right=7mm of o] (cn) {$\mathbb{C}^{N}$};
+ \node[ch1box, below=5mm of f] (ker) {$\ker\mathcal{O}_{\mathrm{meas}}$};
+ \draw[ch1flow] (f) -- (o) -- (cn);
+ \draw[ch1flow, dashed] (ker.south) -- (f.north);
+\end{tikzpicture}%
+}
+\caption{Finite-rank infinite-dimensional field space maps to
+\(\mathbb{C}^{N}\); \(\ker\mathcal{O}_{\mathrm{meas}}\) is infinite-dimensional for
+\(N<\infty\).}
+\label{fig:ch2.rank-deficient-observation}
+\end{figure}
+~\eqref{eq:ch2.radiation-operator-composition}.
+Angular-spectrum reports that omit unresolved harmonics lie in the range of
+\(\mathcal{O}_{\mathrm{meas}}\) but not in its injective sector
+\cite{stratton1941}. Subsection~\ref{sec:ch213} does not classify report types;
+Section~\ref{sec:ch01.5} remains authoritative. Singular values quantify rank deficiency. For compact
+\(K:\mathcal{X}\to\mathcal{Y}\), the singular value sequence
+\(\{\sigma_n(K)\}_{n\ge 1}\) decreases to zero, and
+\begin{equation}
+\label{eq:ch2.singular-value-decay}
+\|K-R_N K\|_{\mathrm{op}}
+=
+\inf_{\mathrm{rank}\,R_N\le N}\|K-R_N\|_{\mathrm{op}}
+\sim \sigma_{N+1}(K),
+\end{equation}
+where \(R_N\) ranges over rank-\(N\) operators \cite{stratton1941}. For radiation
+maps truncated to \(N\) spherical or plane-wave modes, Eq.~\eqref{eq:ch2.singular-value-decay}
+controls how much field content lies outside the retained modal subspace; explicit
+VSH eigenbases are deferred to Section~\ref{sec:ch261} and Chapter~3 (\emph{Angular Momentum Operators and SO(3)})
+\cite{harrington2001}. \emph{Spectral compression} names the reduction of infinite-dimensional radiation
+dynamics to a finite or countable spectral model on the physical branch. Let
+\(\{\phi_n\}\) be a spectral family in \(\mathcal{F}_\Omega\) and
+\(\{P_n\}\) the associated one-dimensional projectors. A truncated radiation operator
+\begin{equation}
+\label{eq:ch2.spectral-compression-operator}
+\mathcal{R}_\omega^{(N)}
+=
+\sum_{n=1}^{N}\lambda_n\,P_n\circ\mathcal{S}_\omega
+\end{equation}
+retains only modes with eigenvalues \(\lambda_n\) above a declared threshold
+\cite{stratton1941}. Equation
+\eqref{eq:ch2.spectral-compression-operator} is the abstract template for
+Section~\ref{sec:ch26}; concrete eigenfunctions are not constructed here. On
+bounded cavities, compact embeddings yield accumulating eigenvalues
+\(\lambda_n\to\infty\) for interior resonances; on exterior domains, continuous
+spectra require outgoing projectors rather than discrete sums
+\cite{stratton1941}.
+Compression error is bounded in operator norm when \(K\) is compact:
+\begin{equation}
+\label{eq:ch2.compression-error-bound}
+\|\mathcal{R}_\omega-\mathcal{R}_\omega^{(N)}\|_{\mathrm{op}}
+\le
+C\,\sigma_{N+1}(K_{\mathrm{cpt}}),
+\end{equation}
+with \(K_{\mathrm{cpt}}\) from Eq.~\eqref{eq:ch2.green-compact-split} and
+\(C\) independent of impressed data on bounded \(\mathcal{J}_\Omega\)
+\cite{harrington2001}. Physically, Eq.~\eqref{eq:ch2.compression-error-bound}
+states that truncating modal content beyond the \((N+1)\)st singular value cannot
+be recovered by any rank-\(N\) surrogate operator; the quantitative decay law is
+as in Section~\ref{sec:ch26} \cite{stratton1941}.
+Rank deficiency of \(\mathcal{R}_\omega\) itself is distinct from observation rank
+deficiency. Non-radiating sources satisfy
+\(\mathcal{R}_\omega[\Jimp]=\mathbf{0}\) while
+\(\mathcal{S}_\omega[\Jimp]\neq\mathbf{0}\) (Eq.~\eqref{eq:ch2.null-radiation});
+Section~\ref{sec:ch272} develops that null space. Here the point is compositional:
+\begin{equation}
+\label{eq:ch2.rank-composition-law}
+\mathrm{rank}(\mathcal{O}_{\mathrm{meas}}\mathcal{R}_\omega)
+\le
+\min\big\{\mathrm{rank}(\mathcal{O}_{\mathrm{meas}}),
+\dim\mathcal{R}(\mathcal{R}_\omega)\big\},
+\end{equation}
+In Eq.~\eqref{eq:ch2.rank-composition-law},
+\(\mathcal{O}_{\mathrm{meas}}\) is a finite-rank linear measurement functional
+(pattern probe bank, modal fitter, or spherical-harmonic extractor) composed with
+\(\mathcal{R}_\omega\); \(\mathrm{rank}(\cdot)\) is the dimension of the accessible
+report subspace; and \(\mathcal{R}(\mathcal{R}_\omega)\) is the range of the radiation map
+on \(\mathcal{J}_\Omega\).
+So measurement rank caps reported angular content even when
+\(\mathcal{R}_\omega\) is injective on admissible sources
+\cite{stratton1941}. Both deficits must appear in uncertainty
+budgets for angular-transport claims imported from Section~\ref{sec:ch01.2.3}. Fredholm structure note: on bounded \(\Omega\) with passive
+\(\mathcal{B}_\Gamma\), \(\mathcal{L}_\omega\) is Fredholm on
+\(\mathcal{D}(\mathcal{L}_\omega)\) modulo cavity kernels when written as
+\begin{equation}
+\label{eq:ch2.fredholm-split}
+\mathcal{L}_\omega
+=
+\mathcal{L}_0+K,
+\qquad
+K\ \text{compact on graph domain},
+\end{equation}
+with \(\mathcal{L}_0\) an invertible reference operator on the quotient by
+\(\ker\mathcal{L}_\omega\) \cite{stratton1941}. Index and solvability criteria are
+developed in Section~\ref{sec:ch263}; Eq.~\eqref{eq:ch2.fredholm-split} supplies the
+split Subsection~\ref{sec:ch212} stated the introductory relation in
+Subsection~\ref{sec:ch202}.
+As a worked example, a spherical near-field scanner records \(N=50\) tangential field samples on a
+closed surface. The map \(\mathcal{O}_{\mathrm{meas}}\) has rank at most \(50\), so
+angular harmonics beyond the resolved set lie in
+\(\ker\mathcal{O}_{\mathrm{meas}}\). Applying Eq.~\eqref{eq:ch2.singular-value-decay}
+to the compact smoothing operator from sample interpolation shows that recovered
+far-zone coefficients error is controlled by \(\sigma_{51}\), not by Maxwell
+residual alone \cite{stratton1941}. Increasing frequency without
+increasing \(N\) lowers \(\sigma_{N+1}\) slowly for fixed aperture, worsening
+compression error even when \(\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}\)
+in the volume.
+As a worked example, in a closed cavity, compact embedding yields discrete resonances and
+Eq.~\eqref{eq:ch2.spectral-compression-operator} sums over cavity modes. In an
+exterior problem with outgoing radiation condition, the same formula requires a continuous
+spectral integral rather than a finite sum; using cavity compression on an
+open antenna model conflates discrete storage modes with continuous radiation
+modes \cite{stratton1941}. Section~\ref{sec:ch243} selects the outgoing branch;
+Subsection~\ref{sec:ch213} only records that compression templates differ by domain class
+\cite{stratton1941}.
+Finite-geometry interpretation (compactness and rank). Compact embeddings and finite-rank observation maps express one enduring electromagnetic
+truth: finite geometry destroys information. A bounded source support $\Omega_s$ cannot
+excite arbitrarily fine angular structure at every observation point; a finite aperture
+integrates over unresolved directions; a finite modal set truncates accessible rank.
+Inaccessible angular structure is therefore not a numerical inconvenience but a consequence
+of Maxwell propagation from compact sources through outgoing selection to finite
+instruments. flux report is fundamentally limited, and the mathematics of compactness
+makes that limit quantifiable through decaying singular values and infinite-dimensional
+observation null spaces \cite{stratton1941}.
+Subsection~\ref{sec:ch213} has established boundedness classes, compact embeddings, and
+finite-rank observation structure. The quantitative singular-value decay for radiation maps
+on compact support is developed in Section~\ref{sec:ch26}; here only the structural lemmas
+are recorded. Subsection~\ref{sec:ch214}
+completes the function-space foundation with self-adjoint realizations and admissibility
+completions on bounded domains \cite{stratton1941}.

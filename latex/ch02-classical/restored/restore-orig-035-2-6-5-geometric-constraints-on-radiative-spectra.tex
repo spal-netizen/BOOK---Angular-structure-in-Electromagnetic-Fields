@@ -1,0 +1,163 @@
+% Stage 8 restored fragment — 2.6.5 Geometric constraints on radiative spectra (archive lines 8620-8794)
+\subsection{Geometric constraints on radiative spectra}
+\label{sec:ch264}
+Geometry can forbid a modal sector before instrumentation or inversion enter the story.
+On a reflector compact range, a slot above a ground plane may exhibit a persistent pattern null
+in a parity-forbidden sector: the null survives probe upgrades and SNR improvements because the
+symmetry class, not receiver noise, annihilates that angular content \cite{collin2001}.
+An electrically small feed above the same plane supports only low-order multipole export; formal
+harmonic expansions may list high-$\ell$ indices that the support condition suppresses long before
+$\mathcal{O}_{\mathrm{meas}}$ enters \cite{jackson1999}. The geometric operator below encodes
+that selection on modal amplitudes after eigenmodes and Fredholm structure are known
+\cite{stratton1941}.
+
+Let \(\Omega_s=\operatorname{supp}\Jimp\), outer boundary \(\Gamma\), piecewise material
+data \((\varepsilon,\mu)\), outgoing radiation condition, and radiation eigenbasis
+\(\{\mathbf{u}_n,\mathbf{f}_n\}_{n\in\mathcal{N}_{\mathrm{rad}}}\) from the developments above
+\cite{stratton1941}. Modal coefficients \(a_n\) in Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion}
+are identified with \(\lambda_n c_n[\mathfrak{D}]\) on exporting modes
+\cite{stratton1941}. Geometric symmetry group \(G_{\mathrm{geo}}\subseteq\mathrm{SO}(3)\times\{+\}\)
+acts on sources, boundaries, and constitutive tensors as in Section~\ref{sec:ch01.3.2} by reference
+\cite{stratton1941}. Regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} remains mandatory
+before transport claims on any surviving modal sector \cite{harrington2001}.
+When symmetry and boundary class are fixed, modal amplitudes do not vary independently: some
+linear combinations are forced to zero by image parity or by support even when the export map
+would otherwise allow them \cite{stratton1941}. The matrix \(\Gamma_{nm}\) in
+Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def} encodes how a symmetry operation on the
+physical configuration maps one modal sector into another; a forbidden sector is one whose
+unit amplitude vector lies in the kernel of \(\mathcal{C}_{\mathrm{geo}}\)
+\cite{stratton1941}. Define a bounded operator \(\mathcal{C}_{\mathrm{geo}}\) on modal
+amplitudes by
+\begin{equation}
+\label{eq:ch2.geometric-symmetry-operator-def}
+\big(\mathcal{C}_{\mathrm{geo}}\mathbf{a}\big)_n
+=
+\sum_{m\in\mathcal{N}_{\mathrm{rad}}}
+\Gamma_{nm}\,a_m,
+\qquad
+\mathbf{a}=\{a_m\}_{m\in\mathcal{N}_{\mathrm{rad}}},
+\end{equation}
+where \(\Gamma_{nm}\) encodes how geometry and boundary class map modal sectors under
+\(G_{\mathrm{geo}}\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.geometric-symmetry-operator-def} is the constructive account of
+realization of Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def}: when
+\(\mathcal{C}_{\mathrm{geo}}\mathbf{e}_n=\mathbf{0}\) for a unit vector \(\mathbf{e}_n\),
+mode \(n\) is \emph{geometrically forbidden} even if \(\lambda_n\neq 0\) on the export map.
+Geometric symmetry can annihilate modal sectors before instrumentation enters: a forbidden mode
+has zero coupling to physically realizable sources even when formal eigenvalues are non-zero
+\cite{stratton1941}. Broken symmetry restores coupling---a practical lever in reflector and
+array design \cite{collin2001}.
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds for other modes
+\cite{stratton1941}. Rotation commutation Eq.~\eqref{eq:ch2.radiation-rotation-commutation}
+acts on \(\mathbf{f}_n\); \(\mathcal{C}_{\mathrm{geo}}\) acts on physically accessible
+\emph{sectors}
+after symmetry reduction \cite{harrington2001}.
+Compact support \(\Omega_s\subset\mathbb{R}^{3}\) implies entire-function structure in
+spatial wavenumber: for each outgoing mode \(\mathbf{f}_n(\theta,\phi)\),
+\begin{equation}
+\label{eq:ch2.support-spectral-support-condition}
+a_n(\Jimp)=0
+\ \text{unless}\ 
+\mathbf{f}_n\ \text{has non-negligible overlap with}\ 
+\mathcal{F}_\omega[\mathcal{J}_{\Omega_s}],
+\end{equation}
+with \(\mathcal{J}_{\Omega_s}\) the restriction of admissible sources to \(\Omega_s\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.support-spectral-support-condition}
+is a support-induced geometric filter distinct from Fredholm cokernel constraints
+Eq.~\eqref{eq:ch2.radiation-solvability-criterion}: electrically small \(\Omega_s\)
+suppresses high-\(\ell\) sectors in Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion}
+through \((k_0 a)^{2\ell}\) scaling established in Chapter~\ref{ch:03} (\emph{Angular Momentum Operators and SO(3)})
+\cite{jackson1999}. Rank cap Eq.~\eqref{eq:ch2.reconstruction-rank-cap}
+limits measurable \(a_n\) separately from support annihilation
+\cite{harrington2001}.
+Perfect conductors, symmetry planes, and equivalent image configurations impose linear
+relations among modal amplitudes:
+\begin{equation}
+\label{eq:ch2.boundary-image-constraint}
+\sum_{m\in\mathcal{N}_{\mathrm{rad}}}
+M_{nm}(\Gamma,\mathcal{B}_\Gamma)\,a_m=0
+\quad\Longrightarrow\quad
+a_n=0\ \text{for forbidden parity sectors,}
+\end{equation}
+with \(M_{nm}\) fixed by tangential boundary class
+Eq.~\eqref{eq:ch1.outer-boundary-classes} and image rules on outgoing Green branches
+Eq.~\eqref{eq:ch2.outgoing-green-branch} \cite{stratton1941}. Equation
+\eqref{eq:ch2.boundary-image-constraint} specializes degeneracy lifting under broken symmetry (Subsection~\ref{sec:ch262}): a ground plane replaces full
+\(\mathrm{SO}(3)\) by a reflection group and annihilates odd or even combinations per
+declared image parity \cite{stratton1941}. Sommerfeld outgoing radiation condition from
+Section~\ref{sec:ch24} is presupposed; incoming image branches are excluded from
+\(\mathcal{F}_{\mathrm{rad}}\) \cite{harrington2001}.
+When \(G_{\mathrm{geo}}\) contains mirror reflection \(\sigma\), modal sectors split into
+parity classes \(\Pi_\pm\) with
+\begin{equation}
+\label{eq:ch2.parity-selection-rule}
+a_n=0\ \text{for all}\ n\in\mathcal{N}_{\mathrm{rad}}
+\ \text{with}\ 
+\Pi_\pm\mathbf{f}_n=\mp\mathbf{f}_n
+\ \text{and forbidden parity,}
+\end{equation}
+as in the ground-plane illustration of Subsection~\ref{sec:ch262}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.parity-selection-rule} explains
+pattern nulls that are not explained by \(\ker\mathcal{O}_{\mathrm{meas}}\) or
+\(\ker\mathcal{R}_\omega\) alone \cite{stratton1941}. Slot and patch symmetries reduce
+Eq.~\eqref{eq:ch2.parity-selection-rule} to discrete sector labels on
+\(\mathcal{N}_{\mathrm{rad}}\) without re-tabulating dyads from Subsection~\ref{sec:ch231}
+\cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (g) {$G_{\mathrm{geo}}$};
+ \node[ch1box, right=7mm of g] (c) {$\mathcal{C}_{\mathrm{geo}}$};
+ \node[ch1box, right=7mm of c] (a) {$\{a_n\}$};
+ \node[ch1box, right=7mm of a] (f) {$\mathbf{f}_n$};
+ \node[ch1box, below=5mm of c] (forb) {forbidden sectors};
+ \draw[ch1flow] (g) -- (c) -- (a) -- (f);
+ \draw[ch1flow] (c.south) -- (c.south |- forb.north);
+ \draw[ch1flow] (c.south |- forb.north) -- (forb.north);
+\end{tikzpicture}%
+}
+\caption{Geometric filter: symmetry group \(G_{\mathrm{geo}}\)
+acts through \(\mathcal{C}_{\mathrm{geo}}\) Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def}
+on modal amplitudes before far patterns \(\mathbf{f}_n\).}
+\label{fig:ch2.geometric-spectrum-constraints}
+\end{figure}
+Geometric, Fredholm, and observation constraints multiply:
+\begin{equation}
+\label{eq:ch2.constraint-composition-law}
+\mathcal{N}_{\mathrm{reportable}}
+\subseteq
+\mathcal{N}_{\mathrm{acc}}
+\cap
+\{n:\ \text{resolvable by}\ \mathcal{O}_{\mathrm{meas}}\}
+\cap
+\{n:\ \lambda_n\neq 0\},
+\end{equation}
+with the last two factors from Subsection~\ref{sec:ch263} and
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap} \cite{stratton1941}. Equation
+\eqref{eq:ch2.constraint-composition-law} prevents attributing a pattern null solely to
+finite aperture when Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def} already forbids the
+sector \cite{stratton1941}. Inverse source Eq.~\eqref{eq:ch2.inverse-source-equation} on
+\(\mathcal{N}_{\mathrm{reportable}}\) remains rank-deficient through
+\(\ker\mathcal{R}_\omega\) Eq.~\eqref{eq:ch2.ker-R-omega} even when geometry is
+exact \cite{harrington2001}. Geometric constraints on radiative spectra assume linear media, fixed \(\omega\), and symmetry of
+\((\Omega_s,\Gamma,\varepsilon,\mu)\) under declared \(G_{\mathrm{geo}}\)
+\cite{stratton1941}. Weak symmetry breaking perturbs
+Eq.~\eqref{eq:ch2.accessible-modal-sector} through lifted degeneracy
+rather than strict zero \cite{stratton1941}. Loss and
+anisotropy modify \(\Gamma_{nm}\) and may reopen partially forbidden sectors at finite
+amplitude \cite{stratton1941}; regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} is unchanged, for geometric accessibility does
+not promote reactive near fields to export \cite{harrington2001}.
+\medskip
+\noindent
+Eigenmode ordering, rotational degeneracy, Fredholm solvability, and geometric filters now
+compose the spectral chain of Eq.~\eqref{eq:ch2.section26-spectral-chain} on the integral
+representations from Section~\ref{sec:ch25} \cite{stratton1941}. The thread is laboratory-first:
+finite aperture and $\sigma_n$ decay fix recoverable rank once in
+Subsection~\ref{sec:ch26.signature-aperture}; export eigenvalues $\lambda_n$ of
+$\mathcal{R}_\omega$ then organize dominant directions; rotation, Fredholm structure, and
+geometry explain what inversion can and cannot recover. Section~\ref{sec:ch27} completes
+non-radiating null spaces at the source level; \ref{ch:03} supplies explicit harmonic bases;
+\ref{ch:04} addresses which eigenstructures finite sources can realize after truncation
+\cite{harrington2001}.

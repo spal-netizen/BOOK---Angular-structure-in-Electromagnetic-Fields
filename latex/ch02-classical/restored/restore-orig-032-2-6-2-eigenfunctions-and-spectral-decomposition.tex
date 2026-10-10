@@ -1,0 +1,423 @@
+% Stage 8 restored fragment — 2.6.2 Eigenfunctions and spectral decomposition (archive lines 7643-8070)
+\subsection{Eigenfunctions and spectral decomposition}
+\label{sec:ch261}
+
+Discrete modal sums on exterior domains organize exported power into separable angular sectors only after outgoing qualification and flux gauge are declared \cite{stratton1941,jackson1999}. Continuous-spectrum bookkeeping runs in parallel with discrete $\ell$ blocks; mixing the two without measure conventions produces apparent mode creation on finite meshes \cite{hansen1988}.
+Source integrals from Section~\ref{sec:ch25} return amplitudes on $\Gamma_R$. The question an
+experienced range engineer asks next is practical: how many of those amplitudes remain
+independent above the noise floor for a given electrical size and scan extent?
+\cite{stratton1941}. The eigenpair construction below answers that question in
+normalized form; recoverable rank and $\sigma_n$ cliffs are already fixed in
+Subsection~\ref{sec:ch26.signature-aperture}.
+
+What an eigenmode means physically. A radiation mode is a principal far-zone pattern direction $\mathbf{u}_n$; its source mode
+$\Jimp^{(n)}$ is the admissible current distribution that excites it. The export eigenvalue
+$\lambda_n$ of $\mathcal{R}_\omega$ measures radiation efficiency $|\lambda_n|$ of that
+radiation mode on $\Gamma_R$ \cite{stratton1941}. Modes with large $|\lambda_n|$ are the dominant export channels on
+$\Gamma_R$: they are the beams an array designer weights first and the cuts a diagnostician
+examines before worrying about sidelobe structure. Modes with small $|\lambda_n|$ appear only
+after long integration, narrowband filtering, or exceptional dynamic range; on a typical compact
+range they never rise above the clutter floor. Modes with $\lambda_n=0$ may still produce
+strong reactive near fields---the balanced-loop illustration from Section~\ref{sec:ch25} is the
+archetype---yet contribute nothing to the far-zone wattmeter \cite{devaney2004}. Eigenvalue
+ordering is therefore a statement about measurable export, not about how many terms a numerical chart
+can index.
+On a dish range, dominant eigenmodes appear as the principal cuts in a principal-component
+decomposition of sampled $\E_t$ on $S_r$: the first few components carry most resolvable power
+\cite{hansen1988}. Rank truncation in synthesis follows the recoverable rank fixed in
+Subsection~\ref{sec:ch26.signature-aperture}; the decomposition below passes through
+$\mathcal{R}_\omega$ on physically realizable source classes, with coupled power on
+$\Gamma_R$ as the physical quantity \cite{stratton1941}.
+Antenna-range observations. Harrington's synthesis practice already exploited the ordering: one designs or diagnoses feeds by
+how they excite a modest number of dominant modes, not by attempting independent control of every
+harmonic index a post-processor can list \cite{harrington2001}. On a compact range, rotating a
+horn reorients the principal cuts while leaving total exported power unchanged when probe and
+source frames rotate together---a fact developed formally in the rotation discussion below, but
+visible in raw pattern data long before covariance formulas appear \cite{collin2001}. When a
+measured pattern refuses to match a synthesis target despite ample numerical effort, the fault is
+often spectral rather than computational: the target lies in a weakly coupled or forbidden
+sector, not in the subspace the aperture and source geometry can reach \cite{stratton1941}. The
+eigenpair definition that follows encodes that experience in normalized form.
+Propagation projectors Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent},
+compactness templates from Section~\ref{sec:ch213}, and far-zone amplitudes
+Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
+are presupposed \cite{stratton1941}. Explicit vector spherical harmonic bases belong to
+Chapter~3; here modal coordinates are fixed at the operator level compatible with
+Eq.~\eqref{eq:ch2.far-pattern-modal} \cite{harrington2001}.
+Assumptions. Fix \(\omega>0\), physically realizable impressed data \(\mathfrak{D}\) on
+\(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-space-refined}, outgoing radiation condition on exterior
+problems Eqs.~\eqref{eq:ch2.sommerfeld-outgoing-class}--\eqref{eq:ch2.outgoing-selector-def},
+and export map Eq.~\eqref{eq:ch2.spectral-operator-targets}
+\cite{stratton1941}. Field pairs lie in
+\(\mathcal{F}_{\mathrm{SF}}\subset\mathcal{F}_\Omega\) from
+Eq.~\eqref{eq:ch2.admissible-field-space}; outgoing radiative images lie in
+\(\mathcal{F}_{\mathrm{rad}}\subset\operatorname{ran}\mathcal{R}_\omega\) with energy norm
+Eq.~\eqref{eq:ch2.field-energy-norm} \cite{stratton1941}. Spectral completion
+\(\widehat{\mathcal{F}}_\Omega\) supporting Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra} is assumed sufficient for the expansions below
+\cite{harrington2001}.
+Radiation eigenpairs. Eigenmodes are introduced because measured patterns on $S_r$ are rarely arbitrary: principal-component
+analysis of sampled $\E_t$ reveals a small number of dominant export directions, and the eigenbasis
+below names those directions in normalized form \cite{hansen1988}. What experiment
+reveals is rank ordering---a few strong beams, a long tail of weak modes below the noise floor,
+and export-invisible reactive organizations that never register on a far-zone wattmeter
+\cite{devaney2004}. The laboratory observations above condense into a normalized triple: export eigenvalue
+$\lambda_n$ of $\mathcal{R}_\omega$, radiation mode $\mathbf{u}_n$, and source mode
+$\Jimp^{(n)}$ linked through $\mathcal{R}_\omega$ \cite{stratton1941}. Physically,
+$|\lambda_n|$ ranks how much qualified power each normalized radiation mode carries to
+$\Gamma_R$; mathematically, the triple satisfies the locked eigenpair relation below. A
+\emph{radiation eigenpair} is a triple $(\lambda_n,\mathbf{u}_n,\Jimp^{(n)})$ with
+\(\lambda_n\in\mathbb{C}\), \(\mathbf{u}_n=(\E_n,\H_n)\in\mathcal{F}_{\mathrm{rad}}\), and
+\(\Jimp^{(n)}\in\mathcal{J}_\Omega\) such that
+\begin{equation}
+\label{eq:ch2.radiation-eigenpair-def}
+\mathcal{R}_\omega[\Jimp^{(n)}]=\lambda_n\,\mathbf{u}_n,
+\qquad
+\|\mathbf{u}_n\|_{\mathcal{U}}=1,
+\end{equation}
+where $\lambda_n$ is the export eigenvalue (radiation-efficiency score of mode $n$),
+$\mathbf{u}_n$ is the normalized radiation mode (principal far-zone pattern direction),
+$\Jimp^{(n)}$ is the source mode (admissible current that excites $\mathbf{u}_n$), and
+$\|\mathbf{u}_n\|_{\mathcal{U}}=1$ fixes unit radiative energy on $\mathcal{F}_{\mathrm{rad}}$
+\cite{stratton1941}. Readers should think of $\lambda_n$ as a radiation-efficiency score
+assigned to the $n$th export channel \cite{harrington2001}. Here \(\|\cdot\|_{\mathcal{U}}\) is the field energy norm
+Eq.~\eqref{eq:ch2.field-energy-norm} on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-eigenpair-def}
+develops Eq.~\eqref{eq:ch2.modal-eigenvalue-equation} to a normalized
+locked definition: \(\lambda_n\) measures export gain of mode \(n\) relative to unit radiative
+energy, and \(\ker\mathcal{R}_\omega\) corresponds to \(\lambda_n=0\) with
+\(\mathcal{S}_\omega[\Jimp^{(n)}]\neq\mathbf{0}\) through
+Eq.~\eqref{eq:ch2.ker-R-omega} \cite{stratton1941}. Eigenpairs are defined on the
+outgoing branch only; incoming propagating sheets excluded by
+Eq.~\eqref{eq:ch2.outgoing-radiation-refinement} \cite{harrington2001}.
+Interpretation: modes with $|\lambda_n|\gg 1$ dominate compact-range cuts; modes with
+$\lambda_n=0$ are export-invisible yet may carry reactive near fields through
+$\mathcal{S}_\omega[\Jimp^{(n)}]$ \cite{devaney2004}.
+Modal projectors on field space. Projector $P_n[\mathbf{u}]$ extracts a single beam family from a measured pattern: it isolates
+the component of field $\mathbf{u}$ aligned with radiation mode $\mathbf{u}_n$ and discards the
+orthogonal complement \cite{stratton1941}. Modal filtering matters because synthesis, diagnosis,
+and interference analysis proceed mode by mode rather than on raw harmonic indices
+\cite{harrington2001}. For each index \(n\) in a family of radiating modes \(\mathcal{N}\), define a rank-one (or
+finite-dimensional) projector \(P_n:\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{rad}}\) by
+\begin{equation}
+\label{eq:ch2.modal-projector-def}
+P_n[\mathbf{u}]
+=
+\langle \mathbf{u},\mathbf{u}_n\rangle_{\mathcal{U}}\,\mathbf{u}_n,
+\qquad
+P_n\circ\Pi_{\mathrm{ev}}=P_n\circ\Pi_{\mathrm{non}}=0,
+\end{equation}
+using dual pairing inherited from Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} on qualified
+Maxwell states and annihilation of non-propagating content through
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Equation
+\eqref{eq:ch2.modal-projector-def} specializes resolution
+Eq.~\eqref{eq:ch2.spectral-resolution-composition} once an orthonormal family of radiating modes
+\(\{\mathbf{u}_n\}_{n\in\mathcal{N}_{\mathrm{rad}}}\) is chosen. Projectors satisfy
+\(P_n P_m=\delta_{nm} P_n\) when modes are orthogonal in \(\mathcal{U}\)
+\cite{stratton1941}.
+Once eigenmodes are fixed, any physically realizable excitation decomposes into modal
+coefficients. The quantity a compact-range measurement ultimately recovers is the export-side
+pattern carried by $\mathbf{u}_{\mathrm{rad},n}=P_n\mathcal{R}_\omega[\mathfrak{D}]$; the
+source-side amplitude $c_n[\mathfrak{D}]$ measures how strongly the full solution
+$\mathcal{S}_\omega[\mathfrak{D}]$ aligns with mode $n$ before export
+\cite{stratton1941}. For general physically realizable \(\mathfrak{D}\), define source
+coefficients
+\begin{equation}
+\label{eq:ch2.source-modal-amplitude}
+c_n[\mathfrak{D}]
+=
+\langle \mathcal{S}_\omega[\mathfrak{D}],\mathbf{u}_n\rangle_{\mathcal{U}},
+\qquad
+\mathbf{u}_{\mathrm{rad},n}
+=
+P_n\,\mathcal{R}_\omega[\mathfrak{D}]
+=
+\lambda_n\,c_n[\mathfrak{D}]\,\mathbf{u}_n,
+\end{equation}
+when the expansion converges in \(\mathcal{U}\) \cite{stratton1941}.
+Physically, \(c_n\) is the excitation strength of radiative mode \(n\) before export
+selection; \(\lambda_n c_n\) is the coefficient on the normalized far-zone pattern carried
+by \(\mathbf{u}_n\) \cite{jackson1999}. Linearity
+Eq.~\eqref{eq:ch2.radiation-linearity} implies
+\(c_n[a_1\mathfrak{D}_1+a_2\mathfrak{D}_2]=a_1 c_n[\mathfrak{D}_1]+a_2 c_n[\mathfrak{D}_2]\)
+for physically realizable superpositions after splitting each term through \(\mathcal{S}_\omega\)
+\cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (d) {$\mathfrak{D}$};
+ \node[ch1box, right=7mm of d] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=7mm of s] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (exp) {$\sum_n \lambda_n c_n P_n$};
+ \node[ch1box, below=5mm of s] (cn) {$c_n=\langle\cdot,\mathbf{u}_n\rangle$};
+ \draw[ch1flow] (d) -- (s) -- (r) -- (exp);
+ \draw[ch1flow] (cn.south) -- (cn.south |- s.north);
+ \draw[ch1flow] (cn.south |- s.north) -- (s.north);
+\end{tikzpicture}%
+}
+\caption{Spectral measurement sequence: \(\mathcal{S}_\omega\) supplies coefficients \(c_n\);
+\(\mathcal{R}_\omega\) maps them to export amplitudes \(\lambda_n c_n\) on projectors
+\(P_n\) Eq.~\eqref{eq:ch2.modal-projector-def}.}
+\label{fig:ch2.radiation-spectral-decomposition}
+\end{figure}
+How can a complicated radiation pattern be reconstructed from simpler building blocks? The
+modal expansion below decomposes any radiative field into orthonormal radiation modes, each
+carrying a fraction of the export energy budget \cite{stratton1941}. When the radiation eigenbasis is complete on the export subspace, every radiative field admits
+a countable expansion in normalized modes; the Parseval identity below states that radiative
+energy equals the sum of squared modal coefficients \cite{stratton1941}. When
+\(\{\mathbf{u}_n\}_{n\in\mathcal{N}_{\mathrm{rad}}}\) is a complete orthonormal family
+in \(\mathcal{F}_{\mathrm{rad}}\) for the problem class, every radiative field
+\(\mathbf{v}\in\operatorname{ran}\mathcal{R}_\omega\) admits
+\begin{equation}
+\label{eq:ch2.radiation-spectral-expansion}
+\mathbf{v}
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+\langle \mathbf{v},\mathbf{u}_n\rangle_{\mathcal{U}}\,\mathbf{u}_n,
+\qquad
+\|\mathbf{v}\|_{\mathcal{U}}^2
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+\big|\langle \mathbf{v},\mathbf{u}_n\rangle_{\mathcal{U}}\big|^2,
+\end{equation} with convergence in \(\mathcal{U}\) \cite{stratton1941}. Applying
+Eq.~\eqref{eq:ch2.radiation-spectral-expansion} to \(\mathbf{v}=\mathcal{R}_\omega[\mathfrak{D}]\)
+gives
+\begin{equation}
+\label{eq:ch2.radiation-map-modal-sum}
+\mathcal{R}_\omega[\mathfrak{D}]
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+\lambda_n\,c_n[\mathfrak{D}]\,\mathbf{u}_n,
+\end{equation}
+the radiation eigenbasis restatement of compression operator
+Eq.~\eqref{eq:ch2.spectral-compression-operator} with explicit eigenvalues and normalized
+modes \cite{stratton1941}. The Parseval identity in
+Eq.~\eqref{eq:ch2.radiation-spectral-expansion} states the modal energy budget: total radiative
+energy equals the sum of squared modal coefficients. Beam decomposition and recoverable
+complexity are therefore fixed by how many terms carry appreciable weight before truncation
+\cite{hansen1988}. Truncation to \(|\mathcal{N}|\le N\) yields
+\(\mathcal{R}_\omega^{(N)}\) from Eq.~\eqref{eq:ch2.spectral-compression-operator}; error
+Eq.~\eqref{eq:ch2.compression-error-bound} applies when the tail is compact on source space
+\cite{harrington2001}.
+\phantomsection\label{thm:ch2.radiation-spectral-decomposition}
+Let outgoing radiation condition and domain class be fixed as above. Suppose
+\(\{\mathbf{u}_n\}_{n\in\mathcal{N}_{\mathrm{rad}}}\) is a complete orthonormal radiation
+eigenbasis in \(\mathcal{F}_{\mathrm{rad}}\) with
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def} and projectors
+Eq.~\eqref{eq:ch2.modal-projector-def}. Then only modes with $\lambda_n\neq 0$ contribute to
+observable radiation: modes with $\lambda_n=0$ lie in $\ker\mathcal{R}_\omega$ and are invisible
+to far-zone meters even when they carry reactive near fields \cite{devaney2004}.
+\begin{equation}
+\label{eq:ch2.radiation-operator-spectral-form}
+\mathcal{R}_\omega
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+\lambda_n\,P_n\circ\mathcal{S}_\omega,
+\qquad
+\Pi_{\mathrm{rad}}
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}} P_n,
+\end{equation}
+on physically realizable \(\mathfrak{D}\), with convergence in \(\mathcal{U}\) for fields in
+\(\operatorname{ran}\mathcal{R}_\omega\) \cite{stratton1941}. The range
+satisfies
+\begin{equation}
+\label{eq:ch2.radiation-range-span}
+\operatorname{ran}\mathcal{R}_\omega
+=
+\overline{\operatorname{span}\{\mathbf{u}_n:\ n\in\mathcal{N}_{\mathrm{rad}},\ \lambda_n\neq 0\}}.
+\end{equation}
+Eq.~\eqref{eq:ch2.radiation-map-modal-sum} follows by applying
+Eq.~\eqref{eq:ch2.radiation-spectral-expansion} to
+\(\mathcal{R}_\omega[\mathfrak{D}]\) and using
+Eqs.~\eqref{eq:ch2.source-modal-amplitude}--\eqref{eq:ch2.radiation-eigenpair-def}.
+Linearity of \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\) extends the sum from finite
+superpositions to all physically realizable impressed data by completion in \(\mathcal{U}\) on the
+outgoing radiative subspace
+\cite{stratton1941}. Eq.~\eqref{eq:ch2.radiation-operator-spectral-form} is obtained by
+recognizing each term as \(P_n\mathcal{S}_\omega\) acting with gain \(\lambda_n\).
+Eq.~\eqref{eq:ch2.radiation-range-span} follows because eigenvectors with
+\(\lambda_n=0\) contribute no radiative export; non-radiating sources lie in
+\(\ker\mathcal{R}_\omega\) Eq.~\eqref{eq:ch2.ker-R-omega}
+\cite{harrington2001}. Resolution Eq.~\eqref{eq:ch2.spectral-resolution-composition} matches
+\(\Pi_{\mathrm{rad}}=\sum_n P_n\) on \(\operatorname{ran}\mathcal{R}_\omega\)
+\cite{stratton1941}. Resonant cavities, microwave filters, and waveguide resonators store energy in interior modes
+that need not export to a radiating port: stored versus exported energy is the physical
+distinction the cavity specialization encodes \cite{stratton1941}. On a bounded domain with passive \(\mathcal{B}_\Gamma\) and interior resonances,
+Eq.~\eqref{eq:ch2.discrete-continuous-spectrum} yields a discrete accumulating set
+\(\{\lambda_n\}_{n=1}^{\infty}\) when \(\mathcal{R}_\omega\) is restricted to cavity
+outgoing-propagating subspaces compatible with Eq.~\eqref{eq:ch2.embedding-chain}
+\cite{stratton1941}. The cavity specialization reads
+\begin{equation}
+\label{eq:ch2.cavity-discrete-radiation-spectrum}
+\mathcal{R}_\omega^{(\mathrm{cav})}
+=
+\sum_{n=1}^{\infty}
+\lambda_n\,P_n^{(\mathrm{cav})}\circ\mathcal{S}_\omega,
+\qquad
+\lambda_n\to 0\ \text{or}\ \lambda_n\to\infty
+\ \text{according to mode class},
+\end{equation}
+with \(P_n^{(\mathrm{cav})}\) projectors onto normalized cavity radiation modes
+\cite{stratton1941}. Equation~\eqref{eq:ch2.cavity-discrete-radiation-spectrum} is the
+constructive content of Eq.~\eqref{eq:ch2.spectral-compression-operator} in closed volumes;
+storage resonances with \(\lambda_n=0\) on \(\mathcal{R}_\omega\) remain in
+\(\mathbf{u}_{\mathrm{nr}}\) Eq.~\eqref{eq:ch2.nonradiative-component-def}
+\cite{harrington2001}. Using Eq.~\eqref{eq:ch2.cavity-discrete-radiation-spectrum} on open
+exterior problems misstates continuous angular content
+Eq.~\eqref{eq:ch2.discrete-continuous-spectrum} \cite{stratton1941}.
+In free space the discrete modal sum becomes continuous: every outgoing direction on the sphere
+$S^2$ carries spectral weight, and polarization index $\sigma\in\{1,2\}$ labels the two
+transverse polarizations perpendicular to propagation direction $\hat{\mathbf{k}}$
+\cite{stratton1941}. Physically, $\hat{\mathbf{k}}$ is the unit propagation
+direction observed on a far-zone scanner; $\sigma$ selects which transverse polarization
+component is sampled; $\mathbf{e}_\sigma$ is the corresponding unit polarization vector with
+$\mathbf{e}_\sigma\cdot\hat{\mathbf{k}}=0$; and $d\Omega(\hat{\mathbf{k}})$ is the solid-angle
+measure that weights how much radiated power each direction receives
+\cite{hansen1988}. For compact sources in free space with outgoing radiation condition, angular eigenmodes are labeled by
+propagation direction \(\hat{\mathbf{k}}\in S^{2}\) and polarization index \(\sigma\in\{1,2\}\)
+transverse to \(\hat{\mathbf{k}}\) \cite{stratton1941}. A normalized plane-wave
+radiation mode is
+\begin{equation}
+\label{eq:ch2.exterior-angular-eigenmode}
+\mathbf{u}_{\hat{\mathbf{k}},\sigma}(\mathbf{r})
+=
+\big(\E_{\hat{\mathbf{k}},\sigma}(\mathbf{r}),\,\H_{\hat{\mathbf{k}},\sigma}(\mathbf{r})\big),
+\qquad
+\E_{\hat{\mathbf{k}},\sigma}\sim \mathbf{e}_\sigma\,e^{-\jj k_0\hat{\mathbf{k}}\cdot\mathbf{r}}/r,
+\end{equation}
+with \(\mathbf{e}_\sigma\cdot\hat{\mathbf{k}}=0\) and outgoing phase
+\cite{stratton1941}. The continuous spectral measure \(d\Omega(\hat{\mathbf{k}})\)
+replaces discrete summation in Eq.~\eqref{eq:ch2.radiation-spectral-expansion}:
+\phantomsection\label{eq:ch2.discrete-continuous-spectrum}
+\begin{equation}
+\label{eq:ch2.exterior-continuous-spectral-integral}
+\mathcal{R}_\omega[\mathfrak{D}](\mathbf{r})
+=
+\int_{S^{2}}
+\sum_{\sigma=1}^{2}
+a_\sigma(\hat{\mathbf{k}})\,
+\mathbf{u}_{\hat{\mathbf{k}},\sigma}(\mathbf{r})\,d\Omega(\hat{\mathbf{k}}),
+\end{equation}
+with amplitudes \(a_\sigma\) determined by \(\mathcal{S}_\omega[\mathfrak{D}]\) through
+Eq.~\eqref{eq:ch2.source-modal-amplitude} in the rigged limit \cite{stratton1941}. Rigged
+Hilbert space completion and measure normalization are developed in \ref{ch:03}
+Subsection~3.1.3 records the continuous angular target
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} compatible with far-zone reduction
+\cite{harrington2001}.
+\phantomsection\label{prop:ch2.far-pattern-from-modes}
+Each radiation mode $\mathbf{u}_n$ carries a far-zone fingerprint
+$\mathbf{f}_n(\theta,\phi)$---the angular pattern shape that mode $n$ contributes on $S^2$---
+while $\E_0(\theta,\phi)$ is the measurable far-zone electric pattern a compact range records
+after probe correction and transformation \cite{hansen1988}. Let \(\mathcal{D}_{J,\mathrm{reg}}=1\) and let \(\mathbf{u}_n\) be radiation eigenmodes with
+far amplitudes \(\mathbf{f}_n(\theta,\phi)\) defined through
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral}. Then the far pattern of
+\(\mathcal{R}_\omega[\mathfrak{D}]\) satisfies
+\phantomsection\label{eq:ch2.far-pattern-modal}
+\begin{equation}
+\label{eq:ch2.spectral-far-pattern-expansion}
+\E_0(\theta,\phi)
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+\lambda_n\,c_n[\mathfrak{D}]\,\mathbf{f}_n(\theta,\phi),
+\end{equation}
+with convergence in mean-square on \(S^{2}\) when the modal sum converges in
+\(\mathcal{U}\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.spectral-far-pattern-expansion} is the upgrade
+of Eq.~\eqref{eq:ch2.far-pattern-modal}; explicit \(\mathbf{f}_n\) in vector
+harmonic form belong to \ref{ch:03} \cite{stratton1941}.
+Apply the far-field approximation of source integrals (Subsection~\ref{sec:ch252}) to each modal component
+\(\lambda_n c_n\,\mathbf{u}_n\) and superpose using linearity
+Eq.~\eqref{eq:ch2.radiation-linearity} on outgoing radiative solutions. Coefficients match
+Eq.~\eqref{eq:ch2.source-modal-amplitude} because far-zone reduction depends linearly on
+\(\mathcal{R}_\omega[\mathfrak{D}]\) through
+Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
+\cite{stratton1941}. regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} must hold before interpreting
+Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} as transport data
+\cite{harrington2001}. Source reconstruction is harder than forward radiation because inversion requires adjoint modes
+$\widetilde{\mathbf{u}}_n$ that test whether a desired pattern $\mathbf{g}$ lies in the
+reachable range of $\mathcal{R}_\omega$ \cite{stratton1941}. When \(\mathcal{R}_\omega\) is not self-adjoint on \(\mathcal{J}_\Omega\), define adjoint
+modes \(\widetilde{\mathbf{u}}_n\) through the source pairing
+Eq.~\eqref{eq:ch2.dual-source-pairing} such that
+\begin{equation}
+\label{eq:ch2.radiation-biorthogonality}
+\langle \widetilde{\mathbf{u}}_m,\,\mathcal{R}_\omega[\Jimp^{(n)}]\rangle_{\mathcal{U}}
+=
+\lambda_n\,\delta_{mn},
+\end{equation}
+for normalized radiation eigenpairs \cite{stratton1941}. Equation
+\eqref{eq:ch2.radiation-biorthogonality} is the field-side restatement of solvability relation
+Eq.~\eqref{eq:ch2.spectral-solvability}: cokernel directions annihilated by
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} obstruct inversion
+\(\mathcal{R}_\omega[\Jimp]=\mathbf{g}\) \cite{stratton1941}. Complete adjoint-mode catalogs
+on exterior domains belong to Subsection~\ref{sec:ch263} \cite{harrington2001}.
+Modes with \(\lambda_n=0\) satisfy \(P_n\mathcal{R}_\omega=\mathbf{0}\) but may have
+\(P_n\mathcal{S}_\omega\neq\mathbf{0}\) when reactive content projects onto non-export
+subspaces Eq.~\eqref{eq:ch2.nonpropagating-component-def}
+\cite{stratton1941}. Evanescent and non-propagating sheets remain annihilated: spectral labels
+cannot convert evanescent storage into qualified far-zone radiation---regime qualification and
+export selection remain mandatory before transport claims \cite{stratton1941}.
+\begin{equation}
+\label{eq:ch2.modal-null-on-nonprop}
+P_n\circ\Pi_{\mathrm{ev}}=P_n\circ\Pi_{\mathrm{non}}=\mathbf{0}
+\quad\text{for all}\ n\in\mathcal{N}_{\mathrm{rad}},
+\end{equation}
+by Eq.~\eqref{eq:ch2.rad-null-on-evanescent} and modal definition
+Eq.~\eqref{eq:ch2.modal-projector-def} \cite{stratton1941}. Spectral labels therefore do not
+override regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen}
+\cite{harrington2001}.
+The eigenbasis expansions and far-pattern coefficients in
+Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} require linear media at fixed \(\omega\),
+outgoing radiation condition, and completeness of \(\{\mathbf{u}_n\}\) appropriate to the
+problem class \cite{stratton1941}. Loss shifts \(\lambda_n\) into the complex plane without
+promoting evanescent storage to export through Eq.~\eqref{eq:ch2.modal-null-on-nonprop}
+\cite{stratton1941}. Recoverable coefficients in
+Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} are further capped by finite observation rank
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap} as established in Subsection~\ref{sec:ch26.signature-aperture}
+\cite{harrington2001}; consult that subsection for $\sigma_n$ cliffs rather than restating
+finite-rank doctrine here.
+As a worked example, consider a rectangular cavity fed by an electrically small probe at $f=10\,\mathrm{GHz}$. The
+physical configuration is familiar from filter and resonator laboratories: a closed metal box with
+a coaxial penetration, interior standing waves visible in $|S_{11}|$ and in probe-coupled power
+at ports \cite{stratton1941}. Interior modes produce a dense discrete spectrum in
+$\mathcal{S}_\omega[\Jimp]$---many field patterns exist inside the volume---but only propagating
+outgoing sectors contribute to $\mathcal{R}_\omega[\Jimp]$ on a measurement aperture or radiating
+port \cite{stratton1941}. Truncating Eq.~\eqref{eq:ch2.cavity-discrete-radiation-spectrum} at
+$N=20$ modes with error bounded by Eq.~\eqref{eq:ch2.compression-error-bound} yields a stable
+interior power budget on a port wattmeter: the expected observation is a clean $|S_{11}|$ trace
+with identifiable resonances and predictable coupling to the feed.
+The lesson sharpens by contrast. Apply the same truncated cavity sum to an exterior half-wave
+dipole in free space and sidelobe structure misaligns: the exterior problem requires the
+continuous angular measure Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}, not a cavity
+eigenbasis \cite{jackson1999}. On a compact range the dipole presents a smooth far-zone pattern
+cut; in the cavity it presents port physics entirely governed by enclosure modes. Conflating the
+two domain classes is a common numerical error in aperture codes and in student projects that
+reuse modal truncations without checking export selection \cite{harrington2001}. The significance
+is operational: spectral truncation is domain-specific, export selection must precede modal
+counting, and a dense interior spectrum is not the same object as a recoverable far-zone pattern
+family \cite{stratton1941}.
+As a worked example, a balanced loop pair with vanishing electric dipole moment is the cleanest laboratory reminder
+that near-field strength does not imply far-zone export \cite{devaney2004}. The physical setup
+places two loops with opposing dipole moments so that radiation from electric dipole terms cancels
+on $\Gamma_R$ while reactive $\H$ and $\E$ remain large within one wavelength of the structure.
+On a spherical near-field scan at $R=0.4\lambda_0$, probes record strong tangential fields; on
+$\Gamma_R$ at $R=10\lambda_0$ the wattmeter reads negligible export. Coefficients $c_n$ on
+exporting modes vanish ($\lambda_n=0$), yet $\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp^{(\mathrm{NR})}]$
+may be substantial \cite{stratton1941}.
+The observable behavior confuses teams who report patterns from $\mathcal{S}_\omega[\Jimp]$ without
+$\Pi_{\mathrm{rad}}$: the near field looks radiative locally while the far-zone signature is null.
+The interpretation is spectral, not a failure of probes. Membership in $\ker\mathcal{R}_\omega$
+is invisible to far-zone pattern meters yet measurable in the reactive sector. For inverse
+synthesis, the consequence is equally concrete: two distinct feeds can match the same far pattern
+while differing in reactive storage---a realizability question developed in \ref{ch:04}
+\cite{stratton1941}. The example should be remembered as the archetype of export efficiency
+$\lambda_n=0$ with non-trivial Maxwell storage.
+\medskip
+\noindent
+Subsection~\ref{sec:ch261} fixed radiation eigenpairs, modal projectors, and the spectral
+expansion of $\mathcal{R}_\omega$ on $\mathcal{F}_{\mathrm{rad}}$. Recoverable rank and
+$\sigma_n$ cliffs remain anchored in Subsection~\ref{sec:ch26.signature-aperture}; the eigenbasis
+organizes export directions that finite apertures can in principle resolve once regime
+qualification holds \cite{stratton1941}. Rotational degeneracy and Fredholm
+solvability develop next on the same operator.

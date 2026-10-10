@@ -1,0 +1,103 @@
+% Stage 8 section framing — 2.5 Radiation Integrals and Source-to-Field Representations
+\section{Radiation Integrals and Source-to-Field Representations}
+\label{sec:ch25}
+Uniqueness and radiation conditions in Section~\ref{sec:ch24} fix the exterior problem. Section~\ref{sec:ch25} writes the source integrals that range engineers discretize on wire and surface meshes \cite{stratton1941}. The same integrals appear in compact-range far-field transforms \cite{hansen1988}.
+
+
+
+
+Section~\ref{sec:ch24} fixed the outgoing branch under which exterior solutions are unique.
+An engineer on a range nonetheless needs evaluated fields and pattern amplitudes at declared
+observation points---not proof of existence alone \cite{poynting1884}. Before any
+far-zone asymptotic is applied, the field surrounding a compact source occupies three spatial
+bands: a reactive near zone where $1/r^{3}$ and $1/r^{2}$ dyadic terms dominate what probes
+measure through $\mathcal{S}_\omega[\Jimp]$; an intermediate transition where storage and export
+compete; and a radiative far zone where transverse $e^{-\jj k_0 r}/r$ waves support pattern and
+gain definitions through $\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]$
+\cite{stratton1941}. Distance labels and regime indices are fixed in
+Subsection~\ref{sec:ch252} before asymptotic reductions; the integral representations below are
+the constructive route to $\mathcal{S}_\omega$ in all three bands \cite{stratton1941}. A gain trace
+on $\Gamma_R$ is a pattern meter reading on $\mathcal{R}_\omega[\Jimp]$ after export selection;
+a port $|S_{11}|$ meter on a horn feed reads coupling through $\mathcal{S}_\omega[\Jimp]$ and
+may include reactive storage unrelated to far-zone export \cite{harrington2001}. A
+method-of-moments solution on a horn mouth illustrates the distinction: port coupling integrals
+supply $|S_{11}|$, while a radiation integral on $\Gamma_R$ supplies far-zone gain; both descend
+from the same outgoing Green convolution but meter different observables
+\cite{harrington2001}.
+The excitation-to-flux sequence $\Jimp\mapsto\mathcal{S}_\omega[\Jimp]\mapsto\mathcal{R}_\omega[\Jimp]$
+is single-valued on $\mathcal{F}_{\mathrm{SF}}$ at the field level yet rank-deficient at the
+source level through Eq.~\eqref{eq:ch2.ker-R-omega} \cite{stratton1941}. This
+section develops the radiation integral Eq.~\eqref{eq:ch2.radiation-integral} to
+evaluable outgoing integrals and ties range meters to
+$\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]$ rather than to
+the full pair returned by Green convolution
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution} \cite{stratton1941}. Poynting flux and
+transport indices from \ref{ch:01} apply here; dyadic kernels and
+Sommerfeld completion remain in Sections~\ref{sec:ch23}--\ref{sec:ch24}.
+Let \(\Omega_s=\operatorname{supp}\Jimp\) be compact with characteristic scale \(a\),
+vacuum wavenumber \(k_0=\omega\sqrt{\varepsilon_0\mu_0}\), and wavelength
+\(\lambda_0=2\pi/k_0\). Section~\ref{sec:ch25} organizes evaluation in four stages:
+\begin{equation}
+\label{eq:ch2.section25-evaluation-chain}
+\Jimp
+\ \xrightarrow{\ \mathcal{S}_\omega\ }
+(\E,\H)\in\mathcal{F}_{\mathrm{SF}}
+\ \xrightarrow{\ \Pi_{\mathrm{rad}}\ }
+\mathcal{R}_\omega[\Jimp]
+\ \xrightarrow{\ \mathcal{F}_{\mathrm{flux}}\ }
+\text{power, pattern, norm reports},
+\end{equation}
+where \(\mathcal{F}_{\mathrm{flux}}\) denotes the flux and operator-norm functionals
+developed below by reference to \ref{ch:01} flux identities
+\cite{stratton1941}. Equation~\eqref{eq:ch2.section25-evaluation-chain} is the section-level
+restatement of Eq.~\eqref{eq:ch2.measurement chain-composition}: stage (iii) export must precede
+stage (iv) metering \cite{harrington2001}. Applying \(\mathcal{F}_{\mathrm{flux}}\) to
+\(\mathcal{S}_\omega[\Jimp]\) without \(\Pi_{\mathrm{rad}}\) imports reactive circulation
+into quantities designed for outgoing transverse radiation
+(Section~\ref{sec:ch01.2.4}) \cite{stratton1941}.
+The outgoing integral realization of \(\mathcal{R}_\omega\) for
+\(\mathbf{r}\notin\Omega_s\) is
+\begin{equation}
+\label{eq:ch2.radiation-integral-outgoing-upgrade}
+\E_{\mathrm{rad}}(\mathbf{r})
+=
+-\jj\omega\mu_0
+\int_{\Omega_s}
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r',
+\qquad
+\H_{\mathrm{rad}}
+=
+-\frac{1}{\jj\omega\mu_0}\,\curl\E_{\mathrm{rad}},
+\end{equation}
+In Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade}, \(\mathbf{r}\) is the observation
+point, \(\mathbf{r}'\) ranges over the source volume \(\Omega_s\), \(\Jimp(\mathbf{r}')\) is
+the impressed electric current density at the source point, \(\mu_0\) is the vacuum permeability,
+\(\omega\) is the angular frequency, and \(\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}\)
+is the outgoing electric dyadic from Eq.~\eqref{eq:ch2.outgoing-green-branch}; the magnetic
+field \(\H_{\mathrm{rad}}\) follows from \(\E_{\mathrm{rad}}\) by the source-free Maxwell curl
+relation in the observation variable \(\mathbf{r}\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.radiation-integral-outgoing-upgrade} upgrades
+Eq.~\eqref{eq:ch2.radiation-integral} after Sections~\ref{sec:ch23}--\ref{sec:ch24};
+the integral subsection below supplies magnetic couplings, equivalent surfaces, and routes
+that reduce to the same $\mathcal{R}_\omega$ image \cite{harrington2001}. Near coincidence
+$\mathbf{r}\to\Omega_s$ requires regularization from Subsection~\ref{sec:ch232}; evaluation
+uses Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade} only where the observation
+point lies outside $\Omega_s$ or on declared equivalent surfaces with trace matching
+\cite{stratton1941}. Regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} must be satisfied before flux meters attach to
+any shell integral \cite{stratton1941}.
+As a worked example, for \(\Jimp\) supported in a ball of radius \(a\ll\lambda_0\), \(\mathcal{S}_\omega[\Jimp]\)
+includes dominant reactive \(1/r^{2}\), \(1/r^{3}\) terms on spheres with \(r\sim a\),
+while \(\mathcal{R}_\omega[\Jimp]\) carries leading \(1/r\) transverse radiation with
+\(k_0 r\) phase for \(r\gg a\) \cite{jackson1999}. Integrating Poynting flux on \(S_R\) with
+\(R\sim a\) conflates storage with export; only when \(k_0 R\gg 1\) and \(R\gg a\) does shell
+power approach the \(R\)-independent value predicted by far-zone reduction
+\cite{harrington2001}.
+As a worked example, near-field probes sample \(\mathcal{S}_\omega[\Jimp]\) on a surface enclosing \(\Omega_s\)
+\cite{stratton1941}. Transforming those samples to a far-zone pattern implements
+Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade} only when outgoing radiation condition
+and equivalent-source uniqueness on the exterior side are satisfied---that is, when exterior
+radiative uniqueness (Subsection~\ref{sec:ch243}) holds \cite{harrington2001}.
+Distinct impressed currents in \(\ker\mathcal{R}_\omega\) produce identical patterns while
+differing in reactive near fields; near scans alone do not resolve that null space without
+additional constraints (Subsection~\ref{sec:ch244}) \cite{stratton1941}.

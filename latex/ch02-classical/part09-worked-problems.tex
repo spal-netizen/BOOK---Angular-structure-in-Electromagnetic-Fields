@@ -1,0 +1,25 @@
+% §2.11 — worked problems (pedagogical, not examination items)
+
+\section{Worked Problems}
+\label{sec:ch02.11-problems}
+
+\paragraph{Problem A (Hertzian dipole far zone and power).}
+A z-directed short dipole has moment $\mathbf{p}=p_0\hat{\mathbf{z}}$ with $p_0$ real and $k_0\ell\ll1$. Using Eq.~\eqref{eq:ch2.dipole-far-E}, show that $\E$ is transverse to $\hat{\mathbf{r}}$ and that $|\E|\propto k_0^2\sin\theta/r$. Insert $\E$ and the corresponding $\H$ into Eq.~\eqref{eq:ch2.radiated-power-screen} and verify Eq.~\eqref{eq:ch2.dipole-P-rad} for $|\mathbf{p}|=p_0$. \emph{Solution sketch.} With $\mathbf{p}\parallel\hat{\mathbf{z}}$, $(\mathbf{I}-\hat{\mathbf{r}}\hat{\mathbf{r}})\cdot\mathbf{p}=p_0(\hat{\mathbf{z}}-(\hat{\mathbf{r}}\cdot\hat{\mathbf{z}})\hat{\mathbf{r}})=p_0\sin\theta\,\hat{\boldsymbol\theta}$ in spherical components, giving $|\E|\propto k_0^2 p_0\sin\theta/r$. On $S_R$, $\Re(\E\times\H^*)\cdot\hat{\mathbf{r}}$ integrates to $P_{\mathrm{rad}}=k_0^4 p_0^2/(12\pi\varepsilon_0 c)$ \cite{jackson1999,stratton1941}. In the same limit, Eq.~\eqref{eq:ch2.far-zone-momentum-flux} gives $|\mathbf{F}_{\mathrm{rad}}|=P_{\mathrm{rad}}/c$ along the dominant radiation direction.
+
+\paragraph{Problem B (Propagating versus evanescent regions).}
+For $k_0=1\,\mathrm{rad/m}$, classify $(k_x,k_y)=(0.6,0.6)$, $(0.9,0.3)$, and $(1.2,0.5)$ using Eq.~\eqref{eq:ch2.dispersion-relation}. \emph{Solution.} $k_t=0.6\sqrt{2}\approx0.85\le k_0$ (propagating); $k_t=\sqrt{0.9}\approx0.95\le k_0$ (propagating); $k_t=\sqrt{1.69}\approx1.30>k_0$ (evanescent, $|k_z|=\sqrt{k_t^2-k_0^2}\approx0.83\,\mathrm{rad/m}$ decay rate in $z$).
+
+\paragraph{Problem C (Source equivalence in $\ker\mathcal{R}_\omega$).}
+Let $\mathbf{J}^{(1)}_{\mathrm{imp}}$ be a z-directed dipole moment and $\mathbf{J}^{(2)}_{\mathrm{imp}}=\mathbf{J}^{(1)}_{\mathrm{imp}}+\mathbf{J}^{\mathrm{(NR)}}_{\mathrm{imp}}$ with $\mathbf{J}^{\mathrm{(NR)}}_{\mathrm{imp}}\in\ker\mathcal{R}_\omega$. Show $\mathcal{R}_\omega[\mathbf{J}^{(1)}_{\mathrm{imp}}]=\mathcal{R}_\omega[\mathbf{J}^{(2)}_{\mathrm{imp}}]$ but $\mathcal{S}_\omega[\mathbf{J}^{(1)}_{\mathrm{imp}}]\neq\mathcal{S}_\omega[\mathbf{J}^{(2)}_{\mathrm{imp}}]$ in general. \emph{Solution.} Linearity and Eq.~\eqref{eq:ch2.ker-R-omega} give $\mathcal{R}_\omega[\mathbf{J}^{(2)}_{\mathrm{imp}}-\mathbf{J}^{(1)}_{\mathrm{imp}}]=\mathbf{0}$. The full fields differ by $\mathcal{S}_\omega[\mathbf{J}^{\mathrm{(NR)}}_{\mathrm{imp}}]$, which may be large near the source while its radiative image vanishes \cite{devaney2004}.
+
+\paragraph{Problem D (Reciprocity).}
+Two impressed currents $\mathbf{J}^{(1)}_{\mathrm{imp}}$, $\mathbf{J}^{(2)}_{\mathrm{imp}}$ on disjoint supports produce fields $(\E_1,\H_1)$, $(\E_2,\H_2)$ in vacuum with outgoing conditions. Verify Eq.~\eqref{eq:ch2.lorentz-reciprocity} using the Lorentz reciprocity relation of Subsection~\ref{sec:ch281} and integrating the standard bilinear integrand over a sphere of radius $R$ large enough to enclose both supports and showing the surface integral vanishes as $R\to\infty$ for outgoing transverse fields \cite{stratton1941,jackson1999}.
+
+\paragraph{Problem E (Finite aperture and angular resolution).}
+A circular aperture of radius $a$ radiates at wavelength $\lambda_0$. Estimate the angular width of the main lobe on the order of $\lambda_0/a$ radians and relate this to the inability of $\mathcal{K}_\omega$ with rank $\sim(k_0 a)^2$ to resolve finer angular structure without superdirectivity cost \cite{chu1948,harrington2001}.
+
+\paragraph{Problem F (Singular values and effective rank).}
+Suppose $\sigma_1=1$, $\sigma_2=10^{-2}$, $\sigma_3=10^{-4}$, and noise floor $10^{-3}$. Exact nullity counts only $\sigma_n=0$; effective rank counts $\sigma_n>10^{-3}$, here two channels. A third physical mode is present mathematically but not observable at declared tolerance \cite{hansen1988,devaney2004}.
+
+\paragraph{Problem G (Fredholm solvability).}
+A target far-zone pattern $\mathbf{g}$ is specified on $\mathcal{F}_{\mathrm{rad}}$. Explain in words why solvability of $\mathcal{R}_\omega[\Jimp]=\mathbf{g}$ requires compatibility with $\ker\mathcal{R}_\omega^{\dagger}$ (Eq.~\eqref{eq:ch2.radiation-solvability-criterion}, Subsection~\ref{sec:ch264}) and why a solution, if it exists, is unique only modulo $\ker\mathcal{R}_\omega$ (Eq.~\eqref{eq:ch2.ker-R-omega}). \emph{Solution sketch.} Cokernel directions are unreachable; adding any element of $\ker\mathcal{R}_\omega$ to $\Jimp$ leaves $\mathbf{g}$ unchanged \cite{stratton1941,devaney2004}.

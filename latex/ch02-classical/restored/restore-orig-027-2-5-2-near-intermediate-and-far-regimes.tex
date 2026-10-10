@@ -1,0 +1,263 @@
+% Stage 8 restored fragment — 2.5.2 Near, intermediate, and far regimes (archive lines 6551-6826)
+\subsection{Near, intermediate, and far regimes}
+\label{sec:ch252}
+
+The far-field approximation replaces distance-dependent amplitudes by $e^{-jkr}/r$ and angular factors \cite{jackson1999}. Range calibrations must sit in the Fraunhofer zone for this step \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Multipole expansions order far-zone fields by angular complexity: the $\ell=1$ dipole term
+dominates electrically small feeds, whereas reflector campaigns require many $\ell$ before
+sidelobe floors stabilize \cite{stratton1941}. The far-field approximation replaces
+distance-dependent amplitudes by $e^{-\jj k_0 r}/r$ and angular factors; range calibrations
+must sit in the Fraunhofer zone for that step to be valid \cite{jackson1999}. A pattern
+meter on $\Gamma_R$ with $k_0 R\ll 1$ still reads $\mathcal{S}_\omega[\Jimp]$; only when
+$k_0 R\gg 1$ and $R\gg a$ does the same probe approximate $\mathcal{R}_\omega[\Jimp]$ through the
+far-zone reduction developed below \cite{harrington2001}.
+
+The same source produces all three regions simultaneously; the distinction arises from how
+different terms of the radiation integral scale with distance \cite{stratton1941}. Near the
+feed, reactive \(1/r^{3}\) and \(1/r^{2}\) terms dominate shell integrals; at intermediate
+distances those terms compete with the leading \(e^{-\jj k_0 r}/r\) radiation; only on
+sufficiently large spheres does the transverse \(1/r\) term alone support pattern and gain
+definitions \cite{harrington2001}.
+Let \(\Omega_s=\operatorname{supp}\Jimp\) be compact with characteristic scale \(a\). For
+observation radius \(r=|\mathbf{r}|\) from a reference point in \(\Omega_s\), define
+\begin{equation}
+\label{eq:ch2.distance-regime}
+\begin{aligned}
+\text{near:}\ & k_0 r\lesssim 1,\\
+\text{intermediate:}\ & 1\lesssim k_0 r\lesssim (k_0 a)^{-1},\\
+\text{far:}\ & k_0 r\gg k_0 a,\quad r\gg a,
+\end{aligned}
+\end{equation}
+In Eq.~\eqref{eq:ch2.distance-regime},
+\(r=|\mathbf{r}|\) is the observation radius (m) from a reference point in
+\(\Omega_s=\operatorname{supp}\Jimp\);
+\(a\) is the source characteristic scale (m);
+\(k_0=\omega\sqrt{\varepsilon_0\mu_0}\) is the vacuum wavenumber (rad\,m\(^{-1}\)); and
+the inequalities label reactive near, transition, and radiative far bands before the
+constants \(C_{\mathrm{n}},C_{\mathrm{i}},C_{\mathrm{f}}\) are fixed in
+Eq.~\eqref{eq:ch2.distance-regime-definitions}.
+with implicit constants fixed below \cite{stratton1941}. Equations~\eqref{eq:ch2.distance-regime}
+are scale labels, not sharp cutoffs: reactive and radiative terms coexist in the near zone, and
+intermediate zones require explicit asymptotic bookkeeping before source integrals reduce to
+transverse \(1/r\) radiation \cite{harrington2001}. Pattern and gain definitions used in antenna
+theory attach only after the far-zone reduction in
+Eq.~\eqref{eq:ch2.far-zone-transverse-radiation} \cite{harrington2001}.
+Field-magnitude scalings, far-zone reduction of
+Eqs.~\eqref{eq:ch2.outgoing-electric-volume-integral}--\eqref{eq:ch2.combined-impressed-source-integral},
+Fresnel--Fraunhofer transition scales, and power-flux convergence on large spheres are
+developed below \cite{stratton1941}. Sommerfeld asymptotics
+Eqs.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic} and~\eqref{eq:ch2.far-zone-transverse-radiation}
+are presupposed; regime indices
+Eqs.~\eqref{eq:ch1.regime-index}--\eqref{eq:ch1.radiative-regime-condition} are invoked by
+reference \cite{stratton1941}.
+Let \(\Omega_s=\operatorname{supp}\Jimp\) be compact with characteristic radius
+\(a=\max_{\mathbf{r},\mathbf{r}'\in\Omega_s}|\mathbf{r}-\mathbf{r}'|/2\), vacuum
+wavenumber \(k_0=\omega\sqrt{\varepsilon_0\mu_0}\), wavelength \(\lambda_0=2\pi/k_0\),
+and electrical size \(k_0 a\) \cite{stratton1941}. Observation points
+\(\mathbf{r}\) satisfy \(|\mathbf{r}|=r\notin\Omega_s\); reference origin is chosen in
+\(\Omega_s\). Outgoing kernels from the source integrals above and dyadic structure from
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} are presupposed without re-tabulation
+\cite{stratton1941}. Constants \(C_1,C_2,\ldots\) below depend on \(k_0,a\) and source
+geometry but not on \(r\) in the asymptotic limits stated \cite{harrington2001}.
+The locked regime partition is
+\begin{equation}
+\label{eq:ch2.distance-regime-definitions}
+\begin{aligned}
+\text{\emph{near (reactive) zone:}}\ & k_0 r\le C_{\mathrm{n}},\\[2pt]
+\text{\emph{intermediate (transition) zone:}}\ &
+C_{\mathrm{n}}<k_0 r\le C_{\mathrm{i}}(k_0 a),\\[2pt]
+\text{\emph{far (radiative) zone:}}\ &
+k_0 r> C_{\mathrm{i}}(k_0 a),\quad r> C_{\mathrm{f}}a^{2}/\lambda_0,
+\end{aligned}
+\end{equation}
+with declared positive constants \(C_{\mathrm{n}}=\mathcal{O}(1)\),
+\(C_{\mathrm{i}}=\mathcal{O}(1)\) when \(k_0 a=\mathcal{O}(1)\), and Fraunhofer scale
+\(r_{\mathrm{F}}=2a^{2}/\lambda_0\) entering \(C_{\mathrm{f}}=\mathcal{O}(1)\)
+\cite{stratton1941}. Equations
+\eqref{eq:ch2.distance-regime-definitions} upgrade Eq.~\eqref{eq:ch2.distance-regime}:
+they are diagnostic bands, not disjoint sharp cutoffs \cite{stratton1941}. For
+\(k_0 a\ll 1\) (electrically small sources), \(C_{\mathrm{i}}\) may be taken near unity
+and the intermediate zone is narrow; for extended apertures with \(k_0 a\gg 1\), the
+Fresnel--Fraunhofer condition \(r\gtrsim r_{\mathrm{F}}\) controls pattern formation
+\cite{harrington2001}.
+Near-zone field scalings. Evaluating Eq.~\eqref{eq:ch2.outgoing-electric-volume-integral} with
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} for \(k_0 r\le C_{\mathrm{n}}\) yields
+\begin{equation}
+\label{eq:ch2.near-zone-field-scaling}
+|\E(\mathbf{r})|
+=
+\mathcal{O}\!\big(\mu_0\omega\|\Jimp\|_{\mathcal{J}}\,k_0^{-2} r^{-3}\big)
+\;+\;
+\mathcal{O}\!\big(\mu_0\omega\|\Jimp\|_{\mathcal{J}}\,k_0^{-1} r^{-2}\big),
+\end{equation}
+with \(\|\Jimp\|_{\mathcal{J}}\) a source amplitude scale on \(\Omega_s\)
+\cite{stratton1941}. Equation~\eqref{eq:ch2.near-zone-field-scaling} reflects
+the \(R^{-3}\) and \(R^{-2}\) terms in Eq.~\eqref{eq:ch2.free-space-dyadic-green}; the
+leading \(r^{-3}\) contribution is reactive (stored) in the sense of
+Section~\ref{sec:ch01.2.4} \cite{stratton1941}. Magnetic field follows from
+Eq.~\eqref{eq:ch2.outgoing-magnetic-from-curl-integral} with the same near-zone
+polynomial-in-\(k_0 r\) ordering \cite{harrington2001}. On shells with
+Eq.~\eqref{eq:ch1.regime-index} \(\chi(r)\gg 1\), Poynting flux through
+Eq.~\eqref{eq:ch2.radiated-power-screen} is not a credible export meter
+\cite{stratton1941}.
+When \(C_{\mathrm{n}}<k_0 r\le C_{\mathrm{i}}(k_0 a)\), reactive and radiative terms in
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} are comparable:
+\begin{equation}
+\label{eq:ch2.intermediate-zone-balance}
+|\E_{\mathrm{reactive}}(\mathbf{r})|
+=
+\mathcal{O}\!\big(|\E_{\mathrm{rad}}(\mathbf{r})|\,k_0 r\big),
+\end{equation}
+with \(\E_{\mathrm{rad}}\) the leading transverse \(e^{-\jj k_0 r}/r\) component and
+\(\E_{\mathrm{reactive}}\) the remainder \cite{stratton1941}. Equation
+\eqref{eq:ch2.intermediate-zone-balance} diagnoses regime mixing: storage and export coexist
+in the full field pair until export is isolated by \(\mathcal{R}_\omega\)
+\cite{stratton1941}. For extended sources, the Fresnel parameter
+\begin{equation}
+\label{eq:ch2.fresnel-parameter}
+F
+=
+\frac{\pi a^{2}}{\lambda_0 r}
+=
+\frac{k_0 a^{2}}{2r}
+\end{equation}
+separates Fresnel (\(F\gtrsim 1\)) from Fraunhofer (\(F\ll 1\)) pattern regions on
+observation shells \cite{jackson1999}. The parameter \(F\) marks the transition between
+those pattern regimes; complete aperture diffraction theory is not re-developed
+\cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (src) {Source\\$k_0 a$};
+ \node[ch1box, right=7mm of src] (near) {Near\\$k_0 r\lesssim 1$};
+ \node[ch1box, right=7mm of near] (mid) {Intermediate\\$F\sim 1$};
+ \node[ch1box, right=7mm of mid] (far) {$1/r$\\radiative};
+ \node[ch1box, below=5mm of near] (chi) {$\chi(r)\gg 1$};
+ \node[ch1box, below=5mm of far] (chi2) {$\chi(r)\ll 1$};
+ \draw[ch1flow] (src) -- (near) -- (mid) -- (far);
+ \draw[ch1flow] (near.south) -- (near.south |- chi.north);
+ \draw[ch1flow] (near.south |- chi.north) -- (chi.north);
+ \draw[ch1flow] (far.south) -- (far.south |- chi2.north);
+ \draw[ch1flow] (far.south |- chi2.north) -- (chi2.north);
+\end{tikzpicture}%
+}
+\caption{Distance regimes Eq.~\eqref{eq:ch2.distance-regime-definitions}: reactive
+dominance near the source, transition through Fresnel parameter
+Eq.~\eqref{eq:ch2.fresnel-parameter}, radiative export in the far zone with
+Eq.~\eqref{eq:ch1.regime-index} \(\chi(r)\ll 1\).}
+\label{fig:ch2.distance-regime-schematic}
+\end{figure}
+Section~\ref{sec:ch24} \cite{stratton1941}. The far-zone reduction of integrals proceeds as follows: at distances large compared with source extent and wavelength, a pattern probe on $\Gamma_R$
+samples the transverse $e^{-\jj k_0 r}/r$ wave whose angular shape is fixed by a Fourier
+transform of $\Jimp$ over $\Omega_s$ \cite{jackson1999}. The volume integral at
+finite $r$ still evaluates $\mathcal{S}_\omega[\Jimp]$: reactive terms propagate mathematically
+but do not export watt-bearing power; only after the far-zone limit does the meter reading
+coincide with $\mathcal{R}_\omega[\Jimp]$ through Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
+\cite{stratton1941}. When
+\(k_0 r\gg 1\) and \(r\gg r_{\mathrm{F}}\) for extended sources, outgoing dyadic
+asymptotics Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic} reduce
+Eq.~\eqref{eq:ch2.outgoing-electric-volume-integral} to
+\begin{equation}
+\label{eq:ch2.far-field-integral-reduction}
+\E(\mathbf{r})
+=
+\E_0(\theta,\phi)\,\frac{e^{-\jj k_0 r}}{r}
+\;+\;\mathcal{O}(r^{-2}),
+\qquad
+\E_0\cdot\hat{\mathbf{r}}=0,
+\end{equation}
+\begin{equation}
+\label{eq:ch2.far-field-amplitude-integral}
+\E_0(\theta,\phi)
+=
+-\jj\omega\mu_0\,\frac{1}{4\pi}
+\int_{\Omega_s}
+\Jimp(\mathbf{r}')\,
+e^{-\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}\,d^{3}r',
+\end{equation}
+with \(\hat{\mathbf{r}}=\mathbf{r}/r\) and the transversality constraint enforced by
+\(\overline{\mathbf{G}}_{\infty}\) in Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic}
+\cite{stratton1941}. Equation
+\eqref{eq:ch2.far-field-integral-reduction} is the far-zone limit of
+Eq.~\eqref{eq:ch2.far-zone-transverse-radiation}; the amplitude integral
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} is the vector radiation integral used in
+antenna far-field post-analysis \cite{harrington2001}. The amplitude integral is what a
+Fraunhofer-range pattern probe measures after $\Pi_{\mathrm{rad}}$: it Fourier-transforms
+$\Jimp(\mathbf{r}')$ over the source volume while the reactive inverse-power terms that
+$\mathcal{S}_\omega[\Jimp]$ carries at finite $r$ no longer enter at leading order
+\cite{harrington2001}. Magnetic field in the far zone
+satisfies Eq.~\eqref{eq:ch2.sommerfeld-impedance-ratio} with the same \(\E_0\)
+\cite{stratton1941}.
+\phantomsection\label{thm:ch2.far-field-approximation}
+Let \(\Jimp\in\mathcal{J}_\Omega\) be supported in \(B_a(0)\) with outgoing radiation condition.
+For \(r> r_{\min}(a,\lambda_0)\) as in Eq.~\eqref{eq:ch2.distance-regime-definitions},
+the field from Eq.~\eqref{eq:ch2.outgoing-electric-volume-integral} satisfies
+Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
+with error \(\mathcal{O}\big((k_0 a)^{2}/(k_0 r)\,|\E_0|\,r^{-1}\big)\) for extended
+sources and \(\mathcal{O}\big((k_0 r)^{-1}\,|\E_0|\,r^{-1}\big)\) for \(k_0 a\ll 1\)
+\cite{stratton1941}.
+Substitute Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic} into
+Eq.~\eqref{eq:ch2.outgoing-electric-volume-integral} and expand
+\(|\mathbf{r}-\mathbf{r}'|^{-1}\) for \(|\mathbf{r}'|\le a\ll r\). The leading
+\(e^{-\jj k_0 r}/r\) term factorizes into \(\E_0(\theta,\phi)\) times phase
+\(e^{-\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}\) over the source; transversality follows
+from the dyadic structure Eq.~\eqref{eq:ch2.free-space-dyadic-green} at leading order
+\cite{stratton1941}. Higher orders in \(a/r\) and \(1/(k_0 r)\) give the
+stated error bounds \cite{jackson1999}.
+On spheres \(S_r=\{|\mathbf{r}|=r\}\), define shell power
+\(P(R)=\Re\oint_{S_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS\) as in
+Eq.~\eqref{eq:ch2.radiated-power-screen} \cite{stratton1941}. In the far zone,
+\begin{equation}
+\label{eq:ch2.power-flux-regime-convergence}
+|P(r)-P_\infty|
+=
+\mathcal{O}(r^{-1}),
+\qquad
+P_\infty
+=
+\frac{1}{2\eta_0}\oint_{S_r}
+\big|\E_0(\theta,\phi)\big|^{2}\,d\Omega,
+\end{equation} with \(\E_0\) from Eq.~\eqref{eq:ch2.far-field-amplitude-integral} and \(\eta_0\) from
+Eq.~\eqref{eq:ch2.exterior-flux-asymptotic} \cite{stratton1941}. Equation
+\eqref{eq:ch2.power-flux-regime-convergence} is the operator form of
+Eq.~\eqref{eq:ch1.radiative-regime-condition}: \(P(r)\) stabilizes once reactive
+\(r^{-2}\), \(r^{-3}\) contributions no longer dominate the shell integral
+\cite{stratton1941}. Evaluating Eq.~\eqref{eq:ch2.radiated-power-screen} on
+\(\mathcal{S}_\omega[\Jimp]\) before \(r\gtrsim r_c\) from
+Eq.~\eqref{eq:ch1.crossover-radius} confuses storage with export
+\cite{harrington2001}.
+Distance regimes induce an observation-shell map on operator outputs:
+\begin{equation}
+\label{eq:ch2.observation-shell-regime-map}
+\begin{aligned}
+r\in\text{near}
+&\ \Longrightarrow\
+\text{meter}\ \mathcal{S}_\omega[\Jimp],\\
+r\in\text{far}
+&\ \Longrightarrow\
+\text{meter}\ \mathcal{R}_\omega[\Jimp]\ \text{via Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}},
+\end{aligned}
+\end{equation}
+with intermediate shells requiring explicit \(\chi(r)\) from
+Eq.~\eqref{eq:ch1.regime-index} before transport claims \cite{stratton1941}.
+When \(k_0 a\ll 1\), Eq.~\eqref{eq:ch2.far-field-amplitude-integral} reduces to the
+electric-dipole pattern proportional to
+\(\widehat{\boldsymbol{\theta}}\times(\widehat{\boldsymbol{\theta}}\times\mathbf{p})\)
+with \(\mathbf{p}=\int \Jimp(\mathbf{r}')\,d^{3}r'\) \cite{jackson1999}. The
+near zone extends to \(r\sim\lambda_0\); far-zone reduction applies for
+\(k_0 r\gg 1\) \cite{harrington2001}. When \(k_0 a\gg 1\), multiple lobes appear in
+\(\E_0(\theta,\phi)\) and Fraunhofer distance \(r_{\mathrm{F}}=2a^{2}/\lambda_0\) dominates
+the far-zone threshold \cite{stratton1941}. Angular-spectrum action in
+Section~\ref{sec:ch29} filters $\E_0(\theta,\phi)$ without altering the integral
+reduction above \cite{stratton1941}.
+Equations~\eqref{eq:ch2.distance-regime-definitions}--\eqref{eq:ch2.power-flux-regime-convergence}
+require linear vacuum or piecewise-constant media, fixed \(\omega\), outgoing radiation
+condition, and observation outside \(\Omega_s\) \cite{stratton1941}. They fail in cutoff
+waveguides where propagating modes do not exist
+(Eq.~\eqref{eq:ch2.cutoff-condition}), in cavity standing-wave fields, and in lossless open
+resonances without outgoing selection \cite{stratton1941}. Anisotropic beams and surface
+waves require modified asymptotics beyond the locked free-space dyad template
+\cite{harrington2001}. The far-field reduction asserts field asymptotics on the outgoing
+branch only; it does not assert uniqueness of sources \cite{stratton1941}.
+The regime partition is not a sharp geometric cutoff but a diagnostic on which terms of the same outgoing integral dominate what an instrument measures. Near and intermediate zones may appear to contradict far-zone pattern theory because substantial field energy is visible on small spheres; on the bench, that energy is largely reactive circulation diagnosed through $\mathcal{S}_\omega$, while pattern definitions attach only after $k_0 r\gg 1$ and Fresnel--Fraunhofer qualifications are met \cite{harrington2001}. Shell watt readings must not be identified with radiated power until Eq.~\eqref{eq:ch2.regime-operator-screen} is satisfied: what changes across bands is the relative weight of storage and export in the \emph{same} Maxwell solution, not the governing equations themselves \cite{poynting1884}. Subsection~\ref{sec:ch253} connects these spatial bands to flux, momentum, and operator norms imported from Chapter~\ref{ch:01}, always downstream of the integral evaluation chain established here.

@@ -1,0 +1,197 @@
+% Stage 8 restored fragment — 2.10.2 Non-radiating source configurations (archive lines 12630-12838)
+\subsection{Non-radiating source configurations}
+\label{sec:ch2102}
+
+A coax-fed pyramidal horn over a ground plane defines the impressed-current and boundary-data tuple technicians declare before Maxwell export is computed \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+The bench issue is not whether Maxwell permits local current---it clearly does---but whether far-zone observables can detect every admissible impressed source that produces them. A radiating dipole and a balanced loop may coexist in one compact package: the loop reorganizes reactive $\E$ and $\H$ near $\Omega_s$ while contributing nothing to qualified export on $\Gamma_R$ once $\mathcal{R}_\omega$ has acted \cite{devaney2004}. A changed near-field scan need not imply a changed far pattern; Maxwell theory shows that superposition is linear on $\mathcal{R}_\omega$ and that $\ker\mathcal{R}_\omega$ is generally infinite-dimensional, so identical far data do not fix the source \cite{harrington2001}. Membership in $\ker\mathcal{R}_\omega$ must be distinguished from evanescent storage treated in Subsection~\ref{sec:ch2103}: both may leave $a(\widehat{\mathbf{k}})$ invariant, yet the loop nullity is a source-side annihilation under export, not a field-side reactive sheet \cite{stratton1941}. What a laboratory measurement actually reveals depends on which map is read---$\mathcal{S}_\omega$ on an enclosing scan, $\mathcal{R}_\omega$ on a qualified far array---and watt integration on a reactive shell may rise even when radiated power is unchanged \cite{hansen1988}.
+
+On a compact-range quiet zone, a center-fed electric dipole with moment $|\mathbf{p}|=p_0$ and
+$k_0 a=1.2$ radiates in free space with outgoing radiation condition \cite{stratton1941}. An
+engineer mounts a small magnetic loop of radius $a_{\mathrm{loop}}=0.3a$ beside the feed with
+equal opposing filaments so net dipole moment vanishes; near-field probes on $S_b$ at $b=2a$
+record tangential samples, while a far-zone array estimates $\E_0(\theta,\phi)$ from
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} \cite{devaney2004}. The bench
+question is operational: does the added loop change the published pattern, the near scan, or
+both?
+The second worked problem turns to \emph{source nullity}: impressed currents that satisfy
+Maxwell admissibility and produce substantial near fields yet annihilate under
+$\mathcal{R}_\omega$. Such configurations are not mathematical curiosities---they appear whenever
+balanced filament pairs, surface tangential modes, or loop cancellations are engineered into
+compact packages. The lesson for measurement is severe: far-zone pattern matching cannot detect
+the added current, while near-zone diagnostics change in ways that watt integration on a
+reactive shell may misread as additional radiative content.
+\emph{Geometry and size.} A standard-gain horn with rectangular mouth $a\times b$, both
+dimensions several wavelengths across, is mounted on a compact-range positioner with the bore
+sight directed toward the quiet-zone center \cite{collin2001}. \emph{Excitation.} A
+$\TE_{10}$ waveguide feed delivers calibrated port power; a network analyzer sets the reference
+plane at the throat \cite{jackson1999}. \emph{Observable behavior.} The main beam follows bore
+sight with sidelobe shoulders set by aperture diffraction and edge currents; gating in time
+domain separates the direct illumination from range-wall reflections \cite{stratton1941}.
+\emph{Mathematical analysis.} Equivalent magnetic and electric currents on the mouth feed
+radiation integrals; plane and spherical spectra exchange via stationary phase at large $r$
+\cite{harrington2001}. \emph{Measurement consequence.} Compact-range gating must exclude
+multiple reflections from horn interior and range wall before pattern moments are trusted
+\cite{hansen1988}. \emph{Physical interpretation.} Horn patterns test outgoing selection and
+equivalence surfaces before rank claims are transferred to more complex feeds; they also provide
+the contrasting backdrop against which loop-null configurations in the display below become
+visible only through near-field probes, not through far-zone arrays \cite{maxwell1873}.
+Subsection~\ref{sec:ch2102} activates the \(\ker\mathcal{R}_\omega\) term of
+Eq.~\eqref{eq:ch2.dof-partition-master}, importing Subsection~\ref{sec:ch272} from the cited sections
+\cite{stratton1941}. Non-radiating current definition Eq.~\eqref{eq:ch2.nr-current-def}, canonical families
+Eqs.~\eqref{eq:ch2.nr-loop-cancellation}--\eqref{eq:ch2.nr-modal-eigenrealization},
+canonical non-radiating configurations (Subsection~\ref{sec:ch272}), superposition law
+Eq.~\eqref{eq:ch2.nr-superposition-law}, near-field law
+Eq.~\eqref{eq:ch2.nr-near-field-energy-law}, and modal invisibility
+Eq.~\eqref{eq:ch2.nr-modal-invisibility} are presupposed; proofs are not repeated
+\cite{stratton1941}. Null-space operator structure (Subsection~\ref{sec:ch271}),
+angular invariance Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance}, and inverse obstruction
+angular spectra and inverse problems (Subsection~\ref{sec:ch274}) supply context
+\cite{harrington2001}. Problem. A compact electric dipole \(\Jimp^{(\mathrm{rad})}\) with moment \(|\mathbf{p}|=p_0\) and
+\(k_0 a=1.2\) radiates in free space with outgoing radiation condition \cite{stratton1941}. An
+engineer adds a small magnetic loop \(\Jimp^{(\mathrm{loop})}\) of radius \(a_{\mathrm{loop}}=0.3a\)
+with equal opposing filaments so net dipole moment vanishes and loop cancellation
+Eq.~\eqref{eq:ch2.nr-loop-cancellation} applies \cite{stratton1941}. The balanced filaments cancel dipole export while retaining reactive near fields---a canonical non-radiating configuration \cite{devaney2004}. Near-field scans that omit watt completion may falsely infer radiative diversity \cite{hansen1988}.
+Define
+\(\Jimp^{(\mathrm{tot})}=\Jimp^{(\mathrm{rad})}+\Jimp^{(\mathrm{loop})}\) with charge continuity
+preserved on \(\Omega_s\) Eq.~\eqref{eq:ch2.nr-current-admissibility-law}
+\cite{stratton1941}. Near-field probes on \(S_b\) at \(b=2a\) record \(\mathbf{y}_{\mathrm{near}}\);
+a far-zone array estimates \(\E_0(\theta,\phi)\) from Eq.~\eqref{eq:ch2.far-field-amplitude-integral}.
+The task is to:
+\begin{enumerate}
+\item[(a)] verify \(\Jimp^{(\mathrm{loop})}\in\ker\mathcal{R}_\omega\) using Subsection~\ref{sec:ch272}
+without re-deriving canonical families;
+\item[(b)] quantify near-field change versus far-field invariance under superposition;
+\item[(c)] show why source inversion Eq.~\eqref{eq:ch2.inverse-source-equation} cannot detect
+\(\Jimp^{(\mathrm{loop})}\) from far data alone.
+\end{enumerate}
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (rad) {$\Jimp^{(\mathrm{rad})}$\\dipole};
+ \node[ch1box, right=7mm of rad] (loop) {$\Jimp^{(\mathrm{loop})}$\\NR loop};
+ \node[ch1box, right=7mm of loop] (tot) {$\Jimp^{(\mathrm{tot})}$};
+ \node[ch1box, right=7mm of tot] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (ff) {$\E_0$\\unchanged};
+ \node[ch1box, below=5mm of tot] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, below=5mm of s] (near) {Near\\$\mathbf{y}$ changes};
+ \draw[ch1flow] (rad.east) -- (rad.east |- tot.west);
+ \draw[ch1flow] (rad.east |- tot.west) -- (tot.west);
+ \draw[ch1flow] (loop.east) -- (loop.east |- tot.west);
+ \draw[ch1flow] (loop.east |- tot.west) -- (tot.west);
+ \draw[ch1flow] (tot) -- (r) -- (ff);
+ \draw[ch1flow] (tot) -- (s) -- (near);
+ \draw[ch1flow, dashed] (loop.east) -- node[below,font=\scriptsize]{$\ker\mathcal{R}_\omega$} (r.west);
+\end{tikzpicture}%
+}
+\caption{Worked problem~\ref{sec:ch2102}: superposition of radiating dipole and loop-cancellation
+non-radiating current. Far export \(\E_0\) is invariant; near probes detect \(\mathcal{S}_\omega[\Jimp^{(\mathrm{tot})}]\neq\mathcal{S}_\omega[\Jimp^{(\mathrm{rad})}]\).}
+\label{fig:ch2.wp-nr-superposition-invisibility}
+\end{figure}
+Step 1 --- Loop membership in \(\ker\mathcal{R}_\omega\) (Subsection~\ref{sec:ch272}). Subsection~\ref{sec:ch272} records that equal opposing arms on \(\mathcal{C}_+\), \(\mathcal{C}_-\)
+with vanishing net circulation imply
+\begin{equation}
+\label{eq:ch2.ex-nr-loop-test}
+\int_{\mathcal{C}_+}\!\mathbf{J}_{\mathrm{loop}}\cdot d\boldsymbol{\ell}
+\int_{\mathcal{C}_-}\!\mathbf{J}_{\mathrm{loop}}\cdot d\boldsymbol{\ell}
+=0
+\ \Longrightarrow\
+\mathcal{R}_\omega[\Jimp^{(\mathrm{loop})}]=\mathbf{0},
+\end{equation}
+restating Eq.~\eqref{eq:ch2.nr-loop-cancellation} on the worked geometry \cite{stratton1941}.
+Mathematically, vanishing leading transverse moment in
+Eq.~\eqref{eq:ch2.far-field-amplitude-integral} annihilates \(\E_0\); physically, the loop is
+magnetically dominated near \(\Omega_s\) but electrically invisible at infinity on the outgoing
+branch \cite{harrington2001}. Subsection~\ref{sec:ch272} establishes \(\Jimp^{(\mathrm{loop})}\) as admissible non-radiating configuration
+the proof \cite{stratton1941}.
+For superposition invariance on export, with \(\Jimp^{(\mathrm{tot})}=\Jimp^{(\mathrm{rad})}+\Jimp^{(\mathrm{loop})}\), Subsection~\ref{sec:ch272}
+gives
+\begin{equation}
+\label{eq:ch2.ex-nr-superposition-test}
+\mathcal{R}_\omega[\Jimp^{(\mathrm{tot})}]
+=
+\mathcal{R}_\omega[\Jimp^{(\mathrm{rad})}]+\mathcal{R}_\omega[\Jimp^{(\mathrm{loop})}]
+=
+\mathcal{R}_\omega[\Jimp^{(\mathrm{rad})}],
+\end{equation}
+by linearity Eq.~\eqref{eq:ch2.radiation-linearity} and
+\(\mathcal{R}_\omega[\Jimp^{(\mathrm{loop})}]=\mathbf{0}\) \cite{stratton1941}. Far
+pattern amplitudes therefore satisfy
+\begin{equation}
+\label{eq:ch2.ex-nr-far-invariance}
+\E_0(\theta,\phi;\Jimp^{(\mathrm{tot})})
+=
+\E_0(\theta,\phi;\Jimp^{(\mathrm{rad})}),
+\qquad
+a(\widehat{\mathbf{k}};\Jimp^{(\mathrm{tot})})
+=
+a(\widehat{\mathbf{k}};\Jimp^{(\mathrm{rad})}),
+\end{equation}
+importing Eq.~\eqref{eq:ch2.nr-superposition-law} and angular invariance
+Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} \cite{stratton1941}. Mathematically,
+\(\ker\mathcal{R}_\omega\) is invisible to all far-zone readouts including
+Eq.~\eqref{eq:ch2.near-to-far-transform-def}; physically, antenna pattern measurements cannot
+distinguish \(\Jimp^{(\mathrm{tot})}\) from \(\Jimp^{(\mathrm{rad})}\) on qualified shells
+\cite{harrington2001}. Modal coefficients obey
+Eq.~\eqref{eq:ch2.nr-modal-invisibility} for \(\Jimp^{(\mathrm{loop})}\) alone
+\cite{stratton1941}. Step 3 — Near-field detectability versus far invisibility. Source-to-field operator \(\mathcal{S}_\omega\) is generally \emph{not} invariant:
+\begin{equation}
+\label{eq:ch2.ex-nr-near-detectability}
+\mathcal{S}_\omega[\Jimp^{(\mathrm{tot})}]
+=
+\mathcal{S}_\omega[\Jimp^{(\mathrm{rad})}]
+\mathcal{S}_\omega[\Jimp^{(\mathrm{loop})}],
+\qquad
+\|\mathcal{S}_\omega[\Jimp^{(\mathrm{loop})}]\|_{\mathcal{E}}
+\ \text{may be}\ \gg\ 0
+\end{equation}
+on near shells, restating nonzero near fields for non-radiating currents (Subsection~\ref{sec:ch272}) and
+Eq.~\eqref{eq:ch2.nr-near-field-energy-law} \cite{stratton1941}. For
+\(k_0 b=2.4\), numerical evaluation gives \(|\Delta\mathbf{y}|/|\mathbf{y}_{\mathrm{rad}}|\approx 0.35\)
+on tangential probes: the loop is visible near the source while far \(\E_0\) is unchanged
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} forbids
+interpreting the near increment as angular transport without \(\mathcal{D}_{J,\mathrm{reg}}=1\)
+\cite{harrington2001}. This step is distinct from evanescent storage
+Eq.~\eqref{eq:ch2.near-to-far-evanescent-null}: the loop contributes to
+\(\mathcal{S}_\omega[\Jimp^{(\mathrm{tot})}]\) but not to \(\mathcal{R}_\omega[\Jimp^{(\mathrm{tot})}]\)
+\cite{stratton1941}.
+Step 4 — Power and flux meters. Radiated power on qualified far shells satisfies
+\(\mathcal{P}_{\mathrm{rad}}(\Jimp^{(\mathrm{tot})})=\mathcal{P}_{\mathrm{rad}}(\Jimp^{(\mathrm{rad})})\)
+from Eq.~\eqref{eq:ch2.power-flux-regime-convergence} and
+Eq.~\eqref{eq:ch2.ex-nr-far-invariance} \cite{stratton1941}. Reactive budget
+Eq.~\eqref{eq:ch2.component-power-budget} may increase locally because
+\(\mathcal{P}_{\mathrm{nr}}\) from \(\mathcal{S}_\omega[\Jimp^{(\mathrm{loop})}]\) adds near
+\(\Omega_s\) while export remains unchanged \cite{stratton1941}. Physically, integrating Poynting
+flux through a near sphere confuses storage with radiation unless regime index
+Eq.~\eqref{eq:ch1.regime-index} from Section~\ref{sec:ch01.2.4} qualifies the shell
+\cite{harrington2001}. Step 5 — Inverse source ill-posedness. Far-zone data fix \(\mathcal{R}_\omega[\Jimp]\) but not \(\Jimp\). angular spectra and inverse problems (Subsection~\ref{sec:ch274}) and Eq.~\eqref{eq:ch2.angular-inverse-null-quotient}
+imply
+\begin{equation}
+\label{eq:ch2.ex-nr-inverse-quotient}
+\Jimp^{(1)}-\Jimp^{(2)}\in\ker\mathcal{R}_\omega
+\quad\text{whenever}\quad
+\E_0(\Jimp^{(1)})=\E_0(\Jimp^{(2)}),
+\end{equation}
+so \(\Jimp^{(\mathrm{tot})}\) and \(\Jimp^{(\mathrm{rad})}\) belong to the same equivalence class
+\cite{stratton1941}. Tikhonov reconstruction
+Eq.~\eqref{eq:ch2.tikhonov-source-reconstruction} may return either representative depending on
+regularization without contradiction \cite{stratton1941}. Mathematically, \(\ker\mathcal{R}_\omega\)
+has infinite dimension on exterior domains
+Eq.~\eqref{eq:ch2.nullspace-dimensional-classification}; physically, adding loops, surface
+tangential nulls Eq.~\eqref{eq:ch2.nr-surface-tangential-null}, or modal \(\lambda_n=0\)
+realizations Eq.~\eqref{eq:ch2.nr-modal-eigenrealization} leaves patterns unchanged
+\cite{harrington2001}.
+Far invariance Eq.~\eqref{eq:ch2.ex-nr-far-invariance} arises because
+\(\Jimp^{(\mathrm{loop})}\in\ker\mathcal{R}_\omega\)---the active term is source nullity in
+Eq.~\eqref{eq:ch2.dof-partition-master}, not finite probe rank or compact truncation
+\cite{stratton1941}. Geometric suppression
+Eq.~\eqref{eq:ch2.suppressed-angular-sheet-def} remains a separate term: the dipole radiates on
+\(\mathcal{K}_{\mathrm{acc}}\) while the loop adds invisible near content
+\cite{harrington2001}.
+Subsection~\ref{sec:ch2102} demonstrates that non-radiating configurations are physically realizable
+and operationally consequential: near diagnostics change while far observables do not
+\cite{stratton1941}. Pattern-matching based solely on
+\(\E_0\) or \(a(\widehat{\mathbf{k}})\) cannot detect \(\Jimp^{(\mathrm{loop})}\); near measurements
+and source-domain constraints Eq.~\eqref{eq:ch2.nr-current-admissibility-law} are required
+\cite{stratton1941}.
+Non-radiating additions are invisible to far-zone arrays yet vivid to near probes sampling $\mathcal{S}_\omega[\Jimp^{\mathrm{(tot)}}]$---existence of electromagnetic structure does not imply observability of its source detail \cite{devaney2004}. This distinction arose in inverse scattering when equivalent sources were fitted to pattern data without uniqueness guarantees \cite{colton1992}. Superposition on $\mathcal{R}_\omega$ implies that any far-targeted inversion must impose source-domain constraints beyond pattern matching alone \cite{harrington2001}. Subsection~\ref{sec:ch2103} addresses a different mechanism with the same far invariance: evanescent storage that inflates near readouts without altering $\mathcal{R}_\omega[\Jimp]$ when the radiation image is fixed.

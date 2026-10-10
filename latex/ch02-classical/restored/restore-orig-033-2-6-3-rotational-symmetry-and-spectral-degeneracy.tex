@@ -1,0 +1,249 @@
+% Stage 8 restored fragment — 2.6.3 Rotational symmetry and spectral degeneracy (archive lines 8071-8331)
+\subsection{Rotational symmetry and spectral degeneracy}
+\label{sec:ch262}
+Rotational degeneracy is visible on every compact range before covariance formulas appear:
+rotating a horn reorients principal cuts while total exported power stays fixed when probe and
+source frames rotate together \cite{harrington2001}. The formal commutation relations
+below encode that laboratory symmetry on the export eigenbasis from
+Subsection~\ref{sec:ch261}.
+
+Let \(R\in\mathrm{SO}(3)\), field rotation \(\mathcal{D}(R)\) on qualified Maxwell pairs
+\(\mathbf{u}=(\E,\H)\in\mathcal{F}_{\mathrm{SF}}\), and radiation map
+Eq.~\eqref{eq:ch2.spectral-operator-targets} on outgoing data
+\cite{stratton1941}. Isotropic vacuum or statistically isotropic
+environments are assumed unless stated otherwise: constitutive tensors commute with
+\(R\) in the sense of Section~\ref{sec:ch01.3.2} \cite{stratton1941}. Impressed sources
+transform as polar vectors under active rotation,
+\(\big(\mathcal{A}_R\Jimp\big)(\mathbf{r})=R\,\Jimp(R^{-1}\mathbf{r})\), consistent with
+Eq.~\eqref{eq:ch1.vector-rotation-components} \cite{stratton1941}. regime qualification
+Eq.~\eqref{eq:ch2.regime-operator-screen} and transport qualification
+Eq.~\eqref{eq:ch2.transport-qualified-radiation} remain mandatory before interpreting
+rotated reports as export data \cite{harrington2001}.
+Rotation in the laboratory. Rotating a horn on a compact range is the everyday experiment that motivates covariance
+relations. Mount the horn on a rotary stage, record $\E_t$ on $S_r$ at several azimuths, and
+superpose the cuts: total exported power remains unchanged when probe and source frames rotate
+together, but the principal beam walks across the sphere as expected for a steerable feed
+\cite{harrington2001}. Rotating a dish feed scans a different arc on the reflector surface; modal
+coefficients mix according to the same rules that rotate a measured $\E_t$ distribution on the
+rim \cite{collin2001}. Spinning a corrugated aperture distribution about its axis redistributes
+directional content within fixed $\ell$ blocks without creating new export unless the source
+itself changes \cite{stratton1941}. Laboratory reports must distinguish active rotation of
+hardware from passive relabeling of a fixed field in a rotated coordinate chart; confusing the
+two conventions splits degeneracies artificially in processed $a_n(\hat{\mathbf{k}})$ data and
+can make a symmetric structure appear artificially asymmetric in synthesis charting
+\cite{harrington2001}. The covariance identity below is the formal statement of what range
+technicians already enforce by co-rotating probes and references.
+Field rotation means physically reorienting the $\E$ and $\H$ vectors with the hardware: what
+changes is the direction of the pattern on $S_r$; what remains unchanged, when frames are
+handled consistently, is total exported power and the eigenvalue ordering within degenerate
+blocks \cite{harrington2001}. Define the Maxwell field representation
+\begin{equation}
+\label{eq:ch2.field-rotation-representation}
+\mathcal{D}(R)\,\mathbf{u}
+=
+\big(\mathcal{A}_R\E,\,\mathcal{A}_R\H\big),
+\qquad
+\mathbf{u}=(\E,\H)\in\mathcal{F}_\Omega,
+\end{equation}
+using active rotation Eq.~\eqref{eq:ch1.active-rotation-action} on each component
+\cite{stratton1941}. Equation~\eqref{eq:ch2.field-rotation-representation} specializes
+Section~\ref{sec:ch01.3.1} to phasor Maxwell
+pairs: passive relabeling Eq.~\eqref{eq:ch1.passive-rotation-action} produces the same
+physics with rotated components related by
+Eq.~\eqref{eq:ch1.active-passive-duality} \cite{stratton1941}. Group composition
+Eq.~\eqref{eq:ch1.rotation-group-action} yields
+\(\mathcal{D}(R_1R_2)=\mathcal{D}(R_1)\mathcal{D}(R_2)\) on qualified field pairs
+\cite{stratton1941}.
+Covariance of the radiation map. This equation is perhaps the most important symmetry statement in antenna engineering: active
+rotation of the feed in a co-rotated measurement frame leaves physical export content unchanged
+while reorienting modal coefficients through the representation $\mathcal{D}(R)$
+\cite{harrington2001}. When sources and observation frames are co-rotated, the radiation chain must commute with
+rotation up to the field representation $\mathcal{D}(R)$: rotating the feed and evaluating on a
+co-rotated far-zone frame must yield the same physics as evaluating first and then rotating the
+pattern \cite{stratton1941}. That requirement is visible on every compact range
+where probe calibration tracks mechanical azimuth. Formally,
+\begin{equation}
+\label{eq:ch2.radiation-rotation-commutation}
+\mathcal{R}_\omega\big[\mathcal{A}_R\Jimp\big]
+=
+\mathcal{D}(R)\,\mathcal{R}_\omega[\Jimp],
+\end{equation}
+on physically realizable \(\Jimp\in\mathcal{J}_\Omega\) with outgoing radiation condition and isotropic
+constitutive response \cite{stratton1941}. Equation
+\eqref{eq:ch2.radiation-rotation-commutation} develops Eq.
+Eq.~\eqref{eq:ch2.degeneracy-covariance} and aligns with covariance test
+Eq.~\eqref{eq:ch2.covariance-operator-test} for \(\mathbf{a}=\mathbf{0}\)
+\cite{stratton1941}. Residual \(\mathcal{R}_{\mathcal{F}}\) from
+Eq.~\eqref{eq:ch1.covariance-residual} diagnoses broken commutation in discretizations
+\cite{harrington2001}. Rotating
+\(\Jimp\) while evaluating flux on an unrotated \(\mathcal{S}_\omega[\Jimp]\) violates
+origin and covariance criteria from Section~\ref{sec:ch01.3.3} even when
+Eq.~\eqref{eq:ch2.radiation-rotation-commutation} holds for power alone
+\cite{stratton1941}.
+\phantomsection\label{fig:ch2.radiation-rotation-commutation}
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\Jimp$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (u) {$\mathbf{u}_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of j] (ar) {$\mathcal{A}_R$};
+ \node[ch1box, below=5mm of u] (dr) {$\mathcal{D}(R)$};
+ \draw[ch1flow] (j) -- (r) -- (u);
+ \draw[ch1flow] (ar.south) -- (ar.south |- j.north);
+ \draw[ch1flow] (ar.south |- j.north) -- (j.north);
+ \draw[ch1flow] (dr.south) -- (dr.south |- u.north);
+ \draw[ch1flow] (dr.south |- u.north) -- (u.north);
+ \draw[ch1flow] (ar) -| (r);
+\end{tikzpicture}%
+}
+\caption{Rotational covariance Eq.~\eqref{eq:ch2.radiation-rotation-commutation}: active
+source rotation commutes with \(\mathcal{R}_\omega\) up to field representation
+\(\mathcal{D}(R)\) Eq.~\eqref{eq:ch2.field-rotation-representation}.}
+\label{fig:ch2.rotation-spectral-covariance}
+\end{figure}
+~\eqref{eq:ch2.radiation-rotation-commutation} in the same layout as
+Figure~\ref{fig:ch1.wp-active-passive-rotation}: geometry and components must be rotated
+consistently before modal coefficients are compared \cite{stratton1941}. Under rotation, modal coefficients mix through the matrix $D^{(\mathrm{rad})}_{nm}(R)$: an
+engineer sees principal cuts walk across the sphere while total power on $\Gamma_R$ stays fixed
+when probe and source frames rotate together \cite{harrington2001}. Let \(\{\mathbf{u}_n\}_{n\in\mathcal{N}_{\mathrm{rad}}}\) be the orthonormal radiation
+basis developed above and \(c_n[\mathfrak{D}]\) source amplitudes
+Eq.~\eqref{eq:ch2.source-modal-amplitude}. Under active rotation of impressed data,
+\begin{equation}
+\label{eq:ch2.modal-coefficient-rotation}
+c_n[\mathcal{A}_R\mathfrak{D}]
+=
+\sum_{m\in\mathcal{N}_{\mathrm{rad}}}
+D^{(\mathrm{rad})}_{nm}(R)\,c_m[\mathfrak{D}],
+\end{equation}
+whenever Eq.~\eqref{eq:ch2.radiation-rotation-commutation} holds and the family of radiating modes is
+closed under \(\mathcal{D}(R)\),
+\begin{equation}
+\label{eq:ch2.modal-basis-covariance}
+\mathcal{D}(R)\,\mathbf{u}_m
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+D^{(\mathrm{rad})}_{nm}(R)\,\mathbf{u}_n.
+\end{equation}
+Equations~\eqref{eq:ch2.modal-coefficient-rotation}--\eqref{eq:ch2.modal-basis-covariance}
+are the spectral restatement of vector covariance
+Eq.~\eqref{eq:ch1.vector-observable-covariance} on \(\mathcal{F}_{\mathrm{rad}}\)
+\cite{stratton1941}. Matrix elements \(D^{(\mathrm{rad})}_{nm}(R)\) are not tabulated
+here; Chapter~3 (\emph{Angular Momentum Operators and SO(3)}) supplies them on vector spherical harmonic bases
+\cite{harrington2001}. Eigenvalues \(\lambda_n\) in
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def} are unchanged within a degenerate block because
+\(\mathcal{R}_\omega\) commutes with \(\mathcal{D}(R)\) on that block
+\cite{stratton1941}.
+\phantomsection\label{thm:ch2.rotation-spectral-degeneracy}
+Repeated eigenvalues occur because rotational symmetry makes distinct angular orientations
+physically equivalent within an irreducible block: full $\mathrm{SO}(3)$ symmetry produces
+$(2\ell+1)$-fold degeneracy, and symmetry breaking---anisotropic materials, finite facets,
+or broken ground-plane parity---splits those blocks into distinct $\lambda_n$
+\cite{stratton1941}. Suppose Eq.~\eqref{eq:ch2.radiation-rotation-commutation} holds for all
+\(R\in\mathrm{SO}(3)\) in a compact subgroup \(G\subseteq\mathrm{SO}(3)\) leaving the
+problem geometry invariant. Then \(\mathcal{R}_\omega\) and \(\mathcal{D}(R)\) generate a
+commuting family on \(\mathcal{F}_{\mathrm{rad}}\): for each \(R\in G\),
+\begin{equation}
+\label{eq:ch2.radiation-D-commutation}
+\mathcal{D}(R)\,\mathcal{R}_\omega
+=
+\mathcal{R}_\omega\,\mathcal{D}(R)
+\quad\text{on physically realizable sources,}
+\end{equation}
+and eigenspaces of \(\mathcal{R}_\omega\mathcal{S}_\omega\) decompose into irreducible
+\(G\)-representations. If an irreducible block carries angular index \(\ell\), its
+degeneracy multiplicity satisfies
+\begin{equation}
+\label{eq:ch2.spectral-degeneracy-multiplicity}
+\dim\mathcal{H}_{\ell}
+=
+2\ell+1
+\quad\text{for full \(\mathrm{SO}(3)\) completion on }S^{2},
+\end{equation}
+with \(\mathcal{H}_{\ell}\) the \(\ell\)-indexed radiative subspace
+\cite{stratton1941}. Equation
+\eqref{eq:ch2.spectral-degeneracy-multiplicity} explains repeated eigenvalues in
+Eq.~\eqref{eq:ch2.radiation-spectral-expansion} without duplicating mode physics.
+Eq.~\eqref{eq:ch2.radiation-D-commutation} follows by applying
+Eq.~\eqref{eq:ch2.radiation-rotation-commutation} after
+Eq.~\eqref{eq:ch2.radiation-operator-spectral-form} and using linearity of
+\(\mathcal{S}_\omega\) \cite{stratton1941}. Standard spectral theory for commuting
+unitary or orthogonal representations implies simultaneous block diagonalization of
+\(\mathcal{R}_\omega\) and \(\mathcal{D}(R)\) on invariant subspaces
+\cite{stratton1941}. For full rotational symmetry on angular patterns,
+irreducible representations of \(\mathrm{SO}(3)\) on \(L^{2}(S^{2})\) have dimension
+\(2\ell+1\); Eq.~\eqref{eq:ch2.spectral-degeneracy-multiplicity} records that count on
+\(\mathcal{F}_{\mathrm{rad}}\) once outgoing transversality and
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} are imposed \cite{jackson1999}. Detailed
+construction of \(\mathcal{H}_\ell\) is developed in \ref{ch:03} \cite{harrington2001}.
+Total radiated power $P_{\mathrm{rad}}$ is the scalar quantity a wattmeter or sphere integral
+reports on $\Gamma_R$; it cannot change under rigid rotation when frames are co-rotated
+\cite{poynting1884}. Modal coefficients $c_n$ redistribute directional content,
+while export eigenvalues $\lambda_n$ set how efficiently each mode reaches the meter
+\cite{harrington2001}. Rigid rotation cannot change total exported power when meters act on
+\(\mathcal{R}_\omega[\Jimp]\) with co-rotated frames. Using
+Eq.~\eqref{eq:ch2.power-flux-functional} and
+Eq.~\eqref{eq:ch1.rotation-power-invariance},
+\begin{equation}
+\label{eq:ch2.spectral-power-rotation-invariance}
+P_{\mathrm{rad}}[\mathcal{A}_R\mathfrak{D}]
+=
+P_{\mathrm{rad}}[\mathfrak{D}],
+\qquad
+P_{\mathrm{rad}}[\mathfrak{D}]
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+|\lambda_n|^{2}\,|c_n[\mathfrak{D}]|^{2}
+\quad\text{when modes are orthogonal and normalized,}
+\end{equation}
+for lossless outgoing radiation \cite{stratton1941}. Equation
+\eqref{eq:ch2.spectral-power-rotation-invariance} is the modal restatement of scalar
+invariance Eq.~\eqref{eq:ch1.scalar-observable-invariance} on integrated power: rotated
+coefficients redistribute directional content but preserve the scalar budget when
+\(\mathcal{D}_{J,\mathrm{reg}}=1\) \cite{stratton1941}. Net angular-flux magnitude obeys
+Eq.~\eqref{eq:ch1.angular-momentum-balance} on the same qualified subspace
+Active rotation reorients sources and patterns in space; passive rotation re-expresses
+fixed physics in a rotated chart Eqs.~\eqref{eq:ch1.active-rotation-action}--\eqref{eq:ch1.passive-rotation-action}
+\cite{stratton1941}. Modal coefficients transform as
+Eq.~\eqref{eq:ch2.modal-coefficient-rotation} under active action, while passive
+relabeling conjugates the same \(D^{(\mathrm{rad})}_{nm}(R)\) through
+Eq.~\eqref{eq:ch1.active-passive-duality} without altering
+Eq.~\eqref{eq:ch2.spectral-power-rotation-invariance} \cite{stratton1941}.
+Confusing the two conventions produces spurious degeneracy splitting in measured
+\(a_n(\hat{\mathbf{k}})\) from Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} even when
+rotational symmetry of the spectrum applies \cite{stratton1941}. Laboratory
+rotation of an antenna rotates measured coefficients through
+Eq.~\eqref{eq:ch2.modal-coefficient-rotation}; exported power on
+\(\mathcal{R}_\omega[\Jimp]\) remains invariant in the far zone
+\cite{harrington2001}. Origin translation \(\mathbf{a}\) shifts torque and angular-flux reports through
+Section~\ref{sec:ch01.3.3} while leaving far-zone radiative power invariant when
+\(\mathcal{D}_{J,\mathrm{reg}}=1\) \cite{stratton1941}. At the spectral level, origin
+change mixes modal coefficients within fixed \(\ell\) blocks through addition of
+lower-\(\ell\) content from shifted multipole expansions; it does not create new
+\(\lambda_n\neq 0\) export unless sources change \cite{jackson1999}.
+The rotation analysis above therefore separates \emph{rotational} degeneracy from
+\emph{translational} bookkeeping in Section~\ref{sec:ch01.3.3}; intrinsic angular observables use
+Eq.~\eqref{eq:ch1.intrinsic-angular-observable} by reference \cite{stratton1941}.
+\phantomsection\label{prop:ch2.degeneracy-splitting-broken-symmetry}
+Let \(G_0\subset\mathrm{SO}(3)\) be the exact symmetry of a source--boundary configuration
+and let \(\mathcal{H}_{\ell}\) be an irreducible block from rotational degeneracy of the
+spectrum. Any symmetry-breaking perturbation
+(reduced \(G_0\), anisotropic material, or finite facetization) splits
+Eq.~\eqref{eq:ch2.spectral-degeneracy-multiplicity} into smaller blocks with distinct
+\(\lambda_n\) within the same \(\ell\) sector \cite{stratton1941}. The
+splitting order is controlled by representation coupling rules imported from
+Section~\ref{sec:ch01.3.2} on tensor perturbations; explicit Clebsch--Gordan content belongs
+to \ref{ch:03} Subsection~3.2.5 \cite{stratton1941}.
+When \(G_0\) is proper, \(\mathcal{D}(R)\) block-diagonalizes with fixed \(\lambda_n\) on
+each irreducible piece. Perturbations that fail to commute with all \(R\in G_0\) remove
+simultaneous eigenstructure; standard degenerate perturbation theory applies to the
+restricted radiation operator on \(\mathcal{H}_\ell\) \cite{stratton1941}. Rotational degeneracy of the spectrum requires isotropic or symmetry-matched
+media, outgoing radiation condition, and radiating-mode families closed under \(\mathcal{D}(R)\)
+\cite{stratton1941}. Anisotropic crystals reduce $G$ and split
+Eq.~\eqref{eq:ch2.spectral-degeneracy-multiplicity} when symmetry is broken
+\cite{stratton1941}. Observation rank Eq.~\eqref{eq:ch2.reconstruction-rank-cap}
+resolves only a finite subset of each degenerate block even when continuous symmetry is exact
+\cite{harrington2001}. Regime qualification
+Eq.~\eqref{eq:ch2.regime-component-criterion} still governs whether rotated near fields may be
+reported as transport \cite{stratton1941}.

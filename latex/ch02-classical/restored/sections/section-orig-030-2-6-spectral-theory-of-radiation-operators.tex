@@ -1,0 +1,104 @@
+% Stage 8 section framing — 2.6 Spectral Theory of Radiation Operators
+\section{Spectral Theory of Radiation Operators}
+\label{sec:ch26}
+Having followed impressed current through Maxwell completion, outgoing selection, and evaluable radiation integrals. Spectral theory treats radiation export as not a single scalar amplitude but a countable nesting of modes on compact geometries, each with its own coupling to sources and its own observability limit on finite instruments \cite{harrington2001}. Pattern shape must not be identified with a single dominant mode; Maxwell propagation on bounded supports shows instead that many directions can be degenerate under rotation while remaining distinguishable under excitation, and that Fredholm structure controls which target patterns are reachable at all \cite{reed1950}. A laboratory campaign on a circular aperture measures a finite slice of that nesting---never the full operator spectrum---so rank and degeneracy statements below are as much measurement discipline as abstract mathematics \cite{collin2001}.
+
+
+
+
+Radiation integrals in Section~\ref{sec:ch25} map sources to outgoing fields. Section~\ref{sec:ch26} analyzes that map spectrally: which directions carry power and how degeneracy splits under broken symmetry \cite{harrington2001}. Sidelobe floors on finite apertures are the visible face of spectral decay \cite{hansen1988}.
+Every antenna engineer learns, long before operator theory appears in the curriculum, that a
+finite structure cannot radiate an unlimited set of independent far-zone patterns. A dish whose
+rim spans only a few wavelengths resolves only a modest number of principal beam directions on a
+compact range; a spherical near-field scanner with finite probe count tells the same story after
+transformation to far-zone coefficients \cite{harrington2001}. Collin and
+Harrington treat that compression as structural: it is imposed by Maxwell propagation from compact
+sources through outgoing selection to a finite observation shell, not by a particular receiver
+model \cite{collin2001}. Stratton and Harrington organized outgoing fields by angular
+structure on large spheres; Chu sharpened the consequence that electrical size bounds directional
+export at fixed frequency \cite{stratton1941}. Subsection~\ref{sec:ch26.signature-aperture}
+introduces the laboratory reading---singular values $\sigma_n$ of
+$\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ and the recoverable rank they define---before
+any eigenpair formula is written; later subsections refer back rather than restate that doctrine.
+Why spectra arise in radiation physics is therefore not a mathematical accident. Maxwell's
+equations are linear in impressed sources on the outgoing branch fixed in Section~\ref{sec:ch24};
+superposition of two feeds superposes far-zone amplitudes. On a large sphere $S_r$, orthogonality
+of angular patterns under an appropriate energy inner product later organizes the export map
+$\mathcal{R}_\omega$ into radiation modes; each carries an \emph{export eigenvalue}
+$\lambda_n$ of the radiation operator---ranking qualified power on $\Gamma_R$ and distinct from
+any correlation-operator spectrum unless explicitly stated \cite{stratton1941}. Some feeds couple strongly to dominant
+modes; others produce elaborate reactive near fields through $\mathcal{S}_\omega[\Jimp]$ yet register
+negligibly on a far-zone wattmeter after $\Pi_{\mathrm{rad}}$ \cite{poynting1884}.
+Observable far-zone content remains primary; formal harmonic indices organize export but are not
+themselves physical modes---that distinction is developed once in
+Subsection~\ref{sec:ch26.signature-aperture} and thereafter
+\cite{stratton1941}.
+The radiation map $\mathcal{R}_\omega$ from Section~\ref{sec:ch25} inherits this ordering.
+Spectral analysis names dominant and weak export directions, explains why finite dishes and
+finite scan grids lose information, and states when pattern synthesis and source inversion are
+well posed \cite{stratton1941}. \ref{ch:03} will supply explicit harmonic bases and tabulated
+matrix elements; the present section asks what the export map itself permits at fixed $\omega$
+before any particular angular basis is chosen \cite{stratton1941}. A reader who finishes the
+section should understand why measured patterns look low-rank in practice, why some synthesis
+targets are unrealizable no matter how much numerical effort is invested, and why rotation of an
+antenna reorients coefficients without changing exported power when frames are consistently
+handled \cite{harrington2001}.
+Reading order. Engineers study spectra because measured patterns never carry unlimited independent
+information: finite apertures, finite scan grids, and finite electrical size impose rank
+limits long before any harmonic post-processor runs out of indices \cite{hansen1988}.
+On a compact range the dominant beams are the few principal cuts that survive above the noise
+floor; weak modes decay in singular-value cliffs and become experimentally invisible even when
+formal expansions can still list them \cite{stratton1941}. The sequence below
+should therefore be read not as a mathematical ordering but as a laboratory ordering.
+Measurement limitations appear first; spectral structure merely explains them
+\cite{hansen1988}.
+The spectral account follows the measurement laboratory, not an abstract operator catalog.
+Finite aperture observation on $S_r$ fixes how many independent far-zone directions a campaign
+can resolve---that ceiling is \emph{finite radiative complexity}. Compactness of the composed
+map $\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ then explains why singular
+values $\sigma_n$, ranking the radiation efficiency of each independent source organization
+through the actual receiver chain, decay and define recoverable rank
+\cite{hansen1988}. Only after that ordering does the section construct export
+eigenvalues $\lambda_n$ of $\mathcal{R}_\omega$, decompose radiation modes
+$\mathbf{u}_n$ from their exciting source modes $\Jimp^{(n)}$, and complete symmetry,
+Fredholm, and geometric filters on what finite hardware can recover \cite{stratton1941}. Let
+$\Omega_s=\operatorname{supp}\Jimp$ be compact, $k_0=\omega\sqrt{\varepsilon_0\mu_0}$, and
+outgoing field pair $\mathbf{u}_\omega=(\E,\H)\in\mathcal{F}_{\mathrm{SF}}$ from
+Eq.~\eqref{eq:ch2.admissible-field-space}. The four stages below record the same program in
+compact notation; Subsection~\ref{sec:ch26.signature-aperture} develops $\sigma_n$ decay and
+finite recoverable rank once, and later subsections cite it by reference:
+\begin{equation}
+\label{eq:ch2.section26-spectral-chain}
+\mathcal{R}_\omega
+\ \xrightarrow{\ \text{eigenmodes}\ }
+\{\lambda_n,\mathbf{u}_n\}
+\ \xrightarrow{\ \text{symmetry}\ }
+\text{degeneracy classes}
+\ \xrightarrow{\ \text{Fredholm}\ }
+\text{solvability / index}
+\ \xrightarrow{\ \text{geometry}\ }
+\text{radiative spectra},
+\end{equation}
+from export-eigenmode ordering through rotational degeneracy, Fredholm solvability, and geometric
+filters on recoverable content \cite{stratton1941}.
+The primary map remains
+\begin{equation}
+\label{eq:ch2.spectral-operator-targets}
+\mathcal{R}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
+\qquad
+\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp],
+\end{equation}
+from Eq.~\eqref{eq:ch2.radiation-operator-def}, with $\Pi_{\mathrm{rad}}$ selecting outgoing
+radiative solutions per Eq.~\eqref{eq:ch2.rad-projection-composition}. In plain language:
+$\mathcal{R}_\omega$ is the radiation map from impressed currents to far-zone export;
+$\mathcal{J}_\Omega$ is the admissible source region where $\Jimp$ may be placed;
+$\mathcal{F}_{\mathrm{rad}}$ is the space of outgoing radiative field pairs observable on
+$\Gamma_R$ after export selection; and $\Pi_{\mathrm{rad}}$ is the filter that removes
+reactive and non-propagating content before pattern measurement \cite{stratton1941}. Equation
+\eqref{eq:ch2.spectral-operator-targets} represents the entire electromagnetic experiment
+beginning with impressed current inside the source region and ending with the radiative content
+observable on a far-zone measurement surface \cite{harrington2001}. Subsection~\ref{sec:ch26.signature-aperture}
+fixes $\sigma_n$ decay and finite recoverable rank on $\mathcal{K}$; the subsections below
+construct export eigenpairs, split degeneracy under symmetry, diagnose Fredholm solvability, and
+apply geometric filters. A sidelobe floor on a measured pattern is often the visible face of
+the aperture-limited stage \cite{hansen1988}.

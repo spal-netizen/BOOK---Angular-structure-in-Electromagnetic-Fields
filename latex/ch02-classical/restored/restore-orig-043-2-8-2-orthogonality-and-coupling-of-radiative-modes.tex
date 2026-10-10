@@ -1,0 +1,308 @@
+% Stage 8 restored fragment — 2.8.2 Orthogonality and coupling of radiative modes (archive lines 10597-10908)
+\subsection{Orthogonality and coupling of radiative modes}
+\label{sec:ch282}
+
+A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Orthogonality and coupling of radiative modes'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+Bistatic radar and compact-range scattering matrices rely on reciprocity to relate monostatic
+calibrations to full \(S\)-parameter sets \cite{stratton1941}. The adjoint theory extends
+one-port antenna reciprocity to continuous source and trace pairings \cite{devaney2004}.
+Plane-wave decompositions used in reflector and radar-cross-section campaigns inherit reciprocity
+constraints on amplitudes before any angular filter is applied \cite{hansen1988}. When
+reciprocity appears broken after probe correction, the fault usually lies in inconsistent
+impressed-current normalization or a missing outgoing tail in the Green operator, not in
+Maxwell theory itself \cite{hansen1988}. Modal orthogonality and coupling on
+\(\operatorname{ran}\mathcal{R}_\omega\) organize how radiative modes exchange power between
+ports; reciprocity fixes the bilinear pairing before angular filters act
+\cite{stratton1941}.
+\medskip
+Subsection~\ref{sec:ch282} gives the Chapter~\ref{ch:02} definitive account of orthogonality and
+coupling of radiative modes on the spectral coordinates fixed in Subsection~\ref{sec:ch261},
+developing Eqs.~\eqref{eq:ch2.modal-orthogonality}
+and~\eqref{eq:ch2.radiative-coupling-bilinear} \cite{stratton1941}. Radiation eigenpairs
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def}, modal projectors
+Eq.~\eqref{eq:ch2.modal-projector-def}, source amplitudes
+Eq.~\eqref{eq:ch2.source-modal-amplitude}, spectral decomposition of the radiation operator
+(Subsection~\ref{sec:ch261}), and biorthogonality
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} are presupposed; eigenpair construction and
+reciprocity-based solvability are not re-proved \cite{stratton1941}. Explicit vector
+spherical harmonic orthogonality belongs to \ref{ch:03}
+Subsection~3.4.3; continuous-spectrum normalization belongs to Subsection~3.5.2, both with USE of
+the present operator targets \cite{stratton1941}. Transmit--receive systems are deferred to
+Subsection~\ref{sec:ch283} \cite{harrington2001}.
+Assumptions. Fix \(\omega>0\), outgoing fields in \(\mathcal{F}_{\mathrm{SF}}\), radiative images in
+\(\mathcal{F}_{\mathrm{rad}}\), and orthonormal radiation eigenmodes
+\(\{\mathbf{u}_n\}_{n\in\mathcal{N}_{\mathrm{rad}}}\) from spectral decomposition of the radiation operator (Subsection~\ref{sec:ch261}) on the declared domain class
+\cite{stratton1941}. Media satisfy reciprocal class
+Eq.~\eqref{eq:ch2.reciprocal-medium-class} and passive boundary
+Eq.~\eqref{eq:ch2.passive-impedance-class} so Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}) applies \cite{stratton1941}. Adjoint modes
+\(\widetilde{\mathbf{u}}_n\) are defined through
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} and coincide with \(\mathbf{u}_n\) on
+\(\mathcal{F}_{\mathrm{rad}}\) under reciprocity-qualified pairings below
+\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen}
+governs transport interpretation of coupling reports \cite{harrington2001}.
+On the orthonormal family from spectral decomposition of the radiation operator
+(Subsection~\ref{sec:ch261}), distinct exporting modes are declared orthogonal with respect to the
+energy inner product $\langle\cdot,\cdot\rangle_{\mathcal{U}}$ on $\mathcal{F}_{\mathrm{rad}}$.
+The locked orthogonality statement reads
+
+\begin{equation}
+\label{eq:ch2.radiation-modal-orthogonality}
+\langle \mathbf{u}_m,\,\mathbf{u}_n\rangle_{\mathcal{U}}
+=
+\delta_{mn},
+\qquad
+m,n\in\mathcal{N}_{\mathrm{rad}},
+\end{equation}
+with \(\|\mathbf{u}_n\|_{\mathcal{U}}=1\) already enforced in
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def} \cite{stratton1941}.
+Equation~\eqref{eq:ch2.radiation-modal-orthogonality} is the Subsection~\ref{sec:ch282} locked definition of
+upgrade of the first line of Eq.~\eqref{eq:ch2.modal-orthogonality}; it
+specializes projector orthogonality \(P_m P_n=\delta_{mn}P_n\) from
+Eq.~\eqref{eq:ch2.modal-projector-def} to the chosen orthonormal basis
+\cite{stratton1941}. Algebraically, Eq.~\eqref{eq:ch2.radiation-modal-orthogonality} makes
+\(\{\mathbf{u}_n\}\) an orthonormal frame on \(\mathcal{F}_{\mathrm{rad}}\) for energy inner
+product Eq.~\eqref{eq:ch2.field-energy-norm}; physically, distinct exporting modes carry
+non-overlapping far-zone energy content on \(S^{2}\) when
+\(\mathcal{D}_{J,\mathrm{reg}}=1\) \cite{jackson1999}. Explicit angular
+integrals producing Eq.~\eqref{eq:ch2.radiation-modal-orthogonality} for harmonic bases are
+not tabulated here \cite{stratton1941}.
+For canonical eigen-sources \(\Jimp^{(n)}\) in Eq.~\eqref{eq:ch2.radiation-eigenpair-def},
+define the \emph{modal coupling coefficient}
+\begin{equation}
+\label{eq:ch2.modal-coupling-coefficient}
+C_{mn}
+=
+\langle \widetilde{\mathbf{u}}_m,\,\mathcal{R}_\omega[\Jimp^{(n)}]\rangle_{\mathcal{U}},
+\qquad
+m,n\in\mathcal{N}_{\mathrm{rad}},
+\end{equation}
+with adjoint modes from Eq.~\eqref{eq:ch2.radiation-biorthogonality}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.modal-coupling-coefficient} is the
+Subsection~\ref{sec:ch282} development of the second line of Eq.
+Eq.~\eqref{eq:ch2.modal-orthogonality}. When
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} holds,
+\begin{equation}
+\label{eq:ch2.modal-coupling-diagonal}
+C_{mn}=\lambda_n\,\delta_{mn}
+\end{equation}
+for exporting eigenpairs with \(\lambda_n\neq 0\); null modes
+\(n\in\mathcal{N}_{\mathrm{null}}\) Eq.~\eqref{eq:ch2.modal-null-index-set} contribute
+\(C_{mn}=0\) for all \(m\) \cite{stratton1941}. Algebraically,
+Eq.~\eqref{eq:ch2.modal-coupling-diagonal} diagonalizes coupling in an eigenmode basis;
+physically, orthogonal radiation modes do not co-excite one another through
+\(\mathcal{R}_\omega\) when sources align with eigenpairs---cross-talk appears only from
+superpositions or degenerate subspaces \cite{harrington2001}.
+For arbitrary admissible \(\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega\), define
+\begin{equation}
+\label{eq:ch2.radiative-coupling-bilinear}
+\mathfrak{C}_\omega\!\big(\Jimp^{(1)},\Jimp^{(2)}\big)
+=
+\langle \mathcal{R}_\omega[\Jimp^{(1)}],\,\mathcal{R}_\omega[\Jimp^{(2)}]\rangle_{\mathcal{U}}
+\quad\text{on}\ \mathcal{F}_{\mathrm{rad}},
+\end{equation}
+developing Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.radiative-coupling-bilinear}
+measures export overlap on \(\operatorname{ran}\mathcal{R}_\omega\), not raw reactive overlap
+of \(\mathcal{S}_\omega[\Jimp^{(k)}]\) \cite{stratton1941}. Under Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281})(iv),
+\begin{equation}
+\label{eq:ch2.coupling-bilinear-symmetry}
+\mathfrak{C}_\omega\!\big(\Jimp^{(1)},\Jimp^{(2)}\big)
+=
+\mathfrak{C}_\omega\!\big(\Jimp^{(2)},\Jimp^{(1)}\big)
+\end{equation}
+on reciprocal media \cite{stratton1941}. Reactive near-zone terms in
+\(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\) do not enter
+Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} through
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}.
+Let \(c_n[\Jimp^{(k)}]\) denote source amplitudes Eq.~\eqref{eq:ch2.source-modal-amplitude}
+for \(k=1,2\). When the modal sum converges in \(\mathcal{U}\),
+\begin{equation}
+\label{eq:ch2.modal-coupling-sum}
+\mathfrak{C}_\omega\!\big(\Jimp^{(1)},\Jimp^{(2)}\big)
+=
+\sum_{m,n\in\mathcal{N}_{\mathrm{rad}}}
+\lambda_m\lambda_n\,
+c_m[\Jimp^{(1)}]^{*}\,
+c_n[\Jimp^{(2)}]\,
+\langle \mathbf{u}_m,\mathbf{u}_n\rangle_{\mathcal{U}},
+\end{equation}
+using Eq.~\eqref{eq:ch2.radiation-map-modal-sum} and linearity
+Eq.~\eqref{eq:ch2.radiation-linearity} \cite{stratton1941}. With
+Eq.~\eqref{eq:ch2.radiation-modal-orthogonality},
+\begin{equation}
+\label{eq:ch2.modal-coupling-sum-diagonal}
+\mathfrak{C}_\omega\!\big(\Jimp^{(1)},\Jimp^{(2)}\big)
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+|\lambda_n|^{2}\,
+c_n[\Jimp^{(1)}]^{*}\,
+c_n[\Jimp^{(2)}],
+\end{equation}
+for real nonnegative exporting gains \(\lambda_n>0\) \cite{stratton1941}. Equation
+\eqref{eq:ch2.modal-coupling-sum-diagonal} shows that coupling is a weighted inner product
+of modal excitation vectors on the exporting sector; geometric constraints
+geometric constraints on radiative spectra (Subsection~\ref{sec:ch264}) may force individual \(c_n=0\) without
+breaking Eq.~\eqref{eq:ch2.coupling-bilinear-symmetry} \cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j1) {$\Jimp^{(1)}$};
+ \node[ch1box, right=7mm of j1] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (u) {$\sum_n \lambda_n c_n \mathbf{u}_n$};
+ \node[ch1box, below=5mm of j1] (j2) {$\Jimp^{(2)}$};
+ \node[ch1box, below=5mm of u] (c) {$\mathfrak{C}_\omega$};
+ \node[ch1box, left=7mm of c] (orth) {Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}};
+ \draw[ch1flow] (j1.east) -- (j1.east |- r.west);
+ \draw[ch1flow] (j1.east |- r.west) -- (r.west);
+ \draw[ch1flow] (j2.east) -- (j2.east |- r.west);
+ \draw[ch1flow] (j2.east |- r.west) -- (r.west);
+ \draw[ch1flow] (r.east) -- (r.east |- u.west);
+ \draw[ch1flow] (r.east |- u.west) -- (u.west);
+ \draw[ch1flow] (u.south) -- (u.south |- c.north);
+ \draw[ch1flow] (u.south |- c.north) -- (c.north);
+ \draw[ch1flow] (orth.west) -- (orth.west |- c.east);
+ \draw[ch1flow] (orth.west |- c.east) -- (c.east);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch282} modal coupling measurement sequence: sources map through
+\(\mathcal{R}_\omega\) to orthonormal modes Eq.~\eqref{eq:ch2.radiation-modal-orthogonality};
+bilinear coupling Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} factorizes through modal
+amplitudes Eq.~\eqref{eq:ch2.modal-coupling-sum}.}
+\label{fig:ch2.modal-coupling-measurement chain}
+\end{figure}
+Figure interpretation. Two impressed sources $\Jimp^{(1)}$, $\Jimp^{(2)}$ share the same radiation map $\mathcal{R}_\omega$ and expand on orthonormal modes Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}. The coupling node $\mathfrak{C}_\omega$ measures export overlap on $\mathcal{F}_{\mathrm{rad}}$, not raw near-zone reactive cross terms. Orthogonality diagonalizes coupling when sources align with eigenpairs; cross-talk appears only from superposition or degenerate subspaces. Modes with $\lambda_n=0$ feed the null sector without contributing to $\mathfrak{C}_\omega$ on the range \cite{stratton1941}. Figure~\ref{fig:ch2.modal-coupling-measurement chain} separates orthogonality of mode shapes from
+bilinear coupling of impressed sources: Eq.~\eqref{eq:ch2.radiation-modal-orthogonality} is
+intrinsic to \(\mathcal{F}_{\mathrm{rad}}\); Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}
+depends on both sources \cite{stratton1941}. On a reciprocal two-mode truncation with $\lambda_1=0.42$, $\lambda_2=0.31$ and orthonormal $\mathbf{u}_1$, $\mathbf{u}_2$, excite $\Jimp^{(1)}=c_1\mathbf{J}^{(1)}_{\mathrm{imp}}$ and probe with $\Jimp^{(2)}=c_2\mathbf{J}^{(2)}_{\mathrm{imp}}$. Eq.~\eqref{eq:ch2.modal-coupling-sum-diagonal} gives $\mathfrak{C}_\omega(\Jimp^{(1)},\Jimp^{(2)})=\lambda_1\lambda_2 c_1^* c_2$. Swapping labels leaves the scalar unchanged, so normalized $S_{21}=S_{12}$ on the exporting sector. Adding $\Jimp^{\mathrm{(NR)}}$ to either port shifts $\mathcal{S}_\omega[\Jimp]$ near $\Omega_s$ but leaves $S_{21}$ fixed---the walkthrough confirms reciprocity on $\operatorname{ran}\mathcal{R}_\omega$, not on raw near-field coupling matrices \cite{stratton1941}.
+\phantomsection\label{thm:ch2.radiation-modal-orthogonality-coupling}
+Let \(\{\mathbf{u}_n,\Jimp^{(n)},\lambda_n\}\) be radiation eigenpairs
+Eq.~\eqref{eq:ch2.radiation-eigenpair-def} forming an orthonormal basis of
+\(\mathcal{F}_{\mathrm{rad}}\) on the declared domain class, with reciprocal media
+Eq.~\eqref{eq:ch2.reciprocal-medium-class}. Then:
+\begin{enumerate}
+\item[(i)] Orthogonality Eq.~\eqref{eq:ch2.radiation-modal-orthogonality} holds on
+\(\mathcal{N}_{\mathrm{rad}}\).
+\item[(ii)] Coupling coefficients satisfy Eq.~\eqref{eq:ch2.modal-coupling-diagonal} and
+biorthogonality Eq.~\eqref{eq:ch2.radiation-biorthogonality}.
+\item[(iii)] For all admissible \(\Jimp^{(1)},\Jimp^{(2)}\),
+Eqs.~\eqref{eq:ch2.radiative-coupling-bilinear}--\eqref{eq:ch2.modal-coupling-sum-diagonal}
+hold, with symmetry Eq.~\eqref{eq:ch2.coupling-bilinear-symmetry} from Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}).
+\item[(iv)] Adding \(\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega\) to either source leaves
+Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} unchanged.
+\end{enumerate}
+Part (i) is normalization and completeness from spectral decomposition of the radiation operator (Subsection~\ref{sec:ch261}) and
+Eq.~\eqref{eq:ch2.radiation-spectral-expansion} \cite{stratton1941}. Part (ii) substitutes
+\(\mathcal{R}_\omega[\Jimp^{(n)}]=\lambda_n\mathbf{u}_n\) into
+Eq.~\eqref{eq:ch2.modal-coupling-coefficient} and applies
+Eq.~\eqref{eq:ch2.radiation-biorthogonality} \cite{stratton1941}. Part (iii)
+expands \(\mathcal{R}_\omega[\Jimp^{(k)}]\) via
+Eq.~\eqref{eq:ch2.radiation-map-modal-sum}; symmetry is Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281})(iv) \cite{stratton1941}. Part (iv) follows from
+\(\mathcal{R}_\omega[\Jimp^{\mathrm{(NR)}}]=\mathbf{0}\) and
+Eq.~\eqref{eq:ch2.nr-superposition-law} \cite{stratton1941}. The reciprocal reduction of adjoint modes proceeds as follows: under Eqs.~\eqref{eq:ch2.reciprocal-medium-class}--\eqref{eq:ch2.passive-impedance-class},
+\begin{equation}
+\label{eq:ch2.reciprocal-adjoint-mode-identification}
+\widetilde{\mathbf{u}}_n=\mathbf{u}_n
+\quad\text{on}\ \mathcal{F}_{\mathrm{rad}}
+\quad\text{for exporting modes with}\ \lambda_n\neq 0,
+\end{equation}
+so Eq.~\eqref{eq:ch2.radiation-biorthogonality} reduces to standard orthogonality
+Eq.~\eqref{eq:ch2.radiation-modal-orthogonality} with diagonal coupling
+Eq.~\eqref{eq:ch2.modal-coupling-diagonal} \cite{stratton1941}. Equation
+\eqref{eq:ch2.reciprocal-adjoint-mode-identification} is the operator form of reciprocity for
+modal probes: receive patterns aligned with \(\mathbf{u}_n\) coincide with transmit modes
+when media and boundaries are reciprocal \cite{harrington2001}. Non-reciprocal
+media break Eq.~\eqref{eq:ch2.reciprocal-adjoint-mode-identification}; biorthogonality with
+distinct \(\widetilde{\mathbf{u}}_n\) remains the general template imported from
+Subsection~\ref{sec:ch261} \cite{stratton1941}. When \(\lambda_n=\lambda_{n'}\) for \(n\neq n'\) within a rotationally degenerate family from
+Subsection~\ref{sec:ch262}, Eq.~\eqref{eq:ch2.modal-coupling-diagonal} still holds for
+\emph{eigen} sources \(\Jimp^{(n)}\), but superpositions within the degenerate block carry
+off-diagonal coupling in an arbitrary basis. Let \(\mathcal{I}_\ell\subset\mathcal{N}_{\mathrm{rad}}\)
+index a \((2\ell+1)\)-fold degenerate family. Any orthonormal basis
+\(\{\mathbf{u}_n\}_{n\in\mathcal{I}_\ell}\) spanning the block satisfies
+Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}, yet a fixed physical source may excite
+multiple members with coefficients tied to orientation through
+Eq.~\eqref{eq:ch2.radiation-rotation-commutation} \cite{stratton1941}. Define
+the block coupling matrix
+\begin{equation}
+\label{eq:ch2.degenerate-block-coupling-matrix}
+\mathbf{K}^{(\ell)}_{mn}
+=
+\langle \mathbf{u}_m,\,\mathcal{R}_\omega[\Jimp^{(n)}]\rangle_{\mathcal{U}},
+\qquad
+m,n\in\mathcal{I}_\ell,
+\end{equation}
+which is diagonal in the eigenvector basis of \(\Jimp^{(n)}\) but not in laboratory-fixed
+coordinates \cite{stratton1941}. Reciprocity
+Eq.~\eqref{eq:ch2.coupling-bilinear-symmetry} forces \(\mathbf{K}^{(\ell)}\) to be symmetric
+under Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}) \cite{stratton1941}.
+Explicit Wigner coupling of block entries belongs to \ref{ch:03}
+\cite{stratton1941}.
+\phantomsection\label{prop:ch2.superposition-cross-coupling}
+If \(\Jimp^{(1)}=\sum_{n\in\mathcal{N}_{\mathrm{rad}}}a_n\Jimp^{(n)}\) and
+\(\Jimp^{(2)}=\sum_{m\in\mathcal{N}_{\mathrm{rad}}}b_m\Jimp^{(m)}\) are admissible finite
+superpositions, then
+\begin{equation}
+\label{eq:ch2.superposition-coupling-expansion}
+\mathfrak{C}_\omega\!\big(\Jimp^{(1)},\Jimp^{(2)}\big)
+=
+\sum_{m,n\in\mathcal{N}_{\mathrm{rad}}}
+a_m^{*}b_n\,\lambda_m\lambda_n\,
+\langle \mathbf{u}_m,\mathbf{u}_n\rangle_{\mathcal{U}},
+\end{equation}
+reducing to Eq.~\eqref{eq:ch2.modal-coupling-sum-diagonal} when \(\langle\mathbf{u}_m,\mathbf{u}_n\rangle=\delta_{mn}\)
+\cite{stratton1941}. Off-diagonal terms \(m\neq n\) appear only when at least
+one source superposes non-collinear modes; single-mode excitation yields diagonal coupling
+\cite{jackson1999}.
+Linearity Eq.~\eqref{eq:ch2.radiation-linearity} and
+Eq.~\eqref{eq:ch2.radiation-map-modal-sum} \cite{stratton1941}.
+\phantomsection\label{prop:ch2.observation-limited-coupling}
+For observation map \(\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\)
+Eq.~\eqref{eq:ch2.reconstruction-observation-map}, define observed coupling
+\(\mathfrak{C}_{\omega,\mathrm{obs}}=
+\langle \mathcal{O}_{\mathrm{meas}}[\mathcal{R}_\omega[\Jimp^{(1)}]],\,
+\mathcal{O}_{\mathrm{meas}}[\mathcal{R}_\omega[\Jimp^{(2)}]]\rangle\).
+Then \(\mathfrak{C}_{\omega,\mathrm{obs}}\) is symmetric under Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281}) when \(\mathcal{O}_{\mathrm{meas}}\) is self-adjoint
+on \(\mathcal{F}_{\mathrm{rad}}\), but may vanish for pairs with
+\(\mathcal{R}_\omega[\Jimp^{(k)}]\in\ker\mathcal{O}_{\mathrm{meas}}\) even when
+Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} is nonzero \cite{stratton1941}.
+Rank cap Eq.~\eqref{eq:ch2.reconstruction-rank-cap} limits the number of independently
+observable coupling channels \cite{stratton1941}.
+Apply Eq.~\eqref{eq:ch2.radiation-map-reciprocity} and self-adjointness of
+\(\mathcal{O}_{\mathrm{meas}}\) \cite{stratton1941}. Kernel inclusion
+\(\ker\mathcal{R}_\omega\subset\ker\mathcal{M}_\omega\) is
+measurement null-space extension (Subsection~\ref{sec:ch271}) \cite{stratton1941}.
+\begin{equation}
+\label{eq:ch2.kernel-field-image-law}
+\Jimp\in\ker\mathcal{R}_\omega
+\ \Longrightarrow\
+\mathcal{S}_\omega[\Jimp]\in\mathcal{F}_{\mathrm{SF}},
+\qquad
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp]=\mathbf{0},
+\end{equation}
+Accessible modal sector Eq.~\eqref{eq:ch2.accessible-modal-sector} and angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} restrict which terms in
+Eq.~\eqref{eq:ch2.modal-coupling-sum-diagonal} are observable in far-zone reports
+\cite{stratton1941}. Null modes \(\lambda_n=0\) carry zero coupling diagonal
+entries but may alter near reactive content through \(\mathcal{S}_\omega\)
+Eq.~\eqref{eq:ch2.kernel-field-image-law} without changing
+Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} \cite{stratton1941}. Composition with
+null-space invariance of radiative reciprocity (Subsection~\ref{sec:ch281}) and
+orthogonality and coupling of radiative modes (Subsection~\ref{sec:ch282})(iv) explains why invisible
+currents do not break reciprocity-qualified coupling on \(\operatorname{ran}\mathcal{R}_\omega\)
+\cite{harrington2001}.
+Orthogonality and coupling of radiative modes (Subsection~\ref{sec:ch282}) requires linear reciprocal media
+at fixed \(\omega\), outgoing radiation condition, domain-class completeness of
+\(\{\mathbf{u}_n\}\), and convergent modal sums \cite{stratton1941}. Loss
+moves \(\lambda_n\) into the complex plane; Eq.~\eqref{eq:ch2.modal-coupling-sum-diagonal}
+generalizes with complex conjugation on one amplitude slot \cite{stratton1941}. Truncated
+modal books on cavities do not substitute for exterior continuous spectra
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} when coupling far-zone channels
+\cite{jackson1999}. regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} is
+mandatory before interpreting Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} as transport
+\cite{stratton1941}.
+Subsections~\ref{sec:ch281}--\ref{sec:ch282} established Lorentz reciprocity, radiative bilinear
+coupling Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}, and modal orthogonality on
+\(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}. The final reciprocity link ties those
+operator statements to finite ports: transmit and receive maps on reciprocal hardware must
+interchange when excitation and probe roles are swapped.

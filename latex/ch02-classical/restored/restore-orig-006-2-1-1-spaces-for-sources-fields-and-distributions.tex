@@ -1,0 +1,364 @@
+% Stage 8 restored fragment — 2.1.1 Spaces for sources, fields, and distributions (archive lines 1226-1624)
+\subsection{Spaces for sources, fields, and distributions}
+\label{sec:ch211} 
+
+Antenna synthesis begins with a realizability question, not with a modal expansion: which impressed currents on bounded support, subject to charge continuity and compatible boundary traces, can be driven by laboratory feeds and mapped to measurable fields on \(\Gamma=\partial\Omega\) \cite{stratton1941,devaney2004}? Horn rims, patch edges, and waveguide ports produce sheet-like or filamentary excitations whose derivatives fail at edges; treating them as pointwise smooth functions on all of \(\mathbb{R}^{3}\) breaks flux through \(\Gamma\) and corrupts near-field transforms on spherical scanners \cite{harrington2001}. Subsections~\ref{sec:ch201}--\ref{sec:ch202} named minimal classes \(\mathcal{F}_\Omega\) and \(\mathcal{J}_\Omega\) sufficient to define \(\mathcal{S}_\omega\), \(\mathcal{R}_\omega\), and \(\mathcal{L}_\omega\); here those names are embedded in Sobolev and trace spaces where \(\curl\), \(\divg\), and tangential restriction are continuous operations with explicit domains \cite{stratton1941}.
+
+A PEC-backed slot fed by \(\Jimp\in L^{2}(\Omega_s)^{3}\) carries finite power at fixed \(\omega\), whereas an idealized non-integrable \(1/r\) template violates the finite-energy \(\mathcal{D}_J=1\) screen inherited from Chapter~\ref{ch:01} even when a post-processor fits a smooth far pattern \cite{stratton1941}. Method-of-moments and finite-element codes test Maxwell residuals against localized bases; that discretization presupposes square-integrable \(\curl\) fields, well-defined tangential traces on conductors and apertures, and distributional extensions when sources collapse to sheets---gaps that plain \(L^{2}\) current models leave open \cite{harrington2001}. Charge continuity, interface conditions, and outer-boundary classes fixed in Chapter~\ref{ch:01} are used by reference only.
+
+Let \(\Omega\subset\mathbb{R}^{3}\) be a bounded Lipschitz domain or a finite union of Lipschitz patches \(\{\Omega_a\}\) with outward boundary \(\Gamma=\partial\Omega\). Phasor fields use \(\Re\{\mathbf{F}(\mathbf{r})\eim\}\) with \(\eim=\exp(-\jj\omega t)\) as in Chapter~\ref{ch:01} and the chapter preamble, so \(\partial_t\to-\jj\omega\) on phasors \cite{stratton1941}.
+In the display below, \(L^{2}(\Omega)\) denotes square-integrable field energy on \(\Omega\);
+\(\HCurl(\Omega)\) and \(\Hdiv(\Omega)\) are the minimal vector Sobolev classes in which
+curl-coupled Maxwell balances close weakly; \(\mathcal{J}_\Omega\) collects impressed
+currents of compact support and finite power; \(\mathcal{F}_\Omega\) is the admissible
+Maxwell field class; and \(\mathcal{S}_\omega\), \(\mathcal{R}_\omega\), and
+\(\mathcal{L}_\omega\) are the solution, radiation, and composite operators declared in
+Section~\ref{sec:ch201} \cite{stratton1941}.
+Square-integrability alone is too weak for curl-coupled Maxwell theory: one needs
+control of both the field and its curl so that circulation balances are meaningful
+in the \(L^{2}\) sense.
+An engineer measuring tangential \(\E\) on a patch boundary is, in effect, asking whether
+the recorded trace is the restriction of a field with square-integrable curl; a
+method-of-moments code that tests \(\curl\E\) against rooftop functions presupposes the
+same control. The space \(\HCurl(\Omega)\) names precisely that charge-continuous class:
+elements of \(L^{2}(\Omega)^{3}\) whose curls also lie in \(L^{2}(\Omega)^{3}\), so
+Faraday and Amp\`ere balances can be posed weakly without assuming pointwise smoothness
+at horn rims or slot edges \cite{stratton1941}. Readers should notice that
+\(\HCurl(\Omega)\) is stronger than \(L^{2}\) alone yet weaker than requiring classical
+\(C^{1}\) fields everywhere; it is the minimal completion in which curl-coupled
+Maxwell operators close on bounded \(\Omega\) \cite{harrington2001}. The companion
+\(\Hdiv(\Omega)\) plays the parallel role for Gauss constraints when divergence must be
+controlled in the \(L^{2}\) sense. With that physical reading fixed, the formal definitions
+are:
+Single-vector Sobolev classes encode the minimal regularity that curl-coupled Maxwell
+theory requires on bounded domains. Membership in
+\(\HCurl(\Omega)\) controls both field amplitude and circulation in the \(L^{2}\) sense,
+whereas plain \(L^{2}\) control would not guarantee that Faraday and Amp\`ere balances
+can be posed weakly at horn rims or slot edges \cite{stratton1941}. From a measurement
+standpoint, these spaces establish that tangential fields recorded on \(\Gamma\) are traces
+of physically admissible volume states, not arbitrary boundary templates
+\cite{harrington2001}. Single-vector Sobolev classes are
+\begin{equation}
+\label{eq:ch2.hcurl-space}
+\HCurl(\Omega)
+=
+\left\{
+\mathbf{u}\in L^{2}(\Omega)^{3}:
+\curl\mathbf{u}\in L^{2}(\Omega)^{3}
+\right\},
+\end{equation}
+\begin{equation}
+\label{eq:ch2.hdiv-space}
+\Hdiv(\Omega)
+=
+\left\{
+\mathbf{u}\in L^{2}(\Omega)^{3}:
+\divg\mathbf{u}\in L^{2}(\Omega)
+\right\},
+\end{equation}
+where \(\divg\mathbf{u}\) is the divergence of \(\mathbf{u}\) (m\(^{-2}\) for current-like
+fields, C\,m\(^{-3}\) when \(\mathbf{u}\) represents a displacement-related quantity),
+required to be square integrable so that Gauss-type constraints can be enforced
+weakly.
+each equipped with the graph norm
+\(\|\mathbf{u}\|_{\HCurl}^{2}=\|\mathbf{u}\|_{L^{2}}^{2}+\|\curl\mathbf{u}\|_{L^{2}}^{2}\)
+and the analogous \(\Hdiv\) norm \cite{stratton1941}. Equations
+\eqref{eq:ch2.hcurl-space}--\eqref{eq:ch2.hdiv-space} are the vector analogues of
+the finite-energy floor Eq.~\eqref{eq:ch1.energy-class}: they permit Maxwell
+curl-coupling without assuming pointwise smoothness of \(\E\) or \(\H\). The consequence
+for antenna modeling is direct: horn rims, slot edges, and patch boundaries may host
+singularities, yet the impressed current and recovered field remain admissible as long as
+they lie in the declared Sobolev classes \cite{harrington2001}. For
+piecewise constant \(\varepsilon,\mu\), fields are understood patchwise in
+Eqs.~\eqref{eq:ch2.hcurl-space}--\eqref{eq:ch2.hdiv-space} with interface traces
+constrained by Eq.~\eqref{eq:ch1.interface-conditions} \cite{harrington2001}.
+The Maxwell state space is the product
+\begin{equation}
+\label{eq:ch2.maxwell-product-space}
+\mathcal{U}_\omega
+=
+\HCurl(\Omega)\times\HCurl(\Omega),
+\qquad
+\mathbf{u}_\omega=(\E,\H)\in\mathcal{U}_\omega.
+\end{equation}
+Equation~\eqref{eq:ch2.maxwell-product-space} refines the six-component packaging
+Eq.~\eqref{eq:ch2.maxwell-state-vector}: both components carry square-integrable
+curls, matching the first-order structure of
+Eq.~\eqref{eq:ch1.maxwell-operator-block}. A weighted energy norm compatible with
+Eq.~\eqref{eq:ch2.maxwell-energy-form} is
+\begin{equation}
+\label{eq:ch2.field-energy-norm}
+\|\mathbf{u}_\omega\|_{\mathcal{U}}^{2}
+=
+\|\E\|_{L^{2}}^{2}+\|\H\|_{L^{2}}^{2}
++\alpha\,\|\curl\E\|_{L^{2}}^{2}+\beta\,\|\curl\H\|_{L^{2}}^{2},
+\end{equation}
+with positive weights \(\alpha,\beta\) fixed by constitutive scaling in each patch.
+Norm~\eqref{eq:ch2.field-energy-norm} controls the bilinear form
+\(\mathfrak{a}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-weak-form} on bounded domains
+and makes \(\mathcal{U}_\omega\) a Hilbert space \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (l2) {$L^{2}(\Omega)^{3}$};
+ \node[ch1box, above=5mm of l2] (hc) {$\HCurl(\Omega)$};
+ \node[ch1box, below=5mm of l2] (hd) {$\Hdiv(\Omega)$};
+ \node[ch1box, right=18mm of hc] (tr) {$\mathcal{T}_\Gamma$};
+ \draw[ch1flow] (l2.north) -- (l2.north |- hc.south);
+ \draw[ch1flow] (l2.north |- hc.south) -- (hc.south);
+ \draw[ch1flow] (l2.south) -- (l2.south |- hd.north);
+ \draw[ch1flow] (l2.south |- hd.north) -- (hd.north);
+ \draw[ch1flow] (hc.east) -- node[above,font=\scriptsize]{$\gamma_\tau$} (tr.west);
+\end{tikzpicture}%
+}
+\caption{Embedding ladder for Maxwell fields: \(\HCurl\) and \(\Hdiv\) sit above
+\(L^{2}\); tangential traces map \(\HCurl\) fields to boundary data compatible with
+Eq.~\eqref{eq:ch1.boundary-data-operator}.}
+\label{fig:ch2.sobolev-embedding-ladder}
+Sobolev traces, adjoints, and Fredholm structure establish Maxwell boundary data and export rank---they are not optional ornaments on the source-to-field pathway \cite{stratton1941}.
+\end{figure}
+Divergence control enters through source spaces and through Gauss constraints rather
+than through requiring both components to lie in \(\Hdiv\); forcing \(\E\in\Hdiv\)
+and \(\H\in\Hdiv\) simultaneously is stronger than Maxwell's first-order system
+requires and is reserved for scalar-potential reductions deferred to later chapters
+\cite{stratton1941}. Impressed sources refine the declaration of Subsection~\ref{sec:ch201}.
+The admissible impressed-current space collects currents of finite support and
+finite power that satisfy the \ref{ch:01} $\mathcal{D}_J=1$ screen.
+Let
+\(\Omega_s\subseteq\Omega\) denote compact source support. The admissible impressed
+current space is
+\begin{equation}
+\label{eq:ch2.source-space-refined}
+\mathcal{J}_\Omega
+=
+\left\{
+\Jimp\in \HCurl(\Omega):
+\operatorname{supp}\Jimp\subseteq\Omega_s,\
+\mathcal{D}_{J}[\Jimp]=1
+\right\},
+\end{equation}
+where \(\mathcal{D}_{J}\) is the criterion of
+Eq.~\eqref{eq:ch2.source-admissibility} inherited from
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic} and
+Eq.~\eqref{eq:ch1.source-admissibility} \cite{stratton1941}. Equation
+\eqref{eq:ch2.source-space-refined} strengthens square integrability to
+\(\HCurl\) regularity so that \(\curl\Jimp\) is defined in \(L^{2}\) whenever
+numerical or analytical measurement sequences differentiate sources. Charge-neutral subclasses
+used in radiation null-space analysis satisfy
+\begin{equation}
+\label{eq:ch2.charge-neutral-source}
+\mathcal{J}_\Omega^{(0)}
+=
+\left\{
+\Jimp\in\mathcal{J}_\Omega:
+\divg\Jimp=0
+\right\},
+\end{equation}
+with \(\rho=0\) implied on \(\Omega_s\). Equation~\eqref{eq:ch2.charge-neutral-source}
+is the subspace on which divergence-free reparametrizations act without altering
+\(\mathcal{S}_\omega[\Jimp]\) in simply connected regions; null-space structure is
+developed in Section~\ref{sec:ch272} \cite{harrington2001}.
+Boundary data from the tuple Eq.~\eqref{eq:ch1.data-specification-tuple} live in
+trace spaces rather than in volume Sobolev classes. Define
+\begin{equation}
+\label{eq:ch2.trace-space-definition}
+\mathcal{T}_\Gamma
+=
+H^{-1/2}(\Gamma)^{3}\times H^{-1/2}(\Gamma)^{3},
+\end{equation}
+as the product space for tangential electric and magnetic traces induced by
+\(\HCurl(\Omega)\) fields on Lipschitz \(\Gamma\) \cite{stratton1941}. The
+tangential trace operators extend Eq.~\eqref{eq:ch2.trace-restriction}:
+\begin{equation}
+\label{eq:ch2.tangential-trace-maps}
+\gamma_{\tau,E}:\HCurl(\Omega)\to H^{-1/2}(\Gamma)^{3},
+\quad
+\gamma_{\tau,E}[\E]=\hat{\mathbf{n}}\times\E|_{\Gamma},
+\end{equation}
+\begin{equation}
+\label{eq:ch2.tangential-trace-magnetic}
+\gamma_{\tau,H}:\HCurl(\Omega)\to H^{-1/2}(\Gamma)^{3},
+\quad
+\gamma_{\tau,H}[\H]=\hat{\mathbf{n}}\times\H|_{\Gamma},
+\end{equation}
+with outward unit normal \(\hat{\mathbf{n}}\). Equations
+\eqref{eq:ch2.tangential-trace-maps}--\eqref{eq:ch2.tangential-trace-magnetic}
+make Eq.~\eqref{eq:ch1.boundary-data-operator} an operator between declared
+Banach spaces: \(\mathcal{B}_\Gamma:\mathcal{T}_\Gamma\to\mathcal{Y}_\Gamma\) for
+data space \(\mathcal{Y}_\Gamma\) fixed by the boundary class of
+Eq.~\eqref{eq:ch1.outer-boundary-classes} or outgoing traces of
+Eq.~\eqref{eq:ch1.radiation-trace-condition} \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (vol) {Volume\\$\HCurl(\Omega)$}; \node[ch1box, right=16mm of vol] (tr) {Traces\\$\mathcal{T}_\Gamma$};
+ \node[ch1box, right=16mm of tr] (dat) {Data\\$\mathcal{Y}_\Gamma$};
+ \draw[ch1flow] (vol.east) -- node[above,font=\scriptsize]{$\gamma_\tau$} (tr.west);
+ \draw[ch1flow] (tr.east) -- node[above,font=\scriptsize]{$\mathcal{B}_\Gamma$} (dat.west);
+\end{tikzpicture}%
+}
+\caption{Trace--data chain for boundary completion: volume fields map to
+\(\mathcal{T}_\Gamma\); the boundary operator from
+Eq.~\eqref{eq:ch1.boundary-data-operator} selects admissible data.}
+\label{fig:ch2.trace-boundary-chain}
+\end{figure}
+Figure~\ref{fig:ch2.maxwell-boundary-stack}.
+Surjectivity of \(\gamma_\tau\) onto
+compatible trace subclasses fails globally---only fields in specified
+\(\HCurl\) subspaces with prescribed divergence pairings map to physically realizable
+\(\mathbf{g}_\Gamma\) \cite{stratton1941}. Subsection~\ref{sec:ch214} identifies
+self-adjoint boundary realizations; here the point is that \(\mathcal{L}_\omega\) of
+Eq.~\eqref{eq:ch2.maxwell-boundary-composite} acts on \(\mathcal{U}_\omega\) only when
+\(\gamma_\tau[\mathbf{u}_\omega]\) lies in the domain of \(\mathcal{B}_\Gamma\). Sheet currents and interface channels from Eq.~\eqref{eq:ch1.interface-conditions}
+require distributional extensions. Let \(\mathcal{D}'(\Omega)^{3}\) denote
+temporal-harmonic distributional three-vector fields. Impressed volume data remain
+\(\Jimp\in\mathcal{J}_\Omega\), while surface equivalents \(\mathbf{J}_{s,ab}\) on
+\(\Sigma_{ab}\) embed as
+\begin{equation}
+\label{eq:ch2.distributional-source-extension}
+\langle\mathbf{J}_{s},\boldsymbol{\phi}\rangle
+=
+\sum_{ab}\int_{\Sigma_{ab}}\mathbf{J}_{s,ab}\cdot\boldsymbol{\phi}\,dS,
+\qquad
+\boldsymbol{\phi}\in C_c^\infty(\Omega)^{3},
+\end{equation}
+linking the data tuple Eq.~\eqref{eq:ch1.data-specification-tuple} to a continuous
+linear functional on smooth test fields \cite{stratton1941}. Equation
+\eqref{eq:ch2.distributional-source-extension} does not alter the jump laws of
+Eq.~\eqref{eq:ch1.interface-conditions}; it specifies the functional-analytic class
+in which those jumps appear in weak formulations. Interface trace spaces on
+\(\Sigma_{ab}\) are denoted
+\begin{equation}
+\label{eq:ch2.interface-trace-space}
+\mathcal{T}_{\Sigma_{ab}}
+=
+H^{-1/2}(\Sigma_{ab})^{3},
+\end{equation}
+with tangential continuity of \(\E\) and jump of \(\hat{\mathbf{n}}\times\H\) encoded
+as constraints on \(\gamma_\tau\) taken from each patch \cite{harrington2001}.
+Dual pairings for source and test fields use the \(L^{2}\) inner product
+\begin{equation}
+\label{eq:ch2.dual-source-pairing}
+\langle\Jimp,\boldsymbol{\psi}\rangle_{\Omega}
+=
+\int_\Omega \Jimp\cdot\boldsymbol{\psi}^{*}\,d^{3}r,
+\qquad
+\boldsymbol{\psi}\in \HCurl(\Omega),
+\end{equation}
+which induces a bounded functional on test states when \(\Jimp\in L^{2}(\Omega)^{3}\)
+and extends to Eq.~\eqref{eq:ch2.distributional-source-extension} for sheet data.
+Forcing in Eq.~\eqref{eq:ch2.maxwell-forcing-vector} enters the weak form
+Eq.~\eqref{eq:ch2.maxwell-weak-form} through
+\(\mathfrak{f}_\omega(\mathbf{v}_\omega)=\langle\mathbf{s}_\omega,\mathbf{v}_\omega\rangle\)
+once \(\mathbf{v}_\omega\in\mathcal{U}_\omega\) carries homogeneous boundary traces
+\cite{stratton1941}. The symbol \(\mathcal{F}_\Omega\) names field pairs
+\(\mathbf{u}_\omega=(\E,\H)\) that are not merely square integrable but carry controlled
+curls and admissible tangential traces on \(\Gamma\); every output of
+\(\mathcal{S}_\omega[\Jimp]\) on the physical branch must lie in this sharpened class
+\cite{harrington2001}. The admissible Maxwell field space compatible with \ref{ch:01} is
+\begin{equation}
+\label{eq:ch2.admissible-field-space}
+\mathcal{F}_\Omega
+=
+\left\{
+\mathbf{u}_\omega=(\E,\H)\in\mathcal{U}_\omega:
+\gamma_\tau[\mathbf{u}_\omega]\in\mathcal{D}\big(\mathcal{B}_\Gamma\big),\
+(\E,\H)\ \text{satisfy patchwise Gauss constraints}
+\right\},
+\end{equation}
+where \(\mathcal{D}(\mathcal{B}_\Gamma)\) is the domain of boundary data compatible
+with Eq.~\eqref{eq:ch1.admissible-data-class} imported from
+Section~\ref{sec:ch01.1.2}. Equation~\eqref{eq:ch2.admissible-field-space} refines
+the minimal declaration of Subsection~\ref{sec:ch201}: same symbol
+\(\mathcal{F}_\Omega\), sharpened topology. Membership implies
+Eq.~\eqref{eq:ch1.energy-class} but adds curl and trace control needed for
+integration by parts in Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing}
+\cite{stratton1941}. The composite operator $\mathcal{L}_\omega$ couples volume
+residuals with boundary rows; its domain $\mathcal{D}(\mathcal{L}_\omega)$ is the
+closed Maxwell solution class on which both $\mathcal{M}_\omega$ and
+$\mathcal{B}_\Gamma$ are simultaneously evaluable in the declared data spaces
+\cite{harrington2001}. The closed Maxwell solution domain becomes
+\begin{equation}
+\label{eq:ch2.domain-refinement-L}
+\mathcal{D}(\mathcal{L}_\omega)
+=
+\left\{
+\mathbf{u}_\omega\in\mathcal{F}_\Omega:
+\mathcal{M}_\omega[\mathbf{u}_\omega]\in L^{2}(\Omega)^{4}
+\right\},
+\end{equation}
+which specializes Eq.~\eqref{eq:ch2.operator-domain-declaration} to Lipschitz
+domains with patchwise smooth coefficients \cite{stratton1941}. On
+\(\mathcal{D}(\mathcal{L}_\omega)\), the volume residuals of
+Eq.~\eqref{eq:ch2.maxwell-driven-operator} are square integrable, and the boundary
+row of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} is evaluated in
+\(\mathcal{T}_\Gamma\). Exterior domains append outgoing subspaces rather than
+changing Eqs.~\eqref{eq:ch2.hcurl-space}--\eqref{eq:ch2.admissible-field-space};
+that selection is function-space compatible with weighted norms that decay at
+infinity and is detailed in Section~\ref{sec:ch243} \cite{harrington2001}.
+Free-charge density paired with \(\Jimp\) in
+Eq.~\eqref{eq:ch1.data-specification-tuple} is taken in the scalar class
+\(\rho\in L^{2}(\Omega)\) whenever volumetric charge is prescribed, with
+distributional interpretation \(\divg\Jimp-\jj\omega\rho=0=0\) understood in
+\(\mathcal{D}'(\Omega)\) as in Eq.~\eqref{eq:ch1.source-admissibility}. Scalar
+\(L^{2}\) control is sufficient because Gauss laws in
+Eq.~\eqref{eq:ch1.maxwell-operator-block} involve \(\divg\) on \(\varepsilon_0\E\)
+and \(\divg\) on \(\mu_0\H\), not gradients of \(\rho\). When \(\rho\) is absent and
+\(\Jimp\in\mathcal{J}_\Omega^{(0)}\), the electric Gauss row reduces to a
+divergence constraint on \(\E\) enforced weakly through test functions in
+\(\HCurl(\Omega)\) \cite{stratton1941}. Approximation properties matter for numerical projection. Smooth compactly supported
+fields are dense in \(\HCurl(\Omega)\) and in \(\mathcal{U}_\omega\) equipped with
+norm~\eqref{eq:ch2.field-energy-norm}; every admissible state is a limit of
+\(C_c^\infty\) test pairs modified to satisfy boundary class on \(\Gamma\)
+\cite{stratton1941}. Density underpins Galerkin convergence: edge-element spaces
+approximate \(\mathcal{F}_\Omega\) when their degrees of freedom match tangential
+trace continuity on \(\Gamma_{\mathrm{PEC}}\), where
+\begin{equation}
+\label{eq:ch2.pec-subspace}
+\mathcal{U}_\omega^{\mathrm{PEC}}
+=
+\left\{
+(\E,\H)\in\mathcal{U}_\omega:
+\hat{\mathbf{n}}\times\E|_{\Gamma_{\mathrm{PEC}}}=\mathbf{0}
+\right\},
+\end{equation}
+encodes perfect-conductor tangential data from
+Eq.~\eqref{eq:ch1.outer-boundary-classes} without assuming \(\E=\mathbf{0}\) in
+\(\Omega\) \cite{harrington2001}. Integration by parts on
+\(\mathcal{U}_\omega^{\mathrm{PEC}}\) yields the boundary-term cancellation used in
+Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} when \(\mathcal{B}_\Gamma\) selects
+homogeneous tangential electric trace.
+Compact embeddings used later for Fredholm arguments are recorded as
+\begin{equation}
+\label{eq:ch2.embedding-chain}
+\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}
+\hookleftarrow H^{-1/2}(\Gamma)^{3},
+\end{equation}
+with the first inclusion compact on bounded \(\Omega\) and the trace map continuous
+but not compact \cite{stratton1941}. Equation~\eqref{eq:ch2.embedding-chain}
+explains why interior cavity spectra are discrete while boundary observation maps are
+rank deficient: compact embeddings produce accumulating eigenvalues in volume,
+whereas non-compact traces map infinite-dimensional field spaces to finite
+observation vectors \cite{harrington2001}. The quantitative singular-value decay of
+radiation maps on compact support is developed in Section~\ref{sec:ch26} and cited
+thereafter \cite{stratton1941}. Subsection~\ref{sec:ch213} develops the
+consequences for radiation accessibility and finite observation.
+Subsection~\ref{sec:ch211} has refined \(\mathcal{F}_\Omega\), \(\mathcal{J}_\Omega\), and
+\(\mathcal{D}(\mathcal{L}_\omega)\) from minimal declarations to Sobolev, trace, and
+distributional classes compatible with \ref{ch:01} charge-continuous. The consequence
+for measurement is immediate: near-field scanners and method-of-moments codes inherit
+these spaces as the continuous targets their discretizations must approximate.
+Subsection~\ref{sec:ch212}
+treats the Maxwell maps as linear operators with explicit domains, ranges, and adjoints on
+those spaces \cite{stratton1941}.
+As a worked example, suppose \(\mathbf{g}_\Gamma\) prescribes tangential \(\E\) on \(\Gamma\) with
+\(H^{1/2}\) regularity but is not the trace of any \(\HCurl\) field in \(\Omega\).
+Then no \(\mathbf{u}_\omega\in\mathcal{F}_\Omega\) satisfies
+\(\gamma_{\tau,E}[\E]=\mathbf{g}_\Gamma\), regardless of how accurately a volume
+solver minimizes Maxwell residuals. The failure is a trace-space mismatch, not a
+Green-function error; correcting it requires either lifting \(\mathbf{g}_\Gamma\) into
+\(\mathcal{T}_\Gamma\) as an image under \(\gamma_\tau\) or relaxing the boundary
+class through impedance completion in Subsection~\ref{sec:ch214}
+\cite{stratton1941}.

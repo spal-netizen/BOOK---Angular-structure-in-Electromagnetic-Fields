@@ -1,0 +1,265 @@
+% Stage 8 restored fragment — 2.2.2 Frequency-domain Maxwell operators (archive lines 2735-3005)
+\subsection{Frequency-domain Maxwell operators}
+\label{sec:ch222}
+
+A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Frequency-domain Maxwell operators'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+The physical problem is steady-state interrogation at fixed frequency: every calibrated
+$S$-parameter, resonator $Q$ measurement, and harmonic finite-element solve assumes that
+excitation, media, and boundary class are frozen while $\omega$ is stepped
+\cite{harrington2001}. A vector network analyzer sweep is the canonical laboratory observation that precedes
+every harmonic operator declaration. The instrument steps $\omega$ through a calibrated
+band, records complex $S$-parameters at each tone, and treats each frequency as a
+steady-state slice of the same passive structure \cite{harrington2001}. The composite
+operator $\mathcal{L}_\omega$ introduced in Section~\ref{sec:ch21} is precisely that
+slice: Maxwell's equations with $\partial_t\to-\jj\omega$ on impressed data and boundary
+class held fixed. Readers should therefore read $\mathcal{L}_\omega$ not as an abstract
+Hilbert map alone but as the operator whose inversion reproduces the phasor fields a VNA
+implicitly assumes when it reports $S_{21}(\omega)$ after de-embedding \cite{stratton1941}.
+Frequency-domain formulations dominate practical electromagnetics because measurements,
+simulations, and design specifications are usually organized around frequency. Network
+analyzers, resonator measurements, and antenna-pattern ranges all interrogate electromagnetic
+systems one frequency at a time \cite{harrington2001}. The harmonic operators
+introduced below state that experimentally familiar viewpoint while remaining consistent
+with the causal evolution described in Subsection~\ref{sec:ch221}.
+
+Subsection~\ref{sec:ch221} fixed time-domain evolution and
+Eq.~\eqref{eq:ch2.time-to-frequency-map}. Subsection~\ref{sec:ch222} gives the
+Chapter~\ref{ch:02} account of harmonic Maxwell operators and curl--curl Helmholtz
+symbols on the spaces of Section~\ref{sec:ch21} \cite{stratton1941}. Recall that
+$\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega$ is the harmonic solution map,
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ selects outgoing radiative
+content, and $\mathcal{L}_\omega$ packages volume and boundary residuals jointly
+\cite{harrington2001}.
+The first-order system Eq.~\eqref{eq:ch1.maxwell-operator-block} and composite
+\(\mathcal{L}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} are
+presupposed; local Maxwell derivations from \ref{ch:01} are not repeated.
+The electric-wave operator Eq.~\eqref{eq:ch2.electric-wave-operator} was recorded in
+Subsection~\ref{sec:ch202}; here it is embedded in domain declarations and extended
+by magnetic and material-weighted counterparts. Full vector-field separation is
+deferred to Section~3.3 \cite{stratton1941}.
+Under the locked \(\exp(-\jj\omega t)\) convention, differentiation with respect to
+time converts to multiplication by \(-\jj\omega\) on phasor quantities, and the
+second time derivative maps to \(-\omega^{2}\).
+Every phasor displayed on a network analyzer trace has already undergone this
+substitution: a time derivative in Maxwell's equations becomes a multiplication by
+$-\jj\omega$ on the locked $\exp(-\jj\omega t)$ convention. Engineers should notice
+that the substitution is not a notational convenience alone; it is the algebraic
+condition under which a time-domain IBVP and a frequency-domain BVP describe the same
+passive structure at fixed $\omega$ \cite{stratton1941}. The substitution fails when
+excitation is broadband without superposition, when $\mathcal{B}_\Gamma$ varies in time,
+or when material response is not single-frequency on the declared band
+\cite{harrington2001}. With those limits stated, the formal rule is:
+Time derivatives map to
+\begin{equation}
+\label{eq:ch2.frequency-substitution-rule}
+\partial_t \longrightarrow -\jj\omega,
+\qquad
+\frac{\partial^2}{\partial t^2}\longrightarrow -\omega^2,
+\end{equation}
+on phasor fields \(\E(\mathbf{r})\), \(\H(\mathbf{r})\) and impressed data
+\(\Jimp(\mathbf{r})\), \(\rho(\mathbf{r})\) \cite{stratton1941}.
+In Eq.~\eqref{eq:ch2.frequency-substitution-rule},
+\(\partial_t\) acting on a time-harmonic quantity is replaced by \(-\jj\omega\),
+where \(\omega\) is in rad\,s\(^{-1}\); and \(\partial_t^{2}\) is replaced by
+\(-\omega^{2}\).
+This substitution is valid only when all time dependence is single-frequency or when
+a superposition of such terms is taken with consistent phasor definitions.
+Equation
+\eqref{eq:ch2.frequency-substitution-rule} specializes
+Eq.~\eqref{eq:ch2.time-to-frequency-map} and converts
+Eq.~\eqref{eq:ch1.ibvp-time-domain} to the harmonic BVP of
+Eq.~\eqref{eq:ch1.ibvp-harmonic-bvp} by reference.
+The harmonic residual collects the four Maxwell rows in frequency form.
+A finite-element or method-of-moments solve at fixed $\omega$ is, operationally, the search
+for $\mathbf{u}_\omega=(\E,\H)$ that drives $\mathcal{M}_\omega[\mathbf{u}_\omega]$ to zero
+in the volume while satisfying the boundary row enforced by $\mathcal{B}_\Gamma$.
+The engineer observes residuals indirectly through solver convergence and port matching;
+the mathematician packages the same requirement as membership in
+$\mathcal{D}(\mathcal{L}_\omega)$ with $\mathcal{L}_\omega[\mathbf{u}_\omega]$ balanced
+against impressed data \cite{harrington2001}. Readers should notice that
+Eq.~\eqref{eq:ch2.harmonic-maxwell-residual} is not a new physics postulate but the
+frequency image of Eq.~\eqref{eq:ch2.time-maxwell-evolution} once $\partial_t\to-\jj\omega$
+on admissible data \cite{stratton1941}. The harmonic Maxwell residual
+operator \(\mathcal{M}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-driven-operator}
+acts on \(\mathbf{u}_\omega=(\E,\H)\in\mathcal{U}_\omega\):
+\begin{equation}
+\label{eq:ch2.harmonic-maxwell-residual}
+\mathcal{M}_\omega[\mathbf{u}_\omega]
+=
+\begin{bmatrix}
+\curl\E+\jj\omega\mu_0\H\\
+\curl\H-\jj\omega\varepsilon_0\E-\Jimp\\
+\divg(\varepsilon_0\E)-\rho\\
+\divg(\mu_0\H)
+\end{bmatrix},
+\end{equation}
+row-aligned with Eq.~\eqref{eq:ch1.maxwell-operator-block} \cite{stratton1941}.
+Each row of Eq.~\eqref{eq:ch2.harmonic-maxwell-residual} is a residual that must
+vanish for a physically consistent harmonic state:
+the first row enforces Faraday's law with phasor substitution;
+the second enforces Amp\`ere's law with impressed current \(\Jimp\);
+the third enforces Gauss's law for electric flux with charge density \(\rho\);
+and the fourth enforces the magnetic Gauss law.
+Equation~\eqref{eq:ch2.harmonic-maxwell-residual} is the frequency-domain packaging
+of Eq.~\eqref{eq:ch2.time-maxwell-evolution}; completion and traces remain in
+\(\mathcal{L}_\omega[\mathbf{u}_\omega]=[\mathbf{s}_\omega,\mathbf{g}_\Gamma]^{\mathsf{T}}\)
+from Eq.~\eqref{eq:ch2.closed-maxwell-bvp}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (fo) {First-order\\$\mathcal{M}_\omega$};
+ \node[ch1box, right=7mm of fo] (el) {$\mathcal{W}_{E,\omega}$};
+ \node[ch1box, below=5mm of fo] (mag) {$\mathcal{W}_{H,\omega}$};
+ \node[ch1box, right=7mm of el] (sym) {Symbol $k(\mathbf{r})$};
+ \draw[ch1flow] (fo.east) -- node[above,font=\scriptsize]{eliminate $\H$} (el.west);
+ \draw[ch1flow] (fo.south) -- node[left,font=\scriptsize]{eliminate $\E$} (mag.north);
+ \draw[ch1flow] (el.east) -- (el.east |- sym.west);
+ \draw[ch1flow] (el.east |- sym.west) -- (sym.west);
+\end{tikzpicture}%
+}
+\caption{Frequency-domain reduction ladder: first-order \(\mathcal{M}_\omega\)
+yields electric and magnetic Helmholtz operators when partner fields are eliminated
+under stated domain and gauge constraints.}
+\label{fig:ch2.frequency-operator-ladder}
+\end{figure}
+Single-field Helmholtz forms equivalent to
+Eqs.~\eqref{eq:ch1.vacuum-wave-source-driven}--\eqref{eq:ch1.vacuum-curl-second-order}
+were established in \ref{ch:01} and are; elimination
+steps are not repeated \cite{stratton1941}. The Chapter~\ref{ch:02} electric-wave
+operator Eq.~\eqref{eq:ch2.electric-wave-operator} is the vacuum electric Helmholtz
+map on \(\mathcal{D}(\mathcal{W}_{E,\omega})\subset\HCurl(\Omega)\):
+\begin{equation}
+\label{eq:ch2.electric-helmholtz-domain}
+\mathcal{D}(\mathcal{W}_{E,\omega})
+=
+\big\{\E\in\HCurl(\Omega):
+\mathcal{W}_{E,\omega}\E\in L^{2}(\Omega)^{3}\big\}.
+\end{equation}
+The magnetic counterpart is
+\begin{equation}
+\label{eq:ch2.magnetic-wave-operator}
+\mathcal{W}_{H,\omega}\H\equiv
+\curl\!\left(\varepsilon_0^{-1}\curl\H\right)-\omega^2\mu_0\H
+= \jj\omega\mu_0\Jimp-\varepsilon_0^{-1}\curl\Jimp,
+\end{equation}
+on \(\mathcal{D}(\mathcal{W}_{H,\omega})\subset\HCurl(\Omega)\) analogously
+\cite{stratton1941}. Equations
+\eqref{eq:ch2.electric-wave-operator} and~\eqref{eq:ch2.magnetic-wave-operator}
+are dual single-field symbols; using one without the other is valid only when the
+eliminated partner is recoverable from curl relations without ambiguity. In piecewise smooth media with \(\varepsilon(\mathbf{r})\), \(\mu(\mathbf{r})\),
+\begin{equation}
+\label{eq:ch2.material-helmholtz-electric}
+\mathcal{W}_{E,\omega}^{(\varepsilon,\mu)}\E\equiv
+\curl\!\left(\mu^{-1}\curl\E\right)-\omega^2\varepsilon\E
+= -\jj\omega\mu\Jimp+\mu^{-1}\curl\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{eff}},
+\end{equation}
+\begin{equation}
+\label{eq:ch2.material-helmholtz-magnetic}
+\mathcal{W}_{H,\omega}^{(\varepsilon,\mu)}\H\equiv
+\curl\!\left(\varepsilon^{-1}\curl\H\right)-\omega^2\mu\H
+= \jj\omega\mu\Jimp-\varepsilon^{-1}\curl\Jimp,
+\end{equation}
+with interface jumps on \(\mathcal{D}(\mathcal{W}_{\cdot,\omega}^{(\varepsilon,\mu})\)
+fixed by Eq.~\eqref{eq:ch1.interface-conditions} \cite{stratton1941}. Material
+weights modify symbols but not the first-order coupling pattern of
+Figure~\ref{fig:ch2.first-order-curl-coupling}; multi-region Green operators in
+Section~\ref{sec:ch234} invert Eqs.~\eqref{eq:ch2.material-helmholtz-electric}--\eqref{eq:ch2.material-helmholtz-magnetic}
+on composite domains \cite{harrington2001}.
+The local Helmholtz symbol is
+\begin{equation}
+\label{eq:ch2.helmholtz-symbol}
+k(\mathbf{r})=\omega\sqrt{\mu(\mathbf{r})\varepsilon(\mathbf{r})},
+\qquad
+k_0=\omega\sqrt{\mu_0\varepsilon_0},
+\end{equation}
+from Eq.~\eqref{eq:ch1.vacuum-impedance-wavenumber} in uniform vacuum
+\cite{stratton1941}. In source-free regions,
+Eqs.~\eqref{eq:ch1.vacuum-helmholtz-pair} apply with
+\(k(\mathbf{r})\) replacing \(k_0\). The symbol \(k(\mathbf{r})\) labels propagating
+versus evanescent wavenumber locally; it does not replace Sommerfeld outgoing selection on
+open ranges \cite{stratton1941}. Evanescent sheets with large $|\E|$ can
+satisfy the symbol while exporting no watts through $\Gamma_R$ \cite{chu1948}.
+Single-field reduction is admissible only under explicit constraints:
+\begin{equation}
+\label{eq:ch2.single-field-reduction-validity}
+\text{eliminate }\H
+\ \Longrightarrow\
+\Jimp\in\HCurl(\Omega),\ \rho\ \text{compatible},\ 
+\mathcal{B}_\Gamma\ \text{expressible in }\E\text{-traces alone},
+\end{equation}
+with the magnetic elimination requiring the parallel conditions on \(\H\)-traces
+\cite{stratton1941}. Failure of Eq.~\eqref{eq:ch2.single-field-reduction-validity}
+---for example impedance boundaries coupling both tangential components---forces
+retention of the first-order \(\mathcal{L}_\omega\) system
+Eq.~\eqref{eq:ch2.maxwell-boundary-composite} \cite{harrington2001}.
+Forcing maps between impressed data and Helmholtz right-hand sides are linear:
+\begin{equation}
+\label{eq:ch2.helmholtz-forcing-map}
+\mathbf{f}_{E,\omega}
+=
+-\jj\omega\mu\Jimp+\mu^{-1}\curl\mathbf{J}^{\mathrm{(mag)}}_{\mathrm{eff}},
+\qquad
+\mathcal{W}_{E,\omega}^{(\varepsilon,\mu)}\E=\mathbf{f}_{E,\omega},
+\end{equation}
+with \(\mathbf{f}_{E,\omega}\in L^{2}(\Omega)^{3}\) when
+\(\Jimp\in\mathcal{J}_\Omega\) from Eq.~\eqref{eq:ch2.source-space-refined}
+\cite{stratton1941}. The harmonic solution operator on the electric Helmholtz branch
+is
+\begin{equation}
+\label{eq:ch2.helmholtz-solution-operator}
+\mathcal{G}_{E,\omega}:\mathbf{f}_{E,\omega}\longmapsto\E,
+\qquad
+\mathcal{W}_{E,\omega}^{(\varepsilon,\mu)}\mathcal{G}_{E,\omega}=\mathrm{id}
+\end{equation}
+on the physical resolvent branch selected by \(\mathcal{B}_\Gamma\); explicit
+\(\mathcal{G}_{E,\omega}\) construction is developed in Section~\ref{sec:ch23}
+\cite{harrington2001}. Composition with the full map yields
+\begin{equation}
+\label{eq:ch2.frequency-solution-composition}
+\mathcal{S}_\omega[\Jimp]
+=
+\big(\mathcal{G}_{E,\omega}\mathbf{f}_{E,\omega},\,
+-\frac{1}{\jj\omega\mu}\curl\E\big)
+\quad\text{when }\H\ \text{recovered from Amp\`ere row},
+\end{equation}
+linking Eq.~\eqref{eq:ch2.maxwell-solution-map} to Helmholtz inversion without
+re-displaying Eq.~\eqref{eq:ch2.solution-map-resolvent} \cite{stratton1941}.
+Spectral viewpoint note: on bounded domains with discrete cavity spectra,
+\(\mathcal{W}_{E,\omega}^{(\varepsilon,\mu)}\) admits eigenpairs
+\((\lambda_n,\mathbf{e}_n)\) accumulating at infinity because
+\(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) compactly
+(Eq.~\eqref{eq:ch2.embedding-chain}) \cite{stratton1941}. On exterior domains,
+continuous spectrum replaces discrete eigenvalues; Section~\ref{sec:ch263} develops
+Fredholm and spectral consequences. Vector spherical harmonic separation of
+eigenmodes is deferred to Section~3.3 \cite{harrington2001}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (l) {$\mathcal{L}_\omega$\\first-order};
+ \node[ch1box, right=16mm of l] (w) {$\mathcal{W}_{E,\omega}$\\curl--curl};
+ \node[ch1box, below=5mm of w] (b) {Boundary row\\$\mathcal{B}_\Gamma$};
+ \draw[ch1flow] (l.east) -- node[above,font=\scriptsize]{eliminate} (w.west);
+ \draw[ch1flow, dashed] (b.east) -- (l.west);
+ \draw[ch1flow, dashed] (b.south) -- (w.north);
+\end{tikzpicture}%
+}
+\caption{First-order \(\mathcal{L}_\omega\) retains coupled boundary rows; single-field
+\(\mathcal{W}_{E,\omega}\) is valid only when \(\mathcal{B}_\Gamma\) can be
+projected without losing impedance coupling.}
+\label{fig:ch2.first-order-vs-helmholtz}
+\end{figure}
+Impedance and outgoing radiation conditions modify both volume and trace operators
+simultaneously \cite{stratton1941}. Weak form of the electric Helmholtz operator uses the same sesquilinear structure as
+Eq.~\eqref{eq:ch2.maxwell-weak-form} restricted to \(\E\)-only test spaces when
+reduction is valid \cite{stratton1941}. Coercivity on the quotient by cavity modes
+from Eq.~\eqref{eq:ch2.coercivity-quotient} applies to
+\(\mathcal{W}_{E,\omega}^{(\varepsilon,\mu)}\) on bounded domains with passive
+\(\mathcal{B}_\Gamma\); Subsection~\ref{sec:ch214} develops the self-adjoint realizations
+\cite{harrington2001}.
+Subsection~\ref{sec:ch222} has packaged harmonic Maxwell residuals, electric and magnetic
+Helmholtz operators, and the conditions under which single-field reduction is admissible.
+Subsection~\ref{sec:ch223} proves that \(\mathcal{S}_\omega\) is the frequency-domain
+image of a causal time-domain map when impressed data, media, and boundary class are held
+fixed \cite{stratton1941}.

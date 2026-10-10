@@ -1,0 +1,219 @@
+% Stage 8 restored fragment — 2.4.2 Outgoing-wave selection (archive lines 5231-5455)
+\subsection{Outgoing-wave selection}
+\label{sec:ch242}
+Finite computational domains terminate open-region problems artificially. On a physical compact
+range, anechoic absorbers play the same role as absorbing boundary conditions in equivalent analytical models:
+they mimic terminations that let export escape instead of reflecting into the near field
+\cite{hansen1988}. Silver--M\"uller and related traces approximate outgoing selection
+on meshes used for horns, cavities, and reflector feeds
+\cite{stratton1941}. A finite-element model employing inadequate
+absorbing boundaries permits artificial reflections that contaminate field amplitudes and
+reconstructed radiation characteristics---the same standing-wave signatures that appear when chamber
+absorption is imperfect on a physical range \cite{hansen1988}. Absorbing-boundary
+parameters are therefore a radiation-physics choice about exported energy, not a mesh-only tuning
+parameter \cite{stratton1941}. The operator $\mathcal{O}_{\mathrm{out}}$ records that choice on
+$\mathcal{S}_\omega$ before $\Pi_{\mathrm{rad}}$ and $\mathcal{R}_\omega$ attach pattern meters.
+
+The outgoing-wave selector $\mathcal{O}_{\mathrm{out}}$ implements Sommerfeld completion
+Eq.~\eqref{eq:ch2.sommerfeld-outgoing-class} as an operator on $\mathcal{F}_\Omega$, on
+harmonic Green kernels, and on the resolvent branch of $\mathcal{L}_\omega^{-1}$
+\cite{stratton1941}. The composition relation
+Eq.~\eqref{eq:ch2.rad-projection-composition} from Subsection~\ref{sec:ch224} named
+$\mathcal{O}_{\mathrm{out}}$ without constructing it; the definitions below supply that
+operator and its links to $\Pi_{\mathrm{prop}}$, $\Pi_{\mathrm{rad}}$, and retarded
+Green functions Eq.~\eqref{eq:ch2.retarded-harmonic-kernel-theorem}. Sommerfeld field
+conditions
+Eqs.~\eqref{eq:ch2.sommerfeld-field-condition}--\eqref{eq:ch2.sommerfeld-outgoing-class}
+are presupposed; uniqueness proofs belong to Subsection~\ref{sec:ch243}.
+Assumptions. Exterior regions use vacuum far-zone constants with \(k_0>0\) real in the locked
+harmonic band, compact \(\operatorname{supp}\Jimp\), and time-independent
+\(\mathcal{B}_\Gamma\) including outgoing radiation condition at infinity or on
+Eq.~\eqref{eq:ch2.silver-muller-trace-approx} at large finite \(R\)
+\cite{stratton1941}. Propagating and evanescent projectors
+Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra}
+from Subsection~\ref{sec:ch224} are fixed on \(\widehat{\mathcal{F}}_\Omega\)
+\cite{harrington2001}. Incoming and advanced branches satisfying
+Eq.~\eqref{eq:ch2.advanced-kernel-violation} are excluded.
+Let \(\mathcal{F}_{\mathrm{in}}\) denote the incoming counterpart of
+\(\mathcal{F}_{\mathrm{SF}}\) obtained by reversing outgoing phase in the far zone.
+The outgoing-wave selector is the idempotent map
+\begin{equation}
+\label{eq:ch2.outgoing-selector-def}
+\mathcal{O}_{\mathrm{out}}:\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{SF}},
+\qquad
+\mathcal{O}_{\mathrm{out}}[\mathbf{u}_\omega]
+=
+\mathbf{u}_{\mathrm{out}},
+\end{equation}
+where \(\mathbf{u}_{\mathrm{out}}\) is the unique member of
+\(\mathcal{F}_{\mathrm{SF}}\) whose propagating spectral content matches the outgoing
+\(k_z\) branch of Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split} and whose
+incoming content is annihilated \cite{stratton1941}. Equation
+\eqref{eq:ch2.outgoing-selector-def} is the locked definition for operator
+realization of Sommerfeld completion: it acts \emph{before} far-zone measurement and
+\emph{after} volume completion by \(\mathcal{L}_\omega\), selecting the physical
+resolvent branch assumed in Eq.~\eqref{eq:ch2.resolvent-green-equivalence}
+\cite{stratton1941}. On \(\mathcal{F}_{\mathrm{SF}}\),
+\begin{equation}
+\label{eq:ch2.outgoing-idempotency}
+\mathcal{O}_{\mathrm{out}}^2=\mathcal{O}_{\mathrm{out}},
+\qquad
+\mathcal{O}_{\mathrm{out}}\big|_{\mathcal{F}_{\mathrm{SF}}}=\mathrm{id},
+\end{equation}
+while incoming states satisfy \(\mathcal{O}_{\mathrm{out}}[\mathbf{u}_{\mathrm{in}}]=\mathbf{0}\)
+when extended by continuity from the far zone \cite{harrington2001}. Physically,
+\(\mathcal{O}_{\mathrm{out}}\) removes incoming spherical and plane-wave components
+that satisfy Maxwell equations but violate retarded causality
+\cite{jackson1999}.
+On homogeneous regions, outgoing selection in lateral wavenumber \((k_x,k_y)\) uses
+the longitudinal root from Eq.~\eqref{eq:ch2.longitudinal-wavenumber-split}:
+\begin{equation}
+\label{eq:ch2.outgoing-plane-wave-criterion}
+k_z=
+\begin{cases}
++\sqrt{k_0^2-k_t^2}, & k_t\le k_0\ \text{(outgoing propagating)},\\[4pt]
+-\jj\,\alpha(k_t), & k_t>k_0\ \text{(decaying evanescent)},
+\end{cases}
+\end{equation}
+with the sign of the propagating root fixed by exterior completion and the locked
+\(\exp(-\jj\omega t)\) convention \cite{stratton1941}. Equation
+\eqref{eq:ch2.outgoing-plane-wave-criterion} is the spectral action of
+\(\mathcal{O}_{\mathrm{out}}\) on each plane-wave mode; reversing
+\(k_z\to -k_z\) on the propagating sheet produces incoming content annihilated by
+\(\mathcal{O}_{\mathrm{out}}\) \cite{stratton1941}. Evanescent modes are unchanged
+in decay direction but remain outside \(\Pi_{\mathrm{rad}}\) through
+Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{harrington2001}. The propagating
+projector \(\Pi_{\mathrm{prop}}\) from Subsection~\ref{sec:ch224} retains all
+outgoing and incoming propagating modes; \(\mathcal{O}_{\mathrm{out}}\) acts only
+after \(\Pi_{\mathrm{prop}}\) in the radiation chain
+Eq.~\eqref{eq:ch2.rad-projection-composition} \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (f) {$\mathcal{F}_\Omega$};
+ \node[ch1box, right=7mm of f] (pp) {$\Pi_{\mathrm{prop}}$};
+ \node[ch1box, right=7mm of pp] (oo) {$\mathcal{O}_{\mathrm{out}}$};
+ \node[ch1box, right=7mm of oo] (pr) {$\Pi_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of f] (ev) {$\Pi_{\mathrm{ev}}$};
+ \draw[ch1flow] (f) -- (pp) -- (oo) -- (pr);
+ \draw[ch1flow] (f.south) -- (f.south |- ev.north);
+ \draw[ch1flow] (f.south |- ev.north) -- (ev.north);
+\end{tikzpicture}%
+}
+\caption{Outgoing selection Eq.~\eqref{eq:ch2.outgoing-selector-def} sits between
+propagating projection and radiation export:
+\(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\).}
+\label{fig:ch2.outgoing-selector-measurement chain}
+\end{figure}
+~\eqref{eq:ch2.rad-projection-composition} with explicit operator order. Regime
+qualification Eq.~\eqref{eq:ch2.regime-operator-screen} applies after
+\(\Pi_{\mathrm{rad}}\), not at the \(\mathcal{O}_{\mathrm{out}}\) stage
+Green-function branch selection. Harmonic kernels from Section~\ref{sec:ch23}---with observation coordinate $\mathbf{r}$ and
+source coordinate $\mathbf{r}'$ in $G$ and $\overline{\mathbf{G}}_{E}$---admit incoming and
+outgoing analytic continuations. The outgoing dyadic branch is
+\begin{equation}
+\label{eq:ch2.outgoing-green-branch}
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}
+=
+\mathcal{O}_{\mathrm{out}}\,\overline{\mathbf{G}}_{E,\omega},
+\qquad
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}
+\ \text{satisfies}\ 
+\text{Eq.~\eqref{eq:ch2.sommerfeld-dyadic-asymptotic}},
+\end{equation}
+with \(\mathcal{O}_{\mathrm{out}}\) acting on the observation-point dependence
+\cite{stratton1941}. Equation~\eqref{eq:ch2.outgoing-green-branch}
+identifies the kernel used in Eq.~\eqref{eq:ch2.electric-dyadic-convolution} on
+exterior problems with the retarded symbol of
+Eq.~\eqref{eq:ch2.retarded-harmonic-kernel-theorem} \cite{stratton1941}. Incoming
+kernels \(\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(in)}}\) are related by
+\(k_0\to -k_0\) on the propagating Riemann sheet and produce fields outside
+\(\mathcal{F}_{\mathrm{SF}}\) \cite{jackson1999}. Subsection~\ref{sec:ch242} does
+not re-tabulate Eq.~\eqref{eq:ch2.free-space-dyadic-green}; it fixes the sheet on
+which that formula is evaluated \cite{harrington2001}. The physical resolvent branch is
+\begin{equation}
+\label{eq:ch2.outgoing-resolvent-selection}
+\mathcal{L}_\omega^{-1}\big|_{\mathrm{phys}}
+=
+\mathcal{O}_{\mathrm{out}}\circ\mathcal{L}_\omega^{-1},
+\end{equation}
+understood on \(\mathcal{D}(\mathcal{L}_\omega)\) with outgoing \(\mathcal{B}_\Gamma\)
+\cite{stratton1941}. The solution map on impressed currents becomes
+\begin{equation}
+\label{eq:ch2.outgoing-solution-operator}
+\mathcal{S}_\omega[\Jimp]
+=
+\mathcal{O}_{\mathrm{out}}\,
+\Big(-\jj\omega\mu_0\int_{\Omega}
+\overline{\mathbf{G}}_{E,\omega}^{\mathrm{(out)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+\;+\;\E_{\mathrm{hom}}\Big),
+\end{equation}
+with regularization from Subsection~\ref{sec:ch232} when \(\mathbf{r}\) approaches
+\(\operatorname{supp}\Jimp\) \cite{harrington2001}. Equations
+\eqref{eq:ch2.outgoing-resolvent-selection} and~\eqref{eq:ch2.outgoing-solution-operator}
+realize Eq.~\eqref{eq:ch2.exterior-uniqueness-hypothesis} once
+Subsection~\ref{sec:ch243} proves uniqueness on the selected branch
+\cite{stratton1941}. Causality from Subsection~\ref{sec:ch233} is consistent with
+Eq.~\eqref{eq:ch2.outgoing-green-branch} but not sufficient when harmonic solvers
+bypass time-domain construction \cite{harrington2001}. The volume integral in
+Eq.~\eqref{eq:ch2.outgoing-solution-operator} sums impressed current contributions at each
+source point \(\mathbf{r}'\in\Omega\) against the outgoing dyadic evaluated at observation
+point \(\mathbf{r}\); \(\E_{\mathrm{hom}}\) carries any exterior illumination not generated
+by \(\Jimp\) and must vanish for pure radiation problems \cite{stratton1941}.
+On propagating content, outgoing selection precedes radiation export in the measurement sequence
+fixed in Section~\ref{sec:ch24}: $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ with
+$\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}$ \cite{stratton1941}. On
+propagating content,
+\begin{equation}
+\label{eq:ch2.outgoing-radiation-refinement}
+\Pi_{\mathrm{rad}}
+=
+\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}},
+\qquad
+\mathcal{R}_\omega
+=
+\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega,
+\end{equation}
+restating Eqs.~\eqref{eq:ch2.rad-projection-composition} and~\eqref{eq:ch2.radiation-operator-def}
+with the locked definition of \(\mathcal{O}_{\mathrm{out}}\)
+\cite{stratton1941}. Radiative subspace
+\(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}\) consists of fields
+with nonzero far-zone transverse amplitude Eq.~\eqref{eq:ch2.far-zone-transverse-radiation};
+\(\mathcal{O}_{\mathrm{out}}\) maps into \(\mathcal{F}_{\mathrm{SF}}\) but not
+automatically into \(\mathcal{F}_{\mathrm{rad}}\) when evanescent content dominates
+near sources \cite{stratton1941}. Transport reporting therefore requires
+Eq.~\eqref{eq:ch2.regime-operator-screen} after
+Eq.~\eqref{eq:ch2.outgoing-radiation-refinement} \cite{harrington2001}.
+Outgoing selection on a compact range is implemented twice in practice: absorbers suppress
+multipath reflections that would mimic incoming waves, and harmonic solvers fix the propagating
+$k_z$ branch of Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion} on exterior meshes
+\cite{hansen1988}. When either layer fails, $\mathcal{O}_{\mathrm{out}}$ acts on
+the wrong field orbit even though volume Maxwell rows still vanish \cite{harrington2001}.
+Incoming--outgoing split. Define \(\mathcal{O}_{\mathrm{in}}\) analogously on \(\mathcal{F}_{\mathrm{in}}\).
+On the propagating subspace,
+\begin{equation}
+\label{eq:ch2.incoming-outgoing-complement}
+\mathrm{id}
+=
+\mathcal{O}_{\mathrm{out}}+\mathcal{O}_{\mathrm{in}}
+\quad\text{on}\ \Pi_{\mathrm{prop}}\mathcal{F}_\Omega,
+\qquad
+\mathcal{O}_{\mathrm{out}}\mathcal{O}_{\mathrm{in}}=0,
+\end{equation}
+with evanescent and non-propagating components orthogonal to both when decay
+direction is fixed by Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.incoming-outgoing-complement}
+explains branch degeneracy in unconstrained Helmholtz solvers: both
+\(\mathcal{O}_{\mathrm{out}}[\mathbf{u}]\) and
+\(\mathcal{O}_{\mathrm{in}}[\mathbf{u}]\) satisfy volume equations unless one is
+selected by boundary or radiation completion \cite{jackson1999}.
+Equations~\eqref{eq:ch2.outgoing-selector-def}--\eqref{eq:ch2.outgoing-solution-operator}
+require linear media, fixed \(\omega\), and outgoing \(\mathcal{B}_\Gamma\) on
+exterior problems. They fail on closed PEC cavities where
+Eq.~\eqref{eq:ch1.outer-boundary-classes} replaces Sommerfeld completion, and on
+lossless open resonators where discrete spectra require quotienting
+Eq.~\eqref{eq:ch2.coercivity-quotient} \cite{stratton1941}.
+Absorbing layers approximate \(\mathcal{O}_{\mathrm{out}}\) but introduce spurious
+modes unless tuned to Eq.~\eqref{eq:ch2.sommerfeld-field-condition} at large distance
+\cite{harrington2001}.

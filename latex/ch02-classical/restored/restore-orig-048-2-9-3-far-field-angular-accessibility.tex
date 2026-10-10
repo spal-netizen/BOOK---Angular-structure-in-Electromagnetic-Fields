@@ -1,0 +1,206 @@
+% Stage 8 restored fragment — 2.9.3 Far-field angular accessibility (archive lines 12150-12360)
+\subsection{Far-field angular accessibility}
+\phantomsection\label{sec:ch294}
+Far angular $\mathcal{E}_{\mathrm{acc}}^{(N)}$ is what a finite probe count on $\Gamma_R$ can resolve after
+near-to-far extraction and geometric sectoring---not what a harmonic chart alone can label
+\cite{harrington2001}. Synthesis rank and observation rank must not be merged: the probe bank on
+$\Gamma_R$ sets accessible directions before harmonic labels attach \cite{harrington2001}.
+Chapter~3 relabels the same accessible set in VSH coordinates \cite{stratton1941}.
+\medskip
+\noindent\textit{probe rank.} Mount \(N=48\) probes on a spherical surface \(\Gamma_R\) at
+\(R=3\lambda_0\) enclosing a \(\lambda_0/4\) dipole feed, and truncate the harmonic chart at
+\(\ell\le10\). The dipole exports dominant \(\ell=1\) content, so the fitted coefficients
+\(\widehat{c}_{10,m}\) are nonzero on the accessible sector; nevertheless, rank-$N$ recovery is
+bounded jointly by probe count \(N\), scan geometry, and the truncated basis---not by the raw
+richness of the near-field phase on \(\Gamma_R\) \cite{hansen1988}.
+Far-field $\mathcal{E}_{\mathrm{acc}}^{(N)}$ criterion. Define \emph{far-field angular probe rank} by
+\phantomsection\label{eq:ch2.angular-accessibility-sector}
+
+\begin{equation}
+\label{eq:ch2.far-angular-accessibility-def}
+\widehat{\mathbf{k}}\in\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}
+\ \Longleftrightarrow\
+\Big[\,
+a(\widehat{\mathbf{k}})\neq 0
+\ \text{after}\ \Lambda_{\mathrm{nf}}
+\ \text{and}\ \mathcal{D}_{J,\mathrm{reg}}=1
+\,\Big]
+\ \text{and}\ 
+\widehat{\mathbf{k}}\in\mathcal{K}_{\mathrm{acc}},
+\end{equation}
+with \(\Lambda_{\mathrm{nf}}\) from Eq.~\eqref{eq:ch2.near-to-far-operator-composition} and
+\(\mathcal{K}_{\mathrm{acc}}\) from Eq.~\eqref{eq:ch2.angular-accessibility-sector}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.far-angular-accessibility-def}
+develops Eq.~\eqref{eq:ch2.far-angular-accessibility-def} by inserting explicit
+near-to-far qualification and geometric sector membership \cite{stratton1941}. Mathematically,
+\(\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}\subseteq\mathcal{K}_{\mathrm{acc}}\) is the
+far-field reportable subset after radiation and regime qualifications; physically, it marks directions
+where angular amplitude survives export and lies in the geometrically accessible hemisphere
+\cite{harrington2001}. Directions in \(\mathcal{K}_{\mathrm{sup}}\) are excluded
+before observation composition \cite{stratton1941}.
+Angular probe rank operator. Package Eq.~\eqref{eq:ch2.far-angular-accessibility-def} as the \emph{$\mathcal{E}_{\mathrm{acc}}^{(N)}$ projector}
+\begin{equation}
+\label{eq:ch2.angular-accessibility-operator}
+\mathcal{A}_{\mathrm{ff}}
+=
+\chi_{\mathcal{K}_{\mathrm{acc}}}\circ\mathcal{D}_{J,\mathrm{reg}}\circ\Lambda_{\mathrm{nf}},
+\qquad
+a_{\mathrm{acc}}(\widehat{\mathbf{k}})
+=
+\big[\mathcal{A}_{\mathrm{ff}}[\Jimp]\big](\widehat{\mathbf{k}}),
+\end{equation}
+with \(a_{\mathrm{acc}}\) the accessible angular amplitude before finite measurement
+\cite{stratton1941}. Equation~\eqref{eq:ch2.angular-accessibility-operator}
+aligns retained amplitude Eq.~\eqref{eq:ch2.retained-angular-amplitude-def} with near-to-far
+output when \(\operatorname{supp}(a)\subseteq\mathcal{K}_{\mathrm{acc}}\) near-to-far transformation (Subsection~\ref{sec:ch293})(iv) \cite{stratton1941}. Filtered observation
+Eq.~\eqref{eq:ch2.filtered-angular-amplitude-def} applies after
+Eq.~\eqref{eq:ch2.angular-accessibility-operator}:
+\(a_{\mathrm{filt}}=\mathcal{P}_{\mathrm{meas}}[a_{\mathrm{acc}}]\)
+\cite{harrington2001}. Null additions leave \(a_{\mathrm{acc}}\) unchanged through
+Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance} \cite{stratton1941}.
+On lateral coordinates, define the \emph{plane-wave probe rank filter} by
+\begin{equation}
+\label{eq:ch2.plane-wave-accessibility-filter}
+\widetilde{\E}_{\mathrm{acc}}(k_x,k_y)
+=
+\chi_{\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}}(\widehat{\mathbf{k}})\,
+\widetilde{\E}_{\mathrm{rad}}(k_x,k_y),
+\qquad
+(k_x,k_y)\mapsto\widehat{\mathbf{k}}\ \text{on}\ k_t\le k_0,
+\end{equation}
+with \(\widetilde{\E}_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.plane-wave-accessibility-filter}
+is the Subsection~\ref{sec:ch294} plane-wave criterion promised in
+Eq.~\eqref{eq:ch2.far-angular-accessibility-preview}: it removes geometrically forbidden
+directions on the propagating outgoing sheet without re-tabulating
+Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} \cite{stratton1941}. Evanescent sheets satisfy
+\(\widetilde{\E}_{\mathrm{acc}}=\mathbf{0}\) for \(k_t>k_0\) through
+Eq.~\eqref{eq:ch2.evanescent-angular-null-law} \cite{stratton1941}. Physically,
+Eq.~\eqref{eq:ch2.plane-wave-accessibility-filter} is the angular-spectrum-side statement of which
+plane-wave directions participate in far-zone reports \cite{jackson1999}.
+Far-field $\mathcal{E}_{\mathrm{acc}}^{(N)}$ composes with \ref{ch:01} transport qualification by reference.
+A direction \(\widehat{\mathbf{k}}\in\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}\) supports a
+qualified transport report on solid-angle sector \(\Delta\Omega(\widehat{\mathbf{k}})\) only when
+Section~\ref{sec:ch01.2.3} propagative support Eq.~\eqref{eq:ch1.propagative-support} and
+transport decision Eq.~\eqref{eq:ch1.transport-qualified-decision} hold for the corresponding
+directional channels Eqs.~\eqref{eq:ch1.directional-power-density}--\eqref{eq:ch1.directional-am-flux}
+\cite{stratton1941}. Restated in operator form,
+\begin{equation}
+\label{eq:ch2.far-angular-transport-criterion}
+\mathcal{T}_{\mathrm{acc}}(\widehat{\mathbf{k}})=1
+\ \Longrightarrow\
+\int_{\Delta\Omega(\widehat{\mathbf{k}})}\Pi(\theta,\phi;r)\,d\Omega>0
+\ \text{and}\ 
+\mathcal{Q}_{J}=1,
+\end{equation}
+with \(\Pi\) from Eq.~\eqref{eq:ch1.directional-power-density},
+\(\mathcal{Q}_{J}\) from Eq.~\eqref{eq:ch1.torque-transport-qualified-gate}, and
+\(r\) in the far zone where Eq.~\eqref{eq:ch2.near-to-far-transform-def} applies
+\cite{stratton1941}. Equation~\eqref{eq:ch2.far-angular-transport-criterion} imports
+Section~\ref{sec:ch01.2.3} criteria without re-deriving the transport triad: Chapter~\ref{ch:02}
+records when far-zone probe rank implies \ref{ch:01} transport admissibility on
+the same sector \cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} remains
+mandatory: \(\mathcal{T}_{\mathrm{acc}}=1\) does not promote reactive near content to export
+\cite{harrington2001}.
+Angular measurement criterion. After rank-$N$ recovery projection, finite instruments apply
+\begin{equation}
+\label{eq:ch2.angular-measurement-screen}
+a_{\mathrm{obs}}(\widehat{\mathbf{k}})
+=
+\big[\mathcal{P}_{\mathrm{meas}}\,a_{\mathrm{acc}}\big](\widehat{\mathbf{k}}),
+\qquad
+\operatorname{supp}(a_{\mathrm{obs}})
+\subseteq
+\{\widehat{\mathbf{k}}:\ \text{resolvable by}\ \mathcal{M}_\omega\}
+\cap
+\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}},
+\end{equation}
+with \(\mathcal{P}_{\mathrm{meas}}\) from Eq.~\eqref{eq:ch2.filtered-angular-amplitude-def}
+\cite{stratton1941}. Equation~\eqref{eq:ch2.angular-measurement-screen} is the
+Subsection~\ref{sec:ch294} measurement completion: observation rank
+Eq.~\eqref{eq:ch2.angular-spectrum-observation-rank} may strictly shrink
+\(\operatorname{supp}(a_{\mathrm{obs}})\) inside \(\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}\)
+\cite{stratton1941}. Rank cap Eq.~\eqref{eq:ch2.filtered-rank-bound} limits resolvable directions
+independently of source nullity \cite{harrington2001}. Physically, \(a_{\mathrm{obs}}\) is the
+laboratory-accessible angular spectrum after geometry, regime, near-to-far extraction, and
+aperture \cite{stratton1941}.
+Accessible angular budget. Collecting Subsection~\ref{sec:ch294} constraints,
+\phantomsection\label{eq:ch2.accessible-modal-sector}
+\begin{equation}
+\label{eq:ch2.accessible-angular-budget}
+\operatorname{supp}(a_{\mathrm{obs}})
+\subseteq
+\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}
+\cap
+\{\widehat{\mathbf{k}}:\ \mathcal{T}_{\mathrm{acc}}(\widehat{\mathbf{k}})=1\}
+\cap
+\{\widehat{\mathbf{k}}:\ \text{resolvable by}\ \mathcal{M}_\omega\},
+\end{equation}
+composing geometric, transport, and observation factors with angular budget
+Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} \cite{stratton1941}. Equation
+\eqref{eq:ch2.accessible-angular-budget} is the Section~\ref{sec:ch29} completion of
+Eq.~\eqref{eq:ch2.section29-angular-spectrum-chain}: each factor removes a distinct laboratory error
+--- radiation nullity, geometric forbidding, regime violation, transport disqualification, and
+finite aperture --- without conflating them \cite{stratton1941}. Reciprocity in radiation and reception (Subsection~\ref{sec:ch283}) constrains coupling among observed channels on
+\(\operatorname{supp}(a_{\mathrm{obs}})\) but does not enlarge
+Eq.~\eqref{eq:ch2.accessible-angular-budget} \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (nf) {$\Lambda_{\mathrm{nf}}$};
+ \node[ch1box, right=7mm of nf] (acc) {$\mathcal{A}_{\mathrm{ff}}$};
+ \node[ch1box, right=7mm of acc] (t) {$\mathcal{T}_{\mathrm{acc}}$};
+ \node[ch1box, right=7mm of t] (m) {$\mathcal{P}_{\mathrm{meas}}$};
+ \node[ch1box, right=7mm of m] (obs) {$a_{\mathrm{obs}}$};
+ \node[ch1box, below=5mm of acc] (k) {$\mathcal{K}_{\mathrm{acc}}$};
+ \node[ch1box, below=5mm of t] (c1) {Subsection~\ref{sec:ch01.2.3}};
+ \draw[ch1flow] (nf) -- (acc) -- (t) -- (m) -- (obs);
+ \draw[ch1flow] (k.south) -- (k.south |- acc.north);
+ \draw[ch1flow] (k.south |- acc.north) -- (acc.north);
+ \draw[ch1flow, dashed] (c1.south) -- (t.north);
+\end{tikzpicture}%
+}
+\caption{Subsection~\ref{sec:ch294} $\mathcal{E}_{\mathrm{acc}}^{(N)}$ measurement sequence:
+Eq.~\eqref{eq:ch2.angular-accessibility-operator} applies near-to-far extraction, geometric
+sector \(\mathcal{K}_{\mathrm{acc}}\), transport criterion Eq.~\eqref{eq:ch2.far-angular-transport-criterion}
+(Subsection~\ref{sec:ch01.2.3}), and measurement criterion
+Eq.~\eqref{eq:ch2.angular-measurement-screen}.}
+\label{fig:ch2.far-angular-accessibility-pipeline}
+\end{figure}
+Figure interpretation. Full angular content on $S^{2}$ passes through geometric sector Eq.~\eqref{eq:ch2.accessible-modal-sector}, regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen}, and finite observation rank Eq.~\eqref{eq:ch2.reconstruction-rank-cap}. The accessible output is the intersection of export-supported directions with aperture-resolvable modes---not the raw pattern from forward integration. Null-space additions leave $a(\widehat{\mathbf{k}})$ fixed but may alter near reactive traces used in calibration \cite{stratton1941}. Suppressed directions never enter \(a_{\mathrm{obs}}\); evanescent content is removed before
+\(\Lambda_{\mathrm{nf}}\) by Eq.~\eqref{eq:ch2.near-to-far-evanescent-null}
+\cite{stratton1941}.
+Mathematical role of Eq.~\eqref{eq:ch2.far-angular-accessibility-def}. Equation~\eqref{eq:ch2.far-angular-accessibility-def} closes Section~\ref{sec:ch29} by stating
+which directions on \(S^{2}\) remain after radiation selection, geometric constraints, and
+regime qualification \cite{stratton1941}. It develops Eq.
+Eq.~\eqref{eq:ch2.far-angular-accessibility-preview} with explicit dependence on
+\(\Lambda_{\mathrm{nf}}\) and \(\mathcal{K}_{\mathrm{acc}}\) \cite{stratton1941}. Operator form
+Eq.~\eqref{eq:ch2.angular-accessibility-operator} packages the same logic for source-to-amplitude
+maps \cite{harrington2001}. \ref{ch:03} harmonic bases relabel
+\(\mathcal{K}_{\mathrm{acc}}^{\mathrm{ff}}\) without altering the budget
+Eq.~\eqref{eq:ch2.accessible-angular-budget} \cite{stratton1941}. Mathematical role of Eq.~\eqref{eq:ch2.plane-wave-accessibility-filter}. Equation~\eqref{eq:ch2.plane-wave-accessibility-filter} is the lateral-coordinate criterion
+completing the plane-wave chain begun in Subsection~\ref{sec:ch291} \cite{stratton1941}.
+It removes forbidden directions before near-to-far comparison and measurement
+\cite{harrington2001}. Agreement with \(a_{\mathrm{acc}}\) on \(k_t\le k_0\) follows from
+Eq.~\eqref{eq:ch2.near-to-far-lateral-link} \cite{stratton1941}. Evanescent sheets remain null
+through Eq.~\eqref{eq:ch2.evanescent-angular-null-law} independently of raw lateral scans
+\cite{stratton1941}.
+Subsections~\ref{sec:ch291}--\ref{sec:ch294} complete
+Eq.~\eqref{eq:ch2.section29-angular-spectrum-chain}:
+plane-wave radiation operators, retained/suppressed/filtered partition, near-to-far extraction,
+and far-field $\mathcal{E}_{\mathrm{acc}}^{(N)}$ \cite{stratton1941}. Modal coordinates
+Eq.~\eqref{eq:ch2.spectral-far-pattern-expansion} and plane-wave coordinates
+Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} describe identical export on
+\(\operatorname{ran}\mathcal{R}_\omega\); Section~\ref{sec:ch29} fixes angular-spectrum filters on
+the plane-wave branch \cite{stratton1941}. Inverse obstruction in Subsection~\ref{sec:ch274} applies to \(a_{\mathrm{obs}}\),
+not to pre-probe rank transforms \cite{harrington2001}. Subsection~\ref{sec:ch294} assumes linear media, fixed \(\omega\), outgoing closure, and
+stationary geometry \(\mathcal{C}_{\mathrm{geo}}\) \cite{stratton1941}.
+Time-varying \(\mathcal{M}_\omega\) requires separate treatment; static rank bounds remain upper
+limits \cite{stratton1941}. Loss modifies amplitudes but not the inclusion chain in
+Eq.~\eqref{eq:ch2.accessible-angular-budget} \cite{stratton1941}. Cavity and guide spectra remain
+outside exterior rank-$N$ recovery; discrete books do not substitute for
+Eq.~\eqref{eq:ch2.far-angular-accessibility-def} on unbounded domains
+\cite{jackson1999}. Section~\ref{sec:ch01.2.3} transport criteria are imported, not
+extended to near reactive zones without regime qualification \cite{stratton1941}.
+The mathematical statements in Section~\ref{sec:ch29} state what compact-range engineers already enforce through gating, scan distance, and modal banks: far-field angular probe rank is the intersection of export-supported directions with instrument-resolvable modes, not the raw output of a forward integral \cite{harrington2001}. The important distinction is between spectral content present in $\mathcal{S}_\omega[\Jimp]$ and content that remains in $a_{\mathrm{obs}}$ after $\mathcal{K}_{\mathrm{acc}}$ and $\mathcal{O}_{\mathrm{meas}}$ have acted \cite{stratton1941}. Section~\ref{sec:ch210} returns to named hardware configurations so one may see nullity, rank limits, evanescent contamination, and structured-source topology as separate terms in one diagnostic partition rather than as a single pattern residual \cite{hansen1988}.

@@ -1,0 +1,328 @@
+% Stage 8 restored fragment — 2.3.3 Singularities, distributions, and regularization (archive lines 4086-4419)
+\subsection{Singularities, distributions, and regularization}
+\label{sec:ch232}
+Layered substrates in patch and handset designs modify Green propagation through
+reflection coefficients at material interfaces \cite{stratton1941}. Printed antennas and
+handset boards propagate through layered media; the free-space dyadic is the reference
+impulse, not the laboratory default when a probe hovers above a dielectric stack
+\cite{collin2001}. Probe correction files must include substrate Green
+response, not free-space alone, because the governing question---how a point source on a
+feed line launches fields to a probe above the substrate---already presupposes outgoing
+propagation in each half-space \cite{sommerfeld1949}. Kernels transport impressed
+currents; they do not specify which currents the feed can realize \cite{devaney2004}.
+Subsection~\ref{sec:ch231} defined scalar and dyadic Green kernels that satisfy
+Eqs.~\eqref{eq:ch2.scalar-helmholtz-green-pde} and~\eqref{eq:ch2.dyadic-green-defining-operator}
+for \(\mathbf{r}\neq\mathbf{r}'\) and deferred coincidence evaluation to the present
+subsection \cite{stratton1941}. Subsection~\ref{sec:ch232}
+supplies the definitive account of distributional convolutions, principal-value
+and finite-part prescriptions, static--dynamic kernel splits, and self-term
+regularization that make Eq.~\eqref{eq:ch2.electric-dyadic-convolution} well-defined
+on \(\Jimp\in\mathcal{J}_\Omega\) including sheet and filamentary support. The
+Sobolev and distributional source classes of Subsection~\ref{sec:ch211} are presupposed
+through Eqs.~\eqref{eq:ch2.distributional-source-extension} and~\eqref{eq:ch2.dual-source-pairing};
+their functional-analytic construction is not repeated. Retarded time-domain support
+belongs to Subsection~\ref{sec:ch233}; outgoing branch selection at infinity belongs
+to Section~\ref{sec:ch24}. Let \(\Omega\Subset\mathbb{R}^{3}\) be Lipschitz with piecewise smooth internal
+interfaces, \(\omega>0\) fixed, and \(\Jimp\) in the refined source class
+Eq.~\eqref{eq:ch2.source-space-refined} or its distributional extension
+Eq.~\eqref{eq:ch2.distributional-source-extension}. Kernels are the vacuum templates
+Eqs.~\eqref{eq:ch2.free-space-scalar-green} and~\eqref{eq:ch2.free-space-dyadic-green}
+unless \(\mathcal{B}_\Gamma\) or piecewise \(k(\mathbf{r})\) modify them patchwise.
+Observation points \(\mathbf{r}\) may approach \(\operatorname{supp}\Jimp\) but
+remain in the domain where \(\E\in\HCurl(\Omega)\) is sought.
+For \(\mathbf{r}\notin\operatorname{supp}\Jimp\), the convolution
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution} is a classical integral. What happens when
+observation and source points become arbitrarily close? The free-space dyad develops a
+non-integrable leading singularity: field amplitudes grow as inverse powers of separation
+$R$, reflecting reactive storage and self-interaction between neighboring source elements
+\cite{stratton1941}. These singularities do not imply infinite radiated power---they signal
+that pointwise source models and naive quadrature break down, while extended patches with
+finite extent carry finite reactive energy \cite{jackson1999}. As
+\(\mathbf{r}\to\mathbf{r}'\in\operatorname{supp}\Jimp\), the free-space dyad
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} develops a non-integrable leading singularity;
+the local expansion in powers of \(k_0 R\) separates static storage from dynamic radiation
+and is the analytic starting point for every regularization scheme in the display below.
+With separation vector \(\mathbf{R}=\mathbf{r}-\mathbf{r}'\), distance \(R=|\mathbf{R}|\) in
+metres, observation point $\mathbf{r}$ and source point $\mathbf{r}'$, and unit direction
+\(\widehat{\mathbf{R}}=\mathbf{R}/R\),
+
+\begin{equation}
+\label{eq:ch2.dyadic-singular-expansion}
+\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{r}')
+=
+\frac{1}{4\pi R^{3}}\,\overline{\mathbf{P}}_{t}(\widehat{\mathbf{R}})
+\;+\;
+\frac{\jj k_0}{4\pi R^{2}}\,\overline{\mathbf{Q}}(\widehat{\mathbf{R}})
+\;+\;
+\frac{k_0^{2}}{4\pi R}\,\overline{\mathbf{S}}(\widehat{\mathbf{R}})
+\;+\;\mathcal{O}(k_0^{3}),
+\end{equation}
+where \(\overline{\mathbf{P}}_{t}(\widehat{\mathbf{R}})=\overline{\mathbf{I}}-3\widehat{\mathbf{R}}\widehat{\mathbf{R}}\)
+is transverse to \(\mathbf{R}\) and \(\overline{\mathbf{Q}}\), \(\overline{\mathbf{S}}\)
+collect the next two anisotropic terms in the locked phasor convention
+\cite{harrington2001}. Equation~\eqref{eq:ch2.dyadic-singular-expansion} matches the
+\(R^{-3}\), \(R^{-2}\), and \(R^{-1}\) pieces of
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} and separates reactive near storage from
+radiative \(R^{-1}\) decay. The \(R^{-3}\) term is non-integrable in a neighborhood
+of coincidence; convolution with \(\Jimp\) therefore requires a distributional or
+regularized definition, not pointwise Riemann integration
+\cite{stratton1941}. The scalar kernel Eq.~\eqref{eq:ch2.free-space-scalar-green}
+carries the parallel ordering \(R^{-1}\), \(R^{0}\), \ldots\ with
+\(R^{-1}\) non-integrable on neighborhoods of the source.
+In the electrostatic limit \(k_0\to 0\) at fixed separation \(R>0\) (metres), the dynamic
+terms in Eq.~\eqref{eq:ch2.dyadic-singular-expansion} vanish and only the \(R^{-3}\)
+dipolar projector survives; that static piece is extracted analytically in
+method-of-moments codes before the smooth remainder is integrated numerically.
+Eq.~\eqref{eq:ch2.dyadic-singular-expansion} reduces to
+\begin{equation}
+\label{eq:ch2.static-dyadic-limit}
+\overline{\mathbf{G}}_{E,0}^{\mathrm{(st)}}(\mathbf{r},\mathbf{r}')
+=
+\frac{1}{4\pi R^{3}}\Big(\overline{\mathbf{I}}-3\,\widehat{\mathbf{R}}\widehat{\mathbf{R}}\Big),
+\end{equation}
+the field of a unit dipole aligned with each Cartesian source direction
+\cite{jackson1999}. Physically, Eq.~\eqref{eq:ch2.static-dyadic-limit} captures static-field
+dominance at small $k_0 R$: reactive storage and self-interaction between neighboring
+current elements overwhelm the radiative $R^{-1}$ term until separation or frequency
+increases \cite{stratton1941}. Equation~\eqref{eq:ch2.static-dyadic-limit} is the
+leading singular part extracted in method-of-moments static--dynamic splits: dynamic
+corrections are \(\mathcal{O}(k_0 R)\) relative to the static term when
+\(k_0 R\ll 1\) on source patches \cite{harrington2001}. For divergence-free
+\(\Jimp\), the \(\grad\,\divg\) structure of Lorenz reduction
+Eq.~\eqref{eq:ch2.lorenz-field-from-potential} removes monopole artifacts; the
+dominant self-coupling on compact patches is dipolar and transverse to the separation
+vector between observation and source centroids \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (src) {Source patch\\$\operatorname{supp}\Jimp$};
+ \node[ch1box, right=16mm of src] (near) {Near zone\\$R\to 0$};
+ \node[ch1box, right=16mm of near] (reg) {Regularized\\convolution};
+ \node[ch1box, below=5mm of near] (sing) {$G_{\mathrm{sing}}$};
+ \node[ch1box, below=5mm of reg] (cpt) {$K_{\mathrm{cpt}}$};
+ \draw[ch1flow] (src) -- (near) -- (reg);
+ \draw[ch1flow] (near.south) -- (near.south |- sing.north);
+ \draw[ch1flow] (near.south |- sing.north) -- (sing.north);
+ \draw[ch1flow] (reg.south) -- (reg.south |- cpt.north);
+ \draw[ch1flow] (reg.south |- cpt.north) -- (cpt.north);
+\end{tikzpicture}%
+}
+\caption{Singular--regular split at coincidence: non-integrable \(G_{\mathrm{sing}}\)
+is extracted analytically; remainder \(K_{\mathrm{cpt}}\) is smooth for Galerkin or
+point evaluation away from the extracted neighborhood.}
+\label{fig:ch2.singular-regularization-split}
+\end{figure}
+~\eqref{eq:ch2.green-compact-split} at kernel level. The decomposition separates analytically known local physics from the smoother long-range interaction that can be handled numerically: $\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}$ collects the non-integrable near-zone coupling, while $\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}$ is the remainder suitable for standard quadrature \cite{harrington2001}. Write
+\begin{equation}
+\label{eq:ch2.kernel-singular-regular-split}
+\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')
+=
+\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}(\mathbf{r},\mathbf{r}')
++\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}(\mathbf{r},\mathbf{r}'),
+\end{equation} with \(\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}\) collecting the non-integrable
+static and leading dynamic singularities of Eq.~\eqref{eq:ch2.dyadic-singular-expansion}
+and \(\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}\) bounded on
+\(\Omega\times\Omega\) \cite{stratton1941}. The corresponding
+solution operator split is
+\begin{equation}
+\label{eq:ch2.solution-singular-compact-split}
+\mathcal{S}_\omega
+=
+\mathcal{G}_{\mathrm{sing}}+\mathcal{K}_{\mathrm{cpt}},
+\qquad
+\mathcal{G}_{\mathrm{sing}}[\Jimp]
+=
+-\jj\omega\mu_0\int_{\Omega}
+\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r',
+\end{equation}
+with \(\mathcal{K}_{\mathrm{cpt}}\) compact on bounded \(\Omega\) when
+\(\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}\) is square-integrable in both variables
+\cite{stratton1941}. Here $\mathcal{G}_{\mathrm{sing}}$ is the singular propagation
+operator carrying non-integrable near-zone coupling, $\mathcal{K}_{\mathrm{cpt}}$ is the
+compact remainder suitable for stable numerical quadrature, and
+$\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}$ and $\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}$
+are the corresponding kernel split defined in Eq.~\eqref{eq:ch2.kernel-singular-regular-split}
+\cite{harrington2001}. Equations~\eqref{eq:ch2.kernel-singular-regular-split}
+and~\eqref{eq:ch2.solution-singular-compact-split} realize
+Eq.~\eqref{eq:ch2.green-compact-split} for Green-based inversion; Fredholm consequences
+are developed in Section~\ref{sec:ch263} \cite{harrington2001}.
+When \(\Jimp\) is a bounded function, Eq.~\eqref{eq:ch2.electric-dyadic-convolution}
+defines \(\E\in L^{2}_{\mathrm{loc}}(\Omega)^{3}\) away from the source. For sheet
+currents Eq.~\eqref{eq:ch2.distributional-source-extension}, the convolution is defined
+by duality: for all smooth compactly supported test fields \(\boldsymbol{\phi}\) (dimensionless
+weighting fields that probe how the electric field pairs against admissible test states),
+\begin{equation}
+\label{eq:ch2.distributional-dyadic-pairing}
+\langle\E,\boldsymbol{\phi}\rangle_{\Omega}
+=
+-\jj\omega\mu_0
+\sum_{ab}\int_{\Sigma_{ab}}\int_{\Omega}
+\mathbf{J}_{s,ab}(\mathbf{r}')
+\cdot\overline{\mathbf{G}}_{E}^{\mathsf{T}}(\mathbf{r}',\mathbf{r})\cdot\boldsymbol{\phi}(\mathbf{r})\,d^{3}r\,dS',
+\end{equation}
+Here $\boldsymbol{\phi}$ is a smooth test field used to probe the electric field when
+pointwise evaluation fails; $\Sigma_{ab}$ is a surface patch carrying sheet current
+$\mathbf{J}_{s,ab}$ (A\,m\(^{-1}\)), the surface density of impressed current on patch
+$(a,b)$; and $\mathbf{J}_{s,ab}(\mathbf{r}')$ is the physical current flowing on that
+patch at source point $\mathbf{r}'$ \cite{stratton1941}, with appropriate Fubini interpretation and outgoing radiation condition on exterior problems
+\cite{stratton1941}. Equation~\eqref{eq:ch2.distributional-dyadic-pairing} is the
+weak form of Eq.~\eqref{eq:ch2.electric-dyadic-convolution} when pointwise evaluation
+fails; it pairs with Eq.~\eqref{eq:ch2.maxwell-weak-form} once \(\boldsymbol{\phi}\)
+is replaced by admissible test states in \(\mathcal{F}_\Omega^{0}\)
+\cite{harrington2001}. Physically, sheet sources produce jump conditions on
+\(\hat{\mathbf{n}}\times\E\) and \(\hat{\mathbf{n}}\times\H\); the distributional
+definition ensures those jumps arise from the same kernel as volume currents, not from
+ad hoc post-factors \cite{stratton1941}.
+For volume \(\Jimp\) and observation points \(\mathbf{r}\notin\operatorname{supp}\Jimp\)
+approaching the support, one may attempt to define the field as the symmetric limit of
+integrals that exclude a small ball about the observation point. The principal value is that
+symmetric exclusion limit: ordinary integration fails because the $R^{-3}$ pole is not
+integrable over a neighborhood of coincidence, but symmetric cancellation about the
+observation point can still yield a finite field when the singularity is weak enough
+\cite{jackson1999}. Define the principal-value convolution
+\begin{equation}
+\label{eq:ch2.principal-value-convolution}
+\E(\mathbf{r})
+=
+-\jj\omega\mu_0\,\mathrm{p.v.}\int_{\Omega}
+\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r',
+\end{equation}
+as the limit of integrals over \(\Omega\setminus B_{\varepsilon}(\mathbf{r})\) as
+\(\varepsilon\downarrow 0\) when that limit exists in \(\HCurl(\Omega)\)
+\cite{jackson1999}. For observation on the source support---for example
+\(\mathbf{r}\in\Sigma_{ab}\) for a surface patch---the principal value generally
+diverges because of the \(R^{-3}\) term; the \emph{Hadamard finite part} subtracts
+the singular expansion explicitly and retains the finite reactive coupling between
+extended patches. Finite-part subtraction works because the non-integrable piece is known
+analytically from Eq.~\eqref{eq:ch2.dyadic-singular-expansion} and can be removed before
+the remainder is integrated numerically---the engineering prescription MoM codes implement
+as static--dynamic splitting \cite{harrington2001}:
+\begin{equation}
+\label{eq:ch2.finite-part-convolution}
+\E(\mathbf{r})
+=
+-\jj\omega\mu_0\lim_{\varepsilon\to 0}
+\left[
+\int_{\Omega\setminus B_{\varepsilon}(\mathbf{r})}
+\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+\;+\;
+\int_{B_{\varepsilon}(\mathbf{r})\cap\Omega}
+\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+\right],
+\end{equation}
+provided \(\Jimp\) is smooth enough on the patch that the limit exists
+\cite{harrington2001}. Equation~\eqref{eq:ch2.finite-part-convolution} is the
+prescription for on-surface field evaluation; it differs
+from Eq.~\eqref{eq:ch2.principal-value-convolution} by the explicit analytic
+subtraction of \(\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}\), not by numerical
+mesh refinement alone \cite{stratton1941}. Mathematically, the finite part is the
+constant term in the Laurent expansion of the integral as \(\varepsilon\to 0\);
+physically, it removes infinite self-energy of pointwise source models while retaining
+finite reactive coupling between extended patches \cite{jackson1999}.
+Method-of-moments and boundary-element codes replace the continuum convolution
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution} by discrete impedance entries obtained
+by testing the dyadic kernel against pairs of basis functions on source patches. In plain
+language: $\mathbf{f}_m$ and $\mathbf{f}_n$ are the $m$th and $n$th current basis functions
+on patches $\Omega_m$ and $\Omega_n$; $\Omega_m$ and $\Omega_n$ are the surface or volume
+patches where those basis functions live; and $Z_{mn}$ is the mutual impedance---the
+complex voltage response at patch $m$ per unit current on patch $n$---that a numerical code
+assembles from the double integral below \cite{harrington2001}. What a MoM code actually
+computes is this bilinear pairing of basis functions through the dyadic propagator, not a
+pointwise field evaluation at patch centers unless a separate approximation is introduced.
+The Galerkin entry for patches \(\Omega_m\) and \(\Omega_n\) reads
+\begin{equation}
+\label{eq:ch2.mom-dyadic-entry}
+Z_{mn}
+=
+-\jj\omega\mu_0\int_{\Omega_m}\int_{\Omega_n}
+\mathbf{f}_m(\mathbf{r})\cdot
+\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot
+\mathbf{f}_n(\mathbf{r}')\,d^{3}r\,d^{3}r',
+\end{equation}
+for basis functions \(\mathbf{f}_m,\mathbf{f}_n\) on patches \(\Omega_m,\Omega_n\)
+\cite{harrington2001}. When \(m=n\), the integrand is non-integrable at
+\(\mathbf{r}=\mathbf{r}'\); the Chapter~\ref{ch:02} regularized self-term is
+\begin{equation}
+\label{eq:ch2.mom-self-term-regularized}
+Z_{mm}^{\mathrm{(reg)}}
+=
+-\jj\omega\mu_0\int_{\Omega_m}\int_{\Omega_m}
+\mathbf{f}_m(\mathbf{r})\cdot
+\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}(\mathbf{r},\mathbf{r}')\cdot
+\mathbf{f}_m(\mathbf{r}')\,d^{3}r\,d^{3}r'
+\;+\;
+Z_{mm}^{\mathrm{(sing)}},
+\end{equation}
+where $Z_{mm}^{\mathrm{(reg)}}$ is the numerically integrated smooth remainder,
+$Z_{mm}^{\mathrm{(sing)}}$ is the analytic integral of
+\(\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}\) over the coincident patch---often
+reduced to closed forms for flat triangles and rectangles---and the sum is the quantity a
+code must assemble so that neighboring mesh elements do not produce near-singular divergences
+when observation and source points approach one another \cite{stratton1941}. Point
+matching---evaluating Eq.~\eqref{eq:ch2.electric-dyadic-convolution} at patch centers
+with \(\overline{\mathbf{G}}_{E}\) replaced by
+\(\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}\) only---is \emph{not} equivalent to
+Eq.~\eqref{eq:ch2.mom-self-term-regularized} unless basis overlap and singular
+subtraction match the same finite-part convention \cite{harrington2001}. The
+distinction is one of source realizability: Galerkin testing defines a bounded bilinear form on
+\(\mathcal{J}_\Omega\times\mathcal{J}_\Omega\); raw point evaluation does not
+\cite{stratton1941}.
+When \(\mathbf{r}\) and \(\mathbf{r}'\) lie on distinct patches separated by small
+distance \(d\ll \lambda_0=2\pi/k_0\), direct quadrature of
+Eq.~\eqref{eq:ch2.free-space-dyadic-green} is ill-conditioned. Physically, neighboring mesh
+elements interact through nearly coincident kernel samples: the separation is small enough
+that reactive $R^{-3}$ and $R^{-2}$ terms vary rapidly across the integration domain, and
+standard quadrature underestimates or overestimates the coupling unless the singular part is
+subtracted and integrated analytically \cite{harrington2001}. The standard
+subtraction template is
+\begin{equation}
+\label{eq:ch2.near-singular-subtraction}
+\int_{\Omega_n}
+\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+=
+\int_{\Omega_n}
+\Big[\overline{\mathbf{G}}_{E}-\overline{\mathbf{G}}_{E}^{\mathrm{(near)}}(\mathbf{r},\mathbf{r}')\Big]
+\cdot\Jimp(\mathbf{r}')\,d^{3}r'
+\;+\;
+\int_{\Omega_n}
+\overline{\mathbf{G}}_{E}^{\mathrm{(near)}}(\mathbf{r},\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}r',
+\end{equation}
+where \(\overline{\mathbf{G}}_{E}^{\mathrm{(near)}}\) matches the first few terms of
+Eq.~\eqref{eq:ch2.dyadic-singular-expansion} about \(\mathbf{r}\) and the integral of
+\(\overline{\mathbf{G}}_{E}^{\mathrm{(near)}}\) is evaluated analytically
+\cite{harrington2001}. Equation~\eqref{eq:ch2.near-singular-subtraction}
+does not alter the continuum operator; it stabilizes numerical approximation of
+\(\mathcal{K}_{\mathrm{cpt}}\) in Eq.~\eqref{eq:ch2.solution-singular-compact-split}.
+Scalar singularities are weaker than dyadic singularities: the monopole kernel diverges only
+as $R^{-1}$, which is barely non-integrable in three dimensions, whereas the dyadic kernel
+carries an $R^{-3}$ pole that breaks naive integration more severely \cite{jackson1999}. This
+distinction matters computationally because scalar potential formulations can sometimes use
+simpler self-term corrections, while vector MoM codes must implement full static--dynamic
+dyadic subtraction \cite{harrington2001}. The scalar Green function satisfies, in distributional sense,
+\begin{equation}
+\label{eq:ch2.scalar-coincidence-limit}
+\int_{B_{\varepsilon}(\mathbf{r})}
+G_0(\mathbf{r},\mathbf{r}')\,d^{3}r'
+=
+\frac{\varepsilon}{2}
+\;+\;\mathcal{O}(\varepsilon^{3}),
+\end{equation}
+for small balls \(B_{\varepsilon}(\mathbf{r})\) in \(\mathbb{R}^{3}\), reflecting the
+\(R^{-1}\) integrability borderline in three dimensions \cite{jackson1999}. Equation
+\eqref{eq:ch2.scalar-coincidence-limit} explains why monopole self-terms in scalar
+potential formulations require either finite source extent or explicit regularization;
+vector dyads inherit stronger \(R^{-3}\) divergence captured by
+Eq.~\eqref{eq:ch2.static-dyadic-limit} \cite{stratton1941}.
+Equations~\eqref{eq:ch2.finite-part-convolution}--\eqref{eq:ch2.mom-self-term-regularized}
+require patchwise smooth \(\Jimp\), Lipschitz \(\Omega\), and fixed \(\omega\) in the
+passive linear band. They fail for point dipoles modeled as \(\delta\)-supported
+\(\Jimp\) without accompanying finite-part renormalization, and for non-Lipschitz
+edges where \(\HCurl\) membership of \(\E\) requires additional edge singularities not captured by Eq.~\eqref{eq:ch2.dyadic-singular-expansion}
+\cite{stratton1941}. Lossy media with complex \(k_0\) shift singular
+expansion coefficients but not the order of the \(R^{-3}\) pole; Subsection~\ref{sec:ch232}
+does not re-tabulate complex-\(k\) subtractors \cite{stratton1941}. Regularized convolutions
+now make $\mathcal{S}_\omega[\Jimp]$ well-defined when observation $\mathbf{r}$ approaches source
+support; retarded time-domain support fixes \emph{when} those spatial kernels may act, completing
+the causal picture begun in the harmonic dyads with $\mathbf{r}$ as observation and $\mathbf{r}'$
+as source \cite{stratton1941}.

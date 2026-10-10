@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ORIG-001",
+    "file": "section-orig-001-2-0-introduction.tex",
+    "title": "2.0 Introduction"
+  },
+  {
+    "id": "ORIG-005",
+    "file": "section-orig-005-2-1-function-spaces-and-maxwell-operators.tex",
+    "title": "2.1 Function Spaces and Maxwell Operators"
+  },
+  {
+    "id": "ORIG-010",
+    "file": "section-orig-010-2-2-time-and-frequency-domain-maxwell-operators.tex",
+    "title": "2.2 Time- and Frequency-Domain Maxwell Operators"
+  },
+  {
+    "id": "ORIG-014",
+    "file": "section-orig-014-2-3-green-functions-and-electromagnetic-inversion.tex",
+    "title": "2.3 Green Functions and Electromagnetic Inversion"
+  },
+  {
+    "id": "ORIG-020",
+    "file": "section-orig-020-2-4-radiation-conditions-and-uniqueness.tex",
+    "title": "2.4 Radiation Conditions and Uniqueness"
+  },
+  {
+    "id": "ORIG-025",
+    "file": "section-orig-025-2-5-radiation-integrals-and-source-to-field-representat.tex",
+    "title": "2.5 Radiation Integrals and Source-to-Field Representations"
+  },
+  {
+    "id": "ORIG-030",
+    "file": "section-orig-030-2-6-spectral-theory-of-radiation-operators.tex",
+    "title": "2.6 Spectral Theory of Radiation Operators"
+  },
+  {
+    "id": "ORIG-036",
+    "file": "section-orig-036-2-7-non-radiating-sources-and-null-spaces.tex",
+    "title": "2.7 Non-Radiating Sources and Null Spaces"
+  },
+  {
+    "id": "ORIG-041",
+    "file": "section-orig-041-2-8-reciprocity-and-radiative-coupling.tex",
+    "title": "2.8 Reciprocity and Radiative Coupling"
+  },
+  {
+    "id": "ORIG-045",
+    "file": "section-orig-045-2-9-action-of-radiation-operators-on-angular-spectra.tex",
+    "title": "2.9 Action of Radiation Operators on Angular Spectra"
+  },
+  {
+    "id": "ORIG-049",
+    "file": "section-orig-049-2-10-examples.tex",
+    "title": "2.10 Examples"
+  },
+  {
+    "id": "ORIG-054",
+    "file": "section-orig-054-2-11-summary.tex",
+    "title": "2.11 Summary"
+  }
+]
