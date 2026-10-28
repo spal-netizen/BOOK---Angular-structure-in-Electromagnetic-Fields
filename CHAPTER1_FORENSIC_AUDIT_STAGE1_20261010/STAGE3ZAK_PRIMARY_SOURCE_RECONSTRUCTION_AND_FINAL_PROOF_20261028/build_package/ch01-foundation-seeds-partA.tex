@@ -1,0 +1,38 @@
+% Ch.1 PASS K — Helmholtz longitudinal/transverse structure
+\subsection{Longitudinal and transverse field structure}
+\label{sec:ch01.1.1b}
+
+Maxwell's equations constrain how a vector field may vary in space. For any sufficiently smooth vector field $\mathbf{F}$,
+\begin{equation}
+\label{eq:ch1.helmholtz-decomposition}
+\mathbf{F}=\mathbf{F}_L+\mathbf{F}_T,
+\qquad
+\curl\mathbf{F}_L=\mathbf{0},
+\qquad
+\divg\mathbf{F}_T=0,
+\end{equation}
+where $\mathbf{F}_L$ is irrotational and $\mathbf{F}_T$ is solenoidal \cite{stratton1941,jackson1999}. The same decomposition applies to impressed sources:
+\begin{equation}
+\label{eq:ch1.source-long-trans}
+\Jimp=\Jimp_L+\Jimp_T,
+\qquad
+\curl\Jimp_L=\mathbf{0},
+\qquad
+\divg\Jimp_T=0,
+\end{equation}
+where $\Jimp_L$ and $\Jimp_T$ denote the longitudinal and transverse parts of the impressed current \cite{stratton1941}. Charge continuity $\divg\Jimp+\jj\omega\rho=0$ links the longitudinal current to the charge density: taking the divergence of Eq.~\eqref{eq:ch1.source-long-trans} gives $\divg\Jimp_L+\jj\omega\rho=0$ while $\divg\Jimp_T=0$ \cite{maxwell1873}. Longitudinal impressed content therefore maintains the charge distribution; transverse impressed content circulates without net charge injection \cite{stratton1941}. Gauss's laws tie the longitudinal electric field to charge: $\divg\D=\rho$ and $\divg\B=0$. Amp\`ere--Maxwell and Faraday's law couple the rotational parts of $\E$ and $\H$ \cite{maxwell1873}.
+
+In spatial Fourier space under the convention stated after Eq.~\eqref{eq:ch1.maxwell-centre},
+\begin{equation}
+\label{eq:ch1.fourier-long-trans}
+\mathbf{F}_L(\mathbf{k})=\hat{\mathbf{k}}(\hat{\mathbf{k}}\cdot\mathbf{F}(\mathbf{k})),
+\qquad
+\mathbf{F}_T(\mathbf{k})=\mathbf{F}(\mathbf{k})-\mathbf{F}_L(\mathbf{k}),
+\qquad
+\hat{\mathbf{k}}=\mathbf{k}/|\mathbf{k}|.
+\end{equation}
+Longitudinal and transverse decomposition is not identical to a near-field versus far-field split \cite{stratton1941,jackson1999}. A localized radiator carries both longitudinal and transverse Maxwell content in its full solution; reactive shells can exhibit strong transverse structure while still failing to transport net power to infinity, and longitudinal charge-linked fields can extend into the far zone through multipole coupling \cite{stratton1941,poynting1884}. The decomposition instead separates charge-maintaining source structure from solenoidal circulating structure---the vocabulary required before Green-function reconstruction in Chapter~\ref{ch:02} \cite{tai1994}. For a plane-wave sector with $\mathbf{k}\cdot\E_0=0$, the entire field is transverse; in the far zone of a localized radiator the surviving $1/r$ branch is transverse to $\hat{\mathbf{r}}$ \cite{stratton1941}. Longitudinal/transverse decomposition in Cartesian or Fourier form must not be confused with a component split in spherical coordinates \cite{stratton1941,harrington2001}.
+
+\ClassicalInkFig{fig:ch1.long-trans-decomp}{Irrotational part $\mathbf{F}_L$ associated with charge potential and solenoidal part $\mathbf{F}_T$ carrying circulating and radiative content \cite{stratton1941,jackson1999}.}{fig03-long-trans}
+
+Chapter~\ref{ch:02} develops the retarded Green-function reconstruction of both parts from prescribed sources; here the decomposition fixes the vocabulary needed to read near fields, radiation, and angular spectra \cite{stratton1941,tai1994}.

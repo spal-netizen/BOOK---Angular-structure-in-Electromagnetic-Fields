@@ -1,0 +1,11 @@
+{
+  "rel_f": 3.038406056920578e-16,
+  "Re_sum": 0.0,
+  "Re_MM": 0.0,
+  "complex_sum": 1.754560072451007,
+  "hv_sum_imag": "0",
+  "Re_cross_sum": "0",
+  "complex_negation_note": "NM+MN is purely imaginary when S is real",
+  "sympy_ok": 1.0,
+  "ok": 1.0
+}

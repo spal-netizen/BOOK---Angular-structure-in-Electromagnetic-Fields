@@ -1,0 +1,20 @@
+% Ch.1 foundation seed — surface equivalence
+\subsection{Surface equivalence and Huygens sources}
+\label{sec:ch01.1.2b}
+
+A bounded source distribution produces a Maxwell field throughout space. On any closed surface $S$ enclosing the source region, the tangential fields $(\E_t,\H_t)$ are fixed by that source. Once $(\E_t,\H_t)$ are known on $S$ and the outgoing radiation condition is imposed in the exterior, the exterior field is determined: every differential element of the aperture or enclosing surface launches secondary waves whose superposition reproduces the observed exterior \cite{stratton1941,silver1949}. The physical question is therefore not whether the surface carries information, but how that information may be represented as equivalent sources on $S$.
+
+Consider a volume $V$ bounded by closed surface $S$, with impressed sources confined to $V$ and outward unit normal $\hat{\mathbf{n}}$ on $S$. Schelkunoff's equivalence theorems \cite{schelkunoff1943} restate the exterior problem in surface-source form. From the interface conditions Eq.~\eqref{eq:ch1.interface-conditions}, equivalent currents on $S$ must reproduce the same tangential discontinuities as the original configuration. With $\hat{\mathbf{n}}$ directed outward from $V$,
+\begin{equation}
+\label{eq:ch1.equivalent-surface-currents}
+\mathbf{J}_s^{(e)}=\hat{\mathbf{n}}\times\H,
+\qquad
+\mathbf{M}_s^{(m)}=-\hat{\mathbf{n}}\times\E,
+\end{equation}
+defined by the tangential fields on $S$ \cite{stratton1941,harrington2001}. Faraday's law on a vanishing loop straddling $S$ requires continuity of tangential $\E$ unless a magnetic sheet $\mathbf{M}_s^{(m)}$ supplies the jump; Amp\`ere--Maxwell gives the electric sheet $\mathbf{J}_s^{(e)}$ associated with tangential $\H$ \cite{maxwell1873,jackson1999}. Physically, $\mathbf{J}_s^{(e)}$ is an equivalent electric surface current that reproduces the tangential magnetic field seen from outside; $\mathbf{M}_s^{(m)}$ is the dual magnetic sheet reproducing tangential $\E$ \cite{stratton1941}.
+
+Equivalent currents are not unique as physical objects: any interior source distribution producing the same $(\E,\H)$ on $S$ yields the same exterior radiation \cite{stratton1941}. The chain source $\rightarrow$ field on $S$ $\rightarrow$ equivalent sheets $\rightarrow$ exterior radiation is the classical Huygens principle in Maxwell form \cite{silver1949,stratton1941}. An aperture in a conducting screen is the archetypal case: the opening carries a prescribed tangential field that launches the angular spectrum treated in Subsection~\ref{sec:ch01.2.5} \cite{stratton1941}.
+
+\ClassicalInkFig{fig:ch1.equivalent-surface}{Sources inside $S$ replaced by equivalent sheets $\mathbf{J}_s^{(e)}=\hat{\mathbf{n}}\times\H$ and $\mathbf{M}_s^{(m)}=-\hat{\mathbf{n}}\times\E$ that reproduce the same outgoing exterior field \cite{stratton1941,schelkunoff1943}.}{fig04-huygens}
+
+Subsection~\ref{sec:ch01.5.4} connects this construction to aperture radiation and angular-spectrum propagation \cite{stratton1941}. The full dyadic Green-function formulation belongs to Chapter~\ref{ch:02} \cite{harrington2001,tai1994}.

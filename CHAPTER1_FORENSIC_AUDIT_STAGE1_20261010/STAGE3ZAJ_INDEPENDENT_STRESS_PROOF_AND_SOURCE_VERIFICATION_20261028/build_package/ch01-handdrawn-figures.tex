@@ -1,0 +1,23 @@
+% Chapter 1 ink figures — include only genuine scanned monochrome assets.
+% Asset directory: figures/ch01-ink/<basename>.pdf or .png
+% Missing assets: label preserved, no digital substitute, no placeholder text.
+\newcommand{\ClassicalInkFig}[3]{%
+\IfFileExists{figures/ch01-ink/#3.pdf}{%
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.88\linewidth]{figures/ch01-ink/#3.pdf}
+\caption{#2}
+\label{#1}
+\end{figure}%
+}{\IfFileExists{figures/ch01-ink/#3.png}{%
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.88\linewidth]{figures/ch01-ink/#3.png}
+\caption{#2}
+\label{#1}
+\end{figure}%
+}{%
+\phantomsection\label{#1}%
+}}%
+}
+\let\ClassicalHandFig\ClassicalInkFig

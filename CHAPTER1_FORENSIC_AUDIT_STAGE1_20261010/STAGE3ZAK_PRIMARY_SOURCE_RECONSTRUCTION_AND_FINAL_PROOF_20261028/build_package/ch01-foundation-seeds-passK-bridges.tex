@@ -1,0 +1,101 @@
+% Ch.1 PASS K — Green-function and cross-chapter bridges (Ch. 2–4 seeds)
+\subsection{From inhomogeneous Helmholtz equation to outgoing Green function}
+\label{sec:ch01.1.1c}
+
+The local Maxwell system of Subsection~\ref{sec:ch01.1.1} fixes how $\E$ and $\H$ must balance at each point for prescribed $\Jimp$ and $\rho$, but it does not yet supply a constructive map from a finite source distribution to the field at a distant observation point \cite{stratton1941,maxwell1873}. That map is the classical Green-function problem: given impressed data on compact support, determine the outgoing harmonic field that satisfies the radiation condition at infinity \cite{stratton1941,jackson1999}.
+
+Let $\mathbf{r}$ denote the observation point and $\mathbf{r}'$ the source point (both in metres), with separation $R=|\mathbf{r}-\mathbf{r}'|$. In the time domain, causality requires the field at $\mathbf{r}$ to be driven by the source at retarded time $t-R/c$, where $c=1/\sqrt{\varepsilon_0\mu_0}$ \cite{stratton1941,jackson1999}. With the harmonic convention $\exp(+\jj\omega t)$ adopted in this chapter, the delay $R/c$ appears as the spatial phase factor $e^{-\jj k_0 R}$ in the frequency-domain response, because $e^{+\jj\omega(t-R/c)}=e^{+\jj\omega t}\,e^{-\jj k_0 R}$ and $k_0=\omega/c$ \cite{stratton1941}. The minus sign in $e^{-\jj k_0 R}$ selects the outgoing spherical wave that carries energy toward increasing $R$ under this time convention \cite{stratton1941,jackson1999}.
+
+In a homogeneous, source-free region, each Cartesian component of $\E$ or $\H$ satisfies the vector Helmholtz equation of Eq.~\eqref{eq:ch1.vacuum-helmholtz-pair}. Restoring impressed sources leads to the scalar prototype
+\begin{equation}
+\label{eq:ch1.inhomogeneous-helmholtz}
+(\nabla^2+k_0^2)\,U(\mathbf{r})=-S(\mathbf{r}),
+\end{equation}
+where $U$ is a scalar potential or field component under reconstruction and $S$ is the corresponding source density whose SI units match those of $(\nabla^2+k_0^2)U$ \cite{stratton1941,jackson1999}. Equation~\eqref{eq:ch1.inhomogeneous-helmholtz} has infinitely many solutions unless boundary data and, for open domains, an outgoing radiation condition are imposed \cite{stratton1941}.
+
+The scalar Green function $G(\mathbf{r},\mathbf{r}')$ (units m\(^{-1}\)) is defined by
+\begin{equation}
+\label{eq:ch1.green-defining}
+(\nabla^2+k_0^2)\,G(\mathbf{r},\mathbf{r}')=-\delta(\mathbf{r}-\mathbf{r}'),
+\end{equation}
+where $\delta$ is the three-dimensional Dirac distribution (units m\(^{-3}\)) and $\nabla^2$ acts on the observation coordinate $\mathbf{r}$ with $\mathbf{r}'$ fixed \cite{stratton1941,jackson1999}. For $R>0$, spherical symmetry about $\mathbf{r}'$ gives $G=G(R)$. With outgoing selection, write $G(R)=g\,e^{-\jj k_0 R}/R$. Substitution into the homogeneous Helmholtz equation for $R>0$ yields $g=\mathrm{const}$. Matching the strength of the singularity at $R=0$ through the identity $\nabla^2(1/R)=-4\pi\delta(\mathbf{r}-\mathbf{r}')$ fixes $g=1/(4\pi)$ and therefore
+\begin{equation}
+\label{eq:ch1.scalar-green-outgoing}
+G(\mathbf{r},\mathbf{r}')
+=
+\frac{e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}}{4\pi|\mathbf{r}-\mathbf{r}'|}.
+\end{equation}
+Equation~\eqref{eq:ch1.scalar-green-outgoing} satisfies Eq.~\eqref{eq:ch1.green-defining} in the distributional sense. Without the outgoing radiation condition, the incoming branch proportional to $e^{+\jj k_0 R}/R$ would also satisfy the homogeneous equation in exterior regions and the representation would not be unique \cite{stratton1941,jackson1999}.
+
+Because Eq.~\eqref{eq:ch1.scalar-green-outgoing} already carries the $1/(4\pi R)$ normalization, the retarded potentials use $G$ directly without an additional $1/(4\pi)$ prefactor (Stratton/Jackson convention A) \cite{stratton1941,jackson1999}. With $\phi$ the scalar potential (V), $\mathbf{A}$ the vector potential (T\,m), $\Jimp$ the impressed volume current density (A\,m$^{-2}$), and $\rho$ the charge density (C\,m$^{-3}$),
+\begin{equation}
+\label{eq:ch1.vector-potential-retarded}
+\mathbf{A}(\mathbf{r})
+=
+\mu_0\int
+\Jimp(\mathbf{r}')\,
+G(\mathbf{r},\mathbf{r}')\,
+d^3r',
+\end{equation}
+\begin{equation}
+\label{eq:ch1.lorenz-scalar-potential-retarded}
+\phi(\mathbf{r})
+=
+\frac{1}{\varepsilon_0}\int
+\rho(\mathbf{r}')\,
+G(\mathbf{r},\mathbf{r}')\,
+d^3r',
+\end{equation}
+and, under $\exp(+\jj\omega t)$,
+\begin{equation}
+\label{eq:ch1.lorenz-field-reconstruction}
+\E=-\nabla\phi-\jj\omega\mathbf{A},\qquad \B=\nabla\times\mathbf{A},\qquad \H=\B/\mu_0,
+\end{equation}
+with Lorenz gauge $\divg\mathbf{A}+\jj\omega\mu_0\varepsilon_0\phi=0$ \cite{stratton1941,jackson1999}. The gauge condition is a potential constraint; charge continuity $\divg\Jimp+\jj\omega\rho=0$ is the physical law that makes $(\phi,\mathbf{A})$ consistent with the Maxwell curl system of Subsection~\ref{sec:ch01.1.1} \cite{maxwell1873,stratton1941}.
+
+\begin{example}[Finite line segment, end charges, and far-zone phase]
+\label{ex:ch1.green-dipole-element}
+Consider a straight conductor on the $z$-axis with phasor current $I_0$ (A) between $z'=-h/2$ and $z'=+h/2$. A minimal volume idealization uses uniform impressed current density
+\[
+\Jimp(\mathbf{r}')
+=\frac{I_0}{A_c}\,\hat{\mathbf{z}}\,
+\chi_{A_c}(x',y')\,\chi_{[-h/2,\,h/2]}(z'),
+\]
+where $A_c$ (m$^2$) is the conductor cross section, $\chi_{A_c}$ is unity over the transverse cross section and zero outside, and $\chi_{[-h/2,h/2]}$ restricts the axial support. Inside the open cylinder, $\partial J_z/\partial z'=0$, so $\divg\Jimp=0$ as an ordinary function; the idealization is not solenoidal on $\mathbb{R}^3$ because $\Jimp$ vanishes outside the segment and therefore has step discontinuities at $z'=\pm h/2$. In the distributional sense,
+\begin{equation}
+\label{eq:ch1.segment-div-J}
+\divg\Jimp
+=\frac{I_0}{A_c}\,\chi_{A_c}(x',y')\bigl[\delta(z'+h/2)-\delta(z'-h/2)\bigr],
+\end{equation}
+where the one-dimensional deltas are combined with the transverse indicator so that Eq.~\eqref{eq:ch1.segment-div-J} has units A\,m$^{-3}$ \cite{jackson1999,stratton1941}. Charge continuity $\divg\Jimp+\jj\omega\rho=0$ then requires
+\begin{equation}
+\label{eq:ch1.segment-end-charge}
+\rho(\mathbf{r}')
+=\frac{I_0}{\jj\omega A_c}\,\chi_{A_c}(x',y')\bigl[\delta(z'-h/2)-\delta(z'+h/2)\bigr],
+\end{equation}
+with units C\,m$^{-3}$ in the distributional sense. Integrating $\rho$ over a thin slab at $z'=+h/2$ gives end-face charge per unit area $\sigma_s=+I_0/(\jj\omega A_c)$ (C\,m$^{-2}$); at $z'=-h/2$, $\sigma_s=-I_0/(\jj\omega A_c)$ \cite{jackson1999,stratton1941}. Under $\exp(+\jj\omega t)$, the endpoint charge at $z'=+h/2$ is in quadrature with the axial impressed current (not a $180^\circ$ out-of-phase relation): current along $+\hat{\mathbf{z}}$ leaves the upper face at $z'=+h/2$ in this sign convention---the Hertzian dipole bookkeeping for a finite segment, not a universal model of a practical feed, which generally spreads charge and return current over a finite terminal region \cite{stratton1941,jackson1999}.
+
+With Eqs.~\eqref{eq:ch1.vector-potential-retarded} and~\eqref{eq:ch1.lorenz-scalar-potential-retarded}, the vector potential follows from the axial current alone in the limit $A_c\to 0$ as
+\begin{equation}
+\label{eq:ch1.line-segment-potential}
+A_z(\mathbf{r})=\frac{\mu_0 I_0}{4\pi}\int_{-h/2}^{h/2}
+\frac{e^{-\jj k_0|\mathbf{r}-z'\hat{\mathbf{z}}|}}{|\mathbf{r}-z'\hat{\mathbf{z}}|}\,dz',
+\end{equation}
+which has units T\,m; $\phi$ receives equal contributions from the end charges in Eq.~\eqref{eq:ch1.segment-end-charge}. The pair $(\phi,\mathbf{A})$ satisfies Lorenz gauge and Eq.~\eqref{eq:ch1.charge-continuity-harmonic} for this idealization, but Eqs.~\eqref{eq:ch1.lorenz-field-reconstruction} still determine a field in all of space only together with outgoing selection at infinity (and any conducting boundaries if present). The line integral for $A_z$ alone does not, by itself, specify a complete boundary-value problem \cite{stratton1941}.
+
+\emph{Geometrical and phase approximations.} Let $R=|\mathbf{r}-\mathbf{r}'|$ and $r=|\mathbf{r}|$. For $r\gg|\mathbf{r}'|$ the distance expands as $R\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}'+\mathcal{O}(|\mathbf{r}'|^2/r)$; this is purely geometrical. Replacing $e^{-\jj k_0 R}$ by $e^{-\jj k_0 r}\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}$ additionally requires the neglected phase $k_0|\mathbf{r}'|^2/r$ to be small compared with $2\pi$ across the source---for a segment of length $h$, typically $k_0 h^2/r\ll 1$ (Fraunhofer-type) \cite{stratton1941,jackson1999}. Dominance of radiative $1/r$ fields over reactive $1/r^2$ and $1/r^3$ terms is a separate condition on $k_0 r\gg 1$ in the multipole sense \cite{stratton1941}. When $r=|\mathbf{r}|\gg h$ and both criteria hold,
+\begin{equation}
+\label{eq:ch1.green-far-zone-phase}
+e^{-\jj k_0 R}\approx e^{-\jj k_0 r}\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'},
+\end{equation}
+with $\mathbf{r}'=z'\hat{\mathbf{z}}$. The factor $e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}$ is angular \emph{phase} in the radiation integral; net angular-momentum transport requires the stress or flux integrals of later sections, not phase alone \cite{stratton1941,jackson1999}.
+\end{example}
+
+Figure~\ref{fig:ch1.green-function-seed} shows the geometry: source point $\mathbf{r}'$, observation point $\mathbf{r}$, separation $R$, and outgoing phase $e^{-\jj k_0 R}/(4\pi R)$ \cite{stratton1941,jackson1999,tai1994}. The same retarded phase underlies the multipole hierarchy of Subsection~\ref{sec:ch01.6.4} \cite{jackson1999,stratton1941}. Chapter~\ref{ch:02} develops the dyadic Green function under the same $\exp(+\jj\omega t)$ convention \cite{harrington2001,tai1994,stratton1941}.
+
+\begin{figure}[t]
+\centering
+\VolIPhysFig{\VolIPhysGreenFunctionGeometry}
+\caption{Localized impressed current at $\mathbf{r}'$, observation point $\mathbf{r}$, separation $R=|\mathbf{r}-\mathbf{r}'|$, observation direction $\hat{\mathbf{r}}$, and outgoing Green-function phase $e^{-\jj k_0 R}/(4\pi R)$; in the far zone $R\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}'$ generates angular phase from source geometry \cite{stratton1941,jackson1999,tai1994}.}
+\label{fig:ch1.green-function-seed}
+\end{figure}
