@@ -37,7 +37,9 @@
 \usepackage{booktabs}
 \usepackage{placeins}
 \usepackage{enumitem}
-\usepackage{chapterbib}
+% chapterbib disabled for main-ch01-only: with \input{ch01} it prevents \citation
+% records in main-ch01-only.aux and yields visible [?] markers (R13.0 batch F).
+% Full-volume builds that use \include per chapter may re-enable sectionbib separately.
 \usepackage[hidelinks,plainpages=false,pdfpagelabels]{hyperref}
 \hypersetup{%
   pdftitle={Angular Structure in Electromagnetic Fields -- Volume I -- Chapter 1: Foundations of Angular Electromagnetic Structure},%
