@@ -42,11 +42,11 @@ In vacuum, electromagnetic momentum is stored in $\mathbf{g}_{\mathrm{em}}=\vare
 \frac{\partial\mathbf{g}_{\mathrm{em}}}{\partial t}+\mathbf{f}_{\mathrm{src}}
 =\divg\Tinst,
 \end{equation}
-with $\mathbf{g}_{\mathrm{em}}=\varepsilon_0\,\E\times\B$ and $\mathbf{f}_{\mathrm{src}}=\rho\E+\Jimp\times\B$ using the source pair $(\rho,\Jimp)$ of Eqs.~\eqref{eq:ch1.maxwell-local} \cite{maxwell1873,stratton1941}. On phasor fields, cycle-averaged traction uses $\Tavg$ of Eq.~\eqref{eq:ch1.maxwell-stress} and $\mathbf{t}=\Tavg\cdot\hat{\mathbf{n}}$ \cite{stratton1941}. Let $V_m$ enclose the material whose force and torque are sought; $\hat{\mathbf{n}}$ is outward from $V_m$. At harmonic steady state, $\mathbf{F}_{\mathrm{matter}}=\oint_{\partial V_m}\Tavg\cdot\hat{\mathbf{n}}\,dS$.
+with $\mathbf{g}_{\mathrm{em}}=\varepsilon_0\,\E\times\B$ and $\mathbf{f}_{\mathrm{src}}=\rho\E+\Jimp\times\B$ using the source pair $(\rho,\Jimp)$ of Eqs.~\eqref{eq:ch1.maxwell-local} \cite{maxwell1873,stratton1941}. On phasor fields, cycle-averaged traction uses $\Tavg$ of Eq.~\eqref{eq:ch1.maxwell-stress} and $\mathbf{t}=\Tavg\cdot\hat{\mathbf{n}}$ \cite{stratton1941}. The resultant mechanical force on matter is not read from the vacuum stress tensor inside the material itself: under Route~A it is $\int_{V_m}\mathbf{f}_{\mathrm{matter}}\,dV$ when $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ on the carrier support; under Route~B it follows from stress integrals on a source-free vacuum shell surrounding the body (Eqs.~\eqref{eq:ch1.route-b-momentum-shell}--\eqref{eq:ch1.route-b-torque-shell}) \cite{stratton1941,harrington2001}.
 
 Angular momentum about the origin is carried by the stress-moment density $\Mavg=\mathbf{r}\times\Tavg$, with instantaneous counterpart $\Minst=\mathbf{r}\times\Tinst$. Locally, source exchange contributes $\boldsymbol{\tau}_{\mathrm{src}}=\mathbf{r}\times\mathbf{f}_{\mathrm{src}}$; under Route~A continuum closure (Subsection~\ref{sec:ch01.1.4}), $\boldsymbol{\tau}_{\mathrm{matter}}$ coincides with $\boldsymbol{\tau}_{\mathrm{src}}$ on the material support.
 
-Integrating traction over a closed surface gives the stress moment $\boldsymbol{\mathcal{T}}_J=\oint_{\partial V_m}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS$. Outward electromagnetic angular-momentum transport is $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$, as in Eqs.~\eqref{eq:ch1.stress-moment-integral} and~\eqref{eq:ch1.outward-am-flux}. In harmonic steady state on a source-free enclosing surface, with vanishing storage rate inside $V_m$, mechanical torque balances transport: $\mathbf{T}_{\mathrm{matter}}=\boldsymbol{\mathcal{T}}_J=-\boldsymbol{\Phi}_{J,\mathrm{out}}$ \cite{beth1936,stratton1941}.
+The stress moment $\boldsymbol{\mathcal{T}}_J=\oint_{\partial V}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS$ and outward field transport $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ are defined in Eqs.~\eqref{eq:ch1.stress-moment-integral} and~\eqref{eq:ch1.outward-am-flux}. Mechanical torque on a body equals $-\boldsymbol{\Phi}_{J,\mathrm{out}}-d\mathbf{J}_{\mathrm{em,store}}/dt$ only when the integration domain, Route~A/B assumptions, and steady-state storage condition of Eqs.~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.route-b-torque-shell} are satisfied; an open transverse disk for a uniform plane wave is not such a domain \cite{beth1936,stratton1941}.
 
 A uniform plane wave in vacuum separates radiation pressure from angular transport in the simplest setting. Take
 $\E=E_0 e^{-\jj k z}\hat{\mathbf{x}}$ and, from $\curl\E=-\jj\omega\mu_0\H$,
@@ -195,7 +195,7 @@ Let \(\Omega\subset\mathbb{R}^{3}\) be the analysis region with boundary \(\Gamm
 \label{eq:ch1.energy-class}
 \int_{V}\!\left(\varepsilon_0\,\E^*\!\cdot\E+\mu_0\,\H^*\!\cdot\H\right)\,dV<\infty.
 \end{equation}
-The integrand is the unweighted harmonic energy density \(4u\) in source-free vacuum; Eq.~\eqref{eq:ch1.energy-class} is therefore simultaneously a finite stored-energy test on \(V\) and an \(L^2\)-type integrability condition on the weighted field pair \cite{stratton1941}. It is imposed on the bounded volume \(V\) actually used in the calculation, not as a claim of global square-integrability over all space \cite{stratton1941}.
+With vacuum weighting \(\varepsilon_0,\mu_0\), the integrand equals \(4u\) in source-free vacuum but Eq.~\eqref{eq:ch1.energy-class} is an \(L^2\)-type \emph{field-norm integrability} test on the bounded volume \(V\) chosen for the calculation. It does not, by itself, define non-propagating stored energy, Chu--McLean antenna \(Q\), or classical trace theorems on \(\partial V\) \cite{stratton1941,harrington2001}. It is imposed on that \(V\) only, not as global square-integrability over all space \cite{stratton1941}.
 
 Outgoing \(1/r\) radiation fields are generally \emph{not} globally square-integrable on an unbounded exterior domain in the ordinary \(L^2\) sense, because their energy density decays only as \(r^{-2}\) \cite{stratton1941}. Nevertheless, time-averaged radiated power \(P_{\mathrm{rad}}\), integrated Maxwell traction \(\boldsymbol{\mathcal{T}}_J\), and angular flux \(\boldsymbol{\Phi}_{J,\mathrm{out}}\) on a finite enclosing shell \(S_R\) can remain well defined when the outgoing radiation condition selects the physical branch \cite{stratton1941}. Ideal point dipoles and filaments are retained only as explicit distributional limits of finite-width, charge-continuous sources; otherwise the regular impressed-current class of Eq.~\eqref{eq:ch1.source-charge-continuous} applies. Square-integrable \(\Jimp\) and charge continuity \(\divg\Jimp+\jj\omega\rho=0\) do not by themselves guarantee Eq.~\eqref{eq:ch1.energy-class} in the exterior region, nor do they guarantee classical normal traces of \(\Jimp\) on \(\Gamma\) or finiteness of every quadratic stress or Poynting surface integral invoked later---boundary data, outgoing selection, and the field regularity of the actual solution control those conclusions \cite{stratton1941}. Boundary data on \(\Gamma\) complete the physical problem together with the source specification \cite{maxwell1873,stratton1941}.
 \phantomsection\label{eq:ch1.admissible-space}
@@ -702,7 +702,23 @@ Integrating over that $V$ with outward normal $\hat{\mathbf{n}}$,
 =\int_{\partial V}\Tinst\cdot\hat{\mathbf{n}}\,dS
 -\frac{d}{dt}\int_V \mathbf{g}_{\mathrm{em}}\,dV
 \end{equation}
-when $V$ lies in a vacuum/source region where Equation~\eqref{eq:ch1.momentum-balance-instantaneous} holds and Route~A applies throughout $V$, so $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ there \cite{stratton1941}. Under Route~B, $\int_V \mathbf{f}_{\mathrm{src}}\,dV$ is source-exchange bookkeeping on the chosen volume, while mechanical force on a body is $\mathbf{F}=\oint_{\partial V_b}\Tinst\cdot\hat{\mathbf{n}}\,dS$ (minus storage) for a closed $\partial V_b$ in source-free vacuum enclosing that body, with traction evaluated on the vacuum field side \cite{stratton1941,harrington2001}. Traction must not be identified with momentum density $\mathbf{g}_{\mathrm{em}}$ or with Poynting flux $\mathbf{S}_\mathrm{c}$.
+when $V$ lies in a vacuum/source region where Equation~\eqref{eq:ch1.momentum-balance-instantaneous} holds and Route~A applies throughout $V$, so $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ there \cite{stratton1941}. Under Route~B, $\int_V \mathbf{f}_{\mathrm{src}}\,dV$ is source-exchange bookkeeping on the chosen volume, while mechanical force on a body enclosed in vacuum follows from stress on a source-free vacuum shell $\mathcal{V}_{\mathrm{vac}}$ (below), not from integrating the vacuum identity through arbitrary matter \cite{stratton1941,harrington2001}. Traction must not be identified with momentum density $\mathbf{g}_{\mathrm{em}}$ or with Poynting flux $\mathbf{S}_\mathrm{c}$.
+
+Let $B$ denote a material body with closure $\overline{B}\subset V_o$. Define the intervening vacuum region $\mathcal{V}_{\mathrm{vac}}=V_o\setminus\overline{B}$, bounded by outer shell $S_o$ and inner interface $S_i=\partial B$. On $\mathcal{V}_{\mathrm{vac}}$ the vacuum Maxwell stress of Eqs.~\eqref{eq:ch1.momentum-balance-instantaneous} and~\eqref{eq:ch1.angular-momentum-balance} holds with $\mathbf{f}_{\mathrm{src}}=\mathbf{0}$. Outward normals are $\hat{\mathbf{n}}_o$ on $S_o$ and $\hat{\mathbf{n}}_i$ on $S_i$, each outward from $\mathcal{V}_{\mathrm{vac}}$ (so $\hat{\mathbf{n}}_i$ points from the body surface into the surrounding vacuum). Volume integration yields
+\begin{equation}
+\label{eq:ch1.route-b-momentum-shell}
+\frac{d}{dt}\int_{\mathcal{V}_{\mathrm{vac}}}\mathbf{g}_{\mathrm{em}}\,dV
+=\oint_{S_o}\Tinst\cdot\hat{\mathbf{n}}_o\,dS
++\oint_{S_i}\Tinst\cdot\hat{\mathbf{n}}_i\,dS,
+\end{equation}
+and the corresponding angular-momentum balance
+\begin{equation}
+\label{eq:ch1.route-b-torque-shell}
+\frac{d}{dt}\int_{\mathcal{V}_{\mathrm{vac}}}\mathbf{j}_{\mathrm{em}}\,dV
+=\oint_{S_o}\mathbf{r}\times(\Tinst\cdot\hat{\mathbf{n}}_o)\,dS
++\oint_{S_i}\mathbf{r}\times(\Tinst\cdot\hat{\mathbf{n}}_i)\,dS.
+\end{equation}
+Cycle-averaged forms replace $(\Tinst,\mathbf{g}_{\mathrm{em}},\mathbf{j}_{\mathrm{em}})$ by $(\Tavg,\langle\mathbf{g}_{\mathrm{em}}\rangle,\langle\mathbf{j}_{\mathrm{em}}\rangle)$ under $\exp(+\jj\omega t)$. Mechanical force and torque on the body follow from the inner-surface traction and stress moment (with signs fixed by action--reaction across $S_i$), together with the outer-surface and vacuum-storage terms in Eqs.~\eqref{eq:ch1.route-b-momentum-shell} and~\eqref{eq:ch1.route-b-torque-shell}. If $\partial V_m$ lies entirely in source-free vacuum and encloses only the body, the single-surface formulas Eqs.~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.outward-am-flux} apply to that outer shell after the field storage terms are accounted for; they are not obtained by integrating vacuum stress through the material interior \cite{stratton1941,harrington2001,beth1936}.
 
 \begin{figure}[t]
 \centering
@@ -873,18 +889,23 @@ Figure~\ref{fig:ch1.momentum-angular-geometry} traces the cycle-averaged chain a
 
 The cycle-averaged stress-moment density $\Mavg=\mathbf{r}\times\Tavg$ satisfies
 $\Mavg\cdot\hat{\mathbf{n}}=\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})$ on $\partial V$ (stress-moment surface density).
-At harmonic steady state the cycle-averaged \emph{resultant} mechanical torque on matter enclosed in $V_m$ is
+At harmonic steady state the resultant mechanical torque on matter is given in two routed forms. Under Route~A throughout $V_m$,
 \begin{equation}
 \label{eq:ch1.torque-stress-surface}
 \mathbf{T}_{\mathrm{matter}}
 \equiv
 \int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV
+=\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV
 =\oint_{\partial V_m}\Mavg\cdot\hat{\mathbf{n}}\,dS
--\frac{d}{dt}\int_{V_m} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
-=\oint_{\partial V_m}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS
 -\frac{d}{dt}\int_{V_m} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV,
 \end{equation}
-with outward $\hat{\mathbf{n}}$ on $\partial V_m$ \cite{beth1936,stratton1941}. The volume identity $\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV=\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV$ holds under Route~A throughout $V_m$. Under Route~B, $\mathbf{T}_{\mathrm{matter}}$ is obtained from the stress surface integral when $\partial V_m$ lies in source-free vacuum. The stress moment on the same closed surface is
+provided $\partial V_m$ lies where the vacuum angular-momentum balance holds and $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ throughout $V_m$ \cite{beth1936,stratton1941}. Under Route~B, $\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV$ is not asserted inside arbitrary material; instead $\mathbf{T}_{\mathrm{matter}}$ is inferred from Eqs.~\eqref{eq:ch1.route-b-torque-shell} on $\mathcal{V}_{\mathrm{vac}}$ or from the single outer-shell reduction of Eq.~\eqref{eq:ch1.torque-stress-surface} when $\partial V_m$ is a closed surface in source-free vacuum enclosing the body and storage terms are retained or set to zero under the stated steady-state hypothesis \cite{stratton1941,harrington2001}. Equivalently,
+\[
+\mathbf{T}_{\mathrm{matter}}
+=\oint_{\partial V_m}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS
+-\frac{d}{dt}\int_{V_m} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
+\]
+holds under the same domain and route assumptions, with outward $\hat{\mathbf{n}}$ on $\partial V_m$ \cite{beth1936,stratton1941}. The stress moment on the same closed surface is
 \begin{equation}
 \label{eq:ch1.stress-moment-integral}
 \boldsymbol{\mathcal{T}}_J
@@ -1513,7 +1534,7 @@ h(\mathbf{r})=
 \end{equation}
 under the $\exp(+\jj\omega t)$ phasor convention \cite{stratton1941,belinfante1940,tai1994}.
 Dimensionally, $[\E\cdot\H^*]=\mathrm{W\,m^{-2}}$ while $[h]=\mathrm{J\,s\,m^{-3}}$---angular momentum per unit volume---because $\omega$ enters with $\mathrm{rad\,s^{-1}}$ and $c$ with $\mathrm{m\,s^{-1}}$.
-Eq.~\eqref{eq:ch1.helicity-density} must be distinguished from optical chirality (Lipkin zilch) and from Stokes $S_3$: each is a separate pseudoscalar with its own normalization and conservation law \cite{stratton1941,tai1994}. The scalar $h$ reports the handedness of the transverse $\E$--$\H$ triad; local spin--orbit splits become definite only under an explicit convention (section~\ref{sec:ch01.4.5}) \cite{belinfante1940,stratton1941}.
+Eq.~\eqref{eq:ch1.helicity-density} is a monochromatic bilinear field scalar under the declared phasor convention; it is not a conserved charge density in this chapter because no helicity continuity law is derived from Maxwell's equations here \cite{stratton1941,belinfante1940}. It must be distinguished from optical chirality (Lipkin zilch), Stokes $S_3$, canonical-potential helicity, and spin angular-momentum density, each with separate normalization and hypotheses \cite{stratton1941,tai1994}. The scalar $h$ reports the handedness of the transverse $\E$--$\H$ triad for the field class under discussion; local spin--orbit splits become definite only under an explicit convention (section~\ref{sec:ch01.4.5}) \cite{belinfante1940,stratton1941}.
 
 Consider an outgoing circularly polarized plane wave with \emph{real} amplitude $E_0>0$,
 $\E=(E_0/\sqrt{2})(\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}})\,e^{-\jj kz}$, $\sigma=\pm1$, $\mathbf{k}=k\hat{\mathbf{z}}$, and right-handed $(\hat{\mathbf{x}},\hat{\mathbf{y}},\hat{\mathbf{z}})$. Faraday's law gives
@@ -1750,7 +1771,7 @@ For the same CP plane wave with time-averaged power $P$ and helicity label $\sig
 \label{eq:ch1.cp-spin-flux-magnitude}
 |\dot J_{z,\mathrm{spin,inc}}|=\frac{P}{\omega}
 \end{equation}
-is \emph{not} identified with the symmetric Maxwell-stress integral $\dot J_{z,\mathrm{em,out}}$ of Eq.~\eqref{eq:ch1.ex61-flux-from-stress} on a centred transverse disk (which vanishes for that symmetry). Eq.~\eqref{eq:ch1.cp-spin-flux-magnitude} records a conventional spin/helicity scale for uniform CP in vacuum, distinct from the governing stress-surface observable \cite{stratton1941,beth1936,belinfante1940}. A perfect absorber that removes the beam with definite helicity exchanges mechanical torque of magnitude $P/\omega$ about $\hat{\mathbf{z}}$ \cite{beth1936}. An ideal lossless half-wave plate that reverses helicity while transmitting the same power changes the field helicity by $\Delta\sigma=-2\sigma$; angular-momentum conservation then requires load torque of magnitude
+is \emph{not} identified with the symmetric Maxwell-stress integral $\dot J_{z,\mathrm{em,out}}$ of Eq.~\eqref{eq:ch1.ex61-flux-from-stress} on a centred transverse disk (which vanishes for that symmetry). Eq.~\eqref{eq:ch1.cp-spin-flux-magnitude} records a helicity book-keeping magnitude for uniform CP in vacuum, distinct from the governing closed-surface stress observable \cite{stratton1941,beth1936,belinfante1940}. Eqs.~\eqref{eq:ch1.cp-spin-flux-magnitude} and~\eqref{eq:ch1.hwp-torque-magnitude} below quote widely used scales for total absorption and ideal helicity reversal; they are \emph{not} derived in this chapter from the vanishing open-disk stress integral and must be justified by a net incoming/outgoing angular-momentum balance on the load's control surface in the Beth arrangement \cite{beth1936,stratton1941}. Under those quoted idealizations, a perfect absorber that removes the beam with definite helicity is said to exchange mechanical torque of magnitude $P/\omega$ about $\hat{\mathbf{z}}$ \cite{beth1936}. An ideal lossless half-wave plate that reverses helicity while transmitting the same power changes the field helicity by $\Delta\sigma=-2\sigma$; angular-momentum conservation then quotes load torque of magnitude
 \begin{equation}
 \label{eq:ch1.hwp-torque-magnitude}
 |\tau_{z,\mathrm{load}}|=\frac{2P}{\omega}
@@ -2210,7 +2231,7 @@ u_e=\tfrac14\varepsilon_0|\E|^2,\qquad u_m=\tfrac14\mu_0|\H|^2,
 \qquad
 W_e(V)=\int_V u_e\,dV,\qquad W_m(V)=\int_V u_m\,dV,
 \]
-under $\exp(+\jj\omega t)$ \cite{stratton1941,harrington2001}. These integrals sum the entire field supported in $V$, including propagating and reactive contributions, and they depend on the choice and size of $V$; they are \emph{not} McLean's or Chu's non-propagating stored energies, which require an explicit subtraction of travelling-wave energy \cite{chu1948,mcclean1996}. With $P_{\mathrm{rad}}$ the time-averaged outward real power through $\partial V$ on a predominantly radiative boundary, introduce the volume energy ratio
+under $\exp(+\jj\omega t)$ \cite{stratton1941,harrington2001}. The domain $V$ must be chosen so that $W_e(V)$ and $W_m(V)$ converge: for a finite regular source, $V$ may be a bounded ball excluding the support; for an ideal point dipole, $V$ must exclude a neighborhood of the origin (for example a shell $r_0<r<R$ with fixed $r_0>0$ and outer boundary $r=R$ large enough to be predominantly radiative)---direct integration through $r=0$ diverges because of the $r^{-3}$ and $r^{-2}$ near fields \cite{stratton1941,yaghjian1980dyadic}. These integrals sum the entire field on the stated domain, including propagating and reactive contributions; they are \emph{not} McLean's or Chu's non-propagating stored energies \cite{chu1948,mcclean1996}. With $P_{\mathrm{rad}}$ the time-averaged outward real power through $\partial V$ on a predominantly radiative boundary, introduce the volume energy ratio
 \begin{equation}
 \label{eq:ch1.chu-q-adopted}
 Q_{\mathrm{vol}}(V)=\frac{2\omega\max(W_e,W_m)}{P_{\mathrm{rad}}},

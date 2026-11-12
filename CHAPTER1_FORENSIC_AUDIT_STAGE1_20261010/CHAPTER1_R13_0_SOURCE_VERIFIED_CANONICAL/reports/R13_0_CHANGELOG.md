@@ -1,5 +1,13 @@
 # R13.0 changelog (canonical)
 
+## 2026-11-12 — Route B vacuum shell, Beth qual., \(Q_{\mathrm{vol}}\) domain (batch C)
+
+- **§1.0 / §1.1.4:** Qualified intro force/torque; added `ch1.route-b-momentum-shell`, `ch1.route-b-torque-shell`; split Route A/B in `ch1.torque-stress-surface`.
+- **§1.0.3:** Eq. (1.4) — integrability only, not stored-energy definition.
+- **§1.6.1:** Beth \(P/\omega\), \(2P/\omega\) quoted scales distinguished from open-disk stress.
+- **§1.6.4:** \(Q_{\mathrm{vol}}\) domain excludes ideal dipole origin.
+- **Dossiers:** `MAXWELL_STRESS_ANGULAR_MOMENTUM_DOSSIER.md`, `BETH_TORQUE_PRIMARY_SOURCE_DOSSIER.md`.
+
 ## 2026-11-12 — Hessian sign, Q_vol, paraxial scope (batch B)
 
 - **§1.6.4:** Classical Hessian sign corrected; Eqs. `ch1.hessian-classical-r-positive`, `ch1.hessian-distributional`; regression `ch01_hessian_sign_check.py`.
