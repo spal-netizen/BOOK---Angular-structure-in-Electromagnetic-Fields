@@ -1,39 +1,31 @@
 # R13.0 live execution dashboard
 
-**Updated:** 2026-11-11 (continuation checkpoint)
+**Updated:** 2026-11-11 (continuous completion checkpoint)
 
 | Field | Value |
 |-------|-------|
 | Classification | **B** |
-| Current batch | 5+ (partial; critical 3–4 landed) |
-| Build | **OK** — 56 pp |
-| TeX SHA | `1693E8A7…` |
-| PDF SHA | `0655AC0F…` |
+| TeX SHA | `676ECCC9B9F82DBC32D8A824F4B769372D90EB1D8CF097F1AE1C4D9632ECCA68` |
+| PDF SHA | `AA2BF6BAEA7932385701CC3D5FD8629BE4DF8A26A6E4C4528C19AFA2500BB8D5` |
+| Pages | 56 |
+| Git commit | `adc62fe` on branch `chapter1/r13.0-canonical` |
 
-## Batch matrix
+## Batches
 
-| Batch | Title | Status |
-|-------|-------|--------|
-| 0–2 | Baseline | DONE |
-| 3 | Distributional dipole | **DONE** |
-| 4 | Exterior uniqueness | **PARTIAL** |
-| 5 | Lossy | IN TEXT |
-| 6–15 | Stress, helicity, Chu, audit, literary, etc. | **OPEN** |
-| 16–19 | Forensic, build, git | **PARTIAL** |
+| ID | Status |
+|----|--------|
+| B03 exterior uniqueness | **CONDITIONAL** (M/N transversality fix applied) |
+| B04 dipole distributional | **VERIFIED BY DERIVATION** |
+| B05 dipole numerics | **VERIFIED NUMERICALLY** |
+| B06–B07 stress/torque | **VERIFIED BY DERIVATION** (dossier) |
+| B08 helicity/gauge/duality | **QUALIFIED** |
+| B09 modal m/ω | **QUALIFIED** |
+| B10 Chu | **OPEN — CRITICAL** |
+| B12 equations | **PARTIAL** (164 labels registered) |
+| B13 figures/tables | **OPEN** |
+| B15 literary | **OPEN** |
+| B18 build | **DONE** |
+| B19 git | **COMMIT DONE**; push branch if remote allows |
 
-## Metrics
-
-| Metric | Value |
-|--------|-------|
-| Equations audited (full ch.) | ~15% (critical regions) |
-| Figures visually inspected | 0 / 30 |
-| Pages visually inspected | 0 / 56 |
-| Proofs closed | Dipole distributional; exterior conditional |
-
-## Blockers
-
-- Chu MIT PDF not retrieved
-- Colton full text not retrieved
-- Maxwell stress full index derive not done
-- Full literary pass not done
+Ledger: `status/R13_0_EXECUTION_LEDGER.yaml`
 

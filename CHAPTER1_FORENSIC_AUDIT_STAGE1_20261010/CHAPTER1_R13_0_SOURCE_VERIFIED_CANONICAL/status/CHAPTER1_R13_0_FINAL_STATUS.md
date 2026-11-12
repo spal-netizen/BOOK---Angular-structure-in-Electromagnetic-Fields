@@ -6,9 +6,9 @@
 
 | Item | Path / SHA-256 |
 |------|----------------|
-| TeX | `source/CHAPTER1_R13_0_WORKING_CANDIDATE.tex` — `676ECCC9B9F82DBC32D8A824F4B769372D90EB1D8CF097F1AE1C4D9632ECCA68` |
-| PDF | `pdf/CHAPTER1_R13_0_SOURCE_VERIFIED_CANDIDATE.pdf` — `AA2BF6BAEA7932385701CC3D5FD8629BE4DF8A26A6E4C4528C19AFA2500BB8D5` |
-| Pages | **56** (1,207,207 bytes) |
+| TeX | `source/CHAPTER1_R13_0_WORKING_CANDIDATE.tex` — `1EBA54C01642808820B4A8C56DE39ADF96E68D47B63936402D3B64AF8BBBE71D` |
+| PDF | `pdf/CHAPTER1_R13_0_SOURCE_VERIFIED_CANDIDATE.pdf` — `8D47C2A9BC408C0E63D93618954582FCB4FF47EF7FC81C8A3C769F1146809FE7` |
+| Pages | **57** (1,212,982 bytes) |
 | Build | `build_package/BUILD_R13_0_FINAL.md` |
 
 ## Proof status summary
@@ -16,7 +16,7 @@
 | Item | Status |
 |------|--------|
 | Exterior passive uniqueness | **QUALIFIED / CONDITIONAL** — M+N expansion corrected; Rellich hypothesis stated |
-| Distributional dipole | **VERIFIED BY DERIVATION** |
+| Distributional dipole | **VERIFIED BY DERIVATION** (Lorenz gauge μ₀ term corrected; Hessian/PV language revised) |
 | Maxwell stress & torque | **VERIFIED BY DERIVATION** (dossier; manuscript cites result) |
 | Helicity / gauge / duality | **QUALIFIED** (scope limited in text + dossier) |
 | Modal \(m/\omega\) | **QUALIFIED** |
