@@ -6,9 +6,9 @@
 
 | Item | Path / SHA-256 |
 |------|----------------|
-| TeX | `source/CHAPTER1_R13_0_WORKING_CANDIDATE.tex` — `4DD879484B0C351DCB99A2016ECE7705E28BBF6763A09FCF84362B0E80CCA6B5` |
-| PDF | `pdf/CHAPTER1_R13_0_SOURCE_VERIFIED_CANDIDATE.pdf` — `9C10BFE970069496A2D2C5BE1AE40B982337879D5DE06A2F6FB63D429E4401A6` |
-| Pages | **57+** (1,217,162 bytes; +2 Hessian display equations) |
+| TeX | `source/CHAPTER1_R13_0_WORKING_CANDIDATE.tex` — `2BF3301BC1C6B817380DBA6F657A371D98ECAFDEBD6896D1F16E03BB95CCF38B` |
+| PDF | `pdf/CHAPTER1_R13_0_SOURCE_VERIFIED_CANDIDATE.pdf` — `83A4978DFDBCA255696874859E1421F37144C35DA2D33AF2399F0E3EFAE5B303` |
+| Commit | `4f5f018` (batch C: Route B shell, Beth qual., \(Q_{\mathrm{vol}}\) domain) |
 | Build | `build_package/BUILD_R13_0_FINAL.md` |
 
 ## Proof status summary
@@ -19,7 +19,8 @@
 | Distributional dipole | **VERIFIED BY DERIVATION** (Hessian **sign corrected**; Lorenz μ₀; PV/contact language) |
 | Antenna Q | **QUALIFIED** — \(Q_{\mathrm{vol}}\) total energy; Chu \(n=1\) reconstruction **OPEN** |
 | Paraxial LG (Eq. 1.76) | **QUALIFIED / DEFERRED** — template only; no azimuthal Poynting claim |
-| Maxwell stress & torque | **VERIFIED BY DERIVATION** (dossier; manuscript cites result) |
+| Maxwell stress & torque | **VERIFIED BY DERIVATION** (Route A; Route B two-surface shell Eqs. added) |
+| Beth torque scales | **QUALIFIED** — \(P/\omega\) not from open-disk stress; primary paper OPEN |
 | Helicity / gauge / duality | **QUALIFIED** (scope limited in text + dossier) |
 | Modal \(m/\omega\) | **QUALIFIED** |
 | Chu \(Q_{\mathrm{LB}}\) | **OPEN — CRITICAL** (no primary equation inspection) |
