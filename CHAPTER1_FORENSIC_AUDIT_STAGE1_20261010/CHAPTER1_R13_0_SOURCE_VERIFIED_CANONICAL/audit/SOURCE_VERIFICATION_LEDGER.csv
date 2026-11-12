@@ -1,0 +1,8 @@
+Claim_ID,Manuscript_location,Exact_claim,Primary_source,Edition_version,Page_equation,Independent_derivation,Verification_status,Remaining_limitation
+R13-C01,sec ch01.1.3,Passive scalar exterior uniqueness closes Delta E=H=0,Colton-Kress-Hsiao 1981; Sommerfeld; Harrington,MMMAS vol 3,Publisher abstract only,Four-step energy+outgoing modes in text,PARTIAL,Full Colton PDF not read equation-level
+R13-C02,sec ch01.6.4,Distributional Maxwell for ideal p,Jackson; Yaghjian 1980 Proc IEEE,NIST PDF partial; Jackson 3e,Dipole chapter template,Expanded test-function text in R13,PARTIAL,Yaghjian 1982/TN1000 not read; nonspherical volume noted
+R13-C03,para equatorial ring,(1/a)dI/dphi + j omega lambda = 0,Stratton 1941,1941,Filament continuity standard,Dimensional audit in text,VERIFIED line/sheet,
+R13-C04,para Poynting 1884,Energy flux only not stress AM flux,Poynting 1884 Phil Trans,Royal Soc 1884,Historical separation in text,Not re-read primary 1884 scan this run,PARTIAL,1884 paper not re-opened page-by-page
+R13-C05,Eq chu-q-adopted,Q_adopted distinct from Chu Q_n,Chu 1948 JAP; MIT TR-064,1948,Not inspected,Text distinguishes functionals,NOT VERIFIED,MIT PDF fetch not achieved
+R13-C06,Eq ex64-power-invariance,Prad dipole omega^4 p^2 / (12 pi eps0 c^3),Stratton Harrington,Standard,Numeric script,PASS ch01_numeric_checks.py,VERIFIED,
+R13-C07,Eq dipole-reactive-ratio,|Preac|/Prad = 1/(kr)^3,Manuscript fields,Convention locked,Algebra from shell flux,PARTIAL,Full shell integral not re-derived symbolically in R13

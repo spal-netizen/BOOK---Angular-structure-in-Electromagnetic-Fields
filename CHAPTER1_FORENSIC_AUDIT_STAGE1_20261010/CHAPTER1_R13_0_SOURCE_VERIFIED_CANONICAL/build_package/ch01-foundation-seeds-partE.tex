@@ -1,0 +1,82 @@
+% Ch.1 PASS K–L — multipole hierarchy from retarded source integral (§1.6.4)
+\paragraph{Source moments and multipole hierarchy.}
+\label{sec:ch01.6.4}
+
+The far-zone field of a localized source follows the retarded vector potential of Eq.~\eqref{eq:ch1.vector-potential-retarded}. For $r=|\mathbf{r}|$ large compared with the source extent and observation direction $\hat{\mathbf{r}}$,
+\begin{equation}
+\label{eq:ch1.far-zone-vector-potential}
+\mathbf{A}(\mathbf{r})
+\approx
+\frac{\mu_0}{4\pi}\,
+\frac{e^{-\jj kr}}{r}
+\int \Jimp(\mathbf{r}')\,
+e^{\jj k\,\hat{\mathbf{r}}\cdot\mathbf{r}'}\,
+d^3r',
+\end{equation}
+with $k=k_0=\omega/c$ under $\exp(+\jj\omega t)$ \cite{jackson1999,stratton1941}. Expanding the phase,
+\begin{equation}
+\label{eq:ch1.source-phase-expansion}
+e^{\jj k\,\hat{\mathbf{r}}\cdot\mathbf{r}'}
+=
+1+\jj k\,\hat{\mathbf{r}}\cdot\mathbf{r}'
+-\frac{k^2}{2}(\hat{\mathbf{r}}\cdot\mathbf{r}')^{2}+\cdots,
+\end{equation}
+generates successive multipole orders from the same source integral \cite{stratton1941,jackson1999}. The zeroth term involves the current moment $\mathbf{I}=\int\Jimp\,d^3r'$. Component by component,
+\begin{equation}
+\label{eq:ch1.current-moment-identity}
+\partial_j'(x_i' J_j')
+=J_i'+x_i'\,\nabla'\cdot\Jimp,
+\end{equation}
+so integration over a localized source gives
+\begin{equation}
+\label{eq:ch1.total-current-moment}
+\int\Jimp_i(\mathbf{r}')\,d^3r'
+=-\int x_i'\,\nabla'\cdot\Jimp(\mathbf{r}')\,d^3r'.
+\end{equation}
+With harmonic continuity $\nabla\cdot\Jimp+\jj\omega\rho=0$ under $\exp(+\jj\omega t)$,
+\begin{equation}
+\label{eq:ch1.current-dipole-relation}
+\int\Jimp(\mathbf{r}')\,d^3r'=\jj\omega\mathbf{p},
+\qquad
+\mathbf{p}=\int \mathbf{r}\,\rho(\mathbf{r})\,d^3r,
+\end{equation}
+so the zeroth current integral is not zero. The leading radiating electric term is therefore the electric dipole contribution
+\begin{equation}
+\label{eq:ch1.electric-dipole-potential}
+\mathbf{A}_{\mathrm{ED}}(\mathbf{r})
+=
+\frac{\jj\omega\mu_0}{4\pi}\,
+\frac{e^{-\jj kr}}{r}\,\mathbf{p}.
+\end{equation}
+The electric monopole moment $Q=\int\rho\,d^3r$ is independent of time for an isolated localized system, so $dQ/dt=0$ and no time-varying radiating electric monopole appears; static Coulomb fields of net charge remain, but they are not part of the outward $1/r$ radiative branch selected by Eq.~\eqref{eq:ch1.sommerfeld-scalar} \cite{maxwell1873,stratton1941}. The first radiating electric multipole is therefore the dipole \cite{jackson1999,stratton1941}.
+
+The magnetic dipole moment
+\begin{equation}
+\label{eq:ch1.magnetic-dipole-moment}
+\mathbf{m}=\frac{1}{2}\int \mathbf{r}\times\Jimp(\mathbf{r})\,d^3r
+\end{equation}
+arises at the same order from the transverse current distribution \cite{stratton1941,jackson1999}. Bold $\mathbf{m}$ denotes the magnetic dipole vector; italic $m$ in $Y_\ell^m$ and $e^{\jj m\phi}$ denotes azimuthal order relative to the selected axis---the two symbols must not be conflated \cite{stratton1941}. At $\ell=2$, the electric quadrupole tensor may be taken in the traceless convention
+\begin{equation}
+\label{eq:ch1.electric-quadrupole-tensor}
+Q_{ij}=\int \rho(\mathbf{r})\,\big(3x_i x_j-r^2\delta_{ij}\big)\,d^3r,
+\end{equation}
+with distinct normalizations used elsewhere in the literature; this chapter uses Eq.~\eqref{eq:ch1.electric-quadrupole-tensor} consistently \cite{jackson1999,stratton1941}. $\nabla\cdot\B=0$ excludes an ordinary classical magnetic monopole radiation term \cite{maxwell1873}.
+
+\paragraph{Origin dependence.}
+Total charge $Q=\int\rho\,d^3r$ is independent of origin. For a neutral localized source the dipole moment is origin independent; higher multipole moments generally depend on the chosen origin \cite{jackson1999,stratton1941}. A sensible origin is therefore taken inside or at the centre of the source region before comparing multipole coefficients---a convention Chapter~\ref{ch:03} inherits without redeveloping translation theorems here \cite{stratton1941}.
+
+\paragraph{Physical ladder.}
+The radiation hierarchy proceeds monopole (static only) $\rightarrow$ electric and magnetic dipole $\rightarrow$ quadrupole $\rightarrow$ higher multipoles \cite{stratton1941,jackson1999}. When $\mathbf{p}$ vanishes by symmetry, quadrupole radiation may dominate \cite{stratton1941,harrington2001}. For $ka\ll 1$ with source-support radius $a$, the small-argument behaviour
+\begin{equation}
+\label{eq:ch1.small-ka-bessel}
+j_\ell(ka)\sim\frac{(ka)^\ell}{(2\ell+1)!!},
+\qquad ka\ll 1,
+\end{equation}
+gives $j_1(ka)\sim ka/3$, $j_2(ka)\sim (ka)^2/15$, and $j_3(ka)\sim (ka)^3/105$; generally $j_\ell(ka)=\mathcal{O}((ka)^\ell)$. High-$\ell$ spherical content is therefore progressively suppressed in the electrically small limit---there is no sharp universal cutoff at $\ell=ka$ \cite{stratton1941,chu1948}. Increasing $ka$ permits richer angular structure through finite phase accumulation and the corresponding spherical-wave content \cite{stratton1941}.
+
+\paragraph{Finite electrical size, radiation $Q$, and Chu scaling.}
+For a tuned lossless resonant system, $Q=\omega W/P$ with stored energy $W$ and average power loss or radiation $P$ \cite{stratton1941,chu1948}. In the antenna and radiation context one uses the conceptual seed $Q\sim\omega W_{\mathrm{stored}}/P_{\mathrm{rad}}$, with the precise stored-energy definition for radiating systems requiring care because radiation energy must be distinguished from reactive stored energy. Under the classical stored-energy definition adopted in Chapter~\ref{ch:04}, $Q=2\omega\max(W_e,W_m)/P_{\mathrm{rad}}$; the systematic spherical-wave treatment is deferred there \cite{chu1948,harrington2001}. Chu's classical result \cite{chu1948} shows that an electrically small radiator cannot realize arbitrary external radiation behaviour without a reactive-energy burden: for the lowest radiating class, radiation $Q$ scales upward as $ka$ decreases---schematically $Q_{\min}\sim (ka)^{-3}$ for the canonical minimum-$Q$ dipole limit \cite{chu1948,harrington2001}. The chain is explicit: finite $ka$ restricts accessible spherical content $\rightarrow$ restricted angular complexity $\rightarrow$ increased reactive field burden $\rightarrow$ lower bound on radiation $Q$ \cite{chu1948,stratton1941}.
+
+\ClassicalInkFig{fig:ch1.multipole-hierarchy}{Multipole patterns at $\ell=1$ (electric and magnetic dipole) and $\ell=2$ (electric and magnetic quadrupole); increasing $\ell$ increases angular complexity on the radiation sphere \cite{stratton1941,jackson1999}.}{fig22-multipole}
+
+The exact dipole fields of Eq.~\eqref{eq:ch1.dipole-fields-explicit} are the $\ell=1$ electric-dipole reference; magnetic dipole and quadrupole names attach to the next terms in the same spherical hierarchy developed in Chapter~\ref{ch:03} \cite{stratton1941,tai1994}. Scalar $Y_\ell^m$ supplies angular structure here; divergence-free vector spherical harmonics and the TE/TM vector spherical waves built from them complete the electromagnetic basis in source-free vacuum and are constructed in Chapter~\ref{ch:03} \cite{hansen1988,stratton1941}.

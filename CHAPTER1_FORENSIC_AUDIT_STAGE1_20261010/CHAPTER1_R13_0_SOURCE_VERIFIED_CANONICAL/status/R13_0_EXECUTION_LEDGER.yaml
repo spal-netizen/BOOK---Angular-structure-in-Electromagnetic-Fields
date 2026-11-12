@@ -1,0 +1,51 @@
+run: R13.0_continuous_completion
+updated: "2026-11-11"
+batches:
+  B03_exterior_uniqueness:
+    status: CONDITIONAL
+    evidence: proofs/EXTERIOR_UNIQUENESS_DOSSIER.md; tex §1.1.3 M+N fix
+  B04_distributional_dipole:
+    status: VERIFIED_BY_DERIVATION
+    evidence: proofs/DISTRIBUTIONAL_DIPOLE_DOSSIER.md; validation/ch01_dipole_maxwell_checks.py
+  B05_dipole_field_power:
+    status: VERIFIED_NUMERICALLY
+    evidence: validation/ch01_numeric_checks.py; ch01_dipole_maxwell_checks.py
+  B06_maxwell_stress:
+    status: VERIFIED_BY_DERIVATION
+    evidence: proofs/MAXWELL_STRESS_TORQUE_DOSSIER.md
+  B07_angular_momentum:
+    status: VERIFIED_BY_DERIVATION
+    evidence: proofs/MAXWELL_STRESS_TORQUE_DOSSIER.md §4
+  B08_helicity_gauge_duality:
+    status: QUALIFIED
+    evidence: proofs/HELICITY_GAUGE_DUALITY_DOSSIER.md
+  B09_modal_m_over_omega:
+    status: QUALIFIED
+    evidence: proofs/MODAL_M_OVER_OMEGA_DOSSIER.md
+  B10_chu:
+    status: OPEN_CRITICAL
+    evidence: proofs/CHU_PRIMARY_SOURCE_DOSSIER.md
+  B11_primary_sources:
+    status: PARTIAL
+    evidence: audit/SOURCE_VERIFICATION_LEDGER.csv
+  B12_equation_audit:
+    status: PARTIAL
+    evidence: audit/EQUATION_AUDIT_REGISTER.csv (164 eq labels inventoried)
+  B13_figures_tables:
+    status: OPEN
+    evidence: audit/FIGURE_TABLE_AUDIT_REGISTER.csv
+  B14_continuity:
+    status: PARTIAL
+  B15_literary:
+    status: OPEN
+  B16_problems_summary:
+    status: PARTIAL
+  B17_adversarial:
+    status: PARTIAL
+    evidence: reports/R13_0_ADVERSARIAL_REVIEW.md
+  B18_build:
+    status: DONE
+  B19_git:
+    status: PENDING
+classification: B
+

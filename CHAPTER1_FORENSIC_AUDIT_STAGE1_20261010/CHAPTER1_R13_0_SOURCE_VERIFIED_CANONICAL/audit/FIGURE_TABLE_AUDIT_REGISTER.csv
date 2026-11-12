@@ -1,0 +1,16 @@
+Figure_ID,Source_file,PDF_page,Defect,Correction,Visual_status
+1.1,vol-i-physical-figure-library.tex,TBD,Not inspected this run,,OPEN
+1.13,same,TBD,stress moment sign audit pending,,OPEN
+1.14,same,TBD,normal direction audit pending,,OPEN
+1.20,same,TBD,gauge handedness pending,,OPEN
+1.21,same,TBD,polarization convention pending,,OPEN
+1.23,same,TBD,AM flux sign pending,,OPEN
+1.24,same,TBD,outward flux pending,,OPEN
+1.26,same,TBD,counter-rotating scope pending,,OPEN
+1.27,same,TBD,cancellation caption pending,,OPEN
+1.28,same,TBD,power imbalance pending,,OPEN
+1.30,same,TBD,directivity normalization pending,,OPEN
+Table_1.1,ch01-classical-tables.tex,TBD,layout audit pending,,OPEN
+Table_1.2,ch01-classical-tables.tex,TBD,layout audit pending,,OPEN
+Table_1.3,ch01-classical-tables.tex,TBD,layout audit pending,,OPEN
+

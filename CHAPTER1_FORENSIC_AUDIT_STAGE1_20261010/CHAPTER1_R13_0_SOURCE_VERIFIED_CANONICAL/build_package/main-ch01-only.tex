@@ -1,0 +1,34 @@
+% Standalone Chapter 1 PDF build — frozen scholarly-production source (2026-09-13)
+\input{preamble}
+
+\title{Angular Structure in Electromagnetic Fields\\[0.4em]
+  \large Volume I --- Chapter 1\\[0.3em]
+  \normalsize Foundations of Angular Electromagnetic Structure}
+\author{Srikanta Pal}
+\date{2026}
+
+\begin{document}
+% Standalone build: forward chapter labels resolve cross-volume pointers only.
+\makeatletter
+\begingroup
+\setcounter{chapter}{1}
+\refstepcounter{chapter}\label{ch:02}
+\refstepcounter{chapter}\label{ch:03}
+\refstepcounter{chapter}\label{ch:04}
+\setcounter{chapter}{0}
+\endgroup
+\makeatother
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\input{ch01}
+
+\input{ch01-problems}
+
+\let\cleardoublepage\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
