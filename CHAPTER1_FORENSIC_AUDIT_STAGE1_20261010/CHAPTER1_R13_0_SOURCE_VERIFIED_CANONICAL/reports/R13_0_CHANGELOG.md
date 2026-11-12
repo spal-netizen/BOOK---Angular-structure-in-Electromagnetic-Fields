@@ -1,5 +1,11 @@
 # R13.0 changelog (canonical)
 
+## 2026-11-12 — Hessian sign, Q_vol, paraxial scope (batch B)
+
+- **§1.6.4:** Classical Hessian sign corrected; Eqs. `ch1.hessian-classical-r-positive`, `ch1.hessian-distributional`; regression `ch01_hessian_sign_check.py`.
+- **§1.6.4:** Route B — \(Q_{\mathrm{vol}}(V)\) total field energy; not Chu/McLean non-propagating \(Q\).
+- **§1.2.2:** Paraxial LG template narrowed; azimuthal Poynting claims removed; `PARAXIAL_MAXWELL_COMPLETION_DOSSIER.md`.
+
 ## 2026-11-12 — critical defect repairs (batch)
 
 - **§1.0 / §1.2:** Momentum density \(\mathbf g_{\mathrm{em}}\) distinguished from Maxwell stress flux/traction (removed “momentum resides in stress”).

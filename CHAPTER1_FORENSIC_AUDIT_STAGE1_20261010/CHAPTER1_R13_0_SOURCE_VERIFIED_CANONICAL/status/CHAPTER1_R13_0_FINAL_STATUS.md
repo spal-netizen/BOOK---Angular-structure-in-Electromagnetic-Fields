@@ -6,9 +6,9 @@
 
 | Item | Path / SHA-256 |
 |------|----------------|
-| TeX | `source/CHAPTER1_R13_0_WORKING_CANDIDATE.tex` — `1EBA54C01642808820B4A8C56DE39ADF96E68D47B63936402D3B64AF8BBBE71D` |
-| PDF | `pdf/CHAPTER1_R13_0_SOURCE_VERIFIED_CANDIDATE.pdf` — `8D47C2A9BC408C0E63D93618954582FCB4FF47EF7FC81C8A3C769F1146809FE7` |
-| Pages | **57** (1,212,982 bytes) |
+| TeX | `source/CHAPTER1_R13_0_WORKING_CANDIDATE.tex` — `4DD879484B0C351DCB99A2016ECE7705E28BBF6763A09FCF84362B0E80CCA6B5` |
+| PDF | `pdf/CHAPTER1_R13_0_SOURCE_VERIFIED_CANDIDATE.pdf` — `9C10BFE970069496A2D2C5BE1AE40B982337879D5DE06A2F6FB63D429E4401A6` |
+| Pages | **57+** (1,217,162 bytes; +2 Hessian display equations) |
 | Build | `build_package/BUILD_R13_0_FINAL.md` |
 
 ## Proof status summary
@@ -16,7 +16,9 @@
 | Item | Status |
 |------|--------|
 | Exterior passive uniqueness | **QUALIFIED / CONDITIONAL** — M+N expansion corrected; Rellich hypothesis stated |
-| Distributional dipole | **VERIFIED BY DERIVATION** (Lorenz gauge μ₀ term corrected; Hessian/PV language revised) |
+| Distributional dipole | **VERIFIED BY DERIVATION** (Hessian **sign corrected**; Lorenz μ₀; PV/contact language) |
+| Antenna Q | **QUALIFIED** — \(Q_{\mathrm{vol}}\) total energy; Chu \(n=1\) reconstruction **OPEN** |
+| Paraxial LG (Eq. 1.76) | **QUALIFIED / DEFERRED** — template only; no azimuthal Poynting claim |
 | Maxwell stress & torque | **VERIFIED BY DERIVATION** (dossier; manuscript cites result) |
 | Helicity / gauge / duality | **QUALIFIED** (scope limited in text + dossier) |
 | Modal \(m/\omega\) | **QUALIFIED** |

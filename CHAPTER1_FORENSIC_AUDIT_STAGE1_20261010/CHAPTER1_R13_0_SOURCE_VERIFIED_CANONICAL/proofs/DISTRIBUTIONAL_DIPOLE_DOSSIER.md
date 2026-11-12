@@ -28,10 +28,11 @@
 | Ampère | $\curl(\nabla G\times\mathbf p)=\nabla(\mathbf p\cdot\nabla G)+k^2\mathbf p G+\mathbf p\delta^3$; $\curl\mathbf H=j\omega\epsilon_0\mathbf E+\mathbf J_{\mathrm{imp}}$ | DERIVED (Eq. `ch1.dipole-ampere-distributional`) |
 | Lorenz | Pointwise $\nabla\cdot\mathbf A+j\omega\mu_0\epsilon_0\phi=j\omega\mu_0\mathbf p\cdot\nabla G-j\omega\mu_0\mathbf p\cdot\nabla G=0$ from Eq. `ch1.dipole-A-from-source` | **CORRECTED** (removed erroneous weak form missing $\mu_0$ on second term); displayed Eq. `ch1.dipole-lorenz-gauge` |
 
-## Hessian / principal volume (manuscript language corrected)
+## Hessian / principal volume (corrected 2026-11-12)
 
-- For $r>0$: classical smooth kernel $-(3\hat r_i\hat r_j-\delta_{ij})/(4\pi r^3)$.
-- In $\mathcal{D}'(\mathbb{R}^3)$: principal-value part **plus** spherical contact $-\frac13\delta_{ij}\delta^3$.
+- For $r>0$: **positive** classical kernel $(3\hat r_i\hat r_j-\delta_{ij})/(4\pi r^3)$ (Eq. `ch1.hessian-classical-r-positive`).
+- In $\mathcal{D}'(\mathbb{R}^3)$: PV of the same kernel **plus** spherical contact $-\frac13\delta_{ij}\delta^3$ (Eq. `ch1.hessian-distributional`).
+- Regression: `validation/ch01_hessian_sign_check.py`.
 - **Not conflated:** distributional identity (fixed) vs Yaghjian depolarisation dyadic for nonspherical exclusion volumes (geometry-dependent limit).
 
 **Yaghjian primary sources:** project copies under prior audit trees; 1980 NIST PDF + 1982 delta paper cited at claim level, not re-audited equation-by-equation this batch.
