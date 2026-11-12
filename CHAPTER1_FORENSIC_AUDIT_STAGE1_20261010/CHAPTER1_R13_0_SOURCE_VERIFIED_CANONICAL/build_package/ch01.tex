@@ -46,7 +46,7 @@ with $\mathbf{g}_{\mathrm{em}}=\varepsilon_0\,\E\times\B$ and $\mathbf{f}_{\math
 
 Angular momentum about the origin is carried by the stress-moment density $\Mavg=\mathbf{r}\times\Tavg$, with instantaneous counterpart $\Minst=\mathbf{r}\times\Tinst$. Locally, source exchange contributes $\boldsymbol{\tau}_{\mathrm{src}}=\mathbf{r}\times\mathbf{f}_{\mathrm{src}}$; under Route~A continuum closure (Subsection~\ref{sec:ch01.1.4}), $\boldsymbol{\tau}_{\mathrm{matter}}$ coincides with $\boldsymbol{\tau}_{\mathrm{src}}$ on the material support.
 
-The stress moment $\boldsymbol{\mathcal{T}}_J=\oint_{\partial V}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS$ and outward field transport $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ are defined in Eqs.~\eqref{eq:ch1.stress-moment-integral} and~\eqref{eq:ch1.outward-am-flux}. Mechanical torque on a body equals $-\boldsymbol{\Phi}_{J,\mathrm{out}}-d\mathbf{J}_{\mathrm{em,store}}/dt$ only when the integration domain, Route~A/B assumptions, and steady-state storage condition of Eqs.~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.route-b-torque-shell} are satisfied; an open transverse disk for a uniform plane wave is not such a domain \cite{beth1936,stratton1941}.
+The stress moment $\boldsymbol{\mathcal{T}}_J=\oint_{\partial V}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS$ and outward field transport $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ are defined in Eqs.~\eqref{eq:ch1.stress-moment-integral} and~\eqref{eq:ch1.outward-am-flux} on volumes where the vacuum angular-momentum balance of Eq.~\eqref{eq:ch1.angular-momentum-balance-averaged} holds. Under Route~A, mechanical torque uses $d\mathbf{J}_{\mathrm{em,A}}/dt$ with $\mathbf{J}_{\mathrm{em,A}}=\int_{V_{\mathrm{A}}}\langle\mathbf{j}_{\mathrm{em}}\rangle\,dV$ (Eq.~\eqref{eq:ch1.torque-stress-route-a}). Under Route~B, storage is $\mathbf{J}_{\mathrm{em,vac}}=\int_{\mathcal{V}_{\mathrm{vac}}}\langle\mathbf{j}_{\mathrm{em}}\rangle\,dV$ on the source-free shell only, and body torque follows from $\boldsymbol{\mathcal{T}}_{J,i}$ (Eqs.~\eqref{eq:ch1.route-b-torque-shell-averaged}--\eqref{eq:ch1.route-b-body-torque-steady}); vacuum $\langle\mathbf{j}_{\mathrm{em}}\rangle$ must not be integrated through arbitrary material as though it were a unified storage integral \cite{beth1936,stratton1941,harrington2001}.
 
 A uniform plane wave in vacuum separates radiation pressure from angular transport in the simplest setting. Take
 $\E=E_0 e^{-\jj k z}\hat{\mathbf{x}}$ and, from $\curl\E=-\jj\omega\mu_0\H$,
@@ -736,12 +736,18 @@ when the vacuum-side Maxwell stress supplies the traction (N and N\,m) \cite{str
 \frac{d}{dt}\int_{\mathcal{V}_{\mathrm{vac}}}\langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
 =\boldsymbol{\mathcal{T}}_{J,o}+\boldsymbol{\mathcal{T}}_{J,i}
 \end{equation}
-holds at all times. Under harmonic steady state, $d\mathbf{J}_{\mathrm{em,store}}/dt=\mathbf{0}$ is the vanishing cycle average of the storage rate in the shell---not the assertion that $\partial_t\mathbf{j}_{\mathrm{em}}$ vanishes pointwise at every instant. Then
+holds at all times, with vacuum-shell storage
+\begin{equation}
+\label{eq:ch1.J-em-vac-def}
+\mathbf{J}_{\mathrm{em,vac}}:=\int_{\mathcal{V}_{\mathrm{vac}}}\langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
+\end{equation}
+so Eq.~\eqref{eq:ch1.route-b-torque-shell-averaged} is $d\mathbf{J}_{\mathrm{em,vac}}/dt=\boldsymbol{\mathcal{T}}_{J,o}+\boldsymbol{\mathcal{T}}_{J,i}$. On $S_i$, $\hat{\mathbf{n}}_i$ is outward from $\mathcal{V}_{\mathrm{vac}}$ and points from the body into the adjacent vacuum; the body's outward normal $\hat{\mathbf{n}}_{\mathrm{body}}$ on the same interface satisfies $\hat{\mathbf{n}}_{\mathrm{body}}=-\hat{\mathbf{n}}_i$. Electromagnetic traction on the body delivered through Maxwell stress on the vacuum side is $\oint_{S_i}\Tavg\cdot\hat{\mathbf{n}}_{\mathrm{body}}\,dS=-\oint_{S_i}\Tavg\cdot\hat{\mathbf{n}}_i\,dS$, which motivates Eq.~\eqref{eq:ch1.route-b-body-force}; the torque counterpart is $\mathbf{T}_{\mathrm{body}}=-\boldsymbol{\mathcal{T}}_{J,i}$ in Eq.~\eqref{eq:ch1.route-b-body-force}. Under harmonic excitation, the cycle average $\langle d\mathbf{J}_{\mathrm{em,vac}}/dt\rangle_T$ may vanish when $\mathbf{J}_{\mathrm{em,vac}}$ is $T$-periodic---this is not the claim that $\partial_t\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{0}$ pointwise at every instant. In that reduction,
 \begin{equation}
 \label{eq:ch1.route-b-body-torque-steady}
+\boldsymbol{\mathcal{T}}_{J,o}+\boldsymbol{\mathcal{T}}_{J,i}=\mathbf{0},\qquad
 \mathbf{T}_{\mathrm{body}}=-\boldsymbol{\mathcal{T}}_{J,i}=\boldsymbol{\mathcal{T}}_{J,o}
 \end{equation}
-when shell storage can be neglected. A single outer-surface reading of Eqs.~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.outward-am-flux} applies only in that reduction; it is never obtained by integrating vacuum stress through the material interior \cite{stratton1941,harrington2001,beth1936}.
+when the cycle-averaged shell-storage rate is negligible. Reading $\boldsymbol{\mathcal{T}}_{J,o}$ on $S_o$ alone then supplies the mechanical torque; that reading follows from the two-surface shell identity, not from integrating vacuum stress or $\langle\mathbf{j}_{\mathrm{em}}\rangle$ through the material interior \cite{stratton1941,harrington2001,beth1936}.
 
 \begin{figure}[t]
 \centering
@@ -869,7 +875,7 @@ The remaining term $\varepsilon_{ijk}T_{kj}$ would represent torque density carr
 \frac{\partial\mathbf{j}_{\mathrm{em}}}{\partial t}+\boldsymbol{\tau}_{\mathrm{src}}
 =\divg\Minst,
 \end{equation}
-with source-exchange torque density $\boldsymbol{\tau}_{\mathrm{src}}=\mathbf{r}\times\mathbf{f}_{\mathrm{src}}$ (N\,m\,m$^{-3}$) obtained from the same $\rho$ and $\Jimp$ as Equation~\eqref{eq:ch1.momentum-balance-instantaneous} \cite{maxwell1873,stratton1941}. Mechanical torque on carriers is $\boldsymbol{\tau}_{\mathrm{matter}}=\mathbf{r}\times\mathbf{f}_{\mathrm{matter}}$ of Eq.~\eqref{eq:ch1.lorentz-force}; $\boldsymbol{\tau}_{\mathrm{src}}=\boldsymbol{\tau}_{\mathrm{matter}}$ only under Route~A on the support where $\mathbf{f}_{\mathrm{src}}=\mathbf{f}_{\mathrm{matter}}$. The resultant mechanical torque $\mathbf{T}_{\mathrm{matter}}=\int_{V_m}\boldsymbol{\tau}_{\mathrm{matter}}\,dV$ (N\,m) follows from Eq.~\eqref{eq:ch1.angular-balance-integral} under Route~A throughout $V_m$, or from the closed stress integral on $\partial V_m$ in source-free vacuum under Route~B (Eq.~\eqref{eq:ch1.torque-stress-surface}) \cite{stratton1941,beth1936}. In harmonic steady state with vanishing storage rate, $\mathbf{T}_{\mathrm{matter}}=\boldsymbol{\mathcal{T}}_J=-\boldsymbol{\Phi}_{J,\mathrm{out}}$ when the integration domain and route assumptions support that identification \cite{beth1936}. Eq.~\eqref{eq:ch1.angular-momentum-balance} is the instantaneous rotational counterpart of Eq.~\eqref{eq:ch1.momentum-balance-instantaneous}: stored field angular momentum changes when source-exchange torque density acts or when stress-moment flux diverges.
+with source-exchange torque density $\boldsymbol{\tau}_{\mathrm{src}}=\mathbf{r}\times\mathbf{f}_{\mathrm{src}}$ (N\,m\,m$^{-3}$) obtained from the same $\rho$ and $\Jimp$ as Equation~\eqref{eq:ch1.momentum-balance-instantaneous} \cite{maxwell1873,stratton1941}. Mechanical torque on carriers is $\boldsymbol{\tau}_{\mathrm{matter}}=\mathbf{r}\times\mathbf{f}_{\mathrm{matter}}$ of Eq.~\eqref{eq:ch1.lorentz-force}; $\boldsymbol{\tau}_{\mathrm{src}}=\boldsymbol{\tau}_{\mathrm{matter}}$ only under Route~A on the support where $\mathbf{f}_{\mathrm{src}}=\mathbf{f}_{\mathrm{matter}}$. The resultant mechanical torque $\mathbf{T}_{\mathrm{matter}}=\int_{V_{\mathrm{A}}}\boldsymbol{\tau}_{\mathrm{matter}}\,dV$ (N\,m) follows from Eq.~\eqref{eq:ch1.angular-balance-integral} under Route~A on $V_{\mathrm{A}}$. Under Route~B, $\mathbf{T}_{\mathrm{body}}=-\boldsymbol{\mathcal{T}}_{J,i}$ from the vacuum shell (Eqs.~\eqref{eq:ch1.route-b-body-force} and~\eqref{eq:ch1.route-b-body-torque-steady}), not from a volume integral of vacuum $\langle\mathbf{j}_{\mathrm{em}}\rangle$ through material \cite{stratton1941,beth1936,harrington2001}. In harmonic steady state with negligible cycle-averaged storage rate on the stated domain, $\mathbf{T}_{\mathrm{matter}}=-\boldsymbol{\Phi}_{J,\mathrm{out}}(V_{\mathrm{A}})$ along Route~A and $\mathbf{T}_{\mathrm{body}}=\boldsymbol{\mathcal{T}}_{J,o}$ along Route~B when shell storage is negligible \cite{beth1936}. Eq.~\eqref{eq:ch1.angular-momentum-balance} is the instantaneous rotational counterpart of Eq.~\eqref{eq:ch1.momentum-balance-instantaneous}: stored field angular momentum changes when source-exchange torque density acts or when stress-moment flux diverges.
 
 For time-harmonic fields under $\exp(+\jj\omega t)$, the same conservation laws may be cycle-averaged. Averaging Equation~\eqref{eq:ch1.momentum-balance-instantaneous} yields $\partial_t\langle\mathbf{g}_{\mathrm{em}}\rangle+\langle\mathbf{f}_{\mathrm{src}}\rangle=\divg\Tavg$, and averaging Eq.~\eqref{eq:ch1.angular-momentum-balance} yields
 \begin{equation}
@@ -877,7 +883,7 @@ For time-harmonic fields under $\exp(+\jj\omega t)$, the same conservation laws 
 \frac{\partial\langle\mathbf{j}_{\mathrm{em}}\rangle}{\partial t}+\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle
 =\divg\Mavg,
 \end{equation}
-where $\Mavg=\mathbf{r}\times\Tavg$, $\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{r}\times\langle\mathbf{g}_{\mathrm{em}}\rangle$, and $\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle=\mathbf{r}\times\langle\mathbf{f}_{\mathrm{src}}\rangle$ \cite{stratton1941}. Under Route~A, $\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle=\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle$ on the relevant support; under Route~B, $\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle$ remains field--source bookkeeping and mechanical torque on a body is read from the stress surface integral (Equation~\eqref{eq:ch1.torque-stress-surface}). Angle brackets mark cycle-averaged harmonic quantities; $\Minst$ and $\Mavg$ are not interchangeable in the same displayed balance.
+where $\Mavg=\mathbf{r}\times\Tavg$, $\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{r}\times\langle\mathbf{g}_{\mathrm{em}}\rangle$, and $\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle=\mathbf{r}\times\langle\mathbf{f}_{\mathrm{src}}\rangle$ \cite{stratton1941}. Under Route~A, $\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle=\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle$ on the relevant support; under Route~B, $\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle$ remains field--source bookkeeping and mechanical torque on a body is read from $\boldsymbol{\mathcal{T}}_{J,i}$ and Eq.~\eqref{eq:ch1.J-em-vac-def}, not from Eq.~\eqref{eq:ch1.torque-stress-route-a} with a material-containing volume. Angle brackets mark cycle-averaged harmonic quantities; $\Minst$ and $\Mavg$ are not interchangeable in the same displayed balance.
 
 In linear isotropic vacuum the cycle-averaged momentum density is
 \begin{equation}
@@ -892,14 +898,14 @@ and the corresponding angular-momentum density is
 \end{equation}
 \addtocounter{equation}{-1}\refstepcounter{equation}\label{eq:ch1.angular-density-split}%
 
-Integrating Equation~\eqref{eq:ch1.angular-momentum-balance-averaged} over a control volume $V_m$ with outward normal $\hat{\mathbf{n}}$ yields a valid volume identity only where that local balance holds pointwise (vacuum $\varepsilon_0,\mu_0$ region with the same $(\rho,\Jimp)$ as Maxwell's equations). When $V_m$ encloses matter, the surface balance Eqs.~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.outward-am-flux} on $\partial V_m$ in source-free vacuum supply the mechanical resultant under Route~B; the volume integral of $\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle$ is then source-exchange bookkeeping, not automatic load torque \cite{stratton1941}. With that scope,
+Integrating Equation~\eqref{eq:ch1.angular-momentum-balance-averaged} over a control volume $V$ yields a valid volume identity only where that local balance holds pointwise---typically a vacuum $\varepsilon_0,\mu_0$ region with the impressed $(\rho,\Jimp)$ of the stated model \cite{stratton1941}. Write $V_{\mathrm{A}}$ for a Route~A volume on which $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ and the vacuum balance applies throughout, and reserve $\mathcal{V}_{\mathrm{vac}}=V_o\setminus\overline{B}$ for the Route~B shell introduced above. On $V_{\mathrm{A}}$,
 \begin{equation}
 \label{eq:ch1.angular-balance-integral}
-\frac{d}{dt}\int_{V_m} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
-+\int_{V_m} \langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV
-=\oint_{\partial V_m}\Mavg\cdot\hat{\mathbf{n}}\,dS.
+\frac{d}{dt}\int_{V_{\mathrm{A}}} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
++\int_{V_{\mathrm{A}}} \langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV
+=\oint_{\partial V_{\mathrm{A}}}\Mavg\cdot\hat{\mathbf{n}}\,dS.
 \end{equation}
-The volume term $\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV$ is the integrated source-exchange torque associated with $(\rho,\Jimp)$; it equals $\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV$ only under Route~A throughout $V_m$ \cite{stratton1941}. The surface term is the stress moment $\boldsymbol{\mathcal{T}}_J=\oint\Mavg\cdot\hat{\mathbf{n}}\,dS$ \cite{stratton1941}. At harmonic steady state with $\partial_t\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{0}$, Equation~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.outward-am-flux} give the \emph{resultant} mechanical torque $\mathbf{T}_{\mathrm{matter}}=\boldsymbol{\mathcal{T}}_J-d\mathbf{J}_{\mathrm{em,store}}/dt=-\boldsymbol{\Phi}_{J,\mathrm{out}}-d\mathbf{J}_{\mathrm{em,store}}/dt$ when the enclosing surface lies in source-free vacuum and the route assumptions are satisfied (N\,m), not the local density $\boldsymbol{\tau}_{\mathrm{src}}$ or $\boldsymbol{\tau}_{\mathrm{matter}}$ \cite{beth1936}. Beth \cite{beth1936} measured load torque from net flux through the plate's control surface (incident minus transmitted), not from equating an impressed-source volume integral to load mechanics without that surface balance \cite{stratton1941}.
+The volume term $\int_{V_{\mathrm{A}}}\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV$ equals $\int_{V_{\mathrm{A}}}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV$ under Route~A; on a material-containing $V_m$ where the vacuum identity does not hold pointwise, that volume integral is source-exchange bookkeeping only and does not by itself give mechanical load torque \cite{stratton1941}. Route~B mechanical torque on body $B$ is obtained from Eqs.~\eqref{eq:ch1.route-b-torque-shell-averaged}--\eqref{eq:ch1.route-b-body-torque-steady} with storage $\mathbf{J}_{\mathrm{em,vac}}$ on $\mathcal{V}_{\mathrm{vac}}$ only, not from replacing $\mathcal{V}_{\mathrm{vac}}$ by a volume integral over $V_m$ that includes the body interior \cite{harrington2001}. Beth \cite{beth1936} measured load torque from net flux through the plate's control surface (incident minus transmitted), not from equating an impressed-source volume integral to load mechanics without that surface balance \cite{stratton1941}.
 
 Figure~\ref{fig:ch1.momentum-angular-geometry} traces the cycle-averaged chain at a field point and on a surface element: $\langle\mathbf{g}_{\mathrm{em}}\rangle$, $\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{r}\times\langle\mathbf{g}_{\mathrm{em}}\rangle$, traction $\Tavg\cdot\hat{\mathbf{n}}$, and stress moment $\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})$ \cite{maxwell1873,beth1936}.
 
@@ -912,40 +918,30 @@ Figure~\ref{fig:ch1.momentum-angular-geometry} traces the cycle-averaged chain a
 
 The cycle-averaged stress-moment density $\Mavg=\mathbf{r}\times\Tavg$ satisfies
 $\Mavg\cdot\hat{\mathbf{n}}=\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})$ on $\partial V$ (stress-moment surface density).
-At harmonic steady state the resultant mechanical torque on matter is given in two routed forms. Under Route~A throughout $V_m$,
+At harmonic steady state, resultant torque is routed as follows. \emph{Route~A} on $V_{\mathrm{A}}$:
 \begin{equation}
-\label{eq:ch1.torque-stress-surface}
+\label{eq:ch1.torque-stress-route-a}
 \mathbf{T}_{\mathrm{matter}}
-\equiv
-\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV
-=\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV
-=\oint_{\partial V_m}\Mavg\cdot\hat{\mathbf{n}}\,dS
--\frac{d}{dt}\int_{V_m} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV,
+=\int_{V_{\mathrm{A}}}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV
+=\int_{V_{\mathrm{A}}}\langle\boldsymbol{\tau}_{\mathrm{src}}\rangle\,dV
+=\boldsymbol{\mathcal{T}}_J(V_{\mathrm{A}})
+-\frac{d}{dt}\mathbf{J}_{\mathrm{em,A}},
 \end{equation}
-provided $\partial V_m$ lies where the vacuum angular-momentum balance holds and $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ throughout $V_m$ \cite{beth1936,stratton1941}. Under Route~B, $\int_{V_m}\langle\boldsymbol{\tau}_{\mathrm{matter}}\rangle\,dV$ is not asserted inside arbitrary material; instead $\mathbf{T}_{\mathrm{matter}}$ is inferred from Eqs.~\eqref{eq:ch1.route-b-torque-shell} on $\mathcal{V}_{\mathrm{vac}}$ or from the single outer-shell reduction of Eq.~\eqref{eq:ch1.torque-stress-surface} when $\partial V_m$ is a closed surface in source-free vacuum enclosing the body and storage terms are retained or set to zero under the stated steady-state hypothesis \cite{stratton1941,harrington2001}. Equivalently,
-\[
-\mathbf{T}_{\mathrm{matter}}
-=\oint_{\partial V_m}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS
--\frac{d}{dt}\int_{V_m} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
-\]
-holds under the same domain and route assumptions, with outward $\hat{\mathbf{n}}$ on $\partial V_m$ \cite{beth1936,stratton1941}. The stress moment on the same closed surface is
+with $\mathbf{J}_{\mathrm{em,A}}=\int_{V_{\mathrm{A}}}\langle\mathbf{j}_{\mathrm{em}}\rangle\,dV$ and $\boldsymbol{\mathcal{T}}_J(V)=\oint_{\partial V}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS$, provided $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ throughout $V_{\mathrm{A}}$ \cite{beth1936,stratton1941}. \emph{Route~B} uses the shell balances Eqs.~\eqref{eq:ch1.route-b-torque-shell-averaged} and~\eqref{eq:ch1.route-b-body-force}; mechanical torque on the body is $\mathbf{T}_{\mathrm{body}}=-\boldsymbol{\mathcal{T}}_{J,i}$, with vacuum storage $d\mathbf{J}_{\mathrm{em,vac}}/dt=\boldsymbol{\mathcal{T}}_{J,o}+\boldsymbol{\mathcal{T}}_{J,i}$. No analogue of Eq.~\eqref{eq:ch1.torque-stress-route-a} is asserted with $\mathbf{J}_{\mathrm{em,A}}$ or $\langle\mathbf{j}_{\mathrm{em}}\rangle$ integrated over a material-containing $V_m$ \cite{harrington2001}.
+
+On any vacuum control volume $V$ where Eq.~\eqref{eq:ch1.angular-momentum-balance-averaged} holds, the stress moment and outward flux are
 \begin{equation}
 \label{eq:ch1.stress-moment-integral}
-\boldsymbol{\mathcal{T}}_J
-\equiv
-\oint_{\partial V_m}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS
-=\oint_{\partial V_m}\Mavg\cdot\hat{\mathbf{n}}\,dS.
+\boldsymbol{\mathcal{T}}_J(V)
+=\oint_{\partial V}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS
+=\oint_{\partial V}\Mavg\cdot\hat{\mathbf{n}}\,dS,
 \end{equation}
-Equation~\eqref{eq:ch1.torque-stress-surface} yields $\mathbf{T}_{\mathrm{matter}}=\boldsymbol{\mathcal{T}}_J-d\mathbf{J}_{\mathrm{em,store}}/dt$ with stored field angular momentum $\mathbf{J}_{\mathrm{em,store}}=\int_{V_m}\langle\mathbf{j}_{\mathrm{em}}\rangle\,dV$. Outward electromagnetic angular-momentum flux through $\partial V_m$ is
 \begin{equation}
 \label{eq:ch1.outward-am-flux}
-\boldsymbol{\Phi}_{J,\mathrm{out}}
-\equiv
-\dot{\mathbf{J}}_{\mathrm{em,out}}
-=-\boldsymbol{\mathcal{T}}_J
-=-\oint_{\partial V_m}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS,
+\boldsymbol{\Phi}_{J,\mathrm{out}}(V)
+=-\boldsymbol{\mathcal{T}}_J(V).
 \end{equation}
-so $\mathbf{T}_{\mathrm{matter}}=-\boldsymbol{\Phi}_{J,\mathrm{out}}-d\mathbf{J}_{\mathrm{em,store}}/dt$. The stress moment $\boldsymbol{\mathcal{T}}_J$ is not the outward flux: outward transport is $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ \cite{stratton1941,beth1936}. Angular-momentum fluxes must be labelled by the control volume and surface orientation. On a source-enclosing sphere $S_{\mathrm{src}}$,
+Route~A then gives $\mathbf{T}_{\mathrm{matter}}=-\boldsymbol{\Phi}_{J,\mathrm{out}}(V_{\mathrm{A}})-d\mathbf{J}_{\mathrm{em,A}}/dt$. Route~B gives $\mathbf{T}_{\mathrm{body}}$ from Eq.~\eqref{eq:ch1.route-b-body-torque-steady}, with storage $d\mathbf{J}_{\mathrm{em,vac}}/dt$ from Eq.~\eqref{eq:ch1.J-em-vac-def}. The stress moment is not the outward flux: outward transport is $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ \cite{stratton1941,beth1936}. Angular-momentum fluxes must be labelled by the control volume and surface orientation. On a source-enclosing sphere $S_{\mathrm{src}}$,
 \begin{equation}
 \label{eq:ch1.am-flux-source-ledger}
 \Phi_{J,z,\mathrm{out}}(S_{\mathrm{src}})
@@ -974,17 +970,16 @@ Beth's experiment on a wave plate under circular polarization
 \cite{allen1992} extended the vocabulary to spatial phase gradients; the measurable
 balance remains Equation~\eqref{eq:ch1.angular-balance-integral} \cite{belinfante1940}.
 
-For torque about axis $\hat{\mathbf{u}}$, project Equation~\eqref{eq:ch1.angular-balance-integral}:
+For torque about axis $\hat{\mathbf{u}}$, project Eq.~\eqref{eq:ch1.angular-balance-integral} on a Route~A volume $V_{\mathrm{A}}$:
 \begin{equation}
 \label{eq:ch1.torque-observable}
-\tau_{\hat{\mathbf{u}}}(V_m)
+\tau_{\hat{\mathbf{u}}}(V_{\mathrm{A}})
 =\hat{\mathbf{u}}\cdot
 \left(
-\oint_{\partial V_m}\Mavg\cdot\hat{\mathbf{n}}\,dS
--\frac{d}{dt}\int_{V_m} \langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
-\right),
+\boldsymbol{\mathcal{T}}_J(V_{\mathrm{A}})-\frac{d}{dt}\mathbf{J}_{\mathrm{em,A}}
+\right).
 \end{equation}
-which is the axis-projected form of Equation~\eqref{eq:ch1.angular-balance-integral}.
+Route~B uses $\hat{\mathbf{u}}\cdot\mathbf{T}_{\mathrm{body}}$ from Eq.~\eqref{eq:ch1.route-b-body-force} with the shell storage of Eq.~\eqref{eq:ch1.J-em-vac-def}.
 Torque is therefore a projected surface integral of the stress moment, not a scalar read from a phase portrait \cite{beth1936,stratton1941}.
 
 To compare directional concentration of stress moment on a sphere of radius $r$, note that $\avgStressMoment\cdot\hat{\mathbf{r}}$ states how the local stress moment projects onto each solid-angle sector. A main-lobe concentration in $\|\avgStressMoment\cdot\hat{\mathbf{r}}\|$ does not in isolation establish net torque about an axis until Equation~\eqref{eq:ch1.torque-observable} is evaluated with the declared origin and surface \cite{stratton1941,beth1936}.
@@ -1012,10 +1007,9 @@ $[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})]\cdot\hat{\mathbf{z}}$ may vanish
 local phase structure is visible on a near-field display---the symmetry argument Beth exploited for
 circular polarization \cite{beth1936,stratton1941}.
 
-For a matter-enclosing control volume $V_m$ whose stress-evaluation surface lies in source-free vacuum,
-Equation~\eqref{eq:ch1.angular-balance-integral} reduces at harmonic steady state to
-\(T_{z,\mathrm{matter}}=\oint_{\partial V_m}[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})]\cdot\hat{\mathbf{z}}\,dS\)
-and \(\dot J_{z,\mathrm{em,out}}=-T_{z,\mathrm{matter}}\) by Equation~\eqref{eq:ch1.outward-am-flux} (here $T_{z,\mathrm{matter}}$ is the resultant torque in N\,m, not the local density $\boldsymbol{\tau}_{\mathrm{src}}$ of Eq.~\eqref{eq:ch1.angular-momentum-balance}).
+On a Route~A vacuum volume $V_{\mathrm{A}}$ with negligible $d\mathbf{J}_{\mathrm{em,A}}/dt$,
+\(T_{z,\mathrm{matter}}=\hat{\mathbf{z}}\cdot\boldsymbol{\mathcal{T}}_J(V_{\mathrm{A}})\)
+and \(\dot J_{z,\mathrm{em,out}}=-T_{z,\mathrm{matter}}\) by Eq.~\eqref{eq:ch1.outward-am-flux} (here $T_{z,\mathrm{matter}}$ is the resultant torque in N\,m, not the local density $\boldsymbol{\tau}_{\mathrm{src}}$). Route~B uses \(\hat{\mathbf{z}}\cdot\mathbf{T}_{\mathrm{body}}\) from the shell reduction instead of a single integral over a material-containing $V_m$ \cite{harrington2001}.
 On sphere \(S_R\), use \(\mathbf{r}=R\hat{\mathbf{r}}\) and
 \(dS=R^2\sin\theta\,d\theta\,d\phi\). For axisymmetric radiation with azimuthal index $m=0$, the far-zone pattern carries no azimuthal phase circulation about $\hat{\mathbf{z}}$, so $\dot J_{z,\mathrm{out}}$ from orbital winding vanishes while $P_{\mathrm{rad}}$ remains finite. For a uniform circularly polarized plane wave, the symmetric Maxwell stress tensor on a centered transverse disk gives $\dot J_{z,\mathrm{em,out}}=0$ while power crossing the disk is nonzero (Subsection~\ref{sec:ch01.6.1}); $(m+\sigma)P/\omega$ and $\sigma P/\omega$ symbols elsewhere are modal-class evaluators unless derived from a Maxwell-valid field on the chosen surface \cite{beth1936,stratton1941}.
 Torque is an integral consequence of the Maxwell stress tensor through Equation~\eqref{eq:ch1.torque-observable}, not a local phase label
@@ -1562,7 +1556,7 @@ Inside a control volume $V_g$ of radius $R=2\lambda$ about a dipole, Coulomb and
 \label{fig:ch1.helicity-cp-wave}
 \end{figure}
 
-The vacuum helicity density adopted in this chapter, at a single angular frequency, is
+The monochromatic handedness pseudoscalar used in this chapter (not a general conserved helicity charge density) is
 \begin{equation}
 \label{eq:ch1.helicity-density}
 h(\mathbf{r})=
@@ -1805,13 +1799,15 @@ For a uniform outgoing circularly polarized plane wave $\E=(E_0/\sqrt{2})(\hat{\
 \paragraph{Beth 1936 anisotropic material torque (inspected primary source).}
 Beth's theoretical calculation begins in an anisotropic dielectric with tensor response $\mathbf K$, permeability unity, and principal axes $(x,y,z)$ \cite{beth1936}. Because $\mathbf E$ is generally not parallel to $\mathbf P$ or $\mathbf D=\mathbf K\mathbf E$, the material torque density is $\boldsymbol\tau=\mathbf P\times\mathbf E=(\mathbf D\times\mathbf E)/(4\pi)$ in his Gaussian electromagnetic units \cite{beth1936}. With plane-wave components (Beth's eq.~(2)) along $+z$ through a quartz section between $z_1$ and $z_2$, integration of the time-averaged torque density yields torque per unit area (Beth's eq.~(3)), which reverses when the lower quarter-wave plate is rotated by $90^\circ$ and vanishes at the design half-wave retardation. Beth's quantum argument assigns spin $\hbar$ per left-circular and $-\hbar$ per right-circular photon, with angular-momentum flux density $\dot M_z\propto XY\sin 2\delta$ (his eq.~(6) after unit conversion); conservation at a crystal face with Fresnel reflection reproduces the wave-theory torque \cite{beth1936}. This is a \emph{material} $\mathbf P\times\mathbf E$ calculation inside birefringent quartz, not an evaluation of the vacuum symmetric Maxwell stress tensor in the crystal interior. An enclosing vacuum stress-moment balance on a load control surface can be aligned with Beth's flux accounting only under the stated interface, reflection, and steady-state assumptions of his section~``Quantum theory'' \cite{beth1936,stratton1941}. The Princeton apparatus uses a suspended half-wave plate in vacuum, a fixed quarter-wave plate outside the chamber, and a reflector that returns the beam through the suspended plate so the delivered angular momentum is nearly four times that of simple one-pass absorption; Figure~\ref{fig:ch1.beth-schematic} is a pedagogical one-pass sketch, not a faithful diagram of that multi-plate reflected-beam arrangement \cite{beth1936}.
 
+In the measurement programme (Beth's pp.~120--124), a torsion pendulum with period of order ten minutes detected changes in equilibrium when the lower quarter-wave plate was rotated between calibrated stops; resonance and antiresonance schedules in the angular deflection amplitude isolated the light torque from drift. Beth and Harris varied filament temperature, wavelength band, and plate orientation; Figs.~6--9 compare measured torque changes to the wave-theory factors obtained from Eq.~(8)--(9) with measured plate thicknesses and quartz indices. Agreement in sign and trend is reported, while Beth emphasizes that absolute calibration of the torque scale carries larger uncertainty than the relative checks \cite{beth1936}. The experiment establishes that polarization-controlled angular momentum exchange produces a mechanical torque on quartz in the stated apparatus; it does not verify the ideal one-pass scales $P/\omega$ and $2P/\omega$ quoted below without the multi-bounce geometry and crystal model of Eq.~(3).
+
 \paragraph{Spin flux and ideal half-wave-plate scales (plane wave only).}
 For the same CP plane wave with time-averaged power $P$ and helicity label $\sigma=\pm1$ in $\E\propto\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}}$, a helicity bookkeeping magnitude
 \begin{equation}
 \label{eq:ch1.cp-spin-flux-magnitude}
 |\dot J_{z,\mathrm{spin,inc}}|=\frac{P}{\omega}
 \end{equation}
-is \emph{not} identified with the symmetric Maxwell-stress integral $\dot J_{z,\mathrm{em,out}}$ of Eq.~\eqref{eq:ch1.ex61-flux-from-stress} on a centred transverse disk (which vanishes for that symmetry). Eq.~\eqref{eq:ch1.cp-spin-flux-magnitude} records a helicity book-keeping magnitude for uniform CP in vacuum, distinct from the governing closed-surface stress observable \cite{stratton1941,beth1936,belinfante1940}. Eqs.~\eqref{eq:ch1.cp-spin-flux-magnitude} and~\eqref{eq:ch1.hwp-torque-magnitude} below quote widely used scales for total absorption and ideal helicity reversal; they are \emph{not} derived in this chapter from the vanishing open-disk stress integral and must be justified by a net incoming/outgoing angular-momentum balance on the load's control surface in the Beth arrangement \cite{beth1936,stratton1941}. Under those quoted idealizations, a perfect absorber that removes the beam with definite helicity is said to exchange mechanical torque of magnitude $P/\omega$ about $\hat{\mathbf{z}}$ \cite{beth1936}. An ideal lossless half-wave plate that reverses helicity while transmitting the same power changes the field helicity by $\Delta\sigma=-2\sigma$; angular-momentum conservation then quotes load torque of magnitude
+is \emph{not} identified with the symmetric Maxwell-stress integral $\dot J_{z,\mathrm{em,out}}$ of Eq.~\eqref{eq:ch1.ex61-flux-from-stress} on a centred transverse disk (which vanishes for that symmetry). Eq.~\eqref{eq:ch1.cp-spin-flux-magnitude} records a helicity book-keeping magnitude for uniform CP in vacuum, distinct from the governing closed-surface stress observable \cite{stratton1941,beth1936,belinfante1940}. For an ideal load at steady state, let $\Phi_{J,z,\mathrm{inc}}$ denote the axis projection of angular-momentum flux carried inward through the control surface. A circularly polarized beam with power $P$ carries the bookkeeping magnitude $|\Phi_{J,z,\mathrm{inc}}|=P/\omega$ when the $\sigma=\pm1$ convention of Eq.~\eqref{eq:ch1.helicity-plane-wave} is matched to the flux definition of Eq.~\eqref{eq:ch1.am-flux-load-ledger} \cite{beth1936,stratton1941}. A perfect absorber with no outgoing flux has $\Phi_{J,z,\mathrm{net,load}}=\Phi_{J,z,\mathrm{inc}}$, so $\tau_{z,\mathrm{load}}=P/\omega$. A lossless half-wave plate that transmits the same $P$ but reverses $\sigma$ changes field helicity by $\Delta(\sigma P/\omega)=-2\sigma P/\omega$, so $\Phi_{J,z,\mathrm{trans}}$ differs from $\Phi_{J,z,\mathrm{inc}}$ by $2P/\omega$ and mechanical balance gives
 \begin{equation}
 \label{eq:ch1.hwp-torque-magnitude}
 |\tau_{z,\mathrm{load}}|=\frac{2P}{\omega}
@@ -1860,7 +1856,7 @@ Figure~\ref{fig:ch1.ex61-beth-helical-sketch} depicts the localized $\hat{\mathb
 
 On a predominantly radiative shell, fields scale as \(|\E|\propto 1/R\) with the azimuthal phase of the dominant mode; Maxwell stress Eq.~\eqref{eq:ch1.maxwell-stress} with outward normal \(\hat{\mathbf{n}}=\hat{\mathbf{r}}\) supplies the integrand \([\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})]\cdot\hat{\mathbf{z}}\). Multimode superpositions require summing stress integrals on the actual $(\E,\H)$ field \cite{stratton1941}. The same balance evaluated at \(R=\lambda\) without stating \(|P_{\mathrm{reac}}(r)|/P_{\mathrm{rad}}\) can mis-attribute reactive-dominated storage exchange as far-zone transport \cite{stratton1941}.
 
-Under strict monochromatic steady state at angular frequency $\omega$, the cycle-averaged stored field angular momentum $\langle\mathbf{J}_{\mathrm{em}}\rangle$ is $T$-periodic, so $\partial_t\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{0}$ in Eq.~\eqref{eq:ch1.angular-momentum-balance-averaged} and the storage contribution in Eq.~\eqref{eq:ch1.torque-stress-surface} vanishes on a radiative shell. The inherited balance then reduces to
+Under strict monochromatic steady state at angular frequency $\omega$, the cycle-averaged vacuum-shell storage $\mathbf{J}_{\mathrm{em,vac}}$ (or $\mathbf{J}_{\mathrm{em,A}}$ along Route~A) is $T$-periodic, so the cycle average $\langle d\mathbf{J}/dt\rangle_T$ in Eqs.~\eqref{eq:ch1.torque-stress-route-a} and~\eqref{eq:ch1.route-b-torque-shell-averaged} may vanish on a radiative shell---without asserting $\partial_t\langle\mathbf{j}_{\mathrm{em}}\rangle=\mathbf{0}$ pointwise. The inherited balance then reduces to
 \begin{equation}
 \label{eq:ch1.ex61-torque-flux}
 \dot J_{z,\mathrm{em,out}}
@@ -1961,7 +1957,7 @@ scales as \((\pm m/\omega)\) times component power
 =
 \frac{m}{\omega}\int_{S_o}(I_+-I_-)\,dS,
 \end{equation}
-which is Eq.~\eqref{eq:ch1.ex62-net-am-transport}. When \(I_+=I_-\), both \(P_+\) and
+on the declared paraxial/modal open aperture \(S_o\) when each component is treated as an independent outgoing branch with identical radial envelopes; the coherent Poynting cross term \(2\Re(\mathbf{E}_+\cdot\mathbf{E}_-^*)\) affects $|E_t|^2$ but does not enter the channel difference \(I_+-I_-\) used here \cite{stratton1941,allen1992}. A closed-sphere Maxwell-stress integral on a completed \((\E,\H)\) pair may retain vector cross terms not captured by Eq.~\eqref{eq:ch1.ex62-channel-sum} unless the full vector solution is specified and integrated. Eq.~\eqref{eq:ch1.ex62-channel-sum} matches the channel form of Eq.~\eqref{eq:ch1.ex62-net-am-transport}. When \(I_+=I_-\), both \(P_+\) and
 \(P_-\) are equal and the bookkeeping symbol vanishes even though the coherent intensity
 \(|E_t|^2=|E_+|^2+|E_-|^2+2\Re(\mathbf{E}_+\cdot\mathbf{E}_-^*)\) exhibits a standing azimuthal pattern through the cross term; modal power budgets use \(P_\pm=\int I_\pm\,dS\), not \(|E_t|^2\) alone \cite{stratton1941,allen1992}.
 
@@ -2281,7 +2277,17 @@ not as the net real Poynting flux through $\partial V_{\mathrm{sh}}=S_{r_0}\cup 
 \label{eq:ch1.chu-q-adopted}
 Q_{\mathrm{vol}}(V_{\mathrm{sh}})=\frac{2\omega\max(W_e,W_m)}{P_{\mathrm{rad}}(R)},
 \end{equation}
-a named finite-volume functional that must not be identified with Chu $Q_n$, antenna radiation $Q$, or $P_{\mathrm{reac}}(r)$ \cite{chu1948,mcclean1996}. If $W_e=W_m$ holds on the same $V$, then $Q_{\mathrm{vol}}=\omega(W_e+W_m)/P_{\mathrm{rad}}$. Chu \cite{chu1948} constructed modal equivalent circuits inside an enclosing sphere to separate non-propagating reactive storage from outward radiation; McLean \cite{mcclean1996} re-examined the exact finite-$ka$ minimum-$Q$ expression and distinguished it from the small-$ka$ expansion. Eq.~\eqref{eq:ch1.chu-q-lower-bound} quotes Chu's widely cited \emph{asymptotic} lower bound $(ka)^{-3}+(ka)^{-1}$ for the ideal minimum-$Q$ spherical model with $ka\ll1$; it is not asserted for arbitrary antennas, for $Q_{\mathrm{vol}}(V)$, or without Chu's interior idealizations \cite{chu1948,harrington2001,mcclean1996}. Under that stated ideal model in the limit $ka\ll1$,
+a named finite-volume functional that must not be identified with Chu $Q_n$, antenna radiation $Q$, or $P_{\mathrm{reac}}(r)$ \cite{chu1948,mcclean1996}. If $W_e=W_m$ holds on the same $V$, then $Q_{\mathrm{vol}}=\omega(W_e+W_m)/P_{\mathrm{rad}}$.
+
+\paragraph{Chu $n=1$ TM equivalent circuit (reconstruction).}
+Chu \cite{chu1948} expands fields inside a sphere in outgoing spherical TM modes and replaces each mode at the surface by a one-port whose impedance is a continued fraction in $kr$. For the lowest TM mode ($n=1$), associated with an electric dipole, the normalized radial input impedance on the sphere of radius $a$ has the schematic form $Z_{\mathrm{in}}=R_{\mathrm{rad}}+jX$ with $R_{\mathrm{rad}}$ the radiation resistance (set by the outward TM field at $r=a$) and $X$ dominated by capacitive storage of the $n=1$ TM near field \cite{chu1948,harrington2001}. Chu fixes the transformer ratio by requiring equality of complex power between the sphere terminal and the lumped circuit at the operating frequency, then identifies the stored electric energy $W_{\mathrm{st}}$ in the reactive elements and the dissipated/radiated power $P_{\mathrm{rad}}$ in the resistive element. His definition
+\begin{equation}
+\label{eq:ch1.chu-Qn-def}
+Q_1=\frac{2\omega W_{\mathrm{st}}}{P_{\mathrm{rad}}}
+\end{equation}
+is \emph{exact} within this ideal $n=1$ circuit model on the enclosing sphere; it is not a universal bound for arbitrary antennas. Expanding $Z_{\mathrm{in}}$ for $ka\ll1$ with $k=\omega/c$ and retaining the leading reactive term yields $W_{\mathrm{st}}\propto a^3|E_0|^2$ and $P_{\mathrm{rad}}\propto (ka)^4|E_0|^2$, whence $Q_1\sim (ka)^{-3}$ at leading order; the next reactive correction adds the $(ka)^{-1}$ term \cite{chu1948,mcclean1996}. McLean \cite{mcclean1996} re-expresses the same minimum-$Q$ spherical problem and gives a closed finite-$ka$ formula whose expansion agrees with Eq.~\eqref{eq:ch1.chu-q-lower-bound}---without replacing Chu's original continued-fraction construction. Primary report equation numbers were not re-checked in this batch because local MIT/JAP PDF files are corrupted; the reconstruction above follows Chu's published journal account and McLean's independent re-examination \cite{chu1948,mcclean1996}.
+
+Eq.~\eqref{eq:ch1.chu-q-lower-bound} quotes the widely cited \emph{asymptotic} lower bound $(ka)^{-3}+(ka)^{-1}$ for Chu's ideal minimum-$Q$ spherical model with $ka\ll1$; it is not asserted for arbitrary antennas, for $Q_{\mathrm{vol}}(V_{\mathrm{sh}})$, or without Chu's interior idealizations \cite{chu1948,harrington2001,mcclean1996}. Under that stated ideal model in the limit $ka\ll1$,
 \begin{equation}
 \label{eq:ch1.chu-q-lower-bound}
 Q_{\mathrm{LB}}=\frac{1}{(ka)^3}+\frac{1}{ka}.
@@ -2292,7 +2298,7 @@ Local $r^{-3},r^{-2},r^{-1}$ weighting changes with radius; $P_{\mathrm{rad}}$ a
 \section{Summary}
 \label{sec:ch01.7}
 
-This chapter has kept angular questions tied to a completed Maxwell field. Impressed sources, constitutive laws, interface data, and outgoing selection fix $(\E,\H)$; on that pair the balances are complex Poynting power, symmetric Maxwell traction for force, and stress-moment flux $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ for signed angular-momentum transport through a chosen surface \cite{maxwell1873,poynting1884,beth1936,stratton1941}. In applications, three ideas must remain separate: how the field is \emph{organized} in angle (phase, polarization, modal labels); how much angular momentum is \emph{associated} with the field in a volume or chart; and how much is actually \emph{transported} outward through a physical interface \cite{allen1992,stratton1941}.
+This chapter has kept angular questions tied to a completed Maxwell field. Impressed sources, constitutive laws, interface data, and outgoing selection fix $(\E,\H)$; on that pair the balances are complex Poynting power, symmetric Maxwell traction for force, and stress-moment flux $\boldsymbol{\Phi}_{J,\mathrm{out}}(V)=-\boldsymbol{\mathcal{T}}_J(V)$ on vacuum control volumes \cite{maxwell1873,poynting1884,beth1936,stratton1941}. Route~A torque uses $\mathbf{J}_{\mathrm{em,A}}$ on $V_{\mathrm{A}}$; Route~B torque and storage use the source-free shell $\mathcal{V}_{\mathrm{vac}}$ and $\mathbf{J}_{\mathrm{em,vac}}$ only \cite{harrington2001}. In applications, three ideas must remain separate: how the field is \emph{organized} in angle (phase, polarization, modal labels); how much angular momentum is \emph{associated} with the field in a volume or chart; and how much is actually \emph{transported} outward through a physical interface \cite{allen1992,stratton1941}.
 
 The chapter's constructive results are the closed-surface observables, the reactive-versus-radiative shell integrals for a Hertzian dipole, and the scoped modal and helicity scales in Subsection~\ref{sec:ch01.6.1} \cite{stratton1941,harrington2001,chu1948}. Subsection~\ref{sec:ch01.1.3} derives a difference-field energy balance that forces a vanishing far-field pattern and tangential null data on a passive scalar sheet, then continues---via outgoing electric and magnetic vector spherical waves and a Rellich-type unique-continuation hypothesis for source-free Maxwell fields---to annihilate the homogeneous difference field in the connected vacuum exterior under the stated scalar passive impedance class; existence and broader impedance theorems remain cited, not reproduced \cite{sommerfeld1949,harrington2001}. Colton--Kress--Hsiao supplies existence--uniqueness theory for broader impedance classes whose hypotheses are not matched line by line here \cite{colton1981impedance}. Subsection~\ref{sec:ch01.6.4} states distributional Maxwell closure for the ideal electric dipole with the isotropic Hessian contact term and reconciles the $r>0$ Hertzian formulas with Yaghjian's source-region theory \cite{yaghjian1980dyadic,yaghjian1982}. Chu's original stored-energy partition, Jackson's shell-content formulas under this phasor branch, and a general Hansen modal transport law remain bounded explicitly and passed to Chapter~\ref{ch:02} \cite{jackson1999,chu1948,tai1994}. The following volume develops angular-spectrum and dyadic-Green operators on the same outgoing branch, so bounded sources can be analysed without conflating open-aperture modal accounts with closed-sphere stress theorems \cite{harrington2001}.
 

@@ -1,52 +1,34 @@
-# Maxwell stress, force, angular momentum — dossier (R13.0, post-99db005)
+# Maxwell stress, force, angular momentum — dossier (R13.0 batch E)
 
-**Convention:** \(\exp(+j\omega t)\); vacuum stress indices \(\partial_j T_{ij}\); outward flux \(\Phi_{J,\mathrm{out}}=-\oint \mathbf{r}\times(\langle\mathbf T\rangle\cdot\hat{\mathbf n})\,dS\).
+**Convention:** \(\exp(+j\omega t)\); vacuum stress; \(\boldsymbol{\Phi}_{J,\mathrm{out}}(V)=-\boldsymbol{\mathcal{T}}_J(V)\).
 
-## Route A — verified
+## Storage domains (release blocker — CLOSED batch E)
 
-| Item | Manuscript | Status |
-|------|------------|--------|
-| Momentum balance | `ch1.momentum-balance-instantaneous` | DERIVED |
-| Stress tensor | `ch1.maxwell-stress-components`, `ch1.maxwell-stress` | DERIVED |
-| Product rule | `ch1.angular-momentum-product-rule` | DERIVED |
-| Symmetric stress kills \(\varepsilon_{ijk}T_{kj}\) | `ch1.angular-momentum-balance` | DERIVED |
-| \(\mathbf f_{\mathrm{matter}}=\mathbf f_{\mathrm{src}}\) | Lorentz + carrier ID | Route A only |
+| Symbol | Domain | Status |
+|--------|--------|--------|
+| \(\mathbf{J}_{\mathrm{em,A}}\) | Route~A volume \(V_{\mathrm{A}}\) (vacuum balance + carrier closure) | STATED `eq:ch1.torque-stress-route-a` |
+| \(\mathbf{J}_{\mathrm{em,vac}}\) | Source-free shell \(\mathcal{V}_{\mathrm{vac}}=V_o\setminus\overline B\) | STATED `eq:ch1.J-em-vac-def` |
+| \(\boldsymbol{\mathcal{T}}_{J,o}\), \(\boldsymbol{\mathcal{T}}_{J,i}\) | Outer \(S_o\), inner \(S_i\) (normal outward from shell) | DERIVED |
+| \(\mathbf{T}_{\mathrm{body}}\) | \(-\boldsymbol{\mathcal{T}}_{J,i}\) (vacuum traction on \(S_i\)) | STATED `eq:ch1.route-b-body-force` |
 
-## Route B — vacuum shell (2026-11-12)
+**Removed:** \(\mathbf{J}_{\mathrm{em,store}}\) integrated over material-containing \(V_m\) as Route~B storage.
 
-| Item | Manuscript | Status |
-|------|------------|--------|
-| \(\mathcal V_{\mathrm{vac}}=V_o\setminus\overline B\) | Prose after `ch1.momentum-integral-balance` | STATED |
-| Momentum on shell | `ch1.route-b-momentum-shell` | DERIVED (integrate `ch1.momentum-balance-instantaneous`, \(\mathbf f_{\mathrm{src}}=0\)) |
-| Torque on shell | `ch1.route-b-torque-shell` | DERIVED (integrate `ch1.angular-momentum-balance`, \(\mathbf f_{\mathrm{src}}=0\)) |
-| Body force/torque at \(S_i\) | `ch1.route-b-body-force` | STATED (action–reaction; vacuum traction on \(S_i\)) |
-| Cycle-averaged shell torque | `ch1.route-b-torque-shell-averaged` | DERIVED |
-| Steady shell reduction | `ch1.route-b-body-torque-steady` | QUALIFIED (vanishing cycle-averaged shell storage) |
-| Source vs load flux ledger | `ch1.am-flux-source-ledger`, `ch1.am-flux-load-ledger` | STATED (signs from control volume) |
-| Single outer surface reduction | `ch1.torque-stress-surface`, `ch1.outward-am-flux` | QUALIFIED (storage + inner \(S_i\) terms) |
+## Shell derivation chain
 
-**Normal conventions:** \(\hat{\mathbf n}_o\) outward from \(\mathcal V_{\mathrm{vac}}\) on \(S_o\); \(\hat{\mathbf n}_i\) outward from \(\mathcal V_{\mathrm{vac}}\) on \(S_i\) (into vacuum away from body).
+1. Local: `eq:ch1.angular-momentum-balance-averaged` with \(\boldsymbol{\tau}_{\mathrm{src}}=\mathbf{0}\) in \(\mathcal{V}_{\mathrm{vac}}\).
+2. Integrate over \(\mathcal{V}_{\mathrm{vac}}\) → `eq:ch1.route-b-torque-shell-averaged` / `eq:ch1.J-em-vac-def`.
+3. Action–reaction on \(S_i\): \(\hat{\mathbf{n}}_i\) outward from shell, \(\hat{\mathbf{n}}_{\mathrm{body}}=-\hat{\mathbf{n}}_i\).
+4. Steady cycle average: \(\langle d\mathbf{J}_{\mathrm{em,vac}}/dt\rangle_T\to0\) → `eq:ch1.route-b-body-torque-steady`.
 
-## Equation routing table (audit only)
+## Equation map (audit)
 
-| Label | Control region | Contents | Route | Result |
-|-------|----------------|----------|-------|--------|
-| `ch1.momentum-balance-instantaneous` | vacuum/source | \(\E,\B\) vacuum | local | \(\partial_t\mathbf g+\mathbf f_{\mathrm{src}}=\nabla\cdot\mathbf T\) |
-| `ch1.momentum-integral-balance` | \(V\) vacuum | carriers or bookkeeping | A / B | A: volume=Lorentz; B: **not** through matter |
-| `ch1.route-b-momentum-shell` | \(\mathcal V_{\mathrm{vac}}\) | source-free vacuum | B | two-surface + storage |
-| `ch1.route-b-torque-shell` | \(\mathcal V_{\mathrm{vac}}\) | source-free vacuum | B | two-surface + \(\mathbf j_{\mathrm{em}}\) storage |
-| `ch1.linear-momentum-balance` | harmonic vacuum | steady phasor | A local | \(\langle\mathbf f_{\mathrm{src}}\rangle=\nabla\cdot\Tavg\) |
-| `ch1.angular-balance-integral` | \(V_m\) | vacuum identity assumed | A/B qualified | volume + \(\oint \mathcal M\cdot\hat n\) |
-| `ch1.torque-stress-surface` | \(V_m\) / \(\partial V_m\) | mechanical torque | A primary; B shell | storage term retained |
-| `ch1.stress-moment-integral` | \(\partial V_m\) | \(\mathcal T_J\) | either | not equal to \(\Phi_{J,\mathrm{out}}\) |
-| `ch1.outward-am-flux` | \(\partial V_m\) | transport | either | \(\Phi_{J,\mathrm{out}}=-\mathcal T_J\) |
-| `intro-momentum-balance` | preview | — | qualified 2026-11-12 | no bare \(\mathbf F=\oint\mathbf T\) |
+| Label | Route | Result |
+|-------|-------|--------|
+| `ch1.angular-balance-integral` | A | Volume identity on \(V_{\mathrm{A}}\) only |
+| `ch1.torque-stress-route-a` | A | \(\mathbf{T}_{\mathrm{matter}}=\boldsymbol{\mathcal{T}}_J(V_{\mathrm{A}})-d\mathbf{J}_{\mathrm{em,A}}/dt\) |
+| `ch1.route-b-torque-shell-averaged` | B | Shell storage + two stress moments |
+| `ch1.route-b-body-torque-steady` | B | Steady reduction |
+| `ch1.stress-moment-integral` | both | Vacuum \(V\) only |
+| `ch1.am-flux-source-ledger` / `load-ledger` | — | Sign ledger |
 
-## Beth bridge
-
-Open-disk CP stress moment **vanishes** (manuscript §1.6.1). \(P/\omega\), \(2P/\omega\) scales **not** derived from that integral — see `BETH_TORQUE_PRIMARY_SOURCE_DOSSIER.md`.
-
-## Open
-
-- Material stress inside dissipative media (Stratton cited, not re-derived).
-- Full Beth 1936 equation-level verification.
+**Dossier status:** Route B storage domain **CLOSED** in main text (batch E).

@@ -38,10 +38,15 @@ Beth's Gaussian $\boldsymbol\tau=\mathbf P\times\mathbf E$ maps to SI material t
 **Faithful elements in Beth:** multi-pass optics, fixed QWP outside chamber, suspended HWP, aluminum reflector on $T$, light shield on window.  
 **Manuscript Fig. 1.25 (beth-schematic):** single-pass teaching sketch only.
 
+## Measurement programme (pp. 120–124, batch E)
+
+- Torsion schedule: resonance/antiresonance; amplitude $4A_n$ and zeros $4Z_n$ (Fig. 5).
+- Types I–III: filament temperature, wavelength, bottom-plate azimuth (Figs. 6, 8, 9).
+- Theory comparison via eqs. (8)–(9) with measured plate thicknesses; absolute scale more uncertain than relative trends.
+
 ## Remaining OPEN
 
-1. Full transcription of experimental eq.~(7)+ calibration tables (pp.120–125).
-2. Explicit SI conversion of eq.~(3) with measured quartz indices.
-3. Formal proof linking load stress-moment integral to eq.~(6) for the full multi-bounce geometry.
+1. Full SI conversion of eq.~(3) with measured quartz indices.
+2. Formal proof linking load stress-moment integral to eq.~(6) for the full multi-bounce geometry.
 
-**Dossier status:** SUBSTANTIAL — theory and apparatus pp.1–5 inspected; experiment numerics partially OPEN.
+**Dossier status:** SUBSTANTIAL — theory pp.1–2, apparatus pp.3–5, measurement pp.120–124 inspected; absolute calibration OPEN.
