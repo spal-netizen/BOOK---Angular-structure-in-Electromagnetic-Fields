@@ -718,7 +718,30 @@ and the corresponding angular-momentum balance
 =\oint_{S_o}\mathbf{r}\times(\Tinst\cdot\hat{\mathbf{n}}_o)\,dS
 +\oint_{S_i}\mathbf{r}\times(\Tinst\cdot\hat{\mathbf{n}}_i)\,dS.
 \end{equation}
-Cycle-averaged forms replace $(\Tinst,\mathbf{g}_{\mathrm{em}},\mathbf{j}_{\mathrm{em}})$ by $(\Tavg,\langle\mathbf{g}_{\mathrm{em}}\rangle,\langle\mathbf{j}_{\mathrm{em}}\rangle)$ under $\exp(+\jj\omega t)$. Mechanical force and torque on the body follow from the inner-surface traction and stress moment (with signs fixed by action--reaction across $S_i$), together with the outer-surface and vacuum-storage terms in Eqs.~\eqref{eq:ch1.route-b-momentum-shell} and~\eqref{eq:ch1.route-b-torque-shell}. If $\partial V_m$ lies entirely in source-free vacuum and encloses only the body, the single-surface formulas Eqs.~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.outward-am-flux} apply to that outer shell after the field storage terms are accounted for; they are not obtained by integrating vacuum stress through the material interior \cite{stratton1941,harrington2001,beth1936}.
+Integrating Eqs.~\eqref{eq:ch1.momentum-balance-instantaneous} and~\eqref{eq:ch1.angular-momentum-balance} over $\mathcal{V}_{\mathrm{vac}}$ with $\mathbf{f}_{\mathrm{src}}=\mathbf{0}$ yields Eqs.~\eqref{eq:ch1.route-b-momentum-shell} and~\eqref{eq:ch1.route-b-torque-shell}. Cycle-averaged quantities $(\Tavg,\langle\mathbf{g}_{\mathrm{em}}\rangle,\langle\mathbf{j}_{\mathrm{em}}\rangle)$ replace the instantaneous fields under $\exp(+\jj\omega t)$. Define the outer and inner stress moments
+\[
+\boldsymbol{\mathcal{T}}_{J,o}=\oint_{S_o}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}}_o)\,dS,\qquad
+\boldsymbol{\mathcal{T}}_{J,i}=\oint_{S_i}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}}_i)\,dS.
+\]
+Because $\hat{\mathbf{n}}_i$ is outward from $\mathcal{V}_{\mathrm{vac}}$ and therefore directed from the body into the adjacent vacuum, the electromagnetic action on the body across $S_i$ is opposite to the vacuum traction integrated on $S_i$. Mechanically,
+\begin{equation}
+\label{eq:ch1.route-b-body-force}
+\mathbf{F}_{\mathrm{body}}=-\oint_{S_i}\Tavg\cdot\hat{\mathbf{n}}_i\,dS,
+\qquad
+\mathbf{T}_{\mathrm{body}}=-\boldsymbol{\mathcal{T}}_{J,i},
+\end{equation}
+when the vacuum-side Maxwell stress supplies the traction (N and N\,m) \cite{stratton1941,harrington2001}. The general shell identity
+\begin{equation}
+\label{eq:ch1.route-b-torque-shell-averaged}
+\frac{d}{dt}\int_{\mathcal{V}_{\mathrm{vac}}}\langle\mathbf{j}_{\mathrm{em}}\rangle\,dV
+=\boldsymbol{\mathcal{T}}_{J,o}+\boldsymbol{\mathcal{T}}_{J,i}
+\end{equation}
+holds at all times. Under harmonic steady state, $d\mathbf{J}_{\mathrm{em,store}}/dt=\mathbf{0}$ is the vanishing cycle average of the storage rate in the shell---not the assertion that $\partial_t\mathbf{j}_{\mathrm{em}}$ vanishes pointwise at every instant. Then
+\begin{equation}
+\label{eq:ch1.route-b-body-torque-steady}
+\mathbf{T}_{\mathrm{body}}=-\boldsymbol{\mathcal{T}}_{J,i}=\boldsymbol{\mathcal{T}}_{J,o}
+\end{equation}
+when shell storage can be neglected. A single outer-surface reading of Eqs.~\eqref{eq:ch1.torque-stress-surface} and~\eqref{eq:ch1.outward-am-flux} applies only in that reduction; it is never obtained by integrating vacuum stress through the material interior \cite{stratton1941,harrington2001,beth1936}.
 
 \begin{figure}[t]
 \centering
@@ -922,7 +945,21 @@ Equation~\eqref{eq:ch1.torque-stress-surface} yields $\mathbf{T}_{\mathrm{matter
 =-\boldsymbol{\mathcal{T}}_J
 =-\oint_{\partial V_m}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS,
 \end{equation}
-so $\mathbf{T}_{\mathrm{matter}}=-\boldsymbol{\Phi}_{J,\mathrm{out}}-d\mathbf{J}_{\mathrm{em,store}}/dt$. The stress moment $\boldsymbol{\mathcal{T}}_J$ is not the outward flux: outward transport is $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ \cite{stratton1941,beth1936}. In harmonic steady state with $d\mathbf{J}_{\mathrm{em,store}}/dt=\mathbf{0}$, $\mathbf{T}_{\mathrm{matter}}=\boldsymbol{\mathcal{T}}_J=-\boldsymbol{\Phi}_{J,\mathrm{out}}$; source and load resultants $\boldsymbol{\tau}_{\mathrm{source}}=-\boldsymbol{\Phi}_{J,\mathrm{out}}$ and $\boldsymbol{\tau}_{\mathrm{load}}=+\boldsymbol{\Phi}_{J,\mathrm{out}}$ apply only when the declared control surface encloses the support and the load intercepts the net flux \cite{beth1936}.
+so $\mathbf{T}_{\mathrm{matter}}=-\boldsymbol{\Phi}_{J,\mathrm{out}}-d\mathbf{J}_{\mathrm{em,store}}/dt$. The stress moment $\boldsymbol{\mathcal{T}}_J$ is not the outward flux: outward transport is $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\boldsymbol{\mathcal{T}}_J$ \cite{stratton1941,beth1936}. Angular-momentum fluxes must be labelled by the control volume and surface orientation. On a source-enclosing sphere $S_{\mathrm{src}}$,
+\begin{equation}
+\label{eq:ch1.am-flux-source-ledger}
+\Phi_{J,z,\mathrm{out}}(S_{\mathrm{src}})
+=-\hat{\mathbf{z}}\cdot\oint_{S_{\mathrm{src}}}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS
+\end{equation}
+is the signed field flux outward from the volume enclosed by $S_{\mathrm{src}}$. On a load control volume $V_L$ with boundary $\partial V_L$ in source-free vacuum,
+\begin{equation}
+\label{eq:ch1.am-flux-load-ledger}
+\Phi_{J,z,\mathrm{net,load}}
+=\Phi_{J,z,\mathrm{inc}}-\Phi_{J,z,\mathrm{refl}}-\Phi_{J,z,\mathrm{trans}},
+\qquad
+\tau_{z,\mathrm{load}}=\Phi_{J,z,\mathrm{net,load}}
+\end{equation}
+when steady material storage in $V_L$ is negligible; $\Phi_{J,z,\mathrm{inc}}$, $\Phi_{J,z,\mathrm{refl}}$, and $\Phi_{J,z,\mathrm{trans}}$ are the axis projections of the corresponding partial stress-moment fluxes through the portions of $\partial V_L$ that carry incoming, reflected, and transmitted radiation \cite{beth1936,stratton1941}. This load balance is not interchangeable with $\tau_{z,\mathrm{source}}=-\Phi_{J,z,\mathrm{out}}(S_{\mathrm{src}})$, which refers to a source-enclosing surface. In the special steady Route~B reduction of Eq.~\eqref{eq:ch1.route-b-body-torque-steady}, $\mathbf{T}_{\mathrm{body}}=-\boldsymbol{\mathcal{T}}_{J,i}$ \cite{beth1936}.
 
 Belinfante's 1940 field-theoretic analysis \cite{belinfante1940} showed that canonical
 energy--momentum and symmetric (kinetic) tensors differ by the divergence of a spin
@@ -1765,6 +1802,9 @@ With $\hat{\mathbf{e}}_\sigma=(\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}})/\sqrt
 \paragraph{Plane-wave stress countercheck (symmetric open disk).}
 For a uniform outgoing circularly polarized plane wave $\E=(E_0/\sqrt{2})(\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}})e^{-\jj kz}$, $\H=\eta_0^{-1}\hat{\mathbf{z}}\times\E$, the Maxwell stress tensor is spatially constant. On a finite transverse disk centered on the beam axis, $\oint[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{z}})]_z\,dS=0$ by azimuthal symmetry: power through the disk is $P=|E_0|^2 A/(2\eta_0)$, but the symmetric stress-moment integral does \emph{not} yield $\sigma P/\omega$ \cite{stratton1941,beth1936,stewart2005}. Torque on an anisotropic load in Beth's sense \cite{beth1936} is not recovered from this uniform-beam disk formula \cite{beth1936,stratton1941}.
 
+\paragraph{Beth 1936 anisotropic material torque (inspected primary source).}
+Beth's theoretical calculation begins in an anisotropic dielectric with tensor response $\mathbf K$, permeability unity, and principal axes $(x,y,z)$ \cite{beth1936}. Because $\mathbf E$ is generally not parallel to $\mathbf P$ or $\mathbf D=\mathbf K\mathbf E$, the material torque density is $\boldsymbol\tau=\mathbf P\times\mathbf E=(\mathbf D\times\mathbf E)/(4\pi)$ in his Gaussian electromagnetic units \cite{beth1936}. With plane-wave components (Beth's eq.~(2)) along $+z$ through a quartz section between $z_1$ and $z_2$, integration of the time-averaged torque density yields torque per unit area (Beth's eq.~(3)), which reverses when the lower quarter-wave plate is rotated by $90^\circ$ and vanishes at the design half-wave retardation. Beth's quantum argument assigns spin $\hbar$ per left-circular and $-\hbar$ per right-circular photon, with angular-momentum flux density $\dot M_z\propto XY\sin 2\delta$ (his eq.~(6) after unit conversion); conservation at a crystal face with Fresnel reflection reproduces the wave-theory torque \cite{beth1936}. This is a \emph{material} $\mathbf P\times\mathbf E$ calculation inside birefringent quartz, not an evaluation of the vacuum symmetric Maxwell stress tensor in the crystal interior. An enclosing vacuum stress-moment balance on a load control surface can be aligned with Beth's flux accounting only under the stated interface, reflection, and steady-state assumptions of his section~``Quantum theory'' \cite{beth1936,stratton1941}. The Princeton apparatus uses a suspended half-wave plate in vacuum, a fixed quarter-wave plate outside the chamber, and a reflector that returns the beam through the suspended plate so the delivered angular momentum is nearly four times that of simple one-pass absorption; Figure~\ref{fig:ch1.beth-schematic} is a pedagogical one-pass sketch, not a faithful diagram of that multi-plate reflected-beam arrangement \cite{beth1936}.
+
 \paragraph{Spin flux and ideal half-wave-plate scales (plane wave only).}
 For the same CP plane wave with time-averaged power $P$ and helicity label $\sigma=\pm1$ in $\E\propto\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}}$, a helicity bookkeeping magnitude
 \begin{equation}
@@ -1840,7 +1880,7 @@ When exchange is mediated at a material boundary, electromagnetic torque and ang
 \begin{figure}[t]
 \centering
 \VolIPhysFig{\VolIPhysBethSchematic}
-\caption{Beth \cite{beth1936}: circularly polarized light incident on a wave plate on a torsion suspension; the plate receives torque through Maxwell stress at the interface.}
+\caption{Pedagogical Beth-type sketch only \cite{beth1936}: circularly polarized light on a suspended wave plate. Beth's actual apparatus used multiple quartz quarter- and half-wave plates with a reflected return beam to enhance torque and suppress spurious radiation-pressure and heating effects; primary torque follows from anisotropic-material $\mathbf P\times\mathbf E$ theory and angular-momentum balance at the plate interfaces, not from this simplified single-pass geometry alone.}
 \label{fig:ch1.beth-schematic}
 \end{figure}
 
@@ -2231,10 +2271,15 @@ u_e=\tfrac14\varepsilon_0|\E|^2,\qquad u_m=\tfrac14\mu_0|\H|^2,
 \qquad
 W_e(V)=\int_V u_e\,dV,\qquad W_m(V)=\int_V u_m\,dV,
 \]
-under $\exp(+\jj\omega t)$ \cite{stratton1941,harrington2001}. The domain $V$ must be chosen so that $W_e(V)$ and $W_m(V)$ converge: for a finite regular source, $V$ may be a bounded ball excluding the support; for an ideal point dipole, $V$ must exclude a neighborhood of the origin (for example a shell $r_0<r<R$ with fixed $r_0>0$ and outer boundary $r=R$ large enough to be predominantly radiative)---direct integration through $r=0$ diverges because of the $r^{-3}$ and $r^{-2}$ near fields \cite{stratton1941,yaghjian1980dyadic}. These integrals sum the entire field on the stated domain, including propagating and reactive contributions; they are \emph{not} McLean's or Chu's non-propagating stored energies \cite{chu1948,mcclean1996}. With $P_{\mathrm{rad}}$ the time-averaged outward real power through $\partial V$ on a predominantly radiative boundary, introduce the volume energy ratio
+under $\exp(+\jj\omega t)$ \cite{stratton1941,harrington2001}. The domain $V$ must be chosen so that $W_e(V)$ and $W_m(V)$ converge: for a finite regular source, $V$ may be a bounded ball excluding the support; for an ideal point dipole, take a source-free spherical shell $V_{\mathrm{sh}}=\{r_0<r<R\}$ with $0<r_0\ll R$ and exclude $r\le r_0$---direct integration through $r=0$ diverges because of the $r^{-3}$ and $r^{-2}$ near fields \cite{stratton1941,yaghjian1980dyadic}. These integrals sum the entire field on $V_{\mathrm{sh}}$, including propagating and reactive contributions; they are \emph{not} McLean's or Chu's non-propagating stored energies \cite{chu1948,mcclean1996}. Radiated power is evaluated on the outer sphere $S_R$ only,
+\begin{equation}
+\label{eq:ch1.qvol-prad-outer}
+P_{\mathrm{rad}}(R)=\oint_{S_R}\Re\{\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{r}}\}\,dS,
+\end{equation}
+not as the net real Poynting flux through $\partial V_{\mathrm{sh}}=S_{r_0}\cup S_R$, which vanishes in a lossless source-free shell \cite{poynting1884,stratton1941}. Introduce the volume energy ratio on the same shell,
 \begin{equation}
 \label{eq:ch1.chu-q-adopted}
-Q_{\mathrm{vol}}(V)=\frac{2\omega\max(W_e,W_m)}{P_{\mathrm{rad}}},
+Q_{\mathrm{vol}}(V_{\mathrm{sh}})=\frac{2\omega\max(W_e,W_m)}{P_{\mathrm{rad}}(R)},
 \end{equation}
 a named finite-volume functional that must not be identified with Chu $Q_n$, antenna radiation $Q$, or $P_{\mathrm{reac}}(r)$ \cite{chu1948,mcclean1996}. If $W_e=W_m$ holds on the same $V$, then $Q_{\mathrm{vol}}=\omega(W_e+W_m)/P_{\mathrm{rad}}$. Chu \cite{chu1948} constructed modal equivalent circuits inside an enclosing sphere to separate non-propagating reactive storage from outward radiation; McLean \cite{mcclean1996} re-examined the exact finite-$ka$ minimum-$Q$ expression and distinguished it from the small-$ka$ expansion. Eq.~\eqref{eq:ch1.chu-q-lower-bound} quotes Chu's widely cited \emph{asymptotic} lower bound $(ka)^{-3}+(ka)^{-1}$ for the ideal minimum-$Q$ spherical model with $ka\ll1$; it is not asserted for arbitrary antennas, for $Q_{\mathrm{vol}}(V)$, or without Chu's interior idealizations \cite{chu1948,harrington2001,mcclean1996}. Under that stated ideal model in the limit $ka\ll1$,
 \begin{equation}

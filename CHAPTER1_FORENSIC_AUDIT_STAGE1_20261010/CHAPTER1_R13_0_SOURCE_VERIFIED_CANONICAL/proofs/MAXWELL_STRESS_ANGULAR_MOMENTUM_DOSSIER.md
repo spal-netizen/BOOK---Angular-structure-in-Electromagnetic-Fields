@@ -18,7 +18,11 @@
 |------|------------|--------|
 | \(\mathcal V_{\mathrm{vac}}=V_o\setminus\overline B\) | Prose after `ch1.momentum-integral-balance` | STATED |
 | Momentum on shell | `ch1.route-b-momentum-shell` | DERIVED (integrate `ch1.momentum-balance-instantaneous`, \(\mathbf f_{\mathrm{src}}=0\)) |
-| Torque on shell | `ch1.route-b-torque-shell` | DERIVED (moment of Route B momentum) |
+| Torque on shell | `ch1.route-b-torque-shell` | DERIVED (integrate `ch1.angular-momentum-balance`, \(\mathbf f_{\mathrm{src}}=0\)) |
+| Body force/torque at \(S_i\) | `ch1.route-b-body-force` | STATED (action–reaction; vacuum traction on \(S_i\)) |
+| Cycle-averaged shell torque | `ch1.route-b-torque-shell-averaged` | DERIVED |
+| Steady shell reduction | `ch1.route-b-body-torque-steady` | QUALIFIED (vanishing cycle-averaged shell storage) |
+| Source vs load flux ledger | `ch1.am-flux-source-ledger`, `ch1.am-flux-load-ledger` | STATED (signs from control volume) |
 | Single outer surface reduction | `ch1.torque-stress-surface`, `ch1.outward-am-flux` | QUALIFIED (storage + inner \(S_i\) terms) |
 
 **Normal conventions:** \(\hat{\mathbf n}_o\) outward from \(\mathcal V_{\mathrm{vac}}\) on \(S_o\); \(\hat{\mathbf n}_i\) outward from \(\mathcal V_{\mathrm{vac}}\) on \(S_i\) (into vacuum away from body).
