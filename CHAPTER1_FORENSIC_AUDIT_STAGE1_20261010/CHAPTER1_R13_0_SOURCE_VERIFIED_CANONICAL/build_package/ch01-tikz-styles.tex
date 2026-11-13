@@ -16,8 +16,8 @@
     line cap=round,
     line join=round
   },
-  ch1axis/.style={-{Latex[length=2.2mm,width=1.6mm]}, line width=0.75pt, black!80},
-  ch1shell/.style={line width=0.9pt, draw=gray!45!black},
+  ch1axis/.style={-{Latex[length=2.4mm,width=1.7mm]}, line width=1.05pt, black},
+  ch1shell/.style={line width=1.0pt, draw=black!85},
   ch1shellB/.style={line width=0.9pt, draw=gray!55!black},
   ch1shellO/.style={line width=0.9pt, draw=gray!35!black},
   ch1box/.style={
@@ -69,9 +69,9 @@
 
 % Cambridge UP in-text sizing: modest width, never full-column bloated diagrams
 \newcommand{\ChOneFigBlock}[1]{%
-  \adjustbox{max width=0.72\linewidth, max height=0.38\textheight, center}{#1}%
+  \adjustbox{max width=0.88\linewidth, max height=0.44\textheight, center}{#1}%
 }
 \newcommand{\ChOneFigGeo}[1]{%
-  \adjustbox{max width=0.62\linewidth, max height=0.32\textheight, center}{#1}%
+  \adjustbox{max width=0.82\linewidth, max height=0.40\textheight, center}{#1}%
 }
 \newcommand{\ChOneFigResize}[1]{\ChOneFigGeo{#1}}

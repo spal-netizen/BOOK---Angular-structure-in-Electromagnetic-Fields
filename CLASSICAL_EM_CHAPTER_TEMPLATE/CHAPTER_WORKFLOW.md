@@ -10,10 +10,11 @@ Reuse Chapter 1's **protocols**, not its forensic timeline.
 4. Extract primary-source equations for HOME items only.
 5. One integrated correction pass for evidenced defects.
 6. Integrate prose (section intros + subsections; no audit voice).
-7. Equation + figure audit registers.
-8. Run chapter validation scripts + read PDF of changed pages.
-9. Build clean PDF; record SHA-256 manifest.
-10. **Lock** chapter; stop unless a new contradiction appears.
+7. Equation + **print-size figure** audit registers (every figure inspected on rendered PDF pages—not contact-sheet approval alone).
+8. **Independently solve** every numerical exercise in the problem set.
+9. Run chapter validation scripts + read PDF of changed pages.
+10. Build clean PDF; record SHA-256 manifest.
+11. One adversarial verification pass; **lock** chapter; stop unless a new contradiction appears.
 
 ## Explicitly excluded
 

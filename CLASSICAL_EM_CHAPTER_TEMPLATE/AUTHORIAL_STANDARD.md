@@ -22,7 +22,8 @@ This template captures **discipline**, not Chapter 1's length or topic list.
 ## Prose
 
 - Continuous classical monograph tone (Version A): measured, authoritative, student-readable at graduate level.
-- No audit pipelines, tooling vocabulary, or defensive meta-commentary in manuscript body.
+- **No meta-language:** forensic audits, pipeline stages, R-series labels, release locks, workspace authentication, chapter-planning bracket notes (e.g.\ internal defer tags in problems), or script/test vocabulary in the published chapter.
+- Problem sets must require **derivation, computation, limiting cases, and synthesis**—not topic lists or vague “discuss fully” prompts.
 - Introduce each concept once; inherit later via `\ref` / “By §x.y”.
 
 ## Citations

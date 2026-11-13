@@ -10,12 +10,12 @@
     line join=round,
     scale=1.0
   },
-  voliaxis/.style={-{Latex[length=2mm,width=1.4mm]}, line width=0.7pt, black},
-  volishell/.style={line width=0.75pt, draw=black},
-  volishelld/.style={line width=0.65pt, dashed, draw=black},
-  volisrc/.style={fill=black, circle, inner sep=1.6pt},
-  volifield/.style={-{Latex[length=1.8mm,width=1.2mm]}, line width=0.55pt, black},
-  volipoynt/.style={-{Latex[length=1.8mm,width=1.2mm]}, line width=0.55pt, black},
+  voliaxis/.style={-{Latex[length=2.4mm,width=1.7mm]}, line width=1.05pt, black},
+  volishell/.style={line width=1.0pt, draw=black},
+  volishelld/.style={line width=0.85pt, dashed, draw=black},
+  volisrc/.style={fill=black, circle, inner sep=2pt},
+  volifield/.style={-{Latex[length=2.2mm,width=1.5mm]}, line width=0.9pt, black},
+  volipoynt/.style={-{Latex[length=2.2mm,width=1.5mm]}, line width=0.9pt, black},
   volilabel/.style={font=\footnotesize, inner sep=1pt, fill=white, fill opacity=0.96, text=black},
   volihatch/.style={pattern=north east lines, pattern color=black!40}
 }
@@ -1133,22 +1133,23 @@
 
 % --- Ch.1: electric dipole radiation pattern $\sin^2\theta$ (meridional plane) ---
 \newcommand{\VolIPhysDipoleRadiationPattern}{%
-\begin{tikzpicture}[voliphys]
-  \draw[voliaxis, line width=0.55pt] (0,-1.5) -- (0,1.5);
-  \node[volilabel, font=\scriptsize] at (0.14,1.58) {$\hat{\mathbf{z}}$};
-  \draw[volishell, line width=0.7pt] (0,0) -- (0,0.5);
-  \node[volilabel, font=\scriptsize] at (0.24,0.25) {$\mathbf{p}$};
-  \fill[volisrc] (0,0) circle (1.8pt);
-  \draw[volishell, line width=0.85pt, smooth, samples=181, domain=-180:180]
-    plot ({1.2*sin(\x)*sin(\x)*sin(\x)},{1.2*sin(\x)*sin(\x)*cos(\x)});
-  \draw[gray!45!black, line width=0.4pt, dashed] (-1.35,0) -- (1.35,0);
-  \node[volilabel, font=\scriptsize] at (1.38,0.08) {$\theta$};
-  \node[volilabel, font=\scriptsize] at (0.08,-1.22) {$\theta{=}0$};
-  \node[volilabel, font=\scriptsize] at (0.08,1.22) {$\theta{=}\pi$};
-  \node[volilabel, font=\scriptsize] at (0.95,0.12) {max};
-  \node[volilabel, font=\scriptsize] at (-0.95,0.12) {max};
-  \node[volilabel, font=\scriptsize, align=center] at (0,-1.78)
-    {$U(\theta)\propto\sin^2\theta$};
+\begin{tikzpicture}[voliphys, scale=1.12]
+  \draw[voliaxis] (0,-1.45) -- (0,1.55);
+  \node[volilabel] at (0.2,1.62) {$+\hat{\mathbf{z}}$};
+  \node[volilabel] at (0.2,-1.52) {$-\hat{\mathbf{z}}$};
+  \draw[volishell] (0,0) -- (0,0.55);
+  \node[volilabel] at (0.32,0.28) {$\mathbf{p}\parallel\hat{\mathbf{z}}$};
+  \fill[volisrc] (0,0) circle (2.2pt);
+  \draw[volishell, smooth, samples=181, domain=-180:180]
+    plot ({1.25*sin(\x)*sin(\x)*sin(\x)},{1.25*sin(\x)*sin(\x)*cos(\x)});
+  \draw[volishelld] (-1.38,0) -- (1.38,0);
+  \node[volilabel] at (1.42,0.1) {$\theta=\pi/2$};
+  \node[volilabel] at (0.12,1.24) {$\theta{=}0$};
+  \node[volilabel] at (0.12,-1.24) {$\theta{=}\pi$};
+  \node[volilabel] at (1.02,0.18) {$U_{\max}$};
+  \node[volilabel] at (-1.02,0.18) {$U_{\max}$};
+  \node[volilabel, align=center] at (0,-1.85)
+    {$U(\theta)\propto\sin^2\theta$;\ null on axis};
 \end{tikzpicture}%
 }
 

@@ -2,7 +2,9 @@
 
 ## Style
 
-- Restrained black-line / blackboard TikZ (Chapter 1 reference).
+- Restrained **black-ink** scientific line art: controlled line weights (axis $\gtrsim1.0$\,pt, field arrows $\gtrsim0.9$\,pt), deliberate white space, legible labels at **A4 print size**.
+- Figures must be **editable vector source** (TikZ in `vol-i-physical-figure-library.tex`, inline TikZ, or chapter-local PGF)—no flattened generated bitmaps as the sole source.
+- A subtle hand-drafted appearance is acceptable; **geometric precision takes precedence** over decorative roughness.
 - No decorative color unless required for physical distinction (polarization handedness).
 
 ## Required elements
