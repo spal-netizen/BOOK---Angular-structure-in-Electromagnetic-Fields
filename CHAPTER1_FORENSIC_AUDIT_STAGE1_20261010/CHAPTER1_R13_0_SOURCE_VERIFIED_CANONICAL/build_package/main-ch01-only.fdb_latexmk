@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main-ch01-only"] 1794461533.42675 "main-ch01-only.aux" "main-ch01-only.bbl" "main-ch01-only" 1794461545.43268 0
-  "./references.bib" 1794400330 56690 d859b98bbb4ecb6961d6f7e3a6875bb8 ""
+["bibtex main-ch01-only"] 1794556051.74025 "main-ch01-only.aux" "main-ch01-only.bbl" "main-ch01-only" 1794556060.97542 0
+  "./references.bib" 1794555510 57368 e772e50bd0d9410e1c4eece90b8698ad ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main-ch01-only.aux" 1794461542 108575 4bfb895448f06e3f57a421c8361d72ed "pdflatex"
+  "main-ch01-only.aux" 1794556059 114694 efbd51ecb5d59be43dc126a9054b49b0 "pdflatex"
   (generated)
   "main-ch01-only.bbl"
   "main-ch01-only.blg"
   (rewritten before read)
-["pdflatex"] 1794461534.8262 "main-ch01-only.tex" "main-ch01-only.pdf" "main-ch01-only" 1794461545.43462 0
+["pdflatex"] 1794556052.24176 "main-ch01-only.tex" "main-ch01-only.pdf" "main-ch01-only" 1794556060.97722 0
   "C:/Users/S.Pal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1782348384 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/S.Pal/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1781000028 13367095 3439f30552ceffa4453fd0e33c527b8b ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -197,7 +197,6 @@
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty" 1579093635 6253 f1cb470c9199e7110a27851508ed7a5c ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1696169587 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1696169587 72619 ee90b6612147680fd73c3b1406a74245 ""
-  "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/tex/latex/cite/chapterbib.sty" 1425353482 26179 8b0c04a31bef17eb7c0577dc065579d2 ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/tex/latex/cleveref/cleveref.sty" 1524385854 337536 7fc6b003158402a4c694bc0a1b729308 ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/tex/latex/collectbox/collectbox.sty" 1667300686 9124 59c3b56f1a073de66e3eea35f9c173c8 ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty" 1738917170 52272 63d293bc0d496619edb57585740861a2 ""
@@ -269,19 +268,19 @@
   "ch01-classical-tables.tex" 1794320050 3689 a762f8949c9841c7ed3a6b241b8db146 ""
   "ch01-foundation-seeds-passK-bridges.tex" 1794320050 10283 45f5c13daf1a161474541bad845ecf6d ""
   "ch01-handdrawn-figures.tex" 1790155535 693 cd7400d7979fd5b5149936649fd4751c ""
-  "ch01-problems.tex" 1794321397 10319 db3909bb59982146ba91a8ca654996a7 ""
+  "ch01-problems.tex" 1794467100 10387 cd68bed7f67d59a1c95913dd40dac7ca ""
   "ch01-r10_2-figure-patches.tex" 1794320050 1150 c96e6ad9a9c58f965d295fe7becb78df ""
   "ch01-r10_3-figure-patches.tex" 1794320050 96 f6d50c4e0173bbe3116e8d981ff75303 ""
   "ch01-tikz-styles.tex" 1790345757 3018 d3ab03ce6a855332ae73dcc266ebc2b6 ""
-  "ch01.tex" 1794409114 231575 a71c41fff0c11a5b29bf1ac5a4d0ffdb ""
+  "ch01.tex" 1794555509 253372 701a7c1465a40fea084ce330474402dc ""
   "fig-macros.tex" 1790174809 140 844190153e046ab24b694419d3d3a116 ""
   "macros.tex" 1790411902 1702 0bcaae09d389e8af25632e579c14a9e5 ""
-  "main-ch01-only.aux" 1794461542 108575 4bfb895448f06e3f57a421c8361d72ed "pdflatex"
-  "main-ch01-only.bbl" 1794461534 5735 ae106cf854192c1b84e9b22e153b6092 "bibtex main-ch01-only"
-  "main-ch01-only.out" 1794461542 10306 53a7a71b5c482698a11b56c9c1210f11 "pdflatex"
+  "main-ch01-only.aux" 1794556059 114694 efbd51ecb5d59be43dc126a9054b49b0 "pdflatex"
+  "main-ch01-only.bbl" 1794556052 6181 d8eceff886f17e99aea36a1807e7b806 "bibtex main-ch01-only"
+  "main-ch01-only.out" 1794556059 10306 53a7a71b5c482698a11b56c9c1210f11 "pdflatex"
   "main-ch01-only.tex" 1791975868 845 eb647d471e3a2d13178501dd008f200f ""
-  "main-ch01-only.toc" 1794461542 4604 8a93a38396d7651b05d01bc77f7a5c22 "pdflatex"
-  "preamble.tex" 1793014572 2452 192cbcb2ddc48010c43351343ecac110 ""
+  "main-ch01-only.toc" 1794556059 4810 ec710ac2cce14a5e7cf5b5d4a0e1177f "pdflatex"
+  "preamble.tex" 1794490827 2680 c67c30f20c9b9bac249fb5d922200766 ""
   "vol-i-physical-figure-library.tex" 1792076732 59591 7ccc68f86215012f41b484c623e9d15a ""
   "vol-i-time-convention.tex" 1792849621 1080 18f9f65aefc1843f689c0c418b93d896 ""
   (generated)

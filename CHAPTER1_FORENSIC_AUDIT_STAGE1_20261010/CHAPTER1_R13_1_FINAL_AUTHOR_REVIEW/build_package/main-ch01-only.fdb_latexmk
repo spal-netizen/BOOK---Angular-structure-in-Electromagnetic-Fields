@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main-ch01-only"] 1794554151.21265 "main-ch01-only.aux" "main-ch01-only.bbl" "main-ch01-only" 1794554159.59943 0
-  "./references.bib" 1794462772 57039 ca90bafe58f6b0168251f2d64164cc33 ""
+["bibtex main-ch01-only"] 1794555658.03182 "main-ch01-only.aux" "main-ch01-only.bbl" "main-ch01-only" 1794555660.45156 0
+  "./references.bib" 1794555510 57368 e772e50bd0d9410e1c4eece90b8698ad ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main-ch01-only.aux" 1794554157 114231 870d1bfc351ad4c44b82ffe12b5fb98e "pdflatex"
+  "main-ch01-only.aux" 1794555655 114667 6ffa868198216ed7d7714586b8d1de52 "pdflatex"
   (generated)
   "main-ch01-only.bbl"
   "main-ch01-only.blg"
   (rewritten before read)
-["pdflatex"] 1794554151.70705 "main-ch01-only.tex" "main-ch01-only.pdf" "main-ch01-only" 1794554159.60116 0
+["pdflatex"] 1794555658.55206 "main-ch01-only.tex" "main-ch01-only.pdf" "main-ch01-only" 1794555660.45227 2
   "C:/Users/S.Pal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1782348384 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/S.Pal/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1781000028 13367095 3439f30552ceffa4453fd0e33c527b8b ""
   "C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -272,21 +272,19 @@
   "ch01-r10_2-figure-patches.tex" 1794320050 1150 c96e6ad9a9c58f965d295fe7becb78df ""
   "ch01-r10_3-figure-patches.tex" 1794320050 96 f6d50c4e0173bbe3116e8d981ff75303 ""
   "ch01-tikz-styles.tex" 1790345757 3018 d3ab03ce6a855332ae73dcc266ebc2b6 ""
-  "ch01.tex" 1794554025 251388 fe677f11c05a0075faa6ea807f968a8b ""
+  "ch01.tex" 1794555509 253372 701a7c1465a40fea084ce330474402dc ""
   "fig-macros.tex" 1790174809 140 844190153e046ab24b694419d3d3a116 ""
   "macros.tex" 1790411902 1702 0bcaae09d389e8af25632e579c14a9e5 ""
-  "main-ch01-only.aux" 1794554157 114231 870d1bfc351ad4c44b82ffe12b5fb98e "pdflatex"
-  "main-ch01-only.bbl" 1794554151 5971 8d80881d416509ac0d035668d91b58ea "bibtex main-ch01-only"
-  "main-ch01-only.out" 1794554157 10306 53a7a71b5c482698a11b56c9c1210f11 "pdflatex"
+  "main-ch01-only.aux" 1794555655 114667 6ffa868198216ed7d7714586b8d1de52 "pdflatex"
+  "main-ch01-only.bbl" 1794555658 6181 d8eceff886f17e99aea36a1807e7b806 "bibtex main-ch01-only"
+  "main-ch01-only.out" 1794555656 10306 53a7a71b5c482698a11b56c9c1210f11 ""
   "main-ch01-only.tex" 1791975868 845 eb647d471e3a2d13178501dd008f200f ""
-  "main-ch01-only.toc" 1794554157 4810 9632de1f5181b8ad53b589f5266f4398 "pdflatex"
+  "main-ch01-only.toc" 1794555656 4810 ec710ac2cce14a5e7cf5b5d4a0e1177f ""
   "preamble.tex" 1794490827 2680 c67c30f20c9b9bac249fb5d922200766 ""
   "vol-i-physical-figure-library.tex" 1792076732 59591 7ccc68f86215012f41b484c623e9d15a ""
   "vol-i-time-convention.tex" 1792849621 1080 18f9f65aefc1843f689c0c418b93d896 ""
   (generated)
   "main-ch01-only.aux"
   "main-ch01-only.log"
-  "main-ch01-only.out"
   "main-ch01-only.pdf"
-  "main-ch01-only.toc"
   (rewritten before read)

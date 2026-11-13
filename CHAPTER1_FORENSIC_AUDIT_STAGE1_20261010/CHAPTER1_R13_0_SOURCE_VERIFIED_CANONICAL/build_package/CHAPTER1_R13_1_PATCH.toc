@@ -1,0 +1,45 @@
+\contentsline {chapter}{\numberline {1}Foundations of Angular Electromagnetic Structure}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.0}Introduction and Scope}{5}{section.1.0}%
+\contentsline {subsection}{\numberline {1.0.1}Historical lineage of field energy, momentum, and angular structure}{7}{subsection.1.0.1}%
+\contentsline {subsection}{\numberline {1.0.2}Source data, boundaries, and Maxwell consistency}{8}{subsection.1.0.2}%
+\contentsline {subsection}{\numberline {1.0.3}Rotation and Maxwell compatibility}{9}{subsection.1.0.3}%
+\contentsline {subsection}{\numberline {1.0.4}Assumptions, finite energy, and domain of validity}{9}{subsection.1.0.4}%
+\contentsline {section}{\numberline {1.1}Maxwell Theory and Conservation Laws}{10}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Maxwell equations: differential, integral, vacuum constitutive relations}{11}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}From inhomogeneous Helmholtz equation to outgoing Green function}{14}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Sources, boundary conditions, and the Maxwell boundary-value problem}{16}{subsection.1.1.3}%
+\contentsline {paragraph}{Interface transmission.}{17}{section*.13}%
+\contentsline {paragraph}{Outer boundary traces.}{17}{section*.14}%
+\contentsline {paragraph}{Outgoing selection.}{18}{section*.16}%
+\contentsline {paragraph}{Source classes and global balance.}{18}{section*.17}%
+\contentsline {subsection}{\numberline {1.1.4}Boundary-Value Problems and Uniqueness}{19}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Energy, linear momentum, and Maxwell stress tensor}{22}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Angular momentum conservation and torque balance}{27}{subsection.1.1.6}%
+\contentsline {section}{\numberline {1.2}Angular Structure of Electromagnetic Fields}{31}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Rotating source versus rotating pattern}{31}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Directional dependence and angular momentum}{32}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Helical phase structure and transport}{33}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Physical relations for angular-momentum transport}{35}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Reactive and radiative field regimes}{35}{subsection.1.2.5}%
+\contentsline {section}{\numberline {1.3}Rotational covariance and reference frames}{36}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Gauge structure, helicity, and spin--orbit limits}{38}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Gauge-invariant observables, helicity, and dual symmetry}{39}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Limits of local spin-orbit decompositions}{41}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Surface flux, torque, and physical observation}{41}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Stress traction, force, and torque on matter}{42}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Power flux, stress traction, and torque}{42}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Field quantities, instrument readings, and inferred structure}{43}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Apertures, angular charts, and later radiation mappings}{43}{subsection.1.5.4}%
+\contentsline {section}{\numberline {1.6}Examples and Counterexamples}{44}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Angular momentum conservation in radiation}{44}{subsection.1.6.1}%
+\contentsline {paragraph}{Equatorial ring source (separate construction).}{45}{section*.76}%
+\contentsline {paragraph}{Plane-wave stress countercheck (symmetric open disk).}{45}{section*.77}%
+\contentsline {paragraph}{Beth 1936 anisotropic material torque (inspected primary source).}{45}{section*.78}%
+\contentsline {paragraph}{Spin flux and ideal half-wave-plate scales (plane wave only).}{46}{section*.79}%
+\contentsline {subsection}{\numberline {1.6.2}Phase structure without angular-momentum transport}{48}{subsection.1.6.2}%
+\contentsline {paragraph}{Peak-amplitude convention (counter-rotating pair).}{49}{section*.84}%
+\contentsline {subsection}{\numberline {1.6.3}Gauge dependence of local angular-momentum densities}{50}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.4}Radial structure of a localized radiator}{50}{subsection.1.6.4}%
+\contentsline {paragraph}{Chu $n=1$ TM equivalent circuit (reconstruction).}{56}{section*.89}%
+\contentsline {section}{\numberline {1.7}Summary}{56}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Problems}{57}{section.1.8}%

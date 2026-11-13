@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.9)  12 NOV 2026 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.9)  13 NOV 2026 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,10 +825,6 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@count@id=\count363
 \enitdp@description=\count364
 )
-(C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/cite\chapterbib.sty
-\c@inputfile=\count365
-Package: chapterbib 2010/09/18  v 1.17
-)
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
 
@@ -857,7 +853,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count366
+\c@section@level=\count365
 )
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
@@ -865,8 +861,8 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen334
-\Hy@linkcounter=\count367
-\Hy@pagecounter=\count368
+\Hy@linkcounter=\count366
+\Hy@pagecounter=\count367
  (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -874,7 +870,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count369
+\Hy@SavedSpaceFactor=\count368
  (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -889,7 +885,7 @@ Package hyperref Info: Plain pages OFF on input line 4214.
 Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count370
+\c@Hy@tempcnt=\count369
 
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
@@ -906,7 +902,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count371
+\Fld@menulength=\count370
 \Field@Width=\dimen336
 \Fld@charsize=\dimen337
 Package hyperref Info: Hyper figures OFF on input line 6091.
@@ -916,16 +912,16 @@ Package hyperref Info: backreferencing OFF on input line 6106.
 Package hyperref Info: Link coloring OFF on input line 6111.
 Package hyperref Info: Link coloring with OCG OFF on input line 6116.
 Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count372
-\c@Item=\count373
-\c@Hfootnote=\count374
+\Hy@abspage=\count371
+\c@Item=\count372
+\c@Hfootnote=\count373
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
-\Fld@listcount=\count375
-\c@bookmark@seq@number=\count376
+\Fld@listcount=\count374
+\c@bookmark@seq@number=\count375
 
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -964,9 +960,9 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 52.
 )
 ==> First Aid for cleveref.sty applied!
-\c@theorem=\count377
-\c@principle=\count378
-\c@hierarchy=\count379
+\c@theorem=\count376
+\c@principle=\count377
+\c@hierarchy=\count378
 (macros.tex) (vol-i-time-convention.tex) (ch01-tikz-styles.tex) (fig-macros.tex
 (ch01-handdrawn-figures.tex) (vol-i-physical-figure-library.tex
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
@@ -980,7 +976,7 @@ decorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen340
 \pgfdecoratedinputsegmentremainingdistance=\dimen341
 \pgf@decorate@distancetomove=\dimen342
-\pgf@decorate@repeatstate=\count380
+\pgf@decorate@repeatstate=\count379
 \pgfdecorationsegmentamplitude=\dimen343
 \pgfdecorationsegmentlength=\dimen344
 )
@@ -1112,16 +1108,16 @@ or `english'. on input line 10.
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count381
+\scratchcounter=\count380
 \scratchdimen=\dimen347
 \scratchbox=\box82
-\nofMPsegments=\count382
-\nofMParguments=\count383
+\nofMPsegments=\count381
+\nofMParguments=\count382
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count384
+\MPscratchCnt=\count383
 \MPscratchDim=\dimen348
-\MPnumerator=\count385
-\makeMPintoPDFobject=\count386
+\MPnumerator=\count384
+\makeMPintoPDFobject=\count385
 \everyMPtoPDFconversion=\toks59
 )
 (C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -1212,13 +1208,13 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ]
 Chapter 1.
-(ch01-r10_3-figure-patches.tex (ch01-r10_2-figure-patches.tex))
+(ch01-r10_3-figure-patches.tex (ch01-r10_2-figure-patches.tex)) [5{C:/Users/S.P
+al/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/S.P
+al/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/S.Pal/A
+ppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/S.Pal/A
+ppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 17.
- [5{C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
-C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{
-C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{
-C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
  [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 81.
@@ -1233,23 +1229,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.44
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.664 \textbf{Route~B.}
-                        When $(\rho,\Jimp)$ is a mathematical feed that does...
-
+l.652 \end{equation}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.44
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.664 \textbf{Route~B.}
-                        When $(\rho,\Jimp)$ is a mathematical feed that does...
-
+l.652 \end{equation}
+                    ] [23
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.46
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.664 \textbf{Route~B.}
-                        When $(\rho,\Jimp)$ is a mathematical feed that does...
-] [23] [24] (ch01-classical-tables.tex
+l.704 \begin{equation}
+                      ] [24] [25] (ch01-classical-tables.tex
 Overfull \hbox (16.2958pt too wide) in paragraph at lines 7--36
  [][] 
  []
@@ -1259,47 +1252,47 @@ Overfull \hbox (20.82301pt too wide) in paragraph at lines 64--73
  [][] 
  []
 
-) [25] [26] [27
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1.62
+) [26] [27] [28
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.68
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.894 \end{equation}
-                    ] [28] [29] [30] [31] [32
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1.76
+l.915 
+      ] [29] [30] [31] [32] [33] [34
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.84
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1180 
-       ] [33] [34] [35
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1.80
+l.1241 \end{equation}
+                     ] [35] [36] [37
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.88
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1324 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1.80
+l.1388 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.88
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1324 
-       ] [36
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1.83
+l.1388 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.91
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1412 \FloatBarrier
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1.83
+l.1388 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.91
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1412 \FloatBarrier
-                    ] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]
-[47] [48] [49] [50] [51] [52]) (ch01-problems.tex [53]) (main-ch01-only.bbl
-[54] [55
+l.1388 \begin{equation}
+                       ] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
+[48] [49] [50] [51] [52] [53] [54] [55] [56]) (ch01-problems.tex [57] [58])
+(main-ch01-only.bbl [59] [60
 
-]) [56] (main-ch01-only.aux)
+]) [61] (main-ch01-only.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
@@ -1308,13 +1301,13 @@ Package rerunfilecheck Info: File `main-ch01-only.out' has not changed.
 (rerunfilecheck)             Checksum: 53A7A71B5C482698A11B56C9C1210F11;10306.
  ) 
 Here is how much of TeX's memory you used:
- 37912 strings out of 467509
- 784414 string characters out of 5408781
- 1241634 words of memory out of 5000000
- 65637 multiletter control sequences out of 15000+600000
- 762500 words of font info for 390 fonts, out of 8000000 for 9000
+ 37914 strings out of 467509
+ 784614 string characters out of 5408781
+ 1247604 words of memory out of 5000000
+ 65611 multiletter control sequences out of 15000+600000
+ 762933 words of font info for 394 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,16n,120p,2446b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,16n,120p,2446b,1249s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbsy10.p
 fb><C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.p
 fb><C:/Users/S.Pal/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.p
@@ -1345,9 +1338,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/S.Pal/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/S.Pal/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/S.Pal/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main-ch01-only.pdf (56 pages, 1207207 bytes).
+Output written on main-ch01-only.pdf (61 pages, 1264431 bytes).
 PDF statistics:
- 2293 PDF objects out of 2487 (max. 8388607)
- 374 named destinations out of 1000 (max. 500000)
+ 2458 PDF objects out of 2487 (max. 8388607)
+ 398 named destinations out of 1000 (max. 500000)
  65833 words of extra memory for PDF output out of 74296 (max. 10000000)
 

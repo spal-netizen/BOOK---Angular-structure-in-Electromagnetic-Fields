@@ -1,0 +1,4 @@
+metric,count,note
+begin{figure},0,TeX environments
+label{fig:ch1*},0,registered labels; PDF may show Fig 1.1--1.30 via auto-numbering
+PDF_inspection,PARTIAL,Caption+prose reviewed; artwork not redrawn

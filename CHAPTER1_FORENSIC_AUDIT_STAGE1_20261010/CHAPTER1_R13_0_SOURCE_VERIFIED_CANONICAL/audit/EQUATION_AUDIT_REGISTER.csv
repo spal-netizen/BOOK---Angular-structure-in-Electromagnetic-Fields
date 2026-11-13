@@ -1,7 +1,10 @@
 kind,id,source_line_hint,status,notes
+equation,eq:ch1.J-em-vac-def,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.active-passive-duality,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.active-rotation-action,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.admissible-space,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.am-flux-load-ledger,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.am-flux-source-ledger,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.am-net-transport-condition,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.am-net-transport-z,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.angular-balance-integral,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -13,9 +16,12 @@ equation,eq:ch1.angular-momentum-density,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.angular-momentum-index-start,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.angular-momentum-product-rule,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.azimuthal-eigenvalue,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.beth-torque-cycle-average,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.boundary-data-operator,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.bridge-compatibility-criteria,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.charge-continuity-harmonic,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.chu-Qn-def,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.chu-Z-TM-normalized,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.chu-q-adopted,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.chu-q-lower-bound,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.coherency-matrix,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -37,6 +43,7 @@ equation,eq:ch1.dipole-ampere-distributional,TEX,,DERIVED_OR_CITED_PENDING_ROW_A
 equation,eq:ch1.dipole-complex-shell-flux,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.dipole-faraday-distributional,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.dipole-fields-explicit,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.dipole-lorenz-gauge,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.dipole-reactive-ratio,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.dipole-rho-distributional,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.dipole-sc-radial,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -81,6 +88,8 @@ equation,eq:ch1.gauge-transform,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.global-charge-compatibility,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.helicity-density,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.helicity-plane-wave,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.hessian-classical-r-positive,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.hessian-distributional,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.hwp-torque-magnitude,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.impedance-boundary-power,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.impedance-exterior-normal-flux,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -123,6 +132,7 @@ equation,eq:ch1.poynting-complex,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.poynting-instantaneous,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.poynting-intermediate,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.poynting-real-imag-split,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.qvol-prad-outer,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.radiation-intensity-Ur,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.radiation-trace-condition,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.rank1-dyad-rotation,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -132,6 +142,11 @@ equation,eq:ch1.rodrigues-rotation,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.rotation-from-generators,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.rotation-generator-split,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.rotation-group-action,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.route-b-body-force,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.route-b-body-torque-steady,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.route-b-momentum-shell,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.route-b-torque-shell,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.route-b-torque-shell-averaged,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.signature-flux-torque-pair,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.signature-phase-ramp,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.signature-source-torque-z,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -146,7 +161,7 @@ equation,eq:ch1.stress-traction-definition,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUD
 equation,eq:ch1.tensor-invariant-trace,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.tensor-rotation-rule,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.torque-observable,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.torque-stress-surface,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.torque-stress-route-a,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.total-angular-generator,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.traction-rotation-covariance,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.transport-charge-continuous-index,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT

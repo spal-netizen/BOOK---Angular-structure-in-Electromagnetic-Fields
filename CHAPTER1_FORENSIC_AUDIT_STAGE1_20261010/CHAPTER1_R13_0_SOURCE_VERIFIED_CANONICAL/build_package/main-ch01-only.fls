@@ -245,8 +245,6 @@ INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.s
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.sty
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\cite\chapterbib.sty
-INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\cite\chapterbib.sty
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
@@ -449,6 +447,10 @@ INPUT ch01-r10_2-figure-patches.tex
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
+INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
@@ -460,10 +462,6 @@ INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib5.tf
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy5.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
-INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
-INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
-INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
-INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Users\S.Pal\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
