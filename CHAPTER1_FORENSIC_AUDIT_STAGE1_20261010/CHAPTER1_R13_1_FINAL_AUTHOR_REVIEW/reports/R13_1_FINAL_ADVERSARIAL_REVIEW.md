@@ -1,18 +1,17 @@
-# R13.1 final adversarial review (correction patch)
+# Final adversarial review — release lock
 
-Second pass on patched TeX + PDF (same system).
+| Question | Verdict | Location |
+|----------|---------|----------|
+| VSW satisfies both curls? | **PASS** | `vsw-curl-identities`, `vsw-delta-E/H`, prose curl check |
+| Far-field uniqueness under hypotheses? | **PASS** | §1.1.3 steps (i)–(iv); Rellich cited |
+| Chu impedance source-consistent? | **PASS** | `chu-Z-TM-normalized` |
+| \(Q_{\mathrm{LB}}\) exact \(TM_{01}\) scope? | **PASS** | McLean + Chu paragraph; not universal |
+| Dipole weak forms? | **PASS** (regression) | §1.6.4 |
+| Lossless/lossy identities? | **PASS** (regression) | §1.1.3 |
+| Beth SI/Gaussian? | **PASS** (regression) | `beth-torque-cycle-average` |
+| Figures/equations/citations? | **PARTIAL** | 29 TeX floats vs PDF Fig. 30 numbering reconciled in register; no full artwork audit |
+| Manifest = PDF bytes? | **PASS** | unified `CHAPTER1_R13_1_RELEASE.pdf` copies |
 
-| Question | Answer | Evidence |
-|----------|--------|----------|
-| Chu impedance vs source? | **PASS** | `[ph^{(2)}]'/(ph^{(2)})`; numeric script |
-| n=1 Fig. 3 circuit? | **PASS** | Text: three-element only; Eq. (9) scoped to \(n\ge2\) |
-| Time / Hankel branch? | **PASS** | \(e^{j\omega t}\), \(h_n^{(2)}\); no false conjugation |
-| Four distributional Maxwell laws? | **PASS** | Weak forms corrected; existing Gauss/Lorenz |
-| Curl pairing signs? | **PASS** | Plus sign pairing |
-| Uniqueness lossless/lossy? | **PASS** | Split derivation |
-| Route A/B normals? | **PASS** (unchanged) | Prior falsification table |
-| Beth material vs stress? | **PASS** | §1.0, §1.6.1 + `beth-torque-cycle-average` |
-| Equation orphans? | **PASS** | 0 orphan `eq:ch1.*` refs |
-| PDF ↔ TeX? | **PASS** | Clean build, citation check 61 pp |
+**Classification: B** — scientifically closed on displayed Maxwell pairs and stated proofs; **open:** Chu TR-064 binary authentication, print-resolution figure sign-off.
 
-**Residual:** Chu MIT PDF bytes not authenticated; figure artwork not print-res visually cleared (29 TeX floats; PDF numbering 1.1–1.30 reconciled as auto-numbering including problems).
+**STOP** — no further R-series batch.

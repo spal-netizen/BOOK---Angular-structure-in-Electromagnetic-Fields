@@ -1,13 +1,13 @@
-# R13.1 final status
+# R13.1 status (correction patch)
 
-**Classification: B**
+**Classification: B** (scientific proof closure on the three named defects: **closed**; Chu PDF binary + full figure artwork: **open**)
 
-**Final TeX:** `source/CHAPTER1_R13_1_FINAL_AUTHOR_REVIEW.tex`  
-**Final PDF:** `pdf/CHAPTER1_R13_1_FINAL_AUTHOR_REVIEW.pdf`  
-**Pages:** 60  
-**TeX SHA-256:** `31887DEDE11B57069FB524C371FAFE8B0AC3AA1E178DA62A17CA2B08F6DD3816`  
-**PDF SHA-256:** `5CD9EFA54B20106382E60727F955A1A2343B68ECF5F93DCC134D914610F5EDB0`  
-**Build:** PASS (`latexmk -g -pdf main-ch01-only.tex`)  
-**Tests:** 6/6 PASS  
+**Branch:** chapter1/r13.1-final-closure  
+**Baseline preserved:** 5927a2  
+**Pages:** 61  
+**TeX SHA-256:** 59E746568FC30E549DB9E94A53240857EAB10429CD50D115791ED07DEA9AF719  
+**PDF SHA-256:** C1D5572DB82D850092652B8F3FE296515C877D268CE0A279CC0C52E277DE33FF  
+**Build:** PASS  
+**Patch tests:** 11/11 ch01_*.py PASS (incl. 5 new acceptance tests)
 
-**Stop rule:** Final authorised Chapter 1 closure cycle complete; no R13.2 batch.
+**STOP:** No R13.2 authorised.
