@@ -1,13 +1,15 @@
-# R13.1 status (correction patch)
+# R13.1 release lock status
 
-**Classification: B** (scientific proof closure on the three named defects: **closed**; Chu PDF binary + full figure artwork: **open**)
+**Branch:** `chapter1/r13.1-final-closure`  
+**HEAD:** `4537f2e` (baseline `a5927a2`, correction `d18d6e4` preserved)  
+**Classification: B** — proof-level defects closed; Chu TR-064 binary + full figure artwork remain open.
 
-**Branch:** chapter1/r13.1-final-closure  
-**Baseline preserved:** 5927a2  
-**Pages:** 61  
-**TeX SHA-256:** 59E746568FC30E549DB9E94A53240857EAB10429CD50D115791ED07DEA9AF719  
-**PDF SHA-256:** C1D5572DB82D850092652B8F3FE296515C877D268CE0A279CC0C52E277DE33FF  
-**Build:** PASS  
-**Patch tests:** 11/11 ch01_*.py PASS (incl. 5 new acceptance tests)
+| Artifact | SHA-256 |
+|----------|---------|
+| TeX | `947A954D2FD659392EDA26E6AE89EA14A125581E5828B230C38D273F79E5B3DB` |
+| PDF (author-review = main-ch01-only) | `CA5F1972D4C9832DF000D5B41B198494303D03D70FF48310F050694DB71E35B1` |
 
-**STOP:** No R13.2 authorised.
+**Pages:** 61 | **Bytes:** 1,266,175  
+**Build:** PASS | **Patch tests:** PASS (VSW, Chu Q, regression suite)
+
+**STOP** — hand to author for review.

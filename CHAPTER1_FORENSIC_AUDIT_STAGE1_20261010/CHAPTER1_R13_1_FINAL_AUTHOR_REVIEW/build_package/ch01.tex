@@ -2336,7 +2336,7 @@ The prime denotes $d/dp$; the factor $p$ in the derivative is essential---$\jj h
 \label{eq:ch1.chu-Qn-def}
 Q_1=\frac{2\omega W_{\mathrm{st,1}}}{P_{\mathrm{rad,1}}}.
 \end{equation}
-Chu's antenna-level $Q$ in \S2.5--2.6 applies interior-sphere idealizations and sums simplified-mode circuits; it is not $Q_1$, not $P_{\mathrm{reac}}(r)$, and not $Q_{\mathrm{vol}}(V_{\mathrm{sh}})$ of Eq.~\eqref{eq:ch1.chu-q-adopted} \cite{chu1948,chu1948tr064,mcclean1996}. McLean \cite{mcclean1996} re-derives the ideal $TM_{01}$ (electric-dipole) radiation $Q$ from field energy and radiated power (his Eqs.~(17), (19)--(20)) and verifies the same result from the exact equivalent ladder (Eqs.~(21)--(23)); peak-phasor and RMS conventions change energy and power by common factors but leave the ratio $Q$ unchanged \cite{mcclean1996}. TR-064 was primary-source text--verified via MIT DSpace; binary PDF authentication remains incomplete in this workspace \cite{chu1948tr064}.
+Chu's antenna-level $Q$ in \S2.5--2.6 applies interior-sphere idealizations and sums simplified-mode circuits; it is not $Q_1$, not $P_{\mathrm{reac}}(r)$, and not $Q_{\mathrm{vol}}(V_{\mathrm{sh}})$ of Eq.~\eqref{eq:ch1.chu-q-adopted} \cite{chu1948,chu1948tr064,mcclean1996}. McLean \cite{mcclean1996} re-derives the ideal $TM_{01}$ (electric-dipole) radiation $Q$ from field energy and radiated power (his Eqs.~(17), (19)--(20)) and verifies the same result from the exact equivalent ladder (Eqs.~(21)--(23)); peak-phasor and RMS conventions change energy and power by common factors but leave the ratio $Q$ unchanged \cite{mcclean1996,chu1948tr064}.
 
 Eq.~\eqref{eq:ch1.chu-q-lower-bound} records the \emph{exact} radiation $Q$ of the ideal $TM_{01}$ spherical mode in McLean's field-based calculation and in Chu's Fig.~3 ladder under the same outgoing normalization; McLean contrasts this closed form with older approximate formulas that differ at finite $ka$ \cite{mcclean1996,chu1948}. It is the minimum-$Q$ benchmark for the stated linearly polarised omnidirectional-sphere class under Chu's \S2.5 interior idealizations, not a universal identity for arbitrary antennas and not $Q_{\mathrm{vol}}(V_{\mathrm{sh}})$ \cite{chu1948,harrington2001,mcclean1996}. At arbitrary $ka$ in that ideal $TM_{01}$ model,
 \begin{equation}
@@ -2345,22 +2345,10 @@ Q_{\mathrm{LB}}=\frac{1}{(ka)^3}+\frac{1}{ka}.
 \end{equation}
 Local $r^{-3},r^{-2},r^{-1}$ weighting changes with radius; $P_{\mathrm{rad}}$ and nested-sphere $\boldsymbol{\Phi}_{J,\mathrm{out}}$ do not \cite{poynting1884,stratton1941}. Chapter~\ref{ch:02} develops angular-spectrum mappings for bounded sources \cite{harrington2001}.
 
-% R10 BATCH 8 — problems source verified: build_package/ch01-problems.tex (R9 archive ch01-problems-final.tex; see R10_SOURCE_TO_PDF_RECONCILIATION.md)
 \section{Summary}
 \label{sec:ch01.7}
 
 This chapter has kept angular questions tied to a completed Maxwell field. Impressed sources, constitutive laws, interface data, and outgoing selection fix $(\E,\H)$; on that pair the balances are complex Poynting power, symmetric Maxwell traction for force, and stress-moment flux $\boldsymbol{\Phi}_{J,\mathrm{out}}(V)=-\boldsymbol{\mathcal{T}}_J(V)$ on vacuum control volumes \cite{maxwell1873,poynting1884,beth1936,stratton1941}. Route~A torque uses $\mathbf{J}_{\mathrm{em,A}}$ on $V_{\mathrm{A}}$; Route~B torque and storage use the source-free shell $\mathcal{V}_{\mathrm{vac}}$ and $\mathbf{J}_{\mathrm{em,vac}}$ only \cite{harrington2001}. In applications, three ideas must remain separate: how the field is \emph{organized} in angle (phase, polarization, modal labels); how much angular momentum is \emph{associated} with the field in a volume or chart; and how much is actually \emph{transported} outward through a physical interface \cite{allen1992,stratton1941}.
 
 The chapter's constructive results are the closed-surface observables, the reactive-versus-radiative shell integrals for a Hertzian dipole, and the scoped modal and helicity scales in Subsection~\ref{sec:ch01.6.1} \cite{stratton1941,harrington2001,chu1948}. Subsection~\ref{sec:ch01.1.3} derives a difference-field energy balance that forces a vanishing far-field pattern and tangential null data on a passive scalar sheet, then continues---via outgoing electric and magnetic vector spherical waves and a Rellich-type unique-continuation hypothesis for source-free Maxwell fields---to annihilate the homogeneous difference field in the connected vacuum exterior under the stated scalar passive impedance class; existence and broader impedance theorems remain cited, not reproduced \cite{sommerfeld1949,harrington2001}. Colton--Kress--Hsiao supplies existence--uniqueness theory for broader impedance classes whose hypotheses are not matched line by line here \cite{colton1981impedance}. Subsection~\ref{sec:ch01.6.4} states distributional Maxwell closure for the ideal electric dipole with the isotropic Hessian contact term and reconciles the $r>0$ Hertzian formulas with Yaghjian's source-region theory \cite{yaghjian1980dyadic,yaghjian1982}. Chu's original stored-energy partition, Jackson's shell-content formulas under this phasor branch, and a general Hansen modal transport law remain bounded explicitly and passed to Chapter~\ref{ch:02} \cite{jackson1999,chu1948,tai1994}. The following volume develops angular-spectrum and dyadic-Green operators on the same outgoing branch, so bounded sources can be analysed without conflating open-aperture modal accounts with closed-sphere stress theorems \cite{harrington2001}.
-
-\phantomsection\label{sec:ch01.7.1}
-\phantomsection\label{eq:ch1.continuity-admissibility}%
-\phantomsection\label{eq:ch1.continuity-charge-continuous}%
-\phantomsection\label{eq:ch1.master-admissibility-chain}%
-\phantomsection\label{eq:ch1.master-charge-continuous-chain}%
-\phantomsection\label{eq:ch1.report-class-lock}%
-\phantomsection\label{sec:ch01.7.2}
-\phantomsection\label{sec:ch01.7.3}
-\phantomsection\label{eq:ch1.bridge-compatibility-criteria}%
-\phantomsection\label{eq:ch1.compatibility-criteria}%
 

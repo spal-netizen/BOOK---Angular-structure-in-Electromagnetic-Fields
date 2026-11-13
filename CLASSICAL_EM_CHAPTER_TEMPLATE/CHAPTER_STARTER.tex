@@ -1,0 +1,46 @@
+% Volume I chapter skeleton — typography aligned with Chapter 1 standalone build
+% Copy to latex/chNN.tex when drafting; do not paste Chapter 1 body text.
+\chapter{Chapter Title}
+\label{ch:NN}
+
+% Optional: \input{chNN-tikz-styles} when figures reuse ch01-tikz-styles macros
+
+\section{Introduction and Scope}
+\label{sec:chNN.0}
+
+% Section intro framing (Volume I contract): scope, prerequisites from prior chapters, conventions.
+
+\subsection{Scope and role of this chapter}
+\label{sec:chNN.0.1}
+
+% [HOME] material per TOC.
+
+\section{Principal technical section}
+\label{sec:chNN.1}
+
+\subsection{First HOME subsection}
+\label{sec:chNN.1.1}
+
+% Define all symbols at first equation appearance.
+\begin{equation}
+\label{eq:chNN.example}
+% ...
+\end{equation}
+
+% In-body figure interpretation + caption.
+\begin{figure}[t]
+\centering
+% \begin{tikzpicture} ... \end{tikzpicture}
+\caption{Schematic consistent with Eq.~\eqref{eq:chNN.example}.}
+\label{fig:chNN.example}
+\end{figure}
+
+\section{Examples and problems preparation}
+\label{sec:chNN.examples}
+
+\section{Summary and forward map}
+\label{sec:chNN.summary}
+
+% Sole [DEFER] block for this chapter (see TOC): \subsection with pointers to later chapters only.
+
+% Problems: \input{chNN-problems} or \include within build wrapper.

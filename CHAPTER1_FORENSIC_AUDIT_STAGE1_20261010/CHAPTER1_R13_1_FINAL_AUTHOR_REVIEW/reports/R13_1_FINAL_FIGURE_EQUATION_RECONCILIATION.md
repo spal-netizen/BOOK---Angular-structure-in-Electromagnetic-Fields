@@ -2,8 +2,8 @@
 
 ## PDF vs TeX figures
 
-- **29** `\begin{figure}` in `CHAPTER1_R13_0_WORKING_CANDIDATE.tex` with **29** `fig:ch1.*` labels.
-- **PDF lists Fig. 1.1–1.30 (30 captions):** the 30th is the chapter's **Problems** section float or a downstream numbered caption in the standalone build TOC/front matter count; no extra unlabeled TikZ float in `ch01.tex`. `ch01-handdrawn-figures.tex` defines **macro-only** figures (emit figure only if ink asset exists).
+- **30** numbered figures in the standalone PDF (Fig. 1.1–1.30): **29** `\begin{figure}` environments in `ch01.tex` plus **1** in `ch01-foundation-seeds-passK-bridges.tex` (`fig:ch1.green-function-seed`, Fig. 1.7).
+- `ch01-handdrawn-figures.tex` remains **macro-only** (no extra float unless ink asset exists).
 - **Artwork audit:** caption/prose for critical figures; no batch TikZ redraw.
 
 ## Equations
@@ -13,7 +13,7 @@
 
 ## Problems
 
-- Problem 2(c): lossless Eq. (1.38) vs lossy Eq. (1.40) cross-reference fixed.
+- **Problem 3(c)** (printed PDF): lossless Eq. (1.38) vs lossy Eq. (1.40) cross-reference; earlier report typo “Problem 2(c)” corrected.
 
 ## PDF artifact lock
 
