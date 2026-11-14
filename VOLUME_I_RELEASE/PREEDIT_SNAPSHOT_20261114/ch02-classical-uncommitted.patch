@@ -1,0 +1,1197 @@
+﻿diff --git a/latex/ch02-classical/part01-source-and-harmonic-maxwell.tex b/latex/ch02-classical/part01-source-and-harmonic-maxwell.tex
+index 3fbd27d..33fd4f3 100644
+--- a/latex/ch02-classical/part01-source-and-harmonic-maxwell.tex
++++ b/latex/ch02-classical/part01-source-and-harmonic-maxwell.tex
+@@ -10,7 +10,7 @@ A compact-range engineer already separates these ideas in practice. The feed syn
+ \subsection{Harmonic conventions and admissible sources}
+ \label{sec:ch02.1.1}
+ 
+-We adopt the Volume~I harmonic convention locked in Chapter~\ref{ch:01} (MICROR1): physical fields vary as $\Re\{\mathbf{F}(\mathbf{r})\,\eim\}$ with angular frequency $\omega>0$ (rad/s), so $\partial_t\to+\jj\omega$ on complex phasors \cite{stratton1941}. Spatial phasors $\E(\mathbf{r})$ and $\H(\mathbf{r})$ (V/m and A/m) therefore represent the complex amplitudes in
++Harmonic fields in this chapter are represented as $\Re\{\mathbf{F}(\mathbf{r})\,\eim\}$ with angular frequency $\omega>0$ (rad/s) and $\partial_t\to-\jj\omega$ on complex phasors, using the Maxwell curl system of Eq.~\eqref{eq:ch1.maxwell-local} and charge continuity Eq.~\eqref{eq:ch1.charge-continuity-harmonic} \cite{stratton1941}. Spatial phasors $\E(\mathbf{r})$ and $\H(\mathbf{r})$ (V/m and A/m) are the amplitudes in
+ \begin{equation}
+ \label{eq:ch2.real-time-fields}
+ \E(\mathbf{r},t)=\Re\big\{\E(\mathbf{r})\,\eim\big\},
+@@ -27,9 +27,16 @@ k_0=\omega\sqrt{\mu_0\varepsilon_0}\ \ (\mathrm{rad/m}),
+ An impressed current density $\Jimp(\mathbf{r})$ (A/m$^2$) and impressed charge density $\rho(\mathbf{r})$ (C/m$^3$) drive the field. Charge conservation in harmonic form follows from taking the divergence of Amp\`ere's law in Eq.~\eqref{eq:ch1.maxwell-local}:
+ \begin{equation}
+ \label{eq:ch2.charge-continuity-derived}
+-\divg\Jimp=+\jj\omega\rho,
++\divg\Jimp-\jj\omega\rho=0,
+ \end{equation}
+-which is Eq.~\eqref{eq:ch1.charge-continuity-harmonic} with the $+\jj\omega$ time rule \cite{maxwell1873}. A \emph{physically realizable} impressed source on $\Omega$ must satisfy Eq.~\eqref{eq:ch2.charge-continuity-derived} together with the boundary class declared on $\Gamma$ (Section~\ref{sec:ch01.1.2}). Chapter~\ref{ch:01} packaged this requirement in the admissibility map of Eq.~\eqref{eq:ch1.continuity-admissibility}; here we denote by $\mathcal{J}_\Omega$ the linear space of square-integrable impressed currents on $\Omega$ that satisfy that closure.
++which is Eq.~\eqref{eq:ch1.charge-continuity-harmonic} under the $\eim$ convention \cite{maxwell1873}. A \emph{physically realizable} impressed source on $\Omega$ must satisfy Eq.~\eqref{eq:ch2.charge-continuity-derived} together with the boundary class declared on $\Gamma$ (Section~\ref{sec:ch01.1.2}). Chapter~\ref{ch:01} packaged this requirement in the admissibility map of Eq.~\eqref{eq:ch1.continuity-admissibility}; here we denote by $\mathcal{J}_\Omega$ the linear space of square-integrable impressed currents on $\Omega$ that satisfy that closure.
++
++\subsection{Maxwell's equations before operator notation}
++\label{sec:ch02.1.1b}
++
++On a piecewise homogeneous domain with phasors defined under $\eim$, the vacuum-form Maxwell system is Eq.~\eqref{eq:ch1.maxwell-local}: Faraday's law $\curl\E=-\jj\omega\mu_0\H$ states that a time-varying magnetic flux drives a circulating electric field; Amp\`ere's law $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$ states that impressed current and displacement current sustain magnetic circulation; Gauss's laws tie $\E$ and $\H$ to $\rho$ and enforce magnetic flux solenoidality \cite{maxwell1873,stratton1941}. Every subsequent operator is a compact restatement of these local relations together with boundary data on $\Gamma$ and, for open problems, outgoing selection at infinity.
++
++Taking $\curl$ of Faraday's law and substituting Amp\`ere's law eliminates $\H$ and yields Eq.~\eqref{eq:ch2.vector-wave-E} in source regions. The right-hand side $-\jj\omega\mu_0\Jimp$ has dimensions V/m$^3$ and represents the impressed current as a source of transverse wave content. In source-free regions the homogeneous equation supports both incoming and outgoing spherical solutions; localized sources plus outgoing selection pick the physical branch (Section~\ref{sec:ch02.4.2}).
+ 
+ \subsection{The Maxwell solution map}
+ \label{sec:ch02.1.2}
+@@ -113,11 +120,11 @@ Each symbol is defined at first appearance: $\mathbf{r}$ is the observation poin
+ \subsection{Causality and the retarded branch}
+ \label{sec:ch02.2.2}
+ 
+-A frequency-domain phasor is physically meaningful only if it arises from causal time-domain evolution. For the retarded Green function, the field at $(\mathbf{r},t)$ depends on sources only at retarded times $t'<t$. The causal dyadic representation developed in Section~\ref{sec:ch02.4.1} implies that harmonic symbols used in $\mathcal{S}_\omega$ must be continued to the \emph{outgoing} Riemann sheet: spatial factors $\exp(-\jj k_0 r)$ on spheres of large radius, and propagating plane waves with $\Re\{k_z\}>0$ in the outward direction \cite{stratton1941,jackson1999}. Incoming partners satisfy the same homogeneous equation but violate the retarded link to a localized source.
++A frequency-domain phasor is physically meaningful only if it arises from causal time-domain evolution (Subsections~\ref{sec:ch02.2.3}--\ref{sec:ch02.2.5}). For the retarded Green function, the field at $(\mathbf{r},t)$ depends on sources only at retarded times $t'<t$. The causal dyadic representation developed in Section~\ref{sec:ch02.4.1} implies that harmonic symbols used in $\mathcal{S}_\omega$ must be continued to the \emph{outgoing} Riemann sheet: spatial factors $\exp(-\jj k_0 r)$ on spheres of large radius, and propagating plane waves with the outgoing root of Eq.~\eqref{eq:ch2.kz-dispersion} \cite{stratton1941,jackson1999}. Incoming partners satisfy the same homogeneous equation but violate the retarded link to a localized source.
+ 
+ \section{Mathematical Setting for Fields and Sources}
+ \label{sec:ch02.3}
+ 
+ Electromagnetic energy and power involve integrals of quadratic field expressions. A Maxwell field with finite energy on a bounded region cannot be an arbitrary vector function: curls must be square-integrable in the sense required by Eqs.~\eqref{eq:ch2.vector-wave-E}--\eqref{eq:ch1.maxwell-local}. The standard Sobolev space $\HCurl(\Omega)=\{\mathbf{u}\in L^2(\Omega)^3:\curl\mathbf{u}\in L^2(\Omega)^3\}$ supplies that regularity \cite{stratton1941}. Tangential traces $\hat{\mathbf{n}}\times\E|_\Gamma$ live in fractional trace spaces on Lipschitz boundaries; impedance and outgoing conditions restrict which trace pairs belong to the physical problem (Section~\ref{sec:ch01.1.2}).
+ 
+-For the arguments of this chapter, three spaces suffice conceptually: $\mathcal{J}_\Omega$ (admissible sources), $\mathcal{F}_\Omega$ (Maxwell-closed pairs), and $\mathcal{F}_{\mathrm{rad}}$ (outgoing radiative pairs). When compactness of $\mathcal{R}_\omega$ on bounded observation domains is invoked in Section~\ref{sec:ch02.7}, it is the mathematical expression of the physical fact that a finite radiator cannot excite infinitely many independent far-zone degrees of freedom \cite{chu1948,harrington2001}. We do not develop abstract functional analysis for its own sake; each space is tied to an identifiable electromagnetic object.
++For the arguments of this chapter, three spaces suffice conceptually: $\mathcal{J}_\Omega$ (admissible sources), $\mathcal{F}_\Omega$ (Maxwell-closed pairs), and $\mathcal{F}_{\mathrm{rad}}$ (outgoing radiative pairs). Subsections~\ref{sec:ch02.3.1}--\ref{sec:ch02.3.2} develop traces, adjoints, and Fredholm structure where radiation inversion and finite observation require them. When compactness of $\mathcal{R}_\omega$ on bounded observation domains is invoked in Section~\ref{sec:ch02.7}, it is the mathematical expression of the physical fact that a finite radiator cannot excite infinitely many independent far-zone degrees of freedom \cite{chu1948,harrington2001}. Each space is tied to an identifiable electromagnetic object.
+diff --git a/latex/ch02-classical/part02-green-functions-and-outgoing-waves.tex b/latex/ch02-classical/part02-green-functions-and-outgoing-waves.tex
+index 9fa42a8..5641a25 100644
+--- a/latex/ch02-classical/part02-green-functions-and-outgoing-waves.tex
++++ b/latex/ch02-classical/part02-green-functions-and-outgoing-waves.tex
+@@ -3,6 +3,28 @@
+ \section{Green Functions and the Retarded Solution}
+ \label{sec:ch02.4}
+ 
++\subsection{Scalar Green function from the Helmholtz equation}
++\label{sec:ch02.4.0}
++
++In a homogeneous vacuum region, each Cartesian component of the vector potential in Lorenz gauge satisfies the scalar Helmholtz equation with source $-\mu_0 J_i$, where $J_i$ is the $i$th component of $\Jimp$ (A/m$^2$) \cite{stratton1941,jackson1999}. The same template governs acoustic monopoles and serves as the building block for vector radiation. For a scalar source density $q(\mathbf{r}')$ (units depend on the physical quantity modeled), the inhomogeneous equation reads
++\begin{equation}
++\label{eq:ch2.scalar-helmholtz-green-pde}
++\big(\nabla^{2}+k_0^{2}\big)\,\phi(\mathbf{r})=-q(\mathbf{r}),
++\end{equation}
++where $\phi(\mathbf{r})$ is the scalar response at observation point $\mathbf{r}$ (m), $k_0=\omega\sqrt{\mu_0\varepsilon_0}$ is the vacuum wavenumber (rad/m), and $\nabla^2$ is the Laplacian in $\mathbf{r}$. The Green function $G(\mathbf{r},\mathbf{r}')$ is defined as the response to a unit point source at $\mathbf{r}'$:
++\begin{equation}
++\label{eq:ch2.scalar-green-def}
++\big(\nabla^{2}+k_0^{2}\big)\,G(\mathbf{r},\mathbf{r}')=-\delta(\mathbf{r}-\mathbf{r}'),
++\end{equation}
++with $\delta$ the three-dimensional Dirac distribution. Superposition then gives
++\begin{equation}
++\label{eq:ch2.scalar-green-convolution}
++\phi(\mathbf{r})=\int_{\Omega_s} G(\mathbf{r},\mathbf{r}')\,q(\mathbf{r}')\,d^{3}r',
++\end{equation}
++where $\Omega_s$ is the source support and $d^3r'$ is the volume element at the source point $\mathbf{r}'$. Physically, Eq.~\eqref{eq:ch2.scalar-green-convolution} accumulates spherical waves launched from every source element; $G$ tells how strongly a source at $\mathbf{r}'$ influences $\mathbf{r}$.
++
++For an unbounded exterior with outgoing selection at infinity, the unique spherical solution of Eq.~\eqref{eq:ch2.scalar-green-def} for $\mathbf{r}\neq\mathbf{r}'$ is Eq.~\eqref{eq:ch2.scalar-green-free-space}. The amplitude $1/(4\pi R)$ with $R=|\mathbf{r}-\mathbf{r}'|$ is geometric spreading in three dimensions; the phase $e^{-\jj k_0 R}$ is retarded propagation under the $+\jj\omega t$ convention adopted in this chapter. The homogeneous Helmholtz equation also admits the incoming partner $\exp(+\jj k_0 R)/R$; localized sources plus causality exclude that branch (Section~\ref{sec:ch02.4.2}).
++
+ \subsection{Why a dyadic Green function is required}
+ \label{sec:ch02.4.1}
+ 
+@@ -19,7 +41,7 @@ The dyadic satisfies the vector wave equation with a unit-strength dipole source
+ \curl\curl\boldsymbol{\Gamma}(\mathbf{r},\mathbf{r}')-k_0^2\boldsymbol{\Gamma}(\mathbf{r},\mathbf{r}')=
+ \mathbf{I}\,\delta(\mathbf{r}-\mathbf{r}'),
+ \end{equation}
+-where $\mathbf{I}$ is the $3\times3$ identity dyad. The singularity at $\mathbf{r}=\mathbf{r}'$ reflects the idealization of a point dipole; integrated against smooth $\Jimp$, the self-term requires regularization in numerical methods \cite{harrington2001}. The scalar outgoing kernel in vacuum satisfies
++where $\mathbf{I}$ is the $3\times3$ identity dyad. The singularity at $\mathbf{r}=\mathbf{r}'$ is treated in Subsection~\ref{sec:ch02.4.3}; the operator derivation appears in Subsection~\ref{sec:ch02.4.1b}. The scalar outgoing kernel in vacuum satisfies
+ \begin{equation}
+ \label{eq:ch2.scalar-green-free-space}
+ G_0(\mathbf{r},\mathbf{r}')=\frac{e^{-\jj k_0 R}}{4\pi R},
+@@ -34,7 +56,16 @@ In Lorenz gauge, the vector potential $\mathbf{A}$ (T$\cdot$m) driven by $\Jimp$
+ \E(\mathbf{r})=+\jj\omega\mu_0\,\mathbf{A}(\mathbf{r})
+ +\frac{1}{+\jj\omega\varepsilon_0}\,\grad\,\divg\mathbf{A}(\mathbf{r}),
+ \end{equation}
+-after which $\H=(\curl\E)/(-\jj\omega\mu_0)$ from Faraday's law in Eq.~\eqref{eq:ch1.maxwell-local} \cite{stratton1941,harrington2001}. For impressed-current excitation, the electric dyadic $\overline{\mathbf{G}}_{E}$ is often more direct than $\mathbf{A}$ because it maps $\Jimp$ to $\E$ in one convolution \cite{harrington2001}. In free space with outgoing selection, $\overline{\mathbf{G}}_{E}$ is assembled from $G_0$ and its gradients; the far-zone limit yields transverse radiation proportional to $e^{-\jj k_0 r}/r$ \cite{stratton1941,jackson1999}.
++after which $\H=(\curl\E)/(-\jj\omega\mu_0)$ from Faraday's law in Eq.~\eqref{eq:ch1.maxwell-local} \cite{stratton1941,harrington2001}. For impressed-current excitation, the electric dyadic $\overline{\mathbf{G}}_{E}$ is often more direct than $\mathbf{A}$ because it maps $\Jimp$ to $\E$ in one convolution \cite{harrington2001}. In free space with outgoing selection, the electric dyadic may be written in the compact form \cite{stratton1941,jackson1999}
++\begin{equation}
++\label{eq:ch2.dyadic-free-space}
++\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')
++=\Big(\mathbf{I}+\frac{1}{k_0^2}\grad\grad-\frac{\jj}{k_0}\hat{\mathbf{R}}\times\big\Big)\,
++\frac{e^{-\jj k_0 R}}{4\pi R},
++\qquad
++\hat{\mathbf{R}}=\frac{\mathbf{r}-\mathbf{r}'}{R},
++\end{equation}
++with $R=|\mathbf{r}-\mathbf{r}'|>0$. Equation~\eqref{eq:ch2.dyadic-free-space} satisfies Eq.~\eqref{eq:ch2.dyadic-green-pde} for $\mathbf{r}\neq\mathbf{r}'$ and carries the outgoing phase required by Section~\ref{sec:ch02.4.2}. The $\grad\grad$ term generates longitudinal response tied to charge accumulation; the $\hat{\mathbf{R}}\times$ term enforces transverse radiation in the far zone.
+ 
+ In the time domain, causality requires $\boldsymbol{\mathcal{G}}(\mathbf{r},\mathbf{r}',t-t')=\mathbf{0}$ for $t-t'<0$. The harmonic phasor $\boldsymbol{\Gamma}$ is the Fourier transform of that retarded impulse under the $+\jj\omega$ convention \cite{stratton1941}.
+ 
+@@ -56,7 +87,7 @@ In the time domain, causality requires $\boldsymbol{\mathcal{G}}(\mathbf{r},\mat
+ \subsection{The outgoing radiation condition}
+ \label{sec:ch02.4.2}
+ 
+-In an unbounded homogeneous exterior, the homogeneous Helmholtz equation admits both $\exp(-\jj k_0 r)/r$ and $\exp(+\jj k_0 r)/r$ spherical solutions. A localized source launched from finite support must select the branch whose phase fronts move outward with increasing $r$ in the time domain---equivalently, the factor $\exp(-\jj k_0 r)$ in the $+\jj\omega$ convention \cite{stratton1941}. Sommerfeld's radiation condition makes this precise: for scalar $\psi$,
++In an unbounded homogeneous exterior, the homogeneous Helmholtz equation admits both $\exp(-\jj k_0 r)/r$ and $\exp(+\jj k_0 r)/r$ spherical solutions. A localized source launched from finite support must select the branch whose phase fronts move outward with increasing $r$ in the time domain---equivalently, the factor $\exp(-\jj k_0 r)$ with harmonic time dependence $\eim$ \cite{stratton1941}. Sommerfeld's radiation condition makes this precise: for scalar $\psi$,
+ \begin{equation}
+ \label{eq:ch2.sommerfeld-scalar}
+ \lim_{r\to\infty} r\left(\frac{\partial}{\partial r}+\jj k_0\right)\psi(\mathbf{r})=0,
+@@ -66,39 +97,3 @@ with $r=|\mathbf{r}|$. For vector fields, the transverse radiative part of $\E$
+ The operator $\mathcal{O}_{\mathrm{out}}$ enforces this selection on completed field pairs: it annihilates incoming propagating content while leaving outgoing propagating content unchanged on the physical sheet. Composed with $\Pi_{\mathrm{prop}}$, which removes evanescent and non-propagating spectral parts from far-zone radiation claims, it defines $\Pi_{\mathrm{rad}}$ through Eq.~\eqref{eq:ch2.Pirad-composition}. On finite computational domains, absorbing boundaries approximate $\mathcal{O}_{\mathrm{out}}$; spurious reflections mean the numerical map is only an approximation to true outgoing radiation \cite{hansen1988}.
+ 
+ Uniqueness: for fixed admissible $\Jimp$ and outgoing exterior condition, the Maxwell solution $\mathcal{S}_\omega[\Jimp]$ is unique \cite{stratton1941}. Radiative extraction then yields a unique $\mathcal{R}_\omega[\Jimp]$ in $\mathcal{F}_{\mathrm{rad}}$.
+-
+-\section{Near Fields, Far Fields, and Radiated Power}
+-\label{sec:ch02.5}
+-
+-\subsection{Distance regimes and $1/r$ hierarchy}
+-\label{sec:ch02.5.1}
+-
+-For compact $\operatorname{supp}\Jimp\subset\Omega_s$, the complete field $\mathcal{S}_\omega[\Jimp]$ contains quasi-static and induction terms decaying as $1/r^3$ and $1/r^2$ as well as radiative terms decaying as $1/r$ \cite{stratton1941,jackson1999}. The reactive shell---roughly within a wavelength of the source---stores energy exchanged with the source and terminations; its Poynting flux oscillates between source and field and need not integrate to net outward power on a finite sphere. The radiative component, selected by $\Pi_{\mathrm{rad}}$, carries transverse fields whose time-averaged Poynting vector is radial and $1/r^2$ in magnitude, so the power through a sphere of radius $R$,
+-\begin{equation}
+-\label{eq:ch2.radiated-power}
+-P_{\mathrm{rad}}=\Re\oint_{S_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS,
+-\qquad
+-\mathbf{S}=\tfrac12\E\times\H^*,
+-\end{equation}
+-approaches a constant as $R\to\infty$ for outgoing radiative fields \cite{poynting1884}. Here $\hat{\mathbf{r}}=\mathbf{r}/r$ is the outward unit normal on sphere $S_R$, $dS$ is the area element (m$^2$), and $\Re\{\cdot\}$ extracts the time-averaged flux under the $+\jj\omega$ convention (Section~\ref{sec:ch01.1.4}).
+-
+-Physically, $1/r$ amplitude implies $1/r^2$ intensity; integrating over a sphere whose area grows as $4\pi r^2$ leaves finite power---the geometric reason radiation is measured on large spheres while near fields can be enormous yet export little \cite{stratton1941}. Pattern measurements report angular variation of the $1/r$ transverse field; mistaking reactive $1/r^2$ or $1/r^3$ structure for pattern content is a common compact-range error \cite{hansen1988}.
+-
+-\subsection{Far-zone approximation}
+-\label{sec:ch02.5.2}
+-
+-When $r=|\mathbf{r}|$ is large compared with the source extent and $k_0 r\gg1$, the distance $R=|\mathbf{r}-\mathbf{r}'|$ in the Green integral satisfies $R\simeq r-\hat{\mathbf{r}}\cdot\mathbf{r}'$ in phase and $R\simeq r$ in amplitude to leading order \cite{stratton1941,jackson1999}. The observation direction $\hat{\mathbf{r}}$ then enters the exponent as a directional phase factor, and the far field becomes a superposition of source moments weighted by $e^{-\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}/r$. That structure is the physical origin of the \emph{angular} description developed in Section~\ref{sec:ch02.10}: the far-zone field is, in essence, a directional transform of the source distribution modulated by outgoing propagation.
+-
+-\begin{figure}[t]
+-\centering
+-\ChOneFigBlock{%
+-\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+- \node[ch1box] (src) {Source\\region};
+- \node[ch1box, right=22mm of src] (near) {Reactive\\shell};
+- \node[ch1box, right=22mm of near] (far) {Far zone\\$kr\gg1$};
+- \draw[ch1flow] (src) -- (near) -- (far);
+-\end{tikzpicture}%
+-}
+-\caption{Distance regimes for a compact source: reactive and induction fields dominate the near shell; the radiative $1/r$ transverse field defines the far zone where pattern measurements are taken.}
+-\label{fig:ch2.distance-regimes}
+-\end{figure}
+diff --git a/latex/ch02-classical/part03-near-far-radiation-operators.tex b/latex/ch02-classical/part03-near-far-radiation-operators.tex
+index 80da736..4a2c5b0 100644
+--- a/latex/ch02-classical/part03-near-far-radiation-operators.tex
++++ b/latex/ch02-classical/part03-near-far-radiation-operators.tex
+@@ -3,23 +3,56 @@
+ \section{Radiation Operators and Observable Fields}
+ \label{sec:ch02.6}
+ 
+-The composition $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is the central object of this chapter. Physically, $\mathcal{S}_\omega$ answers: ``If I drive this admissible current, what Maxwell field exists?'' The map $\Pi_{\mathrm{rad}}$ answers: ``Which part of that field is outgoing radiation in the Sommerfeld sense?'' Their composition answers: ``What radiative field does the source export to infinity?''
++\subsection{Outgoing radiative extraction}
++\label{sec:ch02.6.1}
+ 
+-Linearity on fixed boundary data implies
++A completed Maxwell pair $(\E,\H)=\mathcal{S}_\omega[\Jimp]$ generally contains reactive storage, evanescent structure tied to the near zone, and---when the exterior is open---propagating waves that may be incoming or outgoing. Far-zone measurements respond to a narrower class: outgoing transverse fields whose leading spatial dependence is $e^{-\jj k_0 r}/r$. The map $\Pi_{\mathrm{prop}}$ retains propagating spectral content on a homogeneous background; the map $\mathcal{O}_{\mathrm{out}}$ selects the outgoing branch of that content (Section~\ref{sec:ch02.4.2}). Their composition
+ \begin{equation}
+-\label{eq:ch2.R-linearity}
+-\mathcal{R}_\omega[a_1\Jimp^{(1)}+a_2\Jimp^{(2)}]
+-=a_1\mathcal{R}_\omega[\Jimp^{(1)}]+a_2\mathcal{R}_\omega[\Jimp^{(2)}],
++\label{eq:ch2.Pirad-composition-repeat}
++\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}
+ \end{equation}
+-for $a_1,a_2\in\mathbb{C}$ and $\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega$. Superposition of radiative images is legitimate only after each constituent satisfies charge continuity and outgoing selection \cite{maxwell1873,harrington2001}.
+-
+-The range $\operatorname{ran}\mathcal{R}_\omega\subset\mathcal{F}_{\mathrm{rad}}$ is strictly smaller than $\operatorname{ran}\mathcal{S}_\omega$ whenever reactive storage is nontrivial: many distinct near-zone states share the same far-zone pattern. Pattern measurements probe $\operatorname{ran}\mathcal{R}_\omega$; recovering $\Jimp$ from pattern data alone is an inverse problem with null space (Section~\ref{sec:ch02.8}).
++is the \emph{outgoing radiative extraction map} acting on field pairs in $\mathcal{F}_\Omega$. It is not an orthogonal Hilbert projection on all of $\mathcal{F}_\Omega$ unless an inner product and closed subspace are specified; physically it implements the radiation condition on propagating components. On the radiative subspace $\mathcal{F}_{\mathrm{rad}}=\operatorname{ran}\Pi_{\mathrm{rad}}$, one has $\Pi_{\mathrm{rad}}[\mathbf{u}]=\mathbf{u}$ and $\Pi_{\mathrm{rad}}^2=\Pi_{\mathrm{rad}}$ when both sides are understood on $\mathcal{F}_{\mathrm{rad}}$.
+ 
+-\section{Finite Radiators and Spectral Limitations}
+-\label{sec:ch02.7}
++The \emph{radiation operator} composes source excitation with that extraction:
++\begin{equation}
++\label{eq:ch2.Romega-composition-repeat}
++\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
++\qquad
++\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\big(\mathcal{S}_\omega[\Jimp]\big).
++\end{equation}
++Physically, $\mathcal{S}_\omega$ is the forward Maxwell calculation for a prescribed admissible source; $\mathcal{R}_\omega$ is the same calculation followed by retention of outgoing radiative export only.
+ 
+-A bounded source of characteristic dimension $a$ cannot radiate arbitrary angular structure at wavelength $\lambda_0=2\pi/k_0$. Chu’s limit and the method-of-moments viewpoint both express the same physical fact: electrical size $k_0 a$ constrains how rapidly phase and amplitude may vary on the radiation sphere before stored energy dominates \cite{chu1948,harrington2001}. Mathematically, when $\mathcal{R}_\omega$ is restricted to fields on a bounded observation surface and viewed as a compact operator on appropriate Hilbert spaces, its singular values decay---small singular values correspond to source directions that couple weakly to the radiative field \cite{stratton1941}.
++Linearity on fixed boundary data implies, for $a_1,a_2\in\mathbb{C}$ and $\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega$,
++\begin{equation}
++\label{eq:ch2.R-linearity}
++\mathcal{R}_\omega[a_1\Jimp^{(1)}+a_2\Jimp^{(2)}]
++=a_1\mathcal{R}_\omega[\Jimp^{(1)}]+a_2\mathcal{R}_\omega[\Jimp^{(2)}].
++\end{equation}
++The range $\operatorname{ran}\mathcal{R}_\omega$ is strictly smaller than $\operatorname{ran}\mathcal{S}_\omega$ whenever reactive storage is nontrivial: distinct near-zone states can share identical far-zone patterns (Section~\ref{sec:ch02.8}).
+ 
+-Consider independent source excitations $\Jimp_1,\Jimp_2,\ldots$ and their radiative images $\mathcal{R}_\omega[\Jimp_n]$. If two combinations produce nearly identical far fields, the corresponding singular value is small; if a combination produces no far field at all, it lies in $\ker\mathcal{R}_\omega$. \emph{Effective rank} refers to the number of singular values above a measurement noise threshold; it is not identical to mathematical rank \cite{harrington2001}. A circular aperture of radius $a$ illustrates rapid SV decay beyond $k_0 a$, explaining why superdirectivity attempts trade against bandwidth and stored energy \cite{chu1948}.
++\subsection[Measurement and the map \texorpdfstring{$\Qomega$}{Q\_omega}]{Measurement and the map $\Qomega$}
++\label{sec:ch02.6.2}
+ 
+-This chapter establishes that finite geometry restricts accessible angular content; Chapter~\ref{ch:04} develops realizability and synthesis constraints in greater depth.
++A far-zone instrument does not return the full field $\mathcal{R}_\omega[\Jimp]$. It returns a finite list of numbers---pattern samples, polarization ratios, or calibrated voltages---obtained through probes with finite aperture and finite angular sampling (Section~\ref{sec:ch01.5}). Let $\mathcal{O}_{\mathrm{far}}$ denote a linear functional extracting a declared far-zone scalar or vector quantity from $\mathcal{F}_{\mathrm{rad}}$, and let $\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}$ model the probe bank. The laboratory map
++\begin{equation}
++\label{eq:ch2.Qomega-repeat}
++\Qomega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega
++\end{equation}
++assigns to each admissible $\Jimp$ a measurement vector in $\mathbb{C}^{N}$. Rank limitations of $\mathcal{O}_{\mathrm{meas}}$ cap how many independent radiative degrees of freedom can be resolved regardless of Maxwell correctness \cite{harrington2001,hansen1988}.
++
++\begin{figure}[t]
++\centering
++\ChOneFigBlock{%
++\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
++ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
++ \node[ch1box, right=6mm of j] (s) {$\mathcal{S}_\omega$};
++ \node[ch1box, right=6mm of s] (p) {$\Pi_{\mathrm{rad}}$};
++ \node[ch1box, right=6mm of p] (q) {$\Qomega$};
++ \draw[ch1flow] (j) -- (s) -- (p) -- node[above,font=\scriptsize] {$\mathcal{O}_{\mathrm{far,meas}}$} (q);
++\end{tikzpicture}%
++}
++\caption{Forward chain: admissible source $\Jimp$ determines a Maxwell field, outgoing radiative extraction retains far-zone export, and the measurement map $\Qomega$ yields the finite data vector available to the laboratory.}
++\label{fig:ch2.forward-chain}
++\end{figure}
++
++Once $\mathcal{R}_\omega$ and $\Qomega$ are fixed, the next physical question is how plane-wave and angular content is organized on a reference surface (Section~\ref{sec:ch02.10}) and how finite source and aperture geometry restricts what can be launched and measured (Section~\ref{sec:ch02.7}).
+diff --git a/latex/ch02-classical/part04-spectral-null-reciprocity.tex b/latex/ch02-classical/part04-spectral-null-reciprocity.tex
+index 6cf902f..d57c6ee 100644
+--- a/latex/ch02-classical/part04-spectral-null-reciprocity.tex
++++ b/latex/ch02-classical/part04-spectral-null-reciprocity.tex
+@@ -1,36 +1,65 @@
+-% §2.8–2.9 — non-radiating sources, reciprocity
++% §2.8–2.9 — non-radiating sources, reciprocity, inverse problems
+ 
+ \section{Non-Radiating Sources and Null Spaces}
+ \label{sec:ch02.8}
+ 
+-Can a nonzero current distribution produce a nonzero Maxwell field while radiating no power to infinity? Yes. A loop carrying equal and opposite currents on closely spaced arms, or certain closed reactive configurations, can support substantial near-zone $\E$ and $\H$ while the leading outgoing transverse field vanishes \cite{harrington2001,devaney2004}. Operationally, ``non-radiating'' means: the far-zone pattern meters read zero after outgoing selection, not that the source is zero.
+-
+-Mathematically, such currents lie in the null space of the radiation operator:
++Two admissible sources $\Jimp_1$ and $\Jimp_2$ may differ throughout $\Omega_s$ yet produce identical far-zone radiative patterns after outgoing selection. The physical question is therefore not whether sources are unique, but whether radiation measurements determine sources uniquely. If $\mathcal{R}_\omega[\Jimp_1]=\mathcal{R}_\omega[\Jimp_2]$, linearity gives
++\begin{equation}
++\label{eq:ch2.difference-null}
++\mathcal{R}_\omega[\Jimp_1-\Jimp_2]=\mathbf{0}\ \ \text{in}\ \mathcal{F}_{\mathrm{rad}},
++\end{equation}
++so $\Jimp_1-\Jimp_2$ belongs to the \emph{radiation null space}
+ \begin{equation}
+-\label{eq:ch2.ker-Romega}
++\label{eq:ch2.ker-R-omega}
+ \ker\mathcal{R}_\omega=\{\Jimp\in\mathcal{J}_\Omega:\mathcal{R}_\omega[\Jimp]=\mathbf{0}\ \text{in}\ \mathcal{F}_{\mathrm{rad}}\}.
+ \end{equation}
+-If $\Jimp_1\neq\Jimp_2$ but $\mathcal{R}_\omega[\Jimp_1]=\mathcal{R}_\omega[\Jimp_2]$, then $\Jimp_1-\Jimp_2\in\ker\mathcal{R}_\omega$. Source reconstruction from far data therefore determines $\Jimp$ only up to this null space; distinct sources can be \emph{equivalent} for radiation \cite{stratton1941,devaney2004}. The observation map $\Qomega$ inherits a larger null space:
++Membership in $\ker\mathcal{R}_\omega$ does \emph{not} require $\Jimp=\mathbf{0}$ or $\mathcal{S}_\omega[\Jimp]=\mathbf{0}$. A non-radiating source may support substantial reactive $\E$ and $\H$ near $\Omega_s$ while exporting no leading outgoing transverse field \cite{harrington2001,devaney2004}. The statements ``zero source,'' ``zero total field,'' ``zero far field,'' ``zero radiated power,'' and ``non-radiating source'' are not equivalent: only the last is defined by $\mathcal{R}_\omega[\Jimp]=\mathbf{0}$ in $\mathcal{F}_{\mathrm{rad}}$.
++
++\subsection{Inverse radiation and observability}
++\label{sec:ch02.8.1}
++
++The forward problem $\Jimp\mapsto\mathcal{R}_\omega[\Jimp]$ is well posed under the assumptions of Section~\ref{sec:ch02.4.2}. The inverse problem---recover $\Jimp$ from far-zone data---is ill posed whenever $\ker\mathcal{R}_\omega$ is nontrivial or $\Qomega$ has rank deficiency. Given measurement vector $\mathbf{y}\in\mathbb{C}^{N}$, any solution satisfies $\Qomega[\Jimp]=\mathbf{y}$ only up to $\ker\Qomega\supseteq\ker\mathcal{R}_\omega$. Weak observability (small singular values of $\mathcal{R}_\omega$ or $\Qomega$) must be distinguished from exact nullity: numerically small coupling is not the same as a mathematically zero radiative image \cite{devaney2004,harrington2001}.
++
++\subsection{Constructive non-radiating examples}
++\label{sec:ch02.8.2}
++
++A small balanced loop carrying uniform phasor current has vanishing electric dipole moment to leading order while supporting magnetic dipole and reactive $\E$, $\H$ within a wavelength of the wire \cite{stratton1941,jackson1999}. On a distant sphere, outgoing transverse flux from electric dipole radiation is absent; $\mathcal{R}_\omega[\Jimp]$ may vanish identically while near probes still record large fields.
++
++Two equal and opposite electric dipoles $\mathbf{p}$ and $-\mathbf{p}$ separated by distance $d\ll\lambda_0$ produce a far-zone electric field that scales as the \emph{difference} of two dipole patterns evaluated at slightly displaced phase centers. The leading $1/r$ term cancels when the separation is adjusted so that $k_0 d\ll1$ yet the quadrupole moment is negligible:
+ \begin{equation}
+-\label{eq:ch2.ker-Qomega}
+-\ker\Qomega\supseteq\ker\mathcal{R}_\omega,
++\label{eq:ch2.counter-dipole-cancel}
++\E_{\mathrm{far}}(\hat{\mathbf{r}})\propto
++e^{-\jj k_0 r}\,\frac{k_0^2}{r}\,
++\Big[e^{+\jj k_0 d\cos\theta/2}-e^{-\jj k_0 d\cos\theta/2}\Big]\,\hat{\boldsymbol\theta}\cdot\mathbf{p},
+ \end{equation}
+-because finite probes cannot resolve all radiative degrees of freedom (Section~\ref{sec:ch01.5}).
++which vanishes at $d=0$ in the idealized co-located limit. Finite $d$ breaks exact nullity: the far field is small when $k_0 d\ll1$ but not identically zero. Below-cutoff waveguide sections support standing reactive fields at ports while exporting no propagating power to exterior flux meters \cite{stratton1941}. Each example separates local Maxwell structure from qualified far-zone export.
++
++\subsection{Evanescent content versus radiation nullity}
++\label{sec:ch02.8.3}
+ 
+-Evanescent fields tied to near-zone storage are generally not radiative, but evanescent content alone is not the same concept as $\ker\mathcal{R}_\omega$: the null space is defined by vanishing \emph{outgoing radiative} export, not by locality of energy \cite{stratton1941}.
++Evanescent fields can be large on a scan plane yet contribute nothing to $\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]$ (Section~\ref{sec:ch02.10.3}). That is field-side reactive storage, not membership in $\ker\mathcal{R}_\omega$. A single excitation can simultaneously carry evanescent overlap and a nonzero radiative image; conflating the two deficits leads to false claims of non-radiating behavior when scan data show high $k_t$ content \cite{hansen1988,devaney2004}.
+ 
+ \section{Reciprocity}
+ \label{sec:ch02.9}
+ 
+-Lorentz reciprocity follows from Maxwell's equations and identifies how two source--field pairs couple. Let $(\E_1,\H_1,\Jimp_1)$ and $(\E_2,\H_2,\Jimp_2)$ be two harmonic states in a linear, reciprocal medium (typically vacuum or isotropic passive material with symmetric constitutive tensors). The standard vector identity
++\subsection{Derivation from Maxwell's equations}
++\label{sec:ch02.9.1}
++
++Consider two harmonic states in a linear, isotropic, reciprocal medium (vacuum constitutive relations suffice for the present chapter). State~1 carries $(\E_1,\H_1)$ driven by impressed $\Jimp_1$; state~2 carries $(\E_2,\H_2)$ driven by $\Jimp_2$. Maxwell's equations give $\curl\E_1=-\jj\omega\mu_0\H_1$, $\curl\H_1=\Jimp_1+\jj\omega\varepsilon_0\E_1$, and similarly for state~2. Expanding $\divg(\E_1\times\H_2)$ and substituting these relations yields Eq.~\eqref{eq:ch2.lorentz-integrand}:
+ \begin{equation}
+ \label{eq:ch2.lorentz-integrand}
+ \divg\big(\E_1\times\H_2-\E_2\times\H_1\big)
+-=\Jimp_1\cdot\E_2-\Jimp_2\cdot\E_1
++=\Jimp_1\cdot\E_2-\Jimp_2\cdot\E_1.
++\end{equation}
++Integrating over a volume $V$ that encloses both supports and applying the divergence theorem gives
++\begin{equation}
++\label{eq:ch2.lorentz-surface-volume}
++\oint_{\partial V}\!\big(\E_1\times\H_2-\E_2\times\H_1\big)\cdot\hat{\mathbf{n}}\,dS
++=\int_V \big(\Jimp_1\cdot\E_2-\Jimp_2\cdot\E_1\big)\,dV.
+ \end{equation}
+-follows from substituting Maxwell's equations for each state and expanding the divergence \cite{stratton1941,jackson1999}. Integrating over a volume $V$ containing both source supports and applying the divergence theorem yields a surface integral on $\partial V$ that vanishes under outgoing radiation conditions at infinity, leaving
++Take $\partial V$ as a sphere of radius $R$ enclosing the sources. Reactive near fields can make the surface integral $R$-dependent in the reactive shell; for outgoing transverse radiative fields, $\E$ and $\H$ scale as $1/R$ and $1/R$ with $\eta_0$ relation, so the integrand scales as $1/R^2$ while the area grows as $R^2$, yielding a finite limit that stabilizes for radiative content \cite{stratton1941}. In the standard exterior problem with outgoing conditions at infinity, the surface term selects the outward radiative flux and one obtains Lorentz reciprocity \cite{stratton1941,jackson1999}:
+ \begin{equation}
+ \label{eq:ch2.lorentz-reciprocity}
+-\int_V \Jimp_1\cdot\E_2\,dV=\int_V \Jimp_2\cdot\E_1\,dV,
++\int_V \Jimp_1\cdot\E_2\,dV=\int_V \Jimp_2\cdot\E_1\,dV.
+ \end{equation}
+-the Lorentz reciprocity relation. Physically, the coupling measured when source~1 excites field~2 equals that when source~2 excites field~1, under the stated assumptions \cite{stratton1941}. Antenna transmission and reception coefficients inherit this symmetry when media are reciprocal and normalization is consistent \cite{harrington2001}. Reciprocity constrains coupling; it does not remove $\ker\mathcal{R}_\omega$ or $\ker\Qomega$.
++The result requires the stated medium symmetry and boundary class; nonreciprocal media (e.g.\ magnetized ferrites without symmetric permittivity tensors) need not satisfy Eq.~\eqref{eq:ch2.lorentz-reciprocity} \cite{stratton1941}. Physically, coupling from source~1 to field~2 equals coupling from source~2 to field~1 for reciprocal systems---the mathematical statement behind transmit--receive interchange in antenna measurements \cite{harrington2001}. Reciprocity constrains coupling but does not collapse $\ker\mathcal{R}_\omega$.
+diff --git a/latex/ch02-classical/part05-angular-spectrum-examples-summary.tex b/latex/ch02-classical/part05-angular-spectrum-examples-summary.tex
+index 1b35f45..58dfded 100644
+--- a/latex/ch02-classical/part05-angular-spectrum-examples-summary.tex
++++ b/latex/ch02-classical/part05-angular-spectrum-examples-summary.tex
+@@ -1,25 +1,33 @@
+ % §2.10–2.12 — angular spectrum, examples, summary
+ 
+-\section{Angular Spectrum of Radiation}
+-\label{sec:ch02.10}
+-
+-The far-zone field varies with observation direction $\hat{\mathbf{r}}$. A plane wave with propagation vector $\mathbf{k}=k_0\hat{\mathbf{k}}$ satisfies the dispersion relation $|\mathbf{k}|=k_0$ in vacuum. Decomposing $\mathbf{k}$ into components parallel and perpendicular to a reference plane (e.g.\ $z=0$) gives transverse wavenumber $\mathbf{k}_t$ and longitudinal $k_z=\sqrt{k_0^2-k_t^2}$ on the propagating sheet. When $|\mathbf{k}_t|>k_0$, $k_z$ is imaginary and the mode is \emph{evanescent}: it decays exponentially away from the source-bearing region and does not transport power to infinity \cite{stratton1941,harrington2001}.
+-
+-The angular (plane-wave) spectrum represents the radiative field as a superposition of plane waves with amplitudes $\tilde{\E}(\mathbf{k}_t)$ on the $z=0$ plane (or another chosen surface). Propagating components with outgoing $k_z$ constitute the far-field directional content; evanescent components belong to near-zone storage. The action of $\mathcal{R}_\omega$ suppresses non-outgoing and non-propagating parts before pattern interpretation \cite{stratton1941}. This directional representation is the natural precursor to the vector spherical harmonic and $\mathrm{SO}(3)$ labeling developed in Chapter~\ref{ch:03}: once the radiative field is known direction by direction, the question becomes how to organize those directions by rotational symmetry \cite{stratton1941,harrington2001}.
+-
+ \section{Physical Examples}
+ \label{sec:ch02.11}
+ 
+ \subsection{Electrically small dipole}
+ \label{sec:ch02.11.1}
+ 
+-Consider a short straight wire of length $\ell\ll\lambda_0=2\pi/k_0$ along $\hat{\mathbf{z}}$, carrying uniform phasor current $I_0$ (A). The electrical size $k_0\ell\ll1$ implies a dominant electric dipole moment $\mathbf{p}=\hat{\mathbf{z}}\,I_0\ell/\jj\omega$ in the harmonic convention. The far-zone $\E$ scales as $k_0^2|\mathbf{p}|\sin\theta\,e^{-\jj k_0 r}/r$ in spherical coordinates $(r,\theta,\phi)$ with $\hat{\mathbf{r}}$ the observation direction \cite{jackson1999,stratton1941}. Near the wire, $1/r^3$ and $1/r^2$ terms dominate---reactive storage---while the $1/r$ term carries radiated power $P_{\mathrm{rad}}\propto k_0^4|p|^2/(\varepsilon_0 c)$ \cite{poynting1884}. The $\sin\theta$ pattern vanishes on axis, illustrating that radiation requires transverse acceleration of charge, not merely a nonzero current \cite{harrington2001}.
++The Hertzian dipole is developed in Section~\ref{sec:ch02.5.4}: dipole moment $\mathbf{p}$, distance regimes, far-zone transverse field Eq.~\eqref{eq:ch2.dipole-far-E}, and radiated power Eq.~\eqref{eq:ch2.dipole-P-rad}. That calculation is the reference against which every larger source model must reduce at $k_0 a\ll1$ \cite{jackson1999,chu1948}.
+ 
+ \subsection{Non-radiating loop pair}
+ \label{sec:ch02.11.2}
+ 
+ Two equal and opposite current loops separated by a distance small compared with $\lambda_0$ can produce strong local $\H$ while canceling the leading dipole radiation moment. The far-zone pattern meters read zero: the configuration lies in (or near) $\ker\mathcal{R}_\omega$ for ideal cancellation \cite{devaney2004,harrington2001}. Adding any small asymmetry breaks exact nullity; the example shows why ``large near field'' does not imply ``strong radiation.''
+ 
++\subsection{Small magnetic dipole loop}
++\label{sec:ch02.11.3}
++
++A closed wire loop of area $A$ (m$^2$) carrying phasor current $I_0$ (A) at $k_0\ell\ll1$ for loop perimeter $\ell$ supports magnetic dipole moment $\mathbf{m}=\hat{\mathbf{n}}\,I_0 A$ (A$\cdot$m$^2$), where $\hat{\mathbf{n}}$ is the loop normal. The far-zone field is transverse with a characteristic $\sin\theta$ pattern orthogonal to $\mathbf{m}$, distinct from the electric dipole pattern of Section~\ref{sec:ch02.5.4} \cite{jackson1999,stratton1941}. Power and momentum export follow Eqs.~\eqref{eq:ch2.flux-on-radiative-branch}--\eqref{eq:ch2.far-zone-momentum-flux} on $\mathcal{R}_\omega[\Jimp]$; the loop is a standard calibration of magnetic multipole order at low $k_0 a$.
++
++\subsection{Propagating and evanescent sheets}
++\label{sec:ch02.11.4}
++
++On plane $z=0$, a spectral component with $k_x^2+k_y^2\le k_0^2$ has real $k_z$ and propagates along $z$ (Section~\ref{sec:ch02.10.1}). A component with $k_x^2+k_y^2>k_0^2$ has imaginary $k_z$: amplitude decays as $e^{-|k_z||z|}$ and does not contribute to $P_{\mathrm{rad}}(r)$ at infinity \cite{stratton1941,harrington2001}. Applying $\mathcal{F}_{\mathrm{lat}}$ to $\mathcal{S}_\omega[\Jimp]$ without $\Pi_{\mathrm{rad}}$ can show large $k_t>k_0$ amplitudes that are reactive storage, not radiative export---a common misreading of near-field scan data \cite{hansen1988,devaney2004}.
++
++\subsection{Incoming versus outgoing homogeneous waves}
++\label{sec:ch02.11.5}
++
++In source-free homogeneous regions, $\exp(-\jj k_0 r)/r$ and $\exp(+\jj k_0 r)/r$ both satisfy the Helmholtz equation. Only the outgoing branch matches a localized source and causal retarded excitation (Subsections~\ref{sec:ch02.2.5} and~\ref{sec:ch02.4.2}). A standing-wave superposition may satisfy Maxwell's equations locally yet fail the radiation condition; $\Pi_{\mathrm{rad}}$ and $\mathcal{R}_\omega$ are defined to retain outgoing propagating export, not arbitrary standing patterns \cite{stratton1941,jackson1999}.
++
+ \section{Summary and Passage to Chapter~\ref{ch:03}}
+ \label{sec:ch02.12}
+ 
+diff --git a/latex/ch02-classical/restored/restore-orig-007-2-1-2-linear-operators-domain-range-and-adjoint.tex b/latex/ch02-classical/restored/restore-orig-007-2-1-2-linear-operators-domain-range-and-adjoint.tex
+index 3cb3fa9..d98e614 100644
+--- a/latex/ch02-classical/restored/restore-orig-007-2-1-2-linear-operators-domain-range-and-adjoint.tex
++++ b/latex/ch02-classical/restored/restore-orig-007-2-1-2-linear-operators-domain-range-and-adjoint.tex
+@@ -1,53 +1,12 @@
+-% Stage 8 restored fragment — 2.1.2 Linear operators: domain, range, and adjoint (archive lines 1625-1915)
++% Stage 12 — 2.1.2 Linear operators: domain, range, and adjoint (classical exposition)
+ \subsection{Linear operators: domain, range, and adjoint}
+ \label{sec:ch212}
+-The physical problem is operator accountability: a network analyzer, finite-element solver, or
+-near-field scanner implicitly assumes that each map in the source-to-field pathway accepts
+-only admissible excitations and returns only measurable field pairs \cite{stratton1941}.
+-Every linear map---$\mathcal{S}_\omega$, $\mathcal{L}_\omega$, $\mathcal{R}_\omega$, and
+-finite-rank measurement surrogates---requires explicit domain, range, and adjoint pairings
+-\cite{stratton1941}. Recall that $\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega$
+-is the harmonic solution map, $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$
+-selects outgoing radiative content, and $\mathcal{L}_\omega$ packages volume and boundary
+-residuals jointly \cite{harrington2001}. Reciprocity is a symmetry principle of accessibility:
+-network analyzers swap transmit and receive ports, and the adjoint is the mathematical shadow
+-of that hardware symmetry when sources remain passive \cite{harrington2001}. Treating ``adjoint''
+-as jargon detached from range calibration misses this link \cite{devaney2004}. When a synthesis
+-residual persists under port reversal, the fault often lies in domain mismatch between trial
+-currents and measured tangential data \cite{hansen1988}.
+-Continuity and divergence constraints tie impressed currents to charge conservation on real feeds \cite{maxwell1873}.
+-When those constraints are violated, numerical solvers may still return finite vectors,
+-but the corresponding fields exhibit unphysical reactive blow-up that no anechoic
+-termination can absorb.
+-Domain, range, and adjoint language records which excitations the operator accepts and
+-which field pairs are returned \cite{stratton1941}.
+-Subsection~\ref{sec:ch211} fixed the Hilbert and trace spaces on which Maxwell maps
+-act. Subsection~\ref{sec:ch212} treats those maps as linear operators with explicit
+-domains, ranges, and adjoints \cite{stratton1941}. The volume
+-operator \(\mathcal{M}_\omega\), boundary operator \(\mathcal{B}_\Gamma\), composite
+-\(\mathcal{L}_\omega\), and solution map \(\mathcal{S}_\omega\) introduced in
+-Subsections~\ref{sec:ch201}--\ref{sec:ch202} are not re-defined; their
+-Maxwell field structure is recorded here as the definitive construction of
+-domain--range--adjoint theory. Weak and energy forms of
+-Eqs.~\eqref{eq:ch2.maxwell-weak-form} and
+-\eqref{eq:ch2.maxwell-adjoint-pairing} supply the duality pairings below and are
+-cited, \cite{stratton1941}.
+-Let \(\mathcal{X}\) and \(\mathcal{Y}\) be Hilbert spaces. The linear map representing
+-\(T:\mathcal{D}(T)\to\mathcal{Y}\) is specified by its domain
+-\(\mathcal{D}(T)\subseteq\mathcal{X}\) and range
+-\(\mathcal{R}(T)=T\mathcal{D}(T)\subseteq\mathcal{Y}\). For Maxwell operators,
+-\(\mathcal{X}=\mathcal{U}_\omega\) from Eq.~\eqref{eq:ch2.maxwell-product-space}
+-and \(\mathcal{Y}\) is a product of volume and boundary data spaces. When a finite-element
+-solver reports residual norms, it is effectively measuring a graph norm: how large the
+-field is in \(\mathcal{U}_\omega\) together with how large Maxwell's residuals become when
+-that field is inserted into \(\mathcal{L}_\omega\). Engineers should read the graph norm
+-as a joint flux measurement record of field energy and equation balance, not as a single \(L^{2}\)
+-amplitude \cite{harrington2001}. A trial vector that is small in \(L^{2}\) but drives
+-large curl residuals cannot lie in \(\mathcal{D}(\mathcal{L}_\omega)\) on the physical
+-branch; conversely, a state with controlled graph norm is the continuous target that
+-Galerkin discretizations on edge elements approximate \cite{stratton1941}. The graph
+-norm
+ 
++Subsection~\ref{sec:ch211} named the Sobolev classes on which curl, divergence, and tangential trace are legitimate operations. The present subsection asks the complementary operator question: given an impressed current or a candidate field pair, which linear maps accept that data as input, which spaces receive their outputs, and which dual pairings define adjoints compatible with Maxwell's structure \cite{stratton1941,harrington2001}? A network analyzer swapping transmit and receive ports, a finite-element code reporting a Maxwell residual, and a near-field scanner projecting tangential samples each presuppose such a domain--range discipline; when trial sources or boundary templates lie outside \(\mathcal{D}(\mathcal{L}_\omega)\), flux identities acquire spurious surface terms and reciprocity checks fail for reasons that look like calibration error but are actually operator mismatch \cite{hansen1988,devaney2004}.
++
++Recall, without re-defining, the maps declared in Subsections~\ref{sec:ch201}--\ref{sec:ch202}: \(\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega\) is the harmonic solution map, \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\) selects outgoing radiative content, and \(\mathcal{L}_\omega\) packages volume Maxwell residuals together with the boundary row enforced by \(\mathcal{B}_\Gamma\) \cite{harrington2001}. Charge continuity and divergence constraints tie impressed currents to physically realizable feeds; when those constraints are violated, solvers may still return finite vectors, yet the associated fields need not belong to \(\mathcal{F}_\Omega\) and reactive storage can grow without a corresponding radiative export \cite{maxwell1873,stratton1941}. Weak and energy forms Eqs.~\eqref{eq:ch2.maxwell-weak-form} and~\eqref{eq:ch2.maxwell-adjoint-pairing} supply the duality pairings used below; they are cited rather than re-derived here \cite{stratton1941}.
++
++Let \(\mathcal{X}\) and \(\mathcal{Y}\) be Hilbert spaces. A linear map \(T:\mathcal{D}(T)\to\mathcal{Y}\) is specified by its domain \(\mathcal{D}(T)\subseteq\mathcal{X}\) and range \(\mathcal{R}(T)=T\mathcal{D}(T)\subseteq\mathcal{Y}\). For Maxwell operators, \(\mathcal{X}=\mathcal{U}_\omega\) from Eq.~\eqref{eq:ch2.maxwell-product-space} and \(\mathcal{Y}\) is a product of volume and boundary data spaces. When a finite-element log reports a residual norm, it is effectively measuring a graph norm: the \(L^{2}\) size of the field together with the \(L^{2}\) size of Maxwell's residuals when that field is inserted into \(\mathcal{L}_\omega\). A trial state can be small in \(L^{2}\) yet drive large curl residuals; such a state cannot lie on the physical branch of \(\mathcal{D}(\mathcal{L}_\omega)\). Conversely, controlled graph norm is the continuous target that edge-element Galerkin schemes approximate \cite{stratton1941,harrington2001}. The graph norm
+ \begin{equation}
+ \label{eq:ch2.graph-norm}
+ \|\mathbf{u}\|_{\mathrm{gr}(T)}^{2}
+@@ -56,22 +15,9 @@ norm
+ \qquad
+ \mathbf{u}\in\mathcal{D}(T),
+ \end{equation}
+-turns \(\mathcal{D}(T)\) into a Hilbert space when \(T\) is closed
+-\cite{stratton1941}. Equation~\eqref{eq:ch2.graph-norm} is the diagnostic used in
+-Subsection~\ref{sec:ch214} to construct self-adjoint completions; here it organizes
+-domain control for \(\mathcal{L}_\omega\). 
+-Each Maxwell map acts from a declared domain of admissible states into a data space of residuals or traces; that domain--range discipline applies to each Maxwell map once
+-\(\mathcal{X}\) and \(\mathcal{Y}\) are chosen. Confusing \(\mathcal{D}(T)\) with
+-all of \(\mathcal{X}\) is a common source of spurious boundary terms in flux
+-identities \cite{stratton1941}.
+-The volume Maxwell operator $\mathcal{M}_\omega$ packages the four local Maxwell balance
+-rows that a harmonic solver tests row by row; it returns residuals in
+-$\mathcal{Y}_{\mathrm{vol}}$, not the field itself, and therefore acts only on states whose
+-curls are controlled enough that those residuals lie in $L^{2}$ \cite{stratton1941}. When a
+-finite-element log reports ``Maxwell residual,'' the engineer is observing an approximate
+-norm of $\mathcal{M}_\omega[\mathbf{u}_\omega]$; convergence to zero on the physical
+-branch is the numerical signature of membership in $\mathcal{D}(\mathcal{L}_\omega)$
+-\cite{harrington2001}. The volume Maxwell operator of Eq.~\eqref{eq:ch2.maxwell-driven-operator} acts as
++turns \(\mathcal{D}(T)\) into a Hilbert space when \(T\) is closed \cite{stratton1941}. Equation~\eqref{eq:ch2.graph-norm} organizes domain control for \(\mathcal{L}_\omega\) and reappears in Subsection~\ref{sec:ch214} when self-adjoint completions are constructed. Confusing \(\mathcal{D}(T)\) with all of \(\mathcal{X}\) remains a common source of spurious boundary terms in flux identities \cite{stratton1941}.
++
++The volume Maxwell operator \(\mathcal{M}_\omega\) packages the four local balance rows that a harmonic solver tests sequentially; it returns residuals in \(\mathcal{Y}_{\mathrm{vol}}\), not the field itself, and therefore acts only on states whose curls are controlled enough that those residuals lie in \(L^{2}\) \cite{stratton1941}. The volume Maxwell operator of Eq.~\eqref{eq:ch2.maxwell-driven-operator} acts as
+ \begin{equation}
+ \label{eq:ch2.volume-operator-domain-range}
+ \mathcal{M}_\omega:\mathcal{D}(\mathcal{M}_\omega)\longrightarrow
+@@ -80,17 +26,8 @@ branch is the numerical signature of membership in $\mathcal{D}(\mathcal{L}_\ome
+ \mathcal{Y}_{\mathrm{vol}}=L^{2}(\Omega)^{3}\times L^{2}(\Omega)^{3}
+ \times L^{2}(\Omega)\times L^{2}(\Omega)^{3},
+ \end{equation}
+-with \(\mathcal{D}(\mathcal{M}_\omega)\subset\mathcal{F}_\Omega\) the subspace on
+-which all four residual rows of Eq.~\eqref{eq:ch1.maxwell-operator-block} lie in
+-\(\mathcal{Y}_{\mathrm{vol}}\) \cite{stratton1941}. Operand interpretation:
+-\(\mathcal{M}_\omega\) evaluates curl-coupled Maxwell residuals pointwise in the
+-\(L^{2}\) sense; physically, it returns whether a candidate \((\E,\H)\) satisfies
+-local Maxwell balance with impressed data removed to the forcing vector
+-Eq.~\eqref{eq:ch2.maxwell-forcing-vector}. The map is linear in
+-\(\mathbf{u}_\omega\) and bounded on bounded subsets of
+-\(\mathcal{D}(\mathcal{M}_\omega)\) but is not bounded on all of
+-\(\mathcal{U}_\omega\) because curl norms are not controlled by \(L^{2}\) norms alone
+-\cite{harrington2001}.
++with \(\mathcal{D}(\mathcal{M}_\omega)\subset\mathcal{F}_\Omega\) the subspace on which all four residual rows of Eq.~\eqref{eq:ch1.maxwell-operator-block} lie in \(\mathcal{Y}_{\mathrm{vol}}\) \cite{stratton1941}. Operand interpretation: \(\mathcal{M}_\omega\) evaluates curl-coupled Maxwell residuals in the \(L^{2}\) sense; physically, it reports whether a candidate \((\E,\H)\) satisfies local Maxwell balance with impressed data removed to the forcing vector Eq.~\eqref{eq:ch2.maxwell-forcing-vector}. The map is linear in \(\mathbf{u}_\omega\) and bounded on bounded subsets of \(\mathcal{D}(\mathcal{M}_\omega)\) but is not bounded on all of \(\mathcal{U}_\omega\) because curl norms are not controlled by \(L^{2}\) norms alone \cite{harrington2001}.
++
+ Tangential traces form bounded boundary operators on \(\HCurl(\Omega)\):
+ \begin{equation}
+ \label{eq:ch2.trace-operator-bounded}
+@@ -98,35 +35,23 @@ Tangential traces form bounded boundary operators on \(\HCurl(\Omega)\):
+ \qquad
+ \gamma_\tau[\mathbf{u}]=\hat{\mathbf{n}}\times\mathbf{u}|_{\Gamma},
+ \end{equation}
+-with \(\|\gamma_\tau\|_{\mathrm{op}}<\infty\) on Lipschitz \(\Gamma\)
+-\cite{stratton1941}. Equation~\eqref{eq:ch2.trace-operator-bounded} specializes
+-Eqs.~\eqref{eq:ch2.tangential-trace-maps}--\eqref{eq:ch2.tangential-trace-magnetic}
+-to a single template. The boundary operator of
+-Eq.~\eqref{eq:ch1.boundary-data-operator} is
++with \(\|\gamma_\tau\|_{\mathrm{op}}<\infty\) on Lipschitz \(\Gamma\) \cite{stratton1941}. Equation~\eqref{eq:ch2.trace-operator-bounded} specializes Eqs.~\eqref{eq:ch2.tangential-trace-maps}--\eqref{eq:ch2.tangential-trace-magnetic} to a single template. The boundary operator of Eq.~\eqref{eq:ch1.boundary-data-operator} is
+ \begin{equation}
+ \label{eq:ch2.boundary-operator-domain-range}
+ \mathcal{B}_\Gamma:\mathcal{D}(\mathcal{B}_\Gamma)\longrightarrow\mathcal{Y}_\Gamma,
+ \qquad
+ \mathcal{D}(\mathcal{B}_\Gamma)\subseteq\mathcal{T}_\Gamma,
+ \end{equation}
+-where \(\mathcal{T}_\Gamma\) and \(\mathcal{Y}_\Gamma\) are from
+-Subsection~\ref{sec:ch211}. Impedance and outgoing classes from
+-Eqs.~\eqref{eq:ch1.outer-boundary-classes}--\eqref{eq:ch1.radiation-trace-condition}
+-restrict \(\mathcal{D}(\mathcal{B}_\Gamma)\) to admissible trace pairs compatible
+-with Eq.~\eqref{eq:ch1.admissible-data-class} \cite{stratton1941}.
++where \(\mathcal{T}_\Gamma\) and \(\mathcal{Y}_\Gamma\) are from Subsection~\ref{sec:ch211}. Impedance and outgoing classes from Eqs.~\eqref{eq:ch1.outer-boundary-classes}--\eqref{eq:ch1.radiation-trace-condition} restrict \(\mathcal{D}(\mathcal{B}_\Gamma)\) to trace pairs compatible with Eq.~\eqref{eq:ch1.admissible-data-class} \cite{stratton1941}. % CONVENTION: Ch.1 radiation-trace display may differ from Ch.2 package until AD-1; do not alter signs here.
++
+ The composite operator of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} is
+ \begin{equation}
+ \label{eq:ch2.composite-operator-domain}
+ \mathcal{L}_\omega:\mathcal{D}(\mathcal{L}_\omega)\longrightarrow
+ \mathcal{Y}_{\mathrm{vol}}\times\mathcal{Y}_\Gamma,
+ \end{equation}
+-with \(\mathcal{D}(\mathcal{L}_\omega)\) given by
+-Eq.~\eqref{eq:ch2.domain-refinement-L}. Range membership is \emph{coupled}: a state
+-cannot satisfy volume rows while violating boundary rows in the product sense of
+-Eq.~\eqref{eq:ch2.closed-maxwell-bvp}. The graph norm
+-\eqref{eq:ch2.graph-norm} on \(\mathcal{L}_\omega\) controls both residuals
+-simultaneously and is the natural norm for convergence tests in numerical Maxwell
+-solvers \cite{harrington2001}.
++with \(\mathcal{D}(\mathcal{L}_\omega)\) given by Eq.~\eqref{eq:ch2.domain-refinement-L}. Range membership is coupled: a state cannot satisfy volume rows while violating boundary rows in the product sense of Eq.~\eqref{eq:ch2.closed-maxwell-bvp}. The graph norm Eq.~\eqref{eq:ch2.graph-norm} on \(\mathcal{L}_\omega\) controls both residuals simultaneously and is the natural norm for convergence tests in numerical Maxwell solvers \cite{harrington2001}.
++
+ The harmonic solution map is an operator on source space:
+ \begin{equation}
+ \label{eq:ch2.solution-operator-domain}
+@@ -134,28 +59,20 @@ The harmonic solution map is an operator on source space:
+ \qquad
+ \mathcal{D}(\mathcal{S}_\omega)=\mathcal{J}_\Omega,
+ \end{equation}
+-defined by Eq.~\eqref{eq:ch2.solution-map-resolvent} as
+-\(\mathcal{L}_\omega[\mathcal{S}_\omega[\Jimp]]=[\mathbf{s}_\omega(\Jimp),\mathbf{g}_\Gamma]\).
+-Well-posedness requires invertibility of \(\mathcal{L}_\omega\) on the physical
+-branch selected by \(\mathcal{B}_\Gamma\); then
++defined by Eq.~\eqref{eq:ch2.solution-map-resolvent} as \(\mathcal{L}_\omega[\mathcal{S}_\omega[\Jimp]]=[\mathbf{s}_\omega(\Jimp),\mathbf{g}_\Gamma]\). Well-posedness requires invertibility of \(\mathcal{L}_\omega\) on the physical branch selected by \(\mathcal{B}_\Gamma\); then
+ \begin{equation}
+ \label{eq:ch2.resolvent-operator}
+ \mathcal{S}_\omega=\mathcal{L}_\omega^{-1}\circ
+ \big(\mathbf{s}_\omega(\cdot),\mathbf{g}_\Gamma\big),
+ \end{equation}
+-with \(\mathcal{L}_\omega^{-1}\) understood as the outgoing or cavity-truncated
+-resolvent of Sections~\ref{sec:ch243} and~\ref{sec:ch263}, not as an algebraic
+-inverse on all of \(\mathcal{U}_\omega\) \cite{stratton1941}. Radiation and
+-observation operators compose accordingly:
++with \(\mathcal{L}_\omega^{-1}\) understood as the outgoing or cavity-truncated resolvent of Sections~\ref{sec:ch243} and~\ref{sec:ch263}, not as an algebraic inverse on all of \(\mathcal{U}_\omega\) \cite{stratton1941}. Radiation and observation operators compose accordingly:
+ \begin{equation}
+ \label{eq:ch2.radiation-operator-composition}
+ \mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega,
+ \qquad
+ \Lambda_{\mathrm{rad}}=\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega,
+ \end{equation}
+-with \(\Pi_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.radiation-operator-def} and
+-\(\mathcal{O}_{\mathrm{far}}\) from Subsection~\ref{sec:ch201}
+-\cite{harrington2001}.
++with \(\Pi_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.radiation-operator-def} and \(\mathcal{O}_{\mathrm{far}}\) from Subsection~\ref{sec:ch201} \cite{harrington2001}.
+ \begin{figure}[t]
+ \centering
+ \ChOneFigBlock{%
+@@ -172,11 +89,9 @@ with \(\Pi_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.radiation-operator-def} and
+ \(\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}\).}
+ \label{fig:ch2.solution-radiation-operator-composition}
+ \end{figure}
+-~\eqref{eq:ch2.measurement chain-composition} in domain--range language. Each arrow is meaningful only on the declared domain; extending \(\mathcal{S}_\omega\) to
+-non-admissible sources produces elements of \(\mathcal{U}_\omega\) that need not
+-lie in \(\mathcal{F}_\Omega\) \cite{stratton1941}. Adjoints are defined through duality pairings compatible with
+-Eq.~\eqref{eq:ch2.dual-source-pairing}. For the volume operator, the formal adjoint
+-\( \mathcal{M}_\omega^{\dagger}\) satisfies
++Figure~\ref{fig:ch2.solution-radiation-operator-composition} and Eq.~\eqref{eq:ch2.measurement chain-composition} express the same ordered composition in diagrammatic and domain--range language. Each arrow is meaningful only on the declared domain; extending \(\mathcal{S}_\omega\) to non-admissible sources produces elements of \(\mathcal{U}_\omega\) that need not lie in \(\mathcal{F}_\Omega\) \cite{stratton1941}.
++
++Adjoints are defined through duality pairings compatible with Eq.~\eqref{eq:ch2.dual-source-pairing}. For the volume operator, the formal adjoint \(\mathcal{M}_\omega^{\dagger}\) satisfies
+ \begin{equation}
+ \label{eq:ch2.volume-adjoint-definition}
+ \langle\mathcal{M}_\omega[\mathbf{u}_\omega],\mathbf{v}_\omega\rangle_{\mathrm{vol}}
+@@ -184,16 +99,7 @@ Eq.~\eqref{eq:ch2.dual-source-pairing}. For the volume operator, the formal adjo
+ \langle\mathbf{u}_\omega,\mathcal{M}_\omega^{\dagger}[\mathbf{v}_\omega]\rangle_{\mathcal{U}}
+ +\mathcal{B}_{\mathrm{surf}}(\mathbf{u}_\omega,\mathbf{v}_\omega),
+ \end{equation}
+-where \(\langle\cdot,\cdot\rangle_{\mathrm{vol}}\) is the componentwise
+-\(L^{2}\) pairing on \(\mathcal{Y}_{\mathrm{vol}}\),
+-\(\langle\cdot,\cdot\rangle_{\mathcal{U}}\) is induced by
+-Eq.~\eqref{eq:ch2.field-energy-norm}, and
+-\(\mathcal{B}_{\mathrm{surf}}\) collects boundary terms from integration by parts
+-\cite{stratton1941}. On \(\mathcal{D}(\mathcal{M}_\omega)\cap\mathcal{U}_\omega^{\mathrm{PEC}}\)
+-from Eq.~\eqref{eq:ch2.pec-subspace}, Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing}
+-identifies \(\mathcal{B}_{\mathrm{surf}}\) with the tangential trace pairing of
+-Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing}; that identity is imported, not
+-re-proved \cite{stratton1941}. The composite adjoint satisfies the block structure
++where \(\langle\cdot,\cdot\rangle_{\mathrm{vol}}\) is the componentwise \(L^{2}\) pairing on \(\mathcal{Y}_{\mathrm{vol}}\), \(\langle\cdot,\cdot\rangle_{\mathcal{U}}\) is induced by Eq.~\eqref{eq:ch2.field-energy-norm}, and \(\mathcal{B}_{\mathrm{surf}}\) collects boundary terms from integration by parts \cite{stratton1941}. On \(\mathcal{D}(\mathcal{M}_\omega)\cap\mathcal{U}_\omega^{\mathrm{PEC}}\) from Eq.~\eqref{eq:ch2.pec-subspace}, Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} identifies \(\mathcal{B}_{\mathrm{surf}}\) with the tangential trace pairing; that identity is imported, not re-proved \cite{stratton1941}. The composite adjoint satisfies the block structure
+ \begin{equation}
+ \label{eq:ch2.composite-adjoint-block}
+ \mathcal{L}_\omega^{\dagger}
+@@ -204,12 +110,9 @@ re-proved \cite{stratton1941}. The composite adjoint satisfies the block structu
+ \end{bmatrix}
+ \quad\text{on compatible pairs,}
+ \end{equation}
+-with cross-coupling entering only through shared trace data when boundary and
+-volume domains are not synchronized. Self-adjoint \emph{realizations} of truncated
+-Maxwell problems require choosing \(\mathcal{B}_\Gamma\) so that
+-\(\mathcal{B}_{\mathrm{surf}}\) cancels on \(\mathcal{D}(\mathcal{L}_\omega)\);
+-Forcing functionals induced by impressed data are bounded linear operators on test
+-spaces. The map
++with cross-coupling entering only through shared trace data when volume and boundary domains are not synchronized. Self-adjoint \emph{realizations} of truncated Maxwell problems require choosing \(\mathcal{B}_\Gamma\) so that \(\mathcal{B}_{\mathrm{surf}}\) cancels on \(\mathcal{D}(\mathcal{L}_\omega)\); Subsection~\ref{sec:ch214} records passive impedance classes that achieve this cancellation on bounded domains \cite{stratton1941}.
++
++Forcing functionals induced by impressed data are bounded linear operators on test spaces. The map
+ \begin{equation}
+ \label{eq:ch2.forcing-functional-operator}
+ \mathfrak{f}_\omega:\mathcal{U}_\omega^{0}\longrightarrow\mathbb{C},
+@@ -217,22 +120,15 @@ spaces. The map
+ \mathfrak{f}_\omega[\mathbf{v}_\omega]=
+ \langle\mathbf{s}_\omega(\mathfrak{D}),\mathbf{v}_\omega\rangle_{\mathrm{vol}},
+ \end{equation}
+-is continuous when \(\mathbf{s}_\omega\in\mathcal{Y}_{\mathrm{vol}}\) and
+-\(\mathbf{v}_\omega\in\mathcal{U}_\omega^{0}\) carries homogeneous boundary traces
+-compatible with \(\mathcal{B}_\Gamma\) \cite{stratton1941}. Equation
+-\eqref{eq:ch2.forcing-functional-operator} is the operator reading of the right-hand
+-side of Eq.~\eqref{eq:ch2.maxwell-weak-form}. Source-to-field operators inherit
+-continuity on bounded subsets: if \(\|\Jimp\|_{\mathcal{J}}\le C\) and
+-\(\mathcal{L}_\omega\) is boundedly invertible on a fixed branch, then
++is continuous when \(\mathbf{s}_\omega\in\mathcal{Y}_{\mathrm{vol}}\) and \(\mathbf{v}_\omega\in\mathcal{U}_\omega^{0}\) carries homogeneous boundary traces compatible with \(\mathcal{B}_\Gamma\) \cite{stratton1941}. Equation~\eqref{eq:ch2.forcing-functional-operator} is the operator reading of the right-hand side of Eq.~\eqref{eq:ch2.maxwell-weak-form}. Source-to-field operators inherit continuity on bounded subsets: if \(\|\Jimp\|_{\mathcal{J}}\le C\) and \(\mathcal{L}_\omega\) is boundedly invertible on a fixed branch, then
+ \begin{equation}
+ \label{eq:ch2.solution-map-stability}
+ \|\mathcal{S}_\omega[\Jimp]\|_{\mathcal{U}}
+ \le
+ C_{\mathrm{res}}\,\|\mathbf{s}_\omega(\Jimp)\|_{\mathrm{vol}},
+ \end{equation}
+-with \(C_{\mathrm{res}}=\|\mathcal{L}_\omega^{-1}\|\) on the selected subspace
+-\cite{harrington2001}. Inequality~\eqref{eq:ch2.solution-map-stability}
+-is the operator form of solver stability under source perturbations.
++with \(C_{\mathrm{res}}=\|\mathcal{L}_\omega^{-1}\|\) on the selected subspace \cite{harrington2001}. Inequality~\eqref{eq:ch2.solution-map-stability} is the operator form of solver stability under source perturbations.
++
+ Kernel and range spaces are recorded for later null-space analysis:
+ \begin{equation}
+ \label{eq:ch2.kernel-range-L}
+@@ -254,31 +150,10 @@ Kernel and range spaces are recorded for later null-space analysis:
+ \mathcal{L}_\omega[\mathbf{u}_\omega]=[\mathbf{s},\mathbf{g}]^{\mathsf{T}}
+ \right\}.
+ \end{equation}
+-On bounded domains with passive \(\mathcal{B}_\Gamma\), \(\ker\mathcal{L}_\omega\)
+-contains cavity modes; on exterior domains with outgoing radiation condition,
+-\(\ker\mathcal{L}_\omega\) is trivial on the outgoing branch
+-\cite{stratton1941}. Section~\ref{sec:ch272} analyzes
+-\(\ker\mathcal{R}_\omega\); Subsection~\ref{sec:ch213} treats compactness and
+-Fredholm index on \(\mathcal{R}(\mathcal{L}_\omega)\).
+-Extension operators lift boundary data into volume fields. A right inverse
+-\(E_\Gamma:\mathcal{Y}_\Gamma\to\HCurl(\Omega)\) satisfying
+-\(\gamma_\tau\circ E_\Gamma=\mathrm{id}\) on compatible subclasses exists only for
+-\(\mathbf{g}_\Gamma\) in the range of \(\gamma_\tau\); otherwise no
+-\(\mathbf{u}_\omega\in\mathcal{F}_\Omega\) meets the boundary row
+-\cite{stratton1941}. Extension operators enter Calder\'on preconditioners and
+-boundary-element formulations developed in later sections; here they clarify that
+-\(\mathcal{B}_\Gamma\) acts on traces, not on arbitrary \(L^{2}\) boundary vectors
+-\cite{harrington2001}.
+-As a worked example, fix \(\Jimp\in\mathcal{J}_\Omega\) and two distinct outgoing radiation conditions
+-\(\mathcal{B}_\Gamma^{(a)}\) and \(\mathcal{B}_\Gamma^{(b)}\) on the same exterior
+-domain. The operators \(\mathcal{L}_\omega^{(a)}\) and
+-\(\mathcal{L}_\omega^{(b)}\) have the same volume domain but different boundary
+-domains; Eq.~\eqref{eq:ch2.resolvent-operator} yields two resolvents
+-\(\mathcal{S}_\omega^{(a)}\neq\mathcal{S}_\omega^{(b)}\) in general. Comparing
+-analysis to measurement without matching \(\mathcal{D}(\mathcal{B}_\Gamma)\) is
+-therefore a comparison of different operators, not of different discretizations of
+-one operator \cite{stratton1941}.
+-Subsection~\ref{sec:ch212} has packaged domain, range, graph norm, adjoint pairings, and
+-the composition $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ on declared
+-spaces. Subsection~\ref{sec:ch213} records boundedness, compact embeddings, and the rank
+-deficiency that finite instruments impose on $\mathcal{F}_{\mathrm{rad}}$ \cite{stratton1941}.
++On bounded domains with passive \(\mathcal{B}_\Gamma\), \(\ker\mathcal{L}_\omega\) contains cavity modes; on exterior domains with outgoing radiation condition, \(\ker\mathcal{L}_\omega\) is trivial on the outgoing branch \cite{stratton1941}. Section~\ref{sec:ch272} analyzes \(\ker\mathcal{R}_\omega\); Subsection~\ref{sec:ch213} treats compactness and Fredholm index on \(\mathcal{R}(\mathcal{L}_\omega)\).
++
++Extension operators lift boundary data into volume fields. A right inverse \(E_\Gamma:\mathcal{Y}_\Gamma\to\HCurl(\Omega)\) satisfying \(\gamma_\tau\circ E_\Gamma=\mathrm{id}\) on compatible subclasses exists only for \(\mathbf{g}_\Gamma\) in the range of \(\gamma_\tau\); otherwise no \(\mathbf{u}_\omega\in\mathcal{F}_\Omega\) meets the boundary row \cite{stratton1941}. Extension operators enter Calder\'on preconditioners developed later; here they clarify that \(\mathcal{B}_\Gamma\) acts on traces, not on arbitrary \(L^{2}\) boundary vectors \cite{harrington2001}.
++
++As a worked example, fix \(\Jimp\in\mathcal{J}_\Omega\) and two distinct outgoing radiation conditions \(\mathcal{B}_\Gamma^{(a)}\) and \(\mathcal{B}_\Gamma^{(b)}\) on the same exterior domain. The operators \(\mathcal{L}_\omega^{(a)}\) and \(\mathcal{L}_\omega^{(b)}\) share the same volume domain but different boundary domains; Eq.~\eqref{eq:ch2.resolvent-operator} yields two resolvents \(\mathcal{S}_\omega^{(a)}\neq\mathcal{S}_\omega^{(b)}\) in general. Comparing analysis to measurement without matching \(\mathcal{D}(\mathcal{B}_\Gamma)\) is therefore a comparison of different operators, not of different discretizations of one operator \cite{stratton1941}.
++
++Subsection~\ref{sec:ch212} has fixed domain, range, graph norm, adjoint pairings, and the composition \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\) on declared spaces. Subsection~\ref{sec:ch213} records boundedness, compact embeddings, and the rank deficiency that finite instruments impose on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.
+diff --git a/latex/ch02-classical/restored/restore-orig-008-2-1-3-boundedness-compactness-rank-deficiency-spectral-compr.tex b/latex/ch02-classical/restored/restore-orig-008-2-1-3-boundedness-compactness-rank-deficiency-spectral-compr.tex
+index a9bc69c..d203382 100644
+--- a/latex/ch02-classical/restored/restore-orig-008-2-1-3-boundedness-compactness-rank-deficiency-spectral-compr.tex
++++ b/latex/ch02-classical/restored/restore-orig-008-2-1-3-boundedness-compactness-rank-deficiency-spectral-compr.tex
+@@ -1,28 +1,10 @@
+-% Stage 8 restored fragment — 2.1.3 Boundedness, compactness, rank deficiency, spectral compression (archive lines 1916-2204)
++% Stage 12 — 2.1.3 Boundedness, compactness, rank deficiency, spectral compression
+ \subsection{Boundedness, compactness, rank deficiency, spectral compression}
+ \label{sec:ch213}
+ 
+-Spectral compression on compact support limits how sharply a finite aperture can beam \cite{jackson1999}. Sidelobe floors on a range trace the same law \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
+-The physical problem is observability under finite geometry: a compact source, a bounded
+-domain, and a finite aperture cannot couple to infinitely many independent field degrees of
+-freedom \cite{hansen1988}. Subsections~\ref{sec:ch211}--\ref{sec:ch212} fixed spaces and operator domains.
+-Subsection~\ref{sec:ch213} records boundedness and compactness properties, rank
+-deficiency of observation maps, and the viewpoint from which Section~\ref{sec:ch26}
+-develops spectral compression for radiation operators \cite{stratton1941}. The physical
+-content is familiar on a compact range: finite sources and finite probes cannot couple to
+-infinitely many independent far-zone degrees of freedom, so accessible rank is limited by
+-geometry and observation extent \cite{hansen1988}. Fredholm index computation
+-and complete spectral decomposition remain in Sections~\ref{sec:ch263}
+-and~\ref{sec:ch261}; here the constructive development establishes the lemmas on
+-boundedness, compactness, and rank deficiency those sections invoke by reference
+-\cite{stratton1941}.
+-In the display below, $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omega$ denotes the
+-outgoing radiative subspace selected by $\Pi_{\mathrm{rad}}$; $\mathcal{S}_\omega$ and
+-$\mathcal{R}_\omega$ are the solution and radiation maps on $\mathcal{J}_\Omega$
+-\cite{harrington2001}.
+-The linear map representing \(T:\mathcal{X}\to\mathcal{Y}\) between Hilbert spaces is
+-\emph{bounded} if
++Finite apertures, compact source supports, and bounded measurement domains cannot resolve arbitrarily fine angular structure in the radiative field \cite{hansen1988,jackson1999}. That limitation is not a post-processing inconvenience: once \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\) are defined on the spaces of Subsections~\ref{sec:ch211}--\ref{sec:ch212}, boundedness, compact embeddings, and finite-rank observation maps express how Maxwell propagation from compact sources through outgoing selection to finite instruments compress accessible degrees of freedom \cite{maxwell1873,stratton1941}. Section~\ref{sec:ch26} develops the quantitative singular-value decay law for radiation maps on compact support; the present subsection records the operator lemmas that section invokes---without constructing VSH eigenbases or computing Fredholm index \cite{stratton1941}.
+ 
++In the display below, \(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omega\) denotes the outgoing radiative subspace selected by \(\Pi_{\mathrm{rad}}\); \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\) are the solution and radiation maps on \(\mathcal{J}_\Omega\) \cite{harrington2001}. A linear map \(T:\mathcal{X}\to\mathcal{Y}\) between Hilbert spaces is \emph{bounded} if
+ \begin{equation}
+ \label{eq:ch2.operator-boundedness}
+ \|T\|_{\mathrm{op}}
+@@ -30,14 +12,7 @@ The linear map representing \(T:\mathcal{X}\to\mathcal{Y}\) between Hilbert spac
+ \sup_{\|\mathbf{x}\|_{\mathcal{X}}=1}\|T\mathbf{x}\|_{\mathcal{Y}}
+ <\infty.
+ \end{equation}
+-Boundedness is equivalent to continuity at the origin and is the default
+-hypothesis for composition with measurement readouts \cite{stratton1941}. On the
+-Maxwell chain, operators split into bounded and unbounded classes. Trace and observation maps are bounded on declared spaces. The tangential trace
+-Eq.~\eqref{eq:ch2.trace-operator-bounded} satisfies
+-\(\|\gamma_\tau\|_{\mathrm{op}}<\infty\) from \(\HCurl(\Omega)\) to
+-\(H^{-1/2}(\Gamma)^{3}\) \cite{stratton1941}. Far-zone readouts from
+-Subsection~\ref{sec:ch201} define bounded functionals when restricted to
+-\(\mathcal{F}_{\mathrm{rad}}\):
++Boundedness is equivalent to continuity at the origin and is the default hypothesis for composition with measurement readouts \cite{stratton1941}. On the Maxwell chain, operators split into bounded and unbounded classes. Trace and observation maps are bounded on declared spaces. The tangential trace Eq.~\eqref{eq:ch2.trace-operator-bounded} satisfies \(\|\gamma_\tau\|_{\mathrm{op}}<\infty\) from \(\HCurl(\Omega)\) to \(H^{-1/2}(\Gamma)^{3}\) \cite{stratton1941}. Far-zone readouts from Subsection~\ref{sec:ch201} define bounded functionals when restricted to \(\mathcal{F}_{\mathrm{rad}}\):
+ \begin{equation}
+ \label{eq:ch2.far-observation-bounded}
+ \|\mathcal{O}_{\mathrm{far}}\|_{\mathrm{op}}
+@@ -47,19 +22,9 @@ Subsection~\ref{sec:ch201} define bounded functionals when restricted to
+ <\infty
+ \quad\text{on}\ \mathcal{F}_{\mathrm{rad}}.
+ \end{equation}
+-Laboratory maps \(\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\) in
+-Eq.~\eqref{eq:ch2.operational-measurement-chain} are bounded on the same subspace
+-because composition of bounded operators is bounded \cite{harrington2001}.
+-Volume and composite Maxwell operators are unbounded on full
+-\(\mathcal{U}_\omega\). The map \(\mathcal{M}_\omega\) of
+-Eq.~\eqref{eq:ch2.volume-operator-domain-range} has
+-\(\|\mathcal{M}_\omega\|_{\mathrm{op}}=\infty\) when
+-\(\mathcal{D}(\mathcal{M}_\omega)=\mathcal{U}_\omega\) because controlling
+-\(\|\mathcal{M}_\omega[\mathbf{u}]\|_{\mathrm{vol}}\) would require uniform curl
+-bounds beyond \(L^{2}\) control \cite{stratton1941}. Restriction to
+-\(\mathcal{D}(\mathcal{L}_\omega)\) with graph norm
+-Eq.~\eqref{eq:ch2.graph-norm} restores boundedness of the \emph{resolvent}
+-\(\mathcal{L}_\omega^{-1}\) on the physical branch where invertibility holds:
++Laboratory maps \(\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\) in Eq.~\eqref{eq:ch2.operational-measurement-chain} remain bounded on the same subspace because composition of bounded operators is bounded \cite{harrington2001}.
++
++Volume and composite Maxwell operators are unbounded on full \(\mathcal{U}_\omega\). The map \(\mathcal{M}_\omega\) of Eq.~\eqref{eq:ch2.volume-operator-domain-range} has \(\|\mathcal{M}_\omega\|_{\mathrm{op}}=\infty\) when \(\mathcal{D}(\mathcal{M}_\omega)=\mathcal{U}_\omega\) because controlling \(\|\mathcal{M}_\omega[\mathbf{u}]\|_{\mathrm{vol}}\) would require uniform curl bounds beyond \(L^{2}\) control \cite{stratton1941}. Restriction to \(\mathcal{D}(\mathcal{L}_\omega)\) with graph norm Eq.~\eqref{eq:ch2.graph-norm} restores boundedness of the \emph{resolvent} \(\mathcal{L}_\omega^{-1}\) on the physical branch where invertibility holds:
+ \begin{equation}
+ \label{eq:ch2.resolvent-bounded}
+ \|\mathcal{L}_\omega^{-1}\|_{\mathrm{op}}
+@@ -67,10 +32,7 @@ Eq.~\eqref{eq:ch2.graph-norm} restores boundedness of the \emph{resolvent}
+ \quad\Longleftrightarrow\quad
+ \mathcal{L}_\omega\ \text{bijective on}\ \mathcal{D}(\mathcal{L}_\omega)/\ker\mathcal{L}_\omega.
+ \end{equation}
+-Equation~\eqref{eq:ch2.resolvent-bounded} specializes
+-Eq.~\eqref{eq:ch2.solution-map-stability}; exterior outgoing problems use
+-resolvent bounds on weighted subspaces rather than on all of
+-\(\mathcal{U}_\omega\) \cite{harrington2001}.
++Equation~\eqref{eq:ch2.resolvent-bounded} specializes Eq.~\eqref{eq:ch2.solution-map-stability}; exterior outgoing problems use resolvent bounds on weighted subspaces rather than on all of \(\mathcal{U}_\omega\) \cite{harrington2001}.
+ \begin{figure}[t]
+ \centering
+ \ChOneFigBlock{%
+@@ -82,52 +44,35 @@ resolvent bounds on weighted subspaces rather than on all of
+  \draw[ch1flow] (hc.south) -- node[right,font=\scriptsize]{$\gamma_\tau$} (tr.north);
+ \end{tikzpicture}%
+ }
+-\caption{Compact embedding \(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) on
+-bounded \(\Omega\); trace map is bounded but not compact
+-(Eq.~\eqref{eq:ch2.embedding-chain}).}
++\caption{Compact embedding \(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) on bounded \(\Omega\); trace map is bounded but not compact (Eq.~\eqref{eq:ch2.embedding-chain}).}
+ \label{fig:ch2.compact-embedding-schematic}
+ \end{figure}
+-~\eqref{eq:ch2.embedding-chain}. Rellich-type compactness for
+-\(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) on bounded domains implies
+-that bounded sequences in \(\HCurl\) have \(L^{2}\)-convergent subsequences
+-\cite{stratton1941}. Finite geometry cannot export arbitrarily fine angular complexity;
+-propagation therefore acts as a compression mechanism on electromagnetic structure.
+-An operator \(K:\mathcal{X}\to\mathcal{Y}\) is
+-\emph{compact} if bounded sets in \(\mathcal{X}\) map to relatively compact sets
+-in \(\mathcal{Y}\):
++Rellich-type compactness for \(\HCurl(\Omega)\hookrightarrow L^{2}(\Omega)^{3}\) on bounded domains implies that bounded sequences in \(\HCurl\) have \(L^{2}\)-convergent subsequences \cite{stratton1941}. Physically, finite source support and finite observation geometry cannot sustain arbitrarily sharp spatial oscillations in the \(L^{2}\) sense without paying \(\HCurl\) energy; propagation therefore acts as a compression mechanism on field complexity accessible to instruments.
++
++An operator \(K:\mathcal{X}\to\mathcal{Y}\) is \emph{compact} if bounded sets in \(\mathcal{X}\) map to relatively compact sets in \(\mathcal{Y}\):
+ \begin{equation}
+ \label{eq:ch2.compact-operator-def}
+ K\ \text{compact}
+ \iff
+ K(B_{\mathcal{X}}(0,1))\ \text{has compact completion in}\ \mathcal{Y}.
+-\end{equation} 
+-Compact perturbations of identity produce Fredholm structure used in
+-Section~\ref{sec:ch263}; Subsection~\ref{sec:ch213} records the embedding lemmas
+-without computing index \cite{harrington2001}.
+-Radiation and Green maps on fixed bounded domains often decompose as
++\end{equation}
++Compact perturbations of identity produce Fredholm structure used in Section~\ref{sec:ch263}; here only the embedding lemmas are recorded, without computing index \cite{harrington2001}. Radiation and Green maps on fixed bounded domains often decompose as
+ \begin{equation}
+ \label{eq:ch2.green-compact-split}
+ \mathcal{S}_\omega
+ =
+ G_{\mathrm{sing}}+K_{\mathrm{cpt}},
+ \end{equation}
+-with \(G_{\mathrm{sing}}\) capturing singular near-field kernels and
+-\(K_{\mathrm{cpt}}\) compact on \(\mathcal{J}_\Omega\) when sources have compact
+-support and \(\Omega\) is bounded \cite{stratton1941}. Equation
+-\eqref{eq:ch2.green-compact-split} is the operator template for
+-Section~\ref{sec:ch23}; kernel construction is not repeated here. The split
+-separates non-compact singular behavior at coincident points from compact
+-smoothing at finite separation \cite{harrington2001}. Rank deficiency enters through finite observation. An aperture-limited measurement
+-map \(\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}\)
+-has finite-dimensional range with \(N<\infty\):
++with \(G_{\mathrm{sing}}\) capturing singular near-field kernels and \(K_{\mathrm{cpt}}\) compact on \(\mathcal{J}_\Omega\) when sources have compact support and \(\Omega\) is bounded \cite{stratton1941}. Equation~\eqref{eq:ch2.green-compact-split} is the operator template for Section~\ref{sec:ch23}; kernel construction is not repeated here. The split separates non-compact singular behavior at coincident points from compact smoothing at finite separation \cite{harrington2001}.
++
++Rank deficiency enters through finite observation. An aperture-limited measurement map \(\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}\) has finite-dimensional range with \(N<\infty\):
+ \begin{equation}
+ \label{eq:ch2.finite-rank-observation}
+ \mathcal{O}_{\mathrm{meas}}
+ =
+ \sum_{n=1}^{N}\langle\cdot,\mathbf{f}_n\rangle_{\mathcal{U}}\,\mathbf{e}_n,
+ \end{equation}
+-for dual vectors \(\mathbf{f}_n\) and coordinate directions \(\mathbf{e}_n\).
+-Therefore \(\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})\le N\) and
++for dual vectors \(\mathbf{f}_n\) and coordinate directions \(\mathbf{e}_n\). Therefore \(\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})\le N\) and
+ \begin{equation}
+ \label{eq:ch2.observation-null-space}
+ \ker\mathcal{O}_{\mathrm{meas}}
+@@ -137,13 +82,7 @@ Therefore \(\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})\le N\) and
+ \mathcal{O}_{\mathrm{meas}}[\mathbf{u}]=\mathbf{0}
+ \right\}
+ \end{equation}
+-is infinite-dimensional whenever \(\mathcal{F}_{\mathrm{rad}}\) is
+-infinite-dimensional \cite{stratton1941}. Equation
+-\eqref{eq:ch2.observation-null-space} is the operator form of the measurement
+-instrument rank limits in Section~\ref{sec:ch01.5}: finite modal sets cannot resolve all
+-angular content. Rank deficiency is structural, not a discretization artifact alone; the
+-spectral compression and singular-value decay law for radiation maps on compact support are
+-owned by Section~\ref{sec:ch26} \cite{stratton1941}.
++is infinite-dimensional whenever \(\mathcal{F}_{\mathrm{rad}}\) is infinite-dimensional \cite{stratton1941}. Equation~\eqref{eq:ch2.observation-null-space} is the operator form of the instrument rank limits discussed in Section~\ref{sec:ch01.5}: finite modal sets cannot resolve all angular content. Rank deficiency is structural, not a discretization artifact alone; quantitative decay of singular values for radiation maps is owned by Section~\ref{sec:ch26} \cite{stratton1941}.
+ \begin{figure}[t]
+ \centering
+ \ChOneFigBlock{%
+@@ -156,18 +95,12 @@ owned by Section~\ref{sec:ch26} \cite{stratton1941}.
+  \draw[ch1flow, dashed] (ker.south) -- (f.north);
+ \end{tikzpicture}%
+ }
+-\caption{Finite-rank infinite-dimensional field space maps to
+-\(\mathbb{C}^{N}\); \(\ker\mathcal{O}_{\mathrm{meas}}\) is infinite-dimensional for
+-\(N<\infty\).}
++\caption{Finite-rank map from infinite-dimensional \(\mathcal{F}_{\mathrm{rad}}\) to \(\mathbb{C}^{N}\); \(\ker\mathcal{O}_{\mathrm{meas}}\) is infinite-dimensional for \(N<\infty\).}
+ \label{fig:ch2.rank-deficient-observation}
+ \end{figure}
+-~\eqref{eq:ch2.radiation-operator-composition}.
+-Angular-spectrum reports that omit unresolved harmonics lie in the range of
+-\(\mathcal{O}_{\mathrm{meas}}\) but not in its injective sector
+-\cite{stratton1941}. Subsection~\ref{sec:ch213} does not classify report types;
+-Section~\ref{sec:ch01.5} remains authoritative. Singular values quantify rank deficiency. For compact
+-\(K:\mathcal{X}\to\mathcal{Y}\), the singular value sequence
+-\(\{\sigma_n(K)\}_{n\ge 1}\) decreases to zero, and
++Angular-spectrum reports that omit unresolved harmonics lie in the range of \(\mathcal{O}_{\mathrm{meas}}\) but not in its injective sector \cite{stratton1941}. Subsection~\ref{sec:ch213} does not classify report types; Section~\ref{sec:ch01.5} remains authoritative on measurement inference.
++
++Singular values quantify rank deficiency. For compact \(K:\mathcal{X}\to\mathcal{Y}\), the singular value sequence \(\{\sigma_n(K)\}_{n\ge 1}\) decreases to zero, and
+ \begin{equation}
+ \label{eq:ch2.singular-value-decay}
+ \|K-R_N K\|_{\mathrm{op}}
+@@ -175,28 +108,17 @@ Section~\ref{sec:ch01.5} remains authoritative. Singular values quantify rank de
+ \inf_{\mathrm{rank}\,R_N\le N}\|K-R_N\|_{\mathrm{op}}
+ \sim \sigma_{N+1}(K),
+ \end{equation}
+-where \(R_N\) ranges over rank-\(N\) operators \cite{stratton1941}. For radiation
+-maps truncated to \(N\) spherical or plane-wave modes, Eq.~\eqref{eq:ch2.singular-value-decay}
+-controls how much field content lies outside the retained modal subspace; explicit
+-VSH eigenbases are deferred to Section~\ref{sec:ch261} and Chapter~3 (\emph{Angular Momentum Operators and SO(3)})
+-\cite{harrington2001}. \emph{Spectral compression} names the reduction of infinite-dimensional radiation
+-dynamics to a finite or countable spectral model on the physical branch. Let
+-\(\{\phi_n\}\) be a spectral family in \(\mathcal{F}_\Omega\) and
+-\(\{P_n\}\) the associated one-dimensional projectors. A truncated radiation operator
++where \(R_N\) ranges over rank-\(N\) operators \cite{stratton1941}. For radiation maps truncated to \(N\) spherical or plane-wave modes, Eq.~\eqref{eq:ch2.singular-value-decay} controls how much field content lies outside the retained modal subspace; explicit VSH eigenbases are deferred to Section~\ref{sec:ch261} and Chapter~3 \cite{harrington2001}.
++
++\emph{Spectral compression} names the reduction of infinite-dimensional radiation dynamics to a finite or countable spectral model on the physical branch. Let \(\{\phi_n\}\) be a spectral family in \(\mathcal{F}_\Omega\) and \(\{P_n\}\) the associated one-dimensional projectors. A truncated radiation operator
+ \begin{equation}
+ \label{eq:ch2.spectral-compression-operator}
+ \mathcal{R}_\omega^{(N)}
+ =
+ \sum_{n=1}^{N}\lambda_n\,P_n\circ\mathcal{S}_\omega
+ \end{equation}
+-retains only modes with eigenvalues \(\lambda_n\) above a declared threshold
+-\cite{stratton1941}. Equation
+-\eqref{eq:ch2.spectral-compression-operator} is the abstract template for
+-Section~\ref{sec:ch26}; concrete eigenfunctions are not constructed here. On
+-bounded cavities, compact embeddings yield accumulating eigenvalues
+-\(\lambda_n\to\infty\) for interior resonances; on exterior domains, continuous
+-spectra require outgoing projectors rather than discrete sums
+-\cite{stratton1941}.
++retains only modes with eigenvalues \(\lambda_n\) above a declared threshold \cite{stratton1941}. Equation~\eqref{eq:ch2.spectral-compression-operator} is the abstract template for Section~\ref{sec:ch26}; concrete eigenfunctions are not constructed here. On bounded cavities, compact embeddings yield accumulating eigenvalues \(\lambda_n\to\infty\) for interior resonances; on exterior domains, continuous spectra require outgoing projectors rather than discrete sums \cite{stratton1941}.
++
+ Compression error is bounded in operator norm when \(K\) is compact:
+ \begin{equation}
+ \label{eq:ch2.compression-error-bound}
+@@ -204,17 +126,9 @@ Compression error is bounded in operator norm when \(K\) is compact:
+ \le
+ C\,\sigma_{N+1}(K_{\mathrm{cpt}}),
+ \end{equation}
+-with \(K_{\mathrm{cpt}}\) from Eq.~\eqref{eq:ch2.green-compact-split} and
+-\(C\) independent of impressed data on bounded \(\mathcal{J}_\Omega\)
+-\cite{harrington2001}. Physically, Eq.~\eqref{eq:ch2.compression-error-bound}
+-states that truncating modal content beyond the \((N+1)\)st singular value cannot
+-be recovered by any rank-\(N\) surrogate operator; the quantitative decay law is
+-as in Section~\ref{sec:ch26} \cite{stratton1941}.
+-Rank deficiency of \(\mathcal{R}_\omega\) itself is distinct from observation rank
+-deficiency. Non-radiating sources satisfy
+-\(\mathcal{R}_\omega[\Jimp]=\mathbf{0}\) while
+-\(\mathcal{S}_\omega[\Jimp]\neq\mathbf{0}\) (Eq.~\eqref{eq:ch2.null-radiation});
+-Section~\ref{sec:ch272} develops that null space. Here the point is compositional:
++with \(K_{\mathrm{cpt}}\) from Eq.~\eqref{eq:ch2.green-compact-split} and \(C\) independent of impressed data on bounded \(\mathcal{J}_\Omega\) \cite{harrington2001}. Physically, Eq.~\eqref{eq:ch2.compression-error-bound} states that truncating modal content beyond the \((N+1)\)st singular value cannot be recovered by any rank-\(N\) surrogate operator; the quantitative decay law is developed in Section~\ref{sec:ch26} \cite{stratton1941}.
++
++Rank deficiency of \(\mathcal{R}_\omega\) itself is distinct from observation rank deficiency. Non-radiating sources satisfy \(\mathcal{R}_\omega[\Jimp]=\mathbf{0}\) while \(\mathcal{S}_\omega[\Jimp]\neq\mathbf{0}\) (Eq.~\eqref{eq:ch2.null-radiation}); Section~\ref{sec:ch272} develops that null space. Here the compositional law is
+ \begin{equation}
+ \label{eq:ch2.rank-composition-law}
+ \mathrm{rank}(\mathcal{O}_{\mathrm{meas}}\mathcal{R}_\omega)
+@@ -222,18 +136,9 @@ Section~\ref{sec:ch272} develops that null space. Here the point is compositiona
+ \min\big\{\mathrm{rank}(\mathcal{O}_{\mathrm{meas}}),
+ \dim\mathcal{R}(\mathcal{R}_\omega)\big\},
+ \end{equation}
+-In Eq.~\eqref{eq:ch2.rank-composition-law},
+-\(\mathcal{O}_{\mathrm{meas}}\) is a finite-rank linear measurement functional
+-(pattern probe bank, modal fitter, or spherical-harmonic extractor) composed with
+-\(\mathcal{R}_\omega\); \(\mathrm{rank}(\cdot)\) is the dimension of the accessible
+-report subspace; and \(\mathcal{R}(\mathcal{R}_\omega)\) is the range of the radiation map
+-on \(\mathcal{J}_\Omega\).
+-So measurement rank caps reported angular content even when
+-\(\mathcal{R}_\omega\) is injective on admissible sources
+-\cite{stratton1941}. Both deficits must appear in uncertainty
+-budgets for angular-transport claims imported from Section~\ref{sec:ch01.2.3}. Fredholm structure note: on bounded \(\Omega\) with passive
+-\(\mathcal{B}_\Gamma\), \(\mathcal{L}_\omega\) is Fredholm on
+-\(\mathcal{D}(\mathcal{L}_\omega)\) modulo cavity kernels when written as
++where \(\mathcal{O}_{\mathrm{meas}}\) is a finite-rank measurement functional (probe bank, modal fitter, or spherical-harmonic extractor), \(\mathrm{rank}(\cdot)\) is the dimension of the accessible report subspace, and \(\mathcal{R}(\mathcal{R}_\omega)\) is the range of the radiation map on \(\mathcal{J}_\Omega\). Measurement rank caps reported angular content even when \(\mathcal{R}_\omega\) is injective on admissible sources \cite{stratton1941}. Both deficits must appear in uncertainty budgets for angular-transport claims imported from Section~\ref{sec:ch01.2.3}.
++
++On bounded \(\Omega\) with passive \(\mathcal{B}_\Gamma\), \(\mathcal{L}_\omega\) is Fredholm on \(\mathcal{D}(\mathcal{L}_\omega)\) modulo cavity kernels when written as
+ \begin{equation}
+ \label{eq:ch2.fredholm-split}
+ \mathcal{L}_\omega
+@@ -242,41 +147,10 @@ budgets for angular-transport claims imported from Section~\ref{sec:ch01.2.3}. F
+ \qquad
+ K\ \text{compact on graph domain},
+ \end{equation}
+-with \(\mathcal{L}_0\) an invertible reference operator on the quotient by
+-\(\ker\mathcal{L}_\omega\) \cite{stratton1941}. Index and solvability criteria are
+-developed in Section~\ref{sec:ch263}; Eq.~\eqref{eq:ch2.fredholm-split} supplies the
+-split Subsection~\ref{sec:ch212} stated the introductory relation in
+-Subsection~\ref{sec:ch202}.
+-As a worked example, a spherical near-field scanner records \(N=50\) tangential field samples on a
+-closed surface. The map \(\mathcal{O}_{\mathrm{meas}}\) has rank at most \(50\), so
+-angular harmonics beyond the resolved set lie in
+-\(\ker\mathcal{O}_{\mathrm{meas}}\). Applying Eq.~\eqref{eq:ch2.singular-value-decay}
+-to the compact smoothing operator from sample interpolation shows that recovered
+-far-zone coefficients error is controlled by \(\sigma_{51}\), not by Maxwell
+-residual alone \cite{stratton1941}. Increasing frequency without
+-increasing \(N\) lowers \(\sigma_{N+1}\) slowly for fixed aperture, worsening
+-compression error even when \(\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}\)
+-in the volume.
+-As a worked example, in a closed cavity, compact embedding yields discrete resonances and
+-Eq.~\eqref{eq:ch2.spectral-compression-operator} sums over cavity modes. In an
+-exterior problem with outgoing radiation condition, the same formula requires a continuous
+-spectral integral rather than a finite sum; using cavity compression on an
+-open antenna model conflates discrete storage modes with continuous radiation
+-modes \cite{stratton1941}. Section~\ref{sec:ch243} selects the outgoing branch;
+-Subsection~\ref{sec:ch213} only records that compression templates differ by domain class
+-\cite{stratton1941}.
+-Finite-geometry interpretation (compactness and rank). Compact embeddings and finite-rank observation maps express one enduring electromagnetic
+-truth: finite geometry destroys information. A bounded source support $\Omega_s$ cannot
+-excite arbitrarily fine angular structure at every observation point; a finite aperture
+-integrates over unresolved directions; a finite modal set truncates accessible rank.
+-Inaccessible angular structure is therefore not a numerical inconvenience but a consequence
+-of Maxwell propagation from compact sources through outgoing selection to finite
+-instruments. flux report is fundamentally limited, and the mathematics of compactness
+-makes that limit quantifiable through decaying singular values and infinite-dimensional
+-observation null spaces \cite{stratton1941}.
+-Subsection~\ref{sec:ch213} has established boundedness classes, compact embeddings, and
+-finite-rank observation structure. The quantitative singular-value decay for radiation maps
+-on compact support is developed in Section~\ref{sec:ch26}; here only the structural lemmas
+-are recorded. Subsection~\ref{sec:ch214}
+-completes the function-space foundation with self-adjoint realizations and admissibility
+-completions on bounded domains \cite{stratton1941}.
++with \(\mathcal{L}_0\) an invertible reference operator on the quotient by \(\ker\mathcal{L}_\omega\) \cite{stratton1941}. Equation~\eqref{eq:ch2.fredholm-split} supplies the split invoked in Subsection~\ref{sec:ch212} when relating resolvent boundedness to solvability; index and solvability criteria are developed in Section~\ref{sec:ch263}.
++
++As a worked example, a spherical near-field scanner records \(N=50\) tangential field samples on a closed surface. The map \(\mathcal{O}_{\mathrm{meas}}\) has rank at most \(50\), so angular harmonics beyond the resolved set lie in \(\ker\mathcal{O}_{\mathrm{meas}}\). Applying Eq.~\eqref{eq:ch2.singular-value-decay} to the compact smoothing operator from sample interpolation shows that recovered far-zone coefficient error is controlled by \(\sigma_{51}\), not by Maxwell residual alone \cite{stratton1941}. Increasing frequency without increasing \(N\) lowers \(\sigma_{N+1}\) slowly for fixed aperture, worsening compression error even when \(\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}\) in the volume.
++
++In a closed cavity, compact embedding yields discrete resonances and Eq.~\eqref{eq:ch2.spectral-compression-operator} sums over cavity modes. In an exterior problem with outgoing radiation condition, the same formula requires a continuous spectral integral rather than a finite sum; using cavity compression on an open antenna model conflates discrete storage modes with continuous radiation modes \cite{stratton1941}. Section~\ref{sec:ch243} selects the outgoing branch; Subsection~\ref{sec:ch213} only records that compression templates differ by domain class \cite{stratton1941}.
++
++Subsection~\ref{sec:ch213} has established boundedness classes, compact embeddings, and finite-rank observation structure. Subsection~\ref{sec:ch214} completes the function-space foundation with self-adjoint realizations and admissibility completions on bounded domains \cite{stratton1941}.
+diff --git a/latex/ch02-classical/restored/restore-orig-009-2-1-4-self-adjointness-completions-and-admissibility.tex b/latex/ch02-classical/restored/restore-orig-009-2-1-4-self-adjointness-completions-and-admissibility.tex
+index 36658c4..17465aa 100644
+--- a/latex/ch02-classical/restored/restore-orig-009-2-1-4-self-adjointness-completions-and-admissibility.tex
++++ b/latex/ch02-classical/restored/restore-orig-009-2-1-4-self-adjointness-completions-and-admissibility.tex
+@@ -1,39 +1,12 @@
+-% Stage 8 restored fragment — 2.1.4 Self-adjointness, completions, and admissibility (archive lines 2205-2412)
++% Stage 12 — 2.1.4 Self-adjointness, completions, and admissibility
+ \subsection{Self-adjointness, completions, and admissibility}
+ \label{sec:ch214}
+-The physical problem is passive realizability on bounded hardware: cavity walls, matched
+-terminations, and dissipative linings must not permit unbounded storage of reactive energy
+-under admissible excitation \cite{stratton1941}. Friedrichs and other
+-completions extend domains just enough that $\curl$ and $\hat{\mathbf{n}}\times$ are
+-simultaneously closed on the same space---precisely what finite-element antenna models
+-require when sheet sources sit on interior interfaces \cite{harrington2001}. Improper
+-domain extension predicts unphysical growth of reactive storage---a numerical symptom that
+-must be corrected before radiation maps are trusted \cite{maxwell1873}. Completion
+-choices are radiation-physics choices about which reactive storage remains inside $\Omega$
+-and which energy is exported \cite{sommerfeld1949}.
+ 
+-Subsections~\ref{sec:ch211}--\ref{sec:ch213} supplied spaces, solution domains,
+-compactness, and spectral compression templates. Subsection~\ref{sec:ch214}
+-identifies self-adjoint and coercive realizations of truncated Maxwell operators
+-on bounded domains, records completion and quotient constructions that remove cavity
+-kernels, and states the $\mathcal{D}_J=1$ embedding that links Chapter~\ref{ch:01}
+-finite-energy criteria to the solution domains declared here
+-\cite{stratton1941}. Weak and energy forms
+-Eqs.~\eqref{eq:ch2.maxwell-energy-form}--\eqref{eq:ch2.maxwell-weak-form} and the
+-adjoint pairing Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} are presupposed; they
+-are \cite{stratton1941}.
+-A densely defined operator \(T\) on Hilbert space \(\mathcal{H}\) is
+-\emph{symmetric} if
+-\(\langle T\mathbf{u},\mathbf{v}\rangle=\langle\mathbf{u},T\mathbf{v}\rangle\)
+-for all \(\mathbf{u},\mathbf{v}\in\mathcal{D}(T)\), and \emph{self-adjoint} if
+-\(\mathcal{D}(T^{\dagger})=\mathcal{D}(T)\) with equality of adjoints
+-\cite{stratton1941}. Maxwell operators are symmetric on suitable domains because
+-Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} cancels boundary pairings when
+-\(\mathcal{B}_\Gamma\) is passive and homogeneous on test states. Self-adjointness
+-requires matching domain and range of adjoints; that match fails on exterior
+-domains without restricting to outgoing subspaces \cite{harrington2001}. On bounded \(\Omega\) with passive \(\mathcal{B}_\Gamma\), the sesquilinear form
+-\(\mathfrak{a}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-energy-form} is coercive on
+-the quotient by cavity modes:
++Passive cavity walls, matched terminations, and dissipative linings must not permit unbounded storage of reactive energy under admissible excitation \cite{stratton1941}. Subsections~\ref{sec:ch211}--\ref{sec:ch213} fixed the Sobolev spaces, operator domains, and compactness structure on which \(\mathcal{L}_\omega\) and \(\mathcal{S}_\omega\) act. The present subsection identifies when truncated Maxwell problems admit coercive sesquilinear forms, self-adjoint or Friedrichs completions on bounded domains, and quotient constructions that remove cavity kernels---so variational solvers and resolvent bounds refer to the same physical branch as the weak form Eqs.~\eqref{eq:ch2.maxwell-energy-form}--\eqref{eq:ch2.maxwell-weak-form} \cite{harrington2001}. Exterior open problems require outgoing subspaces rather than naive application of cavity completions; that distinction is recorded here without re-proving Sommerfeld selection (Section~\ref{sec:ch243}) \cite{sommerfeld1949}.
++
++Weak and energy forms and the adjoint pairing Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} are presupposed and cited \cite{stratton1941}. A densely defined operator \(T\) on Hilbert space \(\mathcal{H}\) is \emph{symmetric} if \(\langle T\mathbf{u},\mathbf{v}\rangle=\langle\mathbf{u},T\mathbf{v}\rangle\) for all \(\mathbf{u},\mathbf{v}\in\mathcal{D}(T)\), and \emph{self-adjoint} if \(\mathcal{D}(T^{\dagger})=\mathcal{D}(T)\) with equality of adjoints \cite{stratton1941}. Maxwell operators are symmetric on suitable domains because Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} cancels boundary pairings when \(\mathcal{B}_\Gamma\) is passive and homogeneous on test states. Self-adjointness requires matching domain and range of adjoints; that match fails on exterior domains without restricting to outgoing subspaces \cite{harrington2001}.
++
++On bounded \(\Omega\) with passive \(\mathcal{B}_\Gamma\), the sesquilinear form \(\mathfrak{a}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-energy-form} is coercive on the quotient by cavity modes:
+ \begin{equation}
+ \label{eq:ch2.coercivity-quotient}
+ \mathfrak{a}_\omega(\mathbf{u},\mathbf{u})
+@@ -42,14 +15,7 @@ the quotient by cavity modes:
+ \qquad
+ \mathbf{u}\in\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega,
+ \end{equation}
+-for some \(\alpha>0\) when \(\ker\mathcal{L}_\omega\) is finite-dimensional and
+-consists of divergence-free resonances compatible with boundary class
+-\cite{stratton1941}. Equation~\eqref{eq:ch2.coercivity-quotient}
+-is the Lax--Milgram hypothesis that makes
+-Eq.~\eqref{eq:ch2.maxwell-weak-form} well posed on the quotient. Coercivity fails
+-on the unquotiented space because cavity modes satisfy
+-\(\mathfrak{a}_\omega(\mathbf{u},\mathbf{u})=0\) while
+-\(\|\mathbf{u}\|_{\mathcal{U}}>0\).
++for some \(\alpha>0\) when \(\ker\mathcal{L}_\omega\) is finite-dimensional and consists of divergence-free resonances compatible with boundary class \cite{stratton1941}. Equation~\eqref{eq:ch2.coercivity-quotient} is the Lax--Milgram hypothesis that makes Eq.~\eqref{eq:ch2.maxwell-weak-form} well posed on the quotient. Coercivity fails on the unquotiented space because cavity modes satisfy \(\mathfrak{a}_\omega(\mathbf{u},\mathbf{u})=0\) while \(\|\mathbf{u}\|_{\mathcal{U}}>0\).
+ \begin{figure}[t]
+ \centering
+ \ChOneFigBlock{%
+@@ -61,43 +27,30 @@ on the unquotiented space because cavity modes satisfy
+  \draw[ch1flow] (q.south |- sol.north) -- (sol.north);
+ \end{tikzpicture}%
+ }
+-\caption{Cavity-mode quotient: coercivity and uniqueness hold on the quotient space
+-after removing \(\ker\mathcal{L}_\omega\).}
++\caption{Cavity-mode quotient: coercivity and uniqueness hold on the quotient space after removing \(\ker\mathcal{L}_\omega\).}
+ \label{fig:ch2.cavity-quotient-schematic}
+ \end{figure}
+-Physical excitation at a cavity frequency
+-requires impedance or source coupling that breaks pure standing-wave balance;
+-Subsection~\ref{sec:ch214} records the linear-algebraic quotient; Section~\ref{sec:ch263}
+-develops spectral consequences \cite{stratton1941}. Impedance and Leontovich completions from
+-Eq.~\eqref{eq:ch2.boundary-impedance-operator} yield self-adjoint boundary
+-realizations when surface impedance is passive:
++Physical excitation at a cavity frequency requires impedance or source coupling that breaks pure standing-wave balance; Subsection~\ref{sec:ch214} records the linear-algebraic quotient while Section~\ref{sec:ch263} develops spectral consequences \cite{stratton1941}.
++
++Impedance and Leontovich completions from Eq.~\eqref{eq:ch2.boundary-impedance-operator} yield self-adjoint boundary realizations when surface impedance is passive:
+ \begin{equation}
+ \label{eq:ch2.passive-impedance-class}
+ \Re\{Z_s\}\ge 0\ \text{on}\ \Gamma_Z
+ \quad\Longrightarrow\quad
+ \mathcal{B}_\Gamma\ \text{symmetric on}\ \mathcal{T}_\Gamma.
+ \end{equation}
+-Passive \(\Re\{Z_s\}\ge 0\) dissipates power through the boundary rather than
+-injecting net energy; active or negative-real parts require revisiting Maxwell-closed
+-as noted in Section~\ref{sec:ch01.1.2} \cite{stratton1941}. Perfect conductors
+-select Eq.~\eqref{eq:ch2.pec-subspace}; impedance boundaries enlarge
+-\(\mathcal{D}(\mathcal{B}_\Gamma)\) while preserving symmetry when
+-Eq.~\eqref{eq:ch2.passive-impedance-class} holds \cite{harrington2001}.
+-When \(\mathcal{B}_\Gamma\) is symmetric but the Maxwell operator is only densely
+-defined, the Friedrichs extension supplies a self-adjoint realization:
++Passive \(\Re\{Z_s\}\ge 0\) dissipates power through the boundary rather than injecting net energy; active or negative-real parts require revisiting Maxwell-closed screens as noted in Section~\ref{sec:ch01.1.2} \cite{stratton1941}. Perfect conductors select Eq.~\eqref{eq:ch2.pec-subspace}; impedance boundaries enlarge \(\mathcal{D}(\mathcal{B}_\Gamma)\) while preserving symmetry when Eq.~\eqref{eq:ch2.passive-impedance-class} holds \cite{harrington2001}.
++
++When \(\mathcal{B}_\Gamma\) is symmetric but the Maxwell operator is only densely defined, the Friedrichs extension supplies a self-adjoint realization:
+ \begin{equation}
+ \label{eq:ch2.friedrichs-extension}
+ \mathcal{L}_\omega^{\mathrm{F}}
+ =
+ \overline{\mathcal{L}_\omega}\big|_{\mathcal{D}(\mathfrak{a}_\omega)},
+ \end{equation}
+-the completion of \(\mathcal{L}_\omega\) on the energy domain of
+-\(\mathfrak{a}_\omega\) \cite{stratton1941}. Equation
+-\eqref{eq:ch2.friedrichs-extension} is the locked definition for for
+-self-adjoint Maxwell truncations on bounded domains. Exterior outgoing problems
+-use a different completion template: restrict to the outgoing subspace selected in
+-Section~\ref{sec:ch243} rather than applying Eq.~\eqref{eq:ch2.friedrichs-extension}
+-to all of \(\mathcal{U}_\omega\) \cite{harrington2001}. Well-posedness on the quotient combines coercivity and bounded forcing:
++the completion of \(\mathcal{L}_\omega\) on the energy domain of \(\mathfrak{a}_\omega\) \cite{stratton1941}. Equation~\eqref{eq:ch2.friedrichs-extension} is the locked definition for self-adjoint Maxwell truncations on bounded domains. Exterior outgoing problems use a different completion template: restrict to the outgoing subspace selected in Section~\ref{sec:ch243} rather than applying Eq.~\eqref{eq:ch2.friedrichs-extension} to all of \(\mathcal{U}_\omega\) \cite{harrington2001}.
++
++Well-posedness on the quotient combines coercivity and bounded forcing:
+ \begin{equation}
+ \label{eq:ch2.lax-milgram-wellposed}
+ \exists!\,\mathbf{u}_\omega\in\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega:
+@@ -106,11 +59,7 @@ to all of \(\mathcal{U}_\omega\) \cite{harrington2001}. Well-posedness on the qu
+ \mathfrak{f}_\omega(\mathbf{v})
+ \quad\forall\,\mathbf{v}\in\mathcal{U}_\omega^{0}/\ker\mathcal{L}_\omega,
+ \end{equation}
+-with \(\mathfrak{f}_\omega\) from Eq.~\eqref{eq:ch2.forcing-functional-operator}.
+-Stability follows from Eqs.~\eqref{eq:ch2.coercivity-quotient} and
+-\eqref{eq:ch2.solution-map-stability} \cite{stratton1941}. Resolvent bound
+-Eq.~\eqref{eq:ch2.resolvent-bounded} holds on the quotient when
+-\(\mathcal{L}_\omega^{\mathrm{F}}\) is bijective there.
++with \(\mathfrak{f}_\omega\) from Eq.~\eqref{eq:ch2.forcing-functional-operator}. Stability follows from Eqs.~\eqref{eq:ch2.coercivity-quotient} and~\eqref{eq:ch2.solution-map-stability} \cite{stratton1941}. Resolvent bound Eq.~\eqref{eq:ch2.resolvent-bounded} holds on the quotient when \(\mathcal{L}_\omega^{\mathrm{F}}\) is bijective there.
+ \begin{figure}[t]
+ \centering
+ \ChOneFigBlock{%
+@@ -124,19 +73,13 @@ Eq.~\eqref{eq:ch2.resolvent-bounded} holds on the quotient when
+  \draw[ch1flow] (b.south |- a.north) -- (a.north);
+ \end{tikzpicture}%
+ }
+-\caption{Self-adjoint completion pathway on bounded domains: passive
+-\(\mathcal{B}_\Gamma\) supports coercive \(\mathfrak{a}_\omega\) and stable
+-\(\mathcal{S}_\omega\) on the cavity quotient.}
++\caption{Self-adjoint completion pathway on bounded domains: passive \(\mathcal{B}_\Gamma\) supports coercive \(\mathfrak{a}_\omega\) and stable \(\mathcal{S}_\omega\) on the cavity quotient.}
+ \label{fig:ch2.self-adjoint-closure-pathway}
+ \end{figure}
+-Changing \(\mathcal{B}_\Gamma\) while leaving
+-\(\mathfrak{a}_\omega\) formally unchanged can destroy coercivity or symmetry;
+-that sensitivity was already visible in the resolvent-branch illustration of
+-Subsection~\ref{sec:ch212} \cite{stratton1941}. charge-continuous from Subsection~\ref{sec:ch01.0.3} embeds into solution domains.
+-The \ref{ch:01} finite-energy class
+-Eq.~\eqref{eq:ch1.admissible-space} requires
+-\((\E,\H)\in L^{2}(\Omega)^{3}\times L^{2}(\Omega)^{3}\) with compatible boundary
+-and source data \cite{stratton1941}. The Chapter~\ref{ch:02} refinement is
++Changing \(\mathcal{B}_\Gamma\) while leaving \(\mathfrak{a}_\omega\) formally unchanged can destroy coercivity or symmetry; that sensitivity was already visible in the resolvent-branch illustration of Subsection~\ref{sec:ch212} \cite{stratton1941}.
++
++The charge-continuous admissibility screen from Subsection~\ref{sec:ch01.0.3} embeds into the solution domains declared here. The Chapter~\ref{ch:01} finite-energy class Eq.~\eqref{eq:ch1.admissible-space} requires \((\E,\H)\in L^{2}(\Omega)^{3}\times L^{2}(\Omega)^{3}\) with compatible boundary and source data \cite{stratton1941}. % CONVENTION: eq:ch1.admissible-space continuity sign may differ from Ch.2 until AD-1; equations not altered in Stage 12.
++The Chapter~\ref{ch:02} refinement is
+ \begin{equation}
+ \label{eq:ch2.admissibility-embedding}
+ \mathcal{X}_{\mathrm{ch1}}(\Omega)\cap\mathcal{U}_\omega
+@@ -145,14 +88,7 @@ and source data \cite{stratton1941}. The Chapter~\ref{ch:02} refinement is
+ \subseteq
+ \mathcal{D}(\mathcal{L}_\omega),
+ \end{equation}
+-with strict inclusions in general because \(\HCurl\) control and trace membership
+-strengthen \(L^{2}\) Maxwell-closed without replacing
+-Eq.~\eqref{eq:ch1.charge-continuity-harmonic} \cite{stratton1941}. Equation
+-\eqref{eq:ch2.admissibility-embedding} specializes
+-Eq.~\eqref{eq:ch2.continuity-operator-domain}: when
+-\(\mathcal{D}_{\mathrm{ch1}}=1\), impressed data lie in \(\mathcal{J}_\Omega\) and
+-closed solutions lie in \(\mathcal{F}_\Omega\). Operator Maxwell-closed adds
+-graph-norm control:
++with strict inclusions in general because \(\HCurl\) control and trace membership strengthen \(L^{2}\) Maxwell-closed without replacing Eq.~\eqref{eq:ch1.charge-continuity-harmonic} \cite{stratton1941}. Equation~\eqref{eq:ch2.admissibility-embedding} specializes Eq.~\eqref{eq:ch2.continuity-operator-domain}: when \(\mathcal{D}_{\mathrm{ch1}}=1\), impressed data lie in \(\mathcal{J}_\Omega\) and closed solutions lie in \(\mathcal{F}_\Omega\). Operator Maxwell-closed adds graph-norm control:
+ \begin{equation}
+ \label{eq:ch2.graph-charge-continuous-criterion}
+ \mathbf{u}_\omega\in\mathcal{F}_\Omega
+@@ -160,13 +96,9 @@ graph-norm control:
+ \|\mathbf{u}_\omega\|_{\mathrm{gr}(\mathcal{L}_\omega)}<\infty
+ \ \text{when}\ \mathcal{L}_\omega[\mathbf{u}_\omega]\ \text{is defined}.
+ \end{equation}
+-Inequality~\eqref{eq:ch2.source-admissibility} is the quantitative form of
+-``physically realizable'' field pairs for variational solvers
+-\cite{harrington2001}.
+-Source-side Maxwell-closed remains coupled to
+-Eq.~\eqref{eq:ch2.source-space-refined} and
+-Eq.~\eqref{eq:ch1.charge-continuity-harmonic} by reference. Completion operators must not
+-introduce incompatible traces:
++Inequality~\eqref{eq:ch2.source-admissibility} is the quantitative form of ``physically realizable'' field pairs for variational solvers \cite{harrington2001}. Source-side Maxwell-closed remains coupled to Eq.~\eqref{eq:ch2.source-space-refined} and Eq.~\eqref{eq:ch1.charge-continuity-harmonic} by reference.
++
++Completion operators must not introduce incompatible traces:
+ \begin{equation}
+ \label{eq:ch2.closure-admissibility-lock}
+ \mathcal{B}_\Gamma\ \text{admissible}
+@@ -174,11 +106,9 @@ introduce incompatible traces:
+ \mathcal{R}(\gamma_\tau|_{\mathcal{F}_\Omega})\supseteq
+ \mathcal{D}(\mathcal{B}_\Gamma).
+ \end{equation}
+-Failure of Eq.~\eqref{eq:ch2.closure-admissibility-lock} means prescribed
+-\(\mathbf{g}_\Gamma\) is not the trace of any \(\HCurl\) field, reproducing the
+-trace-mismatch illustration of Subsection~\ref{sec:ch211} \cite{stratton1941}. Exterior domains: outgoing radiation condition from Section~\ref{sec:ch243} defines a
+-\emph{physically self-adjoint} branch rather than a Hilbert self-adjoint operator
+-on all of \(\mathcal{U}_\omega\):
++Failure of Eq.~\eqref{eq:ch2.closure-admissibility-lock} means prescribed \(\mathbf{g}_\Gamma\) is not the trace of any \(\HCurl\) field, reproducing the trace-mismatch illustration of Subsection~\ref{sec:ch211} \cite{stratton1941}.
++
++Exterior domains: the outgoing radiation condition from Section~\ref{sec:ch243} defines a \emph{physically self-adjoint} branch rather than a Hilbert self-adjoint operator on all of \(\mathcal{U}_\omega\):
+ \begin{equation}
+ \label{eq:ch2.outgoing-nonselfadjoint-split}
+ \mathcal{U}_\omega
+@@ -187,16 +117,6 @@ on all of \(\mathcal{U}_\omega\):
+ \qquad
+ \mathcal{L}_\omega\ \text{coercive on}\ \mathcal{U}_{\mathrm{out}},
+ \end{equation}
+-with reactive storage content in \(\mathcal{U}_{\mathrm{re}}\) controlled by
+-regime criteria of Section~\ref{sec:ch01.2.4} rather than by full coercivity on
+-\(\mathcal{U}_\omega\) \cite{stratton1941}. Conflating
+-Eq.~\eqref{eq:ch2.friedrichs-extension} with exterior radiation problems produces
+-incorrect cavity-like spectra in open regions.
+-With Subsections~\ref{sec:ch211}--\ref{sec:ch214} complete, Section~\ref{sec:ch21}
+-has moved from minimal declarations in Section~\ref{sec:ch20} to a closed operator
+-calculus on Sobolev spaces: traces, adjoints, compactness, and self-adjoint
+-truncations compatible with \ref{ch:01} charge-continuous \cite{stratton1941}.
+-Section~\ref{sec:ch22} applies those spaces to time--frequency equivalences;
+-Sections~\ref{sec:ch23}--\ref{sec:ch24} inherit $\mathcal{D}(\mathcal{L}_\omega)$ and
+-$\mathcal{F}_\Omega$ as fixed input classes. \ref{ch:04} states which operator outputs
+-survive finite source support and manufacturable geometry \cite{devaney2004}.
++with reactive storage content in \(\mathcal{U}_{\mathrm{re}}\) controlled by regime criteria of Section~\ref{sec:ch01.2.4} rather than by full coercivity on \(\mathcal{U}_\omega\) \cite{stratton1941}. Conflating Eq.~\eqref{eq:ch2.friedrichs-extension} with exterior radiation problems produces incorrect cavity-like spectra in open regions.
++
++With Subsections~\ref{sec:ch211}--\ref{sec:ch214} complete, Section~\ref{sec:ch21} has moved from minimal declarations in Section~\ref{sec:ch20} to a closed operator calculus on Sobolev spaces: traces, adjoints, compactness, and self-adjoint truncations compatible with Chapter~\ref{ch:01} charge-continuous screens \cite{stratton1941}. Section~\ref{sec:ch22} applies those spaces to time--frequency equivalences; Sections~\ref{sec:ch23}--\ref{sec:ch24} inherit \(\mathcal{D}(\mathcal{L}_\omega)\) and \(\mathcal{F}_\Omega\) as fixed input classes. Chapter~\ref{ch:04} states which operator outputs survive finite source support and manufacturable geometry \cite{devaney2004}.

@@ -11,7 +11,7 @@ every harmonic operator declaration. The instrument steps $\omega$ through a cal
 band, records complex $S$-parameters at each tone, and treats each frequency as a
 steady-state slice of the same passive structure \cite{harrington2001}. The composite
 operator $\mathcal{L}_\omega$ introduced in Section~\ref{sec:ch21} is precisely that
-slice: Maxwell's equations with $\partial_t\to-\jj\omega$ on impressed data and boundary
+slice: Maxwell's equations with $\partial_t\to+\jj\omega$ on impressed data and boundary
 class held fixed. Readers should therefore read $\mathcal{L}_\omega$ not as an abstract
 Hilbert map alone but as the operator whose inversion reproduces the phasor fields a VNA
 implicitly assumes when it reports $S_{21}(\omega)$ after de-embedding \cite{stratton1941}.
@@ -37,12 +37,12 @@ The electric-wave operator Eq.~\eqref{eq:ch2.electric-wave-operator} was recorde
 Subsection~\ref{sec:ch202}; here it is embedded in domain declarations and extended
 by magnetic and material-weighted counterparts. Full vector-field separation is
 deferred to Section~3.3 \cite{stratton1941}.
-Under the locked \(\exp(-\jj\omega t)\) convention, differentiation with respect to
-time converts to multiplication by \(-\jj\omega\) on phasor quantities, and the
+Under the locked \(\eim=\exp(+\jj\omega t)\) convention of Chapter~\ref{ch:01}, differentiation with respect to
+time converts to multiplication by \(+\jj\omega\) on phasor quantities, and the
 second time derivative maps to \(-\omega^{2}\).
 Every phasor displayed on a network analyzer trace has already undergone this
 substitution: a time derivative in Maxwell's equations becomes a multiplication by
-$-\jj\omega$ on the locked $\exp(-\jj\omega t)$ convention. Engineers should notice
+$+\jj\omega$ on the locked $\eim$ convention. Engineers should notice
 that the substitution is not a notational convenience alone; it is the algebraic
 condition under which a time-domain IBVP and a frequency-domain BVP describe the same
 passive structure at fixed $\omega$ \cite{stratton1941}. The substitution fails when
@@ -52,14 +52,14 @@ or when material response is not single-frequency on the declared band
 Time derivatives map to
 \begin{equation}
 \label{eq:ch2.frequency-substitution-rule}
-\partial_t \longrightarrow -\jj\omega,
+\partial_t \longrightarrow +\jj\omega,
 \qquad
 \frac{\partial^2}{\partial t^2}\longrightarrow -\omega^2,
 \end{equation}
 on phasor fields \(\E(\mathbf{r})\), \(\H(\mathbf{r})\) and impressed data
 \(\Jimp(\mathbf{r})\), \(\rho(\mathbf{r})\) \cite{stratton1941}.
 In Eq.~\eqref{eq:ch2.frequency-substitution-rule},
-\(\partial_t\) acting on a time-harmonic quantity is replaced by \(-\jj\omega\),
+\(\partial_t\) acting on a time-harmonic quantity is replaced by \(+\jj\omega\),
 where \(\omega\) is in rad\,s\(^{-1}\); and \(\partial_t^{2}\) is replaced by
 \(-\omega^{2}\).
 This substitution is valid only when all time dependence is single-frequency or when
@@ -78,7 +78,7 @@ the mathematician packages the same requirement as membership in
 $\mathcal{D}(\mathcal{L}_\omega)$ with $\mathcal{L}_\omega[\mathbf{u}_\omega]$ balanced
 against impressed data \cite{harrington2001}. Readers should notice that
 Eq.~\eqref{eq:ch2.harmonic-maxwell-residual} is not a new physics postulate but the
-frequency image of Eq.~\eqref{eq:ch2.time-maxwell-evolution} once $\partial_t\to-\jj\omega$
+frequency image of Eq.~\eqref{eq:ch2.time-maxwell-evolution} once $\partial_t\to+\jj\omega$
 on admissible data \cite{stratton1941}. The harmonic Maxwell residual
 operator \(\mathcal{M}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-driven-operator}
 acts on \(\mathbf{u}_\omega=(\E,\H)\in\mathcal{U}_\omega\):

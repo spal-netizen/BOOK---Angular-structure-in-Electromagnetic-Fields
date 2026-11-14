@@ -8,13 +8,13 @@
 
 ## Time dependence
 
-Harmonic fields use the **engineering time convention**:
+Harmonic fields use the **Chapter 1 benchmark time convention** (see `VOLUME_I_RELEASE/VOLUME_I_PHASOR_AND_NOTATION_STANDARD.md`):
 
 \[
-\mathbf{f}(\mathbf{r},t) = \mathrm{Re}\{\underline{\mathbf{f}}(\mathbf{r})\, e^{-j\omega t}\}, \qquad \omega>0 .
+\mathbf{f}(\mathbf{r},t) = \mathrm{Re}\{\underline{\mathbf{f}}(\mathbf{r})\, e^{+j\omega t}\}, \qquad \omega>0 .
 \]
 
-Therefore \(\partial/\partial t \to -j\omega\) and \(\partial^2/\partial t^2 \to -\omega^2\) for phasors.
+Therefore \(\partial/\partial t \to +j\omega\) and \(\partial^2/\partial t^2 \to -\omega^2\) for phasors.
 
 ## Units
 
@@ -47,13 +47,13 @@ Material relations (linear, local, isotropic unless stated):
 \nabla\cdot(\mu_0\mathbf{H}) = 0 .
 \]
 
-Phasor fields \(\mathbf{E},\mathbf{H}\) are written in **bold** without underlines, consistent with Jackson, Harrington, and Stratton. Time dependence \(\exp(-j\omega t)\) is fixed once per section and not repeated on every symbol.
+Phasor fields \(\mathbf{E},\mathbf{H}\) are written in **bold** without underlines, consistent with Jackson, Harrington, and Stratton. Time dependence \(\exp(+j\omega t)\) is fixed once per section and not repeated on every symbol.
 
 ## Field and source symbols
 
 | Symbol | Meaning |
 |--------|---------|
-| \(\mathbf{E}, \mathbf{H}\) | Phasor electric and magnetic fields (bold spatial vectors; harmonic \(\exp(-j\omega t)\) stated in prose) |
+| \(\mathbf{E}, \mathbf{H}\) | Phasor electric and magnetic fields (bold spatial vectors; harmonic \(\exp(+j\omega t)\) stated in prose) |
 | \(\mathbf{J}_{\mathrm{imp}}\) | Impressed electric current density (phasor) |
 | \(\rho\) | Charge density |
 | \(\underline{\mathbf{A}}, \phi\) | Vector and scalar potentials (Lorenz gauge unless noted) |

@@ -78,10 +78,10 @@ On the phasor axis \(s=-\jj\omega\) with \(\omega>0\),
 \int_0^\infty \mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)\,e^{\jj\omega t}\,dt,
 \end{equation}
 which is the Fourier transform restricted to causal support
-\cite{stratton1941}. For \(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)=\Re\{\underline{\mathbf{j}}(\mathbf{r})e^{-\jj\omega_0 t}\}\)
+\cite{stratton1941}. For \(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)=\Re\{\underline{\mathbf{j}}(\mathbf{r})e^{+\jj\omega_0 t}\}\)
 with fixed \(\omega_0>0\), Eq.~\eqref{eq:ch2.fourier-phasor-identification}
 selects the phasor \(\underline{\mathbf{j}}\) under the locked convention
-\(\exp(-\jj\omega t)\) \cite{stratton1941}. Applying the Laplace transform to Eq.~\eqref{eq:ch2.time-ibvp-package} with fixed
+\eim\ \cite{stratton1941}. Applying the Laplace transform to Eq.~\eqref{eq:ch2.time-ibvp-package} with fixed
 \(\mathcal{B}_\Gamma\) and homogeneous initial data yields, formally,
 \begin{equation}
 \label{eq:ch2.laplace-maxwell-resolvent}
@@ -93,12 +93,12 @@ selects the phasor \(\underline{\mathbf{j}}\) under the locked convention
 \end{equation}
 where \(\mathcal{L}_s\) is the Laplace-domain Maxwell operator obtained from
 \(\mathcal{A}\) by Eq.~\eqref{eq:ch2.frequency-substitution-rule} with
-\(\partial_t\to s\) \cite{stratton1941}. On the axis \(s=-\jj\omega\),
+\(\partial_t\to s\) \cite{stratton1941}. On the axis \(s=+\jj\omega\),
 \(\mathcal{L}_s=\mathcal{L}_\omega\) from Eq.~\eqref{eq:ch2.composite-operator-domain},
 so
 \begin{equation}
 \label{eq:ch2.resolvent-green-equivalence}
-\mathcal{R}(-\jj\omega)=\mathcal{L}_\omega^{-1}
+\mathcal{R}(+\jj\omega)=\mathcal{L}_\omega^{-1}
 \quad\text{on the outgoing/resolvent branch,}
 \end{equation}
 and the retarded convolution Eq.~\eqref{eq:ch2.retarded-convolution-form} is the

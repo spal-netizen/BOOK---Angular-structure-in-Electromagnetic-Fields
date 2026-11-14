@@ -7,7 +7,7 @@ The physical problem is causal propagation: a switched feed, a pulsed radar, or 
 immunity test excites fields whose support in $(\mathbf{r},t)$ must respect finite signal
 speed \cite{maxwell1873}. Time-harmonic phasors are how network analyzers, compact
 ranges, and chamber receivers report steady-state radiation at each frequency step
-\cite{stratton1941}. The $\exp(-\jj\omega t)$ convention fixed in Chapter~\ref{ch:01} aligns
+\cite{stratton1941}. The $\eim$ convention fixed in Chapter~\ref{ch:01} aligns
 Poynting flux with wattmeter readings and VNA phase references \cite{poynting1884}. Phasor
 analysis is best viewed as a steady-state reduction of a fundamentally causal theory rather
 than as the primary formulation of electromagnetic dynamics \cite{harrington2001}. Even small
@@ -53,7 +53,7 @@ where \(\mathcal{V}(\Omega)\) is the time-dependent product space of square-inte
 field pairs compatible with Eq.~\eqref{eq:ch1.admissible-space} at each frozen time
 slice \cite{stratton1941}. Equation~\eqref{eq:ch2.time-state-vector} is the
 time-domain analogue of Eq.~\eqref{eq:ch2.maxwell-state-vector}; phasor symbols are
-reserved for the \(\exp(-\jj\omega t)\) reduction in Subsection~\ref{sec:ch222}. The time-domain Maxwell
+reserved for the $\eim$ reduction in Subsection~\ref{sec:ch222}. The time-domain Maxwell
 system is the causal law from which every harmonic operator in Section~\ref{sec:ch22} is
 obtained by phasor substitution. Physically, Eqs.~\eqref{eq:ch2.time-maxwell-evolution}
 state that changing $\E$ in space drives $\H$ in time through Faraday's law, and changing
@@ -156,7 +156,7 @@ data and initial state to trajectories:
 \end{equation}
 Harmonic \(\mathcal{S}_\omega\) of Eq.~\eqref{eq:ch2.maxwell-solution-map} is a
 single-frequency slice of Eq.~\eqref{eq:ch2.time-domain-solution-map} when all data
-are proportional to \(\exp(-\jj\omega t)\) and \(\mathcal{B}_\Gamma\) is fixed
+are proportional to \(\eim\) and \(\mathcal{B}_\Gamma\) is fixed
 \cite{stratton1941}; the equivalence is proved in Subsection~\ref{sec:ch223}.
 Retarded representation specializes Eq.~\eqref{eq:ch2.time-evolution-forced} when
 Green kernels exist:
@@ -224,7 +224,7 @@ Subsection~\ref{sec:ch224} \cite{harrington2001}. Harmonic operators follow from
 \(\underline{\H}\) analogous, yielding
 \begin{equation}
 \label{eq:ch2.time-to-frequency-map}
-\partial_t \longrightarrow -\jj\omega,
+\partial_t \longrightarrow +\jj\omega,
 \qquad
 \mathcal{A}\longrightarrow \mathcal{M}_\omega,
 \qquad

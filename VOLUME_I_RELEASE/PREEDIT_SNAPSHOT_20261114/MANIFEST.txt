@@ -1,0 +1,10 @@
+Stage B pre-edit protection snapshot — 2026-11-14
+Branch: volume-i/ch2-4-coordinated-transformation
+HEAD at snapshot start: 5201bc592ceaf0988e7e6419fc35f5549ddaaccf
+Chapter 1 tag (unchanged): chapter1-benchmark-20261114-a05b9cce
+
+Artifacts:
+  ch02-classical-uncommitted.patch  — full git diff latex/ch02-classical before Stage B edits
+  ch02-classical-status.txt         — git status -s for latex/ch02-classical
+
+Policy: local author edits under latex/ch02-classical/* preserved; integrate via CHAPTER2_SOURCE_RECONCILIATION.md.

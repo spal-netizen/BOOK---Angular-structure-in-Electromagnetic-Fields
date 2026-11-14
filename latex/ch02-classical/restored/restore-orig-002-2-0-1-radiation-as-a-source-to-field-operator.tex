@@ -2,34 +2,19 @@
 \subsection{Radiation as a source-to-field operator}
 \label{sec:ch201}
 
-A network analyzer $|S_{11}|$, a spherical near-field scan on $\Gamma_R$, and a far-zone pattern cut are three readings on one ordered map: impressed data, Maxwell closure, outgoing export, finite observation \cite{maxwell1873,stratton1941}. Misplacing a measurement on that chain---reporting reactive storage as radiated power---remains the common compact-range failure mode \cite{poynting1884,hansen1988}.
+A network analyzer $|S_{11}|$, a spherical near-field scan on $\Gamma_R$, and a far-zone pattern cut sample different points on one physical chain: impressed data, Maxwell closure on $(\E,\H)$, identification of outgoing asymptotics, and finite observation \cite{maxwell1873,stratton1941}. Misplacing a measurement on that chain---for example, reporting reactive storage as radiated power---remains a common compact-range failure mode \cite{poynting1884,hansen1988}.
 
-Section~\ref{sec:ch20} posed radiation as a question of accessibility rather than of
-field existence alone. The laboratory scene below makes that distinction operational by naming
-the maps that connect impressed currents to Maxwell field pairs and, through outgoing
-selection, to far-zone observables \cite{stratton1941}. The distinction between field
-existence and field $\mathcal{E}_{\mathrm{acc}}^{(N)}$ is central to radiation theory \cite{stratton1941}.
-Maxwell's equations determine which fields may arise from a specified source distribution,
-whereas the radiation map $\mathcal{R}_\omega$ determines which portion of those fields
-survives as observable outgoing content \cite{maxwell1873}. From an antenna
-engineer's perspective, $\mathcal{S}_\omega$ answers what the structure \emph{stores and
-circulates} locally, while $\mathcal{R}_\omega$ answers what the range may \emph{meter and
-pattern} after the reactive shell is left behind \cite{harrington2001}.
-
-A network analyzer $|S_{11}|$, a spherical near-field scan on $\Gamma_R$, and a far-zone pattern cut are three readings on one ordered map: impressed data, Maxwell field specification, outgoing export, finite observation \cite{maxwell1873}.
-Each instrument samples a different stage of that map, and confusion between stages---for
-example, reporting near-field reactive content as radiated power---remains the common
-compact-range laboratory error \cite{poynting1884}.
+Section~\ref{sec:ch20} treated radiation as a question of \emph{accessibility} of outgoing data, not merely of field existence. Maxwell's equations in Eq.~\eqref{eq:ch1.maxwell-local} specify the complete field pair driven by admissible impressed sources; only after Sommerfeld-outgoing selection is the transverse far-zone fraction that carries net export singled out for pattern and wattmeter interpretation \cite{stratton1941,sommerfeld1949}. The formal solution and radiation maps introduced below are concise labels for those already-stated physical steps.
 
 Laboratory measurements presuppose an excitation model even when it is left implicit: a port
 drive, a probe sample, or a termination fixes how energy is partitioned between storage and
-escape \cite{stratton1941}. Impressed data from Section~\ref{sec:ch01.1.2} map through Maxwell
-field specification to \((\E,\H)\), and only then is the outward-propagating fraction
+escape \cite{stratton1941}. Impressed data from Section~\ref{sec:ch01.1.2} map through Maxwell's
+equations to \((\E,\H)\), and only then is the outward-propagating asymptotic data
 identified as the carrier of far-zone power and angular flux
 (Eq.~\eqref{eq:ch1.maxwell-local}; Sections~\ref{sec:ch01.1.4}--\ref{sec:ch01.1.5}). At fixed
-$\omega$ the maps are the harmonic solution operator $\mathcal{S}_\omega$ and radiation
-operator $\mathcal{R}_\omega$ under the \(\exp(-\jj\omega t)\) convention of
-Chapter~\ref{ch:01}.
+$\omega$, $\mathcal{S}_\omega$ denotes the harmonic solution map and $\mathcal{R}_\omega$ the
+corresponding far-zone radiation data under the Chapter~\ref{ch:01} convention $\eim$ with
+$\partial_t\to+\jj\omega$ \cite{stratton1941}.
 
 Let \(\Omega\subset\mathbb{R}^{3}\) be a piecewise smooth domain with boundary
 \(\Gamma=\partial\Omega\). Phasor fields \(\E(\mathbf{r})\) and \(\H(\mathbf{r})\)
@@ -240,7 +225,7 @@ radiative field pair;
 \(\hat{\mathbf{r}}=\mathbf{r}/|\mathbf{r}|\) is the outward unit normal on
 \(S_R\); and \(dS\) is the area element (m\(^{2}\)).
 The real part \(\Re\{\cdot\}\) extracts the time-averaged power flux carried by the
-phasor fields under the \(\exp(-\jj\omega t)\) convention.
+phasor fields under the Chapter~\ref{ch:01} convention $\eim$.
 Equation~\eqref{eq:ch2.radiated-power-screen} inherits the Poynting law of
 Section~\ref{sec:ch01.1.4}. For \(\mathcal{R}_\omega[\Jimp]\), \(P_{\mathrm{rad}}(R)\) becomes
 $R$-independent beyond the reactive shell \cite{poynting1884}. Angular-momentum budgets from

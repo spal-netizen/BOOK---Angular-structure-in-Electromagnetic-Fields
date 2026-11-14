@@ -10,7 +10,7 @@ A compact-range engineer already separates these ideas in practice. The feed syn
 \subsection{Harmonic conventions and admissible sources}
 \label{sec:ch02.1.1}
 
-We adopt the Volume~I harmonic convention locked in Chapter~\ref{ch:01} (MICROR1): physical fields vary as $\Re\{\mathbf{F}(\mathbf{r})\,\eim\}$ with angular frequency $\omega>0$ (rad/s), so $\partial_t\to+\jj\omega$ on complex phasors \cite{stratton1941}. Spatial phasors $\E(\mathbf{r})$ and $\H(\mathbf{r})$ (V/m and A/m) therefore represent the complex amplitudes in
+Harmonic fields in this chapter are represented as $\Re\{\mathbf{F}(\mathbf{r})\,\eim\}$ with angular frequency $\omega>0$ (rad/s) and $\partial_t\to+\jj\omega$ on complex phasors, using the Maxwell curl system of Eq.~\eqref{eq:ch1.maxwell-local} and charge continuity Eq.~\eqref{eq:ch1.charge-continuity-harmonic} \cite{stratton1941}. Spatial phasors $\E(\mathbf{r})$ and $\H(\mathbf{r})$ (V/m and A/m) are the amplitudes in
 \begin{equation}
 \label{eq:ch2.real-time-fields}
 \E(\mathbf{r},t)=\Re\big\{\E(\mathbf{r})\,\eim\big\},
@@ -27,9 +27,16 @@ k_0=\omega\sqrt{\mu_0\varepsilon_0}\ \ (\mathrm{rad/m}),
 An impressed current density $\Jimp(\mathbf{r})$ (A/m$^2$) and impressed charge density $\rho(\mathbf{r})$ (C/m$^3$) drive the field. Charge conservation in harmonic form follows from taking the divergence of Amp\`ere's law in Eq.~\eqref{eq:ch1.maxwell-local}:
 \begin{equation}
 \label{eq:ch2.charge-continuity-derived}
-\divg\Jimp=+\jj\omega\rho,
+\divg\Jimp+\jj\omega\rho=0,
 \end{equation}
-which is Eq.~\eqref{eq:ch1.charge-continuity-harmonic} with the $+\jj\omega$ time rule \cite{maxwell1873}. A \emph{physically realizable} impressed source on $\Omega$ must satisfy Eq.~\eqref{eq:ch2.charge-continuity-derived} together with the boundary class declared on $\Gamma$ (Section~\ref{sec:ch01.1.2}). Chapter~\ref{ch:01} packaged this requirement in the admissibility map of Eq.~\eqref{eq:ch1.continuity-admissibility}; here we denote by $\mathcal{J}_\Omega$ the linear space of square-integrable impressed currents on $\Omega$ that satisfy that closure.
+which is Eq.~\eqref{eq:ch1.charge-continuity-harmonic} under the $\eim$ convention \cite{maxwell1873}. A \emph{physically realizable} impressed source on $\Omega$ must satisfy Eq.~\eqref{eq:ch2.charge-continuity-derived} together with the boundary class declared on $\Gamma$ (Section~\ref{sec:ch01.1.2}). Chapter~\ref{ch:01} packaged this requirement in the admissibility map of Eq.~\eqref{eq:ch1.continuity-admissibility}; here we denote by $\mathcal{J}_\Omega$ the linear space of square-integrable impressed currents on $\Omega$ that satisfy that closure.
+
+\subsection{Maxwell's equations before operator notation}
+\label{sec:ch02.1.1b}
+
+On a piecewise homogeneous domain with phasors defined under $\eim$, the vacuum-form Maxwell system is Eq.~\eqref{eq:ch1.maxwell-local}: Faraday's law $\curl\E=-\jj\omega\mu_0\H$ states that a time-varying magnetic flux drives a circulating electric field; Amp\`ere's law $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$ states that impressed current and displacement current sustain magnetic circulation; Gauss's laws tie $\E$ and $\H$ to $\rho$ and enforce magnetic flux solenoidality \cite{maxwell1873,stratton1941}. Every subsequent operator is a compact restatement of these local relations together with boundary data on $\Gamma$ and, for open problems, outgoing selection at infinity.
+
+Taking $\curl$ of Faraday's law and substituting Amp\`ere's law eliminates $\H$ and yields Eq.~\eqref{eq:ch2.vector-wave-E} in source regions. The right-hand side $-\jj\omega\mu_0\Jimp$ has dimensions V/m$^3$ and represents the impressed current as a source of transverse wave content. In source-free regions the homogeneous equation supports both incoming and outgoing spherical solutions; localized sources plus outgoing selection pick the physical branch (Section~\ref{sec:ch02.4.2}).
 
 \subsection{The Maxwell solution map}
 \label{sec:ch02.1.2}
@@ -113,11 +120,11 @@ Each symbol is defined at first appearance: $\mathbf{r}$ is the observation poin
 \subsection{Causality and the retarded branch}
 \label{sec:ch02.2.2}
 
-A frequency-domain phasor is physically meaningful only if it arises from causal time-domain evolution. For the retarded Green function, the field at $(\mathbf{r},t)$ depends on sources only at retarded times $t'<t$. The causal dyadic representation developed in Section~\ref{sec:ch02.4.1} implies that harmonic symbols used in $\mathcal{S}_\omega$ must be continued to the \emph{outgoing} Riemann sheet: spatial factors $\exp(-\jj k_0 r)$ on spheres of large radius, and propagating plane waves with $\Re\{k_z\}>0$ in the outward direction \cite{stratton1941,jackson1999}. Incoming partners satisfy the same homogeneous equation but violate the retarded link to a localized source.
+A frequency-domain phasor is physically meaningful only if it arises from causal time-domain evolution (Subsections~\ref{sec:ch02.2.3}--\ref{sec:ch02.2.5}). For the retarded Green function, the field at $(\mathbf{r},t)$ depends on sources only at retarded times $t'<t$. The causal dyadic representation developed in Section~\ref{sec:ch02.4.1} implies that harmonic symbols used in $\mathcal{S}_\omega$ must be continued to the \emph{outgoing} Riemann sheet: spatial factors $\exp(-\jj k_0 r)$ on spheres of large radius, and propagating plane waves with the outgoing root of Eq.~\eqref{eq:ch2.kz-dispersion} \cite{stratton1941,jackson1999}. Incoming partners satisfy the same homogeneous equation but violate the retarded link to a localized source.
 
 \section{Mathematical Setting for Fields and Sources}
 \label{sec:ch02.3}
 
 Electromagnetic energy and power involve integrals of quadratic field expressions. A Maxwell field with finite energy on a bounded region cannot be an arbitrary vector function: curls must be square-integrable in the sense required by Eqs.~\eqref{eq:ch2.vector-wave-E}--\eqref{eq:ch1.maxwell-local}. The standard Sobolev space $\HCurl(\Omega)=\{\mathbf{u}\in L^2(\Omega)^3:\curl\mathbf{u}\in L^2(\Omega)^3\}$ supplies that regularity \cite{stratton1941}. Tangential traces $\hat{\mathbf{n}}\times\E|_\Gamma$ live in fractional trace spaces on Lipschitz boundaries; impedance and outgoing conditions restrict which trace pairs belong to the physical problem (Section~\ref{sec:ch01.1.2}).
 
-For the arguments of this chapter, three spaces suffice conceptually: $\mathcal{J}_\Omega$ (admissible sources), $\mathcal{F}_\Omega$ (Maxwell-closed pairs), and $\mathcal{F}_{\mathrm{rad}}$ (outgoing radiative pairs). When compactness of $\mathcal{R}_\omega$ on bounded observation domains is invoked in Section~\ref{sec:ch02.7}, it is the mathematical expression of the physical fact that a finite radiator cannot excite infinitely many independent far-zone degrees of freedom \cite{chu1948,harrington2001}. We do not develop abstract functional analysis for its own sake; each space is tied to an identifiable electromagnetic object.
+For the arguments of this chapter, three spaces suffice conceptually: $\mathcal{J}_\Omega$ (admissible sources), $\mathcal{F}_\Omega$ (Maxwell-closed pairs), and $\mathcal{F}_{\mathrm{rad}}$ (outgoing radiative pairs). Subsections~\ref{sec:ch02.3.1}--\ref{sec:ch02.3.2} develop traces, adjoints, and Fredholm structure where radiation inversion and finite observation require them. When compactness of $\mathcal{R}_\omega$ on bounded observation domains is invoked in Section~\ref{sec:ch02.7}, it is the mathematical expression of the physical fact that a finite radiator cannot excite infinitely many independent far-zone degrees of freedom \cite{chu1948,harrington2001}. Each space is tied to an identifiable electromagnetic object.

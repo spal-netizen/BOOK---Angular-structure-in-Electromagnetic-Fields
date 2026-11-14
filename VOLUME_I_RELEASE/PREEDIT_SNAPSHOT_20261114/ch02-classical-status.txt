@@ -1,0 +1,19 @@
+﻿ M latex/ch02-classical/part01-source-and-harmonic-maxwell.tex
+ M latex/ch02-classical/part02-green-functions-and-outgoing-waves.tex
+ M latex/ch02-classical/part03-near-far-radiation-operators.tex
+ M latex/ch02-classical/part04-spectral-null-reciprocity.tex
+ M latex/ch02-classical/part05-angular-spectrum-examples-summary.tex
+ M latex/ch02-classical/restored/restore-orig-007-2-1-2-linear-operators-domain-range-and-adjoint.tex
+ M latex/ch02-classical/restored/restore-orig-008-2-1-3-boundedness-compactness-rank-deficiency-spectral-compr.tex
+ M latex/ch02-classical/restored/restore-orig-009-2-1-4-self-adjointness-completions-and-admissibility.tex
+?? latex/ch02-classical/part01b-time-frequency-chain.tex
+?? latex/ch02-classical/part01c-duhamel-semigroup.tex
+?? latex/ch02-classical/part02-near-far-radiated-power.tex
+?? latex/ch02-classical/part02b-dyadic-derivation-singularity.tex
+?? latex/ch02-classical/part06-mathematical-setting-fredholm.tex
+?? latex/ch02-classical/part07-singular-values-aperture.tex
+?? latex/ch02-classical/part08-angular-spectrum.tex
+?? latex/ch02-classical/part10-spectral-rotational-core.tex
+?? latex/ch02-classical/part10c-eigenfunction-spectral.tex
+?? latex/ch02-classical/part11-fredholm-solvability.tex
+?? latex/ch02-classical/part12-momentum-angular-momentum-flux.tex
