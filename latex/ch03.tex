@@ -5782,19 +5782,19 @@ k_{0}\,\mathbf{N}_{\ell m},\
 \big),
 \end{equation}
 with \(\eta_{0}=\sqrt{\mu_{0}/\varepsilon_{0}}\) \cite{stratton1941}.
-\begin{proposition}[Curl identities from Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def}]
+\begin{proposition}[Vector Helmholtz structure of $\mathbf{M}_{\ell m}$ and $\mathbf{N}_{\ell m}$]
 \label{prop:ch3.MN-curl-identities}
-Away from $r=0$, the definitions imply
+With Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} and $k_0=\omega\sqrt{\mu_0\varepsilon_0}$, for $r>0$,
 \begin{equation}
 \label{eq:ch3.curl-M-equals-kN}
 \curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m},
 \qquad
 \curl\mathbf{N}_{\ell m}=-k_0\mathbf{M}_{\ell m},
 \end{equation}
-with $k_0=\omega\sqrt{\mu_0\varepsilon_0}$ under $\eim$.
+and $\mathbf{M}_{\ell m},\mathbf{N}_{\ell m}$ are divergence-free. The first row is the definition of $\mathbf{N}_{\ell m}$; the second is the outgoing vector Helmholtz identity for toroidal--poloidal fields \cite{stratton1941,tai1994}.
 \end{proposition}
 \begin{proof}
-Write $f=h_\ell^{(1)}(k_0 r)Y_\ell^m$. In spherical coordinates, $\curl(f\hat{\mathbf{r}})=\nabla f\times\hat{\mathbf{r}}$ because $\curl\hat{\mathbf{r}}=\mathbf{0}$ for $r>0$. Using $\nabla f=\hat{\mathbf{r}}\,\partial_r f+(1/r)\nabla_\perp Y_\ell^m$ and $\hat{\mathbf{r}}\times\nabla_\perp Y_\ell^m$ in the standard toroidal--poloidal algebra \cite{stratton1941,tai1994}, one obtains $\curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m}$; the second identity follows from $\curl\mathbf{N}_{\ell m}=(1/k_0)\curl\curl\mathbf{M}_{\ell m}=-k_0\mathbf{M}_{\ell m}$ in source-free vacuum.
+By Eq.~\eqref{eq:ch3.Nlm-def}, $\curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m}$ holds identically. For the second row, differentiate again and use $\curl\curl\mathbf{V}=\nabla(\nabla\cdot\mathbf{V})-\nabla^{2}\mathbf{V}$ with $\nabla\cdot\mathbf{M}_{\ell m}=\mathbf{0}$. In source-free vacuum each Cartesian component of $f=h_\ell^{(1)}(k_0 r)Y_\ell^m$ satisfies $(\nabla^{2}+k_0^{2})f=0$, hence $\nabla^{2}\mathbf{M}_{\ell m}=-k_0^{2}\mathbf{M}_{\ell m}$ for the multicomponent field assembled from $\curl(f\hat{\mathbf{r}})$ \cite{jackson1999,stratton1941}. Therefore $\curl\mathbf{N}_{\ell m}=\frac{1}{k_0}\curl\curl\mathbf{M}_{\ell m}=-k_0\mathbf{M}_{\ell m}$. Divergence-free status follows from $\nabla\cdot(\curl\mathbf{A})=0$ and Eq.~\eqref{eq:ch3.Nlm-def}.
 \end{proof}
 \begin{theorem}[Maxwell form of Eq.~\eqref{eq:ch3.VSH-M-pair}]
 \label{thm:ch3.VSH-maxwell-pair}
