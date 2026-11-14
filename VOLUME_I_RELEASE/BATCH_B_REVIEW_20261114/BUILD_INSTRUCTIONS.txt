@@ -1,0 +1,20 @@
+Batch B review build — Volume I integration (Ch.1–4, refs resolved)
+================================================================
+
+Prerequisites: TeX Live with latexmk, bibtex/biber as configured in latex/.
+
+From repository root:
+
+  cd latex
+  latexmk -pdf -interaction=nonstopmode -file-line-error main-vol1-stage10.tex
+
+On success, outputs in latex/:
+  main-vol1-stage10.pdf
+
+Copy to this directory as VOLUME_I_REVIEW.pdf (see build-review-batch-b.ps1).
+
+Chapter-only review copies: extract pages with your PDF tool, or compile with
+main-vol1-stage10.pdf as the authoritative cross-reference-complete document.
+
+Chapter 1 benchmark is included from protected ch01.tex; verify SHA per
+VOLUME_I_RELEASE/CHAPTER1_BENCHMARK_MANIFEST.txt after any full build.

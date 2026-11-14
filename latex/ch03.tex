@@ -2459,7 +2459,31 @@ Subsections~\ref{sec:ch294} and~\ref{sec:ch262} \cite{stratton1941}. Maxwell
 rotations on pairs use Eq.~\eqref{eq:ch2.field-rotation-representation}, equivalent to
 Eq.~\eqref{eq:ch3.symmetry-action-fields} for \(g\in\mathrm{SO}(3)\) \cite{stratton1941}.
 For unit axis \(\hat{\mathbf{u}}\) and scalar Cartesian component \(F\in\{E_x,E_y,E_z,H_x,H_y,H_z\}\),
-Eq.~\eqref{eq:ch1.rotation-generator-split} defines the orbital generator action. On the Maxwell pair
+Eq.~\eqref{eq:ch1.rotation-generator-split} defines the orbital generator action.
+\begin{proposition}[Infinitesimal rotation generator from $T_g$]
+\label{prop:ch3.generator-from-finite-rotation}
+Let $R(\varphi,\hat{\mathbf{u}})\in\mathrm{SO}(3)$ rotate about unit axis $\hat{\mathbf{u}}$ through angle $\varphi$.
+For a smooth vector phasor $\mathbf{F}$, define $(T_\varphi\mathbf{F})(\mathbf{r})=\mathbf{R}(\varphi,\hat{\mathbf{u}})\mathbf{F}\!\big(R(-\varphi,\hat{\mathbf{u}})\mathbf{r}\big)$.
+Then at $\varphi=0$,
+\begin{equation}
+\label{eq:ch3.orbital-generator-from-Tg}
+\frac{\partial}{\partial\varphi}\big(T_\varphi\mathbf{F}\big)\Big|_{\varphi=0}
+=
+\hat{\mathbf{u}}\times\mathbf{F}(\mathbf{r})
+-
+\big(\hat{\mathbf{u}}\times\mathbf{r}\big)\cdot\nabla\mathbf{F}(\mathbf{r}),
+\end{equation}
+componentwise, which is the orbital generator on each Cartesian component in Eq.~\eqref{eq:ch1.rotation-generator-split}.
+\end{proposition}
+\begin{proof}
+Set $\mathbf{R}(\varphi)=\overline{\mathbf{I}}+\varphi\,[\hat{\mathbf{u}}]_\times+\mathcal{O}(\varphi^2)$ with $[\hat{\mathbf{u}}]_\times$ the skew cross-product matrix and $R(-\varphi)\mathbf{r}=\mathbf{r}-\varphi\,\hat{\mathbf{u}}\times\mathbf{r}+\mathcal{O}(\varphi^2)$.
+To first order,
+$T_\varphi\mathbf{F}=\mathbf{F}+\varphi\big(\hat{\mathbf{u}}\times\mathbf{F}-(\hat{\mathbf{u}}\times\mathbf{r})\cdot\nabla\mathbf{F}\big)+\mathcal{O}(\varphi^2)$
+using $\mathbf{R}\mathbf{F}(R^{-1}\mathbf{r})-\mathbf{F}=(\mathbf{R}-\mathbf{I})\mathbf{F}+\mathbf{F}(R^{-1}\mathbf{r})-\mathbf{F}(\mathbf{r})$.
+Differentiating at $\varphi=0$ gives Eq.~\eqref{eq:ch3.orbital-generator-from-Tg} \cite{jackson1999}.
+For $\E$ and $\H$, the same formula applies to each component; Eq.~\eqref{eq:ch3.active-rotation-vector-field} is the finite-$T_g$ form specialized to $\mathrm{SO}(3)$ \cite{stratton1941}.
+\end{proof}
+On the Maxwell pair
 \(\mathbf{u}_\omega=(\E,\H)\), define the orbital angular-momentum operator component
 \begin{equation}
 \label{eq:ch3.J-orbital-maxwell}

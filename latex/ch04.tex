@@ -3067,22 +3067,28 @@ identical \(\widetilde{\mathbf{A}}_{\mathrm{syn}}\) differ only in \(\mathcal{K}
 Propagating sectors on the observation sphere are those that carry retarded power through the export map; evanescent sectors store reactive energy near the source \cite{stratton1941}. Near-field scans rich in evanescent content must be filtered before far-zone rank is inferred \cite{devaney2004}.
 \subsection{Decay of high-order angular content}
 \label{sec:ch443}
-Section~\ref{sec:ch441} bandlimited lateral spectra; the spherical listing inherits the same physics through high-angular-order tail decay \cite{hansen1988}. On a ball $B_a$ of radius $a$, electrical size $k_0 a$ sets how rapidly coefficients $\widehat{c}_{\ell m}^{(\sigma)}$ must fall once $\ell$ exceeds the support scale: sectors with $\ell\gg k_0 a$ carry exponentially suppressed export, visible on compact ranges as sidelobe floors that no feed optimization on fixed outline can erase \cite{jackson1999}.
-% PHYSICAL-MEMORY:sec:ch443
-% PHYSICAL-MEMORY:sec:ch443-b2
-\begin{physicalvignette}[Outdoor far-field range with mast and ground reflection]
-A second bench observation matters on Phased array panel on a positioner. When technicians swap only the receive probe while holding the transmit chain fixed, reciprocity checks whether the reported coupling is property of the structure or artifact of a mismatched flux gauge \cite{stratton1941}. Failed reciprocity usually traces to a near-field tap, a radome standing-wave, or a probe polarization basis that was never aligned with the transmit standard \cite{hansen1988}.
-Chu and Landau warned that finite size caps simultaneous localization and spectral spread \cite{chu1948}. Devaney's inverse-scattering perspective reminds us that reachable far-zone data never exceeds what bounded sources can export \cite{devaney2004}.
-The measurement logic above is made precise in Subsection~\ref{sec:ch443} \cite{stratton1941}.
-\end{physicalvignette}
-\begin{physicalvignette}[Outdoor far-field range with mast and ground reflection]
-Consider Outdoor far-field range with mast and ground reflection. Before any coefficient table is printed, technicians record frequency, cable loss, and the mechanical outline that fixes electrical size. The first walk-through of the range is always tactile: flange bolts, probe standoff, turntable boresight, and the wattmeter reference on the receive chain \cite{hansen1988}.
-On this hardware the near zone is visually impressive---standing reactive structure, rapid phase rotation, sometimes a visible VSWR ripple at the feed---yet the export question is measured only after outgoing selection on a large sphere \cite{harrington2001}. What the camera sees in the chamber is not automatically what the far-zone pattern claims \cite{stratton1941}.
-Engineers therefore learn to separate three readings: what the feed can synthesize on declared support, what propagating content survives on the radiative range, and what a finite instrument can recover at declared tolerance \cite{devaney2004}. Confusing those readings produces the rank gaps and watt failures that later sections quantify \cite{pal2026}.
-High-order angular content decays on compact supports . Tail floors appear as shoulders when synthesis ignores them .
-Chu and Landau warned that finite size caps simultaneous localization and spectral spread \cite{chu1948}. Devaney's inverse-scattering perspective reminds us that reachable far-zone data never exceeds what bounded sources can export \cite{devaney2004}.
-Subsection~\ref{sec:ch443} states the formal export condition that this range scene presupposes \cite{stratton1941}.
-\end{physicalvignette}
+Section~\ref{sec:ch441} bandlimited lateral spectra; the spherical listing inherits the same physics through high-angular-order tail decay \cite{hansen1988}.
+On a ball $B_a$ of radius $a$ enclosing $\operatorname{supp}\Jimp$, the radiative coefficient in sector $(\ell,m,\sigma)$ is obtained by coupling the impressed current to the outgoing vector harmonics of Subsection~\ref{sec:ch341}.
+Let $\mathbf{W}_{\ell m}^{(\sigma)}$ denote the normalized outgoing basis vector on $\mathcal{F}_{\mathrm{rad}}$ (electric or magnetic type $\sigma\in\{\mathbf{M},\mathbf{N}\}$).
+With flux-weighted inner product $\langle\cdot,\cdot\rangle_{\mathrm{rad}}$ from Section~\ref{sec:ch35},
+\begin{equation}
+\label{eq:ch4.source-mode-coupling-integral}
+\widehat{c}_{\ell m}^{(\sigma)}
+=
+\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]
+=
+\left\langle
+\mathcal{R}_\omega[\Jimp],\,
+\mathbf{W}_{\ell m}^{(\sigma)}
+\right\rangle_{\mathrm{rad}}
+=
+\int_{\Omega_s}
+\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}(\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}\mathbf{r}',
+\end{equation}
+where $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ is the adjoint source-to-mode kernel induced by $\mathcal{C}\circ\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ and the dyadic propagator of Subsection~\ref{sec:ch231} \cite{stratton1941,hansen1988}.
+Equation~\eqref{eq:ch4.source-mode-coupling-integral} is the mode analogue of the radiation integral Eq.~\eqref{eq:ch2.radiation-integral}: geometry enters through the overlap of $\Jimp$ with spatially varying vector harmonics inside $\Omega_s$, not through the chart length $|I|$ alone.
+For $\ell>k_0 a$, spherical Bessel factors in the near-source integrand and the small-argument Hankel envelope in $\mathbf{W}_{\ell m}^{(\sigma)}$ imply estimates of the form below; exact zeros require additional symmetry (Subsection~\ref{sec:ch452}), not compactness alone \cite{jackson1999}.
+
 The significance of the tail law for realizability is direct. Tail budget $\eta_{\mathrm{tail}}$ names the watt fraction permitted beyond truncation $\ell_{\max}$; remainder operator $\mathbf{R}_{\ell_{\max}}$ from Chapter~3 carries the discarded power \cite{stratton1941}. A sidelobe campaign that assigns appreciable weight to $\ell\ge 8$ on a $\lambda/8$ disk is therefore not a feed-network problem alone---it conflicts with $\mathcal{B}_{\mathrm{fs}}$ before MoM inversion begins \cite{chu1948}. Subsection~\ref{sec:ch443} states the decay envelope, links tail mass $\mathcal{M}_{\mathrm{tail}}$ to synthesis error, and records the tail exponent $\nu_{\mathrm{tail}}(\mathbf{c})$ laboratories can verify on measured $\mathbf{c}$ \cite{hansen1988}.
 for \(\ell>k_{0}a\),
 \begin{equation}
@@ -3093,8 +3099,7 @@ for \(\ell>k_{0}a\),
 \ell^{-1}\exp(-\ell/k_{0}a),
 \end{equation}
 with \(\mathcal{C}_{\ell}\) depending on polarization sector \(\sigma\) and normalization gauge
-\cite{stratton1941}. Equation~\eqref{eq:ch4.high-ell-decay} uses the engineering tail law of
-Subsection~\ref{sec:ch362} as a $\mathcal{S}_{\mathrm{real}}$ inequality: coefficients above the envelope cannot be synthesized on
+\cite{stratton1941}. The estimate follows from Eq.~\eqref{eq:ch4.source-mode-coupling-integral}: for $\mathbf{r}'\in B_a$, the source factor in $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ scales with spherical Bessel functions $j_\ell(k_0 r')$ (bounded by $(k_0 a)^\ell$ at low argument) while the radiating envelope carries outgoing $h_\ell^{(1)}$, yielding factorial-scale suppression when $\ell\gg k_0 a$ \cite{jackson1999,stratton1941}. Equation~\eqref{eq:ch4.high-ell-decay} packages that scaling as a conservative synthesis envelope, not a universal exact zero; parity or symmetry can force $\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]=0$ separately (Eq.~\eqref{eq:ch4.modal-coupling-integral}). Coefficients above the envelope cannot be synthesized on
 \(B_{a}\) at fixed \(k_{0}\) \cite{harrington2001}. The bound aligns with
 Eq.~\eqref{eq:ch4.compression-error-import} when \(\{\mathbf{u}_{n}\}\) are VSH modes
 \cite{hansen1988}.
