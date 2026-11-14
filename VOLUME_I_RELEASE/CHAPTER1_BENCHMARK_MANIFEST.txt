@@ -1,0 +1,23 @@
+# Volume I — Chapter 1 author benchmark (frozen for Ch.2–4 transformation)
+# Established: 2026-11-14
+
+AUTHOR_REFERENCE_PDF=C:\Users\S.Pal\Downloads\main-ch01-only.pdf
+# (same bytes as supplied upload main-ch01-only(20261114-081522).pdf when that file is present)
+
+CANONICAL_SOURCE_TREE=CHAPTER1_FORENSIC_AUDIT_STAGE1_20261010/CHAPTER1_R13_0_SOURCE_VERIFIED_CANONICAL/
+WORKING_TEX=source/CHAPTER1_R13_0_WORKING_CANDIDATE.tex
+BUILD=build_package/main-ch01-only.tex
+BUILD_CMD=latexmk -g -pdf -jobname=CHAPTER1_CLASSICAL_FINAL main-ch01-only.tex
+REVIEW_PDF_MIRROR=CHAPTER1_R13_1_FINAL_AUTHOR_REVIEW/pdf/CHAPTER1_R13_1_FINAL_AUTHOR_REVIEW.pdf
+
+TEX_SHA256=D8F13213324DB3119093F8C5E1F8B4223704F435F61812E26B1BB1C9F714A3B2
+PDF_SHA256=A05B9CCEFDE2E57C7D30937857994BF8B3CFA2E29A531273AF7E582ED307740E
+PDF_PAGES=62
+PDF_BYTES=1266072
+
+PRIOR_TAGS=chapter1-r13.1-release-ca5f1972,chapter1-r13.1-prose-clean-f58d279d
+NEW_BENCHMARK_TAG=chapter1-benchmark-20261114-a05b9cce
+
+CHAPTER1_EDIT_POLICY=FROZEN — no manuscript edits during Volume I Ch.2–4 pass unless author approves evidenced defect.
+
+VALIDATION=CHAPTER1_R13_0_SOURCE_VERIFIED_CANONICAL/validation/ch01_*.py (all PASS at benchmark lock)
