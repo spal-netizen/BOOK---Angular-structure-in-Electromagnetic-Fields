@@ -83,12 +83,7 @@ in open configurations. Let \(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omeg
 denote pairs whose far-zone asymptotics satisfy outgoing selection (made analytic in
 Section~\ref{sec:ch24}). Radiation accounting therefore requires a second map that
 discards non-outgoing storage before pattern or transport claims are made. The outgoing
-selector \(\Pi_{\mathrm{rad}}:\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{rad}}\) performs
-that discard: it accepts a completed Maxwell pair and returns only the component whose
-leading far-zone asymptotics satisfy Sommerfeld-outgoing qualification
-\cite{stratton1941}. From a measurement standpoint, \(\Pi_{\mathrm{rad}}\) is the
-mathematical counterpart of moving a probe beyond the reactive shell and reporting only
-the transverse outgoing field that persists with \(1/r\) decay \cite{harrington2001}.
+map \(\Pi_{\mathrm{rad}}:\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{rad}}\) assigns to each completed Maxwell pair its Sommerfeld-outgoing far-zone transverse coefficients (equivalently, the equivalence class in \(\mathcal{F}_\Omega\) with the same asymptotic data). It is \emph{not} a global orthogonal projection on \(\mathcal{F}_\Omega\): near-zone reactive fields are not removed by a single linear map on the full pair unless an inner product, domain, and decomposition have been proved \cite{stratton1941,harrington2001}.
 Composing source excitation with that selector defines the \emph{radiation operator}
 \begin{equation}
 \label{eq:ch2.radiation-operator-def}
@@ -110,18 +105,11 @@ Maxwell completion:
 =
 \Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega,
 \qquad
-\mathcal{D}_{J}=1
-\Longrightarrow
 \mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega,
 \quad
 \mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}.
 \end{equation}
-where $\mathcal{S}_\omega$ is the harmonic Maxwell solution map, $\Pi_{\mathrm{rad}}$ the
-outgoing selector, $\mathcal{R}_\omega$ the radiation map, $\mathcal{J}_\Omega$ the impressed-current
-space, $\mathcal{F}_\Omega$ the admissible field space, $\mathcal{F}_{\mathrm{rad}}$ the radiative
-subspace, and $\mathcal{D}_J=1$ the transport qualification inherited from
-\ref{ch:01} \cite{stratton1941}. Equation~\eqref{eq:ch2.operator-composition} composes $\mathcal{S}_\omega$ with outgoing
-selection $\Pi_{\mathrm{rad}}$ on $\mathcal{J}_\Omega$ \cite{stratton1941}. On a ball
+where $\mathcal{S}_\omega$ is the harmonic Maxwell solution map on admissible sources (Eq.~\eqref{eq:ch2.charge-continuity-admissibility} and Section~\ref{sec:ch203}), $\Pi_{\mathrm{rad}}$ is the far-zone extraction map, $\mathcal{R}_\omega$ the radiation map, and $\mathcal{J}_\Omega$, $\mathcal{F}_\Omega$, $\mathcal{F}_{\mathrm{rad}}$ the source and field spaces declared in Subsection~\ref{sec:ch211} \cite{stratton1941}. On a ball
 $B_a$ with $k_0 a=0.5$, reactive-to-radiative field-energy ratios on $S_R$ with $R=2a$
 typically exceed unity by an order of magnitude; applying pattern or transport metrics to
 $\mathcal{S}_\omega[\Jimp]$ without $\Pi_{\mathrm{rad}}$ therefore overstates export by
@@ -362,16 +350,7 @@ as modifications of Maxwell law \cite{stratton1941}. Angular-transport claims
 require further that \(\Lambda_{\mathrm{rad}}\) be compatible with the flux
 budgets of Section~\ref{sec:ch01.1.5} when the observable is interpreted as
 momentum or power export.
-The outgoing selector \(\Pi_{\mathrm{rad}}\) is idempotent on
-\(\mathcal{F}_{\mathrm{rad}}\): applying selection twice leaves a radiative state
-unchanged. On the larger space \(\mathcal{F}_\Omega\), \(\Pi_{\mathrm{rad}}\) is
-a projection only after the Sommerfeld-class uniqueness of Section~\ref{sec:ch243}
-is imposed; without that completion, multiple outgoing decompositions can coexist
-for the same truncated near-zone data. The idempotence condition is therefore a
-\emph{joint} property of field space and boundary class, not a algebraic trick
-independent of physics \cite{harrington2001}. Numerical methods that
-window fields in space and call the result ``radiative'' without outgoing radiation condition are approximating \(\Pi_{\mathrm{rad}}\) by a non-idempotent mask; such outputs
-must not be fed into transport criteria without an explicit error budget.
+On $\mathcal{F}_{\mathrm{rad}}$, defined as pairs specified by their common outgoing far-zone coefficients, $\Pi_{\mathrm{rad}}$ is the identity map: extraction does not alter a state already in that class. On $\mathcal{F}_\Omega$, $\Pi_{\mathrm{rad}}$ is neither an orthogonal projection nor a near-field subtractor in general; two distinct near-field pairs can share identical asymptotic data, and uniqueness of the full pair requires the exterior BVP of Section~\ref{sec:ch243} \cite{stratton1941,sommerfeld1949}. Spatial windowing that truncates the near zone without enforcing the radiation condition therefore yields an approximation to $\Pi_{\mathrm{rad}}$, not the asymptotic map itself.
 The composition law used downstream is
 \begin{equation}
 \label{eq:ch2.measurement chain-composition}
@@ -379,20 +358,13 @@ The composition law used downstream is
 =
 \Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega,
 \qquad
-\mathcal{D}_{J}=1
-\Longrightarrow
 \mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega,
 \quad
 \mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}.
 \end{equation}
 In Eq.~\eqref{eq:ch2.measurement chain-composition},
-\(\mathcal{S}_\omega\) is the Maxwell solution map from admissible sources to field pairs,
-\(\Pi_{\mathrm{rad}}\) is the outgoing selector that retains far-zone transverse export,
-\(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\) is the radiation map,
-\(\mathcal{D}_{J}=1\) denotes source Maxwell-closed from
-Eq.~\eqref{eq:ch2.source-admissibility}, and \(\mathcal{J}_\Omega\),
-\(\mathcal{F}_\Omega\), \(\mathcal{F}_{\mathrm{rad}}\) are the source and field spaces
-declared in Subsection~\ref{sec:ch201}.
+$\mathcal{S}_\omega$ is the Maxwell solution map, $\Pi_{\mathrm{rad}}$ the far-zone extraction map,
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ the radiation map on admissible $\mathcal{J}_\Omega$, and the field spaces are those of Subsection~\ref{sec:ch211}.
 Green kernels realize \(\mathcal{S}_\omega\); Sommerfeld conditions define
 \(\Pi_{\mathrm{rad}}\); spectral theory in Section~\ref{sec:ch26} studies
 eigenstructure on spaces refined in Section~\ref{sec:ch21}

@@ -132,12 +132,21 @@ and \(\varepsilon_{\mathrm{cert}}\) is the declared measurement tolerance
 The practical consequence is immediate: observable angular structure is a filtered image of realizable structure, and synthesizable is already narrower than mathematical admissibility on $\mathbb{C}^{I}$ \cite{devaney2004}.
 \begin{figure}[t]
 \centering
-\VolIFigInclude{ch4-synthesis-$\mathcal{E}_{\mathrm{acc}}^{(N)}$-sets}
-\caption{range membership acts on synthesis: bounded impressed currents map into
-\(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\subseteq\mathbb{C}^{I}\) through
-\(\mathcal{R}_\omega\) and \(\mathcal{C}\). probe rank acts on recovery: finite-rank
-\(\mathcal{M}\) defines the envelope \(\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})\) of
-estimated coefficients. The two subsets need not coincide.}
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig]
+ \draw[ch1frame] (-38mm,-22mm) rectangle (38mm,22mm);
+ \node[anchor=north west, font=\small] at (-36mm,20mm) {$\mathbb{C}^{I}$ (complete chart)};
+ \draw[ch1flow, dashed] (0,0) ellipse (28mm and 16mm);
+ \node at (0,4mm) {$\mathcal{S}_{\mathrm{real}}(\mathcal{C})$};
+ \node[font=\scriptsize, align=center] at (0,-6mm) {synthesizable\\coefficients};
+ \draw[ch1flow] (8mm,-2mm) ellipse (18mm and 12mm);
+ \node at (14mm,-8mm) {$\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$};
+ \node[font=\scriptsize, align=center, anchor=west] at (22mm,6mm) {recoverable\\at tolerance};
+ \draw[->, ch1flow] (-48mm,0) -- (-38mm,0) node[midway,above,font=\scriptsize] {$\mathcal{R}_\omega,\mathcal{C}$};
+ \draw[->, ch1flow] (48mm,0) -- (38mm,0) node[midway,above,font=\scriptsize] {$\mathcal{M}$};
+\end{tikzpicture}%
+}
+\caption{Bounded sources map through $\mathcal{R}_\omega$ and chart $\mathcal{C}$ into the synthesizable set $\mathcal{S}_{\mathrm{real}}(\mathcal{C})\subseteq\mathbb{C}^{I}$. Finite-rank measurement $\mathcal{M}$ defines the recoverable set $\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ at declared tolerance; the two sets need not coincide \cite{stratton1941,hansen1988}.}
 \label{fig:ch4.synthesis-accessibility-sets}
 \end{figure}
 On a compact range, $\mathcal{S}_{\mathrm{real}}(\mathcal{C})$ is what a finite dipole, horn, array, or aperture can actually radiate; $\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ is what a scan sphere with $N$ probes can recover to declared tolerance \cite{stratton1941}. A dish may synthesize sidelobe structure that a sparse range cannot resolve; dense sampling cannot invent channels geometry never coupled \cite{hansen1988}. Design problems seek $\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})$; inverse problems seek stable estimates of $\mathbf{c}\in\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ \cite{devaney2004}.

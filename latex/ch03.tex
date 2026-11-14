@@ -13,53 +13,34 @@
 \section{Introduction}
 \label{sec:ch30}
 
-An antenna pattern plotted on a sphere is already a coordinate picture: the laboratory has chosen how to index directions on the observation shell. The displayed amplitudes are not self-interpreting labels. They are samples of a field state that survived Maxwell dynamics, boundary enforcement, reactive storage, evanescent sheets, and the outgoing selector \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\) established in Chapter~\ref{ch:02}
-\cite{stratton1941}. At fixed \(\omega\), the present chapter asks a representation-theoretic question: \emph{in which coordinates does the surviving radiative structure become labeled, orthogonal, normalizable, and measurable?} Spherical harmonics, \(\mathrm{SO}(3)\) blocks, and Wigner matrices are classical tools; the distinctive viewpoint developed here is that radiation must be read through a strict three-layer nesting---\textbf{operator} \(\to\) \textbf{state} \(\to\) \textbf{representation}---in which operators determine export, states carry physical content, and representations merely label states \cite{allen1992}.
-% PHYSICAL-HISTORY:sec:ch30
+Far-zone electromagnetic fields are vector functions on a sphere (or, at large distance, on directions of the unit sphere). When the source region, media, and boundary conditions are invariant under spatial rotations, the same field viewed in a rotated frame is related to the original by an action on both the spatial argument and the vector components. Chapter~\ref{ch:02} identified admissible impressed currents, constructed the Maxwell solution $\mathcal{S}_\omega[\Jimp]$, and defined radiative data through the far-zone map $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ \cite{stratton1941}. The present chapter develops the natural coordinates on that radiative data: scalar and vector spherical harmonics, angular-momentum generators, and $\mathrm{SO}(3)$ representation matrices under the volume phasor convention $\eim$ with $\partial_t\to+\jj\omega$ \cite{jackson1999,stratton1941}.
 
-Maxwell's equations define the outgoing states whose rotational structure this chapter describes \cite{maxwell1873}. Poynting's flux theorem made total power through $\Gamma_R$ the watt-distinguishable invariant against which rotated principal cuts and relabelled coefficients must be checked \cite{poynting1884}. Stratton's spherical separation and outgoing radial functions supplied the coordinate language in which compact-range and radio-telescope reports are still written \cite{stratton1941}. Chu showed that finite support enforces spectral compression: high angular order cannot be sustained without enlarging electrical size \cite{chu1948}. Harrington's treatment of radiating systems, together with Hansen's near-field measurement practice, made harmonic listing a report on export rather than a reactive near-field convenience \cite{harrington2001}. Turntable data, focal-plane decompositions, and spherical near-field inversions inherit that obligation: organize only what outgoing Maxwell radiation carries after export, then read finite rank through declared instruments \cite{jackson1999}. The Volume~I thesis applies directly---\emph{finite geometry limits realizable, accessible, and observable angular electromagnetic complexity}---now at the stage where symmetry and charts translate export into the modal sectors laboratories may publish \cite{pal2026}. Rotation on the range therefore tests organization, not invention: the hardware moves, the wattmeter on the far shell decides what export was real \cite{belinfante1940}.
+The scientific task is not to relabel a pattern plot but to construct a complete set of Maxwell solutions with definite rotational properties---electric and magnetic multipole eigenfields---and to fix normalizations so that modal coefficients carry unambiguous power and flux meaning \cite{harrington2001,beth1936}. Vector spherical harmonics arise because $\E$ and $\H$ are vector fields subject to $\curl\E=-\jj\omega\mu_0\H$ and $\curl\H=\jj\omega\varepsilon_0\E$ in source-free regions; a scalar angular dependence alone does not define an electromagnetic eigenfield. Sections~\ref{sec:ch32}--\ref{sec:ch34} derive the coupled $\mathbf{M}_{\ell m}$ and $\mathbf{N}_{\ell m}$ families and verify curl identities and outgoing radial factors consistent with Chapter~\ref{ch:01}. Sections~\ref{sec:ch35}--\ref{sec:ch39} fix inner products, flux normalizations, completeness statements on declared domains, Wigner rotations of coefficients, and gauge scope.
 
-% PHYSICAL-MEMORY:sec:ch30
- \(\Jimp\) on bounded support \(\Omega\) enter \(\mathcal{S}_\omega\) (Eq.~\eqref{eq:ch2.maxwell-solution-map}); outgoing projection \(\Pi_{\mathrm{rad}}\) (Eq.~\eqref{eq:ch2.rad-projection-composition}) retains the Sommerfeld-qualified radiative sector; and
-\begin{equation}
-\label{eq:ch3.export-pipeline-preview}
-\mathcal{R}_\omega[\Jimp]
-=
-\Pi_{\mathrm{rad}}\big(\mathcal{S}_\omega[\Jimp]\big)
-\end{equation}
-restates Eq.~\eqref{eq:ch2.radiation-operator-def} \cite{stratton1941}. The object \(\mathcal{R}_\omega[\Jimp]\) is a field pair on \(\mathcal{F}_{\mathrm{rad}}\), not a coefficient list. Modal indices enter only after the representation map of Subsection~\ref{sec:ch301}. Volume~I reverses the order common in OAM discourse: one first asks what radiates, what survives export, and what becomes observable; only then does an angular label acquire meaning \cite{belinfante1940}. Principles~\ref{prin:ch2.radiative-accessibility} and~\ref{prin:ch1.rep-physics} encode that ordering: indexing applies to accessible export, and labels become physical only after operator and measurement screens are satisfied.
+Throughout, $\mathcal{R}_\omega[\Jimp]$ denotes an outgoing field state in $\mathcal{F}_{\mathrm{rad}}$, not a list of numbers. The linear map $\mathcal{C}$ from $\mathcal{F}_{\mathrm{rad}}$ to coefficient sequences is introduced in Subsection~\ref{sec:ch301}; modal indices acquire physical meaning only after normalization and radiation conditions are stated. Chapter~\ref{ch:04} constrains which coefficient vectors can be realized from bounded sources and which can be recovered from finite probes.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=6mm and 9mm]
- \node[ch1box] (src) {Source\\$\Jimp$ on $\Omega$};
- \node[ch1box, right=11mm of src] (sw) {$\mathcal{S}_\omega$\\full Maxwell};
- \node[ch1box, right=11mm of sw] (pi) {$\Pi_{\mathrm{rad}}$\\outgoing};
- \node[ch1box, right=11mm of pi] (fr) {$\mathcal{F}_{\mathrm{rad}}$\\state};
- \node[ch1box, right=11mm of fr] (rep) {Representation\\coefficients};
- \node[ch1box, right=11mm of rep] (meas) {Measurement\\reports};
- \draw[ch1flow] (src) -- (sw) -- (pi) -- (fr) -- (rep) -- (meas);
+\begin{tikzpicture}[ch1fig, node distance=6mm and 10mm]
+ \node[ch1box] (max) {Maxwell\\$\mathcal{S}_\omega[\Jimp]$};
+ \node[ch1box, right=12mm of max] (rad) {Far-zone data\\$\mathcal{R}_\omega[\Jimp]$};
+ \node[ch1box, right=12mm of rad] (vsh) {VSH / multipole\\eigenfields};
+ \node[ch1box, right=12mm of vsh] (coef) {Modal\\coefficients};
+ \draw[ch1flow] (max) -- (rad) -- (vsh) -- (coef);
 \end{tikzpicture}%
 }
-\caption{Laboratory chain for Volume~I representation theory. \ref{ch:02} owns
-\(\mathcal{S}_\omega\), \(\Pi_{\mathrm{rad}}\), and \(\mathcal{R}_\omega\); \ref{ch:03}
-owns the passage from \(\mathcal{F}_{\mathrm{rad}}\) to symmetry-adapted coordinates; \ref{ch:01}
-and Section~\ref{sec:ch29} own the measurement composition at the right.}
+\caption{From Maxwell solution to angular representation: radiative data from Chapter~\ref{ch:02} are expanded in rotationally covariant vector modes whose normalization is fixed by radiated flux (Section~\ref{sec:ch35}).}
 \label{fig:ch3.laboratory-chain}
 \end{figure}
-Convention 3.0A (inherited export chain). Throughout \ref{ch:03}, \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\)
-(Eqs.~\eqref{eq:ch2.radiation-operator-def}, \eqref{eq:ch3.export-pipeline-preview}) is fixed.
-Domain, range, and commutator structure are cited only when a new theorem requires them.
-Figure~\ref{fig:ch3.laboratory-chain} organizes the operator \(\to\) state \(\to\) representation \(\to\) measurement progression. Vector spherical harmonics and plane-wave spectra are coordinates on \(\operatorname{ran}\mathcal{R}_\omega\), not substitutes for export \cite{hansen1988}. Section~\ref{sec:ch31} closes Hilbert-space apparatus; Sections~\ref{sec:ch32}--\ref{sec:ch34} install angular-momentum algebra and VSH eigenfields; Sections~\ref{sec:ch35}--\ref{sec:ch39} fix normalization, spectra, basis laws, and gauge discipline; Section~\ref{sec:ch310} verifies; Section~\ref{sec:ch3inherit} forwards exports to \ref{ch:04} \cite{harrington2001}.
-Consider a compact resonant antenna: reactive structure near the feed never enters \(\mathcal{F}_{\mathrm{rad}}\); the far-zone pattern may be sparse in one basis and dense in another while radiated power and reciprocity remain fixed on \(\operatorname{ran}\mathcal{R}_\omega\) \cite{stratton1941}. It is essential to distinguish operator export \(\mathcal{R}_\omega\), coordinate choice \(\mathcal{C}\), and measurement \(\mathcal{M}\) in Eqs.~\eqref{eq:ch3.representation-map} and~\eqref{eq:ch3.measurement-on-coefficients}; realizability in \ref{ch:04} constrains achievable coefficient vectors, not the existence of angular channels \cite{devaney2004}.
-Subsection~\ref{sec:ch301} develops the operator--state--representation separation; Subsections~\ref{sec:ch302}--\ref{sec:ch303} connect it to radiation integrals and admissibility measurement records.
+
+Subsection~\ref{sec:ch301} separates the radiation map from coordinate choice; Subsections~\ref{sec:ch302}--\ref{sec:ch303} connect angular spectra to the radiation integrals of Chapter~\ref{ch:02}.
 \subsection{Symmetry, operators, and representations}
 \label{sec:ch301}
 % CH03-NARR-EXP:03.301
 Turntable cuts on compact ranges rotate the coordinate description of a fixed export: shell power on $\Gamma_R$ stays invariant while $(\ell,m)$ partners mix through Wigner blocks \cite{stratton1941,belinfante1940}. Harmonic indices therefore label organization already present on $\mathcal{F}_{\mathrm{rad}}$, not properties of reactive near-field plots \cite{jackson1999,hansen1988}.
 % TOC tag: [HOME]
 Radiation patterns, coupling coefficients, and modal reports display numbers indexed by angular labels. Before any label is read as ``orbital order'' or ``channel number,'' one must decide what object is indexed. By Convention~3.0A, that object is \(\mathcal{R}_\omega[\Jimp]\in\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}. The operator--state--representation separation governs the entire chapter: \(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\) fix export; \(\mathfrak{F}\in\mathcal{F}_{\mathrm{rad}}\) carries radiative content; \(\mathcal{C}\) and symmetry representations \(\rho(g)\) label that content in Fig.~\ref{fig:ch3.laboratory-chain} \cite{jackson1999}.
-Assumptions and admissible field pairs. Fix \(\omega>0\) under the \(\exp(-\jj\omega t)\) convention of Chapter~\ref{ch:01}, linear isotropic homogeneous regions unless stated otherwise, and outgoing closure on exterior problems as in Section~\ref{sec:ch24} \cite{stratton1941}. Impressed currents \(\Jimp\) lie in the admissible source class of Subsection~\ref{sec:ch201}; field pairs \((\E,\H)\) are discussed on \(\mathcal{F}_{\mathrm{rad}}\) only after application of \(\Pi_{\mathrm{rad}}\) from Eq.~\eqref{eq:ch2.rad-projection-composition} \cite{harrington2001}. Symmetry groups \(G\) are taken to preserve Maxwell equations and the boundary class \(\mathcal{B}_\Gamma\); time-harmonic translation is not re-developed here. When \(G=\mathrm{SO}(3)\), rotations act on spatial coordinates and on vector components consistently with Section~\ref{sec:ch01.3} \cite{jackson1999}. These assumptions are the same regime in which Eqs.~\eqref{eq:ch2.pipeline-composition} and~\eqref{eq:ch2.radiation-operator-def} were proved; extending representation theory beyond them requires new commutator analyses, not relabeled modes \cite{stratton1941}.
+Fix \(\omega>0\) under the phasor convention $\eim$ of Chapters~\ref{ch:01} and~\ref{ch:02}, linear isotropic homogeneous regions unless stated otherwise, and outgoing closure on exterior problems as in Section~\ref{sec:ch24} \cite{stratton1941}. Impressed currents \(\Jimp\) lie in the admissible class of Section~\ref{sec:ch203}; fields on \(\mathcal{F}_{\mathrm{rad}}\) are equivalence classes with common far-zone asymptotics as in Section~\ref{sec:ch201} \cite{harrington2001}. When \(G=\mathrm{SO}(3)\), rotations act on coordinates and on vector components as in Section~\ref{sec:ch01.3} \cite{jackson1999}.
 Three levels: operator, state, coordinate. Write \(\mathfrak{F}\in\mathcal{F}_{\mathrm{rad}}\) for a radiative field state (an equivalence class of admissible pairs on the outgoing branch). The export map
 \begin{equation}
 \label{eq:ch3.state-from-source}
