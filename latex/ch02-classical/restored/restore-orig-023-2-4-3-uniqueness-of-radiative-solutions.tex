@@ -9,7 +9,10 @@ fixed, no second distinct field pair can satisfy the same constraints
 \cite{sommerfeld1949,stratton1941}. Without that conclusion, measured far-zone patterns could
 not be attributed to declared sources: two different near-zone states might share identical
 radiative export. Reactive energy may dominate on $\Gamma_R$ close to $\Omega_s$ while
-contributing negligibly to $P_{\mathrm{rad}}$ once $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is applied \cite{harrington2001}.
+contributing negligibly to $P_{\mathrm{rad}}$ once
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}$ with
+$\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$
+is applied (Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}) \cite{harrington2001}.
 
 The proof imports the difference-field energy method of Subsection~\ref{sec:ch01.1.3}
 (Eqs.~\eqref{eq:ch1.uniqueness-difference-system}--\eqref{eq:ch1.uniqueness-energy-identity})
@@ -187,11 +190,14 @@ transverse radiation as $R\to\infty$ under the Sommerfeld class
 Lemma~(\ref{lem:ch2.zero-flux-difference}) therefore yields $\mathbf{E}_{\Delta,t}=\mathbf{0}$ on
 every sufficiently large $\Gamma_R$.
 For a source-free homogeneous difference field with outgoing exterior completion, vanishing
-transverse radiation implies $\mathbf{u}_\Delta=\mathbf{0}$ by uniqueness of the retarded exterior
-solution, Eq.~\eqref{eq:ch2.outgoing-solution-operator} with $\Jimp=\mathbf{0}$
-\cite{stratton1941}.
-Zero limiting export does not by itself describe arbitrary near-zone storage; it selects the
-\emph{unique} trivial homogeneous outgoing state once the radiative flux channel is exhausted.
+transverse radiation implies $\mathbf{u}_\Delta=\mathbf{0}$ once the exterior resolvent is
+single-valued on $\mathcal{F}_{\mathrm{SF}}$ (Eq.~\eqref{eq:ch2.exterior-resolvent-injective});
+here that conclusion is imported from the retarded exterior solution operator
+Eq.~\eqref{eq:ch2.outgoing-solution-operator} with $\Jimp=\mathbf{0}$ under the Sommerfeld
+hypotheses of Subsection~\ref{sec:ch241} \cite{stratton1941,sommerfeld1949}.
+The present subsection proves uniqueness of radiative \emph{export} through the flux identity;
+the final identification $\mathbf{u}_\Delta=\mathbf{0}$ uses that cited resolvent injectivity, not a separate
+re-derivation of the full homogeneous Maxwell resolvent in $\mathbb{R}^{3}$.
 Hence
 \(\mathbf{u}_\Delta=\mathbf{0}\), proving Eq.~\eqref{eq:ch2.exterior-uniqueness-theorem}.
 Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) is the exterior counterpart of

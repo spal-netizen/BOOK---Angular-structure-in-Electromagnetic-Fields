@@ -175,8 +175,9 @@ Eq.~\eqref{eq:ch2.radiation-operator-def} is refined spectrally, not replaced
 The physical problem is spectral transport: a near-field scanner records both traveling and
 decaying longitudinal content, yet only outgoing propagating modes may enter far-zone power
 reports \cite{hansen1988}. Subsection~\ref{sec:ch224} defines propagating, evanescent, and non-propagating spectral
-subspaces and refines \(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\)
-so that only outgoing propagating content qualifies for far-zone transport reports
+subspaces; outgoing selection $\mathcal{O}_{\mathrm{out}}$ and far-amplitude extraction
+$\Pi_{\mathrm{rad}}$ remain distinct (Proposition~\ref{prop:ch2.Pirad-vs-Oout}), and only
+outgoing propagating content qualifies for far-zone transport reports
 \cite{stratton1941}. Recall that $\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega$ produces the
 full harmonic field pair, $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$
 retains only radiative content, and $\Pi_{\mathrm{rad}}$ acts after propagating selection
@@ -329,27 +330,23 @@ reactive storage exchange \cite{stratton1941}. Energy norms from
 Eq.~\eqref{eq:ch2.field-energy-norm} decompose orthogonally in the spectral basis
 when the impressed angular spectrum has sufficient decay in \((k_x,k_y)\)
 \cite{stratton1941}.
-\begin{equation}
-\label{eq:ch2.rad-projection-composition}
-\Pi_{\mathrm{rad}}
-=
-\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}},
-\end{equation}
-where \(\mathcal{O}_{\mathrm{out}}\) enforces outgoing selection on propagating
-content compatible with Eq.~\eqref{eq:ch1.radiation-trace-condition}
-\cite{stratton1941}. Equation~\eqref{eq:ch2.rad-projection-composition} refines
-\(\Pi_{\mathrm{rad}}\): radiative subspace \(\mathcal{F}_{\mathrm{rad}}\) is a
-subset of \(\Pi_{\mathrm{prop}}\mathcal{F}_\Omega\), not of all of
+Outgoing selection and far-amplitude extraction compose through
+Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}:
+$\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$ enforces
+outgoing propagating content compatible with Eq.~\eqref{eq:ch1.radiation-trace-condition},
+and $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}$ records radiative
+export \cite{stratton1941}. Radiative subspace \(\mathcal{F}_{\mathrm{rad}}\) is a
+subset of outgoing field pairs in \(\mathcal{F}_\Omega\), not of all of
 \(\mathcal{F}_\Omega\) \cite{harrington2001}. Evanescent and non-propagating
 components lie in the null space of far-zone radiation:
 \begin{equation}
 \label{eq:ch2.rad-null-on-evanescent}
-\Pi_{\mathrm{rad}}\Pi_{\mathrm{ev}}=0,\qquad
-\Pi_{\mathrm{rad}}\Pi_{\mathrm{non}}=0,
+\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}\circ\Pi_{\mathrm{ev}}=\mathbf{0},\qquad
+\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}\circ\Pi_{\mathrm{non}}=\mathbf{0},
 \end{equation}
-while \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}=\Pi_{\mathrm{rad}}\) after outgoing
-closure \cite{stratton1941}. Equations~\eqref{eq:ch2.rad-null-on-evanescent} and
-\eqref{eq:ch2.rad-projection-composition} restate, in projector form, the regime
+when \(\Pi_{\mathrm{ev}}\), \(\Pi_{\mathrm{non}}\) act on completed pairs before outgoing selection
+\cite{stratton1941}. Equation~\eqref{eq:ch2.rad-null-on-evanescent} and
+Eq.~\eqref{eq:ch2.outgoing-radiation-refinement} restate, in operator form, the regime
 logic of Section~\ref{sec:ch01.2.4}: reactive near fields may be large even when
 \(\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]=\mathbf{0}\) \cite{harrington2001}.
 Causality from Subsection~\ref{sec:ch223} ensures retarded support but does not,
@@ -358,8 +355,10 @@ by itself, promote evanescent content into \(\mathcal{F}_{\mathrm{rad}}\).
 For all \(r>r_{\min}(a,\lambda_0)\) and every transport, flux, near-to-far, and angular-spectrum
 statement in Sections~\ref{sec:ch25}--\ref{sec:ch210},
 \begin{equation*}
-\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}
-\quad\text{as in Eq.~\eqref{eq:ch2.rad-projection-composition}.}
+\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega,
+\qquad
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}
+\quad\text{as in Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}.}
 \end{equation*}
 Earlier uses of \(\Pi_{\mathrm{rad}}\) in Section~\ref{sec:ch20} are to be read through this
 refinement \cite{stratton1941}. Transport qualification from Section~\ref{sec:ch01.2.4} enters as an operator criterion:

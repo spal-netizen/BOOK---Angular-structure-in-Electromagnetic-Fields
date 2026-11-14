@@ -1,0 +1,15 @@
+Volume I Batch D review build
+=============================
+Branch: volume-i/ch2-4-coordinated-transformation
+Driver: latex/main-vol1-stage10.tex
+
+From repository root:
+  powershell -NoProfile -ExecutionPolicy Bypass -File latex/build-review-batch-d.ps1
+
+Outputs:
+  VOLUME_I_RELEASE/BATCH_D_REVIEW_20261114/VOLUME_I_REVIEW.pdf
+  VOLUME_I_RELEASE/BATCH_D_REVIEW_20261114/BUILD_LOG.txt
+  VOLUME_I_RELEASE/BATCH_D_REVIEW_20261114/sources/ (edited TeX mirrors)
+  VOLUME_I_RELEASE/BATCH_D_REVIEW_20261114/CHAPTER1_HASH_CHECK.txt
+
+Chapter 1: FROZEN — verify SHA in CHAPTER1_HASH_CHECK.txt against benchmark manifest.

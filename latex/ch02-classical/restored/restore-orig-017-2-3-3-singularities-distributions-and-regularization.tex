@@ -30,6 +30,37 @@ Eqs.~\eqref{eq:ch2.free-space-scalar-green} and~\eqref{eq:ch2.free-space-dyadic-
 unless \(\mathcal{B}_\Gamma\) or piecewise \(k(\mathbf{r})\) modify them patchwise.
 Observation points \(\mathbf{r}\) may approach \(\operatorname{supp}\Jimp\) but
 remain in the domain where \(\E\in\HCurl(\Omega)\) is sought.
+Away from coincidence the kernels satisfy the homogeneous Helmholtz and curl--curl equations;
+at coincidence the source appears as a distribution.
+\begin{theorem}[Distributional fundamental dyad at coincidence]
+\label{thm:ch2.dyadic-distributional-fundamental}
+For the outgoing vacuum kernels $G_0$ and $\overline{\mathbf{G}}_{E,0}$ under $\eim$,
+the scalar identity is Eq.~\eqref{eq:ch2.scalar-green-distributional} from
+Proposition~\ref{prop:ch2.scalar-green-vacuum}, and
+\begin{equation}
+\label{eq:ch2.dyadic-green-distribution}
+\mathcal{W}_{E,\omega}\,\overline{\mathbf{G}}_{E,0}(\cdot,\mathbf{r}')
+=\overline{\mathbf{I}}\,\delta^{(3)}(\mathbf{r}-\mathbf{r}')
+\end{equation}
+in $\mathcal{D}'(\mathbb{R}^{3})$, with $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^{2}$.
+\end{theorem}
+\begin{proof}
+For $R>0$, Eqs.~\eqref{eq:ch2.scalar-green-distributional} and~\eqref{eq:ch2.dyadic-green-distribution} reduce to
+Proposition~\ref{prop:ch2.scalar-green-vacuum} and the homogeneous part of
+Proposition~\ref{prop:ch2.dyadic-curl-curl-green}.
+Let $\varphi\in C_c^{\infty}(\mathbb{R}^{3})$ and $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$.
+For $R_\varepsilon>0$ with $\varepsilon$ smaller than the distance from $\operatorname{supp}\mathbf{f}$ to $\mathbf{r}'$,
+apply Green's second identity on $B_{R_\varepsilon}\setminus B_{\varepsilon}$ and let $\varepsilon\to 0^{+}$.
+The scalar case yields
+$\int \varphi(\nabla^{2}+k_0^{2})G_0\,d^{3}\mathbf{r}=\varphi(\mathbf{r}')$ because the surface term vanishes under
+outgoing decay and the interior sphere contribution gives the $\delta^{(3)}$ mass \cite{jackson1999}.
+For the dyad, integrate by parts as in Eq.~\eqref{eq:ch2.dyadic-green-ibp} columnwise with test field
+$\mathbf{f}$ and let $R_\varepsilon\to\infty$. The singular part of $\overline{\mathbf{G}}_{E,0}\sim \overline{\mathbf{I}}/(4\pi R)$
+combined with the Lorenz longitudinal term reproduces unit impressed current in each Cartesian direction at $\mathbf{r}'$
+\cite{stratton1941,tai1994}. The limiting density is $\overline{\mathbf{I}}\,\delta^{(3)}(\mathbf{r}-\mathbf{r}')$.
+\end{proof}
+Physically, the $\delta^{(3)}$ term is the idealized impressed dipole source; finite patches regularize the same mass over
+$\operatorname{supp}\Jimp$ rather than a mathematical point \cite{stratton1941}.
 For \(\mathbf{r}\notin\operatorname{supp}\Jimp\), the convolution
 Eq.~\eqref{eq:ch2.electric-dyadic-convolution} is a classical integral. What happens when
 observation and source points become arbitrarily close? The free-space dyad develops a

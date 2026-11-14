@@ -79,9 +79,11 @@ We therefore introduce an \emph{outgoing radiative extraction map} $\Pi_{\mathrm
 where $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omega$ is the subspace of pairs whose leading far-zone behavior is outgoing and transverse in the sense of Section~\ref{sec:ch02.4}. The map $\Pi_{\mathrm{rad}}$ is \emph{not} an unqualified orthogonal projection on all of $\mathcal{F}_\Omega$; it is the Sommerfeld-class restriction
 \begin{equation}
 \label{eq:ch2.Pirad-composition}
-\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}},
+\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega,
+\qquad
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}},
 \end{equation}
-where $\Pi_{\mathrm{prop}}$ selects propagating spectral content on a homogeneous background and $\mathcal{O}_{\mathrm{out}}$ retains the outgoing branch of that content (Section~\ref{sec:ch02.4}). On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ acts as the identity---applying extraction twice leaves a radiative state unchanged.
+where $\mathcal{O}_{\mathrm{out}}$ removes incoming propagating content from completed Maxwell pairs (Subsection~\ref{sec:ch242}) and $\Pi_{\mathrm{rad}}$ forms far-zone equivalence classes with common amplitude $\mathbf{E}_0$ (Subsection~\ref{sec:ch201}). On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ is the identity on classes; it is not equal to $\mathcal{O}_{\mathrm{out}}$ on $\mathcal{F}_\Omega$ (Proposition~\ref{prop:ch2.Pirad-vs-Oout}).
 
 Finite measurements compose with $\mathcal{R}_\omega$, not with $\mathcal{S}_\omega$, when the declared observable is a far-zone quantity. Let $\mathcal{O}_{\mathrm{far}}$ extract a pattern coefficient or polarization component from $\mathcal{F}_{\mathrm{rad}}$, and let $\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}$ model a finite probe bank of rank at most $N$. The laboratory readout map is
 \begin{equation}

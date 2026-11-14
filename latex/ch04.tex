@@ -542,9 +542,27 @@ so identical \(\mathbf{c}\) may arise from distinct \(\Jimp\) differing by non-r
 synthesis non-uniqueness law: range membership of \(\mathbf{c}\) does not determine a unique current
 distribution \cite{devaney2004}. Inverse design must quotient \(\mathcal{J}_{\mathrm{real}}\) by
 \(\ker\boldsymbol{\Gamma}_\omega\) developed in Subsection~\ref{sec:ch414}.
-on compact \(\Omega_{s}\), \(\mathcal{R}_\omega\) is compact on \(\mathcal{J}_\Omega\); hence
-\(\boldsymbol{\Gamma}_\omega\) is compact into \(\mathbb{C}^{I}\) when \(I\) is countable
-\cite{stratton1941}. For any finite-dimensional truncation \(I_{N}\subset I\),
+\begin{proposition}[Compact synthesis on bounded sources]
+\label{prop:ch4.gamma-compact}
+Let $\Omega_{s}$ be compact with $\diam\Omega_{s}=D_{s}$ and fix $\omega>0$.
+Equip $\mathcal{J}_\Omega$ with $\|\Jimp\|_{\mathcal{J}}^{2}=\int_{\Omega_{s}}|\Jimp|^{2}\,d^{3}\mathbf{r}$.
+If $\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}$ is compact on bounded sets of $\mathcal{J}_\Omega$
+(continuous dyadic propagation with outgoing completion on exterior domains \cite{stratton1941,hansen1988}),
+and $\mathcal{C}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{I}$ is bounded with countable admissible index set $I$,
+then $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$ is compact from $\mathcal{J}_\Omega$ to $\mathbb{C}^{I}$.
+\end{proposition}
+\begin{proof}
+Composition of a compact map with a bounded operator is compact in the operator topology on bounded subsets
+\cite{kato1995}. Compact support confines impressed data to $L^{2}(\Omega_{s})^{3}$;
+retarded representation maps bounded source balls to relatively compact sets in the radiative seminorm when
+Green kernels are square-integrable on exterior shells at fixed $\omega$ \cite{hansen1988}.
+Bounded projection $\mathcal{C}$ into $\ell^{2}(I)$ sends precompact sets to precompact sets in $\mathbb{C}^{I}$.
+\end{proof}
+Physically, enlarging a feed beyond a bounded hull does not produce an open ball of attainable coefficient vectors:
+finite electrical size compresses export into a decaying singular-value ladder
+(Eq.~\eqref{eq:ch4.gamma-SVD}). Proposition~\ref{prop:ch4.gamma-compact} states the operator form; full
+Fredholm hypotheses on the complete Maxwell boundary-value map remain sectional \cite{harrington2001}.
+For any finite-dimensional truncation \(I_{N}\subset I\),
 \begin{equation}
 \label{eq:ch4.gamma-fredholm}
 \boldsymbol{\Gamma}_{\omega,N}
@@ -3098,9 +3116,15 @@ The radiative rank $r_{\mathrm{rad}}(\varepsilon)$ in Eq.~\eqref{eq:ch4.radiativ
 $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$, not of a finite observation map $\boldsymbol{\mathcal{M}}_\omega$.
 \end{proposition}
 \begin{proof}
-Insert $\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]$ into the radiative inner product and use reciprocity duality
-Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} for adjoint source modes $\widehat{\mathbf{J}}_{\ell m}^{(\sigma)\dagger}$
-\cite{stratton1941,hansen1988}. The dyadic propagation step is Eq.~\eqref{eq:ch2.electric-dyadic-convolution}; gauge fixing sets $\mathcal{Z}_{\ell m}^{(\sigma)}$.
+\emph{Volume form.} Eq.~\eqref{eq:ch4.modal-coupling-integral} is the $L^{2}(\Omega_s)^{3}$ pairing of $\Jimp$ with the source dual
+$\widehat{\mathbf{J}}_{\ell m}^{(\sigma)\dagger}$ induced by reciprocity
+Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} \cite{stratton1941}.
+\emph{Radiative form.} By definition of $\widehat{c}_{\ell m}^{(\sigma)}$ in the flux gauge,
+$\widehat{c}_{\ell m}^{(\sigma)}=\langle\mathbf{W}_{\ell m}^{(\sigma)},\mathcal{R}_\omega[\Jimp]\rangle_{\mathrm{rad}}$.
+Expand $\mathcal{R}_\omega[\Jimp]$ using dyadic propagation Eq.~\eqref{eq:ch2.electric-dyadic-convolution} and integrate by parts on $\Omega_s$ under outgoing completion; the result is a volume integral of the same type as Eq.~\eqref{eq:ch4.modal-coupling-integral} with kernel $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ assembled from Green contraction against $\mathbf{W}_{\ell m}^{(\sigma)}$ \cite{hansen1988}.
+\emph{Normalization.} Flux normalization in Section~\ref{sec:ch35} fixes
+$\mathcal{Z}_{\ell m}^{(\sigma)}$ so Eq.~\eqref{eq:ch4.coupling-far-zone-reduction} holds; $\mathcal{Z}_{\ell m}^{(\sigma)}$ is dimensionless in the aligned gauge and depends on $(\ell,m,\sigma)$ and $k_0$ only through the chosen flux reference on $\Gamma_R$ \cite{stratton1941}.
+The alignment is \emph{gauge-relative}; changing flux reference rescales $\mathcal{Z}_{\ell m}^{(\sigma)}$ without altering the underlying dyadic propagation.
 \end{proof}
 
 The significance of the tail law for realizability is direct. Tail budget $\eta_{\mathrm{tail}}$ names the watt fraction permitted beyond truncation $\ell_{\max}$; remainder operator $\mathbf{R}_{\ell_{\max}}$ from Chapter~3 carries the discarded power \cite{stratton1941}. A sidelobe campaign that assigns appreciable weight to $\ell\ge 8$ on a $\lambda/8$ disk is therefore not a feed-network problem alone---it conflicts with $\mathcal{B}_{\mathrm{fs}}$ before MoM inversion begins \cite{chu1948}. Subsection~\ref{sec:ch443} states the decay envelope, links tail mass $\mathcal{M}_{\mathrm{tail}}$ to synthesis error, and records the tail exponent $\nu_{\mathrm{tail}}(\mathbf{c})$ laboratories can verify on measured $\mathbf{c}$ \cite{hansen1988}.

@@ -3,23 +3,58 @@
 \section{Radiation Operators and Observable Fields}
 \label{sec:ch02.6}
 
-The composition $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is the central object of this chapter. Physically, $\mathcal{S}_\omega$ answers: ``If I drive this admissible current, what Maxwell field exists?'' The map $\Pi_{\mathrm{rad}}$ answers: ``Which part of that field is outgoing radiation in the Sommerfeld sense?'' Their composition answers: ``What radiative field does the source export to infinity?''
+\subsection{Outgoing radiative extraction}
+\label{sec:ch02.6.1}
 
-Linearity on fixed boundary data implies
+A completed Maxwell pair $(\E,\H)=\mathcal{S}_\omega[\Jimp]$ generally contains reactive storage, evanescent structure tied to the near zone, and---when the exterior is open---propagating waves that may be incoming or outgoing. Far-zone measurements respond to a narrower class: outgoing transverse fields whose leading spatial dependence is $e^{-\jj k_0 r}/r$. The map $\Pi_{\mathrm{prop}}$ retains propagating spectral content on a homogeneous background; the map $\mathcal{O}_{\mathrm{out}}$ selects the outgoing branch of that content (Section~\ref{sec:ch02.4.2}). Their composition
+\begin{equation}
+\label{eq:ch2.Pirad-composition-repeat}
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}},\ 
+\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega
+\end{equation}
+is the \emph{outgoing radiative extraction map} acting on field pairs in $\mathcal{F}_\Omega$. It is not an orthogonal Hilbert projection on all of $\mathcal{F}_\Omega$ unless an inner product and closed subspace are specified; physically it implements the radiation condition on propagating components. On the radiative subspace $\mathcal{F}_{\mathrm{rad}}=\operatorname{ran}\Pi_{\mathrm{rad}}$, one has $\Pi_{\mathrm{rad}}[\mathbf{u}]=\mathbf{u}$ and $\Pi_{\mathrm{rad}}^2=\Pi_{\mathrm{rad}}$ when both sides are understood on $\mathcal{F}_{\mathrm{rad}}$.
+
+The \emph{radiation operator} composes source excitation with that extraction:
+\begin{equation}
+\label{eq:ch2.Romega-composition-repeat}
+\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
+\qquad
+\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega,\quad
+\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\big(\mathcal{S}_\omega^{\mathrm{(out)}}[\Jimp]\big).
+\end{equation}
+Physically, $\mathcal{S}_\omega$ is the forward Maxwell calculation for a prescribed admissible source; $\mathcal{R}_\omega$ is the same calculation followed by retention of outgoing radiative export only.
+
+Linearity on fixed boundary data implies, for $a_1,a_2\in\mathbb{C}$ and $\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega$,
 \begin{equation}
 \label{eq:ch2.R-linearity}
 \mathcal{R}_\omega[a_1\Jimp^{(1)}+a_2\Jimp^{(2)}]
-=a_1\mathcal{R}_\omega[\Jimp^{(1)}]+a_2\mathcal{R}_\omega[\Jimp^{(2)}],
+=a_1\mathcal{R}_\omega[\Jimp^{(1)}]+a_2\mathcal{R}_\omega[\Jimp^{(2)}].
 \end{equation}
-for $a_1,a_2\in\mathbb{C}$ and $\Jimp^{(1)},\Jimp^{(2)}\in\mathcal{J}_\Omega$. Superposition of radiative images is legitimate only after each constituent satisfies charge continuity and outgoing selection \cite{maxwell1873,harrington2001}.
+The range $\operatorname{ran}\mathcal{R}_\omega$ is strictly smaller than $\operatorname{ran}\mathcal{S}_\omega$ whenever reactive storage is nontrivial: distinct near-zone states can share identical far-zone patterns (Section~\ref{sec:ch02.8}).
 
-The range $\operatorname{ran}\mathcal{R}_\omega\subset\mathcal{F}_{\mathrm{rad}}$ is strictly smaller than $\operatorname{ran}\mathcal{S}_\omega$ whenever reactive storage is nontrivial: many distinct near-zone states share the same far-zone pattern. Pattern measurements probe $\operatorname{ran}\mathcal{R}_\omega$; recovering $\Jimp$ from pattern data alone is an inverse problem with null space (Section~\ref{sec:ch02.8}).
+\subsection[Measurement and the map \texorpdfstring{$\Qomega$}{Q\_omega}]{Measurement and the map $\Qomega$}
+\label{sec:ch02.6.2}
 
-\section{Finite Radiators and Spectral Limitations}
-\label{sec:ch02.7}
+A far-zone instrument does not return the full field $\mathcal{R}_\omega[\Jimp]$. It returns a finite list of numbers---pattern samples, polarization ratios, or calibrated voltages---obtained through probes with finite aperture and finite angular sampling (Section~\ref{sec:ch01.5}). Let $\mathcal{O}_{\mathrm{far}}$ denote a linear functional extracting a declared far-zone scalar or vector quantity from $\mathcal{F}_{\mathrm{rad}}$, and let $\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}$ model the probe bank. The laboratory map
+\begin{equation}
+\label{eq:ch2.Qomega-repeat}
+\Qomega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega
+\end{equation}
+assigns to each admissible $\Jimp$ a measurement vector in $\mathbb{C}^{N}$. Rank limitations of $\mathcal{O}_{\mathrm{meas}}$ cap how many independent radiative degrees of freedom can be resolved regardless of Maxwell correctness \cite{harrington2001,hansen1988}.
 
-A bounded source of characteristic dimension $a$ cannot radiate arbitrary angular structure at wavelength $\lambda_0=2\pi/k_0$. Chu’s limit and the method-of-moments viewpoint both express the same physical fact: electrical size $k_0 a$ constrains how rapidly phase and amplitude may vary on the radiation sphere before stored energy dominates \cite{chu1948,harrington2001}. Mathematically, when $\mathcal{R}_\omega$ is restricted to fields on a bounded observation surface and viewed as a compact operator on appropriate Hilbert spaces, its singular values decay---small singular values correspond to source directions that couple weakly to the radiative field \cite{stratton1941}.
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=6mm of j] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=6mm of s] (p) {$\Pi_{\mathrm{rad}}$};
+ \node[ch1box, right=6mm of p] (q) {$\Qomega$};
+ \draw[ch1flow] (j) -- (s) -- (p) -- node[above,font=\scriptsize] {$\mathcal{O}_{\mathrm{far,meas}}$} (q);
+\end{tikzpicture}%
+}
+\caption{Forward chain: admissible source $\Jimp$ determines a Maxwell field, outgoing radiative extraction retains far-zone export, and the measurement map $\Qomega$ yields the finite data vector available to the laboratory.}
+\label{fig:ch2.forward-chain}
+\end{figure}
 
-Consider independent source excitations $\Jimp_1,\Jimp_2,\ldots$ and their radiative images $\mathcal{R}_\omega[\Jimp_n]$. If two combinations produce nearly identical far fields, the corresponding singular value is small; if a combination produces no far field at all, it lies in $\ker\mathcal{R}_\omega$. \emph{Effective rank} refers to the number of singular values above a measurement noise threshold; it is not identical to mathematical rank \cite{harrington2001}. A circular aperture of radius $a$ illustrates rapid SV decay beyond $k_0 a$, explaining why superdirectivity attempts trade against bandwidth and stored energy \cite{chu1948}.
-
-This chapter establishes that finite geometry restricts accessible angular content; Chapter~\ref{ch:04} develops realizability and synthesis constraints in greater depth.
+Once $\mathcal{R}_\omega$ and $\Qomega$ are fixed, the next physical question is how plane-wave and angular content is organized on a reference surface (Section~\ref{sec:ch02.10}) and how finite source and aperture geometry restricts what can be launched and measured (Section~\ref{sec:ch02.7}).

@@ -2160,8 +2160,10 @@ and idempotency \(\Pi_{\mathrm{prop}}^{2}=\Pi_{\mathrm{prop}}\) holds in the wea
 \(\mathcal{S}_\omega[\Jimp]\) without outgoing and regime qualification; it establishes that the algebra
 used on \(\mathcal{R}_\omega[\mathfrak{D}]\) in \ref{ch:02} is consistent with the
 Subsection~\ref{sec:ch312} inner product once embedded in \(\Phi^{*}\) \cite{harrington2001}.
-Radiation projector \(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\) inherits the
-same rigged status through Eq.~\eqref{eq:ch2.rad-projection-composition} \cite{stratton1941}.
+Far-amplitude extraction $\Pi_{\mathrm{rad}}$ and outgoing selection $\mathcal{O}_{\mathrm{out}}$ are not
+identified (Proposition~\ref{prop:ch2.Pirad-vs-Oout}); rigged embeddings use
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ with $\mathcal{S}_\omega$ already
+outgoing-selected as in Eq.~\eqref{eq:ch2.outgoing-radiation-refinement} \cite{stratton1941}.
 Let \(\mathcal{J}_{\mathrm{rig}}\) denote impressed data \(\mathfrak{D}\) for which
 \(\mathcal{S}_\omega[\mathfrak{D}]\in\Phi^{*}\) under Eq.~\eqref{eq:ch2.distributional-source-extension}
 \cite{stratton1941}. Define
@@ -6370,11 +6372,19 @@ Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} holds for distinct \((\ell,m,\sig
 with Eq.~\eqref{eq:ch3.outgoing-inheritance-criterion} \cite{stratton1941}.
 \end{theorem}
 \noindent\textit{Proof.}
-\emph{Step 1 (angular).} Scalar harmonics satisfy Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} on \(S^{2}\) .
-\emph{Step 2 (radial).} Outgoing Hankel products obey shell orthogonality Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} for distinct radial quantum numbers .
-\emph{Step 3 (reciprocity).} Eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product} symmetrizes the bilinear form so \(\mathbf{M}\)--\(\mathbf{N}\) cross terms at fixed \((\ell,m)\) vanish .
-\emph{Step 4 (composition).} Distinct \((\ell,m,\sigma)\) labels yield zero inner product in Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} .
-\emph{Step 5 (measurement).} Coefficient extraction on \(\Gamma_R\) is therefore a projection onto orthogonal templates, not curve fitting of \(|E|\) alone .
+\emph{Step 1 (angular factor).} On $S^{2}$ with measure $\sin\theta\,d\theta\,d\phi$,
+Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} gives
+$\int Y_{\ell}^{m*}Y_{\ell'}^{m'}\sin\theta\,d\Omega=\delta_{\ell\ell'}\delta_{mm'}$
+\cite{jackson1999}.
+\emph{Step 2 (toroidal construction).} From Eq.~\eqref{eq:ch3.Mlm-def},
+$\mathbf{M}_{\ell m}=\curl(h_\ell^{(1)}Y_\ell^m\hat{\mathbf{r}})$ is tangential to $S^{2}$ at fixed $r$ up to $k_0 r$-dependent factors; distinct $(\ell,m)$ angular factors are orthogonal by Step~1.
+\emph{Step 3 (radial).} For fixed $(\ell,m,\sigma)$ and distinct radial labels on shells $\Gamma_R$, orthogonality of Hankel products is Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} when $k_0R$ exceeds reactive scales \cite{hansen1988}.
+\emph{Step 4 ($\mathbf{M}$--$\mathbf{N}$ at fixed $(\ell,m)$).}
+With $\mathbf{N}_{\ell m}=(1/k_0)\curl\mathbf{M}_{\ell m}$ by definition,
+the reciprocity-symmetric pairing Eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product} cancels cross terms between magnetic-type and electric-type pairs at the same angular indices when tested on outgoing domains \cite{stratton1941}.
+\emph{Step 5.} Distinct full labels $(\ell,m,\sigma)\neq(\ell',m',\sigma')$ therefore give zero in
+Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} under $\langle\cdot,\cdot\rangle_{\mathrm{rad}}$.
+The proof does not claim orthogonality of arbitrary $\HCurl$ fields in a bounded volume without outgoing radial factors.
 Resolution of identity (HOME). Any \(\mathbf{v}_\omega\in\mathcal{F}_{\mathrm{rad}}\) admits
 \begin{equation}
 \label{eq:ch3.VSH-resolution-identity}
