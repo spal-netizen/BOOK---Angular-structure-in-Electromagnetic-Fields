@@ -323,18 +323,19 @@ Spectral compression is a geometric ceiling on synthesis, not a post-analysis fi
 Jackson's multipole decay laws and Harrington's rank arguments on bounded sources supply the historical spine for Eq.~\eqref{eq:ch4.spectral-compression-def}: the tail budget is a watt fraction, not a curve-fit knob . Subsection~\ref{sec:ch403} composes Chapters~\ref{ch:01}--\ref{ch:03} into the synthesis operator $\boldsymbol{\Gamma}_\omega$ before impressed-source admissibility is fixed in Section~\ref{sec:ch41} .
 \subsection{Realizability composition}
 \label{sec:ch403}
-Composition fixes the synthesis operator $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathbb{C}^{I}$ with $\mathcal{R}_\omega$ from Chapter~\ref{ch:02} and admissible chart $\mathcal{C}$ from Chapter~\ref{ch:03} \cite{stratton1941}. Equip $\mathcal{J}_\Omega$ with the $\mathrm{L}^2(\Omega_s)^3$ norm on current support and $\mathbb{C}^{I}$ with the flux-weighted norm declared in Section~\ref{sec:ch35}. The singular values $\{\sigma_n(\boldsymbol{\Gamma}_\omega)\}$ are ordered decreasingly relative to those norms.
+Composition fixes the synthesis operator $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathbb{C}^{I}$ with $\mathcal{R}_\omega$ from Chapter~\ref{ch:02} and admissible chart $\mathcal{C}$ from Chapter~\ref{ch:03} \cite{stratton1941}. Equip $\mathcal{J}_\Omega$ with the $\mathrm{L}^2(\Omega_s)^3$ norm on current support and $\mathbb{C}^{I}$ with the flux-weighted norm declared in Section~\ref{sec:ch35}. When $\boldsymbol{\Gamma}_\omega$ is compact on $\mathcal{J}_{\mathrm{real}}$ (Section~\ref{sec:ch213}), its singular values $\sigma_1\ge\sigma_2\ge\cdots\to 0$ exist and define the singular-value decomposition Eq.~\eqref{eq:ch4.gamma-SVD}.
 \begin{equation}
 \label{eq:ch4.radiative-rank-operator}
 r_{\mathrm{rad}}(\varepsilon)
 =
-\max\left\{
-N:\ \sigma_{N}\big(\boldsymbol{\Gamma}_\omega\big)\ge\varepsilon\,\sigma_{1}\big(\boldsymbol{\Gamma}_\omega\big)
+\#\left\{
+n\in\mathbb{N}:\ 
+\sigma_{n}\big(\boldsymbol{\Gamma}_\omega\big)\ge\varepsilon\,\sigma_{1}\big(\boldsymbol{\Gamma}_\omega\big)
 \right\},
 \qquad
 d_{\mathrm{eff}}(\varepsilon)\equiv r_{\mathrm{rad}}(\varepsilon),
 \end{equation}
-for relative tolerance $0<\varepsilon<1$ and $\sigma_n$ from Eq.~\eqref{eq:ch4.gamma-SVD} \cite{harrington2001}. The count depends on $(\Omega_s,\omega,\mathcal{C},\varepsilon)$. Finite observation uses $\boldsymbol{\mathcal{M}}_\omega:\mathbb{C}^{I}\to\mathbb{C}^{N}$; its singular spectrum defines $\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ and is distinct from $\sigma_n(\boldsymbol{\Gamma}_\omega)$ \cite{hansen1988,devaney2004}.
+provided $0<\varepsilon<1$ and $\sigma_1(\boldsymbol{\Gamma}_\omega)>0$. If $\sigma_1=0$ (no radiative export at $\omega$), set $r_{\mathrm{rad}}(\varepsilon)=0$. Physically, $r_{\mathrm{rad}}(\varepsilon)$ counts how many orthonormal source-to-coefficient channels carry at least a fraction $\varepsilon$ of the strongest synthesis gain; it is not the harmonic listing length $|I|$, not exact rank unless $\varepsilon=0$, and not the number of modes resolvable by a finite instrument. Observation is modeled separately by $\boldsymbol{\mathcal{M}}_\omega:\mathbb{C}^{I}\to\mathbb{C}^{N}$, whose singular values govern $\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ \cite{hansen1988,devaney2004,harrington2001}. The count depends on $(\Omega_s,\omega,\mathcal{C},\varepsilon)$.
 \begin{figure}[t]
 \centering
 \VolIFigInclude{ch4-volume-consumption-map}
@@ -2599,15 +2600,6 @@ Let \(\boldsymbol{\Gamma}_\omega:\mathcal{J}_{\mathrm{real}}\to\ell^{2}(I)\) be 
 Tolerance \(\varepsilon>0\) is declared for synthesis or inversion \cite{devaney2004}.
 Regarding the singular value decomposition, there exist orthonormal source modes \(\{\mathbf{j}_{n}\}\subset\mathcal{J}_{\mathrm{real}}\) and coefficient modes
 \(\{\mathbf{e}_{n}\}\subset\ell^{2}(I)\) such that
-% PHYSICAL-MEMORY:sec:ch434
-\begin{physicalvignette}[Reflector with grating lobe from subarray spacing]
-Consider Reflector with grating lobe from subarray spacing. Before any coefficient table is printed, technicians record frequency, cable loss, and the mechanical outline that fixes electrical size. The first walk-through of the range is always tactile: flange bolts, probe standoff, turntable boresight, and the wattmeter reference on the receive chain \cite{hansen1988}.
-On this hardware the near zone is visually impressive---standing reactive structure, rapid phase rotation, sometimes a visible VSWR ripple at the feed---yet the export question is measured only after outgoing selection on a large sphere \cite{harrington2001}. What the camera sees in the chamber is not automatically what the far-zone pattern claims \cite{stratton1941}.
-Engineers therefore learn to separate three readings: what the feed can synthesize on declared support, what propagating content survives on the radiative range, and what a finite instrument can recover at declared tolerance \cite{devaney2004}. Confusing those readings produces the rank gaps and watt failures that later sections quantify \cite{pal2026}.
-Singular values rank export directions by watts aligned with each pattern . They diagnose hardware; they do not create channels .
-Chu and Landau warned that finite size caps simultaneous localization and spectral spread \cite{chu1948}. Devaney's inverse-scattering perspective reminds us that reachable far-zone data never exceeds what bounded sources can export \cite{devaney2004}.
-Subsection~\ref{sec:ch434} states the formal export condition that this range scene presupposes \cite{stratton1941}.
-\end{physicalvignette}
 \begin{equation}
 \label{eq:ch4.gamma-SVD}
 \boldsymbol{\Gamma}_\omega

@@ -98,10 +98,24 @@ where \(\mathfrak{F}=(\E,\H)\), \(\mathbf{U}_E(g)\) and \(\mathbf{U}_H(g)\) are 
 with $\mathbf{R}(g)$ the proper orthogonal matrix of Section~\ref{sec:ch01.3}. The map rotates both the observation point and the vector components; a scalar pattern $Y_\ell^m(\theta,\phi)$ alone does not transform electromagnetic solutions unless paired through Eqs.~\eqref{eq:ch1.maxwell-local} \cite{jackson1999,stratton1941}.
 \begin{proposition}[Rotational covariance of source-free Maxwell fields]
 \label{prop:ch3.maxwell-rotation-covariance}
-Let $(\E,\H)$ solve Eqs.~\eqref{eq:ch1.maxwell-local} with $\Jimp=\mathbf{0}$, $\rho=0$ in a homogeneous isotropic region invariant under $g\in\mathrm{SO}(3)$. Then $(T_g\E,T_g\H)$ is a solution for the same $\omega$.
+Let $g\in\mathrm{SO}(3)$ with orthogonal matrix $\mathbf{R}(g)=\mathbf{R}(g^{-1})^{\mathsf{T}}$. Let $(\E,\H)$ solve Eqs.~\eqref{eq:ch1.maxwell-local} with $\Jimp=\mathbf{0}$, $\rho=0$ in a homogeneous isotropic region. Define $(T_g\E)(\mathbf{r})=\mathbf{R}(g)\E(g^{-1}\mathbf{r})$ and $(T_g\H)$ analogously. Then $(T_g\E,T_g\H)$ satisfies the same Maxwell system at $\omega$.
 \end{proposition}
 \begin{proof}
-Using $\nabla\times(\mathbf{R}\mathbf{F})=\mathbf{R}(\nabla'\times\mathbf{F})$ under the change $\mathbf{r}'=g^{-1}\mathbf{r}$, Faraday's law gives $\curl(T_g\E)=-\jj\omega\mu_0(T_g\H)$ because $\mu_0$ is scalar; Amp\`ere's law follows similarly \cite{jackson1999,stratton1941}.
+Write $\mathbf{r}'=g^{-1}\mathbf{r}$. For any smooth $\mathbf{F}(\mathbf{r}')$, the chain rule with $\mathbf{R}\in\mathrm{SO}(3)$ gives
+$\nabla_{\mathbf{r}}\mathbf{F}(g^{-1}\mathbf{r})=\mathbf{R}\nabla_{\mathbf{r}'}\mathbf{F}(\mathbf{r}')$
+and $\curl_{\mathbf{r}}\big(\mathbf{R}\mathbf{F}(g^{-1}\mathbf{r})\big)=\mathbf{R}\big(\curl_{\mathbf{r}'}\mathbf{F}(\mathbf{r}')\big)$
+\cite{jackson1999}. Apply the first identity to $(T_g\E)(\mathbf{r})=\mathbf{R}\E(\mathbf{r}')$:
+\begin{equation}
+\label{eq:ch3.curl-rotated-E}
+\curl(T_g\E)(\mathbf{r})
+=
+\mathbf{R}\,\curl\E(\mathbf{r}')
+=
+-\jj\omega\mu_0\,\mathbf{R}\H(\mathbf{r}')
+=
+-\jj\omega\mu_0\,(T_g\H)(\mathbf{r}),
+\end{equation}
+because $\mu_0$ is scalar in an isotropic medium. The same argument on $\H$ yields $\curl(T_g\H)=\jj\omega\varepsilon_0(T_g\E)$ with $\varepsilon_0$ scalar. Gauss laws follow from $\nabla\cdot(\mathbf{R}\mathbf{F})=\nabla'\cdot\mathbf{F}$ under the same change of variables \cite{stratton1941}. Covariance fails if material tensors rotate nontrivially with $g$ or if impressed sources are present on the transformed domain.
 \end{proof}
 Subsection~\ref{sec:ch321} upgrades Eqs.~\eqref{eq:ch3.symmetry-action-fields}--\eqref{eq:ch3.active-rotation-vector-field} to angular-momentum generators \cite{stratton1941}. The map \(T_g\) is a group action because \(T_{g_1g_2}=T_{g_1}\circ T_{g_2}\) when the component matrices satisfy \(\mathbf{U}(g_1g_2)=\mathbf{U}(g_1)\mathbf{U}(g_2)\) \cite{jackson1999}. On energy-admissible subspaces equipped with the inner product of Subsection~\ref{sec:ch312}, \(T_g\) is unitary under the Volume~I phasor convention \cite{stratton1941}.
 Physically, Eq.~\eqref{eq:ch3.symmetry-action-fields} answers the question: ``If I rigidly rotate my laboratory frame, how do \(\E\) and \(\H\) re-express on the same spatial points?'' The inverse on \(\mathbf{r}\) ensures that scalar observables measured at fixed world points are unchanged under passive rotation of coordinates \cite{jackson1999}. The nontrivial content for radiation is not this definition alone but the \emph{commutation} of \(T_g\) with \(\mathcal{R}_\omega\) and the \emph{simultaneous} diagonalization of commuting symmetry operators on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.

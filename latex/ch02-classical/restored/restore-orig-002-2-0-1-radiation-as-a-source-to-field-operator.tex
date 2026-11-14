@@ -88,7 +88,15 @@ in open configurations. For $(\E,\H)\in\mathcal{F}_\Omega$ on an exterior domain
 +o(r^{-1}),
 \qquad r\to\infty,
 \end{equation}
-holds, with $\mathbf{H}=\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E}$ at leading order as in Eq.~\eqref{eq:ch1.radiation-trace-condition} \cite{stratton1941,sommerfeld1949}. Two pairs are \emph{radiatively equivalent} when their limits coincide. The space $\mathcal{F}_{\mathrm{rad}}$ is the set of equivalence classes $[(\E,\H)]_{\mathrm{rad}}$ with outgoing transverse asymptotics. The \emph{asymptotic extraction map}
+holds, with $\mathbf{H}=\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E}$ at leading order as in Eq.~\eqref{eq:ch1.radiation-trace-condition} \cite{stratton1941,sommerfeld1949}. Convergence is taken on spheres $\Gamma_R=\{|\mathbf{r}|=R\}$: the tangential trace of $\mathbf{E}$ approaches $\mathbf{E}_0(\theta,\phi)e^{-\jj k_0 R}/R$ in $L^{2}(\Gamma_R)$ as $R\to\infty$, uniformly on angular sectors fixed before taking the limit \cite{jackson1999}. Two pairs are radiatively equivalent when they share the same far-zone amplitude:
+\begin{equation}
+\label{eq:ch2.radiative-equivalence}
+(\E_a,\H_a)\sim_{\mathrm{rad}}(\E_b,\H_b)
+\quad\Longleftrightarrow\quad
+\mathbf{E}_{0,a}(\theta,\phi)=\mathbf{E}_{0,b}(\theta,\phi)
+\ \text{a.e.\ on }S^{2},
+\end{equation}
+where $\mathbf{E}_{0,a}$ is the limit in Eq.~\eqref{eq:ch2.far-amplitude-limit} for $(\E_a,\H_a)$ when that limit exists \cite{stratton1941}. The space $\mathcal{F}_{\mathrm{rad}}$ is the set of equivalence classes $[(\E,\H)]_{\mathrm{rad}}$ under $\sim_{\mathrm{rad}}$. The \emph{asymptotic extraction map}
 \begin{equation}
 \label{eq:ch2.Pirad-map-def}
 \Pi_{\mathrm{rad}}:\mathcal{D}(\Pi_{\mathrm{rad}})\subset\mathcal{F}_\Omega
@@ -96,7 +104,9 @@ holds, with $\mathbf{H}=\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E}$ at leading 
 \qquad
 (\E,\H)\longmapsto [(\E,\H)]_{\mathrm{rad}},
 \end{equation}
-is defined on pairs for which Eq.~\eqref{eq:ch2.far-amplitude-limit} holds; it records far-zone data, not a subtraction of near fields from $(\E,\H)$ \cite{stratton1941}. It is not an orthogonal projection on $\mathcal{F}_\Omega$. On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ is the identity on equivalence classes; on $\mathcal{F}_\Omega$, applying $\Pi_{\mathrm{rad}}$ to a single representative does not generally return the same $(\E,\H)$ unless the near field already vanishes on the stated class.
+is defined on the domain
+$\mathcal{D}(\Pi_{\mathrm{rad}})=\{(\E,\H)\in\mathcal{F}_\Omega:\text{Eq.~\eqref{eq:ch2.far-amplitude-limit} holds}\}$;
+it records far-zone data, not a subtraction of near fields from $(\E,\H)$ \cite{stratton1941}. It is not an orthogonal projection on $\mathcal{F}_\Omega$. On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ is the identity on equivalence classes; on $\mathcal{F}_\Omega$, applying $\Pi_{\mathrm{rad}}$ to a single representative does not generally return the same $(\E,\H)$ unless the near field already vanishes on the stated class.
 
 The \emph{radiation operator} is well-defined on currents whose solutions lie in $\mathcal{D}(\Pi_{\mathrm{rad}})$:
 \begin{equation}
@@ -109,15 +119,20 @@ Equation~\eqref{eq:ch2.radiation-operator-def} composes $\mathcal{S}_\omega$ wit
 
 \begin{proposition}[Existence and representative independence of $\Pi_{\mathrm{rad}}$]
 \label{prop:ch2.Pirad-well-defined}
-Assume $\Jimp\in\mathcal{J}_\Omega$ with compact support, homogeneous lossless vacuum in the exterior, outgoing radiation condition as in Section~\ref{sec:ch241}, and $\mathcal{S}_\omega[\Jimp]\in\HCurl_{\mathrm{loc}}$ satisfying Eq.~\eqref{eq:ch1.maxwell-local}. Then:
+Assume $\Jimp\in\mathcal{J}_\Omega$ with compact support $\Omega_s\Subset\mathbb{R}^{3}$, homogeneous lossless vacuum in the exterior, outgoing Sommerfeld condition as in Section~\ref{sec:ch241}, and $\mathcal{S}_\omega[\Jimp]\in\HCurl_{\mathrm{loc}}$ satisfying Eq.~\eqref{eq:ch1.maxwell-local}. Then:
 \begin{enumerate}
-\item The limit in Eq.~\eqref{eq:ch2.far-amplitude-limit} exists in $L^2(S^{2})$ for the electric field on spheres $\Gamma_R$ with $R\to\infty$, and defines $\mathbf{E}_0(\theta,\phi)$.
-\item If $(\E_a,\H_a)$ and $(\E_b,\H_b)$ are two admissible outgoing pairs differing by a near field with $o(r^{-1})$ transverse radiation, then $\mathbf{E}_{0,a}=\mathbf{E}_{0,b}$; hence $\Pi_{\mathrm{rad}}$ is a well-defined map on radiative equivalence classes.
-\item $\Pi_{\mathrm{rad}}\circ\Pi_{\mathrm{rad}}=\Pi_{\mathrm{rad}}$ on $\mathcal{F}_{\mathrm{rad}}$ because each class is determined by its unique asymptotic amplitude.
+\item The limit in Eq.~\eqref{eq:ch2.far-amplitude-limit} exists: there is $\mathbf{E}_0\in L^{2}(S^{2})$ such that $\|\mathbf{E}|_{\Gamma_R}-\mathbf{E}_0 e^{-\jj k_0 R}/R\|_{L^{2}(\Gamma_R)}\to 0$ as $R\to\infty$.
+\item $\mathcal{S}_\omega[\Jimp]\in\mathcal{D}(\Pi_{\mathrm{rad}})$, so $\mathcal{R}_\omega$ in Eq.~\eqref{eq:ch2.radiation-operator-def} is defined on all admissible $\Jimp$ under these hypotheses.
+\item If $(\E_a,\H_a)\sim_{\mathrm{rad}}(\E_b,\H_b)$ in Eq.~\eqref{eq:ch2.radiative-equivalence}, then $\Pi_{\mathrm{rad}}[(\E_a,\H_a)]=\Pi_{\mathrm{rad}}[(\E_b,\H_b)]$; the map $\Pi_{\mathrm{rad}}:\mathcal{D}(\Pi_{\mathrm{rad}})\to\mathcal{F}_{\mathrm{rad}}$ is constant on $\sim_{\mathrm{rad}}$-classes.
+\item On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ is the identity map on classes: $\Pi_{\mathrm{rad}}[(\E,\H)]=[(\E,\H)]_{\mathrm{rad}}$ and $\Pi_{\mathrm{rad}}\circ\Pi_{\mathrm{rad}}=\Pi_{\mathrm{rad}}$ when the composition is read on equivalence classes, not as a map $\mathcal{F}_\Omega\to\mathcal{F}_\Omega$.
 \end{enumerate}
 \end{proposition}
 \begin{proof}
-Existence follows from the standard outgoing multipole expansion for Maxwell fields with compact sources: Stratton's exterior representation gives $\E(\mathbf{r})=\sum_{\ell,m}(\mathbf{M}_{\ell m}a_{\ell m}+\mathbf{N}_{\ell m}b_{\ell m})$ with outgoing $h_\ell^{(1)}$, so $\mathbf{E}\sim\mathbf{E}_0(\theta,\phi)e^{-\jj k_0 r}/r$ \cite{stratton1941,jackson1999}. Representative independence is Lemma~(b) of the same expansion: the transverse $1/r$ coefficient is unique under the Sommerfeld condition (Section~\ref{sec:ch243}). Item~(c) restates that uniqueness at the level of equivalence classes; it is not an orthogonal projection on $\mathcal{F}_\Omega$ \cite{sommerfeld1949}.
+\emph{Existence.} For compact $\Jimp$, the outgoing retarded representation of Section~\ref{sec:ch231} yields $\E(\mathbf{r})$ analytic in $|\mathbf{r}|$ for $|\mathbf{r}|>\max_{\mathbf{r}'\in\Omega_s}|\mathbf{r}'|$ and admits the multipole expansion
+$\E(\mathbf{r})=\sum_{\ell,m}(\mathbf{M}_{\ell m}a_{\ell m}+\mathbf{N}_{\ell m}b_{\ell m})$ with outgoing Hankel functions $h_\ell^{(1)}(k_0 r)$ \cite{stratton1941,jackson1999}. For large $r$, $h_\ell^{(1)}(k_0 r)\sim\mathrm{j}^{\ell+1}e^{-\jj k_0 r}/(k_0 r)$, so every term contributes at most $\mathcal{O}(r^{-1})$; the superposition defines $\mathbf{E}_0(\theta,\phi)=\lim_{r\to\infty} r e^{\jj k_0 r}\mathbf{E}(r\hat{\mathbf{r}})$ in $L^{2}(S^{2})$ \cite{stratton1941}.
+\emph{Solution map in domain.} The same expansion proves Eq.~\eqref{eq:ch2.far-amplitude-limit} for $\mathcal{S}_\omega[\Jimp]$.
+\emph{Representative independence.} If $\mathbf{E}_b=\mathbf{E}_a+\mathbf{w}$ with $\mathbf{w}|_{\Gamma_R}\in o(r^{-1})$ transverse on $\Gamma_R$, then $\|\mathbf{w}|_{\Gamma_R}\|_{L^{2}(\Gamma_R)}=o(1)$ forces $\mathbf{E}_{0,a}=\mathbf{E}_{0,b}$ under outgoing selection (uniqueness of the $1/r$ transverse coefficient; Section~\ref{sec:ch243}) \cite{sommerfeld1949}.
+\emph{Idempotence on classes.} Extraction reads only $\mathbf{E}_0$; re-extraction leaves $[\mathbf{E}_0]$ unchanged. No inner product on $\mathcal{F}_\Omega$ is invoked \cite{stratton1941}.
 \end{proof}
 
 The composition law records that radiation is never computed independently of

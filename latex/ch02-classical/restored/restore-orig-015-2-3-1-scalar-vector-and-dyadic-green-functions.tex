@@ -98,10 +98,21 @@ G_0(\mathbf{r},\mathbf{r}')
 R=|\mathbf{r}-\mathbf{r}'|,
 \end{equation}
 with \(R>0\) and the branch of \(k_0\) fixed by the locked phasor axis
-\cite{stratton1941}. Equation~\eqref{eq:ch2.free-space-scalar-green}
-satisfies Eq.~\eqref{eq:ch2.scalar-helmholtz-green-pde} for
-\(\mathbf{r}\neq\mathbf{r}'\); the distributional definition at coincidence is
-completed in Subsection~\ref{sec:ch232}. Physically,
+\cite{stratton1941}.
+\begin{proposition}[Vacuum scalar Green function]
+\label{prop:ch2.scalar-green-vacuum}
+For $\mathbf{r}\neq\mathbf{r}'$, $G_0$ in Eq.~\eqref{eq:ch2.free-space-scalar-green} satisfies $(\nabla^{2}+k_0^{2})G_0(\mathbf{r},\mathbf{r}')=0$. Against test functions $\varphi\in C_{c}^{\infty}(\mathbb{R}^{3})$,
+\begin{equation}
+\label{eq:ch2.scalar-green-distributional}
+\int_{\mathbb{R}^{3}}\varphi(\mathbf{r})\big(\nabla^{2}+k_0^{2}\big)G_0(\mathbf{r},\mathbf{r}')\,d^{3}\mathbf{r}
+=\varphi(\mathbf{r}'),
+\end{equation}
+so $G_0$ is the outgoing fundamental solution of $(\nabla^{2}+k_0^{2})G=-\delta$ \cite{jackson1999}.
+\end{proposition}
+\begin{proof}
+For $R>0$, spherical symmetry gives $\nabla^{2}G_0=(1/R^{2})\partial_R(R^{2}\partial_R G_0)$. Substituting $G_0=e^{-\jj k_0 R}/(4\pi R)$ yields $\nabla^{2}G_0+k_0^{2}G_0=0$ away from the source point \cite{jackson1999}. The distributional identity follows from Green's second identity on an exterior ball $B_R$ with $R>|\mathbf{r}-\mathbf{r}'|$, taking $R\to\infty$ under outgoing decay $G_0=\mathcal{O}(r^{-1})$ so the surface term vanishes; the remaining volume term reproduces $\varphi(\mathbf{r}')$ \cite{stratton1941}. Coincidence regularization is completed in Subsection~\ref{sec:ch232}.
+\end{proof}
+Physically,
 Eq.~\eqref{eq:ch2.free-space-scalar-green} is the spherical outgoing wave produced
 by a unit monopole source at \(\mathbf{r}'\); its phase gradient defines local
 propagation direction on the propagating sheet of Subsection~\ref{sec:ch224}
@@ -322,7 +333,7 @@ The standard outgoing electric dyad is
 \Big(\overline{\mathbf{I}}-3\,\widehat{\mathbf{R}}\widehat{\mathbf{R}}\Big)
 \right],
 \end{equation}
-valid for \(R>0\) \cite{stratton1941}. The
+valid for \(R>0\) \cite{stratton1941}. Each Cartesian column of $\overline{\mathbf{G}}_{E,0}$ satisfies Eq.~\eqref{eq:ch2.dyadic-green-defining-operator} for $\mathbf{r}\neq\mathbf{r}'$ because the operator $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^2$ annihilates every column of the free-space dyad built from $\nabla\nabla-\nabla^{2}$ identities for the $e^{-\jj k_0 R}/R$ potential; full curl--curl verification follows the Hertzian-dipole reduction of Subsection~\ref{sec:ch232} \cite{tai1994,stratton1941}. The
 \(\overline{\mathbf{I}}-\widehat{\mathbf{R}}\widehat{\mathbf{R}}\) term is transverse
 to \(\mathbf{R}\) and dominates in the radiative far zone; the $R^{-2}$ and $R^{-3}$ terms
 in the parentheses supply near-field reactive structure through inverse powers of \(k_0 R\)
