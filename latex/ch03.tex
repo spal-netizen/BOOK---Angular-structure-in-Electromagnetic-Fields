@@ -5656,8 +5656,8 @@ Section~\ref{sec:ch34} . No Green-function construction or Sommerfeld
 uniqueness proof has been repeated; those enter only through the cited selectors of \ref{ch:02}
 \section{Vector Spherical Harmonics and Eigenfields}
 \label{sec:ch34}
-This section is the definitional heart of Volume~I representation theory: the only place where
-\(Y_\ell^m\), \(\mathbf{M}_{\ell m}\), and \(\mathbf{N}_{\ell m}\) are introduced as named objects
+The only place in Volume~I where
+\(Y_\ell^m\), \(\mathbf{M}_{\ell m}\), and \(\mathbf{N}_{\ell m}\) receive explicit definitions is this section
 \cite{stratton1941}. Subsection~\ref{sec:ch341} states scalar and vector spherical
 harmonic definitions with Condon--Shortley phase as fixed in the Volume~I notation convention. Subsection~\ref{sec:ch342}
 explains toroidal, poloidal, and divergence-free structure. Subsection~\ref{sec:ch343} proves orthogonality,
@@ -5752,8 +5752,14 @@ k_{0}\,\mathbf{N}_{\ell m},\
 -\jj k_{0}\,\mathbf{M}_{\ell m}
 \big),
 \end{equation}
-with \(\eta_{0}=\sqrt{\mu_{0}/\varepsilon_{0}}\) \cite{stratton1941}. Pairs
-Eq.~\eqref{eq:ch3.VSH-M-pair} solve source-free Maxwell on outgoing domains and satisfy vector Helmholtz
+with \(\eta_{0}=\sqrt{\mu_{0}/\varepsilon_{0}}\) \cite{stratton1941}. Under the phasor convention $\eim$, the source-free curls follow from the definitions \eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} and the identities $\curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m}$, $\curl\mathbf{N}_{\ell m}=-k_0\mathbf{M}_{\ell m}$ in outgoing regions \cite{stratton1941,tai1994}. For $\mathbf{u}_{\ell m}^{(\mathbf{M})}$,
+\[
+\curl\E=\curl(\jj\eta_0 k_0\mathbf{M}_{\ell m})=\jj\eta_0 k_0^2\mathbf{N}_{\ell m},
+\qquad
+-\jj\omega\mu_0\H=-\jj\omega\mu_0 k_0\mathbf{N}_{\ell m}=-\jj k_0^2\eta_0\mathbf{N}_{\ell m},
+\]
+using $\omega\mu_0=k_0\eta_0$; hence Faraday's law holds. Amp\`ere--Maxwell reduces similarly to $\curl\H=\jj\omega\varepsilon_0\E$. The magnetic-type pair $\mathbf{u}_{\ell m}^{(\mathbf{N})}$ is the dual combination with the same radial factor $h_\ell^{(1)}(k_0 r)$ chosen so that the phase $e^{-\jj k_0 r}/r$ carries outward energy flux under $\eim$ \cite{stratton1941,jackson1999}. Pairs
+Eq.~\eqref{eq:ch3.VSH-M-pair} therefore solve source-free Maxwell on outgoing domains and satisfy
 Eqs.~\eqref{eq:ch3.vector-helmholtz-E}--\eqref{eq:ch3.vector-helmholtz-H} \cite{stratton1941}.
 \begin{figure}[t]
 \centering

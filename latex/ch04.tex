@@ -50,29 +50,9 @@ Figure~\ref{fig:ch4.master-revision-spine} compresses the laboratory reading ord
 \subsection{Realizability and accessibility limits}
 \label{sec:ch401}
 
-Consider a $\lambda/10$ disk aperture in an infinite ground plane fed at $10\,\mathrm{GHz}$, measured on a spherical near-field range with $N=32$ dual-polarization probes \cite{stratton1941}. The disk can synthesize a clean main lobe and a structured sidelobe family because its electrical radius $k_{0}a$ permits several low-$\ell$ sectors to carry exported power \cite{chu1948}. The same pattern, sampled on only thirty-two fixed directions, may fail to recover sidelobe detail to the declared tolerance: synthesis succeeded on $\Omega_s$, yet recovery on the instrument did not \cite{devaney2004}. Conversely, a dense near-field grid on a sub-wavelength patch cannot invent radiative channels the patch never coupled, no matter how many probe positions the scanner visits \cite{jackson1999}. Generation on the source support and recovery on the measurement screen are therefore \emph{independent} ceilings on the same Maxwell export \cite{harrington2001}.
-% PHYSICAL-MEMORY:sec:ch401
+Bounded impressed currents on $\Omega_s$ produce far-zone data $\mathcal{R}_\omega[\Jimp]$ (Chapter~\ref{ch:02}). A chart $\mathcal{C}$ from Chapter~\ref{ch:03} assigns coordinates $\mathbf{c}\in\mathbb{C}^{I}$ to radiative states. \emph{Synthesizability} asks whether a target $\mathbf{c}$ equals $\mathcal{C}(\mathcal{R}_\omega[\Jimp])$ for some $\Jimp\in\mathcal{J}_\Omega$ on the declared support; \emph{accessibility} asks whether $\mathbf{c}$ can be estimated to tolerance $\varepsilon_{\mathrm{cert}}$ from at most $N$ independent observations \cite{stratton1941,devaney2004}. Neither property follows from the dimension of a complete harmonic listing \cite{chu1948,harrington2001}.
 
-\begin{physicalvignette}[Open-ended circular waveguide probe on SNF arm]
-Consider an open-ended circular waveguide probe on a spherical near-field arm. Frequency, cable loss, and the flange outline that fixes electrical size are logged before the first scan \cite{hansen1988}. Probe standoff and turntable boresight set the measurement geometry against which any later harmonic fit must be judged \cite{harrington2001}.
-
-Realizability asks what a finite feed can radiate; accessibility asks what a finite instrument can recover. On sparse scan spheres the two ceilings differ in every qualified report: synthesis may succeed on $\Omega_s$ while recovery on $N$ probes does not \cite{devaney2004}.
-
-Chu and Landau warned that finite size caps simultaneous localization and spectral spread \cite{chu1948}. Devaney's inverse-scattering perspective reminds us that reachable far-zone data never exceeds what bounded sources can export \cite{devaney2004}.
-\end{physicalvignette}
-
-Harrington's synthesis culture and Chu's electrical-size counting made the generation--recovery split a laboratory habit long before harmonic post-processing collapsed the two into one headline number \cite{chu1948}. The significance of that picture becomes clearer when coefficients are written down. \emph{$\mathcal{S}_{\mathrm{real}}$} asks whether a bounded impressed current on declared compact support can populate a target harmonic vector $\mathbf{c}$. \emph{$\mathcal{E}_{\mathrm{acc}}^{(N)}$} asks whether a finite-rank instrument with $N$ effective degrees of observation can \emph{estimate} that vector to declared tolerance \cite{stratton1941}. Neither question is answered by the length of a harmonic listing: a mode chart that retains $\ell\le 20$ is not evidence of twenty independent radiators on a $\lambda/8$ patch \cite{harrington2001}. Dense spherical near-field grids can resolve reactive sheets near the feed without enlarging $\operatorname{ran}\boldsymbol{\Gamma}_\omega$; clever feeds cannot recover angular structure a sparse scan never sampled \cite{hansen1988}.
-
-Fix \(\omega>0\) under the \(\exp(-\jj\omega t)\) convention, linear isotropic homogeneous
-exterior regions unless stated otherwise, and outgoing radiation condition on
-\(\mathcal{F}_{\mathrm{rad}}\) as in Section~\ref{sec:ch24} \cite{stratton1941}. Let
-\(\mathcal{C}:\mathcal{V}\to\mathbb{C}^{I}\) be a mode chart with
-\(\mathcal{C}\in\mathcal{R}_{\mathrm{adm}}\) and coefficient index set \(I\) as in
-Eq.~\eqref{eq:ch3.representation-map} \cite{stratton1941}. Impressed currents lie
-in the source class \(\mathcal{J}_\Omega\) of Subsection~\ref{sec:ch201}; measurement
-screens \(\mathcal{M}\) are finite rank as in Section~\ref{sec:ch29} \cite{harrington2001}. All
-field states are discussed on \(\operatorname{ran}\mathcal{R}_\omega\) after application of
-\(\Pi_{\mathrm{rad}}\) \cite{stratton1941}.
+Fix $\omega>0$ under the phasor convention $\eim$, linear isotropic homogeneous exteriors unless stated otherwise, and outgoing selection as in Section~\ref{sec:ch24} \cite{stratton1941}. Let $\mathcal{C}:\mathcal{V}\subset\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{I}$ be admissible as in Eq.~\eqref{eq:ch3.representation-map}. Sources lie in $\mathcal{J}_\Omega$ (Section~\ref{sec:ch203}); observation maps have rank at most $N$ as in Section~\ref{sec:ch29} \cite{hansen1988}.
 
 For finite \(\Jimp\), the radiative state
 \begin{equation}
@@ -111,7 +91,8 @@ The \emph{realizable coefficient set} \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})
 \mathcal{C}\big(\mathcal{R}_\omega[\Jimp]\big)=\mathbf{c}
 \right\}.
 \end{equation}
-Physically, \(\mathcal{S}_{\mathrm{real}}(\mathcal{C})\) is the synthesis ceiling: vectors outside this set may appear in a complete chart yet cannot be driven without enlarging support, changing frequency, or altering the material class \cite{stratton1941}. The limitation originates not from solver tolerance but from compact support and Maxwell coupling on $\Omega_s$ \cite{chu1948}.
+Thus $\mathcal{S}_{\mathrm{real}}(\mathcal{C})=\mathcal{C}(\operatorname{ran}\mathcal{R}_\omega)\subseteq\mathbb{C}^{I}$: every synthesizable coefficient vector is a coordinate of some radiative state produced by admissible sources, and the inclusion in $\mathbb{C}^{I}$ is strict whenever the chart is redundant or includes modes not coupled by bounded supports on $\Omega_s$ \cite{chu1948,stratton1941}.
+
 \phantomsection\label{def:ch4.accessibility-envelope}
 For the same chart, the \emph{accessible sector} \(\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})\) is the subset of coefficients a finite measurement system with $N$ effective degrees of observation can recover to declared tolerance---the recovery ceiling distinct from synthesis:
 \begin{equation}
@@ -129,7 +110,17 @@ where \(\|\cdot\|_{\mathcal{M}}\) is the estimation norm induced by
 \(\mathcal{M}\circ\mathcal{N}\circ\mathcal{C}\) in Eq.~\eqref{eq:ch3.measurement-on-coefficients}
 and \(\varepsilon_{\mathrm{cert}}\) is the declared measurement tolerance
 \cite{harrington2001}.
-The practical consequence is immediate: observable angular structure is a filtered image of realizable structure, and synthesizable is already narrower than mathematical admissibility on $\mathbb{C}^{I}$ \cite{devaney2004}.
+\begin{equation}
+\label{eq:ch4.set-inclusions}
+\mathcal{S}_{\mathrm{real}}(\mathcal{C})
+\subseteq
+\mathbb{C}^{I},
+\qquad
+\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})
+\subseteq
+\mathbb{C}^{I}.
+\end{equation}
+Neither inclusion between $\mathcal{S}_{\mathrm{real}}(\mathcal{C})$ and $\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ holds in general: a coefficient vector can be synthesizable yet unrecoverable when $N$ is too small or noise dominates; conversely, a finite instrument may produce a stable estimate of a chart component that no bounded source on $\Omega_s$ can radiate, in which case the estimate does not correspond to a physical $\mathcal{R}_\omega[\Jimp]$ (ill-posed inverse synthesis) \cite{devaney2004,hansen1988}. Figure~\ref{fig:ch4.synthesis-accessibility-sets} depicts two subsets of $\mathbb{C}^{I}$ only; overlap and separation are geometry-, frequency-, and tolerance-dependent.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%

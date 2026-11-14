@@ -79,24 +79,34 @@ with explicit completion.
 The full state typically contains both stored and exported electromagnetic energy.
 Reactive fields exchange power with sources and terminations at distances small
 compared with \(k_0^{-1}\); radiative fields carry net outward flux at infinity
-in open configurations. Let \(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omega\)
-denote pairs whose far-zone asymptotics satisfy outgoing selection (made analytic in
-Section~\ref{sec:ch24}). Radiation accounting therefore requires a second map that
-discards non-outgoing storage before pattern or transport claims are made. The outgoing
-map \(\Pi_{\mathrm{rad}}:\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{rad}}\) assigns to each completed Maxwell pair its Sommerfeld-outgoing far-zone transverse coefficients (equivalently, the equivalence class in \(\mathcal{F}_\Omega\) with the same asymptotic data). It is \emph{not} a global orthogonal projection on \(\mathcal{F}_\Omega\): near-zone reactive fields are not removed by a single linear map on the full pair unless an inner product, domain, and decomposition have been proved \cite{stratton1941,harrington2001}.
-Composing source excitation with that selector defines the \emph{radiation operator}
+in open configurations. For $(\E,\H)\in\mathcal{F}_\Omega$ on an exterior domain, the far-zone amplitude $\mathbf{E}_0(\theta,\phi)$ is defined when
+\begin{equation}
+\label{eq:ch2.far-amplitude-limit}
+\mathbf{E}(\mathbf{r})
+=
+\mathbf{E}_{0}(\theta,\phi)\,\frac{e^{-\jj k_0 r}}{r}
++o(r^{-1}),
+\qquad r\to\infty,
+\end{equation}
+holds, with $\mathbf{H}=\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E}$ at leading order as in Eq.~\eqref{eq:ch1.radiation-trace-condition} \cite{stratton1941,sommerfeld1949}. Two pairs are \emph{radiatively equivalent} when their limits coincide. The space $\mathcal{F}_{\mathrm{rad}}$ is the set of equivalence classes $[(\E,\H)]_{\mathrm{rad}}$ with outgoing transverse asymptotics. The \emph{asymptotic extraction map}
+\begin{equation}
+\label{eq:ch2.Pirad-map-def}
+\Pi_{\mathrm{rad}}:\mathcal{D}(\Pi_{\mathrm{rad}})\subset\mathcal{F}_\Omega
+\longrightarrow\mathcal{F}_{\mathrm{rad}},
+\qquad
+(\E,\H)\longmapsto [(\E,\H)]_{\mathrm{rad}},
+\end{equation}
+is defined on pairs for which Eq.~\eqref{eq:ch2.far-amplitude-limit} holds; it records far-zone data, not a subtraction of near fields from $(\E,\H)$ \cite{stratton1941}. It is not an orthogonal projection on $\mathcal{F}_\Omega$. On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ is the identity on equivalence classes; on $\mathcal{F}_\Omega$, applying $\Pi_{\mathrm{rad}}$ to a single representative does not generally return the same $(\E,\H)$ unless the near field already vanishes on the stated class.
+
+The \emph{radiation operator} is well-defined on currents whose solutions lie in $\mathcal{D}(\Pi_{\mathrm{rad}})$:
 \begin{equation}
 \label{eq:ch2.radiation-operator-def}
 \mathcal{R}_\omega:\mathcal{J}_\Omega\longrightarrow\mathcal{F}_{\mathrm{rad}},
 \qquad
 \mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\Jimp].
 \end{equation}
-Equation~\eqref{eq:ch2.radiation-operator-def} composes source excitation with
-outgoing selection: \(\mathcal{R}_\omega\) accepts the same impressed currents as
-\(\mathcal{S}_\omega\) but returns only the radiative image
-\(\Pi_{\mathrm{rad}}(\E,\H)\in\mathcal{F}_{\mathrm{rad}}\), where
-\(\mathcal{F}_{\mathrm{rad}}\) is the subspace of field pairs whose leading
-far-zone behavior is outgoing and transverse.
+Equation~\eqref{eq:ch2.radiation-operator-def} composes $\mathcal{S}_\omega$ with asymptotic extraction. Section~\ref{sec:ch242} connects $\Pi_{\mathrm{rad}}$ to outgoing Green kernels and Sommerfeld selection.
+
 The composition law records that radiation is never computed independently of
 Maxwell completion:
 \begin{equation}
