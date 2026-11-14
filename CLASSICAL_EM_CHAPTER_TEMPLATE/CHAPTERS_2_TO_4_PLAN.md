@@ -1,6 +1,8 @@
 # Chapters 2–4 planning (no manuscript edits in R13.1 pass)
 
-**Reference chapter:** Chapter 1 locked R13.1 (`CLASSICAL_EM_CHAPTER_TEMPLATE/`).  
+**Reference chapter:** Chapter 1 benchmark tag `chapter1-benchmark-20261114-a05b9cce` (62 pp, PDF `A05B9CCE…`).  
+**Stage A audit (required before rewrite):** `VOLUME_I_RELEASE/VOLUME_I_CHAPTERS_2_TO_4_INDEPENDENT_TRANSFORMATION_AUDIT.md`.  
+**Working branch:** `volume-i/ch2-4-coordinated-transformation`.  
 **TOC authority:** `TOC/volume-I-ch01-04-FINAL.txt`, `00-FORWARD-MAP.yaml`.
 
 ---
