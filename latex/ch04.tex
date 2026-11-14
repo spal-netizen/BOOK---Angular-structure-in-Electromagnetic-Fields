@@ -3088,6 +3088,20 @@ With flux-weighted inner product $\langle\cdot,\cdot\rangle_{\mathrm{rad}}$ from
 where $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ is the adjoint source-to-mode kernel induced by $\mathcal{C}\circ\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ and the dyadic propagator of Subsection~\ref{sec:ch231} \cite{stratton1941,hansen1988}.
 Equation~\eqref{eq:ch4.source-mode-coupling-integral} is the mode analogue of the radiation integral Eq.~\eqref{eq:ch2.radiation-integral}: geometry enters through the overlap of $\Jimp$ with spatially varying vector harmonics inside $\Omega_s$, not through the chart length $|I|$ alone.
 For $\ell>k_0 a$, spherical Bessel factors in the near-source integrand and the small-argument Hankel envelope in $\mathbf{W}_{\ell m}^{(\sigma)}$ imply estimates of the form below; exact zeros require additional symmetry (Subsection~\ref{sec:ch452}), not compactness alone \cite{jackson1999}.
+\begin{proposition}[Alignment of source projection and volume coupling — restricted]
+\label{prop:ch4.source-mode-alignment}
+In the aligned flux gauge of Section~\ref{sec:ch35}, Eq.~\eqref{eq:ch4.source-mode-coupling-integral} and
+Eq.~\eqref{eq:ch4.modal-coupling-integral} define the same sector functional up to the normalization factor
+$\mathcal{Z}_{\ell m}^{(\sigma)}$ in Eq.~\eqref{eq:ch4.coupling-far-zone-reduction}:
+$\widehat{c}_{\ell m}^{(\sigma)}=\mathcal{Z}_{\ell m}^{(\sigma)}\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]$.
+The radiative rank $r_{\mathrm{rad}}(\varepsilon)$ in Eq.~\eqref{eq:ch4.radiative-rank-operator} counts singular values of
+$\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$, not of a finite observation map $\boldsymbol{\mathcal{M}}_\omega$.
+\end{proposition}
+\begin{proof}
+Insert $\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]$ into the radiative inner product and use reciprocity duality
+Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} for adjoint source modes $\widehat{\mathbf{J}}_{\ell m}^{(\sigma)\dagger}$
+\cite{stratton1941,hansen1988}. The dyadic propagation step is Eq.~\eqref{eq:ch2.electric-dyadic-convolution}; gauge fixing sets $\mathcal{Z}_{\ell m}^{(\sigma)}$.
+\end{proof}
 
 The significance of the tail law for realizability is direct. Tail budget $\eta_{\mathrm{tail}}$ names the watt fraction permitted beyond truncation $\ell_{\max}$; remainder operator $\mathbf{R}_{\ell_{\max}}$ from Chapter~3 carries the discarded power \cite{stratton1941}. A sidelobe campaign that assigns appreciable weight to $\ell\ge 8$ on a $\lambda/8$ disk is therefore not a feed-network problem alone---it conflicts with $\mathcal{B}_{\mathrm{fs}}$ before MoM inversion begins \cite{chu1948}. Subsection~\ref{sec:ch443} states the decay envelope, links tail mass $\mathcal{M}_{\mathrm{tail}}$ to synthesis error, and records the tail exponent $\nu_{\mathrm{tail}}(\mathbf{c})$ laboratories can verify on measured $\mathbf{c}$ \cite{hansen1988}.
 for \(\ell>k_{0}a\),
@@ -3668,12 +3682,6 @@ symmetry in \(\mathcal{J}_{\mathrm{real}}\) \cite{harrington2001}.
 \subsection{Coupling integrals and selection rules}
 \label{sec:ch452}
 Chapter~3 constructed flux-normalized eigenfields $\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}$ on $\mathcal{F}_{\mathrm{rad}}$; Section~\ref{sec:ch45} now asks which of those fields receive watts from a given impressed current $\Jimp$ on $\Omega_s$ \cite{stratton1941}. The answer is not read from chart cardinality: coupling integrals on the actual feed geometry weight each sector before harmonic optimization begins \cite{harrington2001}. A dual-polarization horn may redistribute power among $(\ell,m,\sigma)$ labels; it does not enlarge $\operatorname{ran}\boldsymbol{\Gamma}_\omega$ on fixed outline \cite{collin2001}.
-% PHYSICAL-MEMORY:sec:ch452
-\begin{physicalvignette}[Phased array panel on a positioner]
-A phased array panel on a positioner in an outdoor far-field range illustrates coupling selection without new export channels. Offset feed lines and broken symmetry redistribute weight among multipole sectors visible on the turntable cuts, yet the electrical size of the panel fixes the same rank ceiling whether the beam is steered electronically or measured on a tower \cite{harrington2001}. Element count is not mode count \cite{devaney2004}.
-When technicians steer the main lobe ten degrees electronically, the pattern moves as expected, but the sidelobe floor tied to finite support does not disappear \cite{stratton1941}. Steering reweights accessible directions; it does not create directions geometry never coupled \cite{pal2026}.
-Subsection~\ref{sec:ch452} develops the coupling integrals that this array scene makes visible in measured decibels \cite{stratton1941}.
-\end{physicalvignette}
 Selection rules---parity decoupling on centrosymmetric feeds, azimuthal block structure on bodies of revolution, singular-value thresholds on $\boldsymbol{\Gamma}_\omega$---are physically imposed filters, not optional sparse priors for inversion procedures \cite{jackson1999}. Subsection~\ref{sec:ch452} defines the modal coupling functional $\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]$, assembles the coupling matrix $\mathbf{K}$, and records the selection conditions under which $\widehat{c}_{\ell m}^{(\sigma)}$ must vanish on declared support \cite{hansen1988}.
 Modal coupling integral. Define the \emph{modal coupling functional} by
 \begin{equation}

@@ -214,14 +214,27 @@ and in distribution sense
 so Eq.~\eqref{eq:ch2.dyadic-green-defining-operator} holds with outgoing phase $e^{-\jj k_0 R}/(4\pi R)$ \cite{stratton1941,tai1994}.
 \end{proposition}
 \begin{proof}
-For $R>0$, write $\overline{\mathbf{G}}_{E,0}=(e^{-\jj k_0 R}/(4\pi R))\mathbf{D}(R,\widehat{\mathbf{R}})$ with dyadic $\mathbf{D}$ the bracket in Eq.~\eqref{eq:ch2.free-space-dyadic-green}.
-Since $(\nabla^{2}+k_0^{2})(e^{-\jj k_0 R}/R)=0$ for $R>0$ and $\mathbf{D}$ is built from $\overline{\mathbf{I}}$, $\widehat{\mathbf{R}}\widehat{\mathbf{R}}$, and algebraic powers of $1/(k_0 R)$,
-direct substitution into $\mathcal{W}_{E,\omega}=\nabla(\nabla\cdot)-\nabla^{2}-k_0^2$ on each column yields Eq.~\eqref{eq:ch2.dyadic-curl-curl-homogeneous} \cite{tai1994}.
-The distributional identity Eq.~\eqref{eq:ch2.dyadic-curl-curl-source} follows by testing against compactly supported vector fields $\mathbf{f}$,
-integrating by parts, and using Prop.~\ref{prop:ch2.scalar-green-vacuum} on the Lorenz scalar potential of each column source
-\cite{jackson1999,stratton1941}; coincidence terms are regulated in Subsection~\ref{sec:ch232}.
-The impressed-current representation Eq.~\eqref{eq:ch2.electric-dyadic-convolution} is the convolution dual of
-Eq.~\eqref{eq:ch2.dyadic-curl-curl-source} under outgoing completion \cite{harrington2001}.
+\emph{Step 1 (scalar potential).} In Lorenz gauge, each Cartesian component of $\mathbf{A}$ satisfies $(\nabla^{2}+k_0^{2})A_a=-\mu_0 J_a$.
+For a point current $\mathbf{J}(\mathbf{r}')=\mathbf{e}_a\,\delta(\mathbf{r}-\mathbf{r}')$, $A_a(\mathbf{r})=\mu_0 G_0(\mathbf{r},\mathbf{r}')$ with $G_0$ from Eq.~\eqref{eq:ch2.free-space-scalar-green}.
+\emph{Step 2 (electric field).} Under $\eim$, Eq.~\eqref{eq:ch2.lorenz-field-from-potential} gives
+$\E=\jj\omega\mu_0\mathbf{A}+(\jj\omega\varepsilon_0)^{-1}\nabla(\nabla\cdot\mathbf{A})$.
+For the point source above, $\nabla\cdot\mathbf{A}=\mu_0\,\hat{e}_a\cdot\nabla G_0$ and the column of $\overline{\mathbf{G}}_{E,0}$ aligned with $\mathbf{e}_a$ is the sum of a transverse $\jj\omega\mu_0 G_0\mathbf{e}_a$ term and a longitudinal gradient contribution; the closed form Eq.~\eqref{eq:ch2.free-space-dyadic-green} is the standard reduction of these two pieces to a single dyad \cite{tai1994,stratton1941}.
+\emph{Step 3 (homogeneous region).} For $R>0$, $(\nabla^{2}+k_0^{2})(e^{-\jj k_0 R}/R)=0$ and each column of Eq.~\eqref{eq:ch2.free-space-dyadic-green} satisfies $\mathcal{W}_{E,\omega}\mathbf{G}_{E,0}^{(a)}=\mathbf{0}$, yielding Eq.~\eqref{eq:ch2.dyadic-curl-curl-homogeneous}.
+\emph{Step 4 (distributional source).} Let $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$.
+Green's vector identity on a ball $B_R$ enclosing $\mathbf{r}'$ and the support of $\mathbf{f}$ gives
+\begin{equation}
+\label{eq:ch2.dyadic-green-ibp}
+\int_{B_R}\mathbf{f}\cdot\mathcal{W}_{E,\omega}\mathbf{G}_{E,0}^{(a)}\,d^{3}\mathbf{r}
+=
+\int_{B_R}\mathbf{G}_{E,0}^{(a)}\cdot\mathcal{W}_{E,\omega}\mathbf{f}\,d^{3}\mathbf{r}
++\oint_{\partial B_R}\big(\mathbf{n}\times\mathcal{W}_{E,\omega}\mathbf{f}\cdot\mathbf{G}_{E,0}^{(a)}
+-\mathbf{n}\times\mathbf{f}\cdot\mathcal{W}_{E,\omega}\mathbf{G}_{E,0}^{(a)}\big)\,dS,
+\end{equation}
+with outward unit normal $\mathbf{n}$ on $\partial B_R$.
+For outgoing $G_0$, the surface integral vanishes as $R\to\infty$ because $\mathbf{G}_{E,0}$ and $\mathcal{W}_{E,\omega}\mathbf{f}$ both decay with Sommerfeld phase $e^{-\jj k_0 R}/R$ and $\mathbf{f}$ is compactly supported inside $B_R$ for large $R$ \cite{jackson1999}.
+In the limit, Eq.~\eqref{eq:ch2.dyadic-green-ibp} and Prop.~\ref{prop:ch2.scalar-green-vacuum} with $\mathcal{W}_{E,\omega}\mathbf{f}=\mathbf{e}_a$ under outgoing completion yield the $a$-th column of Eq.~\eqref{eq:ch2.dyadic-curl-curl-source}.
+Coincidence singularities at $\mathbf{r}=\mathbf{r}'$ are evaluated distributionally in Subsection~\ref{sec:ch232}; the longitudinal $\nabla(\nabla\cdot\mathbf{A})$ term contributes to the same distributional mass as the transverse part when the Lorenz relation is enforced \cite{stratton1941}.
+\emph{Step 5 (current representation).} Convolving Eq.~\eqref{eq:ch2.dyadic-curl-curl-source} with $\Jimp$ and using linearity produces Eq.~\eqref{eq:ch2.electric-dyadic-convolution} when $\E_{\mathrm{hom}}$ is fixed by boundary data \cite{harrington2001}.
 \end{proof}
 Every method-of-moments code and every near-field scanner relies on the convolution
 structure below: given an impressed current distribution $\Jimp$, the electric field at

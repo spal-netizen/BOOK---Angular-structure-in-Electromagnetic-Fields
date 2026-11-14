@@ -101,9 +101,10 @@ Eq.~\eqref{eq:ch2.rad-projection-composition} \cite{stratton1941}.
  \draw[ch1flow] (f.south |- ev.north) -- (ev.north);
 \end{tikzpicture}%
 }
-\caption{Outgoing selection Eq.~\eqref{eq:ch2.outgoing-selector-def} sits between
-propagating projection and radiation export:
-\(\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\).}
+\caption{Outgoing selection and far-zone export are distinct steps:
+$\mathcal{O}_{\mathrm{out}}$ removes incoming propagating content;
+$\Pi_{\mathrm{rad}}$ records far-zone amplitudes on equivalence classes
+(Subsection~\ref{sec:ch201}).}
 \label{fig:ch2.outgoing-selector-measurement chain}
 \end{figure}
 ~\eqref{eq:ch2.rad-projection-composition} with explicit operator order. Regime
@@ -161,30 +162,35 @@ Eq.~\eqref{eq:ch2.outgoing-solution-operator} sums impressed current contributio
 source point \(\mathbf{r}'\in\Omega\) against the outgoing dyadic evaluated at observation
 point \(\mathbf{r}\); \(\E_{\mathrm{hom}}\) carries any exterior illumination not generated
 by \(\Jimp\) and must vanish for pure radiation problems \cite{stratton1941}.
-On propagating content, outgoing selection precedes radiation export in the measurement sequence
-fixed in Section~\ref{sec:ch24}: $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ with
-$\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}$ \cite{stratton1941}. On
-propagating content,
+Outgoing selection and far-amplitude extraction serve different mathematical purposes and must not be identified.
+\begin{proposition}[Distinct roles of $\mathcal{O}_{\mathrm{out}}$ and $\Pi_{\mathrm{rad}}$]
+\label{prop:ch2.Pirad-vs-Oout}
+Let $\mathcal{O}_{\mathrm{out}}:\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{SF}}$ be Eq.~\eqref{eq:ch2.outgoing-selector-def} and
+$\Pi_{\mathrm{rad}}:\mathcal{D}(\Pi_{\mathrm{rad}})\subset\mathcal{F}_\Omega\to\mathcal{F}_{\mathrm{rad}}$ be Eqs.~\eqref{eq:ch2.Pirad-map-def}--\eqref{eq:ch2.radiative-equivalence}.
+\begin{enumerate}
+\item $\mathcal{O}_{\mathrm{out}}$ acts on \emph{field pairs} $(\E,\H)$ and removes incoming propagating content; its output remains a specific representative in $\mathcal{F}_{\mathrm{SF}}$.
+\item $\Pi_{\mathrm{rad}}$ acts on pairs with a far-zone limit and returns an \emph{equivalence class} $[(\E,\H)]_{\mathrm{rad}}$ determined by $\mathbf{E}_0$ only (Subsection~\ref{sec:ch201}).
+\item In general $\Pi_{\mathrm{rad}}\neq\mathcal{O}_{\mathrm{out}}$ and $\Pi_{\mathrm{rad}}\neq\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}$ as maps on $\mathcal{F}_\Omega$; equality of far amplitudes does not require equality of near fields.
+\item The radiation operator is $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ with $\mathcal{S}_\omega$ already outgoing-selected via Eqs.~\eqref{eq:ch2.outgoing-solution-operator}--\eqref{eq:ch2.outgoing-green-branch}.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Items~(1)--(2) restate the definitions. For~(3), distinct near fields sharing $\mathbf{E}_0$ are equivalent under Eq.~\eqref{eq:ch2.radiative-equivalence} but differ as elements of $\mathcal{F}_{\mathrm{SF}}$, so no single outgoing projector can coincide with class formation. Item~(4) is Eq.~\eqref{eq:ch2.radiation-operator-def} together with outgoing completion of the solution map \cite{stratton1941,sommerfeld1949}.
+\end{proof}
+The operational composition used in pattern metrology is
 \begin{equation}
 \label{eq:ch2.outgoing-radiation-refinement}
-\Pi_{\mathrm{rad}}
+\mathcal{S}_\omega^{\mathrm{(out)}}
 =
-\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}},
+\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega,
 \qquad
 \mathcal{R}_\omega
 =
-\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega,
+\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}},
 \end{equation}
-restating Eqs.~\eqref{eq:ch2.rad-projection-composition} and~\eqref{eq:ch2.radiation-operator-def}
-with the locked definition of \(\mathcal{O}_{\mathrm{out}}\)
-\cite{stratton1941}. Radiative subspace
-\(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}\) consists of fields
-with nonzero far-zone transverse amplitude Eq.~\eqref{eq:ch2.far-zone-transverse-radiation};
-\(\mathcal{O}_{\mathrm{out}}\) maps into \(\mathcal{F}_{\mathrm{SF}}\) but not
-automatically into \(\mathcal{F}_{\mathrm{rad}}\) when evanescent content dominates
-near sources \cite{stratton1941}. Transport reporting therefore requires
-Eq.~\eqref{eq:ch2.regime-operator-screen} after
-Eq.~\eqref{eq:ch2.outgoing-radiation-refinement} \cite{harrington2001}.
+with $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}$ the space of classes carrying transverse far-zone data Eq.~\eqref{eq:ch2.far-zone-transverse-radiation}.
+Evanescent and reactive content may remain in $\mathcal{S}_\omega^{\mathrm{(out)}}[\Jimp]$ while yielding the same $\Pi_{\mathrm{rad}}$ class when $\mathbf{E}_0$ agrees \cite{stratton1941}.
+Transport reporting therefore applies Eq.~\eqref{eq:ch2.regime-operator-screen} after $\mathcal{R}_\omega$, not after $\mathcal{O}_{\mathrm{out}}$ alone \cite{harrington2001}.
 Outgoing selection on a compact range is implemented twice in practice: absorbers suppress
 multipath reflections that would mimic incoming waves, and harmonic solvers fix the propagating
 $k_z$ branch of Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion} on exterior meshes

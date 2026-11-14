@@ -2595,6 +2595,10 @@ Eq.~\eqref{eq:ch1.rodrigues-rotation} \cite{jackson1999}. Equation~\eqref{eq:ch3
 upgrades the preview in Subsection~\ref{sec:ch301}: representation matrices \(\rho(g)\) in
 Eq.~\eqref{eq:ch3.coefficient-rotation-law} are the finite-dimensional blocks of
 Eq.~\eqref{eq:ch3.rotation-from-J-generators} on symmetry-adapted subspaces \cite{jackson1999}.
+For orthogonal Cartesian axes, Prop.~\ref{prop:ch3.generator-from-finite-rotation} and the group law of
+$\mathrm{SO}(3)$ imply $[\mathbf{J}_a,\mathbf{J}_b]=\jj\varepsilon_{abc}\mathbf{J}_c$ on
+$\mathcal{D}(\mathbf{J})$ with the active-rotation sign convention of Eq.~\eqref{eq:ch3.active-rotation-vector-field}
+\cite{jackson1999}.
 Theorem~\ref{thm:ch3.symmetry-commutes} and Eq.~\eqref{eq:ch2.radiation-rotation-commutation} are the
 source-side and field-side commutativity laws compatible with
 Eq.~\eqref{eq:ch3.rotation-from-J-generators} \cite{stratton1941}.
@@ -6330,9 +6334,11 @@ completeness on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.
 \subsection{Orthogonality, completeness, resolution of identity}
 \label{sec:ch343}
 % TOC tag: [HOME][USE SS2.8.2]
-Mode orthogonality is the closure that eigenfield coefficients are independent amplitudes. Subsection~\ref{sec:ch343}
-upgrades Chapter~\ref{ch:02} modal orthogonality to explicit VSH integrals on \(\mathcal{F}_{\mathrm{rad}}\)
-\cite{stratton1941}.
+Orthogonality is stated on the radiative Hilbert space $(\mathcal{F}_{\mathrm{rad}},\langle\cdot,\cdot\rangle_{\mathrm{rad}})$
+with inner product Eq.~\eqref{eq:ch3.radiative-inner-product-def}: a shell pairing on $\Gamma_R$ for $R\ge R_{\min}$
+enclosing sources, plus a transverse far-zone limit as $R\to\infty$.
+This is not completeness of arbitrary $\HCurl$ fields in a bounded volume, nor orthogonality of scalar $Y_\ell^m$ on $S^2$ alone.
+Vector spherical \emph{wave} pairs $(\mathbf{M}_{\ell m},\mathbf{N}_{\ell m})$ are outgoing source-free Maxwell solutions on exterior domains; tangential vector harmonics on a fixed sphere form a different space \cite{stratton1941,hansen1988}.
 Standing imports. Radiation-modal orthogonality Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}, radiative coupling bilinear
 Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}, and Theorem~\ref{thm:ch2.radiation-modal-orthogonality-coupling}
 enter from Subsection~\ref{sec:ch282} by reference \cite{stratton1941}. Radiative inner product
@@ -6407,16 +6413,21 @@ a_{\ell m}=\langle Y_{\ell}^{m},f\rangle_{\Omega},
 \end{equation}
 with \(\langle\cdot,\cdot\rangle_{\Omega}\) from Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} .
 Equation~\eqref{eq:ch3.parseval-sphere} is the angular backbone of Eq.~\eqref{eq:ch3.VSH-resolution-identity}
-\begin{theorem}[Harmonic completeness on \(\mathcal{F}_{\mathrm{rad}}\)]
+\begin{theorem}[Harmonic completeness on \(\mathcal{F}_{\mathrm{rad}}\) — restricted]
 \label{thm:ch3.vsh-completeness}
-The outgoing set \(\{\mathbf{u}_{\ell m}^{(\sigma)}\}\) is complete in \(\mathcal{F}_{\mathrm{rad}}\) for the inner
-product Eq.~\eqref{eq:ch3.radiative-inner-product-def} . Every
-\(\mathcal{R}_\omega[\mathfrak{D}]\) admits expansion Eq.~\eqref{eq:ch3.VSH-resolution-identity} with convergence in
-\(\|\cdot\|_{\mathrm{rad}}\) .
+Let $\mathcal{F}_{\mathrm{rad}}$ be the closure in $\|\cdot\|_{\mathrm{rad}}$ of finite superpositions of outgoing pairs
+$\mathbf{u}_{\ell m}^{(\sigma)}$ from Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.VSH-M-pair} satisfying
+Eq.~\eqref{eq:ch3.outgoing-inheritance-criterion}.
+Then $\{\mathbf{u}_{\ell m}^{(\sigma)}\}$ is complete in that space for
+$\langle\cdot,\cdot\rangle_{\mathrm{rad}}$ in Eq.~\eqref{eq:ch3.radiative-inner-product-def}, and every
+$\mathbf{v}_\omega\in\mathcal{F}_{\mathrm{rad}}$ admits Eq.~\eqref{eq:ch3.VSH-resolution-identity}.
+The statement does \emph{not} assert completeness of general three-dimensional Maxwell fields with sources, nor of tangential fields on $S^2$ without radial outgoing factors \cite{hansen1988,stratton1941}.
 \end{theorem}
 \noindent\textit{Proof.}
-Combine Theorem~\ref{thm:ch3.vsh-orthogonality}, Eq.~\eqref{eq:ch3.F-rad-hilbert-closure}, and standard spherical
-harmonic completeness on \(S^{2}\) .
+Angular completeness on $S^2$ uses Eq.~\eqref{eq:ch3.parseval-sphere} and orthonormality Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere}.
+Radial outgoing factors are $h_\ell^{(1)}(k_0 r)$; shell orthogonality for distinct $(\ell,m,\sigma)$ is Theorem~\ref{thm:ch3.vsh-orthogonality}.
+Closure of finite span in $\|\cdot\|_{\mathrm{rad}}$ is Eq.~\eqref{eq:ch3.F-rad-hilbert-closure}.
+Full $L^2$ convergence of infinite multipole series for every $\mathbf{v}_\omega\in\mathcal{F}_{\mathrm{rad}}$ requires the decay of tail coefficients established in Chapter~\ref{ch:04}; that tail bound is not a pointwise completeness theorem on $\mathbb{R}^{3}$ \cite{jackson1999}.
 % PROOF: AUTHOR REVIEW
 The reciprocity-symmetric reduction proceeds as follows: eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product} identifies left and right inner products for lossless
 reciprocal media, making Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} compatible with

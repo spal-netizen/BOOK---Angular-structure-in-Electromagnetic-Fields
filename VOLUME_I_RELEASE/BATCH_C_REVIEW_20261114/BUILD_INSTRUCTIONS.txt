@@ -1,0 +1,7 @@
+Batch C review build — Volume I Ch.1–4 (refs resolved)
+
+  cd latex
+  .\build-review-batch-c.ps1
+
+See BUILD_LOG.txt in this directory after the run.
+Chapter 1 hash: verify per VOLUME_I_RELEASE/CHAPTER1_BENCHMARK_MANIFEST.txt
