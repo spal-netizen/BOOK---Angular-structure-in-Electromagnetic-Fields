@@ -325,17 +325,16 @@ Jackson's multipole decay laws and Harrington's rank arguments on bounded source
 \label{sec:ch403}
 Composition fixes the synthesis operator $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathbb{C}^{I}$ with $\mathcal{R}_\omega$ from Chapter~\ref{ch:02} and admissible chart $\mathcal{C}$ from Chapter~\ref{ch:03} \cite{stratton1941}. Equip $\mathcal{J}_\Omega$ with the $\mathrm{L}^2(\Omega_s)^3$ norm on current support and $\mathbb{C}^{I}$ with the flux-weighted norm declared in Section~\ref{sec:ch35}. The singular values $\{\sigma_n(\boldsymbol{\Gamma}_\omega)\}$ are ordered decreasingly relative to those norms.
 \begin{equation}
-\label{eq:ch4.radiative-rank-def}
+\label{eq:ch4.radiative-rank-operator}
 r_{\mathrm{rad}}(\varepsilon)
 =
-\#\big\{n:\ \sigma_n(\boldsymbol{\Gamma}_\omega)>\varepsilon\big\},
+\max\left\{
+N:\ \sigma_{N}\big(\boldsymbol{\Gamma}_\omega\big)\ge\varepsilon\,\sigma_{1}\big(\boldsymbol{\Gamma}_\omega\big)
+\right\},
 \qquad
-d_{\mathrm{eff}}(\varepsilon)
-\equiv
-r_{\mathrm{rad}}(\varepsilon)
-\ \text{in the aligned gauge fixed by }\mathcal{C}.
+d_{\mathrm{eff}}(\varepsilon)\equiv r_{\mathrm{rad}}(\varepsilon),
 \end{equation}
-The integer $r_{\mathrm{rad}}(\varepsilon)$ is \emph{tolerance-dependent}: it is not an intrinsic property of $\Omega_s$ alone. A separate finite-observation operator $\boldsymbol{\mathcal{M}}_\omega:\mathbb{C}^{I}\to\mathbb{C}^{N}$ with operator norm $\|\cdot\|_{\mathcal{M}}$ defines recoverability; its singular values govern $\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ in Eq.~\eqref{eq:ch4.accessibility-envelope} and must not be identified with $\sigma_n(\boldsymbol{\Gamma}_\omega)$ \cite{hansen1988,devaney2004}.
+for relative tolerance $0<\varepsilon<1$ and $\sigma_n$ from Eq.~\eqref{eq:ch4.gamma-SVD} \cite{harrington2001}. The count depends on $(\Omega_s,\omega,\mathcal{C},\varepsilon)$. Finite observation uses $\boldsymbol{\mathcal{M}}_\omega:\mathbb{C}^{I}\to\mathbb{C}^{N}$; its singular spectrum defines $\mathcal{E}_{\mathrm{acc}}^{(N)}(\mathcal{C})$ and is distinct from $\sigma_n(\boldsymbol{\Gamma}_\omega)$ \cite{hansen1988,devaney2004}.
 \begin{figure}[t]
 \centering
 \VolIFigInclude{ch4-volume-consumption-map}
@@ -2625,15 +2624,7 @@ Equation~\eqref{eq:ch4.gamma-SVD} uses Eq.~\eqref{eq:ch2.singular-value-decay} f
 \(\sigma_{N}\) \cite{hansen1988}.
 \phantomsection\label{def:ch4.radiative-rank}
 The radiative rank $r_{\mathrm{rad}}(\varepsilon)$ counts independent far-zone patterns the source--radiation map can populate above tolerance $\varepsilon$---the operator-theoretic name for the synthesis ceiling introduced in Â§\ref{sec:ch401}. 
-For tolerance \(\varepsilon>0\), the \emph{radiative dimension} of \((\Omega_{s},\omega,\mathcal{C})\) is
-\begin{equation}
-\label{eq:ch4.radiative-rank-def}
-r_{\mathrm{rad}}(\varepsilon)
-=
-\max\left\{
-N:\ \sigma_{N}\big(\boldsymbol{\Gamma}_\omega\big)\ge\varepsilon\,\sigma_{1}\big(\boldsymbol{\Gamma}_\omega\big)
-\right\}.
-\end{equation}
+For tolerance \(\varepsilon>0\), the radiative dimension of \((\Omega_{s},\omega,\mathcal{C})\) is the integer $r_{\mathrm{rad}}(\varepsilon)$ already defined in Eq.~\eqref{eq:ch4.radiative-rank-operator}.
 Physically, singular values rank radiative channels by aligned watt content on $\Gamma_R$, not by matrix row count in a mode coefficient listing \cite{harrington2001}. rank cliffs appear as how many independent beam shapes can be synthesized before residual mismatch floors on a compact range \cite{devaney2004}. compare $d_{\mathrm{eff}}(\varepsilon)$ to probe count $N$ in every campaign \cite{harrington2001}. integrate tail watts above declared $\varepsilon$ \cite{poynting1884}.
 Radiative rank is the effective dimension of \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) at relative tolerance
 \(\varepsilon\) \cite{harrington2001}. It is not the same as \(|I_{\ell_{\max}}|\): many listed modes may

@@ -1,22 +1,7 @@
 % Stage 8 restored fragment — 2.3.1 Scalar, vector, and dyadic Green functions (archive lines 3515-3952)
 \subsection{Scalar, vector, and dyadic Green functions}
 \label{sec:ch231}
-Physically, $G$ and $\overline{\mathbf{G}}_{E}$ are the medium's response functions: each
-records how a unit impulse at $\mathbf{r}'$ launches scalar or vector fields to $\mathbf{r}$ under
-the same boundary completion as $\mathcal{L}_\omega$ \cite{stratton1941}. Every compact-range campaign begins with a dipole elementary check: a electrically small feed
-must reproduce the transverse far-zone law before multipole catalogs are trusted on larger
-apertures \cite{jackson1999}. That observation anchors the Green-function program
-developed here---first the scalar monopole response, then vector potentials, then the
-electric dyad that maps $\Jimp$ to $\E$ directly \cite{stratton1941}. The dyadic Green
-function is the electromagnetic impulse response of the governing Maxwell
-operator: the field at an observation point produced by an elemental current located
-elsewhere. In uniform media it is also the continuous limit of one radiating cell in a
-phased array and the local kernel that probe correction applies when near-field data are
-translated to a reference surface \cite{stratton1941}. Admissible kernels are
-retarded---field response follows source excitation only after finite propagation delay---so
-localized impressed currents remain consistent with Maxwell causality
-\cite{sommerfeld1949}. Scalar Helmholtz functions describe monopole-like propagation;
-polarization coupling on vector feeds requires the full dyadic \cite{collin2001}.
+Under $\eim$, the scalar Green function $G$ inverts the Helmholtz operator $(\nabla^2+k_0^2)$ that governs monopole radiation and Lorenz potentials in vacuum \cite{stratton1941,jackson1999}. The dyadic $\overline{\mathbf{G}}_{E}$ is the electric-field response of Maxwell's system to an impressed electric dipole: it satisfies the vector Helmholtz equation with a point dyadic source and the same outgoing condition as Eq.~\eqref{eq:ch2.free-space-scalar-green} \cite{tai1994}. Causality requires the retarded branch: response at $\mathbf{r}$ is driven only by sources at $\mathbf{r}'$ with propagation phase $e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}$ compatible with Sommerfeld selection (Section~\ref{sec:ch242}) \cite{sommerfeld1949}.
 
 The \emph{kernel formulas} developed below must be distinguished from
 and the \emph{domain declarations} that make those formulas meaningful on a declared
