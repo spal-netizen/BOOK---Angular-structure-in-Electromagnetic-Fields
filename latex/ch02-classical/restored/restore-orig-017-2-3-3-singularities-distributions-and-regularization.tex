@@ -59,12 +59,26 @@ with $\boldsymbol{\mathcal{S}}$ the vector Green boundary term in Eq.~\eqref{eq:
 The volume integrand on $V_\varepsilon$ is zero by Eq.~\eqref{eq:ch2.column-curl-curl-check}.
 The exterior sphere $\partial B_{R_\varepsilon}$ contributes $\mathcal{O}(R_\varepsilon^{-2})$ under outgoing
 $e^{-\jj k_0 R}/R$ decay and $\mathbf{f}$ fixed on compact support, so its contribution vanishes as $R_\varepsilon\to\infty$.
-On the interior sphere $|{\mathbf{r}-\mathbf{r}'}|=\varepsilon$, the leading isotropic piece
-$\mathbf{G}_{E,0}^{(a)}\sim \mathbf{e}_a\,e^{-\jj k_0\varepsilon}/(4\pi\varepsilon)$ yields
+On the interior sphere $|{\mathbf{r}-\mathbf{r}'}|=\varepsilon$, expand
+$G_0=e^{-\jj k_0\varepsilon}/(4\pi\varepsilon)=1/(4\pi\varepsilon)+\mathcal{O}(\varepsilon)$.
+Green's second identity on $B_\varepsilon$ gives
+\begin{equation}
+\label{eq:ch2.scalar-interior-sphere-limit}
+\lim_{\varepsilon\to 0^{+}}
+\oint_{|\mathbf{r}-\mathbf{r}'|=\varepsilon}
+\Big(\varphi\,\partial_{n}G_0-G_0\,\partial_{n}\varphi\Big)\,dS
+=\varphi(\mathbf{r}'),
+\end{equation}
+with outward normal $n$ on $\partial B_\varepsilon(\mathbf{r}')$, reproducing the scalar fundamental mass
+\cite{jackson1999,stratton1941}.
+For the dyadic column $\mathbf{G}_{E,0}^{(a)}$, the Lorenz reduction ties the transverse $e^{-\jj k_0\varepsilon}/(4\pi\varepsilon)$
+part of $\mathbf{E}^{(a)}$ to the same $1/\varepsilon$ flux; the longitudinal $\nabla(\nabla\cdot\mathbf{A})$ term
+cancels in the distributional limit because $\nabla\cdot\mathbf{J}=-\jj\omega\rho$ at coincidence enforces the scalar
+$\delta^{(3)}$ partner already established for $G_0$ \cite{tai1994,stratton1941}.
+The interior boundary contribution therefore satisfies
 $\oint_{\partial B_\varepsilon}\boldsymbol{\mathcal{S}}\cdot d\mathbf{S}\to f_a(\mathbf{r}')$ as $\varepsilon\to 0^{+}$,
-matching one Cartesian unit of impressed current; summing $a=x,y,z$ produces
-$\mathbf{f}(\mathbf{r}')\cdot\mathbf{e}_a$ summed to $\mathbf{f}(\mathbf{r}')$ against the dyadic
-$\overline{\mathbf{I}}\delta^{(3)}$ \cite{stratton1941,tai1994,jackson1999}.
+and summing $a=x,y,z$ yields the test pairing against $\overline{\mathbf{I}}\delta^{(3)}(\mathbf{r}-\mathbf{r}')$
+\cite{stratton1941,jackson1999}.
 The longitudinal $\nabla(\nabla\cdot\mathbf{A})$ pieces in the Lorenz reduction do not add a separate tensor
 $\delta^{(3)}$ mass because charge continuity and the scalar $\delta^{(3)}$ already enforce
 $\nabla\cdot\mathbf{J}=-\jj\omega\rho$ at coincidence \cite{stratton1941}.

@@ -11,7 +11,17 @@
 Every antenna laboratory eventually confronts the same practical question. A feed network, aperture, or array of fixed mechanical outline is connected at a fixed frequency: how many \emph{distinct} far-zone radiation patterns can that hardware actually produce, and how many of those patterns can a finite measurement sphere recover to a declared tolerance? Chapters~1--3 established the language---angular structure on outgoing fields, retarded export from bounded sources, and flux-normalized harmonic coordinates \cite{maxwell1873}. Chapter~\ref{ch:04} uses that language to state what finite geometry \emph{permits}. A complete harmonic listing may display arbitrarily many indices; electrical size $k_{0}D_{s}$, support diameter, and aperture area fix how many independent radiative channels bounded impressed currents can populate and how many a finite instrument can observe \cite{chu1948}. The wattmeter on $\Gamma_R$ closes the loop: every coefficient dispute is ultimately a flux dispute once outgoing selection has been enforced \cite{poynting1884}.
 % PHYSICAL-HISTORY:sec:ch40
 
-Maxwell's retarded export underpins every realizability question posed in this chapter \cite{maxwell1873}. Poynting flux on $\Gamma_R$ remains the wattmeter standard against which synthesized harmonic targets must close \cite{poynting1884}. Stratton linked impressed currents, equivalent apertures, and far-zone patterns through the radiation integrals that method-of-moments practice discretizes on real feeds \cite{stratton1941}. Chu's bandwidth and minimum-$Q$ arguments made electrical size an integer-counting resource for independent radiative channels on bounded supports \cite{chu1948}. Harrington's synthesis and inversion culture sharpened the distinction between what a complete chart can list and what bounded metal and dielectric can actually drive \cite{harrington2001}. Finite support compresses the radiation operator spectrally; finite probe count compresses it again at the instrument---both limits were implicit in classical antenna theory long before orbital-mode headlines blurred synthesis with recovery \cite{hansen1988}. The historical line converges here on the Volume~I thesis: \emph{finite geometry limits realizable, accessible, and observable angular electromagnetic complexity}, made operational through effective rank, tail energy, and the separation of synthesizable from recoverable sets on declared hardware \cite{pal2026}. Every compact-compact-range measurement record that quotes harmonic length without $(k_0 D_s,\varepsilon,N)$ repeats a mistake the classical masters already warned against \cite{stratton1941}.
+Chapter~\ref{ch:03} supplied a complete harmonic chart on outgoing fields, yet a chart does not specify which
+coefficients a finite feed can excite or a finite range can recover.
+The present chapter connects impressed currents on compact support $\Omega_s$ to that chart through
+$\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$, where $\mathcal{R}_\omega$ is the radiative export map
+fixed in Chapter~\ref{ch:02} and $\mathcal{C}$ assigns flux-normalized coordinates
+\cite{stratton1941,hansen1988}.
+Electrical size $k_0 D_s$, aperture area, and equivalent source extent control how steeply the singular values of
+$\boldsymbol{\Gamma}_\omega$ decay; probe count $N$ on $\Gamma_R$ controls a separate observational ceiling
+\cite{chu1948,harrington2001}.
+Every watt budget on $\Gamma_R$ still closes through Poynting flux, so a pattern target that violates high-$\ell$
+suppression on electrically small supports fails before harmonic post-processing begins \cite{poynting1884,stratton1941}.
 
 % PHYSICAL-MEMORY:sec:ch40
 
@@ -542,29 +552,33 @@ so identical \(\mathbf{c}\) may arise from distinct \(\Jimp\) differing by non-r
 synthesis non-uniqueness law: range membership of \(\mathbf{c}\) does not determine a unique current
 distribution \cite{devaney2004}. Inverse design must quotient \(\mathcal{J}_{\mathrm{real}}\) by
 \(\ker\boldsymbol{\Gamma}_\omega\) developed in Subsection~\ref{sec:ch414}.
-\begin{proposition}[Compact synthesis on bounded sources]
+\begin{proposition}[Compact synthesis on bounded sources --- mode functionals]
 \label{prop:ch4.gamma-compact}
 Let $\Omega_{s}$ be compact with $\diam\Omega_{s}=D_{s}$ and fix $\omega>0$.
 Equip $\mathcal{J}_\Omega$ with $\|\Jimp\|_{\mathcal{J}}^{2}=\int_{\Omega_{s}}|\Jimp|^{2}\,d^{3}\mathbf{r}$.
-If $\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}$ is compact on bounded sets of $\mathcal{J}_\Omega$
-(continuous dyadic propagation with outgoing completion on exterior domains \cite{stratton1941,hansen1988}),
-and $\mathcal{C}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{I}$ is bounded with countable admissible index set $I$,
-then $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$ is compact from $\mathcal{J}_\Omega$ to $\mathbb{C}^{I}$.
+For each admissible mode label $(\ell,m,\sigma)$, let $\mathcal{K}_{\ell m}^{(\sigma)}:\mathcal{J}_\Omega\to\mathbb{C}$
+be the functional in Eq.~\eqref{eq:ch4.modal-coupling-integral} with kernel
+$\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ continuous on $\overline{\Omega_{s}}\times\overline{\Omega_{s}}$ at fixed $\omega$.
+Then each $\mathcal{K}_{\ell m}^{(\sigma)}$ is Hilbert--Schmidt on $L^{2}(\Omega_{s})^{3}$, and for every finite
+$I_{N}\subset I$, the truncated synthesis map
+$\boldsymbol{\Gamma}_{\omega,N}=\mathcal{P}_{N}\circ\mathcal{C}\circ\mathcal{R}_\omega$ is compact into $\mathbb{C}^{I_{N}}$.
+This proposition concerns the \emph{mode projection functionals}, not a full compactness proof of the complete
+Maxwell boundary-value operator on arbitrary domains \cite{kato1995,hansen1988}.
 \end{proposition}
 \begin{proof}
-Domain $\mathcal{J}_\Omega$ is taken as $L^{2}(\Omega_{s})^{3}$ with $\|\Jimp\|_{\mathcal{J}}$.
-For each admissible mode, $\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]
-=\int_{\Omega_{s}}\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}(\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}\mathbf{r}'$
-with $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ continuous on $\Omega_{s}\times\Omega_{s}$ for fixed $\omega$
-and outgoing kernels on exterior $\mathbb{R}^{3}$.
-Then $|\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}|^{2}$ is integrable on $\Omega_{s}\times\Omega_{s}$, so each
-mode functional is Hilbert--Schmidt on $L^{2}(\Omega_{s})^{3}$ and therefore compact
-\cite{kato1995,hansen1988}.
-Finitely many modes yield compact rank-$|I|$ approximations; countable $I$ gives compact limits under bounded
-coefficient bounds of $\mathcal{C}$ on $\mathcal{F}_{\mathrm{rad}}$.
-The compact image $\boldsymbol{\Gamma}_\omega(B)$ of the unit ball $B\subset\mathcal{J}_\Omega$ is precompact in
-$\mathbb{C}^{I}$; $r_{\mathrm{rad}}(\varepsilon)$ in Eq.~\eqref{eq:ch4.radiative-rank-operator} counts singular
-values of this synthesis map only, not probe rank.
+Each $\mathcal{K}_{\ell m}^{(\sigma)}$ has integral kernel
+$K_{\ell m}^{(\sigma)}(\mathbf{r},\mathbf{r}')=\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}(\mathbf{r}')^{\mathsf{T}}$
+acting on $\Jimp(\mathbf{r}')$.
+Continuity on the compact set $\overline{\Omega_{s}}\times\overline{\Omega_{s}}$ implies
+$\|K_{\ell m}^{(\sigma)}\|_{L^{2}(\Omega_{s}\times\Omega_{s})}^{2}<\infty$, which is the Hilbert--Schmidt condition
+for an operator $L^{2}(\Omega_{s})^{3}\to\mathbb{C}$ \cite{kato1995}.
+Composition $\mathcal{C}\circ\mathcal{R}_\omega$ enters only through the radiative state
+$\mathcal{R}_\omega[\Jimp]$ fed into mode templates; the proposition does not assert that the full
+dyadic convolution with non-compact exterior domain is a compact operator on all of $\HCurl$.
+Truncation $\mathcal{P}_{N}$ yields a finite-dimensional compact operator
+$\boldsymbol{\Gamma}_{\omega,N}$; $r_{\mathrm{rad}}(\varepsilon)$ in Eq.~\eqref{eq:ch4.radiative-rank-operator}
+is the singular-value count of $\boldsymbol{\Gamma}_\omega$ on $\mathcal{J}_{\mathrm{real}}$, distinct from
+measurement rank of $\boldsymbol{\mathcal{M}}_\omega$ \cite{harrington2001}.
 \end{proof}
 Physically, enlarging a feed beyond a bounded hull does not produce an open ball of attainable coefficient vectors:
 finite electrical size compresses export into a decaying singular-value ladder
@@ -3032,23 +3046,28 @@ does not imply large synthesizable \(\mathbf{c}\) \cite{devaney2004}.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
-\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
- \node[ch1box, minimum width=32mm] (raw) {Raw $\mathcal{S}_\omega[\Jimp]$\\large $\mathcal{E}_{\mathrm{ev}}$};
- \node[ch1box, minimum width=26mm, right=7mm of raw] (prop) {$\Pi_{\mathrm{prop}}$\\$\mathcal{K}_{\mathrm{prop}}$};
- \node[ch1box, minimum width=28mm, right=7mm of prop] (rad) {$\Pi_{\mathrm{rad}}$\\$\mathcal{F}_{\mathrm{rad}}$};
- \node[ch1box, minimum width=26mm, below=5mm of prop] (null) {$\mathcal{K}_{\mathrm{ev}}\mapsto\mathbf{0}$};
- \draw[ch1flow] (raw) -- (prop) -- (rad);
- \draw[ch1flow] (null.south) -- (null.south |- prop.north);
- \draw[ch1flow] (null.south |- prop.north) -- (prop.north);
+\begin{tikzpicture}[ch1fig, node distance=5mm and 6mm]
+ \node[ch1box, minimum width=30mm] (s) {$\mathcal{S}_\omega[\Jimp]$\\$\mathcal{F}_\Omega$};
+ \node[ch1box, minimum width=28mm, right=6mm of s] (oout) {$\mathcal{O}_{\mathrm{out}}$\\outgoing pairs};
+ \node[ch1box, minimum width=30mm, right=6mm of oout] (sout) {$\mathcal{S}_\omega^{(\mathrm{out})}$};
+ \node[ch1box, minimum width=28mm, right=6mm of sout] (prad) {$\Pi_{\mathrm{rad}}$\\$\mathcal{F}_{\mathrm{rad}}$};
+ \node[ch1box, minimum width=30mm, below=6mm of s] (spec) {$\Pi_{\mathrm{prop}}$ on\\lateral spectrum};
+ \node[ch1box, minimum width=34mm, right=6mm of prad] (gamma) {$\mathcal{C}\circ\mathcal{R}_\omega$\\$\boldsymbol{\Gamma}_\omega$};
+ \draw[ch1flow] (s) -- (oout) -- (sout) -- (prad) -- (gamma);
+ \draw[ch1flow,dashed] (s.south) -- (spec.north);
+ \draw[ch1flow,dashed] (spec.east) -| (gamma.south);
 \end{tikzpicture}%
 }
-\caption{Subsection~\ref{sec:ch442}: evanescent lateral spectra are removed by \(\Pi_{\mathrm{prop}}\) before
-radiative listing; \(\boldsymbol{\Gamma}_\omega\) sees only \(\mathcal{K}_{\mathrm{prop}}\).}
+\caption{Subsection~\ref{sec:ch442}: synthesis uses outgoing field completion
+$\mathcal{S}_\omega^{(\mathrm{out})}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$ and radiative export
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{(\mathrm{out})}$.
+Lateral $\Pi_{\mathrm{prop}}$ removes evanescent spectral weight in $\mathcal{K}_{\mathrm{ev}}$ before $\boldsymbol{\Gamma}_\omega$
+acts; it is not identified with $\mathcal{O}_{\mathrm{out}}$ on field pairs (Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}).}
 \label{fig:ch4.prop-ev-partition}
 \end{figure}
-Figure~\ref{fig:ch4.prop-ev-partition} summarizes the synthesis path: $\boldsymbol{\Gamma}_\omega$ optimizes $\mathbf{c}$ on $\mathcal{F}_{\mathrm{rad}}$, not on the full near-field spectrum
-\cite{stratton1941}. Super-directivity designs that concentrate near-field evanescent energy may leave
-$\mathbf{c}$ nearly unchanged while $\mathcal{E}_{\mathrm{ev}}$ grows \cite{devaney2004}.
+Figure~\ref{fig:ch4.prop-ev-partition} summarizes the synthesis path: $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$
+maps only outgoing radiative export into $\mathbf{c}$, while evanescent lateral spectra may dominate raw near-field maps
+without enlarging synthesizable coefficients \cite{stratton1941,devaney2004}.
 \phantomsection\label{cor:ch4.reactive-no-c}
 Let \({\Jimp}_{A},{\Jimp}_{B}\in\mathcal{J}_{\mathrm{real}}\) satisfy
 \(\boldsymbol{\Gamma}_\omega[{\Jimp}_{A}]=\boldsymbol{\Gamma}_\omega[{\Jimp}_{B}]\) but differ in
@@ -3126,12 +3145,22 @@ The radiative rank $r_{\mathrm{rad}}(\varepsilon)$ in Eq.~\eqref{eq:ch4.radiativ
 $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$, not of a finite observation map $\boldsymbol{\mathcal{M}}_\omega$.
 \end{proposition}
 \begin{proof}
-\emph{Volume form.} Eq.~\eqref{eq:ch4.modal-coupling-integral} is the $L^{2}(\Omega_s)^{3}$ pairing of $\Jimp$ with the source dual
-$\widehat{\mathbf{J}}_{\ell m}^{(\sigma)\dagger}$ induced by reciprocity
-Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} \cite{stratton1941}.
-\emph{Radiative form.} By definition of $\widehat{c}_{\ell m}^{(\sigma)}$ in the flux gauge,
-$\widehat{c}_{\ell m}^{(\sigma)}=\langle\mathbf{W}_{\ell m}^{(\sigma)},\mathcal{R}_\omega[\Jimp]\rangle_{\mathrm{rad}}$.
-Expand $\mathcal{R}_\omega[\Jimp]$ using dyadic propagation Eq.~\eqref{eq:ch2.electric-dyadic-convolution} and integrate by parts on $\Omega_s$ under outgoing completion; the result is a volume integral of the same type as Eq.~\eqref{eq:ch4.modal-coupling-integral} with kernel $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ assembled from Green contraction against $\mathbf{W}_{\ell m}^{(\sigma)}$ \cite{hansen1988}.
+\emph{Reciprocity pairing.} On a passive exterior domain with outgoing radiation condition, Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}
+defines a sesquilinear pairing of impressed sources with dual modes $\mathbf{W}_{\ell m}^{(\sigma)}$ \cite{stratton1941}.
+\emph{Volume reduction.} Let $\mathbf{E}_\Jimp=\mathcal{S}_\omega^{(\mathrm{out})}[\Jimp]$ and expand
+$\widehat{c}_{\ell m}^{(\sigma)}=\langle\mathbf{W}_{\ell m}^{(\sigma)},\Pi_{\mathrm{rad}}\mathbf{E}_\Jimp\rangle_{\mathrm{rad}}$.
+Substitute Eq.~\eqref{eq:ch2.electric-dyadic-convolution} for $\mathbf{E}_\Jimp$ in the source region and integrate by parts:
+\begin{equation}
+\label{eq:ch4.reciprocity-ibp-step}
+\int_{\Omega_s}\mathbf{W}_{\ell m}^{(\sigma)\dagger}\cdot\Jimp\,d^{3}\mathbf{r}
+=
+\int_{\Omega_s}\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}(\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}\mathbf{r}'
+\;+\;\oint_{\partial\Omega_s}\mathbf{U}_{\ell m}^{(\sigma)}\cdot(\hat{\mathbf{n}}\times\mathbf{E}_\Jimp)\,dS,
+\end{equation}
+with $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ assembled from contraction of $\overline{\mathbf{G}}_{E}$ against
+$\mathbf{W}_{\ell m}^{(\sigma)}$ and $\mathbf{U}_{\ell m}^{(\sigma)}$ the vector potential remnant in Lorenz gauge.
+For $\Jimp\in\mathcal{J}_\Omega$ with $\Jimp\times\hat{\mathbf{n}}=\mathbf{0}$ on $\partial\Omega_s$, the surface term vanishes
+\cite{stratton1941,hansen1988}.
 \emph{Normalization and invariance.} The impressed field $\mathcal{R}_\omega[\Jimp]$ and the radiated power
 $P_{\mathrm{rad}}$ on $\Gamma_R$ are independent of Lorenz gauge in source-free exterior regions
 \cite{stratton1941}. The factor $\mathcal{Z}_{\ell m}^{(\sigma)}$ is not a physical field amplitude: it converts the

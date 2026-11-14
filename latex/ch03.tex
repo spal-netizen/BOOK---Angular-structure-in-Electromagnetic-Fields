@@ -5727,17 +5727,18 @@ Subsection~\ref{sec:ch345} analyzes degeneracy and representation coupling using
 from Subsection~\ref{sec:ch262} \cite{jackson1999}.
 \subsection{Scalar and vector spherical harmonics (definitions)}
 \label{sec:ch341}
-% CH03-NARR-EXP:03.341
-Condon--Shortley conventions fix phase ladders on $Y_\ell^m$ so rotation matrices compose without hidden sign ambiguities \cite{stratton1941,jackson1999}. Two laboratories comparing $\widehat{c}_{\ell m}^{(\sigma)}$ must publish the same angular-gauge metadata before watt budgets are merged \cite{hansen1988}.
-% HARRINGTON-OPEN:sec:ch341
-Scalar and vector spherical harmonics are angular factors on the observation sphere \cite{stratton1941}. They appear in every range equation and scattering series \cite{harrington2001}. Define them once, then use them everywhere. Outgoing Maxwell radiation on $\mathcal{F}_{\mathrm{rad}}$ remains the governing constraint \cite{stratton1941}.
-% TOC tag: [HOME]
-Volume~I names \(Y_{\ell}^{m}\), \(\mathbf{M}_{\ell m}\), and \(\mathbf{N}_{\ell m}\) only here
-\cite{stratton1941}. Subsection~\ref{sec:ch341} closes the separation program of
-Section~\ref{sec:ch33} by attaching explicit symbols to the angular factors
-Eq.~\eqref{eq:ch3.angular-laplacian-eigenvalue} and the Debye generators
-Eqs.~\eqref{eq:ch3.debye-E-representation}--\eqref{eq:ch3.debye-separated-expansion}
-\cite{hansen1988}.
+Rotational symmetry of Maxwell's equations in source-free exterior domains makes the angular
+eigenspaces of $\mathcal{L}_\omega$ the natural coordinate chart for far-zone fields \cite{stratton1941}.
+Subsection~\ref{sec:ch341} attaches explicit symbols to that chart: scalar harmonics
+$Y_{\ell}^{m}$ on $S^{2}$, toroidal $\mathbf{M}_{\ell m}$ and poloidal $\mathbf{N}_{\ell m}$ built from curls of
+outgoing radial factors $h_{\ell}^{(1)}(k_0 r)$, and Maxwell pairs
+Eq.~\eqref{eq:ch3.VSH-M-pair} that satisfy $\curl\E=-\jj\omega\mu_0\H$ with fixed $\eta_0$
+\cite{hansen1988,tai1994}.
+Condon--Shortley phases in Eq.~\eqref{eq:ch3.Ylm-Condon-Shortley-def} fix the sign ladders so Wigner
+rotations of coefficients in later sections agree with laboratory turntable conventions \cite{jackson1999}.
+Every subsequent multipole display cites the definitions below by reference; outgoing radiation on
+$\mathcal{F}_{\mathrm{rad}}$ remains the admissibility constraint imported from Chapter~\ref{ch:02}
+\cite{stratton1941}.
 Standing imports. Angular eigenvalue Eqs.~\eqref{eq:ch3.angular-laplacian-eigenvalue}--\eqref{eq:ch3.azimuthal-eigenvalue-equation},
 outgoing radial factor Eq.~\eqref{eq:ch3.outgoing-radial-admissibility}, and carrier
 Eq.~\eqref{eq:ch3.outgoing-inheritance-criterion} enter from Section~\ref{sec:ch33} by reference
@@ -6065,11 +6066,13 @@ outgoing radial dependence . Subsection~\ref{sec:ch342} analyzes toroidal,
 poloidal, and divergence-free structure without reintroducing symbols .
 \subsection{Toroidal, poloidal, and divergence-free structure}
 \label{sec:ch342}
-% HARRINGTON-OPEN:sec:ch342
-On a declared compact-range or anechoic campaign, technicians record frequency, outline, and probe geometry before any harmonic fit is trusted \cite{hansen1988}. Toroidal and poloidal structure distinguishes circulating from radial-like angular dependencies in vector patterns \cite{stratton1941}. Divergence-free constraints tie them to physical $\E$ and $\H$ \cite{jackson1999}. Outgoing Maxwell radiation on $\mathcal{F}_{\mathrm{rad}}$ remains the governing constraint \cite{stratton1941}.
-% TOC tag: [HOME]
-Definitions Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} name the objects; Subsection~\ref{sec:ch342}
-explains their geometric and Maxwell structure on \(\mathcal{F}_{\mathrm{rad}}\) \cite{tai1994}.
+The curls in Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} encode two distinct vector geometries on each
+spherical shell: toroidal $\mathbf{M}_{\ell m}$ circulates azimuthally without a radial $\E$ component, whereas
+poloidal $\mathbf{N}_{\ell m}$ completes the transverse electric-type structure through an additional curl
+\cite{tai1994,stratton1941}.
+Subsection~\ref{sec:ch342} records the transversality identities, divergence-free span, and physical feed
+interpretation before Subsection~\ref{sec:ch343} proves orthogonality in the radiative inner product
+Eq.~\eqref{eq:ch3.radiative-inner-product-def} \cite{hansen1988}.
 For \(\mathbf{M}_{\ell m}\) and \(\mathbf{N}_{\ell m}\) defined in Subsection~\ref{sec:ch341},
 \begin{equation}
 \label{eq:ch3.MN-radial-orthogonality}
@@ -6387,19 +6390,40 @@ Y_{\ell'}^{m'}(\theta,\phi)\,
 \delta_{\ell\ell'}\delta_{mm'}
 \end{equation}
 \cite{jackson1999}. This is $L^{2}$ orthogonality of scalar spherical harmonics, not yet vector orthogonality.
-\emph{Step 2 (angular vector factor on a shell).} For fixed $R$, outgoing $\mathbf{M}_{\ell m}$ and $\mathbf{N}_{\ell m}$
-from Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} are linear combinations of
-$\partial_\theta Y_{\ell}^{m}$ and $(\mathrm{i}/\sin\theta)\partial_\phi Y_{\ell}^{m}$ on $\Gamma_R$ multiplied by
-$h_{\ell}^{(1)}(k_0 R)$ and its derivatives.
-Distinct $(\ell,m)\neq(\ell',m')$ therefore produce angular products that reduce to bilinear forms in
-$Y_{\ell}^{m}$ and their angular derivatives; each form vanishes after integration over $d\Omega$ by
-Eq.~\eqref{eq:ch3.Ylm-angular-integral-display} and the standard angular-momentum ladder relations for associated
-Legendre functions \cite{hansen1988,stratton1941}.
-\emph{Step 3 (radial factor, not interchangeable with Step 1).} The shell term in
-Eq.~\eqref{eq:ch3.radiative-inner-product-def} contains factors $h_{\ell}^{(1)}(k_0 R)$ and $h_{\ell'}^{(1)}(k_0 R)^{*}$.
-For $(\ell,m,\sigma)=(\ell',m',\sigma')$, diagonal energy is set in Section~\ref{sec:ch35};
-for distinct labels with the same $\sigma$ but $\ell\neq\ell'$, orthogonality follows from
-Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} when $k_0 R$ exceeds reactive scales \cite{hansen1988}.
+\emph{Step 2 (radiative shell integral).} On $\Gamma_R$ with $k_0 R\gg\ell,\ell'$, the transverse fields in
+Eq.~\eqref{eq:ch3.radiative-inner-product-def} satisfy the leading asymptotics \cite{hansen1988,stratton1941}
+\begin{equation}
+\label{eq:ch3.far-shell-ET-leading}
+\mathbf{E}_{\ell m}^{(\sigma),T}(\mathbf{r})
+\sim
+\mathbf{A}_{\ell m}^{(\sigma)}(\theta,\phi)\,
+h_{\ell}^{(1)}(k_0 R)\,
+\frac{e^{-\jj k_0 R}}{R},
+\qquad
+\mathbf{A}_{\ell m}^{(\sigma)}
+=\mathcal{O}\!\big(\partial_\theta Y_{\ell}^{m},\partial_\phi Y_{\ell}^{m}\big),
+\end{equation}
+with amplitudes $\mathbf{A}_{\ell m}^{(\sigma)}$ built from Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.VSH-M-pair}.
+The radiative cross-term therefore reduces to
+\begin{equation}
+\label{eq:ch3.shell-ET-orthogonality-display}
+\lim_{R\to\infty}R^{-2}
+\int_{\Gamma_R}
+\mathbf{E}_{\ell m}^{(\sigma),T}\cdot\mathbf{E}_{\ell' m'}^{(\sigma'),T*}\,dS
+=
+\int_{0}^{2\pi}\!\int_{0}^{\pi}
+\mathbf{A}_{\ell m}^{(\sigma)}\cdot\mathbf{A}_{\ell' m'}^{(\sigma')\,*}
+\,\sin\theta\,d\theta\,d\phi
+\;\times\;
+\mathcal{R}_{\ell\ell'}(k_0 R),
+\end{equation}
+where $\mathcal{R}_{\ell\ell'}(k_0 R)\to 0$ for $\ell\neq\ell'$ by
+Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} and the angular factor vanishes for
+$(\ell,m)\neq(\ell',m')$ by Eq.~\eqref{eq:ch3.Ylm-angular-integral-display} and vector-harmonic ladder orthogonality
+\cite{jackson1999,hansen1988}.
+\emph{Step 3 (radial versus angular).} Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display} separates a fixed-sphere angular
+integral from the radial Hankel overlap; neither factor alone implies orthogonality of arbitrary
+$\HCurl$ fields in a bounded cavity \cite{hansen1988}.
 \emph{Step 4 ($\mathbf{M}$--$\mathbf{N}$ at fixed $(\ell,m)$).}
 With $\mathbf{N}_{\ell m}=(1/k_0)\curl\mathbf{M}_{\ell m}$,
 \begin{equation}

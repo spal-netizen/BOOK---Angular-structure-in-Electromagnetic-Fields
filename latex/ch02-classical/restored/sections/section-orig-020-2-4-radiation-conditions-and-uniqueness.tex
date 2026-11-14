@@ -1,18 +1,15 @@
 % Stage 8 section framing — 2.4 Radiation Conditions and Uniqueness
 \section{Radiation Conditions and Uniqueness}
 \label{sec:ch24}
-Green-function inversion in Section~\ref{sec:ch23} reconstructs fields from sources on compact support. Section~\ref{sec:ch24} imposes outgoing radiation conditions that separate measurable far-zone content from reactive storage \cite{sommerfeld1949}. A dense near-field map without outgoing filtering can fit non-radiating currents \cite{devaney2004}.
-
-
-Maxwell's equations alone do not distinguish fields radiating away from a source from
-fields arriving from infinity, yet every laboratory measurement assumes the former.
-Antennas are fed by finite sources, compact ranges suppress external illumination, and
-receivers attribute detected power to identifiable radiators rather than unexplained
-incoming waves \cite{sommerfeld1949}. Section~\ref{sec:ch23} supplied Green
-kernels that map impressed currents to fields; on exterior domains those kernels remain
-ambiguous until an outgoing branch is fixed at infinity \cite{jackson1999}. Retarded
-causality narrows the admissible class but does not fully replace Sommerfeld selection
-when harmonic solvers invert $\mathcal{L}_\omega$ at fixed $\omega$
-\cite{stratton1941}. The subsections below state outgoing radiation conditions, embed them
-as resolvent selection, prove uniqueness on the radiative branch, and record
-reconstruction limits when that branch is omitted.
+Green-function convolution in Section~\ref{sec:ch23} constructs a harmonic field pair from impressed
+currents, but on unbounded exterior domains the Helmholtz--Maxwell problem still admits incoming as well
+as outgoing partners at infinity \cite{jackson1999,sommerfeld1949}.
+Section~\ref{sec:ch24} fixes the outgoing branch that laboratory practice already assumes: finite feeds,
+anechoic chambers, and wattmeters on $\Gamma_R$ attribute power to sources that launch retarded waves
+rather than to unspecified energy arriving from infinity \cite{stratton1941}.
+Subsection~\ref{sec:ch241} states the Sommerfeld field condition; Subsection~\ref{sec:ch242} defines the
+outgoing selector $\mathcal{O}_{\mathrm{out}}$ and its distinction from far-amplitude extraction
+$\Pi_{\mathrm{rad}}$; Subsection~\ref{sec:ch243} proves that, on the outgoing branch, impressed data
+determine radiative export up to the imported retarded-resolvent hypotheses; Subsection~\ref{sec:ch244} records
+source non-uniqueness and reconstruction limits when reactive storage is misidentified as radiation
+\cite{devaney2004,harrington2001}.
