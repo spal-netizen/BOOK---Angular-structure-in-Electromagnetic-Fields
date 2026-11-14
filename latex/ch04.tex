@@ -552,11 +552,19 @@ and $\mathcal{C}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{I}$ is bounded with co
 then $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$ is compact from $\mathcal{J}_\Omega$ to $\mathbb{C}^{I}$.
 \end{proposition}
 \begin{proof}
-Composition of a compact map with a bounded operator is compact in the operator topology on bounded subsets
-\cite{kato1995}. Compact support confines impressed data to $L^{2}(\Omega_{s})^{3}$;
-retarded representation maps bounded source balls to relatively compact sets in the radiative seminorm when
-Green kernels are square-integrable on exterior shells at fixed $\omega$ \cite{hansen1988}.
-Bounded projection $\mathcal{C}$ into $\ell^{2}(I)$ sends precompact sets to precompact sets in $\mathbb{C}^{I}$.
+Domain $\mathcal{J}_\Omega$ is taken as $L^{2}(\Omega_{s})^{3}$ with $\|\Jimp\|_{\mathcal{J}}$.
+For each admissible mode, $\mathcal{K}_{\ell m}^{(\sigma)}[\Jimp]
+=\int_{\Omega_{s}}\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}(\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}\mathbf{r}'$
+with $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ continuous on $\Omega_{s}\times\Omega_{s}$ for fixed $\omega$
+and outgoing kernels on exterior $\mathbb{R}^{3}$.
+Then $|\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}|^{2}$ is integrable on $\Omega_{s}\times\Omega_{s}$, so each
+mode functional is Hilbert--Schmidt on $L^{2}(\Omega_{s})^{3}$ and therefore compact
+\cite{kato1995,hansen1988}.
+Finitely many modes yield compact rank-$|I|$ approximations; countable $I$ gives compact limits under bounded
+coefficient bounds of $\mathcal{C}$ on $\mathcal{F}_{\mathrm{rad}}$.
+The compact image $\boldsymbol{\Gamma}_\omega(B)$ of the unit ball $B\subset\mathcal{J}_\Omega$ is precompact in
+$\mathbb{C}^{I}$; $r_{\mathrm{rad}}(\varepsilon)$ in Eq.~\eqref{eq:ch4.radiative-rank-operator} counts singular
+values of this synthesis map only, not probe rank.
 \end{proof}
 Physically, enlarging a feed beyond a bounded hull does not produce an open ball of attainable coefficient vectors:
 finite electrical size compresses export into a decaying singular-value ladder
@@ -2931,7 +2939,8 @@ up to constants from \(\eta\) \cite{jackson1999}.
 \label{sec:ch442}
 % CH04-NARR-EXP:04.442
 Near-field data taken at $kr<1$ are rich in evanescent structure that stores reactive energy locally; watt-bearing far-zone multipoles live in the propagating sheet filtered by Eq.~\eqref{eq:ch4.propagating-filter} \cite{stratton1941}. Super-directive pattern targets that lean on evanescent amplification fail once tail watts are integrated on $\Gamma_R$ \cite{hansen1988}.
-Every compact-range campaign eventually confronts the same partition. Near-field probes at $kr<1$ resolve reactive sheets rich in evanescent lateral content $k_t>k_0$; far-zone meters on $\Gamma_R$ integrate only the propagating sector $\mathcal{K}_{\mathrm{prop}}$ that carries retarded power outward \cite{stratton1941}. The laboratory mistake is to treat a dense near-field map as evidence of far-zone diversity: evanescent storage can dominate probe readings while $\boldsymbol{\Gamma}_\omega[\Jimp]$---and hence $\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})$---depends only on propagating export after $\Pi_{\mathrm{prop}}\Pi_{\mathrm{rad}}$ \cite{harrington2001}.
+Every compact-range campaign eventually confronts the same partition. Near-field probes at $kr<1$ resolve reactive sheets rich in evanescent lateral content $k_t>k_0$; far-zone meters on $\Gamma_R$ integrate only the propagating sector $\mathcal{K}_{\mathrm{prop}}$ that carries retarded power outward \cite{stratton1941}. The laboratory mistake is to treat a dense near-field map as evidence of far-zone diversity: evanescent storage can dominate probe readings while $\boldsymbol{\Gamma}_\omega[\Jimp]$---and hence $\mathbf{c}\in\mathcal{S}_{\mathrm{real}}(\mathcal{C})$---depends only on propagating radiative export after
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{(\mathrm{out})}$, with evanescent lateral spectra removed in the $\Pi_{\mathrm{prop}}$ domain of Subsection~\ref{sec:ch224} before $\mathcal{O}_{\mathrm{out}}$ acts on completed field pairs \cite{harrington2001}.
 % PHYSICAL-MEMORY:sec:ch442
 % PHYSICAL-MEMORY:sec:ch442-b2
 \begin{physicalvignette}[Spherical near-field scanner with dual-polarization probes]
@@ -2964,7 +2973,7 @@ satisfy
 \mathcal{K}_{\mathrm{prop}}
 \quad\text{up to null measure},
 \end{equation}
-because \(\Pi_{\mathrm{prop}}\) annihilates evanescent content before \(\Pi_{\mathrm{rad}}\)
+because evanescent lateral weight in $\mathcal{S}_\omega[\Jimp]$ never enters $\mathcal{S}_\omega^{(\mathrm{out})}$ on $\mathcal{F}_{\mathrm{rad}}$ once propagating selection and outgoing completion separate reactive from radiative content (Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement},~\eqref{eq:ch2.rad-null-on-evanescent})
 \cite{stratton1941}. Equation~\eqref{eq:ch4.propagating-range membership} is the spectral form of
 (\ref{prin:ch4.operator-composition}): reactive near fields may carry large \(k_{t}>k_{0}\) weight in raw
 \(\mathcal{S}_\omega[\Jimp]\) but not in \(\mathbf{c}\) \cite{harrington2001}.
@@ -2991,8 +3000,9 @@ For every \(\Jimp\in\mathcal{J}_{\mathrm{real}}\),
 \widetilde{\mathbf{A}}_{\mathrm{ev}}
 \quad\text{on}\ \mathcal{F}_{\mathrm{rad}},
 \end{equation}
-equivalently, \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\) annihilates \(\mathcal{K}_{\mathrm{ev}}\) content before
-\(\mathcal{C}\) \cite{stratton1941}.
+equivalently, the synthesis map $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$ is independent of
+$\widetilde{\mathbf{A}}_{\mathrm{ev}}$ on $\mathcal{F}_{\mathrm{rad}}$ because $\mathcal{R}_\omega$ receives only
+outgoing propagating pairs after spectral filtering \cite{stratton1941}.
 Eq.~\eqref{eq:ch2.rad-projection-composition} and evanescent null
 Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}.
 (\ref{prop:ch4.evanescent-invisibility}) forbids fitting far-zone \(\mathbf{c}\) with evanescent-only
@@ -3016,7 +3026,7 @@ energy fractions
 with \(\mathcal{K}_{\mathrm{prop}},\mathcal{K}_{\mathrm{ev}}\) from Eqs.~\eqref{eq:ch4.propagating-sector} and
 \eqref{eq:ch4.evanescent-sector} \cite{stratton1941}. Near \(\Omega_{s}\), \(\mathcal{E}_{\mathrm{ev}}\)
 may dominate while \(\mathcal{E}_{\mathrm{prop}}\) alone determines \(\|\mathbf{c}\|_{\mathrm{rad}}\) after
-\(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\) \cite{harrington2001}. Equation~\eqref{eq:ch4.prop-ev-energy-fractions}
+\(\mathcal{C}\circ\mathcal{R}_\omega\) \cite{harrington2001}. Equation~\eqref{eq:ch4.prop-ev-energy-fractions}
 is the spectral diagnostic for (\ref{prop:ch4.evanescent-invisibility}): large \(\mathcal{E}_{\mathrm{ev}}\)
 does not imply large synthesizable \(\mathbf{c}\) \cite{devaney2004}.
 \begin{figure}[t]
@@ -3065,7 +3075,7 @@ Eqs.~\eqref{eq:ch4.prop-ev-energy-fractions}. The synthesis partition is
 \label{eq:ch4.synthesis-spectrum-partition}
 \widetilde{\mathbf{A}}_{\mathrm{syn}}
 =
-\Pi_{\mathrm{prop}}\Pi_{\mathrm{rad}}\,\widetilde{\mathbf{A}},
+\mathcal{C}\circ\mathcal{R}_\omega\,\widetilde{\mathbf{A}},
 \qquad
 \|\widetilde{\mathbf{A}}_{\mathrm{syn}}\|^{2}
 =
@@ -3122,9 +3132,13 @@ Eq.~\eqref{eq:ch2.radiative-coupling-bilinear} \cite{stratton1941}.
 \emph{Radiative form.} By definition of $\widehat{c}_{\ell m}^{(\sigma)}$ in the flux gauge,
 $\widehat{c}_{\ell m}^{(\sigma)}=\langle\mathbf{W}_{\ell m}^{(\sigma)},\mathcal{R}_\omega[\Jimp]\rangle_{\mathrm{rad}}$.
 Expand $\mathcal{R}_\omega[\Jimp]$ using dyadic propagation Eq.~\eqref{eq:ch2.electric-dyadic-convolution} and integrate by parts on $\Omega_s$ under outgoing completion; the result is a volume integral of the same type as Eq.~\eqref{eq:ch4.modal-coupling-integral} with kernel $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ assembled from Green contraction against $\mathbf{W}_{\ell m}^{(\sigma)}$ \cite{hansen1988}.
-\emph{Normalization.} Flux normalization in Section~\ref{sec:ch35} fixes
-$\mathcal{Z}_{\ell m}^{(\sigma)}$ so Eq.~\eqref{eq:ch4.coupling-far-zone-reduction} holds; $\mathcal{Z}_{\ell m}^{(\sigma)}$ is dimensionless in the aligned gauge and depends on $(\ell,m,\sigma)$ and $k_0$ only through the chosen flux reference on $\Gamma_R$ \cite{stratton1941}.
-The alignment is \emph{gauge-relative}; changing flux reference rescales $\mathcal{Z}_{\ell m}^{(\sigma)}$ without altering the underlying dyadic propagation.
+\emph{Normalization and invariance.} The impressed field $\mathcal{R}_\omega[\Jimp]$ and the radiated power
+$P_{\mathrm{rad}}$ on $\Gamma_R$ are independent of Lorenz gauge in source-free exterior regions
+\cite{stratton1941}. The factor $\mathcal{Z}_{\ell m}^{(\sigma)}$ is not a physical field amplitude: it converts the
+dimensionless modal coefficient $\widehat{c}_{\ell m}^{(\sigma)}$ fixed by the flux meter in Section~\ref{sec:ch35}
+to the volume coupling functional in Eq.~\eqref{eq:ch4.modal-coupling-integral}.
+Rescaling the declared flux reference on $\Gamma_R$ multiplies $\mathcal{Z}_{\ell m}^{(\sigma)}$ and
+$\widehat{c}_{\ell m}^{(\sigma)}$ inversely while leaving $\mathcal{R}_\omega[\Jimp]$ and watt integrals unchanged.
 \end{proof}
 
 The significance of the tail law for realizability is direct. Tail budget $\eta_{\mathrm{tail}}$ names the watt fraction permitted beyond truncation $\ell_{\max}$; remainder operator $\mathbf{R}_{\ell_{\max}}$ from Chapter~3 carries the discarded power \cite{stratton1941}. A sidelobe campaign that assigns appreciable weight to $\ell\ge 8$ on a $\lambda/8$ disk is therefore not a feed-network problem alone---it conflicts with $\mathcal{B}_{\mathrm{fs}}$ before MoM inversion begins \cite{chu1948}. Subsection~\ref{sec:ch443} states the decay envelope, links tail mass $\mathcal{M}_{\mathrm{tail}}$ to synthesis error, and records the tail exponent $\nu_{\mathrm{tail}}(\mathbf{c})$ laboratories can verify on measured $\mathbf{c}$ \cite{hansen1988}.
@@ -5076,7 +5090,7 @@ Let \(N_{\mathrm{ev}}(k_{t,\max})\) count evanescent modes with \(k_{t}>k_{0}\) 
 Propagating-sector filter. Before listing \(\mathbf{c}\), apply
 \begin{equation}
 \label{eq:ch4.propagating-filter}
-\widetilde{\mathbf{c}}=\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\mathcal{C}\big[\mathcal{S}_\omega[\Jimp]\big],
+\widetilde{\mathbf{c}}=\mathcal{C}\circ\mathcal{R}_\omega\mathcal{C}\big[\mathcal{S}_\omega[\Jimp]\big],
 \end{equation}
 importing Section~\ref{sec:ch44} by reference \cite{stratton1941}. Scans that skip Eq.~\eqref{eq:ch4.propagating-filter} inflate
 \(\mathcal{A}_{\mathrm{react}}^{(N)}\) without changing \(\widetilde{\mathbf{c}}\) \cite{devaney2004}.
@@ -5084,7 +5098,7 @@ importing Section~\ref{sec:ch44} by reference \cite{stratton1941}. Scans that sk
 Spherical near-field facilities and radio-telescope receivers encounter probe-limited recovery \cite{hansen1988}.
 \(\|\widetilde{\mathbf{c}}\|_{\mathrm{rad}}\) and \(d_{\mathrm{eff}}(\varepsilon)\) on \(\mathcal{F}_{\mathrm{rad}}\) are independent of
 \(\mathcal{A}_{\mathrm{react}}^{(N)}\) on fixed \((\Omega_{s},k_{0})\) \cite{stratton1941}.
-(\ref{prop:ch4.reactive-not-synthesis}) and linearity of \(\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}\) \cite{stratton1941}. Evanescent
+(\ref{prop:ch4.reactive-not-synthesis}) and linearity of \(\mathcal{C}\circ\mathcal{R}_\omega\) \cite{stratton1941}. Evanescent
 content lies outside \(\operatorname{ran}\boldsymbol{\Gamma}_\omega\) on \(\mathcal{F}_{\mathrm{rad}}\) \cite{devaney2004}.
 Evanescent near-field energy does not enlarge far-zone radiative rank \cite{stratton1941}. For the source, reactive storage on $\Omega_{s}$ is invisible to $\mathbf{c}$. In measurement, near scans resolve content filtered by $\Pi_{\mathrm{prop}}$ before far-zone listing \cite{harrington2001}.
 Evanescent richness at the scan plane does not increase propagating radiative rank \cite{harrington2001}. Seventy percent reactive energy in a near-field pattern is not seventy percent far-zone diversity \cite{hansen1988}.
@@ -5183,7 +5197,7 @@ reducing \(z\) inflates \(\mathcal{A}_{\mathrm{react}}^{(N)}\) without improving
 \item[(c)] Interpret $\mathcal{Q}_{\mathrm{re}}=2.4$ for a synthesis report that claims twelve independent far-zone streams.
 \end{enumerate}
 For part~(a), Evanescent content lies outside $\operatorname{ran}\boldsymbol{\Gamma}_\omega$ on $\mathcal{F}_{\mathrm{rad}}$. (\ref{thm:ch4.ev-invisible-export}) fixes $\|\widetilde{\mathbf{c}}\|_{\mathrm{rad}}$ and $d_{\mathrm{eff}}(\varepsilon)$ once $(\Omega_{s},k_{0})$ are declared; reactive probes record storage, not radiative rank.
-For part~(b), After $\Pi_{\mathrm{rad}}\Pi_{\mathrm{prop}}$, $\widetilde{\mathbf{c}}$ is invariant under probe enrichment on fixed geometry per Corollary~\ref{cor:ch4.prop-filter-persist}. Measured data show $\mathcal{A}_{\mathrm{react}}^{(N)}$ within $2\%$ of its limit at $N=50$ while $d_{\mathrm{eff}}(10^{-2})=7$ for $N=25,50,100$ on the same source.
+For part~(b), After $\mathcal{C}\circ\mathcal{R}_\omega$, $\widetilde{\mathbf{c}}$ is invariant under probe enrichment on fixed geometry per Corollary~\ref{cor:ch4.prop-filter-persist}. Measured data show $\mathcal{A}_{\mathrm{react}}^{(N)}$ within $2\%$ of its limit at $N=50$ while $d_{\mathrm{eff}}(10^{-2})=7$ for $N=25,50,100$ on the same source.
 For part~(c), Twelve streams exceed $d_{\mathrm{eff}}=5$; the reactive ratio signals evanescent-dominated recovery, not MIMO diversity. Reactive energy in the scan plane must be filtered before stream count is reported on $\mathcal{F}_{\mathrm{rad}}$.
 \subsection{Synthesis, reconstruction, and inversion limits}
 \label{sec:ch473}

@@ -219,7 +219,20 @@ For a point current $\mathbf{J}(\mathbf{r}')=\mathbf{e}_a\,\delta(\mathbf{r}-\ma
 \emph{Step 2 (electric field).} Under $\eim$, Eq.~\eqref{eq:ch2.lorenz-field-from-potential} gives
 $\E=\jj\omega\mu_0\mathbf{A}+(\jj\omega\varepsilon_0)^{-1}\nabla(\nabla\cdot\mathbf{A})$.
 For the point source above, $\nabla\cdot\mathbf{A}=\mu_0\,\hat{e}_a\cdot\nabla G_0$ and the column of $\overline{\mathbf{G}}_{E,0}$ aligned with $\mathbf{e}_a$ is the sum of a transverse $\jj\omega\mu_0 G_0\mathbf{e}_a$ term and a longitudinal gradient contribution; the closed form Eq.~\eqref{eq:ch2.free-space-dyadic-green} is the standard reduction of these two pieces to a single dyad \cite{tai1994,stratton1941}.
-\emph{Step 3 (homogeneous region).} For $R>0$, $(\nabla^{2}+k_0^{2})(e^{-\jj k_0 R}/R)=0$ and each column of Eq.~\eqref{eq:ch2.free-space-dyadic-green} satisfies $\mathcal{W}_{E,\omega}\mathbf{G}_{E,0}^{(a)}=\mathbf{0}$, yielding Eq.~\eqref{eq:ch2.dyadic-curl-curl-homogeneous}.
+\emph{Step 3 (homogeneous region, column-wise check).} Fix $\mathbf{r}'$ and let $R=|\mathbf{r}-\mathbf{r}'|>0$, $\widehat{\mathbf{R}}=\mathbf{R}/R$.
+With outgoing $G_0=e^{-\jj k_0 R}/(4\pi R)$, Eq.~\eqref{eq:ch2.scalar-green-distributional} implies $(\nabla^{2}+k_0^{2})G_0=0$ in the classical sense.
+Each column $\mathbf{G}_{E,0}^{(a)}$ of Eq.~\eqref{eq:ch2.free-space-dyadic-green} is a linear combination of $G_0\mathbf{e}_a$, $\widehat{\mathbf{R}}(\widehat{\mathbf{R}}\cdot\mathbf{e}_a)$, and gradients of $G_0$.
+Using $\nabla\times\nabla\times=\nabla\nabla\cdot-\nabla^{2}$ in Cartesian form and $\nabla^{2}\mathbf{e}_a=\mathbf{0}$,
+\begin{equation}
+\label{eq:ch2.column-curl-curl-check}
+\mathcal{W}_{E,\omega}\,\mathbf{G}_{E,0}^{(a)}(\mathbf{r},\mathbf{r}')
+=
+\nabla\times\nabla\times\mathbf{G}_{E,0}^{(a)}-k_0^{2}\mathbf{G}_{E,0}^{(a)}
+=\mathbf{0},
+\qquad R>0,
+\end{equation}
+because every term reduces to a combination of $(\nabla^{2}+k_0^{2})G_0$ and its gradients, all of which vanish for $R>0$ \cite{tai1994,stratton1941}.
+This verifies Eq.~\eqref{eq:ch2.dyadic-curl-curl-homogeneous} for each Cartesian index $a\in\{x,y,z\}$ separately; tensor equality follows by linearity.
 \emph{Step 4 (distributional source).} Let $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$.
 Green's vector identity on a ball $B_R$ enclosing $\mathbf{r}'$ and the support of $\mathbf{f}$ gives
 \begin{equation}

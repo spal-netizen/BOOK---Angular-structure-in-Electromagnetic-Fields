@@ -6336,11 +6336,14 @@ completeness on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.
 \subsection{Orthogonality, completeness, resolution of identity}
 \label{sec:ch343}
 % TOC tag: [HOME][USE SS2.8.2]
-Orthogonality is stated on the radiative Hilbert space $(\mathcal{F}_{\mathrm{rad}},\langle\cdot,\cdot\rangle_{\mathrm{rad}})$
-with inner product Eq.~\eqref{eq:ch3.radiative-inner-product-def}: a shell pairing on $\Gamma_R$ for $R\ge R_{\min}$
-enclosing sources, plus a transverse far-zone limit as $R\to\infty$.
-This is not completeness of arbitrary $\HCurl$ fields in a bounded volume, nor orthogonality of scalar $Y_\ell^m$ on $S^2$ alone.
-Vector spherical \emph{wave} pairs $(\mathbf{M}_{\ell m},\mathbf{N}_{\ell m})$ are outgoing source-free Maxwell solutions on exterior domains; tangential vector harmonics on a fixed sphere form a different space \cite{stratton1941,hansen1988}.
+Outgoing harmonic pairs must be orthogonal before modal coefficients can name independent watt channels on $\Gamma_R$.
+Orthogonality is therefore stated on $(\mathcal{F}_{\mathrm{rad}},\langle\cdot,\cdot\rangle_{\mathrm{rad}})$
+with Eq.~\eqref{eq:ch3.radiative-inner-product-def}: a finite-shell pairing on $\Gamma_R$ for $R\ge R_{\min}$
+enclosing sources, followed by the transverse far-zone limit as $R\to\infty$.
+That inner product weights transverse electric and magnetic fields with $\eta_0^{2}$ so propagating power dominates the limit.
+It is not orthogonality in an arbitrary bounded $\HCurl$ space, nor the scalar $L^{2}(S^{2})$ product on $Y_{\ell}^{m}$ alone.
+The objects below are \emph{vector spherical wave} solutions Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.VSH-M-pair};
+fixed-sphere tangential harmonics without outgoing radial factors belong to a different class \cite{stratton1941,hansen1988}.
 Standing imports. Radiation-modal orthogonality Eq.~\eqref{eq:ch2.radiation-modal-orthogonality}, radiative coupling bilinear
 Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}, and Theorem~\ref{thm:ch2.radiation-modal-orthogonality-coupling}
 enter from Subsection~\ref{sec:ch282} by reference \cite{stratton1941}. Radiative inner product
@@ -6372,19 +6375,45 @@ Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} holds for distinct \((\ell,m,\sig
 with Eq.~\eqref{eq:ch3.outgoing-inheritance-criterion} \cite{stratton1941}.
 \end{theorem}
 \noindent\textit{Proof.}
-\emph{Step 1 (angular factor).} On $S^{2}$ with measure $\sin\theta\,d\theta\,d\phi$,
-Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} gives
-$\int Y_{\ell}^{m*}Y_{\ell'}^{m'}\sin\theta\,d\Omega=\delta_{\ell\ell'}\delta_{mm'}$
-\cite{jackson1999}.
-\emph{Step 2 (toroidal construction).} From Eq.~\eqref{eq:ch3.Mlm-def},
-$\mathbf{M}_{\ell m}=\curl(h_\ell^{(1)}Y_\ell^m\hat{\mathbf{r}})$ is tangential to $S^{2}$ at fixed $r$ up to $k_0 r$-dependent factors; distinct $(\ell,m)$ angular factors are orthogonal by Step~1.
-\emph{Step 3 (radial).} For fixed $(\ell,m,\sigma)$ and distinct radial labels on shells $\Gamma_R$, orthogonality of Hankel products is Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} when $k_0R$ exceeds reactive scales \cite{hansen1988}.
+\emph{Step 1 (scalar angular factor).} With $d\Omega=\sin\theta\,d\theta\,d\phi$,
+Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} states
+\begin{equation}
+\label{eq:ch3.Ylm-angular-integral-display}
+\int_{0}^{2\pi}\!\int_{0}^{\pi}
+Y_{\ell}^{m}(\theta,\phi)^{*}\,
+Y_{\ell'}^{m'}(\theta,\phi)\,
+\sin\theta\,d\theta\,d\phi
+=
+\delta_{\ell\ell'}\delta_{mm'}
+\end{equation}
+\cite{jackson1999}. This is $L^{2}$ orthogonality of scalar spherical harmonics, not yet vector orthogonality.
+\emph{Step 2 (angular vector factor on a shell).} For fixed $R$, outgoing $\mathbf{M}_{\ell m}$ and $\mathbf{N}_{\ell m}$
+from Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} are linear combinations of
+$\partial_\theta Y_{\ell}^{m}$ and $(\mathrm{i}/\sin\theta)\partial_\phi Y_{\ell}^{m}$ on $\Gamma_R$ multiplied by
+$h_{\ell}^{(1)}(k_0 R)$ and its derivatives.
+Distinct $(\ell,m)\neq(\ell',m')$ therefore produce angular products that reduce to bilinear forms in
+$Y_{\ell}^{m}$ and their angular derivatives; each form vanishes after integration over $d\Omega$ by
+Eq.~\eqref{eq:ch3.Ylm-angular-integral-display} and the standard angular-momentum ladder relations for associated
+Legendre functions \cite{hansen1988,stratton1941}.
+\emph{Step 3 (radial factor, not interchangeable with Step 1).} The shell term in
+Eq.~\eqref{eq:ch3.radiative-inner-product-def} contains factors $h_{\ell}^{(1)}(k_0 R)$ and $h_{\ell'}^{(1)}(k_0 R)^{*}$.
+For $(\ell,m,\sigma)=(\ell',m',\sigma')$, diagonal energy is set in Section~\ref{sec:ch35};
+for distinct labels with the same $\sigma$ but $\ell\neq\ell'$, orthogonality follows from
+Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} when $k_0 R$ exceeds reactive scales \cite{hansen1988}.
 \emph{Step 4 ($\mathbf{M}$--$\mathbf{N}$ at fixed $(\ell,m)$).}
-With $\mathbf{N}_{\ell m}=(1/k_0)\curl\mathbf{M}_{\ell m}$ by definition,
-the reciprocity-symmetric pairing Eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product} cancels cross terms between magnetic-type and electric-type pairs at the same angular indices when tested on outgoing domains \cite{stratton1941}.
-\emph{Step 5.} Distinct full labels $(\ell,m,\sigma)\neq(\ell',m',\sigma')$ therefore give zero in
-Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} under $\langle\cdot,\cdot\rangle_{\mathrm{rad}}$.
-The proof does not claim orthogonality of arbitrary $\HCurl$ fields in a bounded volume without outgoing radial factors.
+With $\mathbf{N}_{\ell m}=(1/k_0)\curl\mathbf{M}_{\ell m}$,
+\begin{equation}
+\label{eq:ch3.MN-cross-radiative-display}
+\langle \mathbf{M}_{\ell m},\mathbf{N}_{\ell m}\rangle_{\mathrm{rad}}
+=0
+\end{equation}
+follows from Eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product} on outgoing domains: the magnetic-type and electric-type
+pairs are dual under Maxwell reciprocity, so their radiative cross-term cancels after the symmetrized shell pairing
+\cite{stratton1941}.
+\emph{Step 5 (assembly).} Distinct triples $(\ell,m,\sigma)\neq(\ell',m',\sigma')$ cannot share the same angular
+and radial quantum numbers; Steps~2--4 force
+Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative}.
+The argument does not extend to arbitrary $\HCurl$ fields in a cavity without outgoing Hankel factors.
 Resolution of identity (HOME). Any \(\mathbf{v}_\omega\in\mathcal{F}_{\mathrm{rad}}\) admits
 \begin{equation}
 \label{eq:ch3.VSH-resolution-identity}
@@ -6434,10 +6463,14 @@ $\mathbf{v}_\omega\in\mathcal{F}_{\mathrm{rad}}$ admits Eq.~\eqref{eq:ch3.VSH-re
 The statement does \emph{not} assert completeness of general three-dimensional Maxwell fields with sources, nor of tangential fields on $S^2$ without radial outgoing factors \cite{hansen1988,stratton1941}.
 \end{theorem}
 \noindent\textit{Proof.}
-Angular completeness on $S^2$ uses Eq.~\eqref{eq:ch3.parseval-sphere} and orthonormality Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere}.
-Radial outgoing factors are $h_\ell^{(1)}(k_0 r)$; shell orthogonality for distinct $(\ell,m,\sigma)$ is Theorem~\ref{thm:ch3.vsh-orthogonality}.
-Closure of finite span in $\|\cdot\|_{\mathrm{rad}}$ is Eq.~\eqref{eq:ch3.F-rad-hilbert-closure}.
-Full $L^2$ convergence of infinite multipole series for every $\mathbf{v}_\omega\in\mathcal{F}_{\mathrm{rad}}$ requires the decay of tail coefficients established in Chapter~\ref{ch:04}; that tail bound is not a pointwise completeness theorem on $\mathbb{R}^{3}$ \cite{jackson1999}.
+Let $\mathcal{H}_{\mathrm{rad}}$ be the finite linear span of $\{\mathbf{u}_{\ell m}^{(\sigma)}\}$.
+Angular Parseval on $S^{2}$, Eq.~\eqref{eq:ch3.parseval-sphere}, supplies a dense scalar subspace on each shell factor.
+Theorem~\ref{thm:ch3.vsh-orthogonality} orthogonalizes distinct labels in
+$\langle\cdot,\cdot\rangle_{\mathrm{rad}}$, so partial sums $\mathbf{v}^{(N)}=\sum_{\ell\le N}\sum_{m,\sigma}c_{\ell m}^{(\sigma)}\mathbf{u}_{\ell m}^{(\sigma)}$
+are Cauchy in $\|\cdot\|_{\mathrm{rad}}$ once $\sum_{\ell m}|c_{\ell m}^{(\sigma)}|^{2}<\infty$ in the normalized basis of Section~\ref{sec:ch35}.
+Eq.~\eqref{eq:ch3.F-rad-hilbert-closure} identifies $\mathcal{F}_{\mathrm{rad}}$ with the closure of $\mathcal{H}_{\mathrm{rad}}$ in that norm.
+Convergence is therefore convergence of \emph{outgoing radiative} superpositions, not of arbitrary $\HCurl$ fields in a cavity and not of purely tangential harmonics on $S^{2}$ without $h_{\ell}^{(1)}$.
+Decay of high-$\ell$ tails for physically realizable $\mathbf{v}_\omega$ is quantified in Chapter~\ref{ch:04}; it controls truncation error but is not invoked here to extend the theorem to unrestricted Maxwell fields on $\mathbb{R}^{3}$ \cite{jackson1999,hansen1988}.
 % PROOF: AUTHOR REVIEW
 The reciprocity-symmetric reduction proceeds as follows: eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product} identifies left and right inner products for lossless
 reciprocal media, making Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} compatible with

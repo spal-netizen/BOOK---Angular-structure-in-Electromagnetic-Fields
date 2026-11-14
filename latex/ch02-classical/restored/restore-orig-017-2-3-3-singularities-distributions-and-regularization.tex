@@ -1,15 +1,13 @@
 % Stage 8 restored fragment — 2.3.3 Singularities, distributions, and regularization (archive lines 4086-4419)
 \subsection{Singularities, distributions, and regularization}
 \label{sec:ch232}
-Layered substrates in patch and handset designs modify Green propagation through
-reflection coefficients at material interfaces \cite{stratton1941}. Printed antennas and
-handset boards propagate through layered media; the free-space dyadic is the reference
-impulse, not the laboratory default when a probe hovers above a dielectric stack
-\cite{collin2001}. Probe correction files must include substrate Green
-response, not free-space alone, because the governing question---how a point source on a
-feed line launches fields to a probe above the substrate---already presupposes outgoing
-propagation in each half-space \cite{sommerfeld1949}. Kernels transport impressed
-currents; they do not specify which currents the feed can realize \cite{devaney2004}.
+A method-of-moments cell or a near-field probe approaches the source support until the
+separation $R=|\mathbf{r}-\mathbf{r}'|$ is small compared with the mesh pitch.
+At that scale the free-space dyad is still the reference impulse, but its inverse powers of $R$
+signal reactive self-interaction rather than far-zone radiation \cite{stratton1941}.
+Laboratory stacks add reflected waves in each half-space; probe calibration must then use the
+appropriate layered Green function, while the vacuum template below remains the limiting
+case used to prove distributional identities and Sommerfeld selection \cite{collin2001,sommerfeld1949}.
 Subsection~\ref{sec:ch231} defined scalar and dyadic Green kernels that satisfy
 Eqs.~\eqref{eq:ch2.scalar-helmholtz-green-pde} and~\eqref{eq:ch2.dyadic-green-defining-operator}
 for \(\mathbf{r}\neq\mathbf{r}'\) and deferred coincidence evaluation to the present
@@ -45,19 +43,31 @@ Proposition~\ref{prop:ch2.scalar-green-vacuum}, and
 in $\mathcal{D}'(\mathbb{R}^{3})$, with $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^{2}$.
 \end{theorem}
 \begin{proof}
-For $R>0$, Eqs.~\eqref{eq:ch2.scalar-green-distributional} and~\eqref{eq:ch2.dyadic-green-distribution} reduce to
-Proposition~\ref{prop:ch2.scalar-green-vacuum} and the homogeneous part of
-Proposition~\ref{prop:ch2.dyadic-curl-curl-green}.
-Let $\varphi\in C_c^{\infty}(\mathbb{R}^{3})$ and $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$.
-For $R_\varepsilon>0$ with $\varepsilon$ smaller than the distance from $\operatorname{supp}\mathbf{f}$ to $\mathbf{r}'$,
-apply Green's second identity on $B_{R_\varepsilon}\setminus B_{\varepsilon}$ and let $\varepsilon\to 0^{+}$.
-The scalar case yields
-$\int \varphi(\nabla^{2}+k_0^{2})G_0\,d^{3}\mathbf{r}=\varphi(\mathbf{r}')$ because the surface term vanishes under
-outgoing decay and the interior sphere contribution gives the $\delta^{(3)}$ mass \cite{jackson1999}.
-For the dyad, integrate by parts as in Eq.~\eqref{eq:ch2.dyadic-green-ibp} columnwise with test field
-$\mathbf{f}$ and let $R_\varepsilon\to\infty$. The singular part of $\overline{\mathbf{G}}_{E,0}\sim \overline{\mathbf{I}}/(4\pi R)$
-combined with the Lorenz longitudinal term reproduces unit impressed current in each Cartesian direction at $\mathbf{r}'$
-\cite{stratton1941,tai1994}. The limiting density is $\overline{\mathbf{I}}\,\delta^{(3)}(\mathbf{r}-\mathbf{r}')$.
+\emph{Homogeneous region.} For $R>0$, Eqs.~\eqref{eq:ch2.scalar-green-distributional} and
+Eq.~\eqref{eq:ch2.dyadic-green-distribution} agree with Proposition~\ref{prop:ch2.scalar-green-vacuum}
+and Eq.~\eqref{eq:ch2.column-curl-curl-check}.
+\emph{Distributional action.} Test against $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$.
+Choose $R_\varepsilon$ so $B_{R_\varepsilon}$ encloses $\operatorname{supp}\mathbf{f}$ and $\mathbf{r}'$.
+On $V_\varepsilon=B_{R_\varepsilon}\setminus B_\varepsilon(\mathbf{r}')$, Eq.~\eqref{eq:ch2.dyadic-green-ibp} gives
+\[
+\int_{V_\varepsilon}\mathbf{f}\cdot\mathcal{W}_{E,\omega}\mathbf{G}_{E,0}^{(a)}\,d^{3}\mathbf{r}
+=
+\int_{V_\varepsilon}\mathbf{G}_{E,0}^{(a)}\cdot\mathcal{W}_{E,\omega}\mathbf{f}\,d^{3}\mathbf{r}
++\oint_{\partial V_\varepsilon}\boldsymbol{\mathcal{S}}[\mathbf{f},\mathbf{G}_{E,0}^{(a)}]\cdot d\mathbf{S},
+\]
+with $\boldsymbol{\mathcal{S}}$ the vector Green boundary term in Eq.~\eqref{eq:ch2.dyadic-green-ibp}.
+The volume integrand on $V_\varepsilon$ is zero by Eq.~\eqref{eq:ch2.column-curl-curl-check}.
+The exterior sphere $\partial B_{R_\varepsilon}$ contributes $\mathcal{O}(R_\varepsilon^{-2})$ under outgoing
+$e^{-\jj k_0 R}/R$ decay and $\mathbf{f}$ fixed on compact support, so its contribution vanishes as $R_\varepsilon\to\infty$.
+On the interior sphere $|{\mathbf{r}-\mathbf{r}'}|=\varepsilon$, the leading isotropic piece
+$\mathbf{G}_{E,0}^{(a)}\sim \mathbf{e}_a\,e^{-\jj k_0\varepsilon}/(4\pi\varepsilon)$ yields
+$\oint_{\partial B_\varepsilon}\boldsymbol{\mathcal{S}}\cdot d\mathbf{S}\to f_a(\mathbf{r}')$ as $\varepsilon\to 0^{+}$,
+matching one Cartesian unit of impressed current; summing $a=x,y,z$ produces
+$\mathbf{f}(\mathbf{r}')\cdot\mathbf{e}_a$ summed to $\mathbf{f}(\mathbf{r}')$ against the dyadic
+$\overline{\mathbf{I}}\delta^{(3)}$ \cite{stratton1941,tai1994,jackson1999}.
+The longitudinal $\nabla(\nabla\cdot\mathbf{A})$ pieces in the Lorenz reduction do not add a separate tensor
+$\delta^{(3)}$ mass because charge continuity and the scalar $\delta^{(3)}$ already enforce
+$\nabla\cdot\mathbf{J}=-\jj\omega\rho$ at coincidence \cite{stratton1941}.
 \end{proof}
 Physically, the $\delta^{(3)}$ term is the idealized impressed dipole source; finite patches regularize the same mass over
 $\operatorname{supp}\Jimp$ rather than a mathematical point \cite{stratton1941}.
