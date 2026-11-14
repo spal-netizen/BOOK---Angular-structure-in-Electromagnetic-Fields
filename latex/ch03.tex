@@ -88,7 +88,22 @@ Let \(G\) be a symmetry group acting on \(\mathbb{R}^{3}\) by smooth maps \(g:\m
 \big(\mathbf{U}_E(g)\,\E(g^{-1}\mathbf{r}),\,
 \mathbf{U}_H(g)\,\H(g^{-1}\mathbf{r})\big),
 \end{equation}
-where \(\mathfrak{F}=(\E,\H)\), \(\mathbf{U}_E(g)\) and \(\mathbf{U}_H(g)\) are fixed \(3\times 3\) matrices for each \(g\), and the inverse argument \(g^{-1}\mathbf{r}\) implements the standard left action on functions \cite{jackson1999}. For pure rotations \(g\in\mathrm{SO}(3)\), \(\mathbf{U}_E=\mathbf{U}_H=\mathbf{R}(g)\) from Section~\ref{sec:ch01.3}; Subsection~\ref{sec:ch321} upgrades Eq.~\eqref{eq:ch3.symmetry-action-fields} to angular-momentum generator form \cite{stratton1941}. The map \(T_g\) is a group action because \(T_{g_1g_2}=T_{g_1}\circ T_{g_2}\) when the component matrices satisfy \(\mathbf{U}(g_1g_2)=\mathbf{U}(g_1)\mathbf{U}(g_2)\) \cite{jackson1999}. On energy-admissible subspaces equipped with the inner product of Subsection~\ref{sec:ch312}, \(T_g\) is unitary under the Volume~I phasor convention \cite{stratton1941}.
+where \(\mathfrak{F}=(\E,\H)\), \(\mathbf{U}_E(g)\) and \(\mathbf{U}_H(g)\) are fixed \(3\times 3\) matrices for each \(g\), and the inverse argument \(g^{-1}\mathbf{r}\) implements the standard left action on functions \cite{jackson1999}. For an active spatial rotation $g\in\mathrm{SO}(3)$,
+\begin{equation}
+\label{eq:ch3.active-rotation-vector-field}
+(T_g\E)(\mathbf{r})=\mathbf{R}(g)\,\E\!\left(g^{-1}\mathbf{r}\right),
+\qquad
+(T_g\H)(\mathbf{r})=\mathbf{R}(g)\,\H\!\left(g^{-1}\mathbf{r}\right),
+\end{equation}
+with $\mathbf{R}(g)$ the proper orthogonal matrix of Section~\ref{sec:ch01.3}. The map rotates both the observation point and the vector components; a scalar pattern $Y_\ell^m(\theta,\phi)$ alone does not transform electromagnetic solutions unless paired through Eqs.~\eqref{eq:ch1.maxwell-local} \cite{jackson1999,stratton1941}.
+\begin{proposition}[Rotational covariance of source-free Maxwell fields]
+\label{prop:ch3.maxwell-rotation-covariance}
+Let $(\E,\H)$ solve Eqs.~\eqref{eq:ch1.maxwell-local} with $\Jimp=\mathbf{0}$, $\rho=0$ in a homogeneous isotropic region invariant under $g\in\mathrm{SO}(3)$. Then $(T_g\E,T_g\H)$ is a solution for the same $\omega$.
+\end{proposition}
+\begin{proof}
+Using $\nabla\times(\mathbf{R}\mathbf{F})=\mathbf{R}(\nabla'\times\mathbf{F})$ under the change $\mathbf{r}'=g^{-1}\mathbf{r}$, Faraday's law gives $\curl(T_g\E)=-\jj\omega\mu_0(T_g\H)$ because $\mu_0$ is scalar; Amp\`ere's law follows similarly \cite{jackson1999,stratton1941}.
+\end{proof}
+Subsection~\ref{sec:ch321} upgrades Eqs.~\eqref{eq:ch3.symmetry-action-fields}--\eqref{eq:ch3.active-rotation-vector-field} to angular-momentum generators \cite{stratton1941}. The map \(T_g\) is a group action because \(T_{g_1g_2}=T_{g_1}\circ T_{g_2}\) when the component matrices satisfy \(\mathbf{U}(g_1g_2)=\mathbf{U}(g_1)\mathbf{U}(g_2)\) \cite{jackson1999}. On energy-admissible subspaces equipped with the inner product of Subsection~\ref{sec:ch312}, \(T_g\) is unitary under the Volume~I phasor convention \cite{stratton1941}.
 Physically, Eq.~\eqref{eq:ch3.symmetry-action-fields} answers the question: ``If I rigidly rotate my laboratory frame, how do \(\E\) and \(\H\) re-express on the same spatial points?'' The inverse on \(\mathbf{r}\) ensures that scalar observables measured at fixed world points are unchanged under passive rotation of coordinates \cite{jackson1999}. The nontrivial content for radiation is not this definition alone but the \emph{commutation} of \(T_g\) with \(\mathcal{R}_\omega\) and the \emph{simultaneous} diagonalization of commuting symmetry operators on \(\mathcal{F}_{\mathrm{rad}}\) \cite{stratton1941}.
 Representations as homomorphisms. A \emph{representation} of \(G\) on a linear space \(\mathcal{V}\) is a homomorphism
 \begin{equation}
@@ -5752,14 +5767,29 @@ k_{0}\,\mathbf{N}_{\ell m},\
 -\jj k_{0}\,\mathbf{M}_{\ell m}
 \big),
 \end{equation}
-with \(\eta_{0}=\sqrt{\mu_{0}/\varepsilon_{0}}\) \cite{stratton1941}. Under the phasor convention $\eim$, the source-free curls follow from the definitions \eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} and the identities $\curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m}$, $\curl\mathbf{N}_{\ell m}=-k_0\mathbf{M}_{\ell m}$ in outgoing regions \cite{stratton1941,tai1994}. For $\mathbf{u}_{\ell m}^{(\mathbf{M})}$,
-\[
-\curl\E=\curl(\jj\eta_0 k_0\mathbf{M}_{\ell m})=\jj\eta_0 k_0^2\mathbf{N}_{\ell m},
+with \(\eta_{0}=\sqrt{\mu_{0}/\varepsilon_{0}}\) \cite{stratton1941}.
+\begin{proposition}[Curl identities from Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def}]
+\label{prop:ch3.MN-curl-identities}
+Away from $r=0$, the definitions imply
+\begin{equation}
+\label{eq:ch3.curl-M-equals-kN}
+\curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m},
 \qquad
--\jj\omega\mu_0\H=-\jj\omega\mu_0 k_0\mathbf{N}_{\ell m}=-\jj k_0^2\eta_0\mathbf{N}_{\ell m},
-\]
-using $\omega\mu_0=k_0\eta_0$; hence Faraday's law holds. Amp\`ere--Maxwell reduces similarly to $\curl\H=\jj\omega\varepsilon_0\E$. The magnetic-type pair $\mathbf{u}_{\ell m}^{(\mathbf{N})}$ is the dual combination with the same radial factor $h_\ell^{(1)}(k_0 r)$ chosen so that the phase $e^{-\jj k_0 r}/r$ carries outward energy flux under $\eim$ \cite{stratton1941,jackson1999}. Pairs
-Eq.~\eqref{eq:ch3.VSH-M-pair} therefore solve source-free Maxwell on outgoing domains and satisfy
+\curl\mathbf{N}_{\ell m}=-k_0\mathbf{M}_{\ell m},
+\end{equation}
+with $k_0=\omega\sqrt{\mu_0\varepsilon_0}$ under $\eim$.
+\end{proposition}
+\begin{proof}
+Write $f=h_\ell^{(1)}(k_0 r)Y_\ell^m$. In spherical coordinates, $\curl(f\hat{\mathbf{r}})=\nabla f\times\hat{\mathbf{r}}$ because $\curl\hat{\mathbf{r}}=\mathbf{0}$ for $r>0$. Using $\nabla f=\hat{\mathbf{r}}\,\partial_r f+(1/r)\nabla_\perp Y_\ell^m$ and $\hat{\mathbf{r}}\times\nabla_\perp Y_\ell^m$ in the standard toroidal--poloidal algebra \cite{stratton1941,tai1994}, one obtains $\curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m}$; the second identity follows from $\curl\mathbf{N}_{\ell m}=(1/k_0)\curl\curl\mathbf{M}_{\ell m}=-k_0\mathbf{M}_{\ell m}$ in source-free vacuum.
+\end{proof}
+\begin{theorem}[Maxwell form of Eq.~\eqref{eq:ch3.VSH-M-pair}]
+\label{thm:ch3.VSH-maxwell-pair}
+With $\mathbf{u}_{\ell m}^{(\mathbf{M})}=(\E,\H)$ from Eq.~\eqref{eq:ch3.VSH-M-pair}, Eqs.~\eqref{eq:ch1.maxwell-local} hold with $\Jimp=\mathbf{0}$, $\rho=0$.
+\end{theorem}
+\begin{proof}
+Faraday: $\curl\E=\jj\eta_0 k_0^2\mathbf{N}_{\ell m}$ by Eq.~\eqref{eq:ch3.curl-M-equals-kN}, while $-\jj\omega\mu_0\H=-\jj k_0^2\eta_0\mathbf{N}_{\ell m}$ because $\omega\mu_0=k_0\eta_0$. Amp\`ere: $\curl\H=k_0^2\mathbf{M}_{\ell m}$ and $\jj\omega\varepsilon_0\E=\jj k_0^2\eta_0\mathbf{M}_{\ell m}$ using $\omega\varepsilon_0=k_0/\eta_0$. Gauss laws follow from $\nabla\cdot\mathbf{M}_{\ell m}=\mathbf{0}$, $\nabla\cdot\mathbf{N}_{\ell m}=\mathbf{0}$ in the toroidal--poloidal construction \cite{stratton1941}.
+\end{proof}
+Pairs Eq.~\eqref{eq:ch3.VSH-M-pair} therefore solve source-free Maxwell on outgoing domains and satisfy
 Eqs.~\eqref{eq:ch3.vector-helmholtz-E}--\eqref{eq:ch3.vector-helmholtz-H} \cite{stratton1941}.
 \begin{figure}[t]
 \centering

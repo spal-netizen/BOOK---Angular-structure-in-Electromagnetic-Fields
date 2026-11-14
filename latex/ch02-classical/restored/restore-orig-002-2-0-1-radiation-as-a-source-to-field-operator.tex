@@ -107,6 +107,19 @@ The \emph{radiation operator} is well-defined on currents whose solutions lie in
 \end{equation}
 Equation~\eqref{eq:ch2.radiation-operator-def} composes $\mathcal{S}_\omega$ with asymptotic extraction. Section~\ref{sec:ch242} connects $\Pi_{\mathrm{rad}}$ to outgoing Green kernels and Sommerfeld selection.
 
+\begin{proposition}[Existence and representative independence of $\Pi_{\mathrm{rad}}$]
+\label{prop:ch2.Pirad-well-defined}
+Assume $\Jimp\in\mathcal{J}_\Omega$ with compact support, homogeneous lossless vacuum in the exterior, outgoing radiation condition as in Section~\ref{sec:ch241}, and $\mathcal{S}_\omega[\Jimp]\in\HCurl_{\mathrm{loc}}$ satisfying Eq.~\eqref{eq:ch1.maxwell-local}. Then:
+\begin{enumerate}
+\item The limit in Eq.~\eqref{eq:ch2.far-amplitude-limit} exists in $L^2(S^{2})$ for the electric field on spheres $\Gamma_R$ with $R\to\infty$, and defines $\mathbf{E}_0(\theta,\phi)$.
+\item If $(\E_a,\H_a)$ and $(\E_b,\H_b)$ are two admissible outgoing pairs differing by a near field with $o(r^{-1})$ transverse radiation, then $\mathbf{E}_{0,a}=\mathbf{E}_{0,b}$; hence $\Pi_{\mathrm{rad}}$ is a well-defined map on radiative equivalence classes.
+\item $\Pi_{\mathrm{rad}}\circ\Pi_{\mathrm{rad}}=\Pi_{\mathrm{rad}}$ on $\mathcal{F}_{\mathrm{rad}}$ because each class is determined by its unique asymptotic amplitude.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Existence follows from the standard outgoing multipole expansion for Maxwell fields with compact sources: Stratton's exterior representation gives $\E(\mathbf{r})=\sum_{\ell,m}(\mathbf{M}_{\ell m}a_{\ell m}+\mathbf{N}_{\ell m}b_{\ell m})$ with outgoing $h_\ell^{(1)}$, so $\mathbf{E}\sim\mathbf{E}_0(\theta,\phi)e^{-\jj k_0 r}/r$ \cite{stratton1941,jackson1999}. Representative independence is Lemma~(b) of the same expansion: the transverse $1/r$ coefficient is unique under the Sommerfeld condition (Section~\ref{sec:ch243}). Item~(c) restates that uniqueness at the level of equivalence classes; it is not an orthogonal projection on $\mathcal{F}_\Omega$ \cite{sommerfeld1949}.
+\end{proof}
+
 The composition law records that radiation is never computed independently of
 Maxwell completion:
 \begin{equation}
