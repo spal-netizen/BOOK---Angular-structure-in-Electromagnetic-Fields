@@ -2,14 +2,11 @@
 \subsection{Reciprocity in radiation and reception}
 \label{sec:ch283}
 
-A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Reciprocity in radiation and reception'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
-Two-port antenna measurements are the everyday face of reciprocity. A horn coupled to a compact
-range, a patch fed from a coax port, or a dual-polarized reflector feed all reduce---after
-calibration---to the same question the vector network analyzer answers: does the complex coupling
-from port~$A$ to port~$B$ equal the reversed coupling when cables, standards, and probe
-normalization are exchanged? Subsection~\ref{sec:ch283} gives the Chapter~\ref{ch:02} definitive
-account of that interchange in operator form: transmit--receive operator symmetry, two-port
-coupling bilinears, and measurement-qualified reciprocity on
+Two-port coupling on reciprocal passive hardware exemplifies Lorentz reciprocity: the complex
+response at port $B$ when port $A$ is excited matches the reversed coupling when excitations and
+observation functionals are exchanged under Eq.~\eqref{eq:ch2.reciprocal-medium-class}
+\cite{stratton1941,collin2001}. Subsection~\ref{sec:ch283} gives the operator account:
+transmit--receive symmetry, two-port bilinears, and measurement-qualified reciprocity on
 \(\operatorname{ran}\mathcal{R}_\omega\), developing Eq.
 Eq.~\eqref{eq:ch2.transmit-receive-swap} \cite{stratton1941}. Observation
 composition Eq.~\eqref{eq:ch2.reconstruction-observation-map}, finite-rank readouts
@@ -64,7 +61,7 @@ the impressed source and receive probe are exchanged on reciprocal hardware:
 \end{equation}
 developing Eq.~\eqref{eq:ch2.transmit-receive-swap}
 \cite{stratton1941}. Equation~\eqref{eq:ch2.transmit-receive-reciprocity}
-is the operator reading of the VNA experiment: excite \(A\), read \(B\); swap roles on reciprocal
+is the transmit--receive interchange law: excite \(A\), read \(B\); swap roles on reciprocal
 media and obtain the same complex port coupling on observable coordinates. It states that the
 observable induced at \(B\) by the transmit source at \(A\) equals the observable at \(A\) when
 the roles of impressed source and probe are exchanged on reciprocal media

@@ -55,19 +55,20 @@ Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{harrington2001}. Equation
 integral outputs: reactive dominance on near shells corresponds to large
 \(\|\mathbf{u}_{\mathrm{np}}\|\) relative to \(\|\mathbf{u}_{\mathrm{prop}}\|\) in the sense
 of Eq.~\eqref{eq:ch2.subspace-energy-inequality} \cite{stratton1941}.
-The radiative component is
+The radiative component is the far-zone equivalence class formed only after outgoing completion.
+By Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement} and~\eqref{eq:ch2.rad-projection-composition},
 \begin{equation}
 \label{eq:ch2.radiative-component-def}
 \mathbf{u}_{\mathrm{rad}}
 =
 \mathcal{R}_\omega[\mathfrak{D}]
 =
-\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega[\mathfrak{D}]
+\Pi_{\mathrm{rad}}\,\mathcal{S}_\omega^{\mathrm{(out)}}[\mathfrak{D}]
 =
-\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\,\mathcal{S}_\omega[\mathfrak{D}],
+\Pi_{\mathrm{rad}}\circ\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega[\mathfrak{D}],
 \end{equation}
-using Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement} and~\eqref{eq:ch2.rad-projection-composition}
-\cite{stratton1941}. The complementary \emph{non-radiative} component is
+with $\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$.
+This chain is not the same map as $\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}\circ\mathcal{S}_\omega$: the lateral projector $\Pi_{\mathrm{prop}}$ belongs to the spectral decomposition Eq.~\eqref{eq:ch2.integral-spectral-decomposition}, while $\mathcal{O}_{\mathrm{out}}$ removes incoming propagating partners on completed field pairs (Proposition~\ref{prop:ch2.Pirad-vs-Oout}) \cite{stratton1941,harrington2001}. The complementary \emph{non-radiative} component is
 \begin{equation}
 \label{eq:ch2.nonradiative-component-def}
 \mathbf{u}_{\mathrm{nr}}

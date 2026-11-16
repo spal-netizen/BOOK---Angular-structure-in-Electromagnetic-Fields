@@ -2,25 +2,11 @@
 \subsection{Frequency-domain Maxwell operators}
 \label{sec:ch222}
 
-A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Frequency-domain Maxwell operators'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
-The physical problem is steady-state interrogation at fixed frequency: every calibrated
-$S$-parameter, resonator $Q$ measurement, and harmonic finite-element solve assumes that
-excitation, media, and boundary class are frozen while $\omega$ is stepped
-\cite{harrington2001}. A vector network analyzer sweep is the canonical laboratory observation that precedes
-every harmonic operator declaration. The instrument steps $\omega$ through a calibrated
-band, records complex $S$-parameters at each tone, and treats each frequency as a
-steady-state slice of the same passive structure \cite{harrington2001}. The composite
-operator $\mathcal{L}_\omega$ introduced in Section~\ref{sec:ch21} is precisely that
-slice: Maxwell's equations with $\partial_t\to+\jj\omega$ on impressed data and boundary
-class held fixed. Readers should therefore read $\mathcal{L}_\omega$ not as an abstract
-Hilbert map alone but as the operator whose inversion reproduces the phasor fields a VNA
-implicitly assumes when it reports $S_{21}(\omega)$ after de-embedding \cite{stratton1941}.
-Frequency-domain formulations dominate practical electromagnetics because measurements,
-simulations, and design specifications are usually organized around frequency. Network
-analyzers, resonator measurements, and antenna-pattern ranges all interrogate electromagnetic
-systems one frequency at a time \cite{harrington2001}. The harmonic operators
-introduced below state that experimentally familiar viewpoint while remaining consistent
-with the causal evolution described in Subsection~\ref{sec:ch221}.
+Harmonic Maxwell theory assumes a single angular frequency $\omega$ with impressed sources,
+constitutive response, and boundary data frozen on the declared band \cite{harrington2001,stratton1941}.
+The composite operator $\mathcal{L}_\omega$ of Section~\ref{sec:ch21} is Maxwell's equations
+after $\partial_t\to+\jj\omega$ under the locked phasor $\eim=\exp(+\jj\omega t)$; it is the
+frequency-domain image of the causal evolution in Subsection~\ref{sec:ch221}, not an independent postulate.
 
 Subsection~\ref{sec:ch221} fixed time-domain evolution and
 Eq.~\eqref{eq:ch2.time-to-frequency-map}. Subsection~\ref{sec:ch222} gives the

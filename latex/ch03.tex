@@ -5774,6 +5774,18 @@ Y_{\ell'}^{m'}(\theta,\phi)\,
 Equation~\eqref{eq:ch3.Ylm-orthonorm-sphere} upgrades the preview
 Eq.~\eqref{eq:ch3.angular-inner-product-preview} to the Condon--Shortley convention fixed in
 Eq.~\eqref{eq:ch3.Ylm-Condon-Shortley-def} \cite{hansen1988}.
+On domains where $f(\mathbf{r})$ is smooth, the curl of a scalar-on-$\hat{\mathbf{r}}$ field reduces in
+spherical coordinates to
+\begin{equation}
+\label{eq:ch3.curl-rhat-scalar-spherical}
+\curl\!\big(f(\mathbf{r})\,\hat{\mathbf{r}}\big)
+=
+\frac{1}{r\sin\theta}\,\frac{\partial}{\partial\theta}\big(\sin\theta\,f\big)\,\hat{\boldsymbol{\phi}}
+-
+\frac{1}{r\sin\theta}\,\frac{\partial f}{\partial\phi}\,\hat{\boldsymbol{\theta}},
+\end{equation}
+with $\hat{\boldsymbol{\theta}}$ and $\hat{\boldsymbol{\phi}}$ the usual spherical unit vectors
+\cite{jackson1999,stratton1941}.
 Define the toroidal and poloidal vector harmonics
 \begin{equation}
 \label{eq:ch3.Mlm-def}
@@ -5794,7 +5806,28 @@ on domains where the curls are in \(\HCurl\) \cite{stratton1941}. Equations
 \eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} are the Volume~I \emph{single} definitions of
 \(\mathbf{M}_{\ell m}\) and \(\mathbf{N}_{\ell m}\); they realize the Debye preview of
 Subsection~\ref{sec:ch334} with outgoing radial factors Eq.~\eqref{eq:ch3.outgoing-radial-admissibility}
-\cite{tai1994}.
+\cite{tai1994}. Vector orthogonality on $S^{2}$ for distinct $(\ell,m)$ labels follows from
+Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} and the toroidal--poloidal construction; the $M$--$N$ cross overlap at
+fixed $(\ell,m)$ vanishes in the radiative inner product by Eq.~\eqref{eq:ch3.MN-cross-radiative-display}
+\cite{hansen1988,lewis1995}.
+The diagonal angular energy factor in Eq.~\eqref{eq:ch3.rad-diagonal-inner-before-flux} is defined by the shell limit
+\begin{equation}
+\label{eq:ch3.A-lm-sigma-def}
+\mathcal{A}_{\ell m}^{(\sigma)}
+:=
+\lim_{R\to\infty}R^{-2}
+\int_{\Gamma_R}
+\big|\mathbf{u}_{\ell m}^{(\sigma)}\big|_{\mathrm{tang}}^{2}\,dS
+\Big/
+\int_{\Gamma_R}\big|h_{\ell}^{(1)}(k_0 R)\big|^{2}\,dS,
+\end{equation}
+with $|\cdot|_{\mathrm{tang}}$ the tangential electric-energy weight in
+Eq.~\eqref{eq:ch3.radiative-inner-product-def}.
+For fixed $(\ell,m,\sigma)$, $\mathcal{A}_{\ell m}^{(\sigma)}$ is an angular--radial ratio: the numerator is the
+$R\to\infty$ tangential energy of $\mathbf{u}_{\ell m}^{(\sigma)}$ on $\Gamma_R$ and the denominator the same for the scalar
+factor $h_{\ell}^{(1)}(k_0 R)$ alone; $(m,\sigma)$ enter through the vector product in
+Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.VSH-M-pair}, while the overlap $\mathcal{N}_{\ell}^{\mathrm{(rad)}}$ of
+Eq.~\eqref{eq:ch3.N-rad-overlap-def} isolates the $\ell$-dependent radial shell average \cite{hansen1988,lewis1995,cappellin2008}.
 Define admissible harmonic pairs
 \begin{equation}
 \label{eq:ch3.VSH-M-pair}
@@ -5813,6 +5846,13 @@ k_{0}\,\mathbf{N}_{\ell m},\
 \big),
 \end{equation}
 with \(\eta_{0}=\sqrt{\mu_{0}/\varepsilon_{0}}\) \cite{stratton1941}.
+Each pair solves the source-free Maxwell system with outgoing radial factor $h_{\ell}^{(1)}(k_0 r)$;
+$\mathbf{u}_{\ell m}^{(\mathbf{M})}$ is magnetic-type (dominant $\mathbf{M}_{\ell m}$ in $\H$) and
+$\mathbf{u}_{\ell m}^{(\mathbf{N})}$ is electric-type (dominant $\mathbf{N}_{\ell m}$ in $\E$) at large $r$
+\cite{stratton1941,hansen1988}.
+The curl relation $\curl\mathbf{M}_{\ell m}=k_0\mathbf{N}_{\ell m}$ from Eq.~\eqref{eq:ch3.Nlm-def} fixes the
+$\jj\omega\mu_0$ and $\jj\omega\varepsilon_0$ coupling in Eqs.~\eqref{eq:ch3.VSH-M-pair} under $\eim$
+\cite{jackson1999}.
 \begin{proposition}[Vector Helmholtz structure of $\mathbf{M}_{\ell m}$ and $\mathbf{N}_{\ell m}$]
 \label{prop:ch3.MN-curl-identities}
 With Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} and $k_0=\omega\sqrt{\mu_0\varepsilon_0}$, for $r>0$,
@@ -6390,8 +6430,9 @@ Y_{\ell'}^{m'}(\theta,\phi)\,
 \delta_{\ell\ell'}\delta_{mm'}
 \end{equation}
 \cite{jackson1999}. This is $L^{2}$ orthogonality of scalar spherical harmonics, not yet vector orthogonality.
-\emph{Step 2 (radiative shell integral).} On $\Gamma_R$ with $k_0 R\gg\ell,\ell'$, the transverse fields in
-Eq.~\eqref{eq:ch3.radiative-inner-product-def} satisfy the leading asymptotics \cite{hansen1988,stratton1941}
+\emph{Step 2 (radiative shell integral).} On $\Gamma_R$ with $k_0 R\gg\ell,\ell'$, Maxwell pairs
+Eq.~\eqref{eq:ch3.VSH-M-pair} give transverse electric fields whose dominant tangential part is
+\cite{hansen1988,stratton1941}
 \begin{equation}
 \label{eq:ch3.far-shell-ET-leading}
 \mathbf{E}_{\ell m}^{(\sigma),T}(\mathbf{r})
@@ -6399,11 +6440,30 @@ Eq.~\eqref{eq:ch3.radiative-inner-product-def} satisfy the leading asymptotics \
 \mathbf{A}_{\ell m}^{(\sigma)}(\theta,\phi)\,
 h_{\ell}^{(1)}(k_0 R)\,
 \frac{e^{-\jj k_0 R}}{R},
-\qquad
-\mathbf{A}_{\ell m}^{(\sigma)}
-=\mathcal{O}\!\big(\partial_\theta Y_{\ell}^{m},\partial_\phi Y_{\ell}^{m}\big),
 \end{equation}
-with amplitudes $\mathbf{A}_{\ell m}^{(\sigma)}$ built from Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.VSH-M-pair}.
+with dimensionless angular amplitudes
+\begin{equation}
+\label{eq:ch3.angular-amplitude-MN}
+\mathbf{A}_{\ell m}^{(\mathbf{M})}
+=\jj\eta_0 k_0^{2}\,\mathbf{L}_{\ell}^{m}(\theta,\phi),
+\qquad
+\mathbf{A}_{\ell m}^{(\mathbf{N})}
+=k_0^{2}\,\mathbf{N}_{\ell}^{m}(\theta,\phi),
+\end{equation}
+where the tangential vector spherical harmonics are
+\begin{equation}
+\label{eq:ch3.vector-angular-harmonics}
+\mathbf{L}_{\ell}^{m}
+=\frac{\nabla_{\!S}\,Y_{\ell}^{m}}{\sin\theta}\times\hat{\mathbf{r}},
+\qquad
+\mathbf{N}_{\ell}^{m}
+=\frac{1}{k_0 r}\,\nabla_{\!S}\times\mathbf{L}_{\ell}^{m}
+\quad\text{evaluated on}\ r=R,
+\end{equation}
+$\nabla_{\!S}$ is the surface gradient on $S^{2}$, and $\sigma\in\{\mathbf{M},\mathbf{N}\}$ selects the
+Maxwell pair in Eq.~\eqref{eq:ch3.VSH-M-pair} \cite{hansen1988,stratton1941}.
+The factors $\eta_0$ (ohm) and $k_0^{2}$ (m$^{-2}$) carry units so that $\mathbf{E}_{\ell m}^{(\sigma),T}$ is
+in volts per metre once $h_{\ell}^{(1)}$ and $e^{-\jj k_0 R}/R$ are included.
 The radiative cross-term therefore reduces to
 \begin{equation}
 \label{eq:ch3.shell-ET-orthogonality-display}
@@ -6418,22 +6478,130 @@ The radiative cross-term therefore reduces to
 \mathcal{R}_{\ell\ell'}(k_0 R),
 \end{equation}
 where $\mathcal{R}_{\ell\ell'}(k_0 R)\to 0$ for $\ell\neq\ell'$ by
-Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} and the angular factor vanishes for
-$(\ell,m)\neq(\ell',m')$ by Eq.~\eqref{eq:ch3.Ylm-angular-integral-display} and vector-harmonic ladder orthogonality
-\cite{jackson1999,hansen1988}.
+Eq.~\eqref{eq:ch3.shell-radial-overlap-derived}.
+For $(\ell,m)=(\ell',m')$ and $\sigma=\sigma'$,
+substituting Eqs.~\eqref{eq:ch3.angular-amplitude-MN}--\eqref{eq:ch3.vector-angular-harmonics} gives
+\begin{equation}
+\label{eq:ch3.angular-ET-shell-factor}
+\int_{0}^{2\pi}\!\int_{0}^{\pi}
+\mathbf{A}_{\ell m}^{(\sigma)}\cdot\mathbf{A}_{\ell m}^{(\sigma)\,*}
+\,\sin\theta\,d\theta\,d\phi
+=
+\begin{cases}
+(k_0^{2})^{2}\eta_0^{2}\displaystyle\int_{S^{2}}\!
+\big|\mathbf{L}_{\ell}^{m}\big|^{2}\,d\Omega, & \sigma=\mathbf{M},\\[8pt]
+(k_0^{2})^{2}\displaystyle\int_{S^{2}}\!
+\big|\mathbf{N}_{\ell}^{m}\big|^{2}\,d\Omega, & \sigma=\mathbf{N},
+\end{cases}
+\end{equation}
+with $d\Omega=\sin\theta\,d\theta\,d\phi$.
+Under Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} and the tangential ladder
+$\mathbf{L}_{\ell}^{m}=\hat{\mathbf{r}}\times\nabla_{\!S}Y_{\ell}^{m}/\sin\theta$ implicit in
+Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.vector-angular-harmonics},
+\begin{equation}
+\label{eq:ch3.Lm-angular-norm}
+\int_{S^{2}}
+\mathbf{L}_{\ell}^{m}\cdot\mathbf{L}_{\ell}^{m*}\,d\Omega
+=\ell(\ell+1),
+\qquad
+\int_{S^{2}}
+\mathbf{N}_{\ell}^{m}\cdot\mathbf{N}_{\ell}^{m*}\,d\Omega
+=\ell(\ell+1)
+\end{equation}
+at $r=R$ in the asymptotic regime $k_0 R\gg\ell$ \cite{hansen1988,jackson1999}.
+The identity Eq.~\eqref{eq:ch3.Lm-angular-norm} follows by applying $\nabla_{\!S}^{2}$ to
+$Y_{\ell}^{m}$, using Eq.~\eqref{eq:ch3.angular-laplacian-eigenvalue}, and integrating
+$\mathbf{L}_{\ell}^{m}\cdot\mathbf{L}_{\ell}^{m*}$ by parts on $S^{2}$ with measure $d\Omega$.
+The same $\ell(\ell+1)$ factor governs $\mathbf{N}_{\ell}^{m}$ because
+$\mathbf{N}_{\ell}^{m}=(k_0 r)^{-1}\nabla_{\!S}\times\mathbf{L}_{\ell}^{m}$ at fixed shell radius and
+$\nabla_{\!S}\cdot\mathbf{L}_{\ell}^{m}=0$ \cite{hansen1988}.
+Diagonal radiative normalization therefore scales as $k_0^{4}\ell(\ell+1)$ in the angular factor of
+Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display}, with $\eta_0^{2}$ entering only the $\mathbf{M}$ sector through
+Eq.~\eqref{eq:ch3.angular-amplitude-MN}; absolute watt coefficients remain fixed in Section~\ref{sec:ch35}.
+For $(\ell,m)\neq(\ell',m')$ the same integral vanishes because
+$Y_{\ell}^{m}$ and $Y_{\ell'}^{m'}$ are orthogonal on $S^{2}$ and
+$\mathbf{L}_{\ell}^{m}$, $\mathbf{N}_{\ell}^{m}$ are built from $\nabla_{\!S}Y_{\ell}^{m}$ and its curl
+(Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def}), so Eq.~\eqref{eq:ch3.Ylm-angular-integral-display}
+and the ladder orthogonality of Hansen's vector harmonics apply to the dot products in
+Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display} \cite{hansen1988,jackson1999}.
+Cross terms with $\sigma\neq\sigma'$ at common $(\ell,m)$ are treated in Step~4.
+On $\Gamma_R$, the far-zone electric energy density in Eq.~\eqref{eq:ch3.radiative-inner-product-def} is carried by
+tangential $\mathbf{E}_T$ in V\,m$^{-1}$.
+Equations~\eqref{eq:ch3.far-shell-ET-leading}--\eqref{eq:ch3.angular-ET-shell-factor} supply the leading angular factor.
+The radial weight $\mathcal{R}_{\ell\ell'}(k_0 R)$ in Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display} is not an independent
+normalization: on $\Gamma_R$ with $r=R$ constant,
+$h_{\ell}^{(1)}(k_0 R)\sim \jj^{-\ell}e^{-\jj k_0 R}/(k_0 R)$ for $k_0 R\gg\ell$ \cite{hansen1988,jackson1999}.
+Since $dS=R^{2}\,d\Omega$, the shell prefactor $R^{-2}$ in Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display} cancels the geometric
+area growth and leaves an angular integral times a radial mode overlap.
+With outgoing Hankel factors $j_\ell=h_\ell^{(1)}$ on the shell,
+\begin{equation}
+\label{eq:ch3.shell-radial-overlap-derived}
+\lim_{R\to\infty}R^{-2}
+\int_{\Gamma_R}
+j_{\ell}(k_0 R)^{*}\,j_{\ell'}(k_0 R)\,dS
+=
+4\pi\,
+\delta_{\ell\ell'}\,
+\mathcal{N}_{\ell}^{\mathrm{(rad)}},
+\end{equation}
+where $\mathcal{N}_{\ell}^{\mathrm{(rad)}}$ is the diagonal shell normalisation fixed in Section~\ref{sec:ch35} once
+$\langle\mathbf{u}_{\ell m}^{(\sigma)},\mathbf{u}_{\ell m}^{(\sigma)}\rangle_{\mathrm{rad}}$ is tied to measured power on
+$\Gamma_R$ \cite{stratton1941}. Equation~\eqref{eq:ch3.shell-radial-overlap-derived} identifies
+$\mathcal{R}_{\ell\ell'}(k_0 R)$ in Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display}: cross-terms with $\ell\neq\ell'$ vanish
+by orthogonality of spherical Hankel functions under the outgoing inner product on $\Gamma_R$
+\cite{hansen1988}, while diagonal terms carry the watt calibration of Section~\ref{sec:ch35}, not merely
+$\ell(\ell+1)$ from the angular sector alone.
+Under $\eim$, the time-averaged Poynting flux through $\Gamma_R$ is
+$\langle P\rangle=(1/2)\Re\oint_{\Gamma_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS$ with
+$\mathbf{S}=\tfrac12\E\times\H^{*}$ (W\,m$^{-2}$); the $\eta_0^{2}$ weight on $\H_T$ in
+Eq.~\eqref{eq:ch3.radiative-inner-product-def} enforces the far-zone impedance ratio
+$\mathbf{H}_T\sim\eta_0^{-1}\,\hat{\mathbf{r}}\times\mathbf{E}_T$ before power is read as watts
+\cite{stratton1941,poynting1884}.
+For diagonal magnetic-type modes, combining Eq.~\eqref{eq:ch3.Lm-angular-norm} with the $R^{-2}$ shell prefactor and
+$\eta_0^{2}$ weight in Eq.~\eqref{eq:ch3.radiative-inner-product-def} gives a radiative pairing whose dimension is that of
+an electric-field energy integral on $\Gamma_R$ (V$^{2}$\,m$^{-2}$ times area), not yet the watt-normalized coefficient of
+Section~\ref{sec:ch35}.
+The time-averaged Poynting flux $P_{\mathrm{rad}}$ in watts fixes the proportionality between
+$\langle\mathbf{u},\mathbf{v}\rangle_{\mathrm{rad}}$ and measurable power; until that flux calibration is applied, the shell
+integrals above establish \emph{angular-radial} orthogonality, not the final meter reading on $\Gamma_R$
+\cite{poynting1884,stratton1941}.
 \emph{Step 3 (radial versus angular).} Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display} separates a fixed-sphere angular
 integral from the radial Hankel overlap; neither factor alone implies orthogonality of arbitrary
 $\HCurl$ fields in a bounded cavity \cite{hansen1988}.
 \emph{Step 4 ($\mathbf{M}$--$\mathbf{N}$ at fixed $(\ell,m)$).}
-With $\mathbf{N}_{\ell m}=(1/k_0)\curl\mathbf{M}_{\ell m}$,
+On $\Gamma_R$ with $k_0 R\gg\ell$, Eqs.~\eqref{eq:ch3.angular-amplitude-MN}--\eqref{eq:ch3.vector-angular-harmonics} give
+\begin{equation}
+\label{eq:ch3.MN-angular-cross-display}
+\int_{S^{2}}
+\mathbf{A}_{\ell m}^{(\mathbf{M})}\cdot\mathbf{A}_{\ell m}^{(\mathbf{N})\,*}\,d\Omega
+=\jj\eta_0 k_0^{6}
+\int_{S^{2}}
+\mathbf{L}_{\ell}^{m}\cdot\big(\nabla_{\!S}\times\mathbf{L}_{\ell}^{m}\big)^{*}\,d\Omega
+\;+\;\mathcal{O}(R^{-1}),
+\end{equation}
+because $\mathbf{N}_{\ell}^{m}\sim R^{-1}\nabla_{\!S}\times\mathbf{L}_{\ell}^{m}$ tangentially at large $r$.
+For solenoidal $\mathbf{L}_{\ell}^{m}$ on $S^{2}$, $\nabla_{\!S}\cdot\mathbf{L}_{\ell}^{m}=0$ and the divergence theorem on the
+closed surface yields
+\begin{equation}
+\label{eq:ch3.L-cross-curl-L-zero}
+\int_{S^{2}}
+\mathbf{L}_{\ell}^{m}\cdot\big(\nabla_{\!S}\times\mathbf{L}_{\ell}^{m}\big)^{*}\,d\Omega
+=0,
+\end{equation}
+since $\nabla_{\!S}\cdot\big(\mathbf{L}_{\ell}^{m}\times\mathbf{L}_{\ell}^{m*}\big)=
+\mathbf{L}_{\ell}^{m*}\cdot\nabla_{\!S}\times\mathbf{L}_{\ell}^{m}
+-\mathbf{L}_{\ell}^{m}\cdot\nabla_{\!S}\times\mathbf{L}_{\ell}^{m*}$ integrates to zero \cite{hansen1988}.
+Equations~\eqref{eq:ch3.MN-angular-cross-display}--\eqref{eq:ch3.L-cross-curl-L-zero} drive the radial Hankel factor
+$\mathcal{R}_{\ell\ell}(k_0 R)$ in Eq.~\eqref{eq:ch3.shell-ET-orthogonality-display} to zero for the
+$(\sigma,\sigma')=(\mathbf{M},\mathbf{N})$ cross-term, so
 \begin{equation}
 \label{eq:ch3.MN-cross-radiative-display}
-\langle \mathbf{M}_{\ell m},\mathbf{N}_{\ell m}\rangle_{\mathrm{rad}}
-=0
+\langle \mathbf{u}_{\ell m}^{(\mathbf{M})},\mathbf{u}_{\ell m}^{(\mathbf{N})}\rangle_{\mathrm{rad}}
+=0.
 \end{equation}
-follows from Eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product} on outgoing domains: the magnetic-type and electric-type
-pairs are dual under Maxwell reciprocity, so their radiative cross-term cancels after the symmetrized shell pairing
-\cite{stratton1941}.
+The same conclusion is consistent with the reciprocity-symmetric pairing
+Eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product}, which exchanges magnetic- and electric-type sectors
+without creating a nonzero radiative bilinear form between partners at identical $(\ell,m)$ \cite{stratton1941}.
 \emph{Step 5 (assembly).} Distinct triples $(\ell,m,\sigma)\neq(\ell',m',\sigma')$ cannot share the same angular
 and radial quantum numbers; Steps~2--4 force
 Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative}.
@@ -6504,18 +6672,8 @@ Problem (orthogonality of two dipole eigenfields). \textbf{Problem.} Show \(\lan
 \textbf{Step 1.} Reduce to distinct \((\ell,m,\sigma)\) labels in Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative}
 \textbf{Step 2.} Invoke Theorem~\ref{thm:ch3.vsh-orthogonality} .
 \textbf{Physical meaning.} Orthogonality is a label property, not a spatial overlap guess from pattern plots
-For fixed \(\ell\) and asymptotic \(h_{\ell}^{(1)}\),
-\begin{equation}
-\label{eq:ch3.radial-hankel-orthogonality-shell}
-\lim_{R\to\infty}
-\int_{\Gamma_R}
-h_{\ell}^{(1)}(k_{0}r)^{*}\,
-h_{\ell'}^{(1)}(k_{0}r)\,dS
-\propto
-\delta_{\ell\ell'},
-\end{equation}
-consistent with preview Eq.~\eqref{eq:ch3.radial-orthogonality-preview} . Together with
-Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere}, Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell} factorizes
+Equation~\eqref{eq:ch3.shell-radial-overlap-derived} is the radial shell factor of the orthogonality proof.
+Together with Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere} and preview Eq.~\eqref{eq:ch3.radial-orthogonality-preview}, it factorizes
 Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative} into radial and angular parts on \(\Gamma_R\) .
 At fixed \((\ell,m)\), \(\mathbf{M}_{\ell m}\) and \(\mathbf{N}_{\ell m}\) are not proportional; their radiative
 pairing vanishes under reciprocity-symmetric inner product Eq.~\eqref{eq:ch3.reciprocity-symmetric-inner-product}
@@ -6541,7 +6699,7 @@ not arbitrary pattern correlators .
 \ChOneFigBlock{%
 \begin{tikzpicture}[ch1fig, node distance=7mm and 9mm]
  \node[ch1box] (ang) {Eq.~\eqref{eq:ch3.Ylm-orthonorm-sphere}};
- \node[ch1box, right=12mm of ang] (rad) {Eq.~\eqref{eq:ch3.radial-hankel-orthogonality-shell}};
+ \node[ch1box, right=12mm of ang] (rad) {Eq.~\eqref{eq:ch3.shell-radial-overlap-derived}};
  \node[ch1box, right=12mm of rad] (vsh) {Eq.~\eqref{eq:ch3.VSH-orthogonality-radiative}};
  \node[ch1box, below=10mm of rad] (pv) {Eq.~\eqref{eq:ch3.parseval-sphere}};
  \draw[ch1flow] (ang) -- (vsh);
@@ -6556,7 +6714,7 @@ combine into the full shell factorization.}
 \end{figure}
 On \(\Gamma_R\), Eq.~\eqref{eq:ch3.radiative-inner-product-def} specializes to a surface bilinear form whose leading
 far-zone term factorizes into Eqs.~\eqref{eq:ch3.Ylm-orthonorm-sphere} and
-\eqref{eq:ch3.radial-hankel-orthogonality-shell} . Subsection~\ref{sec:ch343} therefore
+\eqref{eq:ch3.shell-radial-overlap-derived} . Subsection~\ref{sec:ch343} therefore
 treats coefficient extraction as a shell measurement protocol, not a volume integral over reactive regions
 Theorem~\ref{thm:ch3.vsh-orthogonality} fixes \emph{vanishing} off-diagonal pairings; diagonal values
 \(\langle\mathbf{u}_{\ell m}^{(\sigma)},\mathbf{u}_{\ell m}^{(\sigma)}\rangle_{\mathrm{rad}}\) are set in
@@ -7247,7 +7405,35 @@ Impose radiative energy normalization
 1,
 \end{equation}
 compatible with Eq.~\eqref{eq:ch3.radiative-inner-product-def} on reciprocal media
-\cite{stratton1941}. Equations~\eqref{eq:ch3.VSH-unit-flux-normalization}--\eqref{eq:ch3.VSH-unit-energy-norm}
+\cite{stratton1941}. The shell factor $\mathcal{N}_{\ell}^{\mathrm{(rad)}}$ in
+Eq.~\eqref{eq:ch3.shell-radial-overlap-derived} is the outgoing Hankel diagonal attached to radial order $\ell$ on
+$\Gamma_R$; it combines with the angular weights
+Eqs.~\eqref{eq:ch3.Lm-angular-norm}--\eqref{eq:ch3.angular-amplitude-MN} in the far-shell limit of
+Eq.~\eqref{eq:ch3.radiative-inner-product-def}:
+\begin{equation}
+\label{eq:ch3.rad-diagonal-inner-before-flux}
+\big\langle \mathbf{u}_{\ell m}^{(\sigma)},\mathbf{u}_{\ell m}^{(\sigma)}\big\rangle_{\mathrm{rad}}
+=
+4\pi\,\mathcal{N}_{\ell}^{\mathrm{(rad)}}\,
+\mathcal{A}_{\ell m}^{(\sigma)},
+\end{equation}
+where $\mathcal{A}_{\ell m}^{(\sigma)}$ collects the $\ell$- and $\sigma$-dependent angular energy of the tangential
+pair on $S^{2}$ (V$^{2}$\,m$^{-2}$ weighted by $R^{-2}dS$ in the limit) and is fixed by the VSH definitions of
+Subsection~\ref{sec:ch341} once $\sigma$ is held fixed \cite{hansen1988}. Measurable power still enters through the
+time-averaged Poynting functional $\mathcal{P}_{\mathrm{rad}}$ of Eq.~\eqref{eq:ch2.power-flux-functional}, which equals
+$\langle P\rangle=(1/2)\Re\oint_{\Gamma_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS$ under $\eim$ with
+$\mathbf{S}=\tfrac12\E\times\H^{*}$ \cite{poynting1884,stratton1941}. The watt-ready representatives are obtained by
+residual amplitude on each label:
+\begin{equation}
+\label{eq:ch3.unit-flux-rescaling}
+\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}
+=
+\frac{\mathbf{u}_{\ell m}^{(\sigma)}}{\sqrt{\mathcal{P}_{\mathrm{rad}}\bigl(r;\mathbf{u}_{\ell m}^{(\sigma)}\bigr)}},
+\qquad
+k_{0}r\gg\ell,
+\end{equation}
+so that Eqs.~\eqref{eq:ch3.VSH-unit-flux-normalization}--\eqref{eq:ch3.VSH-unit-energy-norm} hold simultaneously on the
+same outgoing pair \cite{harrington2001}. Equations~\eqref{eq:ch3.VSH-unit-flux-normalization}--\eqref{eq:ch3.VSH-unit-energy-norm}
 fix amplitude scales for coefficients in Eq.~\eqref{eq:ch3.VSH-resolution-identity}:
 \begin{equation}
 \label{eq:ch3.normalized-coefficient-resolution}
@@ -7274,8 +7460,79 @@ For normalized superpositions,
 \end{equation}
 because distinct labels are orthogonal under Theorem~\ref{thm:ch3.vsh-orthogonality} and flux is quadratic on
 \(\mathcal{F}_{\mathrm{rad}}\) in the far zone \cite{stratton1941}. Equation
-\eqref{eq:ch3.mode-power-from-coefficient} is the Subsection~\ref{sec:ch351} Parseval law for measurable power:
-\(|\widehat{c}|^{2}\) is watts per mode under Eqs.~\eqref{eq:ch3.VSH-unit-flux-normalization}--\eqref{eq:ch3.VSH-unit-energy-norm}
+\eqref{eq:ch3.mode-power-from-coefficient} is the Subsection~\ref{sec:ch351} Parseval law for measurable power in watts
+under $\eim$ \cite{poynting1884}. The same watt budget is recovered from the far electric amplitude
+\begin{equation}
+\label{eq:ch3.far-field-power-identity}
+P_{\mathrm{rad}}
+=
+\frac{1}{2\eta_0}
+\int_{4\pi}
+\big|\mathbf{F}(\theta,\phi)\big|^{2}\,d\Omega,
+\qquad
+\mathbf{F}(\theta,\phi)
+=
+\lim_{r\to\infty}
+r\,e^{+\jj k_0 r}\,\mathbf{E}(r,\theta,\phi),
+\qquad
+[\mathbf{F}]=\mathrm{V},
+\end{equation}
+since $[\mathbf{E}]=\mathrm{V\,m^{-1}}$ and $[r]=\mathrm{m}$ \cite{stratton1941,jackson1999}.
+Each Cartesian component $F_{10}$, $F_{1m}$, etc., therefore carries volts, not a dimensionless pattern factor.
+with $\mathbf{H}\sim\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E}$ on the radiative branch \cite{stratton1941,hansen1988}.
+For each unit-flux mode $\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}$,
+Eqs.~\eqref{eq:ch3.far-field-power-identity} and~\eqref{eq:ch3.VSH-unit-flux-normalization} agree once the shell overlap
+$\mathcal{N}_{\ell}^{\mathrm{(rad)}}$ and angular factor $\mathcal{A}_{\ell m}^{(\sigma)}$ in
+Eq.~\eqref{eq:ch3.rad-diagonal-inner-before-flux} are absorbed into Eq.~\eqref{eq:ch3.unit-flux-rescaling}.
+The factor $\mathcal{N}_{\ell}^{\mathrm{(rad)}}$ is a basis-dependent Hankel overlap for the adopted outgoing VSH
+normalization, not an external Hansen constant pasted without derivation \cite{hansen1988}. Define it explicitly by the
+diagonal shell limit inherited from Eq.~\eqref{eq:ch3.shell-radial-overlap-derived} and the radiative inner product of
+Subsection~\ref{sec:ch343}:
+\begin{equation}
+\label{eq:ch3.N-rad-overlap-def}
+\mathcal{N}_{\ell}^{\mathrm{(rad)}}
+:=
+\lim_{R\to\infty}
+\frac{R^{-2}}{4\pi}
+\int_{\Gamma_R}
+h_{\ell}^{(1)}(k_0 R)^{*}\,h_{\ell}^{(1)}(k_0 R)\,dS,
+\end{equation}
+with outgoing Hankel factors $j_{\ell}=h_{\ell}^{(1)}$ as in Eq.~\eqref{eq:ch3.shell-radial-overlap-derived}.
+On $\Gamma_R$, $j_{\ell}(k_0 R)$ is constant in angle for fixed $\ell$, so the integral in
+Eq.~\eqref{eq:ch3.N-rad-overlap-def} depends on $\ell$ but not on $m$: the $4\pi$ solid angle removes all
+$m$-dependence from the radial shell factor.
+Equation~\eqref{eq:ch3.rad-diagonal-inner-before-flux} separates $\mathcal{N}_{\ell}^{\mathrm{(rad)}}$ from the angular factor
+$\mathcal{A}_{\ell m}^{(\sigma)}$, which \emph{does} depend on $(m,\sigma)$ through Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def}
+and Theorem~\ref{thm:ch3.vsh-orthogonality}; electric and magnetic sectors are not obliged to share the same $\mathcal{A}_{\ell m}^{(\sigma)}$
+at fixed $(\ell,m)$.
+A global phase convention on $Y_{\ell}^{m}$ changes phases of coefficients, not the watt calibration fixed by
+Eqs.~\eqref{eq:ch3.VSH-unit-flux-normalization} and~\eqref{eq:ch3.unit-flux-rescaling}; rescaling a vector basis by a
+$(\ell,m,\sigma)$-dependent factor changes $\mathcal{A}_{\ell m}^{(\sigma)}$ and therefore the numerical size of
+$\widehat{c}_{\ell m}^{(\sigma)}$ after normalization \cite{hansen1988}.
+No universal closed formula for $\mathcal{N}_{\ell}^{\mathrm{(rad)}}$ independent of the VSH amplitude gauges in
+Eqs.~\eqref{eq:ch3.Mlm-def}--\eqref{eq:ch3.Nlm-def} and the shell radius $R$ is claimed; watt calibration is completed by
+Eq.~\eqref{eq:ch3.unit-flux-rescaling}, which divides out $\mathcal{P}_{\mathrm{rad}}(\mathbf{u}_{\ell m}^{(\sigma)})$ measured in watts.
+As an independent physical check, let a single outgoing mode satisfy
+$\mathbf{E}(r,\theta,\phi)\sim r^{-1}e^{-\jj k_0 r}\mathbf{F}_{\ell m}^{(\sigma)}(\theta,\phi)$ and
+$\mathbf{H}=\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E}$ on $\Gamma_R$ with $k_0 r\gg\ell$.
+Then $dS=R^{2}\,d\Omega$, $\mathbf{S}=\tfrac12\mathbf{E}\times\mathbf{H}^{*}$, and
+\begin{equation}
+\label{eq:ch3.far-power-independent-check}
+P_{\mathrm{rad}}
+=
+\lim_{r\to\infty}\frac12\Re\int_{\Gamma_r}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS
+=
+\frac{1}{2\eta_0}\int_{4\pi}\big|\mathbf{F}_{\ell m}^{(\sigma)}(\theta,\phi)\big|^{2}\,d\Omega,
+\end{equation}
+in SI watts with $\eta_0=\sqrt{\mu_0/\varepsilon_0}$ \cite{stratton1941,jackson1999}.
+Equation~\eqref{eq:ch3.far-power-independent-check} agrees with Eq.~\eqref{eq:ch3.far-field-power-identity} under the same
+amplitude map $\mathbf{F}=\lim_{r\to\infty} r e^{\jj k_0 r}\mathbf{E}$ locked to outgoing phase $e^{-\jj k_0 r}/r$ in
+Chapter~\ref{ch:02} \cite{harrington2001}.
+When Eq.~\eqref{eq:ch3.VSH-unit-flux-normalization} is imposed, $\mathcal{A}_{\ell m}^{(\sigma)}$,
+$\mathcal{N}_{\ell}^{\mathrm{(rad)}}$, and the residual rescaling Eq.~\eqref{eq:ch3.unit-flux-rescaling} are constrained
+jointly so that $P_{\mathrm{rad}}=1\,\mathrm{W}$ for each $\widehat{\mathbf{u}}_{\ell m}^{(\sigma)}$.
+Under Eqs.~\eqref{eq:ch3.VSH-unit-flux-normalization}--\eqref{eq:ch3.VSH-unit-energy-norm}, each coefficient magnitude
+$|\widehat{c}_{\ell m}^{(\sigma)}|$ is calibrated directly in watts by Eq.~\eqref{eq:ch3.mode-power-from-coefficient}
 \cite{harrington2001}.
 \begin{figure}[t]
 \centering
@@ -7303,9 +7560,137 @@ cross-terms vanish for distinct labels \cite{stratton1941}.
 Apply Theorem~\ref{thm:ch3.vsh-orthogonality} and Proposition~\ref{prop:ch2.far-zone-flux-stabilization} from
 Subsection~\ref{sec:ch253} \cite{stratton1941}.
 % PROOF: AUTHOR REVIEW
-As a worked example, let \(\widehat{\mathbf{u}}_{10}^{(\mathbf{N})}\) satisfy Eq.~\eqref{eq:ch3.VSH-unit-flux-normalization}. Then
-\(\widehat{c}_{10}^{(\mathbf{N})}=1\) represents \(1\,\mathrm{W}\) export in that sector; \(\widehat{c}_{10}^{(\mathbf{N})}=0.1\)
-represents \(0.01\,\mathrm{W}\) under Eq.~\eqref{eq:ch3.mode-power-from-coefficient} \cite{harrington2001}.
+\paragraph{Worked normalization: the $\ell=1$, $m=0$ electric-type mode.}
+Take $\sigma=\mathbf{N}$, $(\ell,m)=(1,0)$.
+From Eq.~\eqref{eq:ch3.Ylm-Condon-Shortley-def} with $m=0$,
+$Y_{1}^{0}(\theta,\phi)=\sqrt{3/(4\pi)}\,\cos\theta$ and $\partial Y_{1}^{0}/\partial\phi=0$
+\cite{jackson1999}.
+Set $f(r,\theta)=h_{1}^{(1)}(k_0 r)\,Y_{1}^{0}(\theta)$.
+With $f=h_{1}^{(1)}(k_0 r)\,Y_{1}^{0}$ and $\partial Y_{1}^{0}/\partial\phi=0$,
+Eqs.~\eqref{eq:ch3.Mlm-def} and~\eqref{eq:ch3.curl-rhat-scalar-spherical} give
+\[
+\sin\theta\,Y_{1}^{0}(\theta)
+=
+\sqrt{\frac{3}{4\pi}}\,\sin\theta\cos\theta,
+\qquad
+\frac{\partial}{\partial\theta}\big(\sin\theta\,Y_{1}^{0}\big)
+=
+\sqrt{\frac{3}{4\pi}}\,\cos 2\theta,
+\]
+because $\partial(\sin\theta\cos\theta)/\partial\theta=\cos^{2}\theta-\sin^{2}\theta=\cos 2\theta$
+\cite{jackson1999}.
+Therefore
+\[
+\mathbf{M}_{10}
+=
+\frac{h_{1}^{(1)}(k_0 r)}{r\sin\theta}\,
+\sqrt{\frac{3}{4\pi}}\,\cos 2\theta\,\hat{\boldsymbol{\phi}}.
+\]
+For an azimuthal-only $\mathbf{M}=M_\phi\hat{\boldsymbol{\phi}}$,
+\begin{equation}
+\label{eq:ch3.curl-Mphi-spherical}
+\curl\mathbf{M}
+=
+\frac{1}{r\sin\theta}\,\frac{\partial}{\partial\theta}\!\big(\sin\theta\,M_\phi\big)\,\hat{\mathbf{r}}
+-
+\frac{1}{r}\,\frac{\partial}{\partial r}\!\big(rM_\phi\big)\,\hat{\boldsymbol{\theta}}
+\end{equation}
+\cite{jackson1999,stratton1941}.
+On the radiative branch, $\mathbf{N}_{10}=(k_0)^{-1}\curl\mathbf{M}_{10}$ with
+Eq.~\eqref{eq:ch3.Nlm-def}; the far-zone reduction
+Eq.~\eqref{eq:ch3.VSH-far-zone-scaffold} gives
+$|\mathbf{N}_{10}|\propto|\nabla_{\perp}Y_{1}^{0}|\propto\sin\theta$ as $k_0 r\to\infty$
+\cite{stratton1941,hansen1988}.
+The electric-type pair Eq.~\eqref{eq:ch3.VSH-M-pair} sets $\E=k_0\mathbf{N}_{10}$, so the leading
+outgoing amplitude satisfies $F_{\theta,10}\propto\sin\theta$ in volts before the flux normalization of
+Section~\ref{sec:ch35} \cite{harrington2001}.
+% PROOF: AUTHOR REVIEW — full stationary-region component display for $\mathbf{N}_{10}$.
+The electric-type pair $\mathbf{u}_{10}^{(\mathbf{N})}=(k_0\mathbf{N}_{10},-\jj k_0\mathbf{M}_{10})$ in Eq.~\eqref{eq:ch3.VSH-M-pair}
+therefore has leading far-zone electric field $\E=k_0\mathbf{N}_{10}$, in phase with the outgoing factor
+$e^{-\jj k_0 r}/r$.
+Define the angular amplitude $F_{10}$ by
+\begin{equation}
+\label{eq:ch3.N10-F-theta-component}
+\mathbf{F}_{10}^{(\mathbf{N})}(\theta,\phi)
+=
+F_{10}\,\sin\theta\,\hat{\boldsymbol{\theta}},
+\qquad
+F_{10}
+=
+\jj\sqrt{\frac{3}{4\pi}}\,\mathrm{V},
+\end{equation}
+consistent with Eq.~\eqref{eq:ch3.N10-far-zone} and the amplitude map
+$\mathbf{F}=\lim_{r\to\infty} r e^{+\jj k_0 r}\mathbf{E}$ of Eq.~\eqref{eq:ch3.far-field-power-identity}
+\cite{hansen1988}.
+The angular power integral is explicit:
+\[
+\int_{4\pi}\big|\mathbf{F}_{10}^{(\mathbf{N})}(\theta,\phi)\big|^{2}\,d\Omega
+=
+|F_{10}|^{2}\int_{0}^{2\pi}\!\int_{0}^{\pi}\sin^{3}\theta\,d\theta\,d\phi
+=
+\frac{8\pi}{3}\,|F_{10}|^{2}
+=
+2\,\mathrm{V}^{2},
+\]
+because $|F_{10}|^{2}=(3/4\pi)\,\mathrm{V}^{2}$.
+The integral uses $\int_{4\pi}\sin^{2}\theta\,d\Omega=8\pi/3$ because $|\mathbf{F}_{10}^{(\mathbf{N})}|^{2}\propto\sin^{2}\theta$ is the unit-flux normalization pattern adopted below.
+For $k_0 r\gg 1$,
+\begin{equation}
+\label{eq:ch3.N10-far-zone}
+\mathbf{E}(r,\theta,\phi)\sim
+\frac{e^{-\jj k_0 r}}{r}\,
+\mathbf{F}_{10}^{(\mathbf{N})}(\theta,\phi),
+\qquad
+\mathbf{H}\sim\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E},
+\end{equation}
+with $|\mathbf{F}_{10}^{(\mathbf{N})}|^{2}$ proportional to $\sin^{2}\theta$ for this axisymmetric electric multipole, reproducing a dipole angular pattern \cite{jackson1999,stratton1941}.
+Under $\eim$, $\mathbf{S}=\tfrac12\mathbf{E}\times\mathbf{H}^{*}$ and time-average outward flux uses
+$\Re(\mathbf{S})\cdot\hat{\mathbf{r}}$.
+With $\mathbf{H}=\eta_0^{-1}\hat{\mathbf{r}}\times\mathbf{E}$, one finds
+$\Re(\mathbf{E}\times\mathbf{H}^{*})\cdot\hat{\mathbf{r}}=\eta_0^{-1}|\mathbf{E}_{T}|^{2}$ on $\Gamma_r$, so
+\begin{equation}
+\label{eq:ch3.poynting-far-zone-factor}
+P_{\mathrm{rad}}
+=
+\lim_{r\to\infty}\frac12\Re\int_{\Gamma_r}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS
+=
+\frac{1}{2\eta_0}\int_{4\pi}|\mathbf{F}_{10}^{(\mathbf{N})}(\theta,\phi)|^{2}\,d\Omega,
+\end{equation}
+with $dS=r^{2}d\Omega$ cancelling the $r^{-2}$ intensity scaling \cite{stratton1941,poynting1884}.
+Insert Eq.~\eqref{eq:ch3.N10-far-zone} into Eq.~\eqref{eq:ch3.far-power-independent-check}:
+with Eq.~\eqref{eq:ch3.poynting-far-zone-factor},
+\[
+P_{\mathrm{rad}}
+=
+\frac{1}{2\eta_0}\int_{4\pi}|\mathbf{F}_{10}^{(\mathbf{N})}|^{2}\,d\Omega
+=
+\frac{1}{2\eta_0}\cdot 2\,\mathrm{V}^{2}
+=
+\frac{1}{\eta_0}\,\mathrm{W},
+\]
+using $[\eta_0]=\Omega$ and $\mathrm{V}^{2}/\Omega=\mathrm{W}$ \cite{stratton1941,poynting1884}.
+The result holds for the unnormalized geometric pair $\mathbf{u}_{10}^{(\mathbf{N})}$ at unit coefficient in
+Eq.~\eqref{eq:ch3.VSH-M-pair}; it is a physical power, not a dimensionless normalization factor.
+Eq.~\eqref{eq:ch3.unit-flux-rescaling} divides amplitudes by $\sqrt{p_0}$ with $p_0=\mathcal{P}_{\mathrm{rad}}(\mathbf{u}_{10}^{(\mathbf{N})})$ to enforce $1\,\mathrm{W}$
+on $\widehat{\mathbf{u}}_{10}^{(\mathbf{N})}$.
+The shell-overlap route gives
+$\mathcal{A}_{10}^{(\mathbf{N})}=\lim_{R\to\infty}R^{-2}\int_{\Gamma_R}|\mathbf{E}_T|^{2}dS
+\big/\int_{\Gamma_R}|h_1^{(1)}|^{2}dS$ from Eq.~\eqref{eq:ch3.A-lm-sigma-def}
+and $\mathcal{N}_{1}^{\mathrm{(rad)}}$ from Eq.~\eqref{eq:ch3.N-rad-overlap-def}.
+With $|h_1^{(1)}(k_0 R)|^{2}\sim(k_0 R)^{-2}$, $\int_{\Gamma_R}|h_1^{(1)}|^{2}dS\sim 4\pi/k_0^{2}$ at large $R$,
+while $R^{-2}\int |\mathbf{E}_T|^{2}dS$ carries the same $8\pi|F_{10}|^{2}/3$ angular factor;
+Eq.~\eqref{eq:ch3.rad-diagonal-inner-before-flux} therefore agrees with the Poynting route up to the explicit
+unit-flux rescaling Eq.~\eqref{eq:ch3.unit-flux-rescaling}, which divides amplitudes by $\sqrt{P_{\mathrm{rad}}}$
+to enforce $1\,\mathrm{W}$ per normalized mode \cite{hansen1988,lewis1995}.
+On $\Gamma_R$, Eq.~\eqref{eq:ch3.A-lm-sigma-def} supplies $\mathcal{A}_{10}^{(\mathbf{N})}$ and
+Eq.~\eqref{eq:ch3.N-rad-overlap-def} supplies $\mathcal{N}_{1}^{\mathrm{(rad)}}$ for this radial order; neither is a
+universal Hansen constant copied from an external coefficient table \cite{hansen1988,lewis1995,cappellin2008}.
+The geometric mode $\mathbf{u}_{10}^{(\mathbf{N})}$ generally carries $P_{\mathrm{rad}}=p_0$ with $p_0\neq 1\,\mathrm{W}$.
+Eq.~\eqref{eq:ch3.unit-flux-rescaling} sets $\widehat{\mathbf{u}}_{10}^{(\mathbf{N})}=\mathbf{u}_{10}^{(\mathbf{N})}/\sqrt{p_0}$ so that
+Eqs.~\eqref{eq:ch3.VSH-unit-flux-normalization} and~\eqref{eq:ch3.mode-power-from-coefficient} read
+$\widehat{c}_{10}^{(\mathbf{N})}=1\Rightarrow 1\,\mathrm{W}$ and $\widehat{c}_{10}^{(\mathbf{N})}=0.1\Rightarrow 0.01\,\mathrm{W}$.
+Other convention families (for example power-normalized waves with $P=\tfrac12\,\mathrm{W}$ at unit amplitude) differ by an
+explicit amplitude map and are not imported without stating that map \cite{hansen1988,cappellin2008}.
 Pre-normalization geometric coefficients from Section~\ref{sec:ch34} cannot be read as watts without applying
 Eqs.~\eqref{eq:ch3.VSH-unit-flux-normalization}--\eqref{eq:ch3.VSH-unit-energy-norm} \cite{poynting1884}.
 Problem (convert geometric to normalized coefficients). \textbf{Problem.} A geometric coefficient \(c_{10}^{(\mathbf{N})}=2\) is extracted before normalization. Find

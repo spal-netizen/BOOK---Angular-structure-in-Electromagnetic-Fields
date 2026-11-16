@@ -3,33 +3,21 @@
 \label{sec:ch231}
 Under $\eim$, the scalar Green function $G$ inverts the Helmholtz operator $(\nabla^2+k_0^2)$ that governs monopole radiation and Lorenz potentials in vacuum \cite{stratton1941,jackson1999}. The dyadic $\overline{\mathbf{G}}_{E}$ is the electric-field response of Maxwell's system to an impressed electric dipole: it satisfies the vector Helmholtz equation with a point dyadic source and the same outgoing condition as Eq.~\eqref{eq:ch2.free-space-scalar-green} \cite{tai1994}. Causality requires the retarded branch: response at $\mathbf{r}$ is driven only by sources at $\mathbf{r}'$ with propagation phase $e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}$ compatible with Sommerfeld selection (Section~\ref{sec:ch242}) \cite{sommerfeld1949}.
 
-The \emph{kernel formulas} developed below must be distinguished from
-and the \emph{domain declarations} that make those formulas meaningful on a declared
-boundary-value problem \cite{stratton1941}. Unless noted otherwise, \(\omega>0\) is fixed,
-\(\Jimp\in\mathcal{J}_\Omega\) from Eq.~\eqref{eq:ch2.source-space-refined}, charge continuity
-Eq.~\eqref{eq:ch1.charge-continuity-harmonic} holds, and \(\mathcal{B}_\Gamma\) is declared on
-\(\Gamma=\partial\Omega\). In uniform vacuum regions the wavenumber is \(k_0\) from
-Eq.~\eqref{eq:ch2.helmholtz-symbol}. Kernels are stated first in operator form on
-\(\mathcal{D}(\mathcal{W}_{E,\omega})\subset\HCurl(\Omega)\) from
-Eq.~\eqref{eq:ch2.electric-helmholtz-domain}; piecewise \(k(\mathbf{r})\) extensions use the
-same template with patchwise coefficients \cite{stratton1941}. The harmonic solution operator
-$\mathcal{G}_{E,\omega}$ introduced in Subsection~\ref{sec:ch222} is realized below by
-convolution with $G$ and $\overline{\mathbf{G}}_{E}$; observation coordinate $\mathbf{r}$ and
-source coordinate $\mathbf{r}'$ must remain distinct throughout every range transformation
-\cite{harrington2001}.
-Imagine exciting a uniform medium with the smallest source one can conceive: a unit
-impulse concentrated at a single point $\mathbf{r}'$. The field that appears at every
-other location $\mathbf{r}$ is the scalar Green function $G(\mathbf{r},\mathbf{r}')$---the
-impulse response of the Helmholtz operator at fixed frequency
-\cite{stratton1941}. Laboratory engineers never place a mathematical
-$\delta$-function on a bench, yet every extended feed, patch, or volume current is assembled
-from such elemental responses by superposition: each infinitesimal slice of $\Jimp(\mathbf{r}')$
-radiates as if it were a point source scaled by the local source strength, and the total
-field is the sum of those contributions weighted by propagation from $\mathbf{r}'$ to
-$\mathbf{r}$ \cite{harrington2001}. Green functions are therefore the natural language of
-propagation: they replace repeated boundary-value solves with a single propagator integral
-that method-of-moments codes, near-field scanners, and imaging algorithms all discretize
-\cite{stratton1941}.
+Throughout this subsection, $\omega>0$ is fixed under $\eim$, impressed currents lie in
+$\mathcal{J}_\Omega$ (Eq.~\eqref{eq:ch2.source-space-refined}) with
+$\nabla\cdot\Jimp=-\jj\omega\rho$ on $\Omega_s$, and boundary data $\mathcal{B}_\Gamma$ are
+declared on $\Gamma=\partial\Omega$.
+The vacuum wavenumber $k_0=\omega\sqrt{\mu_0\varepsilon_0}$ from Eq.~\eqref{eq:ch2.helmholtz-symbol}
+enters every phase factor $e^{-\jj k_0 R}$; observation coordinate $\mathbf{r}$ and source coordinate
+$\mathbf{r}'$ remain distinct in every integral \cite{stratton1941,jackson1999}.
+Maxwell's harmonic system was reduced in Section~\ref{sec:ch22} to scalar and vector Helmholtz
+operators; here those operators are inverted by Green convolution.
+A point impulse at $\mathbf{r}'$ produces the scalar response $G(\mathbf{r},\mathbf{r}')$ and,
+for vector currents, the dyadic response whose columns are electric fields of Cartesian unit
+dipoles.
+Extended feeds are superpositions of such impulses: each element $\Jimp(\mathbf{r}')\,d^{3}\mathbf{r}'$
+radiates with the same kernel, so method-of-moments assembly and near-field propagation share one
+propagation law \cite{harrington2001}.
 The physical significance of Eq.~\eqref{eq:ch2.scalar-helmholtz-green-pde} is that it isolates
 the response of the medium to the smallest source that can be imagined---a unit point excitation.
 Once this elementary response is known, more complicated sources may be synthesized by
@@ -196,6 +184,22 @@ Eq.~\eqref{eq:ch2.scalar-helmholtz-green-pde}: each column of
 \(\overline{\mathbf{G}}_{E}\) is the electric field produced by an impulsive vector
 source aligned with a Cartesian unit vector at \(\mathbf{r}'\)
 \cite{jackson1999}.
+The Laplace-space template
+$\overline{\overline{\mathbf{G}}}_e=(\overline{\overline{\mathbf{I}}}+\nabla\nabla/k_0^{2})\,G_0$
+with all $\nabla$ acting on the observation coordinate $\mathbf{r}$ and outgoing
+$G_0=e^{-\jj k_0 R}/(4\pi R)$ is the Lorenz-gauge electric dyad in Tai's standard notation
+\cite{tai1994}.
+The closed form Eq.~\eqref{eq:ch2.free-space-dyadic-green} is Stratton's equivalent
+Hertzian representation for the same outgoing kernel \cite{stratton1941,tai1994}: it is
+\emph{not} interchangeable with another dyadic template unless the defining operator
+$\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^2$ and the $\eim$ signs in
+Eqs.~\eqref{eq:ch2.lorenz-field-from-potential} and~\eqref{eq:ch2.electric-dyadic-convolution}
+are verified together.
+Under $\eim$, impressed current enters through $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$ while Faraday's law remains
+$\curl\E=-\jj\omega\mu_0\H$; the curl--curl reduction used below follows that $\Jimp$-in-Amp\`ere row.
+Reversing the time phasor without
+adjusting the spatial outgoing branch $e^{-\jj k_0 R}$ would mislabel incoming content while
+leaving the local curl--curl symbol unchanged \cite{jackson1999,stratton1941}.
 \begin{proposition}[Electric dyadic Green function from the curl--curl operator]
 \label{prop:ch2.dyadic-curl-curl-green}
 In homogeneous vacuum with $k_0=\omega\sqrt{\mu_0\varepsilon_0}$, define the electric curl--curl operator
@@ -233,7 +237,12 @@ Using $\nabla\times\nabla\times=\nabla\nabla\cdot-\nabla^{2}$ in Cartesian form 
 \end{equation}
 because every term reduces to a combination of $(\nabla^{2}+k_0^{2})G_0$ and its gradients, all of which vanish for $R>0$ \cite{tai1994,stratton1941}.
 This verifies Eq.~\eqref{eq:ch2.dyadic-curl-curl-homogeneous} for each Cartesian index $a\in\{x,y,z\}$ separately; tensor equality follows by linearity.
-\emph{Step 4 (distributional source).} Let $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$.
+\emph{Step 4 (distributional source, column $a$).} Fix $\mathbf{r}'$ and test $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$.
+Column $a$ of $\overline{\mathbf{G}}_{E,0}$ is the electric field of a point current
+$\mathbf{J}(\mathbf{r})=\mathbf{e}_a\,\delta(\mathbf{r}-\mathbf{r}')$ in Lorenz gauge.
+Thus $\mathbf{G}_{E,0}^{(a)}=\mathbf{e}_a\,G_0+\mathbf{G}_{\mathrm{long},a}$ with
+$\mathbf{G}_{\mathrm{long},a}=\nabla(\nabla\cdot\mathbf{A}_a)/(\jj\omega\varepsilon_0)$ and
+$\mathbf{A}_a=\mu_0 G_0\mathbf{e}_a$.
 Green's vector identity on a ball $B_R$ enclosing $\mathbf{r}'$ and the support of $\mathbf{f}$ gives
 \begin{equation}
 \label{eq:ch2.dyadic-green-ibp}
@@ -245,8 +254,9 @@ Green's vector identity on a ball $B_R$ enclosing $\mathbf{r}'$ and the support 
 \end{equation}
 with outward unit normal $\mathbf{n}$ on $\partial B_R$.
 For outgoing $G_0$, the surface integral vanishes as $R\to\infty$ because $\mathbf{G}_{E,0}$ and $\mathcal{W}_{E,\omega}\mathbf{f}$ both decay with Sommerfeld phase $e^{-\jj k_0 R}/R$ and $\mathbf{f}$ is compactly supported inside $B_R$ for large $R$ \cite{jackson1999}.
-In the limit, Eq.~\eqref{eq:ch2.dyadic-green-ibp} and Prop.~\ref{prop:ch2.scalar-green-vacuum} with $\mathcal{W}_{E,\omega}\mathbf{f}=\mathbf{e}_a$ under outgoing completion yield the $a$-th column of Eq.~\eqref{eq:ch2.dyadic-curl-curl-source}.
-Coincidence singularities at $\mathbf{r}=\mathbf{r}'$ are evaluated distributionally in Subsection~\ref{sec:ch232}; the longitudinal $\nabla(\nabla\cdot\mathbf{A})$ term contributes to the same distributional mass as the transverse part when the Lorenz relation is enforced \cite{stratton1941}.
+In the limit $R\to\infty$, the boundary term vanishes and the remaining volume pairing reduces to testing $\mathbf{G}_{E,0}^{(a)}$ against $\mathcal{W}_{E,\omega}\mathbf{f}$.
+The distributional mass at $\mathbf{r}=\mathbf{r}'$ is established in Theorem~\ref{thm:ch2.dyadic-distributional-fundamental} (Subsection~\ref{sec:ch232}): the interior-sphere limit on $V_\varepsilon=B_{R_\varepsilon}\setminus B_\varepsilon(\mathbf{r}')$ with outward normal on $\partial B_\varepsilon(\mathbf{r}')$ yields column-wise pairings Eq.~\eqref{eq:ch2.dyadic-inner-sphere-flux-column}, and summing columns $a=x,y,z$ gives Eq.~\eqref{eq:ch2.dyadic-curl-curl-source}.
+The longitudinal Lorenz term $\nabla(\nabla\cdot\mathbf{A})$ does not generate a second tensor $\delta^{(3)}$ source when tested against smooth $\mathbf{f}$; it pairs with charge continuity through the scalar Green identity \cite{stratton1941,tai1994}.
 \emph{Step 5 (current representation).} Convolving Eq.~\eqref{eq:ch2.dyadic-curl-curl-source} with $\Jimp$ and using linearity produces Eq.~\eqref{eq:ch2.electric-dyadic-convolution} when $\E_{\mathrm{hom}}$ is fixed by boundary data \cite{harrington2001}.
 \end{proof}
 Every method-of-moments code and every near-field scanner relies on the convolution
@@ -397,14 +407,10 @@ Eq.~\eqref{eq:ch2.dyadic-green-defining-operator} for
 Subsection~\ref{sec:ch232}. The same kernel appears in
 Eq.~\eqref{eq:ch2.radiation-integral} once \(\mathbf{r}\) lies outside
 \(\operatorname{supp}\Jimp\) and outgoing radiation condition is active
-\cite{harrington2001}. The magnetic field may be reconstructed from the electric field through Maxwell curl relations
-when the observation region is source-free and simply connected: $\H$ is not an independent
-measurement channel in the Lorenz reduction but follows from the spatial derivatives of
-$\E$ \cite{stratton1941}. This reconstruction is valid in homogeneous regions away from
-impressed currents and fails across material interfaces or inside the source support where
-curl relations must be supplemented by impressed-current terms \cite{harrington2001}.
-The magnetic field may be generated by the electric dyad through Maxwell curl relations
-when \(\Jimp\) is divergence-free in the source region:
+\cite{harrington2001}. In a source-free, simply connected observation region, $\H$ follows from $\E$ through
+$\curl\E=-\jj\omega\mu_0\H$ under $\eim$; the electric dyad therefore remains the primary radiation kernel, while the
+magnetic dyad inverts the magnetic curl operator for impressed magnetic currents and carries a distinct defining operator
+\cite{tai1994,stratton1941}. Pairing $\overline{\mathbf{G}}_{E}$ with divergence-free $\Jimp$ gives
 \begin{equation}
 \label{eq:ch2.magnetic-from-electric-dyad}
 \H(\mathbf{r})

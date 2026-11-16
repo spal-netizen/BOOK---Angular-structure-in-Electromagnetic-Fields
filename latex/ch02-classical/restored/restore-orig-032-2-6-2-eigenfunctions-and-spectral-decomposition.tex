@@ -3,12 +3,11 @@
 \label{sec:ch261}
 
 Discrete modal sums on exterior domains organize exported power into separable angular sectors only after outgoing qualification and flux gauge are declared \cite{stratton1941,jackson1999}. Continuous-spectrum bookkeeping runs in parallel with discrete $\ell$ blocks; mixing the two without measure conventions produces apparent mode creation on finite meshes \cite{hansen1988}.
-Source integrals from Section~\ref{sec:ch25} return amplitudes on $\Gamma_R$. The question an
-experienced range engineer asks next is practical: how many of those amplitudes remain
-independent above the noise floor for a given electrical size and scan extent?
-\cite{stratton1941}. The eigenpair construction below answers that question in
-normalized form; recoverable rank and $\sigma_n$ cliffs are already fixed in
-Subsection~\ref{sec:ch26.signature-aperture}.
+Source integrals from Section~\ref{sec:ch25} yield a finite set of export amplitudes on
+$\Gamma_R$. Spectral theory asks how many of those amplitudes correspond to linearly independent
+radiation modes for fixed electrical size and observation geometry \cite{stratton1941}.
+Recoverable rank and $\sigma_n$ decay are fixed in Subsection~\ref{sec:ch26.signature-aperture};
+the eigenpair construction below names the normalized export directions.
 
 What an eigenmode means physically. A radiation mode is a principal far-zone pattern direction $\mathbf{u}_n$; its source mode
 $\Jimp^{(n)}$ is the admissible current distribution that excites it. The export eigenvalue
@@ -16,28 +15,21 @@ $\lambda_n$ of $\mathcal{R}_\omega$ measures radiation efficiency $|\lambda_n|$ 
 radiation mode on $\Gamma_R$ \cite{stratton1941}. Modes with large $|\lambda_n|$ are the dominant export channels on
 $\Gamma_R$: they are the beams an array designer weights first and the cuts a diagnostician
 examines before worrying about sidelobe structure. Modes with small $|\lambda_n|$ appear only
-after long integration, narrowband filtering, or exceptional dynamic range; on a typical compact
-range they never rise above the clutter floor. Modes with $\lambda_n=0$ may still produce
-strong reactive near fields---the balanced-loop illustration from Section~\ref{sec:ch25} is the
-archetype---yet contribute nothing to the far-zone wattmeter \cite{devaney2004}. Eigenvalue
+after long integration or exceptional dynamic range; they fall below observation thresholds tied to
+$\sigma_n$ decay. Modes with $\lambda_n=0$ may still produce strong reactive near fields---the
+balanced-loop illustration from Section~\ref{sec:ch25} is the archetype---yet export no outward power
+through $\mathcal{R}_\omega$ \cite{devaney2004}. Eigenvalue
 ordering is therefore a statement about measurable export, not about how many terms a numerical chart
 can index.
-On a dish range, dominant eigenmodes appear as the principal cuts in a principal-component
-decomposition of sampled $\E_t$ on $S_r$: the first few components carry most resolvable power
-\cite{hansen1988}. Rank truncation in synthesis follows the recoverable rank fixed in
-Subsection~\ref{sec:ch26.signature-aperture}; the decomposition below passes through
-$\mathcal{R}_\omega$ on physically realizable source classes, with coupled power on
-$\Gamma_R$ as the physical quantity \cite{stratton1941}.
-Antenna-range observations. Harrington's synthesis practice already exploited the ordering: one designs or diagnoses feeds by
-how they excite a modest number of dominant modes, not by attempting independent control of every
-harmonic index a post-processor can list \cite{harrington2001}. On a compact range, rotating a
-horn reorients the principal cuts while leaving total exported power unchanged when probe and
-source frames rotate together---a fact developed formally in the rotation discussion below, but
-visible in raw pattern data long before covariance formulas appear \cite{collin2001}. When a
-measured pattern refuses to match a synthesis target despite ample numerical effort, the fault is
-often spectral rather than computational: the target lies in a weakly coupled or forbidden
-sector, not in the subspace the aperture and source geometry can reach \cite{stratton1941}. The
-eigenpair definition that follows encodes that experience in normalized form.
+Dominant eigenmodes carry most resolvable export power on $S_r$; weak modes lie in the
+$\sigma_n$ tail fixed in Subsection~\ref{sec:ch26.signature-aperture}
+\cite{hansen1988,stratton1941}. The decomposition below passes through $\mathcal{R}_\omega$ on
+admissible source classes, with shell power on $\Gamma_R$ as the physical observable
+\cite{stratton1941}. Synthesis targets that lie outside the reachable subspace imposed by geometry
+and electrical size are structurally unattainable, not merely numerically difficult
+\cite{harrington2001,collin2001}. Rotating a source reorients radiation-mode coefficients while
+preserving exported power when frames are co-rotated; that covariance is developed in
+Subsection~\ref{sec:ch263} \cite{stratton1941}.
 Propagation projectors Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent},
 compactness templates from Section~\ref{sec:ch213}, and far-zone amplitudes
 Eqs.~\eqref{eq:ch2.far-field-integral-reduction}--\eqref{eq:ch2.far-field-amplitude-integral}
@@ -59,8 +51,8 @@ Radiation eigenpairs. Eigenmodes are introduced because measured patterns on $S_
 analysis of sampled $\E_t$ reveals a small number of dominant export directions, and the eigenbasis
 below names those directions in normalized form \cite{hansen1988}. What experiment
 reveals is rank ordering---a few strong beams, a long tail of weak modes below the noise floor,
-and export-invisible reactive organizations that never register on a far-zone wattmeter
-\cite{devaney2004}. The laboratory observations above condense into a normalized triple: export eigenvalue
+and export-invisible reactive organizations with $\lambda_n=0$
+\cite{devaney2004}. These observations condense into a normalized triple: export eigenvalue
 $\lambda_n$ of $\mathcal{R}_\omega$, radiation mode $\mathbf{u}_n$, and source mode
 $\Jimp^{(n)}$ linked through $\mathcal{R}_\omega$ \cite{stratton1941}. Physically,
 $|\lambda_n|$ ranks how much qualified power each normalized radiation mode carries to
@@ -308,8 +300,8 @@ Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} compatible with far-zon
 \phantomsection\label{prop:ch2.far-pattern-from-modes}
 Each radiation mode $\mathbf{u}_n$ carries a far-zone fingerprint
 $\mathbf{f}_n(\theta,\phi)$---the angular pattern shape that mode $n$ contributes on $S^2$---
-while $\E_0(\theta,\phi)$ is the measurable far-zone electric pattern a compact range records
-after probe correction and transformation \cite{hansen1988}. Let \(\mathcal{D}_{J,\mathrm{reg}}=1\) and let \(\mathbf{u}_n\) be radiation eigenmodes with
+while $\E_0(\theta,\phi)$ is the far-zone electric pattern on $S_r$
+\cite{hansen1988,stratton1941}. Let \(\mathcal{D}_{J,\mathrm{reg}}=1\) and let \(\mathbf{u}_n\) be radiation eigenmodes with
 far amplitudes \(\mathbf{f}_n(\theta,\phi)\) defined through
 Eq.~\eqref{eq:ch2.far-field-amplitude-integral}. Then the far pattern of
 \(\mathcal{R}_\omega[\mathfrak{D}]\) satisfies
@@ -385,24 +377,23 @@ $\mathcal{S}_\omega[\Jimp]$---many field patterns exist inside the volume---but 
 outgoing sectors contribute to $\mathcal{R}_\omega[\Jimp]$ on a measurement aperture or radiating
 port \cite{stratton1941}. Truncating Eq.~\eqref{eq:ch2.cavity-discrete-radiation-spectrum} at
 $N=20$ modes with error bounded by Eq.~\eqref{eq:ch2.compression-error-bound} yields a stable
-interior power budget on a port wattmeter: the expected observation is a clean $|S_{11}|$ trace
-with identifiable resonances and predictable coupling to the feed.
+interior port coupling budget: resonance structure appears in reflected-wave traces at feed ports.
 The lesson sharpens by contrast. Apply the same truncated cavity sum to an exterior half-wave
 dipole in free space and sidelobe structure misaligns: the exterior problem requires the
 continuous angular measure Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral}, not a cavity
-eigenbasis \cite{jackson1999}. On a compact range the dipole presents a smooth far-zone pattern
-cut; in the cavity it presents port physics entirely governed by enclosure modes. Conflating the
+eigenbasis \cite{jackson1999}. An exterior dipole presents a smooth far-zone pattern on $S_r$;
+the cavity problem is governed by enclosure modes instead. Conflating the
 two domain classes is a common numerical error in aperture codes and in student projects that
 reuse modal truncations without checking export selection \cite{harrington2001}. The significance
 is operational: spectral truncation is domain-specific, export selection must precede modal
 counting, and a dense interior spectrum is not the same object as a recoverable far-zone pattern
 family \cite{stratton1941}.
-As a worked example, a balanced loop pair with vanishing electric dipole moment is the cleanest laboratory reminder
+As a worked example, a balanced loop pair with vanishing electric dipole moment illustrates
 that near-field strength does not imply far-zone export \cite{devaney2004}. The physical setup
 places two loops with opposing dipole moments so that radiation from electric dipole terms cancels
 on $\Gamma_R$ while reactive $\H$ and $\E$ remain large within one wavelength of the structure.
 On a spherical near-field scan at $R=0.4\lambda_0$, probes record strong tangential fields; on
-$\Gamma_R$ at $R=10\lambda_0$ the wattmeter reads negligible export. Coefficients $c_n$ on
+$\Gamma_R$ at $R=10\lambda_0$ shell power is negligible. Coefficients $c_n$ on
 exporting modes vanish ($\lambda_n=0$), yet $\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp^{(\mathrm{NR})}]$
 may be substantial \cite{stratton1941}.
 The observable behavior confuses teams who report patterns from $\mathcal{S}_\omega[\Jimp]$ without

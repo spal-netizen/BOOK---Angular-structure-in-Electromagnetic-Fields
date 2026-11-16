@@ -1,0 +1,62 @@
+% R1c-1 — Duhamel / evolution operator chain (extends §2.2)
+
+\subsection{Evolution form of Maxwell's equations}
+\label{sec:ch02.2.7}
+
+Eq.~\eqref{eq:ch2.time-maxwell-full} is a first-order system in time: curls of $\E$ and $\H$ drive time derivatives of the partner field, and impressed $\mathbf{j}$ drives $\H$ directly \cite{maxwell1873,stratton1941}. Pack the electromagnetic state at time $t$ as
+\begin{equation}
+\label{eq:ch2.time-state-vector}
+\mathbf{U}(t)=
+\begin{bmatrix}\E(\cdot,t)\\ \H(\cdot,t)\end{bmatrix},
+\end{equation}
+where $\mathbf{U}(t)$ lives in a product space of square-integrable field pairs on the declared domain compatible with Chapter~\ref{ch:01} admissibility (Section~\ref{sec:ch01.1.2}). On a fixed boundary class $\mathcal{B}_\Gamma$ and with homogeneous exterior radiation data where applicable, the evolution problem seeks $\mathbf{U}(t)$ such that
+\begin{equation}
+\label{eq:ch2.time-ibvp-package}
+\begin{cases}
+\partial_t\mathbf{U}(t)=\mathcal{A}\,\mathbf{U}(t)+\mathbf{F}(t), & t>0,\\[2pt]
+\mathbf{U}(0)=\mathbf{U}_0, &
+\end{cases}
+\end{equation}
+where $\mathcal{A}$ is the Maxwell \emph{generator} induced by Eq.~\eqref{eq:ch2.time-maxwell-full} on its domain of Maxwell-consistent states, and $\mathbf{F}(t)$ collects the impressed-source rows (A/m$^2$ converted to the $\H$-equation source rate) \cite{stratton1941}. Physically, $\mathcal{A}$ describes source-free Maxwell evolution: energy sloshes between $\E$ and $\H$ without external drive. The forcing $\mathbf{F}(t)$ is the antenna feed, pulse, or transient excitation.
+
+Initial data $\mathbf{U}_0$ specify the field at switch-on; for radiation from rest, $\mathbf{U}_0=\mathbf{0}$ and all observable field builds from $\mathbf{F}(t)$. Boundary traces implied by $\mathcal{B}_\Gamma$ must hold at each $t$; the harmonic map $\mathcal{S}_\omega$ in Eq.~\eqref{eq:ch2.Somega-def} is the single-frequency reduction of Eq.~\eqref{eq:ch2.time-ibvp-package} when $\mathbf{F}(t)=\Re\{\mathbf{F}_\omega\,e^{+\jj\omega t}\}$ and transients have decayed (Subsection~\ref{sec:ch02.2.4}).
+
+\subsection{Propagator and Duhamel representation}
+\label{sec:ch02.2.8}
+
+When $\mathbf{F}\equiv\mathbf{0}$, the source-free solution operator $\mathcal{T}(t)$ maps initial data forward:
+\begin{equation}
+\label{eq:ch2.time-semigroup-definition}
+\mathcal{T}(t):\mathbf{U}_0\longmapsto \mathbf{U}(t),
+\qquad
+\mathcal{T}(0)=\mathrm{id},
+\end{equation}
+so long as the boundary-value problem is well posed \cite{stratton1941}. For $\mathbf{F}\neq\mathbf{0}$, variation of parameters gives the Duhamel formula
+\begin{equation}
+\label{eq:ch2.duhamel-maxwell}
+\mathbf{U}(t)
+=
+\mathcal{T}(t)\mathbf{U}_0
++\int_0^t \mathcal{T}(t-s)\,\mathbf{F}(s)\,ds.
+\end{equation}
+Each term has a direct reading: $\mathcal{T}(t)\mathbf{U}_0$ is the field that would exist without sources after time $t$; the integral accumulates the response to the source history $\mathbf{F}(s)$ for $0\le s\le t$ \cite{stratton1941,jackson1999}. Causality requires $\mathcal{T}(t-s)=\mathbf{0}$ for $s>t$, matching the retarded support in Eq.~\eqref{eq:ch2.retarded-E-convolution}. A frequency-domain solver that ignores this history and treats $\omega$ as an independent parameter still reproduces the steady slice $\mathcal{S}_\omega[\Jimp]$ only when the physical excitation is truly harmonic and the outgoing branch is selected consistently (Subsections~\ref{sec:ch02.2.4} and~\ref{sec:ch02.4.2}).
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (u0) {$\mathbf{U}_0$};
+ \node[ch1box, right=7mm of u0] (T) {$\mathcal{T}(t)$};
+ \node[ch1box, right=7mm of T] (u) {$\mathbf{U}(t)$};
+ \node[ch1box, below=6mm of T] (F) {$\mathbf{F}(s)$};
+ \node[ch1box, below=6mm of u] (D) {$\int_0^t \mathcal{T}(t-s)\mathbf{F}(s)\,ds$};
+ \draw[ch1flow] (u0) -- (T) -- (u);
+ \draw[ch1flow] (F) -- (D);
+ \draw[ch1flow] (D.north) -- (u.south);
+\end{tikzpicture}%
+}
+\caption{Duhamel structure: source-free propagation of initial data plus accumulated response to the impressed source history.}
+\label{fig:ch2.duhamel-evolution}
+\end{figure}
+
+When a retarded Green dyadic exists, Eq.~\eqref{eq:ch2.duhamel-maxwell} specializes to Eq.~\eqref{eq:ch2.retarded-E-convolution} for the electric-field component; Section~\ref{sec:ch02.4} constructs the harmonic Green operator whose convolution is the $\omega$-slice of that history \cite{stratton1941,harrington2001}.

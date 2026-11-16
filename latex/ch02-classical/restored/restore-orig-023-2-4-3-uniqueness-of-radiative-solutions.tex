@@ -2,13 +2,14 @@
 \subsection{Uniqueness of radiative solutions}
 \label{sec:ch243}
 
-Exterior problems admit infinitely many time-harmonic Maxwell solutions unless an outgoing
-condition selects the retarded branch. Uniqueness is therefore the statement that, once
-impressed data, boundary class $\mathcal{B}_\Gamma$, and Sommerfeld outgoing selection are
-fixed, no second distinct field pair can satisfy the same constraints
-\cite{sommerfeld1949,stratton1941}. Without that conclusion, measured far-zone patterns could
-not be attributed to declared sources: two different near-zone states might share identical
-radiative export. Reactive energy may dominate on $\Gamma_R$ close to $\Omega_s$ while
+Two distinct harmonic Maxwell pairs can satisfy the same impressed current and local boundary
+traces yet differ in their far-zone phase if incoming and outgoing spherical content are not
+separated. The exterior uniqueness question is whether Sommerfeld's outgoing selection, passive
+material response in $\Omega_s$, and finite radiated power together force the difference field to
+vanish identically in the radiation domain \cite{sommerfeld1949,stratton1941,harrington2001}.
+Without that conclusion, a compact-range pattern could not be attributed to a declared feed:
+reactive storage near $\Omega_s$ could be traded against incoming partners at infinity without
+changing near-field samples on a finite scan. Reactive energy may dominate on $\Gamma_R$ close to $\Omega_s$ while
 contributing negligibly to $P_{\mathrm{rad}}$ once
 $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}$ with
 $\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$
@@ -35,7 +36,17 @@ export uses \(\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}\) from
 Eq.~\eqref{eq:ch2.far-zone-transverse-radiation} \cite{stratton1941}.
 Uniqueness is established by showing that two outgoing solutions for the same impressed data
 cannot differ nontrivially: the proof therefore studies the homogeneous problem satisfied by
-their difference \cite{stratton1941}. Let \((\E_1,\H_1)\) and \((\E_2,\H_2)\) be two harmonic
+their difference \cite{stratton1941}.
+The theorem below is \emph{proved in this subsection} for the exterior vacuum far zone under
+Eqs.~\eqref{eq:ch2.exterior-difference-system}--\eqref{eq:ch2.exterior-sommerfeld-flux-limit} and passive material in
+$\Omega_s$ when loss is present.
+The \emph{existence} of an outgoing solution with prescribed $\Jimp$ is not re-derived here: it is imported from the retarded
+resolvent and Green-function construction of Sections~\ref{sec:ch23}--\ref{sec:ch242}
+(Eq.~\eqref{eq:ch2.retarded-harmonic-kernel-theorem}, Eq.~\eqref{eq:ch2.outgoing-solution-operator})
+\cite{stratton1941,harrington2001}.
+Non-uniqueness of equivalent sources producing identical $\mathcal{R}_\omega[\Jimp]$ is a separate inverse question and is not
+claimed settled by the flux argument \cite{devaney2004}.
+Let \((\E_1,\H_1)\) and \((\E_2,\H_2)\) be two harmonic
 solutions on the outgoing branch for the same impressed data and \(\mathcal{B}_\Gamma\). Define
 \(\Delta\E=\E_1-\E_2\), \(\Delta\H=\H_1-\H_2\), and
 \(\mathbf{u}_\Delta=(\Delta\E,\Delta\H)\). Linearity and
@@ -67,27 +78,77 @@ violate Eq.~\eqref{eq:ch2.exterior-difference-outgoing} even if they satisfied t
 curl rows \cite{jackson1999}.
 On truncated exterior shells, form the complex Poynting vector for difference fields,
 \(\mathbf{S}_\Delta=\tfrac12\Delta\E\times\Delta\H^{*}\), as in
-Eq.~\eqref{eq:ch1.uniqueness-energy-identity} \cite{stratton1941}. For a large
-sphere \(\Gamma_R=\{r=R\}\) enclosing \(\Omega_s\), let
-\(\Omega_R=B_R\setminus\Omega_s\). The divergence theorem on \(\Omega_R\) yields
+Eq.~\eqref{eq:ch1.uniqueness-energy-identity} \cite{stratton1941}. For homogeneous impressed
+data on a source-free subdomain, the complex Poynting identity for
+$\mathbf{S}_\Delta=\tfrac12\Delta\E\times\Delta\H^{*}$ under $\eim$ is
+\[
+\nabla\cdot\mathbf{S}_\Delta
+=
+\tfrac12\big[\Delta\H^{*}\!\cdot\!\curl\Delta\E
+-\Delta\E\!\cdot\!(\curl\Delta\H)^{*}\big],
+\]
+with $(\curl\Delta\H)^{*}$ the complex conjugate of $\curl\Delta\H$
+\cite{stratton1941,jackson1999}.
+Under Eqs.~\eqref{eq:ch2.exterior-difference-system} with real scalar
+$\varepsilon,\mu>0$,
+$(\curl\Delta\H)^{*}=\jj\omega\varepsilon\,\Delta\E^{*}$ and
+$\curl\Delta\E=-\jj\omega\mu\,\Delta\H$, hence
+\[
+\nabla\cdot\mathbf{S}_\Delta
+=
+\tfrac{\jj\omega}{2}
+\big(\varepsilon|\Delta\E|^{2}-\mu|\Delta\H|^{2}\big).
+\]
+With $u_{\Delta E}=\tfrac14\varepsilon|\Delta\E|^{2}$ and
+$u_{\Delta H}=\tfrac14\mu|\Delta\H|^{2}$,
+\begin{equation}
+\label{eq:ch2.poynting-difference-divergence}
+\nabla\cdot\mathbf{S}_\Delta
+=
+-2\jj\omega\big(u_{\Delta H}-u_{\Delta E}\big)
+\qquad\text{(lossless homogeneous isotropic region).}
+\end{equation}
+Integrating Eq.~\eqref{eq:ch2.poynting-difference-divergence} yields volume split
+$-2\jj\omega\!\int(u_{\Delta H}-u_{\Delta E})\,dV$.
+Equation~\eqref{eq:ch1.uniqueness-energy-identity} displays
+$-\jj\omega\!\int(u_{\Delta H}-u_{\Delta E})\,dV$ (factor $2$ absent);
+Chapter~\ref{ch:01} is left unchanged, so the integrated prefactor remains an open
+interface until author alignment---the exterior proof below uses only
+$\Re\oint\mathbf{S}_\Delta\cdot\hat{\mathbf{n}}\,dS$, Sommerfeld decay, and passivity on
+$\Omega_s$.
+For a large sphere \(\Gamma_R=\{r=R\}\) enclosing \(\Omega_s\), let
+\(\Omega_R=B_R\setminus\Omega_s\) and $\Gamma_s=\partial\Omega_s$.
+Integrating Eq.~\eqref{eq:ch2.poynting-difference-divergence} and applying the divergence theorem,
 \begin{equation}
 \label{eq:ch2.exterior-flux-identity}
 \int_{\Gamma_R}\hat{\mathbf{r}}\cdot\mathbf{S}_\Delta\,dS
++
+\int_{\Gamma_s}\hat{\mathbf{n}}_{\mathrm{ext}}\cdot\mathbf{S}_\Delta\,dS
 =
--\jj\omega\!\int_{\Omega_R}
-\Big(u_{\Delta H}-u_{\Delta E}\Big)\,dV
-\;+\;\mathcal{P}_{\Delta,s},
+-2\jj\omega\!\int_{\Omega_R}
+\big(u_{\Delta H}-u_{\Delta E}\big)\,dV
 \end{equation}
-where \(u_{\Delta E}=\tfrac14\varepsilon|\Delta\E|^{2}\),
-\(u_{\Delta H}=\tfrac14\mu|\Delta\H|^{2}\), and \(\mathcal{P}_{\Delta,s}\) collects
-source-region passive dissipation when \(\Im\{\varepsilon\},\Im\{\mu\}>0\)
-\cite{stratton1941}. Equation~\eqref{eq:ch2.exterior-flux-identity}
-is Eq.~\eqref{eq:ch1.uniqueness-energy-identity} with \(\Delta\Jimp=\mathbf{0}\) and
-\(\Gamma=\Gamma_R\); its real part controls uniqueness through the sign of the
-boundary flux \cite{stratton1941}. On a compact range, the real part of the $\Gamma_R$ integral
-is what a wattmeter would read from the difference field if such a superposition were
-physically present; outgoing selection forces that reading to nonnegative export or zero
-\cite{harrington2001}. In lossless vacuum on
+on lossless homogeneous vacuum in $\Omega_R\setminus\Omega_s$, where
+$\hat{\mathbf{n}}_{\mathrm{ext}}$ is the outward normal on $\Gamma_s$ pointing into
+$\Omega_R$.
+On passive scalar media $\varepsilon=\varepsilon'-j\varepsilon''$, $\mu=\mu'-j\mu''$ with
+$\varepsilon'',\mu''\geq0$, retaining imaginary parts in the curls gives
+\[
+\operatorname{Re}\{\nabla\cdot\mathbf{S}_\Delta\}
+=
+-\frac{\omega}{2}
+\big(\varepsilon''|\Delta\E|^{2}+\mu''|\Delta\H|^{2}\big),
+\]
+so \(\mathcal{P}_{\Delta,s}=\int_{\Omega_s}\operatorname{Re}\{\nabla\cdot\mathbf{S}_\Delta\}\,dV\leq0\)
+adds nonnegative dissipation to the real part of Eq.~\eqref{eq:ch2.exterior-flux-identity}
+when $\Omega_s$ is lossy \cite{stratton1941,harrington2001}.
+In a lossless vacuum shell, $\Re\{\nabla\cdot\mathbf{S}_\Delta\}=0$, so
+$\Re\int_{\Gamma_R}\mathbf{S}_\Delta\cdot\hat{\mathbf{r}}\,dS$ is fixed by
+$\Gamma_s$ and the imaginary volume piece does not enter the real power balance
+\cite{stratton1941,harrington2001}. The time-average outward power carried by the difference
+field is $\Re\int_{\Gamma_R}\hat{\mathbf{r}}\cdot\mathbf{S}_\Delta\,dS$; outgoing selection
+forces this quantity to be nonnegative on $\Gamma_R$ and zero only when no propagating export
+remains \cite{harrington2001,stratton1941}. In lossless vacuum on
 \(\Omega_R\setminus\Omega_s\), the volume term is purely imaginary at steady state,
 so \(\Re\int_{\Gamma_R}\hat{\mathbf{r}}\cdot\mathbf{S}_\Delta\,dS\) is determined
 entirely by far-zone radiation \cite{harrington2001}.

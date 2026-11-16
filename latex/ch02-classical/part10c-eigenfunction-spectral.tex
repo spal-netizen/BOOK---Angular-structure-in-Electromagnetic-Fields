@@ -1,0 +1,65 @@
+% R1c-2 — radiation eigenpairs and modal expansion (Ch.3 boundary)
+
+\subsection{Radiation eigenpairs}
+\label{sec:ch02.7b.6}
+
+Section~\ref{sec:ch02.7b.1} introduced radiation modes qualitatively. On outgoing radiative fields, fix an energy inner product on $\mathcal{F}_{\mathrm{rad}}$---for example, integration of $\Re(\E\times\H^*)\cdot\hat{\mathbf{r}}$ over a large sphere $S_R$, or an equivalent norm on transverse far-zone data \cite{stratton1941,harrington2001}. A \emph{radiation eigenpair} is a triple $(\lambda_n,\mathbf{u}_n,\Jimp^{(n)})$ with export eigenvalue $\lambda_n\in\mathbb{C}$, normalized radiation mode $\mathbf{u}_n=(\E_n,\H_n)\in\mathcal{F}_{\mathrm{rad}}$, and source mode $\Jimp^{(n)}\in\mathcal{J}_\Omega$, such that
+\begin{equation}
+\label{eq:ch2.radiation-eigenpair-def}
+\mathcal{R}_\omega[\Jimp^{(n)}]=\lambda_n\,\mathbf{u}_n,
+\qquad
+\|\mathbf{u}_n\|_{\mathcal{U}}=1,
+\end{equation}
+where $\|\cdot\|_{\mathcal{U}}$ is the chosen radiative energy norm \cite{stratton1941}. Physically, $|\lambda_n|$ ranks how much qualified far-zone export unit source mode $\Jimp^{(n)}$ produces in pattern direction $\mathbf{u}_n$. Modes with $\lambda_n=0$ lie in $\ker\mathcal{R}_\omega$ (Section~\ref{sec:ch02.8}): they may produce strong local fields through $\mathcal{S}_\omega[\Jimp^{(n)}]$ yet vanish on far-zone meters after outgoing selection.
+
+Eigenpairs are defined on the outgoing propagating branch only; incoming sheets excluded by Section~\ref{sec:ch02.4.2} are not radiation modes in this sense \cite{stratton1941}. The singular values $\sigma_n$ of $\mathcal{K}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ (Section~\ref{sec:ch02.7.1}) rank measurement channels; $|\lambda_n|$ ranks export before finite instruments truncate the spectrum---related but not identical when $\mathcal{O}_{\mathrm{meas}}$ is rank-deficient \cite{hansen1988,devaney2004}.
+
+\subsection{Modal projectors and expansion}
+\label{sec:ch02.7b.7}
+
+Given an orthonormal family of radiation modes $\{\mathbf{u}_n\}$ in $\mathcal{F}_{\mathrm{rad}}$, define the rank-one projector
+\begin{equation}
+\label{eq:ch2.modal-projector-def}
+P_n[\mathbf{v}]
+=
+\langle \mathbf{v},\mathbf{u}_n\rangle_{\mathcal{U}}\,\mathbf{u}_n,
+\end{equation}
+which extracts the component of radiative field $\mathbf{v}$ aligned with mode $n$ \cite{stratton1941}. For admissible excitation $\Jimp$, define source-side coefficient
+\begin{equation}
+\label{eq:ch2.source-modal-amplitude}
+c_n
+=
+\langle \mathcal{S}_\omega[\Jimp],\mathbf{u}_n\rangle_{\mathcal{U}},
+\qquad
+P_n\,\mathcal{R}_\omega[\Jimp]
+=
+\lambda_n\,c_n\,\mathbf{u}_n,
+\end{equation}
+when the pairings converge in the declared class \cite{stratton1941,harrington2001}. Linearity of $\mathcal{R}_\omega$ implies $c_n$ is linear in $\Jimp$; $|\lambda_n c_n|$ is the export amplitude on the normalized pattern $\mathbf{u}_n$.
+
+When $\{\mathbf{u}_n\}$ is complete for the radiative subspace of interest (a qualified statement: complete on $\operatorname{ran}\mathcal{R}_\omega$ for the given exterior problem, not on all of $\mathcal{F}_\Omega$), every $\mathbf{v}\in\operatorname{ran}\mathcal{R}_\omega$ admits
+\begin{equation}
+\label{eq:ch2.radiation-spectral-expansion}
+\mathbf{v}
+=
+\sum_{n\in\mathcal{N}_{\mathrm{rad}}}
+\langle \mathbf{v},\mathbf{u}_n\rangle_{\mathcal{U}}\,\mathbf{u}_n,
+\end{equation}
+with Parseval-type energy accounting on $S_R$ when the norm is flux-based \cite{stratton1941}. Chapter~\ref{ch:03} supplies explicit orthonormal vector modes on the sphere; Eq.~\eqref{eq:ch2.radiation-spectral-expansion} records why such a basis is the natural coordinate system for exported power.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\Jimp$};
+ \node[ch1box, right=6mm of j] (s) {$\mathcal{S}_\omega$};
+ \node[ch1box, right=6mm of s] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=6mm of r] (sum) {$\sum_n \lambda_n c_n P_n$};
+ \draw[ch1flow] (j) -- (s) -- (r) -- (sum);
+\end{tikzpicture}%
+}
+\caption{Radiation eigenstructure: $\mathcal{S}_\omega$ fixes modal excitation $c_n$; $\mathcal{R}_\omega$ maps to export amplitudes $\lambda_n c_n$ on projectors $P_n$.}
+\label{fig:ch2.radiation-spectral-decomposition}
+\end{figure}
+
+Historical note: multipole and spherical-wave analyses of radiating systems, developed in the classical monographs of Stratton and Harrington and in modern antenna theory, express the same angular hierarchy that Eq.~\eqref{eq:ch2.radiation-spectral-expansion} organizes at the operator level \cite{stratton1941,harrington2001,jackson1999}. Green's impulse-response viewpoint (Section~\ref{sec:ch02.4}) and eigenmode viewpoint are complementary descriptions of one linear Maxwell map.

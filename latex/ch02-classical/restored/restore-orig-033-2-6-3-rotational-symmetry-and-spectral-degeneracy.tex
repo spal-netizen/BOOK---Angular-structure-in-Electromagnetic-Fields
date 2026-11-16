@@ -1,11 +1,10 @@
 % Stage 8 restored fragment — 2.6.3 Rotational symmetry and spectral degeneracy (archive lines 8071-8331)
 \subsection{Rotational symmetry and spectral degeneracy}
 \label{sec:ch262}
-Rotational degeneracy is visible on every compact range before covariance formulas appear:
-rotating a horn reorients principal cuts while total exported power stays fixed when probe and
-source frames rotate together \cite{harrington2001}. The formal commutation relations
-below encode that laboratory symmetry on the export eigenbasis from
-Subsection~\ref{sec:ch261}.
+When a source or observation frame is rotated, export eigenvalues within an irreducible block
+often remain degenerate while modal coefficients mix under the spatial rotation group
+\cite{harrington2001,stratton1941}. The commutation relations below state that covariance on
+the export eigenbasis from Subsection~\ref{sec:ch261}.
 
 Let \(R\in\mathrm{SO}(3)\), field rotation \(\mathcal{D}(R)\) on qualified Maxwell pairs
 \(\mathbf{u}=(\E,\H)\in\mathcal{F}_{\mathrm{SF}}\), and radiation map
@@ -19,20 +18,13 @@ Eq.~\eqref{eq:ch1.vector-rotation-components} \cite{stratton1941}. regime qualif
 Eq.~\eqref{eq:ch2.regime-operator-screen} and transport qualification
 Eq.~\eqref{eq:ch2.transport-qualified-radiation} remain mandatory before interpreting
 rotated reports as export data \cite{harrington2001}.
-Rotation in the laboratory. Rotating a horn on a compact range is the everyday experiment that motivates covariance
-relations. Mount the horn on a rotary stage, record $\E_t$ on $S_r$ at several azimuths, and
-superpose the cuts: total exported power remains unchanged when probe and source frames rotate
-together, but the principal beam walks across the sphere as expected for a steerable feed
-\cite{harrington2001}. Rotating a dish feed scans a different arc on the reflector surface; modal
-coefficients mix according to the same rules that rotate a measured $\E_t$ distribution on the
-rim \cite{collin2001}. Spinning a corrugated aperture distribution about its axis redistributes
-directional content within fixed $\ell$ blocks without creating new export unless the source
-itself changes \cite{stratton1941}. Laboratory reports must distinguish active rotation of
-hardware from passive relabeling of a fixed field in a rotated coordinate chart; confusing the
-two conventions splits degeneracies artificially in processed $a_n(\hat{\mathbf{k}})$ data and
-can make a symmetric structure appear artificially asymmetric in synthesis charting
-\cite{harrington2001}. The covariance identity below is the formal statement of what range
-technicians already enforce by co-rotating probes and references.
+Active rotation $\mathcal{A}_R$ reorients impressed currents and co-rotates field components
+$\mathcal{D}(R)$; total radiated power is invariant when constitutive response is isotropic and
+frames are consistently transformed, but modal amplitudes mix within fixed-$\ell$ sectors
+\cite{harrington2001,collin2001,stratton1941}. Passive relabeling of coordinates must not be
+confused with physical rotation: mixing conventions artificially splits degeneracies in angular
+coefficients $a_n(\hat{\mathbf{k}})$ \cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-rotation-commutation}
+below is the operator statement of that covariance.
 Field rotation means physically reorienting the $\E$ and $\H$ vectors with the hardware: what
 changes is the direction of the pattern on $S_r$; what remains unchanged, when frames are
 handled consistently, is total exported power and the eigenvalue ordering within degenerate
@@ -60,8 +52,7 @@ while reorienting modal coefficients through the representation $\mathcal{D}(R)$
 \cite{harrington2001}. When sources and observation frames are co-rotated, the radiation chain must commute with
 rotation up to the field representation $\mathcal{D}(R)$: rotating the feed and evaluating on a
 co-rotated far-zone frame must yield the same physics as evaluating first and then rotating the
-pattern \cite{stratton1941}. That requirement is visible on every compact range
-where probe calibration tracks mechanical azimuth. Formally,
+pattern \cite{stratton1941}. Formally,
 \begin{equation}
 \label{eq:ch2.radiation-rotation-commutation}
 \mathcal{R}_\omega\big[\mathcal{A}_R\Jimp\big]
@@ -177,7 +168,7 @@ irreducible representations of \(\mathrm{SO}(3)\) on \(L^{2}(S^{2})\) have dimen
 \(\mathcal{F}_{\mathrm{rad}}\) once outgoing transversality and
 Eq.~\eqref{eq:ch2.rad-null-on-evanescent} are imposed \cite{jackson1999}. Detailed
 construction of \(\mathcal{H}_\ell\) is developed in \ref{ch:03} \cite{harrington2001}.
-Total radiated power $P_{\mathrm{rad}}$ is the scalar quantity a wattmeter or sphere integral
+Total radiated power $P_{\mathrm{rad}}$ is the scalar quantity from Eq.~\eqref{eq:ch2.flux-on-radiative-branch} or an equivalent sphere integral
 reports on $\Gamma_R$; it cannot change under rigid rotation when frames are co-rotated
 \cite{poynting1884}. Modal coefficients $c_n$ redistribute directional content,
 while export eigenvalues $\lambda_n$ set how efficiently each mode reaches the meter

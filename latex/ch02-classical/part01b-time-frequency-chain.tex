@@ -1,0 +1,70 @@
+% R1b-1 — time-domain Maxwell chain → harmonic operators (extends §2.2)
+
+\subsection{Time-domain Maxwell system and charge continuity}
+\label{sec:ch02.2.3}
+
+Real fields $\E(\mathbf{r},t)$ and $\H(\mathbf{r},t)$ (V/m and A/m) depend on observation position $\mathbf{r}$ (m) and time $t$ (s). In vacuum, $\mathbf{D}(\mathbf{r},t)=\varepsilon_0\E(\mathbf{r},t)$ (C/m$^2$) and $\mathbf{B}(\mathbf{r},t)=\mu_0\H(\mathbf{r},t)$ (T). Impressed current density $\mathbf{j}(\mathbf{r},t)$ (A/m$^2$) and charge density $\rho(\mathbf{r},t)$ (C/m$^3$) enter as sources. The complete first-order system is \cite{maxwell1873,stratton1941}
+\begin{equation}
+\label{eq:ch2.time-maxwell-full}
+\begin{aligned}
+\curl\E(\mathbf{r},t)&=-\mu_0\,\partial_t\H(\mathbf{r},t),\\
+\curl\H(\mathbf{r},t)&=\mathbf{j}(\mathbf{r},t)+\varepsilon_0\,\partial_t\E(\mathbf{r},t),\\
+\divg\E(\mathbf{r},t)&=\frac{\rho(\mathbf{r},t)}{\varepsilon_0},\\
+\divg\H(\mathbf{r},t)&=0.
+\end{aligned}
+\end{equation}
+Faraday's law states that a time-varying magnetic flux drives a circulating electric field; Amp\`ere's law states that conduction and displacement currents sustain magnetic circulation; Gauss's laws tie the divergences of $\E$ and $\H$ to charge and magnetic solenoidality \cite{maxwell1873}. Taking the divergence of Amp\`ere's law and using $\partial_t(\divg\E)=\divg(\partial_t\E)$ gives charge continuity
+\begin{equation}
+\label{eq:ch2.charge-continuity-time}
+\divg\mathbf{j}(\mathbf{r},t)+\partial_t\rho(\mathbf{r},t)=0,
+\end{equation}
+which must hold for physically realizable sources: impressed $\mathbf{j}$ and $\rho$ cannot be chosen independently \cite{maxwell1873}. Eq.~\eqref{eq:ch2.charge-continuity-time} is the time-domain counterpart of Eq.~\eqref{eq:ch2.charge-continuity-derived} developed under harmonic reduction below.
+
+A pulsed radar, switched feed, or transient immunity test excites Eq.~\eqref{eq:ch2.time-maxwell-full} with causal support: the field at $(\mathbf{r},t)$ cannot respond before disturbances propagate from sources at finite speed $c_0=(\mu_0\varepsilon_0)^{-1/2}$ \cite{maxwell1873,jackson1999}. That hyperbolic coupling is the time-domain face of the curl structure cited from Chapter~\ref{ch:01} as Eq.~\eqref{eq:ch1.maxwell-operator-block}. Network-analyzer measurements at a single tone are not a separate postulate: they are steady-state slices of the same law when all data are proportional to $\eim$ and boundary conditions are fixed \cite{stratton1941,harrington2001}.
+
+\subsection[Harmonic reduction and the sign of \texorpdfstring{$+\jj\omega$}{+j omega}]{Harmonic reduction and the sign of $+\jj\omega$}
+\label{sec:ch02.2.4}
+
+\emph{Steady-state} or \emph{single-frequency} operation means every source component and field component varies as $\eim$ with fixed $\omega>0$ (rad/s). Write
+\begin{equation}
+\label{eq:ch2.harmonic-ansatz}
+\E(\mathbf{r},t)=\Re\big\{\E(\mathbf{r})\,\eim\big\},
+\qquad
+\mathbf{j}(\mathbf{r},t)=\Re\big\{\Jimp(\mathbf{r})\,\eim\big\},
+\end{equation}
+where $\E(\mathbf{r})$ and $\Jimp(\mathbf{r})$ are complex phasors (spatial amplitudes). Because $\partial_t\E=\Re\{-\jj\omega\E\,\eim\}$, time differentiation replaces $\partial_t\to-\jj\omega$ on phasors \cite{stratton1941}. Substituting into Faraday's law in Eq.~\eqref{eq:ch2.time-maxwell-full} gives $\curl\E=-\jj\omega\mu_0\H$, and Amp\`ere's law gives $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$---Eq.~\eqref{eq:ch1.maxwell-local} of Chapter~\ref{ch:01}, now derived from the time-domain system rather than postulated. Gauss's laws become $\varepsilon_0\divg\E=\rho$ with harmonic $\rho$ tied to $\Jimp$ by Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, consistent with Eq.~\eqref{eq:ch2.charge-continuity-time} when $\partial_t\to-\jj\omega$.
+
+\emph{Time averaging} of quadratic quantities uses $\Re\{\mathbf{F}\eim\}$ and $\Re\{\mathbf{G}^*\eim\}$; products of phasors appear in Poynting flux (Section~\ref{sec:ch02.5.3}). A \emph{transient} response requires the full time-domain solution; the phasor map is valid only after transients decay (or for purely harmonic excitation). The retarded time-domain Green function $\boldsymbol{\mathcal{G}}(\mathbf{r},\mathbf{r}',t-t')$ satisfies $\boldsymbol{\mathcal{G}}=\mathbf{0}$ for $t-t'<0$; its harmonic Fourier component at $\omega$ is the outgoing dyadic $\boldsymbol{\Gamma}$ used in Section~\ref{sec:ch02.4} \cite{stratton1941,jackson1999}.
+
+\subsection{Retarded propagation and the light cone}
+\label{sec:ch02.2.5}
+
+When a Green representation exists in time, the electric field from impressed current is a retarded convolution \cite{stratton1941,jackson1999}
+\begin{equation}
+\label{eq:ch2.retarded-E-convolution}
+\E(\mathbf{r},t)
+=
+-\mu_0\int_0^t\!\!\int_{\Omega_s}
+\boldsymbol{\mathcal{G}}(\mathbf{r},\mathbf{r}',t-t')\cdot\mathbf{j}(\mathbf{r}',t')\,d^3r'\,dt',
+\end{equation}
+with $\boldsymbol{\mathcal{G}}=\mathbf{0}$ for $t-t'<0$. Eq.~\eqref{eq:ch2.retarded-E-convolution} makes causality explicit: only sources at retarded times $t'\le t$ contribute. Support of $\E$ lies inside the forward light cone from $\operatorname{supp}\mathbf{j}$ \cite{maxwell1873}. Frequency-domain phasors used in $\mathcal{S}_\omega$ must therefore be continued on the outgoing sheet---factors $\exp(-\jj k_0 r)$ at large distance and retarded phase---not on the incoming partner of the homogeneous Helmholtz equation (Section~\ref{sec:ch02.4.2}).
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (s) {Source event\\$(\mathbf{r}',t')$};
+ \draw[ch1flow] (0,0) -- (2.0,2.0);
+ \draw[ch1flow] (0,0) -- (2.0,-2.0);
+ \node[ch1oncanvas, right=1mm] at (2.0,2.0) {$c_0(t-t')=|\mathbf{r}-\mathbf{r}'|$};
+ \node[ch1box, right=24mm of s] (o) {Observation\\$(\mathbf{r},t)$};
+\end{tikzpicture}%
+}
+\caption{Causal support: the field at $(\mathbf{r},t)$ depends only on sources in the backward light cone; retarded integration uses $t'\le t$ only.}
+\label{fig:ch2.causal-light-cone}
+\end{figure}
+
+\subsection{Laplace domain and steady phasors}
+\label{sec:ch02.2.6}
+
+For causal excitation turned on at $t=0$, the Laplace transform $\widehat{\mathbf{F}}(\mathbf{r},s)=\int_0^\infty \mathbf{F}(\mathbf{r},t)\,e^{-st}\,dt$ with complex $s$ (rad/s) converts $\partial_t\to s$ on transformed quantities \cite{stratton1941,jackson1999}. Poles of $\widehat{\E}(\mathbf{r},s)$ in the complex $s$-plane locate natural frequencies; the harmonic phasor at $\omega$ is the restriction $s=+\jj\omega$ on the steady-state branch after transients decay. This chapter fixes $\omega$ and works with phasors directly; the Laplace picture records that frequency-domain boundary-value problems are not arbitrary---they are constrained by causality and by the analytic continuation that selects outgoing waves \cite{stratton1941}. The harmonic solution map $\mathcal{S}_\omega$ of Eq.~\eqref{eq:ch2.Somega-def} is the single-frequency specialization of the time-domain map that sends $(\mathbf{j},\rho)$ and boundary data to $(\E,\H)$ when all time dependence is $\eim$ \cite{stratton1941,harrington2001}. Subsections~\ref{sec:ch02.2.7}--\ref{sec:ch02.2.8} develop the evolution operator and Duhamel representation that make this specialization explicit.

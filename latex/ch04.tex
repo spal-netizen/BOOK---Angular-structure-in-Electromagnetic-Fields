@@ -25,19 +25,7 @@ suppression on electrically small supports fails before harmonic post-processing
 
 % PHYSICAL-MEMORY:sec:ch40
 
-\begin{physicalvignette}[Standard-gain horn trio for gain transfer]
-Consider a standard-gain horn trio used for gain transfer. Technicians record frequency, cable loss, and the mouth outline that fixes electrical size before any coefficient table is printed. The first walk-through of the range is tactile: flange bolts, probe standoff, turntable boresight, and the wattmeter reference on the receive chain \cite{hansen1988}.
-
-Standing structure in the near zone can mislead the eye---reactive sheets, rapid phase rotation, sometimes a visible VSWR ripple at the feed---yet the realizability question is posed only after outgoing selection on a large sphere \cite{harrington2001}. What the camera sees in the chamber is not automatically what the far-zone pattern claims \cite{stratton1941}.
-
-Engineers therefore learn to separate three readings: what the feed can synthesize on declared support, what propagating content survives on the radiative range, and what a finite instrument can recover at declared tolerance \cite{devaney2004}. Confusing those readings produces the rank gaps and watt failures that later sections quantify \cite{pal2026}.
-
-The horn trio makes the laboratory sequence explicit: declare the source region, enforce outgoing selection on the exterior sphere, and only then attach flux-normalized angular labels \cite{stratton1941}.
-
-Chu and Landau warned that finite size caps simultaneous localization and spectral spread \cite{chu1948}. Devaney's inverse-scattering perspective reminds us that reachable far-zone data never exceeds what bounded sources can export \cite{devaney2004}.
-\end{physicalvignette}
-
-\ref{ch:03} organized the harmonic catalog; \ref{ch:04} isolates a distinction every compact-range engineer already practices but harmonic post-processing rarely reports on its summary header. \emph{Representable} means the coefficient vector is admissible in a complete chart; \emph{synthesizable} means a bounded source on declared support can actually radiate it; \emph{recoverable} means a finite rank-$N$ instrument readout can estimate it to tolerance; \emph{measurable} means the estimate survives calibration on $\Gamma_R$ with declared flux gauge \cite{stratton1941}. Confusing them produces rank gaps and watt failures on $\Gamma_R$. A circular aperture in a ground plane, a pyramidal horn mouth, and a compact planar radiator all radiate through retarded Maxwell export, yet each geometry presents a different electrical size and therefore a different rank ceiling \cite{collin2001}. Measurement adds a second ceiling: a scan sphere with $N$ probes cannot resolve more than $N$ independent far-zone components even when synthesis on the feed succeeds \cite{harrington2001}.
+Chapter~\ref{ch:03} organized the harmonic catalog; \ref{ch:04} isolates a distinction every compact-range engineer already practices but harmonic post-processing rarely reports on its summary header. \emph{Representable} means the coefficient vector is admissible in a complete chart; \emph{synthesizable} means a bounded source on declared support can actually radiate it; \emph{recoverable} means a finite rank-$N$ instrument readout can estimate it to tolerance; \emph{measurable} means the estimate survives calibration on $\Gamma_R$ with declared flux gauge \cite{stratton1941}. Confusing them produces rank gaps and watt failures on $\Gamma_R$. A circular aperture in a ground plane, a pyramidal horn mouth, and a compact planar radiator all radiate through retarded Maxwell export, yet each geometry presents a different electrical size and therefore a different rank ceiling \cite{collin2001}. Measurement adds a second ceiling: a scan sphere with $N$ probes cannot resolve more than $N$ independent far-zone components even when synthesis on the feed succeeds \cite{harrington2001}.
 
 \begin{figure}[t]
 \centering
@@ -60,7 +48,37 @@ Figure~\ref{fig:ch4.master-revision-spine} compresses the laboratory reading ord
 \subsection{Realizability and accessibility limits}
 \label{sec:ch401}
 
-Bounded impressed currents on $\Omega_s$ produce far-zone data $\mathcal{R}_\omega[\Jimp]$ (Chapter~\ref{ch:02}). A chart $\mathcal{C}$ from Chapter~\ref{ch:03} assigns coordinates $\mathbf{c}\in\mathbb{C}^{I}$ to radiative states. \emph{Synthesizability} asks whether a target $\mathbf{c}$ equals $\mathcal{C}(\mathcal{R}_\omega[\Jimp])$ for some $\Jimp\in\mathcal{J}_\Omega$ on the declared support; \emph{accessibility} asks whether $\mathbf{c}$ can be estimated to tolerance $\varepsilon_{\mathrm{cert}}$ from at most $N$ independent observations \cite{stratton1941,devaney2004}. Neither property follows from the dimension of a complete harmonic listing \cite{chu1948,harrington2001}.
+Let $\Omega_s\subset\mathbb{R}^{3}$ denote the declared compact support of impressed currents, with
+boundary $\partial\Omega_s$ and outward unit normal $\hat{\mathbf{n}}$.
+$\Jimp(\mathbf{r})$ is the current density in $\mathrm{A\,m^{-2}}$; $\rho(\mathbf{r})$ is charge density
+in $\mathrm{C\,m^{-3}}$ with $\nabla\cdot\Jimp=-\jj\omega\rho$ under $\eim$.
+Only $\Jimp\in\mathcal{J}_\Omega$ satisfying finite power and declared boundary class on $\partial\Omega_s$
+enter the maps of Chapter~\ref{ch:02} \cite{stratton1941}.
+On $\Omega_s$, the impressed pair $(\Jimp,\rho)$ satisfies Eq.~\eqref{eq:ch1.maxwell-local}:
+$\curl\E=-\jj\omega\mu_0\H$, $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$, $\varepsilon_0\nabla\cdot\E=\rho$,
+$\nabla\cdot\H=0$, and $\nabla\cdot\Jimp=-\jj\omega\rho$ under $\eim$ \cite{stratton1941}.
+Physically, $\Jimp$ is the feed current one specifies in amperes per square metre; $\rho$ is the bound or free
+charge density required by continuity; $\E$ and $\H$ are the total fields, not modal coefficients.
+The export problem begins only after $\mathcal{S}_\omega$ and $\mathcal{O}_{\mathrm{out}}$ produce an outgoing
+Maxwell pair on the exterior of $\Omega_s$.
+On the source boundary $\partial\Omega_s$, the outward normal $\hat{\mathbf{n}}$ points from the interior of
+$\Omega_s$ into the exterior radiation domain used in Chapter~\ref{ch:02}.
+A surface-mounted feed often carries $\Jimp$ tangent to $\partial\Omega_s$, so $\Jimp\cdot\hat{\mathbf{n}}=0$ on
+that patch; that is a property of the impressed current support, not a general condition for Lorentz reciprocity on
+$\partial\Omega_s$. Volumetric $\Jimp$ with $\operatorname{supp}\Jimp\Subset\Omega_s$ can still induce nonzero
+tangential $\mathbf{E}$ and $\mathbf{H}$ on the boundary, and the Lorentz reduction in Subsection~\ref{sec:ch281}
+retains the full $\hat{\mathbf{n}}\cdot(\mathbf{E}_{1}\times\mathbf{H}_{2}-\mathbf{E}_{2}\times\mathbf{H}_{1})$ surface
+term from Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity} until its cancellation is proved from the stated boundary class
+\cite{stratton1941,collin2001}.
+The radiative state $\mathfrak{F}=\mathcal{R}_\omega[\Jimp]\in\mathcal{F}_{\mathrm{rad}}$ is the
+Maxwell pair after outgoing completion and far-amplitude extraction, not the raw near-field pair
+$\mathcal{S}_\omega[\Jimp]\in\mathcal{F}_\Omega$ \cite{harrington2001}.
+A chart $\mathcal{C}$ from Chapter~\ref{ch:03} assigns coordinates $\mathbf{c}\in\mathbb{C}^{I}$ to
+$\mathfrak{F}$.
+\emph{Synthesizability} asks whether a target $\mathbf{c}$ equals $\mathcal{C}(\mathcal{R}_\omega[\Jimp])$ for
+some such $\Jimp$; \emph{accessibility} asks whether $\mathbf{c}$ can be estimated to tolerance
+$\varepsilon_{\mathrm{cert}}$ from at most $N$ independent observations \cite{stratton1941,devaney2004}.
+Neither property follows from the cardinality of a complete harmonic listing $|I|$ \cite{chu1948}.
 
 Fix $\omega>0$ under the phasor convention $\eim$, linear isotropic homogeneous exteriors unless stated otherwise, and outgoing selection as in Section~\ref{sec:ch24} \cite{stratton1941}. Let $\mathcal{C}:\mathcal{V}\subset\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{I}$ be admissible as in Eq.~\eqref{eq:ch3.representation-map}. Sources lie in $\mathcal{J}_\Omega$ (Section~\ref{sec:ch203}); observation maps have rank at most $N$ as in Section~\ref{sec:ch29} \cite{hansen1988}.
 
@@ -399,8 +417,10 @@ Subsection~\ref{sec:ch41} states the formal export condition that this range sce
 \subsection{Impressed currents and excitation}
 \label{sec:ch411}
 % CH04-NARR-EXP:04.41
-A coax-fed horn and a patch on the same ground plane differ in coupling geometry, yet both reduce to impressed $\Jimp$ on declared compact support before harmonic indices attach \cite{stratton1941}. Rank audits therefore begin with the feed tuple---port, sheet, or volume---not with the length of a modal listing \cite{harrington2001}.
-A coax-fed horn and a patch on the same ground plane differ in coupling geometry, yet both reduce to impressed $\Jimp$ on declared compact support before harmonic indices attach \cite{stratton1941}. At this point one may ask what synthesis actually controls: not the length of a harmonic listing, but the feed tuple---port excitation, aperture sheet, or volume current---that Maxwell maps into $\mathcal{F}_{\mathrm{rad}}$ \cite{harrington2001}. Amplifiers drive impressed currents; harmonic indices describe export only after outgoing radiation condition and flux normalization \cite{stratton1941}. Every claim in Eq.~\eqref{eq:ch4.realizable-synthesis-set} therefore reduces to a physical source on $\Omega_s$: antennas are fed by currents, apertures by equivalent surface densities, and numerical meshes by voxel sources that must still satisfy $\divg\Jimp=-\jj\omega\rho$ in the harmonic convention \cite{stratton1941}.
+A coax-fed horn and a patch on the same ground plane differ in coupling geometry, yet both reduce to impressed $\Jimp$ on declared compact support before harmonic indices attach \cite{stratton1941}.
+What synthesis actually controls is not the length of a modal listing but the feed tuple---port excitation, aperture sheet, or volume current---that Maxwell maps into $\mathcal{F}_{\mathrm{rad}}$ \cite{harrington2001}.
+Amplifiers drive impressed currents; harmonic indices describe export only after outgoing radiation condition and flux normalization \cite{stratton1941}.
+Every claim in Eq.~\eqref{eq:ch4.realizable-synthesis-set} therefore reduces to a physical source on $\Omega_s$: antennas are fed by currents, apertures by equivalent surface densities, and numerical meshes by voxel sources that must still satisfy $\divg\Jimp=-\jj\omega\rho$ under $\eim$ \cite{stratton1941}.
 % PHYSICAL-MEMORY:sec:ch411
 \begin{physicalvignette}[Dual-band dish with shared reflector surface]
 Consider Dual-band dish with shared reflector surface. Before any coefficient table is printed, technicians record frequency, cable loss, and the mechanical outline that fixes electrical size. The first walk-through of the range is always tactile: flange bolts, probe standoff, turntable boresight, and the wattmeter reference on the receive chain \cite{hansen1988}.
@@ -729,8 +749,8 @@ be treated as extended tuples with explicit power injection channels \cite{harri
 conditions do not restrict \(\ker\mathcal{R}_\omega\): non-radiating passive currents remain in
 \(\mathcal{J}_\Omega\) but map to \(\mathbf{0}\) under \(\boldsymbol{\Sigma}_\omega\)
 \cite{stratton1941}.
-The causality condition requires that harmonic phasors \(\Jimp(\mathbf{r})\) are realizable only if they are the \(\exp(-\jj\omega t)\)
-specialization of a retarded time-domain current \(j(\mathbf{r},t)\) supported on \(t'\le t\) in
+The causality condition requires that harmonic phasors \(\Jimp(\mathbf{r})\) are realizable only if they are the harmonic
+specialization under $\eim$ of a retarded time-domain current \(j(\mathbf{r},t)\) supported on \(t'\le t\) in
 Eq.~\eqref{eq:ch2.causality-retarded} \cite{stratton1941}. Define
 \begin{equation}
 \label{eq:ch4.causality-screen}
@@ -3055,14 +3075,15 @@ does not imply large synthesizable \(\mathbf{c}\) \cite{devaney2004}.
  \node[ch1box, minimum width=34mm, right=6mm of prad] (gamma) {$\mathcal{C}\circ\mathcal{R}_\omega$\\$\boldsymbol{\Gamma}_\omega$};
  \draw[ch1flow] (s) -- (oout) -- (sout) -- (prad) -- (gamma);
  \draw[ch1flow,dashed] (s.south) -- (spec.north);
- \draw[ch1flow,dashed] (spec.east) -| (gamma.south);
+ \draw[ch1flow,dashed] (spec.east) -| (oout.south);
 \end{tikzpicture}%
 }
 \caption{Subsection~\ref{sec:ch442}: synthesis uses outgoing field completion
 $\mathcal{S}_\omega^{(\mathrm{out})}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$ and radiative export
 $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{(\mathrm{out})}$.
-Lateral $\Pi_{\mathrm{prop}}$ removes evanescent spectral weight in $\mathcal{K}_{\mathrm{ev}}$ before $\boldsymbol{\Gamma}_\omega$
-acts; it is not identified with $\mathcal{O}_{\mathrm{out}}$ on field pairs (Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}).}
+The dashed path marks lateral spectral restriction on the near-field pair $\mathcal{S}_\omega[\Jimp]$: it conditions
+$\mathcal{O}_{\mathrm{out}}$ by removing evanescent $k_t$ weight before outgoing completion, but does not enter
+$\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$ as a field composition (Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}).}
 \label{fig:ch4.prop-ev-partition}
 \end{figure}
 Figure~\ref{fig:ch4.prop-ev-partition} summarizes the synthesis path: $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$
@@ -3145,11 +3166,68 @@ The radiative rank $r_{\mathrm{rad}}(\varepsilon)$ in Eq.~\eqref{eq:ch4.radiativ
 $\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$, not of a finite observation map $\boldsymbol{\mathcal{M}}_\omega$.
 \end{proposition}
 \begin{proof}
-\emph{Reciprocity pairing.} On a passive exterior domain with outgoing radiation condition, Eq.~\eqref{eq:ch2.radiative-coupling-bilinear}
-defines a sesquilinear pairing of impressed sources with dual modes $\mathbf{W}_{\ell m}^{(\sigma)}$ \cite{stratton1941}.
-\emph{Volume reduction.} Let $\mathbf{E}_\Jimp=\mathcal{S}_\omega^{(\mathrm{out})}[\Jimp]$ and expand
-$\widehat{c}_{\ell m}^{(\sigma)}=\langle\mathbf{W}_{\ell m}^{(\sigma)},\Pi_{\mathrm{rad}}\mathbf{E}_\Jimp\rangle_{\mathrm{rad}}$.
-Substitute Eq.~\eqref{eq:ch2.electric-dyadic-convolution} for $\mathbf{E}_\Jimp$ in the source region and integrate by parts:
+\emph{Lorentz volume identity.} Let $(\mathbf{E}_{1},\mathbf{H}_{1})$ and $(\mathbf{E}_{2},\mathbf{H}_{2})$ be two
+solutions on a reciprocal passive exterior $V$ with impressed currents $(\Jimp_{1},\Jimp_{2})$ and outward normal
+$\hat{\mathbf{n}}$. Under $\eim$, Maxwell gives $\curl\E_{k}=-\jj\omega\mu_0\H_{k}$ and
+$\curl\H_{k}=\Jimp_{k}+\jj\omega\varepsilon_0\E_{k}$ for $k=1,2$ on a linear reciprocal medium with
+$\boldsymbol{\epsilon}^{\mathsf{T}}=\boldsymbol{\epsilon}$ and $\boldsymbol{\mu}^{\mathsf{T}}=\boldsymbol{\mu}$ at fixed $\omega$
+\cite{stratton1941,collin2001}.
+With unconjugated phasors,
+$\nabla\cdot(\mathbf{E}_{1}\times\mathbf{H}_{2})
+=\mathbf{H}_{2}\cdot\curl\E_{1}-\mathbf{E}_{1}\cdot\curl\H_{2}
+=-\jj\omega\mu_0\,\mathbf{H}_{2}\cdot\H_{1}-\mathbf{E}_{1}\cdot\Jimp_{2}-\jj\omega\mathbf{E}_{1}\cdot\varepsilon_0\E_{2}$.
+The swapped $(2,1)$ identity carries the same constitutive pairings with interchanged labels; transpose symmetry cancels those terms on subtraction, leaving
+Eq.~\eqref{eq:ch2.lorentz-integrand}. Integrating over $V$ and applying the divergence theorem yields
+\begin{equation}
+\label{eq:ch4.lorentz-surface-integrand}
+\int_{V}\big(\Jimp_{1}\cdot\mathbf{E}_{2}-\Jimp_{2}\cdot\mathbf{E}_{1}\big)\,d^{3}\mathbf{r}
+=
+\oint_{\partial V}
+\hat{\mathbf{n}}\cdot\big(\mathbf{E}_{1}\times\mathbf{H}_{2}-\mathbf{E}_{2}\times\mathbf{H}_{1}\big)\,dS,
+\end{equation}
+the Lorentz form of Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity}; impressed current appears in the Amp\`ere row only
+\cite{stratton1941,collin2001,harrington2001}.
+Complex symmetric $\varepsilon_0,\mu_0$ (lossy but reciprocal) do not require conjugated fields in this identity; passivity is a separate constraint on $\Im\{\varepsilon,\mu\}$
+\cite{harrington2001,collin2001}.
+On perfect electric conductors, $\hat{\mathbf{n}}\times\mathbf{E}_{1}=\hat{\mathbf{n}}\times\mathbf{E}_{2}=\mathbf{0}$, so the integrand
+in Eq.~\eqref{eq:ch4.lorentz-surface-integrand} vanishes term by term \cite{collin2001}. On a reciprocal surface-impedance
+boundary $\hat{\mathbf{n}}\times\mathbf{E}=\overline{\overline{\mathbf{Z}}}_{s}\cdot(\hat{\mathbf{n}}\times\mathbf{H})$ with passive
+symmetric $\overline{\overline{\mathbf{Z}}}_{s}$, the same bilinear structure cancels the tangential contribution for both ports
+when the impedance relation is applied to $(\mathbf{E}_{1},\mathbf{H}_{2})$ and $(\mathbf{E}_{2},\mathbf{H}_{1})$ pairwise
+\cite{collin2001,harrington2001}. On a sphere at infinity with
+outgoing fields, the integrand decays as $r^{-2}$ while $dS$ grows as $r^{2}$, but reactive parts cancel in the
+limit so only the radiative flux content survives; that limit is established in Subsection~\ref{sec:ch281}, not
+assumed here \cite{harrington2001}.
+\emph{Modal pairing.} On a passive exterior domain with outgoing radiation condition, the radiative inner product
+$\langle\cdot,\cdot\rangle_{\mathrm{rad}}$ of Section~\ref{sec:ch35} is sesquilinear in the field arguments (one slot carries complex conjugation for power),
+but the Lorentz reduction above is bilinear in the \emph{unconjugated} phasor fields and impressed currents
+\cite{stratton1941,harrington2001}.
+Let $\mathbf{E}_\Jimp=\mathcal{S}_\omega^{(\mathrm{out})}[\Jimp]$ and
+$\mathbf{E}_{\mathrm{rec}}=\mathcal{S}_\omega^{(\mathrm{out})}[\mathbf{J}_{\mathrm{rec}}]$ denote outgoing Maxwell pairs;
+$\mathbf{J}_{\mathrm{rec}}$ is the impressed current of the reciprocal modal source dual to $\mathbf{W}_{\ell m}^{(\sigma)}$ on its support
+(not a complex-conjugated Maxwell solution unless a separate adjoint medium is declared).
+Both pairs satisfy Eq.~\eqref{eq:ch1.maxwell-local} on the same reciprocal exterior medium \cite{stratton1941}.
+\emph{Volume reduction.} In a domain $\Omega_{\mathrm{tot}}$ with $\Omega_s\Subset\Omega_{\mathrm{tot}}$ and $\partial\Omega_{\mathrm{tot}}$
+at infinity or on a transparent surface where the Lorentz surface term of Eq.~\eqref{eq:ch4.lorentz-surface-integrand} vanishes,
+Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity} gives \cite{stratton1941}
+\begin{equation}
+\label{eq:ch4.reciprocity-volume-bilinear}
+\int_{\Omega_{\mathrm{tot}}}
+\big(\Jimp\cdot\mathbf{E}_{\mathrm{rec}}-\mathbf{J}_{\mathrm{rec}}\cdot\mathbf{E}_\Jimp\big)\,d^{3}\mathbf{r}
+=0,
+\end{equation}
+with $\mathbf{J}_{\mathrm{rec}}$ the impressed current generating $\mathbf{E}_{\mathrm{rec}}$ (proportional to the modal dual
+on its support).
+This is ordinary Lorentz reciprocity with unconjugated phasors, not a conjugated adjoint field equation.
+Expand $\widehat{c}_{\ell m}^{(\sigma)}=\langle\mathbf{W}_{\ell m}^{(\sigma)},\Pi_{\mathrm{rad}}\mathbf{E}_\Jimp\rangle_{\mathrm{rad}}$ and insert
+Eq.~\eqref{eq:ch2.electric-dyadic-convolution} for $\mathbf{E}_\Jimp$ in $\Omega_s$.
+Integrating by parts with $\nabla\cdot(\mathbf{A}\times\mathbf{B})=\mathbf{B}\cdot\nabla\times\mathbf{A}-\mathbf{A}\cdot\nabla\times\mathbf{B}$,
+using $\curl\E=-\jj\omega\mu_0\H$, $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$, and outgoing decay so the integral over $\partial\Omega_{\mathrm{tot}}$
+vanishes when $\operatorname{supp}\Jimp\subset\Omega_s$ and $\mathbf{W}_{\ell m}^{(\sigma)}$ is smooth on a neighbourhood enclosing $\Omega_s$,
+yields Eq.~\eqref{eq:ch4.reciprocity-ibp-step}.
+The superscript $\dagger$ on $\mathbf{W}_{\ell m}^{(\sigma)\dagger}$ labels the modal dual used in the
+\emph{radiative} coupling reduction, not a complex-conjugated Maxwell pair in a lossy medium; the preceding
+Lorentz step uses unconjugated $(\mathbf{E},\mathbf{H},\Jimp)$ throughout.
 \begin{equation}
 \label{eq:ch4.reciprocity-ibp-step}
 \int_{\Omega_s}\mathbf{W}_{\ell m}^{(\sigma)\dagger}\cdot\Jimp\,d^{3}\mathbf{r}
@@ -3157,10 +3235,35 @@ Substitute Eq.~\eqref{eq:ch2.electric-dyadic-convolution} for $\mathbf{E}_\Jimp$
 \int_{\Omega_s}\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}(\mathbf{r}')\cdot\Jimp(\mathbf{r}')\,d^{3}\mathbf{r}'
 \;+\;\oint_{\partial\Omega_s}\mathbf{U}_{\ell m}^{(\sigma)}\cdot(\hat{\mathbf{n}}\times\mathbf{E}_\Jimp)\,dS,
 \end{equation}
-with $\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}$ assembled from contraction of $\overline{\mathbf{G}}_{E}$ against
-$\mathbf{W}_{\ell m}^{(\sigma)}$ and $\mathbf{U}_{\ell m}^{(\sigma)}$ the vector potential remnant in Lorenz gauge.
-For $\Jimp\in\mathcal{J}_\Omega$ with $\Jimp\times\hat{\mathbf{n}}=\mathbf{0}$ on $\partial\Omega_s$, the surface term vanishes
-\cite{stratton1941,hansen1988}.
+with
+\begin{equation}
+\label{eq:ch4.gamma-kernel-def}
+\boldsymbol{\Gamma}_{\ell m}^{(\sigma)}(\mathbf{r}')
+=
+-\jj\omega\mu_0\!\int_{\mathbb{R}^{3}}
+\overline{\mathbf{G}}_{E}(\mathbf{r}',\mathbf{r}'')\cdot
+\mathbf{W}_{\ell m}^{(\sigma)\dagger}(\mathbf{r}'')\,d^{3}\mathbf{r}'',
+\end{equation}
+for $\mathbf{r}'\in\Omega_s$, and $\mathbf{U}_{\ell m}^{(\sigma)}$ the vector-potential remnant in Lorenz gauge.
+Equation~\eqref{eq:ch4.gamma-kernel-def} defines an auxiliary kernel on $L^{2}(\Omega_s)^{3}$; compactness of
+$\boldsymbol{\Gamma}_\omega=\mathcal{C}\circ\mathcal{R}_\omega$ is not inferred from it without the separate Hilbert--Schmidt
+analysis in Proposition~\ref{prop:ch4.gamma-compact} \cite{harrington2001}.
+Equation~\eqref{eq:ch4.reciprocity-ibp-step} carries a surface remainder on $\partial\Omega_s$ from integration by parts;
+it is not the Lorentz surface term of Eq.~\eqref{eq:ch4.lorentz-surface-integrand}, but the two reductions are applied on
+nested domains: Lorentz cancellation on $\partial V$ when $\partial V$ is transparent or infinitely outgoing, then the
+localized Green representation inside $\Omega_s$ \cite{collin2001,stratton1941}. The remainder vanishes when
+$\operatorname{supp}\Jimp\cap\partial\Omega_s=\emptyset$ and $\mathbf{E}_\Jimp$ is regular up to the boundary.
+Surface currents on $\partial\Omega_s$ require explicit tangential data; $\Jimp\times\hat{\mathbf{n}}=\mathbf{0}$ on a
+feed patch does not by itself annihilate Eq.~\eqref{eq:ch4.reciprocity-ibp-step} unless the potential representation is
+chosen so the dual field has no normal current sheet there \cite{harrington2001}.
+Eq.~\eqref{eq:ch4.source-mode-coupling-integral} holds under the following explicit hypotheses:
+$\Omega_s$ is open with smooth boundary; $\operatorname{supp}\Jimp\Subset\Omega_s$ so $\Jimp$ vanishes in a neighbourhood of $\partial\Omega_s$;
+$\mathbf{W}_{\ell m}^{(\sigma)}$ is smooth on an open set containing $\overline{\Omega_s}$; the exterior boundary
+$\partial\Omega_{\mathrm{tot}}$ is either at infinity with outgoing fields or a passive surface on which the Lorentz
+integrand of Eq.~\eqref{eq:ch4.lorentz-surface-integrand} vanishes.
+If the impressed support meets $\partial\Omega_s$, or if the modal dual is not smooth across that boundary, the surface term in
+Eq.~\eqref{eq:ch4.reciprocity-ibp-step} must be retained and evaluated with the actual tangential data on $\partial\Omega_s$
+\cite{collin2001,harrington2001}.
 \emph{Normalization and invariance.} The impressed field $\mathcal{R}_\omega[\Jimp]$ and the radiated power
 $P_{\mathrm{rad}}$ on $\Gamma_R$ are independent of Lorenz gauge in source-free exterior regions
 \cite{stratton1941}. The factor $\mathcal{Z}_{\ell m}^{(\sigma)}$ is not a physical field amplitude: it converts the
@@ -3171,7 +3274,7 @@ $\widehat{c}_{\ell m}^{(\sigma)}$ inversely while leaving $\mathcal{R}_\omega[\J
 \end{proof}
 
 The significance of the tail law for realizability is direct. Tail budget $\eta_{\mathrm{tail}}$ names the watt fraction permitted beyond truncation $\ell_{\max}$; remainder operator $\mathbf{R}_{\ell_{\max}}$ from Chapter~3 carries the discarded power \cite{stratton1941}. A sidelobe campaign that assigns appreciable weight to $\ell\ge 8$ on a $\lambda/8$ disk is therefore not a feed-network problem alone---it conflicts with $\mathcal{B}_{\mathrm{fs}}$ before MoM inversion begins \cite{chu1948}. Subsection~\ref{sec:ch443} states the decay envelope, links tail mass $\mathcal{M}_{\mathrm{tail}}$ to synthesis error, and records the tail exponent $\nu_{\mathrm{tail}}(\mathbf{c})$ laboratories can verify on measured $\mathbf{c}$ \cite{hansen1988}.
-for \(\ell>k_{0}a\),
+For sources contained in a ball of radius $a$, sector amplitudes satisfy asymptotic estimates; in particular, for \(\ell>k_{0}a\),
 \begin{equation}
 \label{eq:ch4.high-ell-decay}
 |\widehat{c}_{\ell m}^{(\sigma)}|

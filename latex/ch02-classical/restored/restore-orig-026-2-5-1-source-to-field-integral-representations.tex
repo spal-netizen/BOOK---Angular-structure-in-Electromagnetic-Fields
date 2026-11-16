@@ -2,37 +2,14 @@
 \subsection{Source-to-field integral representations}
 \label{sec:ch251}
 
-Retarded source integrals are what method-of-moments codes discretize on antennas \cite{harrington2001}. Far-zone extraction is a limit on the same integral \cite{jackson1999}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
-The representation begins from retarded potentials driven by $\Jimp$ on compact $\Omega_s$, not from a plane-wave expansion \cite{maxwell1873}. The quantity being organized is the outgoing field pair $(\E,\H)$; angular labels attach only after $\Pi_{\mathrm{rad}}$ \cite{sommerfeld1949}. An alternative route through static potentials would omit radiation damping and misstate reactive storage \cite{jackson1999}. On a horn range, this step is what a MoM mesh implements before any pattern plot \cite{harrington2001}.
-
-Before any volume quadrature is written, the range engineer already knows which observable the
-campaign will report \cite{harrington2001}. A calibrated pattern probe on $\Gamma_R$ integrates
-tangential $\E$ or $\H$ against a known polarization and yields a voltage proportional to a
-directional amplitude---a discrete sample of the far-zone pattern carried by
-$\mathcal{R}_\omega[\Jimp]$, not of the full pair $\mathcal{S}_\omega[\Jimp]$
-\cite{stratton1941}. A shell wattmeter closes the same budget through
-$\mathcal{P}_{\mathrm{rad}}$ on $\Gamma_R$ after $\Pi_{\mathrm{rad}}$ \cite{stratton1941}. Near-field
-scanners on a hull enclosing $\Omega_s$ record $\mathcal{S}_\omega[\Jimp]$ and require a transform
-before pattern meters apply \cite{hansen1988}. The volume integrals below are the constructive
-route to those meter readings: they assemble $(\E,\H)$ from impressed $\Jimp$, after which export
-selection maps the result to the pattern quantities the range records \cite{stratton1941}.
-Radiation integrals assemble far-zone fields as superpositions of current moments weighted by
-outgoing phase \cite{stratton1941}. Four laboratory settings motivate the
-representations that follow. On an antenna range, probes on a large sphere $\Gamma_R$ sample
-the field produced by a feed in the compact range; the measured voltage is a discretization of
-a surface integral over $\Gamma_R$, not a direct reading of impressed $\Jimp$
-\cite{harrington2001}. Horn illumination fixes $\Jimp$ on the mouth through a waveguide mode or
-aperture integral; the pattern on the range wall appears only after those currents convolve
-against the outgoing Green function \cite{collin2001}. Aperture radiation replaces the volume
-support by equivalent currents on $\Gamma_{\mathrm{eq}}$ when the interior is inaccessible
-\cite{stratton1941}. Near-field scanners reconstruct far-zone quantities from dense samples on
-a hull enclosing $\Omega_s$---a transform that succeeds only when outgoing uniqueness and export
-selection are respected \cite{hansen1988}.
-The representation begins from retarded potentials driven by $\Jimp$ on compact $\Omega_s$,
-organizes the outgoing pair $(\E,\H)$ before angular labels attach, and coincides with what
-method-of-moments codes discretize before far-zone extraction
-\cite{maxwell1873}. Static-potential routes omit radiation damping
-and misstate reactive storage; they are not used here \cite{jackson1999}. Outgoing kernels,
+The retarded volume representation below is the constructive form of the dyadic route in
+Section~\ref{sec:ch231}: impressed current on compact support $\Omega_s$ drives $(\E,\H)$ through
+the outgoing Green operators fixed in Sections~\ref{sec:ch23}--\ref{sec:ch24}
+\cite{stratton1941,jackson1999}. Far-zone pattern and power quantities are limits and projections
+of the same integrals after outgoing selection $\mathcal{O}_{\mathrm{out}}$ and radiative export
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\mathcal{O}_{\mathrm{out}}\mathcal{S}_\omega$
+\cite{sommerfeld1949}. Static-potential routes without retardation omit radiation damping and are
+not used here \cite{jackson1999}. Outgoing kernels,
 regularization, and branch selection are presupposed from Sections~\ref{sec:ch23}--\ref{sec:ch24};
 distance-regime asymptotics and flux meters follow in the subsections below.
 Assumptions. Fix \(\omega>0\), compact \(\operatorname{supp}\Jimp=\Omega_s\Subset\Omega\), admissible

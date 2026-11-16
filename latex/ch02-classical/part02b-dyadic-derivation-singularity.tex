@@ -1,0 +1,81 @@
+% R1b-2 — dyadic Green derivation and singularity at r = r'
+
+\subsection{Electric wave operator and dyadic inverse}
+\label{sec:ch02.4.1b}
+
+The phasor electric field in a homogeneous vacuum source region satisfies Eq.~\eqref{eq:ch2.vector-wave-E}. Define the electric Helmholtz operator on vector fields by
+\begin{equation}
+\label{eq:ch2.electric-wave-operator}
+\mathcal{W}_{E}\,\mathbf{F}(\mathbf{r})
+=
+\curl\curl\mathbf{F}(\mathbf{r})-k_0^2\mathbf{F}(\mathbf{r}),
+\end{equation}
+where $\mathbf{F}$ is a test field (V/m), $k_0=\omega\sqrt{\mu_0\varepsilon_0}$, and $\mathcal{W}_{E}$ acts at the observation point $\mathbf{r}$ \cite{stratton1941,harrington2001}. Eq.~\eqref{eq:ch2.vector-wave-E} reads $\mathcal{W}_{E}\,\E=-\jj\omega\mu_0\Jimp$. The operator is vectorial: Cartesian components are coupled through curl, so the inverse is a dyad rather than a scalar function \cite{stratton1941}.
+
+The electric dyadic Green function $\overline{\mathbf{G}}_{E}(\mathbf{r},\mathbf{r}')$ inverts $\mathcal{W}_{E}$ with a unit impulsive source at $\mathbf{r}'$:
+\begin{equation}
+\label{eq:ch2.dyadic-green-defining-operator}
+\mathcal{W}_{E}\,\overline{\mathbf{G}}_{E}(\cdot,\mathbf{r}')\,\hat{\mathbf{e}}_j
+=
+\hat{\mathbf{e}}_j\,\delta(\mathbf{r}-\mathbf{r}'),
+\qquad
+j\in\{x,y,z\},
+\end{equation}
+where $\hat{\mathbf{e}}_j$ is a Cartesian unit vector and $\delta$ is the three-dimensional Dirac distribution. Componentwise,
+\begin{equation}
+\label{eq:ch2.Ei-from-Gij}
+E_i(\mathbf{r})
+=
+-\jj\omega\mu_0\sum_{j=1}^{3}\int_{\Omega_s}
+G_{E,ij}(\mathbf{r},\mathbf{r}')\,J_j(\mathbf{r}')\,d^3r',
+\end{equation}
+with $G_{E,ij}$ the $(i,j)$ entry of $\overline{\mathbf{G}}_{E}$, $E_i$ the $i$th observation component, and $J_j$ the $j$th source component \cite{harrington2001}. Eq.~\eqref{eq:ch2.E-from-dyadic} is the compact dyadic form of Eq.~\eqref{eq:ch2.Ei-from-Gij}.
+
+In Lorenz gauge, each component of the vector potential satisfies the scalar Helmholtz equation with source $-\mu_0 J_j$, so scalar Green functions build $\mathbf{A}$; Eq.~\eqref{eq:ch2.lorenz-E-from-A} then produces $\E$ including the $\grad\divg\mathbf{A}$ term that enforces Maxwell coupling beyond a naive vector Helmholtz solve \cite{stratton1941,jackson1999}. The closed outgoing vacuum dyad Eq.~\eqref{eq:ch2.dyadic-free-space} for $\mathbf{r}\neq\mathbf{r}'$ follows from this construction with outgoing scalar $G_0$ of Eq.~\eqref{eq:ch2.scalar-green-free-space} and vector identities; the $\grad\grad$ and $\hat{\mathbf{R}}\times$ terms split longitudinal and transverse coupling in $\overline{\mathbf{G}}_{E}$ \cite{stratton1941,jackson1999}. At large $R=|\mathbf{r}-\mathbf{r}'|$, the $1/R$ transverse piece dominates outgoing radiation; the $\grad\grad$ term contributes to near-zone reactive structure.
+
+\subsection[Singularity at \texorpdfstring{$\mathbf{r}=\mathbf{r}'$}{r=r'} and extended sources]{Singularity at $\mathbf{r}=\mathbf{r}'$ and extended sources}
+\label{sec:ch02.4.3}
+
+Eqs.~\eqref{eq:ch2.dyadic-free-space} and~\eqref{eq:ch2.scalar-green-free-space} hold for $\mathbf{r}\neq\mathbf{r}'$. As $\mathbf{r}\to\mathbf{r}'$, amplitudes grow as $1/R$, $1/R^2$, and $1/R^3$: the ideal point source concentrates energy in zero volume, so the local field is unbounded in the model \cite{stratton1941,jackson1999}. That singularity is mathematical, not a claim of infinite radiated power; a physical feed has finite extent and finite reactive energy.
+
+With $\mathbf{R}=\mathbf{r}-\mathbf{r}'$, $R=|\mathbf{R}|$, and $\widehat{\mathbf{R}}=\mathbf{R}/R$, the free-space electric dyad admits the local expansion \cite{harrington2001,stratton1941}
+\begin{equation}
+\label{eq:ch2.dyadic-singular-expansion}
+\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{r}')
+=
+\frac{1}{4\pi R^{3}}\Big(\overline{\mathbf{I}}-3\,\widehat{\mathbf{R}}\widehat{\mathbf{R}}\Big)
++
+\frac{\jj k_0}{4\pi R^{2}}\,\overline{\mathbf{Q}}(\widehat{\mathbf{R}})
++
+\frac{k_0^{2}}{4\pi R}\,\overline{\mathbf{S}}(\widehat{\mathbf{R}})
++\cdots,
+\end{equation}
+where the leading $R^{-3}$ term is the static dipolar projector (transverse to $\mathbf{R}$) and higher terms carry induction and radiation at finite $k_0 R$ \cite{jackson1999}. The $R^{-3}$ piece is not integrable over a neighborhood of coincidence; the convolution Eq.~\eqref{eq:ch2.E-from-dyadic} therefore requires either observation points off the source support or a regularized definition on $\operatorname{supp}\Jimp$ \cite{stratton1941,harrington2001}.
+
+For $\mathbf{r}\notin\operatorname{supp}\Jimp$, Eq.~\eqref{eq:ch2.E-from-dyadic} is an ordinary integral. For observation on or inside extended patches, method-of-moments practice splits \cite{harrington2001}
+\begin{equation}
+\label{eq:ch2.kernel-singular-regular-split}
+\overline{\mathbf{G}}_{E}
+=
+\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}
++\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}},
+\end{equation}
+where $\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}$ contains the non-integrable static dipole part extracted analytically and $\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}$ is smooth enough for numerical quadrature on $\Omega_s\times\Omega_s$. Physically, self-coupling between neighboring current elements is dominated by reactive $R^{-3}$ storage; the radiative $R^{-1}$ term integrates safely when the source has finite volume \cite{stratton1941}. A filamentary idealization is the limit of a tube with vanishing radius; the far-zone pattern and radiated power remain meaningful while the self-term must be handled by the split above or by principal-value prescriptions on smooth $\Jimp$ \cite{jackson1999,harrington2001}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (src) {Extended\\$\operatorname{supp}\Jimp$};
+ \node[ch1box, right=14mm of src] (near) {$R\to 0$\\reactive pole};
+ \node[ch1box, right=14mm of near] (far) {$\mathbf{r}$ off support\\classical integral};
+ \node[ch1box, below=5mm of near] (split) {$\overline{\mathbf{G}}^{\mathrm{(sing)}}+\overline{\mathbf{G}}^{\mathrm{(reg)}}$};
+ \draw[ch1flow] (src) -- (near) -- (far);
+ \draw[ch1flow] (near.south) -- (split.north);
+\end{tikzpicture}%
+}
+\caption{Coincidence $ \mathbf{r}=\mathbf{r}' $: point-source models are singular; extended sources use extraction of $\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}$ plus regular convolution with $\overline{\mathbf{G}}_{E}^{\mathrm{(reg)}}$.}
+\label{fig:ch2.singular-regularization-split}
+\end{figure}
+
+When $\mathbf{r}$ approaches the support, a symmetric exclusion of a small ball about $\mathbf{r}$ defines a principal-value integral where the limit exists in $\HCurl(\Omega)$ \cite{jackson1999}. Sheet currents use duality pairings analogous to Eq.~\eqref{eq:ch2.E-from-dyadic} when pointwise evaluation fails; tangential jumps remain consistent with the same dyadic as volume $\Jimp$ \cite{stratton1941}. None of these prescriptions alter outgoing selection at infinity (Section~\ref{sec:ch02.4.2}): they assign finite meaning to the source integral that produces $\mathcal{S}_\omega[\Jimp]$ near the feed.

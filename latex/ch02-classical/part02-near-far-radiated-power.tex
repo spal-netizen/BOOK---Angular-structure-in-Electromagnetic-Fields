@@ -1,0 +1,56 @@
+% §2.5 — near/far fields and radiated power (continues after §2.4 dyadic block)
+
+\section{Near Fields, Far Fields, and Radiated Power}
+\label{sec:ch02.5}
+
+\subsection[Distance regimes and \texorpdfstring{$1/r$}{1/r} hierarchy]{Distance regimes and $1/r$ hierarchy}
+\label{sec:ch02.5.1}
+
+For compact $\operatorname{supp}\Jimp\subset\Omega_s$, the complete field $\mathcal{S}_\omega[\Jimp]$ contains quasi-static and induction terms decaying as $1/r^3$ and $1/r^2$ as well as radiative terms decaying as $1/r$ \cite{stratton1941,jackson1999}. The reactive shell---roughly within a wavelength of the source---stores energy exchanged with the source and terminations; its Poynting flux oscillates between source and field and need not integrate to net outward power on a finite sphere. The radiative component, selected by $\Pi_{\mathrm{rad}}$, carries transverse fields whose time-averaged Poynting vector is radial and $1/r^2$ in magnitude, so the power through a sphere of radius $R$,
+\begin{equation}
+\label{eq:ch2.radiated-power}
+P_{\mathrm{rad}}=\Re\oint_{S_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS,
+\qquad
+\mathbf{S}=\tfrac12\E\times\H^*,
+\end{equation}
+approaches a constant as $R\to\infty$ for outgoing radiative fields \cite{poynting1884}. Here $\hat{\mathbf{r}}=\mathbf{r}/r$ is the outward unit normal on sphere $S_R$, $dS$ is the area element (m$^2$), and $\Re\{\cdot\}$ extracts the time-averaged flux under the harmonic representation of Eq.~\eqref{eq:ch2.real-time-fields} (Section~\ref{sec:ch01.1.4}).
+
+Physically, $1/r$ amplitude implies $1/r^2$ intensity; integrating over a sphere whose area grows as $4\pi r^2$ leaves finite power---the geometric reason radiation is measured on large spheres while near fields can be enormous yet export little \cite{stratton1941}. Pattern measurements report angular variation of the $1/r$ transverse field; mistaking reactive $1/r^2$ or $1/r^3$ structure for pattern content is a common compact-range error \cite{hansen1988}.
+
+\subsection{Far-zone approximation}
+\label{sec:ch02.5.2}
+
+When $r=|\mathbf{r}|$ is large compared with the source extent $a$ and $k_0 r\gg1$, set $\mathbf{r}=r\hat{\mathbf{r}}$ with $|\hat{\mathbf{r}}|=1$. For $\mathbf{r}'$ confined to $|\mathbf{r}'|\le a$, the separation $R=|\mathbf{r}-\mathbf{r}'|$ expands as
+\begin{equation}
+\label{eq:ch2.R-expansion}
+R=r-\hat{\mathbf{r}}\cdot\mathbf{r}'+\mathcal{O}\!\big(a^2/r\big),
+\end{equation}
+so the outgoing phase $e^{-\jj k_0 R}$ becomes $e^{-\jj k_0 r}\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}$ to leading order, while the amplitude factor $1/R$ becomes $1/r$. Substituting into Eq.~\eqref{eq:ch2.E-from-dyadic} shows that $\E(\mathbf{r})$ is proportional to $e^{-\jj k_0 r}/r$ times a direction-dependent amplitude built from $\int_{\Omega_s}\Jimp(\mathbf{r}')\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}\,d^3r'$ \cite{stratton1941,jackson1999}. The transverse condition $\hat{\mathbf{r}}\cdot\E(\mathbf{r})\to0$ as $r\to\infty$ follows from the dyadic structure and outgoing selection: only the radiative part of $\mathcal{S}_\omega[\Jimp]$ contributes to this limit.
+
+That directional amplitude is what pattern measurements report. Information about reactive $1/r^2$ and $1/r^3$ structure is not contained in the far-zone limit---a distinction the radiation operator $\mathcal{R}_\omega$ formalizes in Section~\ref{sec:ch02.6}.
+
+\subsection{Radiated power from Poynting's theorem}
+\label{sec:ch02.5.3}
+
+Time-averaged power crossing a closed surface must be obtained from energy conservation, not from a detached scalar formula. For harmonic phasors, the complex Poynting vector $\mathbf{S}=\tfrac12\E\times\H^*$ (W/m$^2$) describes the local harmonic power density; its real part $\Re\mathbf{S}$ is the time-averaged flux (Section~\ref{sec:ch01.1.4}). Integrating the outward normal component over a sphere $S_R$ centered on the source gives the power leaving the interior:
+\begin{equation}
+\label{eq:ch2.power-sphere}
+P(R)=\Re\oint_{S_R}\mathbf{S}\cdot\hat{\mathbf{r}}\,dS.
+\end{equation}
+For fields in the radiative class selected by $\Pi_{\mathrm{rad}}$, $\E$ and $\H$ become transverse and $\eta_0$-related as $r\to\infty$, so $|\Re\mathbf{S}|$ falls as $1/r^2$ while $4\pi r^2$ grows, leaving a finite limit $P_{\mathrm{rad}}=\lim_{R\to\infty}P(R)$ \cite{poynting1884,stratton1941}. Reactive fields can make $P(R)$ strongly $R$-dependent in the near shell; only after outgoing radiative selection does $P(R)$ stabilize to the value laboratories report as radiated power.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (src) {Source\\region};
+ \node[ch1box, right=22mm of src] (near) {Reactive\\shell};
+ \node[ch1box, right=22mm of near] (far) {Far zone\\$kr\gg1$};
+ \draw[ch1flow] (src) -- (near) -- (far);
+\end{tikzpicture}%
+}
+\caption{Distance regimes for a compact source: reactive and induction fields dominate the near shell; the radiative $1/r$ transverse field defines the far zone where pattern measurements are taken.}
+\label{fig:ch2.distance-regimes}
+\end{figure}
+
+The same radiative transverse field that stabilizes $P_{\mathrm{rad}}$ also exports linear and angular momentum through $\mathbf{T}_{\mathrm{rad}}$ and $\mathbf{r}\times\mathbf{T}_{\mathrm{rad}}$ on large spheres (Subsection~\ref{sec:ch02.5b}), using the Maxwell stress foundation of Chapter~\ref{ch:01}.

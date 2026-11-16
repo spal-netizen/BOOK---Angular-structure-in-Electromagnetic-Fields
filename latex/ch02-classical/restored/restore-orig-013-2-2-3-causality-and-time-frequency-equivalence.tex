@@ -2,15 +2,13 @@
 \subsection{Causality and time-frequency equivalence}
 \label{sec:ch223}
 
-A standard-gain horn on a compact-range turntable fixes the laboratory scene for `Causality and time-frequency equivalence'': frequency, probe standoff, and wattmeter closure on $\Gamma_R$ precede the formal displays below \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
 The physical problem is retarded response: no field at $(\mathbf{r},t)$ may depend on source
 events that have not yet had time to propagate from $\mathbf{r}'$ to $\mathbf{r}$
-\cite{maxwell1873}. On the range, this is the difference between a
-measured impulse response that vanishes before the light-travel delay and an unphysical
-advanced template that leads the feed. A pulsed compact-range measurement makes the
-distinction visible: energy arrives only after transit time $|\mathbf{r}-\mathbf{r}'|/c_0$;
-a single-frequency phasor can hide violations that broadband synthesis would expose
-\cite{harrington2001}. Causality is therefore the principle that links time-domain evolution
+\cite{maxwell1873}. Advanced kernels that respond before light-travel time
+$|\mathbf{r}-\mathbf{r}'|/c_0$ violate that constraint; retarded Green functions enforce it
+\cite{sommerfeld1949,stratton1941}. Harmonic single-frequency analysis can mask causality
+violations that appear under broadband excitation \cite{harrington2001}. Causality links
+time-domain evolution
 to harmonic analysis before any Laplace or resolvent notation is introduced
 \cite{stratton1941}. A time-domain operator is causal when no response can occur before the
 corresponding excitation \cite{stratton1941}. In electromagnetics this requirement appears
@@ -128,7 +126,7 @@ Under Eqs.~\eqref{eq:ch2.equivalence-assumptions},
 \eval{\mathcal{L}_\omega^{-1}\widetilde{\mathbf{F}}(s)}_{s=-\jj\omega},
 \end{equation}
 where \(\underline{\mathbf{j}}\) is the phasor of
-\(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)=\Re\{\underline{\mathbf{j}}(\mathbf{r})e^{-\jj\omega t}\}\)
+\(\mathbf{j}_{\mathrm{imp}}(\mathbf{r},t)=\Re\{\underline{\mathbf{j}}(\mathbf{r})\eim\}\)
 and \(\widetilde{\mathbf{F}}\) is the Laplace forcing induced by
 \(\widetilde{\mathbf{j}}\) \cite{stratton1941}. Equation
 \eqref{eq:ch2.harmonic-equivalence-theorem} is the formal statement that
@@ -139,7 +137,7 @@ single-frequency excitation with damping or outgoing radiation,
 \label{eq:ch2.steady-state-harmonic-limit}
 \lim_{t\to\infty}\mathbf{U}(t)
 =
-\Re\big\{\mathcal{S}_\omega[\underline{\mathbf{j}}]\,e^{-\jj\omega t}\big\},
+\Re\big\{\mathcal{S}_\omega[\underline{\mathbf{j}}]\,\eim\big\},
 \end{equation}
 which justifies steady-state phasor measurements after switch-on transients decay
 \cite{stratton1941}. Because $\Pi_{\mathrm{rad}}$ is linear and commutes with harmonic

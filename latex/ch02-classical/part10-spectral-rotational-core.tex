@@ -1,0 +1,59 @@
+% R1b-3 — radiation modes, rotation, spherical-wave motivation (Ch.3 boundary)
+
+\section{Radiation Modes and Rotational Structure}
+\label{sec:ch02.7b}
+
+\subsection{Why mode decompositions appear}
+\label{sec:ch02.7b.1}
+
+The map $\mathcal{R}_\omega$ sends admissible currents to outgoing radiative fields. It is linear on fixed boundary data: superposition of sources superposes far-zone patterns \cite{stratton1941,harrington2001}. On a large sphere $S_R$ centered on a compact source, radiative $\E$ and $\H$ vary with direction $\hat{\mathbf{r}}$; the angular pattern is the information pattern measurements encode. A finite aperture or finite probe set cannot resolve infinitely many independent angular features---Section~\ref{sec:ch02.7.1} expressed that limitation through singular values of $\mathcal{K}_\omega$ \cite{chu1948,hansen1988}. The complementary question is organizational: on $S_R$, outgoing fields admit orthogonal angular patterns under energy inner products, and $\mathcal{R}_\omega$ couples source degrees of freedom to those patterns with different strengths \cite{stratton1941}.
+
+A \emph{radiation mode} is a normalized far-zone pattern direction $\mathbf{u}_n$ (field-side); a \emph{source mode} $\Jimp^{(n)}$ is an admissible current that excites it. The scalar \emph{export coupling} $\lambda_n$ measures how efficiently $\Jimp^{(n)}$ launches $\mathbf{u}_n$ through $\mathcal{R}_\omega$ \cite{harrington2001}. Modes with $|\lambda_n|$ above instrument noise are observable; modes in $\ker\mathcal{R}_\omega$ have $\lambda_n=0$ regardless of local field strength (Section~\ref{sec:ch02.8}). This language is the spectral face of the same physics Chu and Harrington express through electrical size and aperture rank \cite{chu1948,harrington2001}.
+
+\subsection{Spherical waves and multipole order}
+\label{sec:ch02.7b.2}
+
+Outgoing spherical waves $\exp(-\jj k_0 r)/r$ are the radial carriers fixed by the radiation condition (Section~\ref{sec:ch02.4.2}). Angular variation on $S_R$ is traditionally expanded in spherical harmonics $Y_\ell^m(\theta,\phi)$ and vector counterparts developed in Chapter~\ref{ch:03} \cite{stratton1941,jackson1999}. At this stage it suffices to record the physical hierarchy: electrically small sources at $k_0 a\ll1$ excite primarily the $\ell=1$ (dipole) angular sector; increasing $k_0 a$ permits higher $\ell$ and finer angular structure on the sphere \cite{chu1948,jackson1999}. Each increment in $\ell$ typically requires faster spatial phase variation on $\Omega_s$, tying spectral index to source bandwidth (Section~\ref{sec:ch02.10}).
+
+The Hertzian dipole (Section~\ref{sec:ch02.5.4}) is the rank-one instance: one moment vector, one dominant angular factor $\sin\theta$, one radiative channel at leading order \cite{jackson1999}. Chapter~\ref{ch:03} supplies the complete orthonormal vector basis and angular-momentum labeling; here the lesson is that $\mathcal{R}_\omega$ naturally produces a countable angular hierarchy on $S_R$ rather than an arbitrary continuum of unrelated patterns \cite{stratton1941}.
+
+\subsection{Rotational covariance}
+\label{sec:ch02.7b.3}
+
+Rotating a source on a turntable reorients the far-zone pattern while leaving total exported power unchanged when measurement and source frames rotate together \cite{harrington2001}. Let $R\in\mathrm{SO}(3)$ act on positions by $\mathbf{r}\mapsto R\mathbf{r}$. Active rotation of a polar vector current is $(\mathcal{A}_R\Jimp)(\mathbf{r})=R\,\Jimp(R^{-1}\mathbf{r})$ (Chapter~\ref{ch:01}, Section~\ref{sec:ch01.3.1}). The corresponding field rotation on Maxwell pairs is $\mathcal{D}(R)(\E,\H)=(\mathcal{A}_R\E,\mathcal{A}_R\H)$. For isotropic vacuum and outgoing conditions,
+\begin{equation}
+\label{eq:ch2.radiation-rotation-commutation}
+\mathcal{R}_\omega\big[\mathcal{A}_R\Jimp\big]
+=
+\mathcal{D}(R)\,\mathcal{R}_\omega[\Jimp],
+\end{equation}
+so rotating the feed before export equals exporting then rotating the radiative field \cite{stratton1941,harrington2001}. Eq.~\eqref{eq:ch2.radiation-rotation-commutation} explains why principal cuts walk with azimuth on a compact range without changing wattmeter totals when probes co-rotate. Modal coefficients mix under $R$; degenerate patterns with equal $|\lambda_n|$ split when symmetry is broken by mounts, cables, or anisotropic surroundings \cite{stratton1941}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\Jimp$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (u) {Radiative field};
+ \node[ch1box, below=5mm of j] (ar) {$\mathcal{A}_R$};
+ \node[ch1box, below=5mm of u] (dr) {$\mathcal{D}(R)$};
+ \draw[ch1flow] (j) -- (r) -- (u);
+ \draw[ch1flow] (ar.north) -- (j.south);
+ \draw[ch1flow] (ar.east) -| (r.south);
+ \draw[ch1flow] (dr.north) -- (u.south);
+\end{tikzpicture}%
+}
+\caption{Rotational covariance Eq.~\eqref{eq:ch2.radiation-rotation-commutation}: active rotation of the source commutes with radiative export up to the field rotation $\mathcal{D}(R)$.}
+\label{fig:ch2.rotation-radiation-covariance}
+\end{figure}
+
+\subsection{Momentum flux and angular structure}
+\label{sec:ch02.7b.4}
+
+Radiative energy export through $\mathbf{S}_{\mathrm{rad}}$ is accompanied by momentum and angular-momentum flux through the Maxwell stress on the same outgoing branch (Subsection~\ref{sec:ch02.5b}). Angular patterns on $S_R$ are therefore tied to rotational properties of the exported field, not merely to Fourier labels on a scan plane \cite{stratton1941}. The operator algebra that makes angular momentum explicit in harmonic bases is developed in Chapter~\ref{ch:03}; here the covariance Eq.~\eqref{eq:ch2.radiation-rotation-commutation} and the multipole hierarchy of Section~\ref{sec:ch02.7b.2} already display the requirement.
+
+\subsection{Passage to Chapter~\ref{ch:03}}
+\label{sec:ch02.7b.5}
+
+Chapter~\ref{ch:02} constructed $\mathcal{S}_\omega$, outgoing selection, $\mathcal{R}_\omega$, null spaces, reciprocity, plane-wave spectra, and the finite-rank limits of observation. The remaining organizational question for a compact source is natural: \emph{what orthonormal angular basis on the sphere displays radiative content mode by mode with simple rules under rotation?} Vector spherical harmonics, angular-momentum operators, and the $\mathrm{SO}(3)$ structure of multipole fields answer that question in Chapter~\ref{ch:03} \cite{stratton1941,harrington2001}. Chapter~\ref{ch:04} then asks which modal targets are physically realizable by sources on bounded supports given the spectral compression recorded here and in Section~\ref{sec:ch02.7}. Subsections~\ref{sec:ch02.7b.6}--\ref{sec:ch02.7b.7} state the radiation eigenpair and modal expansion; Section~\ref{sec:ch02.7c} states Fredholm solvability for pattern synthesis.

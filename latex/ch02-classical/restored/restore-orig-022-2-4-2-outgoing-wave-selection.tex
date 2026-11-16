@@ -1,18 +1,13 @@
 % Stage 8 restored fragment — 2.4.2 Outgoing-wave selection (archive lines 5231-5455)
 \subsection{Outgoing-wave selection}
 \label{sec:ch242}
-Finite computational domains terminate open-region problems artificially. On a physical compact
-range, anechoic absorbers play the same role as absorbing boundary conditions in equivalent analytical models:
-they mimic terminations that let export escape instead of reflecting into the near field
-\cite{hansen1988}. Silver--M\"uller and related traces approximate outgoing selection
-on meshes used for horns, cavities, and reflector feeds
-\cite{stratton1941}. A finite-element model employing inadequate
-absorbing boundaries permits artificial reflections that contaminate field amplitudes and
-reconstructed radiation characteristics---the same standing-wave signatures that appear when chamber
-absorption is imperfect on a physical range \cite{hansen1988}. Absorbing-boundary
-parameters are therefore a radiation-physics choice about exported energy, not a mesh-only tuning
-parameter \cite{stratton1941}. The operator $\mathcal{O}_{\mathrm{out}}$ records that choice on
-$\mathcal{S}_\omega$ before $\Pi_{\mathrm{rad}}$ and $\mathcal{R}_\omega$ attach pattern meters.
+Unbounded exterior problems must select an outgoing branch at infinity so that impressed sources
+launch retarded waves rather than incoming partners \cite{sommerfeld1949,stratton1941}.
+Truncated computational domains enforce the same physics through absorbing boundary conditions or
+Silver--M\"uller--type traces that suppress spurious reflections from artificial outer surfaces
+\cite{stratton1941,harrington2001}. The operator $\mathcal{O}_{\mathrm{out}}$ records that
+completion on harmonic Maxwell pairs before far-zone export through $\Pi_{\mathrm{rad}}$ and
+$\mathcal{R}_\omega$.
 
 The outgoing-wave selector $\mathcal{O}_{\mathrm{out}}$ implements Sommerfeld completion
 Eq.~\eqref{eq:ch2.sommerfeld-outgoing-class} as an operator on $\mathcal{F}_\Omega$, on
@@ -25,6 +20,20 @@ Green functions Eq.~\eqref{eq:ch2.retarded-harmonic-kernel-theorem}. Sommerfeld 
 conditions
 Eqs.~\eqref{eq:ch2.sommerfeld-field-condition}--\eqref{eq:ch2.sommerfeld-outgoing-class}
 are presupposed; uniqueness proofs belong to Subsection~\ref{sec:ch243}.
+
+Readers should distinguish three objects that are often conflated in compact-range practice.
+The dyadic Green convolution Eq.~\eqref{eq:ch2.electric-dyadic-convolution} maps $\Jimp$ to an electric field
+pair in $\mathcal{F}_\Omega$ without yet declaring which analytic branch of the Helmholtz resolvent is selected at infinity.
+$\mathcal{O}_{\mathrm{out}}$ acts on completed Maxwell pairs in $\mathcal{F}_\Omega$ and returns the member of
+$\mathcal{F}_{\mathrm{SF}}$ whose propagating spectral content carries retarded phase $e^{-\jj k_0 r}$ rather than incoming
+partners \cite{sommerfeld1949}.
+$\Pi_{\mathrm{rad}}$ acts only after export: it forms equivalence classes of far-zone transverse amplitudes on
+$\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}$ and is not interchangeable with $\mathcal{O}_{\mathrm{out}}$ or with the
+lateral spectral projector $\Pi_{\mathrm{prop}}$ on evanescent sheets \cite{harrington2001}.
+The composition $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}$ with
+$\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$ therefore factors source-to-pattern
+measurement into completion, outgoing selection, and radiative projection in that order
+(Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}).
 Assumptions. Exterior regions use vacuum far-zone constants with \(k_0>0\) real in the locked
 harmonic band, compact \(\operatorname{supp}\Jimp\), and time-independent
 \(\mathcal{B}_\Gamma\) including outgoing radiation condition at infinity or on
@@ -180,15 +189,20 @@ Items~(1)--(2) restate the definitions. For~(3), distinct near fields sharing $\
 The operational composition used in pattern metrology is
 \begin{equation}
 \label{eq:ch2.outgoing-radiation-refinement}
-\label{eq:ch2.rad-projection-composition}
 \mathcal{S}_\omega^{\mathrm{(out)}}
 =
 \mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega,
-\qquad
+\end{equation}
+on $\mathcal{D}(\mathcal{S}_\omega)\subset L^{2}(\Omega_s)^{3}$ (impressed currents with declared boundary class), with
+$\mathcal{S}_\omega^{\mathrm{(out)}}[\Jimp]\in\mathcal{F}_{\mathrm{SF}}$ and $\mathcal{O}_{\mathrm{out}}$ acting on the field pair only after dyadic completion.
+Radiative export is a separate projection on outgoing pairs:
+\begin{equation}
+\label{eq:ch2.rad-projection-composition}
 \mathcal{R}_\omega
 =
 \Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}},
 \end{equation}
+with $\Pi_{\mathrm{rad}}:\mathcal{D}(\Pi_{\mathrm{rad}})\subset\mathcal{F}_{\mathrm{SF}}\to\mathcal{F}_{\mathrm{rad}}$; neither map is defined on raw near-field orbits in $\mathcal{F}_\Omega$ without outgoing completion \cite{stratton1941}.
 with $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}$ the space of classes carrying transverse far-zone data Eq.~\eqref{eq:ch2.far-zone-transverse-radiation}.
 Evanescent and reactive content may remain in $\mathcal{S}_\omega^{\mathrm{(out)}}[\Jimp]$ while yielding the same $\Pi_{\mathrm{rad}}$ class when $\mathbf{E}_0$ agrees \cite{stratton1941}.
 Transport reporting therefore applies Eq.~\eqref{eq:ch2.regime-operator-screen} after $\mathcal{R}_\omega$, not after $\mathcal{O}_{\mathrm{out}}$ alone \cite{harrington2001}.

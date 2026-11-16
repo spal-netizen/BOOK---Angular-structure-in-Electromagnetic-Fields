@@ -1,21 +1,16 @@
 % Stage 8 restored fragment — 2.6.1 Compact circular aperture and singular-value decay (archive lines 7474-7642)
 \subsection{Compact circular aperture and singular-value decay}
 \label{sec:ch26.signature-aperture}
-Before any eigenvalue formula is written, it helps to watch the phenomenon on a range. On a dish
-compact range, place a feed above a circular scan disk on plane $z=0$ and sample tangential field on
-$S_r$; on a spherical near-field scanner, place probes on a hull at $R\approx 2\lambda_0$ and
-transform to far-zone coefficients \cite{hansen1988}. In either campaign, count how
-many independent beam directions remain above the receiver noise floor. The answer depends on disk
-or scan radius $a_{\mathrm{ap}}$ and source electrical size, not on how many spherical harmonics a
-post-processor can index \cite{chu1948}. Electrical size and scan extent fix a
-recoverable rank; singular values $\sigma_n$ of $\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$
-measure the radiation efficiency of each independent source organization through the aperture and
-receiver chain, and fall off once the modal index exceeds what the geometry can resolve
-\cite{stratton1941}. Synthesis harmonic caps therefore overstate physical rank when $\sigma_n$ has already fallen below the
-noise floor---harmonics in a post-processor are labels, not independent export channels. Compact
-decay of $\sigma_n(\mathcal{K})$ and the finite recoverable rank it defines are stated here once;
-later subsections invoke Subsection~\ref{sec:ch26.signature-aperture} by reference rather than
-repeating the measurement narrative \cite{harrington2001}.
+Consider a circular observation disk of radius $a_{\mathrm{ap}}$ sampling the far-zone tangential
+field on $S_r$. The number of angular patterns distinguishable through that aperture scales with
+$k_0 a_{\mathrm{ap}}$ and with electrical source size, not with the cardinality of a formal
+harmonic list \cite{chu1948,hansen1988}. Singular values $\sigma_n$ of
+$\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ rank how efficiently each
+independent source organization couples to the recorded field; they decay once the modal index
+exceeds what $a_{\mathrm{ap}}$ can resolve \cite{stratton1941}. Compact decay of
+$\sigma_n(\mathcal{K})$ and the finite recoverable rank are established here once; later
+subsections cite Subsection~\ref{sec:ch26.signature-aperture} by reference
+\cite{harrington2001}.
 
 Consider a circular scan aperture of radius \(a_{\mathrm{ap}}\) on plane \(z=0\) sampling the
 far-zone tangential field from a compact source with \(k_0 a=1.5\). The measurement composition
@@ -96,13 +91,11 @@ solutions. Third, when geometry possesses rotational symmetry, rotating the hard
 modal coefficients without changing eigenvalue ordering within degenerate blocks. The introductory relation
 equations record these facts; the subsections that follow interpret them in measurement
 language \cite{stratton1941}.
-On a compact range, a \emph{radiation mode} appears as a principal far-zone pattern direction
----a normalized cut on $S_r$ that carries qualified export power---while its \emph{source mode}
-is the admissible current distribution that excites it \cite{harrington2001}. Dominant beams
-correspond to modes with large $|\lambda_n|$ because those organizations couple most efficiently
-to the wattmeter on $\Gamma_R$ \cite{stratton1941}. The eigenpair relation below states the
-experimentally familiar observation that certain current organizations radiate much more
-effectively than others \cite{collin2001}. On a family of radiating modes, the eigenvalue template reads
+A \emph{radiation mode} is a principal far-zone pattern direction on $S_r$; its \emph{source mode}
+is the admissible current distribution that excites it \cite{harrington2001}. Modes with large
+$|\lambda_n|$ couple most efficiently to shell power $\mathcal{P}_{\mathrm{rad}}$ on $\Gamma_R$
+\cite{stratton1941}. The eigenpair relation below encodes how current organization maps to export
+efficiency \cite{collin2001}. On a family of radiating modes, the eigenvalue template reads
 \begin{equation}
 \label{eq:ch2.modal-eigenvalue-equation}
 \mathcal{R}_\omega[\Jimp^{(n)}]=\lambda_n\,\mathbf{u}_n,

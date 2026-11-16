@@ -1,0 +1,68 @@
+% R1c-3 — Fredholm structure and pattern solvability
+
+\section{Fredholm Structure and Pattern Solvability}
+\label{sec:ch02.7c}
+
+\subsection{Compact perturbation of the radiation map}
+\label{sec:ch02.7c.1}
+
+On compact source support $\Omega_s$, the far-zone radiation map $\mathcal{R}_\omega$ smooths fine spatial detail: only exportable outgoing content survives $\Pi_{\mathrm{rad}}$ (Section~\ref{sec:ch02.6}). Operatorally, one may decompose
+\begin{equation}
+\label{eq:ch2.radiation-fredholm-decomposition}
+\mathcal{R}_\omega
+=
+\mathcal{R}_{0,\omega}+K_{\mathrm{rad}},
+\end{equation}
+where $\mathcal{R}_{0,\omega}$ carries leading outgoing propagation (singular far-zone behavior as in the Green representation) and $K_{\mathrm{rad}}$ is compact on $\mathcal{J}_\Omega$ when sources and observation norms are the declared Hilbert pairings from Section~\ref{sec:ch02.3.1} \cite{stratton1941,harrington2001}. Physically, $\mathcal{R}_{0,\omega}$ is the dominant radiative propagation law; $K_{\mathrm{rad}}$ collects corrections that blur fine source structure into the smooth angular patterns measured on $\Gamma_R$.
+
+Compactness of $K_{\mathrm{rad}}$ (and of $\mathcal{K}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ on bounded observation domains) is why singular values decay (Section~\ref{sec:ch02.7.1}): only finitely many channels remain above noise \cite{chu1948,hansen1988}. This is distinct from $\ker\mathcal{R}_\omega$, which can be infinite-dimensional on open domains even when $K_{\mathrm{rad}}$ is compact \cite{devaney2004}.
+
+\subsection{Kernel, cokernel, and index}
+\label{sec:ch02.7c.2}
+
+The \emph{kernel} $\ker\mathcal{R}_\omega$ collects non-radiating sources (Section~\ref{sec:ch02.8}). The \emph{cokernel} $\mathrm{coker}\,\mathcal{R}_\omega=\mathcal{F}_{\mathrm{rad}}/\operatorname{ran}\mathcal{R}_\omega$ labels far-zone pattern targets that no admissible source can realize---equivalently, directions orthogonal to every radiative image under the dual pairing \cite{stratton1941}. On a range, kernel membership explains identical far patterns from different feeds; cokernel membership explains synthesis targets that refuse to converge despite numerical effort \cite{harrington2001,devaney2004}.
+
+When $\ker\mathcal{R}_\omega$ and $\mathrm{coker}\,\mathcal{R}_\omega$ are finite-dimensional in the truncated problem class used for analysis, the Fredholm index is
+\begin{equation}
+\label{eq:ch2.radiation-fredholm-index-def}
+\mathrm{ind}\,\mathcal{R}_\omega
+=
+\dim\ker\mathcal{R}_\omega-\dim\mathrm{coker}\,\mathcal{R}_\omega.
+\end{equation}
+On exterior problems with compact $\Omega_s$ and outgoing conditions, $\ker\mathcal{R}_\omega$ is typically infinite-dimensional while practical synthesis uses finite modal truncations; Eq.~\eqref{eq:ch2.radiation-fredholm-index-def} is therefore stated on the qualified quotient or on finite-rank approximations $\mathcal{R}_{\omega,N}$ used in computation \cite{stratton1941,harrington2001}. Index stability under compact perturbations of $K_{\mathrm{rad}}$ is the operator-theoretic reason small model changes do not abruptly alter solvability class \cite{stratton1941}.
+
+\subsection{Solvability of the forward radiation equation}
+\label{sec:ch02.7c.3}
+
+Given target radiative field $\mathbf{g}\in\mathcal{F}_{\mathrm{rad}}$, the synthesis equation $\mathcal{R}_\omega[\Jimp]=\mathbf{g}$ asks which impressed currents produce that export. Because $\mathcal{R}_\omega$ is not injective in general, solutions, when they exist, are determined only up to $\ker\mathcal{R}_\omega$. Fredholm theory gives the compatibility condition: $\mathbf{g}$ is reachable if and only if it is orthogonal to every cokernel direction in the dual sense. With $\mathcal{R}_\omega^{\dagger}$ the adjoint on $(\mathcal{J}_\Omega,\mathcal{F}_{\mathrm{rad}})$ induced by the source and field pairings of Section~\ref{sec:ch02.3.1},
+\begin{equation}
+\label{eq:ch2.radiation-solvability-criterion}
+\mathcal{R}_\omega[\Jimp]=\mathbf{g}
+\ \text{has a solution}
+\iff
+\langle \mathbf{g},\mathbf{w}\rangle_{\mathcal{U}}=0
+\ \ \forall\ \mathbf{w}\in\ker\mathcal{R}_\omega^{\dagger}.
+\end{equation}
+Physically, Eq.~\eqref{eq:ch2.radiation-solvability-criterion} states that a prescribed far-zone pattern must contain no component in directions the source class cannot excite \cite{stratton1941,devaney2004}. Even when Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds, finite measurements through $\mathcal{K}_\omega$ recover at most the effective rank of Section~\ref{sec:ch02.7.1}; continuous solvability does not imply unique recovery from noisy data \cite{hansen1988}.
+
+Reciprocity (Section~\ref{sec:ch02.9}) constrains admissible couplings but does not replace Eq.~\eqref{eq:ch2.radiation-solvability-criterion}: a reciprocal structure may still possess nontrivial $\ker\mathcal{R}_\omega$. Realizability of superdirective or ultra-narrow targets on electrically small supports is limited jointly by Eq.~\eqref{eq:ch2.radiation-solvability-criterion}, Chu-type bandwidth bounds, and singular-value decay \cite{chu1948,harrington2001}---topics developed further in Chapter~\ref{ch:04}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (f) {$\mathcal{F}_{\mathrm{rad}}$};
+ \node[ch1box, below=5mm of j] (ker) {$\ker\mathcal{R}_\omega$};
+ \node[ch1box, below=5mm of f] (cok) {$\mathrm{coker}$};
+ \draw[ch1flow] (j) -- (r) -- (f);
+ \draw[ch1flow,dashed] (ker.north) -- (j.south);
+ \draw[ch1flow,dashed] (cok.north) -- (f.south);
+\end{tikzpicture}%
+}
+\caption{Fredholm view of radiation: kernel directions are invisible to export; cokernel directions are unreachable pattern targets.}
+\label{fig:ch2.fredholm-radiation-chain}
+\end{figure}
+
+When $\mathcal{R}_\omega$ is Fredholm in the declared setting and Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds, one obtains existence; uniqueness holds modulo $\ker\mathcal{R}_\omega$. Resonance or incoming standing-wave partners excluded by the outgoing condition are not part of the radiative class $\mathcal{F}_{\mathrm{rad}}$ and therefore do not enter this synthesis problem \cite{stratton1941}.

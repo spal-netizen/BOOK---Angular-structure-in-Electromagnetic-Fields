@@ -1,39 +1,21 @@
 % Stage 8 restored fragment — 2.4.1 Sommerfeld radiation condition (archive lines 4939-5230)
 \subsection{Sommerfeld radiation condition}
 \label{sec:ch241}
-Before Sommerfeld asymptotics are written, the physical ambiguity must be named. Harmonic
-Helmholtz solutions on open domains superpose $e^{-\jj k_0 r}/r$ outgoing and
-$e^{+\jj k_0 r}/r$ incoming spherical waves with equal standing rights in the volume
-equations alone \cite{sommerfeld1949}. A near-field scan or pattern cut on
-$\Gamma_R$ cannot distinguish these completions without an explicit outgoing selection: wattmeters
-and probes then read mixtures of export, storage, and energy arriving from the computational or
-chamber boundary \cite{hansen1988}. Sommerfeld radiation condition is the asymptotic
-statement that restores laboratory identification---radiation launched locally and leaving the
-domain---before any uniqueness argument or far-zone integral is evaluated
-\cite{sommerfeld1949}.
-
-Before any asymptotic formula is written, the range engineer already decides whether the
-measurement enclosure behaves as an open exterior domain \cite{hansen1988}.
-A compact range places the device under test inside an anechoic chamber whose absorbing
-linings are designed to let export escape instead of reflecting back as multipath
-\cite{collin2001}. Pattern probes on a large sphere $\Gamma_R$ and shell wattmeters report
-tangential field and power only when chamber absorption and computational termination both
-approximate free-space outgoing behavior \cite{poynting1884}. Incomplete
-absorption produces ripple on azimuth cuts; unstable spherical near-field transforms when
-spectra are truncated show the same branch failure at the data-processing stage
-\cite{hansen1988}. Until outgoing selection is restored, $\Gamma_R$ meters read cavity
-storage and standing-wave content rather than watt-bearing export \cite{maxwell1873}.
-Sommerfeld radiation condition below is the asymptotic mathematical statement of what the
-range engineer already assumes when attributing a measured pattern to the device under test
-rather than to energy arriving from infinity \cite{sommerfeld1949}.
-An open antenna measurement is meaningful only if the field on the range can be identified
-with radiation from the device under test rather than with energy arriving from infinity.
-Sommerfeld outgoing selection enforces that identification: disturbances launched locally
-propagate outward and are not returned from the far boundary of the model
-\cite{sommerfeld1949}. When the condition is omitted, the same near-field scan or pattern
-cut admits formal completions with incoming or standing-wave content, and inversion may
-assign equivalent sources that would require excitation mechanisms absent from the physical
-problem and therefore lie outside the admissible solution class \cite{devaney2004}.
+At fixed $\omega$ under $\eim$, the exterior Helmholtz operator admits spherical partners that grow or decay with
+$e^{\mp\jj k_0 r}/r$. A finite computational domain without a radiation condition therefore leaves the same near-field
+data compatible with an incoming partner at infinity, with chamber reflections, or with a purely formal advanced
+solution \cite{sommerfeld1949,hansen1988}. Sommerfeld selection is the asymptotic rule that excludes incoming energy
+from infinity so that patterns measured on $\Gamma_R$ refer to the declared feed rather than to spurious exterior
+completion \cite{sommerfeld1949,stratton1941}.
+Sommerfeld's condition is the asymptotic statement that, for $r\to\infty$, fields launched from
+compact sources carry phase fronts $k_0 r$ increasing outward and amplitudes decaying no slower than
+$r^{-1}$, thereby excluding incoming energy from infinity \cite{sommerfeld1949,jackson1999}.
+Green kernels of Section~\ref{sec:ch23} already embody this branch in the phase factor
+$e^{-\jj k_0 R}$; the present subsection makes the far-zone selection explicit so that
+$\mathcal{O}_{\mathrm{out}}$ and uniqueness arguments in Subsections~\ref{sec:ch242}--\ref{sec:ch243}
+act on a single outgoing class \cite{stratton1941}.
+When the condition is omitted, equivalent-source inversions may introduce excitations with no physical
+feed realization \cite{devaney2004}.
 Free-space kernels
 Eqs.~\eqref{eq:ch2.free-space-scalar-green} and~\eqref{eq:ch2.free-space-dyadic-green}
 supply the asymptotic templates; outer-boundary classes from Chapter~\ref{ch:01} are

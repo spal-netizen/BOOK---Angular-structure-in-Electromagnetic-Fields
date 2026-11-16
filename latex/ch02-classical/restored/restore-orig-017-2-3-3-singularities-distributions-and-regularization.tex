@@ -8,6 +8,41 @@ signal reactive self-interaction rather than far-zone radiation \cite{stratton19
 Laboratory stacks add reflected waves in each half-space; probe calibration must then use the
 appropriate layered Green function, while the vacuum template below remains the limiting
 case used to prove distributional identities and Sommerfeld selection \cite{collin2001,sommerfeld1949}.
+Under $\eim$, vacuum Maxwell equations follow Eq.~\eqref{eq:ch1.maxwell-local}:
+$\curl\E=-\jj\omega\mu_0\H$, $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$, and $\nabla\cdot\Jimp=-\jj\omega\rho$
+with impressed sources $(\Jimp,\rho)$ \cite{stratton1941,jackson1999}.
+Every identity below is checked in that row structure, not in a $e^{-\jj\omega t}$ convention that flips both time and spatial outgoing signs without a coordinated rewrite.
+Three distinct objects must not be conflated \cite{yaghjian1978,tai1994}:
+(i)~the tabulated dyad $\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{r}')$ for $R=|\mathbf{r}-\mathbf{r}'|>0$ in Eq.~\eqref{eq:ch2.free-space-dyadic-green};
+(ii)~its distributional extension under $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^2$ tested against smooth $\mathbf{f}$;
+(iii)~the electric field obtained by convolving $\Jimp$ with the kernel through a specified excluded principal volume $V_\varepsilon$ centred on the source point.
+Unqualified $\delta$-function algebra on $\nabla\nabla(1/R)$ is inadequate: the electrostatic singular part of $G_0$ carries a longitudinal contact tensor when second derivatives act on $1/(4\pi R)$ \cite{yaghjian1978,yaghjian1980source}.
+With $\mathbf{R}=\mathbf{r}-\mathbf{r}'$ and $R=|\mathbf{R}|$,
+\begin{equation}
+\label{eq:ch2.grad-grad-1-over-R-distributional}
+\partial_i\partial_j\frac{1}{4\pi R}
+=
+\mathrm{PV}\!\left[\frac{3R_iR_j-R^2\delta_{ij}}{4\pi R^{5}}\right]
+-\frac{\delta_{ij}}{3}\,\delta^{(3)}(\mathbf{R}),
+\end{equation}
+under the spherical principal-value limit that excludes a ball $B_\varepsilon(\mathbf{r}')$ with outward normal on $\partial B_\varepsilon$
+and $\varepsilon\to 0^{+}$ after testing against $\varphi\in C_c^{\infty}(\mathbb{R}^{3})$.
+The isotropic contact term in Eq.~\eqref{eq:ch2.grad-grad-1-over-R-distributional} is the trace-one source dyad
+\begin{equation}
+\label{eq:ch2.yaghjian-source-dyad-sphere}
+\overline{\overline{L}}=\frac13\,\overline{\overline{I}}
+\end{equation}
+for that spherical geometry \cite{yaghjian1978}; other excluded volumes induce a different symmetric $\overline{\overline{L}}$ with unit trace and must not be identified with Eq.~\eqref{eq:ch2.yaghjian-source-dyad-sphere} without proof.
+For the full Helmholtz kernel $G_0=e^{-\jj k_0 R}/(4\pi R)$, the $1/R$ singular structure supplies the contact piece in Eq.~\eqref{eq:ch2.grad-grad-1-over-R-distributional};
+dynamic terms $\mathcal{O}(k_0 R)$ are less singular at coincidence and enter the excluded-sphere limit only through the regular expanding part of $G_0$.
+The closed Lorenz--Stratton dyad Eq.~\eqref{eq:ch2.free-space-dyadic-green} already incorporates transverse and longitudinal coupling consistent with $\nabla\cdot\Jimp=-\jj\omega\rho$;
+Theorem~\ref{thm:ch2.dyadic-distributional-fundamental} below states the corresponding curl--curl identity for that tabulated kernel, not for an uncorrected $\nabla\nabla G_0$ template analyzed without principal-value exclusion.
+Convolution with extended $\Jimp$ uses the same spherical $V_\varepsilon$ convention as Eq.~\eqref{eq:ch2.dyadic-inner-sphere-flux-column}; one must not add an independent $\overline{\overline{L}}$ correction to a field already defined with the equivalent excluded-volume prescription \cite{yaghjian1978,tai1994}.
+The electric dyadic $\overline{\mathbf{G}}_{E,0}$ in Eq.~\eqref{eq:ch2.free-space-dyadic-green} maps an electric dipole
+column to $\E$; the magnetic dyadic $\overline{\mathbf{G}}_{H,0}$ of Subsection~\ref{sec:ch231} inverts the magnetic curl
+operator and must not be substituted in Theorem~\ref{thm:ch2.dyadic-distributional-fundamental} \cite{tai1994}. All
+$\nabla$, $\nabla\times$, and $\nabla\times\nabla\times$ operations act on the observation coordinate $\mathbf{r}$ with
+$\mathbf{r}'$ fixed when forming $\mathcal{W}_{E,\omega}\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{r}')$.
 Subsection~\ref{sec:ch231} defined scalar and dyadic Green kernels that satisfy
 Eqs.~\eqref{eq:ch2.scalar-helmholtz-green-pde} and~\eqref{eq:ch2.dyadic-green-defining-operator}
 for \(\mathbf{r}\neq\mathbf{r}'\) and deferred coincidence evaluation to the present
@@ -30,9 +65,90 @@ Observation points \(\mathbf{r}\) may approach \(\operatorname{supp}\Jimp\) but
 remain in the domain where \(\E\in\HCurl(\Omega)\) is sought.
 Away from coincidence the kernels satisfy the homogeneous Helmholtz and curl--curl equations;
 at coincidence the source appears as a distribution.
-\begin{theorem}[Distributional fundamental dyad at coincidence]
+\begin{proposition}[Spherical principal value for $\partial_i\partial_j(4\pi R)^{-1}$]
+\label{prop:ch2.grad-grad-PV-proof}
+Let $\varphi\in C_c^{\infty}(\mathbb{R}^{3})$ and $\mathbf{R}=\mathbf{r}-\mathbf{r}'$.
+With $V_a=\mathbb{R}^{3}\setminus B_a(\mathbf{r}')$ and outward unit normal $\hat{\mathbf{n}}$ on $\partial B_a$,
+\begin{equation}
+\label{eq:ch2.grad-grad-PV-pairing}
+\int_{\mathbb{R}^{3}}\varphi(\mathbf{r})\,\partial_i\partial_j\frac{1}{4\pi R}\,d^{3}\mathbf{r}
+=
+\lim_{a\to 0^{+}}\int_{V_a}\varphi\,\partial_i\partial_j\frac{1}{4\pi R}\,d^{3}\mathbf{r}
+=
+\mathrm{PV}\!\int_{\mathbb{R}^{3}}\varphi\,\frac{3R_iR_j-R^2\delta_{ij}}{4\pi R^{5}}\,d^{3}\mathbf{r}
+-\frac{\delta_{ij}}{3}\,\varphi(\mathbf{r}'),
+\end{equation}
+which is Eq.~\eqref{eq:ch2.grad-grad-1-over-R-distributional} in test form.
+\end{proposition}
+\begin{proof}
+Let $G_s=(4\pi R)^{-1}$ with $R=|\mathbf{R}|$ and $\mathbf{R}=\mathbf{r}-\mathbf{r}'$.
+On $V_a=\mathbb{R}^{3}\setminus B_a(\mathbf{r}')$, the integrand is smooth and
+$\partial_i\partial_j G_s=(3R_iR_j-R^2\delta_{ij})/(4\pi R^5)$ for $R>a$.
+Integrate by parts once on $V_a$:
+\[
+\int_{V_a}\varphi\,\partial_i\partial_j G_s\,d^{3}\mathbf{r}
+=
+-\int_{V_a}\partial_i\varphi\,\partial_j G_s\,d^{3}\mathbf{r}
++\oint_{\partial B_a}n_i\,\varphi\,\partial_j G_s\,dS,
+\]
+with $n_i$ the outward normal on $\partial B_a$ (pointing \emph{away} from the punctured ball).
+A second integration by parts on $V_a$ transfers both derivatives onto $\varphi$:
+\[
+\int_{V_a}\partial_i\varphi\,\partial_j G_s\,d^{3}\mathbf{r}
+=
+-\int_{V_a}\varphi\,\partial_i\partial_j G_s\,d^{3}\mathbf{r}
++\oint_{\partial B_a}\partial_i\varphi\,n_j\,G_s\,dS,
+\]
+where the additional boundary term is $\mathcal{O}(a)$ because $\partial_i\varphi$ is bounded and $G_s=\mathcal{O}(a^{-1})$ integrates to $\mathcal{O}(a^{2})$ on the sphere.
+Substituting into the first identity leaves only the leading $\oint n_i\varphi\partial_j G_s\,dS$ contact term plus the principal-value volume limit
+$\lim_{a\to 0}\int_{V_a}\varphi\,(3R_iR_j-R^2\delta_{ij})/(4\pi R^5)\,d^{3}\mathbf{r}$, which defines $\mathrm{PV}$.
+For $a$ small and $\varphi\in C_c^{\infty}$, $\varphi(\mathbf{r})=\varphi(\mathbf{r}')+\mathbf{R}\cdot\nabla\varphi(\mathbf{r}')+\mathcal{O}(R^{2})$ near $\mathbf{r}'$.
+On $\partial B_a$, $\mathbf{R}=a\hat{\mathbf{n}}$, $\partial_j G_s=-\hat{n}_j/(4\pi a^2)$, and $n_i=\hat{n}_i$.
+The volume term converges to the principal-value pairing against $(3R_iR_j-R^2\delta_{ij})/(4\pi R^5)$ as $a\to 0$; its limit defines $\mathrm{PV}$ in Eq.~\eqref{eq:ch2.grad-grad-PV-pairing}.
+The surface integral splits into the constant part and the linear part in $\mathbf{R}$:
+\[
+\oint_{\partial B_a}n_i\,\varphi\,\partial_j G_s\,dS
+=
+\varphi(\mathbf{r}')\oint n_i\partial_j G_s\,dS
++\mathbf{e}_k\cdot\nabla\varphi(\mathbf{r}')\,\oint n_i R_k\,\partial_j G_s\,dS
++\mathcal{O}(a^{2}),
+\]
+with $R_k=a\hat{n}_k$.
+The leading term uses $dS=a^{2}\,d\Omega$ on $\partial B_a$ and the solid-angle moment
+$\int_{4\pi}\hat{n}_i\hat{n}_j\,d\Omega=\frac{4\pi}{3}\delta_{ij}$, so $\oint \hat{n}_i\hat{n}_j\,dS=\frac{4\pi}{3}\delta_{ij}\,a^{2}$, giving
+\[
+\varphi(\mathbf{r}')\oint n_i\partial_j G_s\,dS
+=
+-\frac{\varphi(\mathbf{r}')}{4\pi a^2}\oint \hat{n}_i\hat{n}_j\,dS
+=
+-\frac{\delta_{ij}}{3}\,\varphi(\mathbf{r}').
+\]
+The linear $\mathbf{R}$ term contracts with an odd integrand $\oint \hat{n}_i\hat{n}_j\hat{n}_k\,dS=0$ by symmetry \cite{jackson1999}.
+The $\nabla\varphi$ boundary contribution from the second integration by parts on $V_a$ is
+$\mathcal{O}(a)$ and vanishes as $a\to 0$.
+Combining volume and contact limits yields Eq.~\eqref{eq:ch2.grad-grad-PV-pairing}.
+The isotropic coefficient $-\delta_{ij}/3$ is geometry-specific: it is the spherical centred source dyad of Eq.~\eqref{eq:ch2.yaghjian-source-dyad-sphere}, not a universal constant for non-spherical excluded volumes \cite{yaghjian1978,yaghjian1980source}.
+Both sides carry dimensions m$^{-3}$, consistent with the scalar delta paired with a second-rank tensor identity.
+\end{proof}
+For the Helmholtz kernel $G_0=e^{-\jj k_0 R}/(4\pi R)$ under $\eim$,
+\begin{equation}
+\label{eq:ch2.helmholtz-static-dynamic-split}
+G_0(\mathbf{r},\mathbf{r}')
+=
+\frac{1}{4\pi R}
++\frac{e^{-\jj k_0 R}-1}{4\pi R},
+\end{equation}
+where $G_{\mathrm{dyn}}=(e^{-\jj k_0 R}-1)/(4\pi R)$ is $C^{1}$ at $R=0$ (bounded limit $-\jj k_0/(4\pi)$) and $C^{2}$ away from the origin, so $\nabla\nabla G_{\mathrm{dyn}}$ is locally integrable in the punctured sense used below.
+Second derivatives of $G_{\mathrm{dyn}}$ therefore contribute at most finitely to interior-sphere fluxes at $\mathcal{O}(\varepsilon)$ and never produce a separate $\delta^{(3)}$ tensor under the spherical PV prescription \cite{yaghjian1978,tai1994}.
+The contact distribution in Eq.~\eqref{eq:ch2.grad-grad-1-over-R-distributional} arises from the electrostatic $1/R$ piece alone;
+dynamic corrections enter Eq.~\eqref{eq:ch2.dyadic-inner-sphere-flux-column} through $e^{-\jj k_0\varepsilon}=1-\jj k_0\varepsilon+\mathcal{O}(\varepsilon^{2})$ on $\partial B_\varepsilon$.
+The distributional relation Eq.~\eqref{eq:ch2.grad-grad-1-over-R-distributional} and the geometry-dependent source dyad $\overline{\overline L}$ in the principal-volume field representation are two languages for the same spherical centred contact physics; the macroscopic field is unique when singular convolution and source-dyad terms are counted exactly once \cite{yaghjian1978,yaghjian1980source}.
+Physically, excluding a small ball around a mesh self-cell implements the same regularization a reader expects from reactive near-zone storage: transverse radiation still decouples at large $r$, while longitudinal self-fields remain confined to the source region until $\Pi_{\mathrm{rad}}$ is applied in Section~\ref{sec:ch25}.
+\begin{theorem}[Distributional fundamental dyad at coincidence --- vacuum Lorenz construction]
 \label{thm:ch2.dyadic-distributional-fundamental}
-For the outgoing vacuum kernels $G_0$ and $\overline{\mathbf{G}}_{E,0}$ under $\eim$,
+For the outgoing vacuum kernels $G_0$ and $\overline{\mathbf{G}}_{E,0}$ from
+Eqs.~\eqref{eq:ch2.free-space-scalar-green} and~\eqref{eq:ch2.free-space-dyadic-green} under $\eim$,
+with $\overline{\mathbf{G}}_{E,0}$ the Lorenz-gauge electric dyad of Proposition~\ref{prop:ch2.dyadic-curl-curl-green},
 the scalar identity is Eq.~\eqref{eq:ch2.scalar-green-distributional} from
 Proposition~\ref{prop:ch2.scalar-green-vacuum}, and
 \begin{equation}
@@ -41,6 +157,11 @@ Proposition~\ref{prop:ch2.scalar-green-vacuum}, and
 =\overline{\mathbf{I}}\,\delta^{(3)}(\mathbf{r}-\mathbf{r}')
 \end{equation}
 in $\mathcal{D}'(\mathbb{R}^{3})$, with $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^{2}$.
+The conclusion holds for test fields $\mathbf{f}\in C_c^{\infty}(\mathbb{R}^{3})^{3}$ and uses the interior-sphere
+limit on $V_\varepsilon=B_{R_\varepsilon}\setminus B_\varepsilon(\mathbf{r}')$ with outward normal on
+$\partial B_\varepsilon(\mathbf{r}')$ pointing away from $\mathbf{r}'$ \cite{tai1994,stratton1941}.
+The interior-sphere limit is the spherical principal-volume prescription of Eq.~\eqref{eq:ch2.yaghjian-source-dyad-sphere}.
+It does not by itself establish coincident evaluation for non-Lorenz dyadic definitions, non-spherical excluded volumes, or layered media.
 \end{theorem}
 \begin{proof}
 \emph{Homogeneous region.} For $R>0$, Eqs.~\eqref{eq:ch2.scalar-green-distributional} and
@@ -71,20 +192,141 @@ Green's second identity on $B_\varepsilon$ gives
 \end{equation}
 with outward normal $n$ on $\partial B_\varepsilon(\mathbf{r}')$, reproducing the scalar fundamental mass
 \cite{jackson1999,stratton1941}.
-For the dyadic column $\mathbf{G}_{E,0}^{(a)}$, the Lorenz reduction ties the transverse $e^{-\jj k_0\varepsilon}/(4\pi\varepsilon)$
-part of $\mathbf{E}^{(a)}$ to the same $1/\varepsilon$ flux; the longitudinal $\nabla(\nabla\cdot\mathbf{A})$ term
-cancels in the distributional limit because $\nabla\cdot\mathbf{J}=-\jj\omega\rho$ at coincidence enforces the scalar
-$\delta^{(3)}$ partner already established for $G_0$ \cite{tai1994,stratton1941}.
-The interior boundary contribution therefore satisfies
-$\oint_{\partial B_\varepsilon}\boldsymbol{\mathcal{S}}\cdot d\mathbf{S}\to f_a(\mathbf{r}')$ as $\varepsilon\to 0^{+}$,
-and summing $a=x,y,z$ yields the test pairing against $\overline{\mathbf{I}}\delta^{(3)}(\mathbf{r}-\mathbf{r}')$
-\cite{stratton1941,jackson1999}.
-The longitudinal $\nabla(\nabla\cdot\mathbf{A})$ pieces in the Lorenz reduction do not add a separate tensor
-$\delta^{(3)}$ mass because charge continuity and the scalar $\delta^{(3)}$ already enforce
-$\nabla\cdot\mathbf{J}=-\jj\omega\rho$ at coincidence \cite{stratton1941}.
+For the dyadic column $\mathbf{G}_{E,0}^{(a)}$, expand the Lorenz field $\mathbf{E}^{(a)}$ of Step~4 in
+Subsection~\ref{sec:ch231} as $\mathbf{G}_{E,0}^{(a)}=\mu_0\!\left[\jj\omega\mathbf{A}^{(a)}+\nabla\phi^{(a)}/(\jj\omega\varepsilon_0)\right]$
+with $\mathbf{A}^{(a)}=G_0\mathbf{e}_a$ and $\phi^{(a)}=(\mu_0/\varepsilon_0)\,\partial_a G_0$.
+Using $\nabla\times\nabla\times=\nabla\nabla\cdot-\nabla^{2}$ componentwise,
+\begin{equation}
+\label{eq:ch2.column-vector-laplacian-split}
+\nabla\times\nabla\times\mathbf{G}_{E,0}^{(a)}
+=\nabla\big(\nabla\cdot\mathbf{G}_{E,0}^{(a)}\big)-\nabla^{2}\mathbf{G}_{E,0}^{(a)},
+\end{equation}
+the leading $1/\varepsilon$ flux on $\partial B_\varepsilon(\mathbf{r}')$ comes from the transverse piece
+proportional to $G_0\mathbf{e}_a$.
+The longitudinal Lorenz piece $\nabla\phi^{(a)}$ expands in $\nabla\nabla G_0$ whose electrostatic part pairs with
+Proposition~\ref{prop:ch2.grad-grad-PV-proof}: the isotropic $-\frac{1}{3}\delta_{ij}\delta^{(3)}$ contact is accounted
+in the spherical interior-sphere limit together with the transverse flux, not as an extra $\overline{\mathbf{I}}\delta^{(3)}$ pasted onto Eq.~\eqref{eq:ch2.free-space-dyadic-green}.
+Charge continuity $\nabla\cdot\Jimp=-\jj\omega\rho$ pairs the longitudinal term with the scalar identity
+Eq.~\eqref{eq:ch2.scalar-interior-sphere-limit} so that only the vector impulse $\overline{\mathbf{I}}\delta^{(3)}$ remains in
+$\mathcal{W}_{E,\omega}\overline{\mathbf{G}}_{E,0}$ \cite{tai1994,stratton1941,yaghjian1978}.
+The interior sphere contribution therefore reproduces $f_a(\mathbf{r}')$ in Eq.~\eqref{eq:ch2.dyadic-green-ibp}, not a separate
+longitudinal tensor source.
+\emph{Columns $a\in\{x,y,z\}$ on $\partial B_\varepsilon(\mathbf{r}')$.}
+On $V_\varepsilon$ the punctured observation point approaches the source only through the excluded sphere
+$|\mathbf{r}-\mathbf{r}'|=\varepsilon$.
+Take the outward unit normal $\hat{\mathbf{n}}=\widehat{\mathbf{R}}$ on $\partial B_\varepsilon(\mathbf{r}')$ directed from
+$\mathbf{r}'$ toward $\mathbf{r}$, so $\mathbf{r}=\mathbf{r}'+\varepsilon\hat{\mathbf{n}}$,
+$R=\varepsilon$, $G_0=e^{-\jj k_0\varepsilon}/(4\pi\varepsilon)=1/(4\pi\varepsilon)+\mathcal{O}(\varepsilon)$, and
+$\partial_n G_0=\hat{\mathbf{n}}\cdot\nabla G_0=-1/(4\pi\varepsilon^2)+\mathcal{O}(\varepsilon)$.
+In Lorenz gauge the impressed columns satisfy $\mathbf{A}^{(a)}=G_0\mathbf{e}_a$ and
+$\mathbf{G}_{E,0}^{(a)}=\mu_0\jj\omega\,G_0\mathbf{e}_a+\nabla\phi^{(a)}/(\jj\omega\varepsilon_0)$ with
+$\phi^{(a)}=(\mu_0/\varepsilon_0)\partial_a G_0$ \cite{stratton1941,tai1994}.
+The reactive gradients of $\phi^{(a)}$ contribute only to $\nabla(\nabla\cdot\mathbf{G}_{E,0}^{(a)})$ in
+Eq.~\eqref{eq:ch2.column-vector-laplacian-split}; their interior-sphere flux is $\mathcal{O}(\varepsilon)$ when paired with smooth
+$\mathbf{f}$ and the electrostatic contact tensor is accounted through Proposition~\ref{prop:ch2.grad-grad-PV-proof}, not as an
+extra $\overline{\mathbf{I}}\delta^{(3)}$ pasted onto Eq.~\eqref{eq:ch2.free-space-dyadic-green}.
+At leading order $\mathbf{G}_{E,0}^{(a)}\sim\mu_0\jj\omega\,G_0\mathbf{e}_a$ and the $R^{-2},R^{-3}$ pieces in
+Eqs.~\eqref{eq:ch2.dyadic-column-x-explicit} and the cyclic $y$-, $z$-columns are subleading on $\partial B_\varepsilon$.
+
+\emph{Column $a=x$.}
+Equation~\eqref{eq:ch2.dyadic-column-x-explicit} gives, at leading order on $\partial B_\varepsilon$,
+$\mathbf{G}_{E,0}^{(x)}\sim\mu_0\jj\omega\,G_0\mathbf{e}_x$ with $G_0\sim(4\pi\varepsilon)^{-1}$.
+For $\mathbf{f}=\mathbf{e}_x f$ with $f$ smooth near $\mathbf{r}'$,
+\[
+\mathbf{f}\cdot\partial_n\mathbf{G}_{E,0}^{(x)}
+-\partial_n\mathbf{f}\cdot\mathbf{G}_{E,0}^{(x)}
+\sim
+\frac{f(\mathbf{r}')}{4\pi\varepsilon^{2}},
+\]
+because $\mathbf{e}_x\cdot\mathbf{e}_x=1$ and $\partial_n\mathbf{f}$ is bounded on the shrinking sphere.
+Substituting $\mathcal{W}_{E,\omega}\mathbf{f}=\mathbf{e}_x$ in Eq.~\eqref{eq:ch2.dyadic-green-ibp} gives flux
+$f_x(\mathbf{r}')$ after $\oint dS=4\pi\varepsilon^2$, with the $\mu_0\jj\omega$ scale carried consistently through
+$\boldsymbol{\mathcal{S}}$ as in the scalar limit Eq.~\eqref{eq:ch2.scalar-interior-sphere-limit}.
+
+\emph{Column $a=y$.}
+By the same steps with $\mathbf{e}_y$ in place of $\mathbf{e}_x$,
+\[
+\mathbf{f}\cdot\partial_n\mathbf{G}_{E,0}^{(y)}
+-\partial_n\mathbf{f}\cdot\mathbf{G}_{E,0}^{(y)}
+\sim
+\frac{f(\mathbf{r}')}{4\pi\varepsilon^{2}},
+\qquad \mathbf{f}=\mathbf{e}_y f,
+\]
+yielding $f_y(\mathbf{r}')$ in the inner-sphere pairing.
+
+\emph{Column $a=z$.}
+With $\mathbf{f}=\mathbf{e}_z f$,
+\[
+\mathbf{f}\cdot\partial_n\mathbf{G}_{E,0}^{(z)}
+-\partial_n\mathbf{f}\cdot\mathbf{G}_{E,0}^{(z)}
+\sim
+\frac{f(\mathbf{r}')}{4\pi\varepsilon^{2}}
+\]
+at leading order.
+Therefore
+\begin{equation}
+\label{eq:ch2.dyadic-inner-sphere-flux-column}
+\lim_{\varepsilon\to 0^{+}}
+\oint_{|\mathbf{r}-\mathbf{r}'|=\varepsilon}
+\Big(\mathbf{f}\cdot\partial_{n}\mathbf{G}_{E,0}^{(a)}
+-\partial_{n}\mathbf{f}\cdot\mathbf{G}_{E,0}^{(a)}\Big)\,dS
+=f_a(\mathbf{r}'),
+\qquad a\in\{x,y,z\},
+\end{equation}
+with $\partial_{n}=\hat{\mathbf{n}}\cdot\nabla$ and the integrand the same $\boldsymbol{\mathcal{S}}$ pairing as in
+Eq.~\eqref{eq:ch2.dyadic-green-ibp} \cite{jackson1999,stratton1941}.
+Equation~\eqref{eq:ch2.dyadic-inner-sphere-flux-column} is the vector analogue of
+Eq.~\eqref{eq:ch2.scalar-interior-sphere-limit}: the $1/\varepsilon$ part of $G_0$ forces the $1/\varepsilon^2$
+normal flux of the impressed column, while $\partial_{n}\mathbf{f}$ stays bounded on the fixed test function.
+Summing the three Cartesian column pairings yields
+\begin{equation}
+\label{eq:ch2.dyadic-test-pairing-columns}
+\int_{\mathbb{R}^{3}}\mathbf{f}(\mathbf{r})\cdot\mathcal{W}_{E,\omega}\mathbf{G}_{E,0}^{(a)}(\mathbf{r},\mathbf{r}')\,d^{3}\mathbf{r}
+=f_a(\mathbf{r}'),
+\qquad a\in\{x,y,z\},
+\end{equation}
+so $\mathcal{W}_{E,\omega}\overline{\mathbf{G}}_{E,0}=\overline{\mathbf{I}}\delta^{(3)}$ in $\mathcal{D}'$ \cite{stratton1941,jackson1999}.
+\emph{Componentwise column $a=x$.} With $\mathbf{R}=\mathbf{r}-\mathbf{r}'$, $\widehat{\mathbf{R}}=\mathbf{R}/R$, and
+$f(\mathbf{r})\in C_c^{\infty}(\mathbb{R}^{3})$, Eq.~\eqref{eq:ch2.free-space-dyadic-green} defines the $x$-directed
+impressed column by left action on $\mathbf{e}_x$:
+\begin{equation}
+\label{eq:ch2.dyadic-column-x-explicit}
+\mathbf{G}_{E,0}^{(x)}(\mathbf{r},\mathbf{r}')
+=
+\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{r}')\cdot\mathbf{e}_x
+=
+\frac{e^{-\jj k_0 R}}{4\pi R}
+\left[
+\mathbf{e}_x-\widehat{\mathbf{R}}\big(\widehat{\mathbf{R}}\cdot\mathbf{e}_x\big)
++\left(\frac{1}{\jj k_0 R}-\frac{1}{k_0^{2}R^{2}}\right)
+\Big(\mathbf{e}_x-3\,\widehat{\mathbf{R}}\big(\widehat{\mathbf{R}}\cdot\mathbf{e}_x\big)\Big)
+\right],
+\qquad R>0,
+\end{equation}
+with analogous columns $\mathbf{G}_{E,0}^{(y)}=\overline{\mathbf{G}}_{E,0}\cdot\mathbf{e}_y$ and
+$\mathbf{G}_{E,0}^{(z)}=\overline{\mathbf{G}}_{E,0}\cdot\mathbf{e}_z$ \cite{stratton1941,tai1994}.
+For $R>0$, apply $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^{2}$ at the observation point:
+$\nabla\times\nabla\times\mathbf{G}_{E,0}^{(x)}=\nabla(\nabla\cdot\mathbf{G}_{E,0}^{(x)})-\nabla^{2}\mathbf{G}_{E,0}^{(x)}$.
+Each Cartesian piece is a linear combination of $G_0$ and its gradients; away from the singularity
+$(\nabla^{2}+k_0^{2})G_0=0$, and the longitudinal $\nabla(\nabla\cdot\mathbf{G}_{E,0}^{(x)})$ cancels the
+remaining $k_0^{2}$ term in Lorenz form \cite{tai1994,stratton1941}, so
+$\mathcal{W}_{E,\omega}\mathbf{G}_{E,0}^{(x)}=\mathbf{0}$ as in Eq.~\eqref{eq:ch2.column-curl-curl-check}.
+At $R\to 0^{+}$, only the transverse $e^{-\jj k_0 R}/(4\pi R)$ part of $\mathbf{G}_{E,0}^{(x)}$ contributes the
+$1/\varepsilon$ flux in Eq.~\eqref{eq:ch2.dyadic-inner-sphere-flux-column}; the $R^{-2}$ and $R^{-3}$ reactive terms
+are subleading on $\partial B_\varepsilon(\mathbf{r}')$ and do not add a second distributional tensor source
+\cite{tai1994,jackson1999}. For $a=y,z$ the same interior-sphere flux reproduces $f_y,f_z$, completing the three-column
+pairing \cite{tai1994}. Layered media or non-Lorenz gauge dyads remain outside the present theorem.
+Columns $a=y,z$ follow by cyclic permutation of Cartesian labels.
 \end{proof}
 Physically, the $\delta^{(3)}$ term is the idealized impressed dipole source; finite patches regularize the same mass over
 $\operatorname{supp}\Jimp$ rather than a mathematical point \cite{stratton1941}.
+For a laboratory observer, the distinction among (i)--(iii) is concrete: the tabulated dyad answers what field a distant
+probe sees from an offset dipole; the distributional identity fixes how that kernel must be tested when $\mathbf{r}\to\mathbf{r}'$ in
+equations; the principal-volume convolution is what a mesh or MoM patch integral implements when it excludes a small ball around
+each self-term before applying Eq.~\eqref{eq:ch2.electric-dyadic-convolution} \cite{yaghjian1978,harrington2001}.
+The longitudinal contact in Proposition~\ref{prop:ch2.grad-grad-PV-proof} is the price of differentiating the $1/R$ Coulomb potential
+inside the source region: it is reactive, not radiative, and cancels in far-zone flux meters that select outgoing transverse content
+through $\Pi_{\mathrm{rad}}$ in Chapter~\ref{ch:02} and Section~\ref{sec:ch24}.
 For \(\mathbf{r}\notin\operatorname{supp}\Jimp\), the convolution
 Eq.~\eqref{eq:ch2.electric-dyadic-convolution} is a classical integral. What happens when
 observation and source points become arbitrarily close? The free-space dyad develops a

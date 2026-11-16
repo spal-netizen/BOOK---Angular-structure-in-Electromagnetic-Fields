@@ -1,0 +1,36 @@
+% §2.3 expanded — function spaces, adjoints, Fredholm structure
+
+\subsection{Domains, traces, and dual pairings}
+\label{sec:ch02.3.1}
+
+The impressed current $\Jimp$ is not an arbitrary vector function on $\Omega_s$. Charge continuity Eq.~\eqref{eq:ch2.charge-continuity-derived} ties $\divg\Jimp$ to $\rho$, and the curl structure of Maxwell's equations requires that $\curl\E$ and $\curl\H$ be square-integrable wherever material coefficients are bounded \cite{stratton1941}. The Sobolev space
+\begin{equation}
+\label{eq:ch2.Hcurl-def}
+\HCurl(\Omega)=\{\mathbf{u}\in L^2(\Omega)^3:\ \curl\mathbf{u}\in L^2(\Omega)^3\}
+\end{equation}
+models electric fields with finite magnetic energy density $\|\curl\E\|_{L^2}^2$ on bounded domains \cite{stratton1941}. Tangential traces $\hat{\mathbf{n}}\times\E|_\Gamma$ and $\hat{\mathbf{n}}\times\H|_\Gamma$ on the boundary $\Gamma=\partial\Omega$ are the quantities constrained by perfect conductors, impedance sheets, and exterior outgoing conditions (Chapter~\ref{ch:01}, Section~\ref{sec:ch01.1.2}).
+
+For impressed sources, $\mathcal{J}_\Omega\subset L^2(\Omega_s)^3$ denotes square-integrable currents on compact support that satisfy admissibility and continuity. The solution map $\mathcal{S}_\omega$ in Eq.~\eqref{eq:ch2.Somega-def} is a continuous linear map on this class when the boundary-value problem is well posed \cite{stratton1941}. Duality pairings $\langle\cdot,\cdot\rangle$ between source space and field space enter when adjoints are defined: the adjoint $\mathcal{R}_\omega^{\dagger}$ answers which far-zone test directions couple to zero source image under the chosen inner product---orthogonal, in the dual sense, to every radiative pattern the source can produce \cite{harrington2001}.
+
+\subsection{Compactness and Fredholm structure}
+\label{sec:ch02.3.2}
+
+When $\mathcal{R}_\omega$ is restricted to fields observed on a bounded surface---a sphere $\Gamma_R$, a scan plane, or a finite probe array---the map from sources to observations often behaves as a \emph{compact} operator on Hilbert spaces: sequences of unit-norm sources map to field sequences that converge in norm \cite{stratton1941}. Compactness is not an abstract curiosity; it expresses that a finite observation shell cannot resolve infinitely many independent spatial degrees of freedom of the source \cite{chu1948,harrington2001}. Fredholm theory then applies: the operator has a countable singular system, a possibly nontrivial kernel, and a closed range with finite-dimensional cokernel \cite{stratton1941}.
+
+For radiation from bounded $\Omega_s$ to a sphere at fixed $R$, $\ker\mathcal{R}_\omega$ is typically infinite-dimensional on open domains: non-radiating currents are not exhausted by any finite modal truncation (Section~\ref{sec:ch02.8}). Compact observation maps $\Qomega$ further reduce recoverable rank. Existence of a source that reproduces a \emph{target} far pattern requires compatibility with the range of $\mathcal{R}_\omega$; uniqueness holds only modulo $\ker\mathcal{R}_\omega$. Chapter~\ref{ch:04} treats realizability; here we record that invertibility of abstract radiation operators is never universal---it depends on domain, boundary class, frequency, and outgoing selection \cite{colton1992,devaney2004}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (j) {$\mathcal{J}_\Omega$};
+ \node[ch1box, right=7mm of j] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (y) {Far-zone / probe data};
+ \node[ch1box, below=6mm of j] (k) {$\ker\mathcal{R}_\omega$};
+ \draw[ch1flow] (j) -- (r) -- (y);
+ \draw[ch1flow,dashed] (k.north) -- (j.south);
+\end{tikzpicture}%
+}
+\caption{Forward radiation map and its kernel: additions in $\ker\mathcal{R}_\omega$ leave far-zone radiative data unchanged while altering local fields.}
+\label{fig:ch2.fredholm-radiation-map}
+\end{figure}

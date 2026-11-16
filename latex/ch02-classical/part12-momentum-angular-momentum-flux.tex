@@ -1,0 +1,98 @@
+% R1d-A/B — momentum and angular-momentum flux on the radiative branch
+
+\subsection{Energy, Momentum, and Angular Momentum in Radiation}
+\label{sec:ch02.5b}
+
+Radiated power through a distant sphere answers how much energy leaves the source region per unit time (Section~\ref{sec:ch02.5.3}). The same outgoing transverse field carries linear and angular momentum: an absorbing target experiences radiation pressure, and structured polarization or phase can exert torque about an axis \cite{poynting1884,maxwell1873,stratton1941}. Chapter~\ref{ch:01} developed the complex Poynting vector $\mathbf{S}=\tfrac12\E\times\H^*$ and the Maxwell stress tensor $\mathbf{T}$ of Eq.~\eqref{eq:ch1.maxwell-stress}, together with angular flux through $\mathbf{M}=\mathbf{r}\times\mathbf{T}$ (Section~\ref{sec:ch01.1.5}). Here those objects are evaluated on the \emph{radiative} field pair selected by $\mathcal{R}_\omega$, not on the full reactive near-zone field $\mathcal{S}_\omega[\Jimp]$ \cite{stratton1941,harrington2001}.
+
+\subsection{Radiative Poynting and stress functionals}
+\label{sec:ch02.5b.1}
+
+Let $(\E_{\mathrm{rad}},\H_{\mathrm{rad}})=\mathcal{R}_\omega[\Jimp]$ denote the outgoing radiative image of admissible current $\Jimp$. Define
+\begin{equation}
+\label{eq:ch2.poynting-functional-radiative}
+\mathbf{S}_{\mathrm{rad}}[\Jimp]
+=
+\frac{1}{2}\,\E_{\mathrm{rad}}\times\H_{\mathrm{rad}}^{*},
+\end{equation}
+with $\mathbf{S}_{\mathrm{rad}}$ in W/m$^2$ under the harmonic representation of Eq.~\eqref{eq:ch2.real-time-fields}. Time-averaged power through a sphere $S_r$ of radius $r$ (m) and outward unit normal $\hat{\mathbf{r}}=\mathbf{r}/r$ is
+\begin{equation}
+\label{eq:ch2.flux-on-radiative-branch}
+P_{\mathrm{rad}}(r)
+=
+\Re\oint_{S_r}\hat{\mathbf{r}}\cdot\mathbf{S}_{\mathrm{rad}}[\Jimp]\,dS,
+\end{equation}
+which coincides with Eq.~\eqref{eq:ch2.radiated-power} when $(\E,\H)$ in that display is replaced by $(\E_{\mathrm{rad}},\H_{\mathrm{rad}})$ \cite{poynting1884,stratton1941}. Integrating $\mathbf{S}[\mathcal{S}_\omega[\Jimp]]$ before $k_0 r\gg1$ imports reactive circulation that does not represent steady export to infinity \cite{harrington2001}.
+
+The Maxwell stress functional on the radiative branch is
+\begin{equation}
+\label{eq:ch2.stress-functional-radiative}
+\mathbf{T}_{\mathrm{rad}}[\Jimp]
+=
+\mathbf{T}(\E_{\mathrm{rad}},\H_{\mathrm{rad}}),
+\end{equation}
+where $\mathbf{T}(\cdot,\cdot)$ is the vacuum stress map of Eq.~\eqref{eq:ch1.maxwell-stress}. The traction $\mathbf{t}=\mathbf{T}_{\mathrm{rad}}\cdot\hat{\mathbf{n}}$ is the time-averaged mechanical force per unit area on a test surface with normal $\hat{\mathbf{n}}$ \cite{maxwell1873,stratton1941}. Angular momentum flux density about the origin uses
+\begin{equation}
+\label{eq:ch2.angular-flux-density}
+\mathbf{M}_{\mathrm{rad}}[\Jimp]
+=
+\mathbf{r}\times\mathbf{T}_{\mathrm{rad}}[\Jimp],
+\end{equation}
+with $\mathbf{r}$ the position vector (m) from the chosen origin; changing origin adds a transport term for linear momentum crossing the surface, so torque reports must state $\mathbf{r}_0$ explicitly \cite{stratton1941,beth1936}.
+
+\subsection{Linear momentum export in the far zone}
+\label{sec:ch02.5b.2}
+
+Net time-averaged linear momentum leaving the interior of $S_r$ through radiation is
+\begin{equation}
+\label{eq:ch2.momentum-flux-functional}
+\mathbf{F}_{\mathrm{rad}}(r)
+=
+\Re\oint_{S_r}\mathbf{T}_{\mathrm{rad}}[\Jimp]\cdot\hat{\mathbf{r}}\,dS,
+\end{equation}
+in newtons, inherited from the surface form of Eq.~\eqref{eq:ch1.linear-momentum-balance} for source-free exterior regions \cite{maxwell1873,stratton1941}. When $k_0 r\gg1$ and $(\E_{\mathrm{rad}},\H_{\mathrm{rad}})$ are in the outgoing transverse class of Section~\ref{sec:ch02.5.2}, $\H_{\mathrm{rad}}=\hat{\mathbf{r}}\times\E_{\mathrm{rad}}/\eta_0$ to leading order. Substituting this relation into Eq.~\eqref{eq:ch1.maxwell-stress} and keeping only terms whose Poynting partner scales as $1/r^2$ on $S_r$ gives
+\begin{equation}
+\label{eq:ch2.far-zone-momentum-flux}
+\mathbf{F}_{\mathrm{rad}}(r)
+=
+\frac{1}{c}\,\hat{\mathbf{r}}\,P_{\mathrm{rad}}(r)
+\;+\;\mathcal{O}(r^{-1}),
+\end{equation}
+with $c=(\mu_0\varepsilon_0)^{-1/2}$ (m/s) \cite{stratton1941,jackson1999}. Eq.~\eqref{eq:ch2.far-zone-momentum-flux} is the far-zone form of the energy--momentum directionality relation of Chapter~\ref{ch:01}: radiative energy flux and radiative momentum flux point along $\hat{\mathbf{r}}$ with magnitude ratio $1/c$ in vacuum. It is an \emph{asymptotic} identity for the radiative branch, not an exact statement for reactive fields in the near shell.
+
+\subsection{Angular-momentum flux}
+\label{sec:ch02.5b.3}
+
+Time-averaged angular momentum flux through $S_r$ is
+\begin{equation}
+\label{eq:ch2.angular-momentum-flux-vector}
+\mathbf{J}_{\mathrm{rad}}(r)
+=
+\Re\oint_{S_r}\mathbf{M}_{\mathrm{rad}}[\Jimp]\cdot\hat{\mathbf{r}}\,dS,
+\end{equation}
+with units kg$\cdot$m$^2$/s in SI when using standard mechanical interpretations of $\mathbf{T}$ \cite{stratton1941}. Torque about unit axis $\hat{\mathbf{u}}$ follows
+\begin{equation}
+\label{eq:ch2.angular-flux-functional}
+\tau_{\hat{\mathbf{u}}}(r)
+=
+-\hat{\mathbf{u}}\cdot\mathbf{J}_{\mathrm{rad}}(r),
+\end{equation}
+specializing the torque observable of Chapter~\ref{ch:01} (Eq.~\eqref{eq:ch1.torque-observable}) to harmonic steady state on the radiative branch \cite{beth1936,stratton1941}. A spiral phase pattern on $S_r$ does not by itself prove net angular-momentum export: counter-propagating or counter-rotating contributions can cancel flux while leaving visible structure, as Chapter~\ref{ch:01} emphasizes for qualified transport claims \cite{allen1992,stratton1941}.
+
+Chapter~\ref{ch:03} develops angular-momentum operators and vector spherical modes that organize $\mathbf{J}_{\mathrm{rad}}$ by definite transformation properties under rotation. Here the essential point is continuity: radiation that carries directional energy generically carries directional momentum and, when fields are not invariant under rotation about an axis, angular momentum as well \cite{stratton1941,jackson1999}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \draw[ch1shell] (0,0) circle (0.85);
+ \node[ch1box] at (0,0) {Source};
+ \draw[->,thick] (0.85,0) -- (1.35,0) node[right,font=\scriptsize] {$\hat{\mathbf{r}}\cdot\mathbf{S}_{\mathrm{rad}}$};
+ \draw[->,thick] (0.6,0.6) -- (1.0,1.0) node[above,font=\scriptsize] {$\mathbf{T}_{\mathrm{rad}}\cdot\hat{\mathbf{r}}$};
+\end{tikzpicture}%
+}
+\caption{Flux meters on sphere $S_r$: radiative Poynting flux fixes $P_{\mathrm{rad}}$; radiative Maxwell stress fixes momentum export Eq.~\eqref{eq:ch2.momentum-flux-functional}; $\mathbf{r}\times\mathbf{T}_{\mathrm{rad}}$ fixes angular-momentum flux Eq.~\eqref{eq:ch2.angular-momentum-flux-vector}.}
+\label{fig:ch2.momentum-flux-sphere}
+\end{figure}
+
+The Hertzian dipole (Section~\ref{sec:ch02.5.4}) illustrates the hierarchy: at $k_0 r\gg1$, $P_{\mathrm{rad}}$ is finite while $\mathbf{F}_{\mathrm{rad}}$ points along the dominant radiation direction; angular-momentum flux depends on polarization and coordinate origin and becomes a nontrivial laboratory quantity for structured beams, treated systematically later \cite{jackson1999,stratton1941}.

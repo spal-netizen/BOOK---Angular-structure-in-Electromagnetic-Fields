@@ -1,36 +1,65 @@
-% §2.8–2.9 — non-radiating sources, reciprocity
+% §2.8–2.9 — non-radiating sources, reciprocity, inverse problems
 
 \section{Non-Radiating Sources and Null Spaces}
 \label{sec:ch02.8}
 
-Can a nonzero current distribution produce a nonzero Maxwell field while radiating no power to infinity? Yes. A loop carrying equal and opposite currents on closely spaced arms, or certain closed reactive configurations, can support substantial near-zone $\E$ and $\H$ while the leading outgoing transverse field vanishes \cite{harrington2001,devaney2004}. Operationally, ``non-radiating'' means: the far-zone pattern meters read zero after outgoing selection, not that the source is zero.
-
-Mathematically, such currents lie in the null space of the radiation operator:
+Two admissible sources $\Jimp_1$ and $\Jimp_2$ may differ throughout $\Omega_s$ yet produce identical far-zone radiative patterns after outgoing selection. The physical question is therefore not whether sources are unique, but whether radiation measurements determine sources uniquely. If $\mathcal{R}_\omega[\Jimp_1]=\mathcal{R}_\omega[\Jimp_2]$, linearity gives
 \begin{equation}
-\label{eq:ch2.ker-Romega}
+\label{eq:ch2.difference-null}
+\mathcal{R}_\omega[\Jimp_1-\Jimp_2]=\mathbf{0}\ \ \text{in}\ \mathcal{F}_{\mathrm{rad}},
+\end{equation}
+so $\Jimp_1-\Jimp_2$ belongs to the \emph{radiation null space}
+\begin{equation}
+\label{eq:ch2.ker-R-omega}
 \ker\mathcal{R}_\omega=\{\Jimp\in\mathcal{J}_\Omega:\mathcal{R}_\omega[\Jimp]=\mathbf{0}\ \text{in}\ \mathcal{F}_{\mathrm{rad}}\}.
 \end{equation}
-If $\Jimp_1\neq\Jimp_2$ but $\mathcal{R}_\omega[\Jimp_1]=\mathcal{R}_\omega[\Jimp_2]$, then $\Jimp_1-\Jimp_2\in\ker\mathcal{R}_\omega$. Source reconstruction from far data therefore determines $\Jimp$ only up to this null space; distinct sources can be \emph{equivalent} for radiation \cite{stratton1941,devaney2004}. The observation map $\Qomega$ inherits a larger null space:
-\begin{equation}
-\label{eq:ch2.ker-Qomega}
-\ker\Qomega\supseteq\ker\mathcal{R}_\omega,
-\end{equation}
-because finite probes cannot resolve all radiative degrees of freedom (Section~\ref{sec:ch01.5}).
+Membership in $\ker\mathcal{R}_\omega$ does \emph{not} require $\Jimp=\mathbf{0}$ or $\mathcal{S}_\omega[\Jimp]=\mathbf{0}$. A non-radiating source may support substantial reactive $\E$ and $\H$ near $\Omega_s$ while exporting no leading outgoing transverse field \cite{harrington2001,devaney2004}. The statements ``zero source,'' ``zero total field,'' ``zero far field,'' ``zero radiated power,'' and ``non-radiating source'' are not equivalent: only the last is defined by $\mathcal{R}_\omega[\Jimp]=\mathbf{0}$ in $\mathcal{F}_{\mathrm{rad}}$.
 
-Evanescent fields tied to near-zone storage are generally not radiative, but evanescent content alone is not the same concept as $\ker\mathcal{R}_\omega$: the null space is defined by vanishing \emph{outgoing radiative} export, not by locality of energy \cite{stratton1941}.
+\subsection{Inverse radiation and observability}
+\label{sec:ch02.8.1}
+
+The forward problem $\Jimp\mapsto\mathcal{R}_\omega[\Jimp]$ is well posed under the assumptions of Section~\ref{sec:ch02.4.2}. The inverse problem---recover $\Jimp$ from far-zone data---is ill posed whenever $\ker\mathcal{R}_\omega$ is nontrivial or $\Qomega$ has rank deficiency. Given measurement vector $\mathbf{y}\in\mathbb{C}^{N}$, any solution satisfies $\Qomega[\Jimp]=\mathbf{y}$ only up to $\ker\Qomega\supseteq\ker\mathcal{R}_\omega$. Weak observability (small singular values of $\mathcal{R}_\omega$ or $\Qomega$) must be distinguished from exact nullity: numerically small coupling is not the same as a mathematically zero radiative image \cite{devaney2004,harrington2001}.
+
+\subsection{Constructive non-radiating examples}
+\label{sec:ch02.8.2}
+
+A small balanced loop carrying uniform phasor current has vanishing electric dipole moment to leading order while supporting magnetic dipole and reactive $\E$, $\H$ within a wavelength of the wire \cite{stratton1941,jackson1999}. On a distant sphere, outgoing transverse flux from electric dipole radiation is absent; $\mathcal{R}_\omega[\Jimp]$ may vanish identically while near probes still record large fields.
+
+Two equal and opposite electric dipoles $\mathbf{p}$ and $-\mathbf{p}$ separated by distance $d\ll\lambda_0$ produce a far-zone electric field that scales as the \emph{difference} of two dipole patterns evaluated at slightly displaced phase centers. The leading $1/r$ term cancels when the separation is adjusted so that $k_0 d\ll1$ yet the quadrupole moment is negligible:
+\begin{equation}
+\label{eq:ch2.counter-dipole-cancel}
+\E_{\mathrm{far}}(\hat{\mathbf{r}})\propto
+e^{-\jj k_0 r}\,\frac{k_0^2}{r}\,
+\Big[e^{+\jj k_0 d\cos\theta/2}-e^{-\jj k_0 d\cos\theta/2}\Big]\,\hat{\boldsymbol\theta}\cdot\mathbf{p},
+\end{equation}
+which vanishes at $d=0$ in the idealized co-located limit. Finite $d$ breaks exact nullity: the far field is small when $k_0 d\ll1$ but not identically zero. Below-cutoff waveguide sections support standing reactive fields at ports while exporting no propagating power to exterior flux meters \cite{stratton1941}. Each example separates local Maxwell structure from qualified far-zone export.
+
+\subsection{Evanescent content versus radiation nullity}
+\label{sec:ch02.8.3}
+
+Evanescent fields can be large on a scan plane yet contribute nothing to $\Pi_{\mathrm{rad}}\mathcal{S}_\omega[\Jimp]$ (Section~\ref{sec:ch02.10.3}). That is field-side reactive storage, not membership in $\ker\mathcal{R}_\omega$. A single excitation can simultaneously carry evanescent overlap and a nonzero radiative image; conflating the two deficits leads to false claims of non-radiating behavior when scan data show high $k_t$ content \cite{hansen1988,devaney2004}.
 
 \section{Reciprocity}
 \label{sec:ch02.9}
 
-Lorentz reciprocity follows from Maxwell's equations and identifies how two source--field pairs couple. Let $(\E_1,\H_1,\Jimp_1)$ and $(\E_2,\H_2,\Jimp_2)$ be two harmonic states in a linear, reciprocal medium (typically vacuum or isotropic passive material with symmetric constitutive tensors). The standard vector identity
+\subsection{Derivation from Maxwell's equations}
+\label{sec:ch02.9.1}
+
+Consider two harmonic states in a linear, isotropic, reciprocal medium (vacuum constitutive relations suffice for the present chapter). State~1 carries $(\E_1,\H_1)$ driven by impressed $\Jimp_1$; state~2 carries $(\E_2,\H_2)$ driven by $\Jimp_2$. Maxwell's equations give $\curl\E_1=-\jj\omega\mu_0\H_1$, $\curl\H_1=\Jimp_1+\jj\omega\varepsilon_0\E_1$, and similarly for state~2. Expanding $\divg(\E_1\times\H_2)$ and substituting these relations yields Eq.~\eqref{eq:ch2.lorentz-integrand}:
 \begin{equation}
 \label{eq:ch2.lorentz-integrand}
 \divg\big(\E_1\times\H_2-\E_2\times\H_1\big)
-=\Jimp_1\cdot\E_2-\Jimp_2\cdot\E_1
+=\Jimp_1\cdot\E_2-\Jimp_2\cdot\E_1.
 \end{equation}
-follows from substituting Maxwell's equations for each state and expanding the divergence \cite{stratton1941,jackson1999}. Integrating over a volume $V$ containing both source supports and applying the divergence theorem yields a surface integral on $\partial V$ that vanishes under outgoing radiation conditions at infinity, leaving
+Integrating over a volume $V$ that encloses both supports and applying the divergence theorem gives
+\begin{equation}
+\label{eq:ch2.lorentz-surface-volume}
+\oint_{\partial V}\!\big(\E_1\times\H_2-\E_2\times\H_1\big)\cdot\hat{\mathbf{n}}\,dS
+=\int_V \big(\Jimp_1\cdot\E_2-\Jimp_2\cdot\E_1\big)\,dV.
+\end{equation}
+Take $\partial V$ as a sphere of radius $R$ enclosing the sources. Reactive near fields can make the surface integral $R$-dependent in the reactive shell; for outgoing transverse radiative fields, $\E$ and $\H$ scale as $1/R$ and $1/R$ with $\eta_0$ relation, so the integrand scales as $1/R^2$ while the area grows as $R^2$, yielding a finite limit that stabilizes for radiative content \cite{stratton1941}. In the standard exterior problem with outgoing conditions at infinity, the surface term selects the outward radiative flux and one obtains Lorentz reciprocity \cite{stratton1941,jackson1999}:
 \begin{equation}
 \label{eq:ch2.lorentz-reciprocity}
-\int_V \Jimp_1\cdot\E_2\,dV=\int_V \Jimp_2\cdot\E_1\,dV,
+\int_V \Jimp_1\cdot\E_2\,dV=\int_V \Jimp_2\cdot\E_1\,dV.
 \end{equation}
-the Lorentz reciprocity relation. Physically, the coupling measured when source~1 excites field~2 equals that when source~2 excites field~1, under the stated assumptions \cite{stratton1941}. Antenna transmission and reception coefficients inherit this symmetry when media are reciprocal and normalization is consistent \cite{harrington2001}. Reciprocity constrains coupling; it does not remove $\ker\mathcal{R}_\omega$ or $\ker\Qomega$.
+The result requires the stated medium symmetry and boundary class; nonreciprocal media (e.g.\ magnetized ferrites without symmetric permittivity tensors) need not satisfy Eq.~\eqref{eq:ch2.lorentz-reciprocity} \cite{stratton1941}. Physically, coupling from source~1 to field~2 equals coupling from source~2 to field~1 for reciprocal systems---the mathematical statement behind transmit--receive interchange in antenna measurements \cite{harrington2001}. Reciprocity constrains coupling but does not collapse $\ker\mathcal{R}_\omega$.

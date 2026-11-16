@@ -1,0 +1,52 @@
+% §2.7 expanded — singular values, aperture-limited observation
+
+\section{Finite Radiators and Spectral Limitations}
+\label{sec:ch02.7}
+
+A bounded source of characteristic dimension $a$ (m) cannot radiate arbitrary angular structure at wavelength $\lambda_0=2\pi/k_0$. Chu’s argument and the method-of-moments viewpoint express the same physical fact: electrical size $k_0 a$ constrains how rapidly phase and amplitude may vary on the radiation sphere before stored energy dominates \cite{chu1948,harrington2001}. When $\mathcal{R}_\omega$ is restricted to fields on a bounded observation surface and viewed as a compact operator on appropriate Hilbert spaces, its singular values decay: large singular values correspond to source directions that couple strongly to the radiative field; small singular values to weakly radiating directions; zero singular values to $\ker\mathcal{R}_\omega$ \cite{stratton1941}. \emph{Effective rank} counts singular values above a noise threshold; it is not identical to mathematical rank. Chapter~\ref{ch:04} develops realizability and synthesis; here we record that finite geometry imposes understandable angular bandwidth limits after the plane-wave spectrum of Section~\ref{sec:ch02.10}.
+
+\subsection{Singular values as radiative channel strengths}
+\label{sec:ch02.7.1}
+
+Two linearly independent impressed currents $\Jimp^{(1)}$ and $\Jimp^{(2)}$ on the same support need not produce far-zone fields of equal magnitude or equal distinguishability. The radiation operator $\mathcal{R}_\omega$ may amplify one source direction and suppress another. When $\mathcal{R}_\omega$ (or the finite observation composition $\mathcal{K}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$) is compact on appropriate Hilbert spaces, the singular value decomposition provides an orthogonal set of \emph{source} directions $\{\mathbf{v}_n\}$ and matching \emph{field} directions $\{\mathbf{u}_n\}$ with
+\begin{equation}
+\label{eq:ch2.svd-radiation}
+\mathcal{R}_\omega\,\mathbf{v}_n=\sigma_n\,\mathbf{u}_n,
+\qquad
+\sigma_1\ge\sigma_2\ge\cdots\ge0.
+\end{equation}
+The scalar $\sigma_n$ (dimensionless after normalization, or carrying power-coupling units depending on inner products) measures how strongly excitation along $\mathbf{v}_n$ appears in the radiative image along $\mathbf{u}_n$ \cite{harrington2001}. Export eigenvalues $|\lambda_n|$ of Eq.~\eqref{eq:ch2.radiation-eigenpair-def} rank the same physics before finite $\mathcal{O}_{\mathrm{meas}}$ truncates the spectrum (Subsections~\ref{sec:ch02.7b.6}--\ref{sec:ch02.7b.7}). A large $\sigma_n$ is a channel that carries energy efficiently to the far zone; a zero $\sigma_n$ marks a non-radiating source direction in $\ker\mathcal{R}_\omega$; a small but nonzero $\sigma_n$ may be below measurement noise and therefore \emph{effectively} unobservable without being exactly null \cite{devaney2004}.
+
+\emph{Mathematical rank} counts exact zero singular values. \emph{Effective rank} counts singular values above a threshold set by instrument noise, calibration tolerance, or modeling error. Truncating a synthesis or inversion at the noise floor is a physical necessity, not merely a numerical convenience \cite{hansen1988}.
+
+\subsection{Finite measurement aperture}
+\label{sec:ch02.7.2}
+
+Let $\mathcal{O}_{\mathrm{meas}}$ restrict observation to a finite angular sector or a scan surface of limited extent. The composed map
+\begin{equation}
+\label{eq:ch2.Komega-def}
+\mathcal{K}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega
+\end{equation}
+has rank at most the number of independent probes and at most the effective rank of $\mathcal{R}_\omega$ on the declared bandlimit \cite{hansen1988}. A circular aperture of radius $a$ at wavelength $\lambda_0=2\pi/k_0$ cannot resolve angular structure finer than the diffraction scale $\sim\lambda_0/a$ on the radiation sphere: spatial bandlimit on the source translates to angular bandlimit on the pattern through Fourier structure \cite{stratton1941,chu1948}.
+
+Physically, sidelobes and superdirectivity attempts that push energy into sharp angular features pay reactive cost: the corresponding source distributions require rapid spatial phase variation on $\Omega_s$, which is incompatible with small $k_0 a$ unless stored energy grows \cite{chu1948}. The singular-value decay of aperture-limited operators makes this trade visible in spectral form---high-index modes couple weakly through $\mathcal{K}_\omega$ even when Maxwell allows them in $\mathcal{R}_\omega[\Jimp]$ \cite{harrington2001}.
+
+\begin{figure}[t]
+\centering
+\ChOneFigBlock{%
+\begin{tikzpicture}[ch1fig, node distance=5mm and 7mm]
+ \node[ch1box] (s) {Source on $\Omega_s$};
+ \node[ch1box, right=7mm of s] (r) {$\mathcal{R}_\omega$};
+ \node[ch1box, right=7mm of r] (a) {Finite aperture\\$\mathcal{O}_{\mathrm{meas}}$};
+ \node[ch1box, right=7mm of a] (d) {Data vector};
+ \draw[ch1flow] (s) -- (r) -- (a) -- (d);
+\end{tikzpicture}%
+}
+\caption{Finite aperture observation: only singular channels with $\sigma_n$ above the noise floor survive in the measured data vector.}
+\label{fig:ch2.aperture-limited-observation}
+\end{figure}
+
+\subsection{Compact circular aperture: spectral decay}
+\label{sec:ch02.7.3}
+
+For an idealized circular aperture of radius $a$ in an infinite ground plane radiating into a half space, classical antenna theory shows that higher-order angular modes on the aperture are increasingly difficult to excite while maintaining low reactive energy \cite{harrington2001,chu1948}. In operator language, the singular values $\sigma_n$ of the corresponding radiation or observation map decay rapidly once the mode index exceeds the scale set by $k_0 a$. This decay is the mathematical signature of \emph{spatial bandwidth}: a bounded source cannot arbitrarily prescribe every angular detail on $S^2$ \cite{stratton1941}. Chapter~\ref{ch:04} develops realizability constraints; here the lesson is forward: $\mathcal{R}_\omega$ and $\mathcal{K}_\omega$ have predictable spectral compression tied to geometry and frequency.

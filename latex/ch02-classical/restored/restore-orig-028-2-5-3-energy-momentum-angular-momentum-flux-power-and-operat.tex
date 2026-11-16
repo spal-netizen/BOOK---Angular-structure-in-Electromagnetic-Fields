@@ -1,16 +1,13 @@
 % Stage 8 restored fragment — 2.5.3 Energy, momentum, angular-momentum flux, power, and operator norms (archive lines 6827-7126)
 \subsection{Energy, momentum, angular-momentum flux, power, and operator norms}
 \label{sec:ch253}
-With outgoing integrals and distance labels in place, the display below evaluates what an
-observer can meter on large shells. The radiation operator does not merely transport fields:
-it transports measurable physical quantities---energy, momentum, and angular
-momentum---which ultimately determine what an observer can detect
-\cite{poynting1884}. On a calibrated compact range, the wattmeter on $\Gamma_R$
-is the primary pattern-adjacent meter: it integrates $\hat{\mathbf{r}}\cdot\mathbf{S}$ on the
-radiative branch $\mathcal{R}_\omega[\Jimp]$ after $\Pi_{\mathrm{rad}}$, not on the full
-$\mathcal{S}_\omega[\Jimp]$ pair that near-field probes sample at $r\sim a$
-\cite{stratton1941}. Power budgets on $\Gamma_R$ must close before torque or
-angular-flux claims are promoted \cite{belinfante1940}.
+With outgoing integrals and distance labels in place, the quantities below are the energy,
+momentum and angular-momentum fluxes carried by the radiative field class
+$\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\mathcal{O}_{\mathrm{out}}\mathcal{S}_\omega[\Jimp]$
+\cite{poynting1884,stratton1941}. Reactive content in
+$\mathcal{S}_\omega[\Jimp]-\mathcal{R}_\omega[\Jimp]$ may dominate on shells with
+$k_0 r\sim1$ but does not enter export power until the far-zone reduction of
+Subsection~\ref{sec:ch252} applies \cite{harrington2001}.
 Complex Poynting flux from Eq.~\eqref{eq:ch1.poynting-complex} applies to any admissible
 field pair, but power budgets for transport claims use the radiative branch:
 
@@ -99,12 +96,10 @@ with \(\eta_0=\sqrt{\mu_0/\varepsilon_0}\) and \(\E_0\) from
 Eq.~\eqref{eq:ch2.far-field-amplitude-integral} \cite{stratton1941}. Equation
 \eqref{eq:ch2.far-zone-power-from-pattern} is the operator form of
 Eq.~\eqref{eq:ch2.power-flux-regime-convergence} and
-Eq.~\eqref{eq:ch1.radiative-regime-condition} \cite{stratton1941}. On a calibrated compact
-range, \(\mathcal{P}_{\mathrm{rad}}\) is the wattmeter reading on \(\Gamma_R\) after export
-selection---the quantity an antenna engineer reports as radiated power \cite{harrington2001}.
-Evaluating \(\mathcal{P}_{\mathrm{rad}}\) on \(\mathcal{S}_\omega[\Jimp]\) before
-\(r\gtrsim r_c\) from Eq.~\eqref{eq:ch1.crossover-radius} imports reactive storage into
-the power budget \cite{harrington2001}.
+Eq.~\eqref{eq:ch1.radiative-regime-condition} \cite{stratton1941}.
+Evaluating $\mathcal{P}_{\mathrm{rad}}$ on $\mathcal{S}_\omega[\Jimp]$ before
+$r$ lies in the far zone of Eq.~\eqref{eq:ch2.distance-regime-definitions} mixes reactive
+terms into the shell integral \cite{harrington2001}.
 Linear momentum flux meter. Net momentum export through \(S_r\) is
 \begin{equation}
 \label{eq:ch2.momentum-flux-functional}
@@ -246,11 +241,11 @@ maps compose on the right, yielding
 \|\mathcal{R}_\omega\|_{\mathrm{op}},
 \end{equation}
 consistent with Eq.~\eqref{eq:ch2.reconstruction-observation-map} and rank cap
-Eq.~\eqref{eq:ch2.reconstruction-rank-cap} \cite{stratton1941}. For a range engineer,
-\(\|\mathcal{R}_\omega\|_{\mathrm{op}}\) bounds how strongly a unit-amplitude feed can excite
-the far pattern; the composition \(\Lambda_{\mathrm{meas}}\) in
-Eq.~\eqref{eq:ch2.flux-meter-composition} is the formal image of gain calibration followed
-by pattern sampling on \(S_r\) \cite{harrington2001}.
+Eq.~\eqref{eq:ch2.reconstruction-rank-cap} \cite{stratton1941}. The operator norm
+$\|\mathcal{R}_\omega\|_{\mathrm{op}}$ bounds how strongly a unit-amplitude impressed
+current can excite the far pattern; $\Lambda_{\mathrm{meas}}$ in
+Eq.~\eqref{eq:ch2.flux-meter-composition} is the composition of pattern extraction with
+radiation selection on $S_r$ \cite{harrington2001}.
 \phantomsection\label{prop:ch2.far-zone-flux-stabilization}
 Let \(\Jimp\) be admissible with \(\mathcal{D}_{J,\mathrm{reg}}=1\) and let \(r\) lie
 in the far zone of Eq.~\eqref{eq:ch2.distance-regime-definitions}. Then
@@ -285,4 +280,12 @@ admits transport interpretation per Eq.~\eqref{eq:ch1.transport-qualified-decisi
 integral evaluation chain, the far-zone reduction when applicable, and export selection through
 $\mathcal{R}_\omega$ before any watt, momentum, or angular-momentum budget is reported on
 $\Gamma_R$ \cite{harrington2001}.
-Flux and norm functionals are not independent postulates added to Maxwell theory; they are laboratory readouts that presuppose the same export selection already enforced on pattern meters. Power measured on a reactive shell must be distinguished from power reported after $\Pi_{\mathrm{rad}}$: the former samples $\mathcal{S}_\omega[\Jimp]$, the latter the transverse outgoing sector carried by $\mathcal{R}_\omega[\Jimp]$ \cite{stratton1941}. Momentum and angular-momentum budgets add not new dynamics but conserved-flux accounting on the qualified radiative image once regime screens from \ref{ch:01} are satisfied \cite{belinfante1940}. Subsection~\ref{sec:ch254} decomposes the same solution map into radiative and non-radiative components.
+Flux and norm functionals are not independent postulates: they are surface integrals of
+fields already selected by $\mathcal{R}_\omega$. Shell power taken from
+$\mathcal{S}_\omega[\Jimp]$ generally differs from
+$\mathcal{P}_{\mathrm{rad}}$ in Eq.~\eqref{eq:ch2.flux-on-radiative-branch} because reactive
+storage remains in the full solution map \cite{stratton1941}. Momentum and
+angular-momentum functionals inherit the same qualification---they report conserved fluxes of
+the outgoing transverse state once regime indices from Chapter~\ref{ch:01} are satisfied
+\cite{belinfante1940}. Subsection~\ref{sec:ch254} separates radiative and non-radiative parts
+of $\mathcal{S}_\omega[\Jimp]$.
