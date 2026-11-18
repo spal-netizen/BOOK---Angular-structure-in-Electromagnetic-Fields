@@ -153,18 +153,19 @@ Optional when depth/citation/model workflow applies: `MODEL-WORKFLOW-LOCKED.md`,
 
 ---
 
-## 3. Chapter 1 — COMPLETE AND LOCKED (2026-05-29)
+## 3. Chapter 1 — FINAL AUTHOR BENCHMARK (2026-11-18)
 
 | Item | Status |
 |------|--------|
-| Manuscript | `latex/ch01.tex` — 32 subsections §1.0.1–§1.7.3 |
-| Build | `scripts/Build-VolumeI-ChapterBib.ps1` → `latex/main.pdf` |
-| Equations | ~100 labeled `eq:ch1.*` |
-| Figures | 68 TikZ (`fig:ch1.*`); 48/48 worked problems covered |
-| No-recursion audit | **PASS** — see `TOC/NO-RECURSION-AUDIT-PASS-ULTIMATE.md` |
-| Figure layout polish | **AUTHOR-DEFERRED** — content locked; visual spacing to be corrected by author |
+| Manuscript | `latex/ch01.tex` + `ch01-problems.tex` / `ch01-problems-solutions.tex` |
+| **Canonical PDF** | `VOLUME_I_RELEASE/CHAPTER1_FINAL_BENCHMARK_20261118.pdf` |
+| Build | `latex/build-ch01-review.ps1` → `main-ch01-only.tex` (**68 pp**, clean log) |
+| Lock doc | `TOC/CHAPTER1_FINAL_BENCHMARK_LOCK_20261118.md` |
+| Passes | 7–8: voice, hyperref, Chu TR-064 **page pins**, uniqueness far-zone steps, section bridges |
+| Optional | **Pass 8b** — lemma depth §1.1.5, §1.6.4, etc. (`GCHECK UNLOCK CH01-FINAL-BENCHMARK`) |
+| No-recursion | **PASS** for Ch.1 scope; Ch.2+ transformation per `reports/VOLUME_I_CH2-CH4_CLASSICAL_MASTERPIECE_PLAN.md` |
 
-**Do not edit Ch. 1 prose/equations** except explicit author unlock or typo fix with governance note in `progress.md`.
+**Do not edit Ch.1** except author unlock, Pass 8b subsection approval, or typo with governance note.
 
 ---
 

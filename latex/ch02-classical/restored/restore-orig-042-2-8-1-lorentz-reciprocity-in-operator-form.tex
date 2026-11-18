@@ -1,4 +1,3 @@
-% Stage 8 restored fragment — 2.8.1 Lorentz reciprocity in operator form (archive lines 10306-10596)
 \subsection{Lorentz reciprocity in operator form}
 \label{sec:ch281}
 
@@ -12,25 +11,15 @@ transpose-symmetric constitutive tensors, not an empirical fit imposed after the
 The volume identity below is the unconjugated differential form; it must be distinguished from
 sesquilinear power inner products and from Hilbert-space adjoints of lossy problems
 \cite{stratton1941}.
-\medskip
-Section~\ref{sec:ch28} established bilinear exchange symmetry through
-Eqs.~\eqref{eq:ch2.section28-reciprocity-chain}--\eqref{eq:ch2.lorentz-reciprocity}.
-Subsection~\ref{sec:ch281} supplies the definitive account of Lorentz reciprocity on
-\(\mathcal{S}_\omega\) and \(\mathcal{R}_\omega\), including the full proof of dyadic swap
-Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} deferred from Subsection~\ref{sec:ch231}
-\cite{stratton1941}. Equation~\eqref{eq:ch2.maxwell-adjoint-pairing}, source dual pairing
-Eq.~\eqref{eq:ch2.dual-source-pairing}, outgoing radiation condition
-Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique},
-and outgoing source-to-field integrals of Subsection~\ref{sec:ch251} are presupposed;
-Green construction and Sommerfeld uniqueness are not re-opened \cite{stratton1941}. Modal
-orthogonality and coupling belong to Subsection~\ref{sec:ch282}; transmit--receive systems to
-Subsection~\ref{sec:ch283} \cite{harrington2001}.
-Assumptions. Fix \(\omega>0\), Lipschitz domain \(\Omega\) with piecewise smooth interfaces, impressed
-sources in \(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-space-refined} satisfying
-Eq.~\eqref{eq:ch2.source-admissibility}, and outgoing fields in
-\(\mathcal{F}_{\mathrm{SF}}\) Eq.~\eqref{eq:ch2.admissible-field-space}
-\cite{stratton1941}. Constitutive tensors are linear, local, and passive at
-\(\omega\), with symmetric permittivity and permeability in the sense
+Section~\ref{sec:ch28} fixed the operator reciprocity chain; the present subsection proves the
+volume Lorentz identity for $\mathcal{S}_\omega$, including the dyadic interchange deferred from
+Subsection~\ref{sec:ch231} \cite{stratton1941}. Outgoing integrals and adjoint pairings are
+presupposed; modal orthogonality and port coupling follow in
+Subsections~\ref{sec:ch282}--\ref{sec:ch283} \cite{harrington2001}.
+
+Fix $\omega>0$, Lipschitz $\Omega$, admissible $\mathcal{J}_\Omega$, and outgoing
+$\mathcal{F}_{\mathrm{SF}}$ \cite{stratton1941}. Constitutive tensors are linear, local, and
+passive at $\omega$, with symmetric permittivity and permeability in the sense
 
 \begin{equation}
 \label{eq:ch2.reciprocal-medium-class}
@@ -46,14 +35,12 @@ coupling blocks in the constitutive relation imported from Section~\ref{sec:ch01
 Eq.~\eqref{eq:ch2.passive-impedance-class} and identical for both excitations
 \cite{stratton1941}. Field pairing \(\langle\cdot,\cdot\rangle_{\mathcal{U}}\)
 is induced by Eq.~\eqref{eq:ch2.field-energy-norm} on admissible Maxwell pairs
-\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
-interpretation of any bilinear quantity built from \(\Pi_{\mathrm{rad}}\)
-\cite{harrington2001}.
-Equation~\eqref{eq:ch2.reciprocal-medium-class} is the Chapter~\ref{ch:02} $\mathcal{D}_J=1$
-class for \emph{full} Lorentz reciprocity at fixed \(\omega\): symmetric \(\varepsilon\),
-\(\mu\) ensure time-reversal symmetry of the harmonic Maxwell system modulo outgoing
-selection, while vanishing magneto-electric blocks exclude non-reciprocal gyrotropic or
-Tellegen couplings \cite{stratton1941}. Isotropic lossless media are a special
+\cite{stratton1941}. Bilinear transport claims built from $\Pi_{\mathrm{rad}}$ presuppose the
+reactive-versus-radiative criteria of Section~\ref{sec:ch01.2.4} \cite{harrington2001}.
+Equation~\eqref{eq:ch2.reciprocal-medium-class} is the reciprocity class at fixed $\omega$:
+symmetric $\varepsilon$, $\mu$ restore time-reversal symmetry modulo outgoing selection;
+vanishing magneto-electric blocks exclude gyrotropic or Tellegen couplings
+\cite{stratton1941}. Isotropic lossless media are a special
 case with scalar \(\varepsilon\), \(\mu\). Lossy symmetric tensors preserve reciprocity
 relations stated below with complex conjugation on one slot of each pairing
 \cite{stratton1941}. Active or negative-real impedance portions of
@@ -132,8 +119,12 @@ specifies the electric drive when \(\rho\) is tied to \(\Jimp\)
 \(\mathcal{B}_\Gamma\) is passive on the outgoing branch.}
 \label{fig:ch2.lorentz-reciprocity-measurement chain}
 \end{figure}
-Figure interpretation. Sources $\Jimp^{(1)}$, $\Jimp^{(2)}$ induce fields $\mathbf{u}_1$, $\mathbf{u}_2$ through the same outgoing $\mathcal{S}_\omega$. The central bilinear node is symmetric under label interchange when media satisfy Eq.~\eqref{eq:ch2.reciprocal-medium-class} and $\mathcal{B}_\Gamma$ is passive. Dashed return arrows mark that reciprocity is proved on the difference system with identical boundary data, not by comparing unrelated forward and adjoint meshes. Projection to $\mathcal{R}_\omega$ preserves symmetry only after regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} \cite{stratton1941}. Figure~\ref{fig:ch2.lorentz-reciprocity-measurement chain} is the operator reading of
-Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity}: the bilinear functional is symmetric under
+Figure~\ref{fig:ch2.lorentz-reciprocity-measurement chain} shows two impressed sources routed
+through the same outgoing $\mathcal{S}_\omega$ before the bilinear pairing of
+Eq.~\eqref{eq:ch2.lorentz-volume-reciprocity}. Symmetry under label interchange holds on passive
+reciprocal media with identical $\mathcal{B}_\Gamma$ \cite{stratton1941}. Projection to
+$\mathcal{R}_\omega$ preserves reciprocity on the radiative sector after reactive content is
+excluded per Section~\ref{sec:ch01.2.4} \cite{harrington2001}. The bilinear functional is symmetric under
 label interchange $(\Jimp^{(1)},\mathbf{u}_1)\leftrightarrow(\Jimp^{(2)},\mathbf{u}_2)$ once
 boundary terms cancel \cite{stratton1941}.
 For vacuum observation points $\mathbf{r}_1$, $\mathbf{r}_2$ with $k_0|\mathbf{r}_1-\mathbf{r}_2|=2.5$, Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} requires $\overline{\mathbf{G}}_{E,0}(\mathbf{r}_1,\mathbf{r}_2)^{\mathsf{T}}=\overline{\mathbf{G}}_{E,0}(\mathbf{r}_2,\mathbf{r}_1)$ on the outgoing branch. Transverse block entries agree to machine precision; reactive $R^{-2}$, $R^{-3}$ blocks differ by sign under interchange yet cancel in the bilinear contraction when both sides use identical outgoing selectors \cite{stratton1941}. A practical verification proceeds in three steps: confirm the outgoing branch
@@ -249,7 +240,7 @@ for compatible forcing pairs \(\mathbf{s}^{(k)}\) when \(\mathcal{L}_\omega\) is
 \(\mathcal{D}(\mathcal{L}_\omega)\) and \(\mathcal{B}_\Gamma\) is passive
 \cite{stratton1941}. Equation~\eqref{eq:ch2.resolvent-reciprocity-swap} is not
 re-proved here; it is the operator backbone behind
-Eq.~\eqref{eq:ch2.integral-resolvent-equivalence} and Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281})(ii) \cite{stratton1941}. Numerical MoM matrices
+Eq.~\eqref{eq:ch2.integral-resolvent-equivalence} and Lorentz reciprocity for the solution map (Subsection~\ref{sec:ch281})(ii) \cite{stratton1941}. Numerical integral-equation matrices
 assembled from Eq.~\eqref{eq:ch2.dyadic-reciprocity-swap} inherit swap symmetry only when
 quadrature, outgoing branch, and material sampling preserve
 Eq.~\eqref{eq:ch2.reciprocal-medium-class} \cite{harrington2001}.

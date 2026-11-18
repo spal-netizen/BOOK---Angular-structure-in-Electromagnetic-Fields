@@ -1,25 +1,19 @@
-% Stage 8 restored fragment — 2.7.2 Non-radiating current configurations (archive lines 9366-9569)
 \subsection{Non-radiating current configurations}
-Balanced loops, counter-directed pairs, and below-cutoff guides exemplify
-$\ker\mathcal{R}_\omega$. Subsection~\ref{sec:ch272} gives the constructive account: admissible $\Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega$
-with $\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\neq\mathbf{0}$, developing Eq.
-Eq.~\eqref{eq:ch2.nr-current-template} \cite{stratton1941}. Radiation integrals, Huygens surface forms
-Eqs.~\eqref{eq:ch2.huygens-equivalent-integral}--\eqref{eq:ch2.huygens-tangential-match}, and
-equivalent-source ambiguity Eq.~\eqref{eq:ch2.equivalent-source-ambiguity} from
-Subsections~\ref{sec:ch251} and~\ref{sec:ch244} are presupposed; dyadic kernel tabulations from Subsection~\ref{sec:ch231} are not repeated \cite{stratton1941}. Evanescent overlap and
-measurement nullity belong to Subsection~\ref{sec:ch273}; worked example examples appear in
-Subsection~\ref{sec:ch2102} by reference \cite{harrington2001}.
-Assumptions. Fix \(\omega>0\), compact support \(\Omega_s\), admissible impressed data
-Eq.~\eqref{eq:ch2.source-admissibility}, charge continuity
-Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, outgoing radiation condition
-Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique},
-and null space Eq.~\eqref{eq:ch2.radiation-nullspace-def}
-\cite{stratton1941}. All configurations below are required to satisfy
-\(\mathcal{D}_{J}[\Jimp^{\mathrm{(NR)}}]=1\) and \(\divg\Jimp^{\mathrm{(NR)}}-\jj\omega\rho=0^{\mathrm{(NR)}}\)
-with \(\rho^{\mathrm{(NR)}}\) compatible with boundary class
-Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}. regime qualification
-Eq.~\eqref{eq:ch2.regime-component-criterion} governs whether near-zone reactive content may be
-reported as transport data \cite{harrington2001}. Non-radiating current (locked definition). A \emph{non-radiating current configuration} is an admissible impressed current
+\label{sec:ch272}
+
+Subsection~\ref{sec:ch271} identified $\ker\mathcal{R}_\omega$ as an operator-theoretic object.
+The present subsection constructs explicit impressed currents that occupy that kernel: balanced
+loops, counter-directed pairs, and below-cutoff guide currents can carry reactive near-zone energy
+without altering far-zone amplitude $a(\widehat{\mathbf{k}})$ \cite{devaney2004,stratton1941}.
+Radiation integrals and Huygens equivalence from Subsections~\ref{sec:ch251}
+and~\ref{sec:ch244} explain why equivalent-surface data alone cannot exclude such currents;
+evanescent overlap is treated in Subsection~\ref{sec:ch273} \cite{harrington2001}.
+
+Fix $\omega>0$, compact $\Omega_s$, outgoing radiation condition, and charge-continuous impressed
+data compatible with Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}. Large
+near-zone fields from a non-radiating member are reactive storage, not conserved radiative power,
+until $\mathcal{R}_\omega$ is applied \cite{harrington2001}.
+A \emph{non-radiating current configuration} is an admissible impressed current
 \begin{equation}
 \label{eq:ch2.nr-current-def}
 \Jimp^{\mathrm{(NR)}}\in\ker\mathcal{R}_\omega,
@@ -29,11 +23,10 @@ reported as transport data \cite{harrington2001}. Non-radiating current (locked 
 with radiative component \(\mathbf{u}_{\mathrm{rad}}=\mathbf{0}\) and non-radiative component
 \(\mathbf{u}_{\mathrm{nr}}=\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) from
 Eqs.~\eqref{eq:ch2.radiative-component-def}--\eqref{eq:ch2.nonradiative-component-def}
-\cite{stratton1941}. Equation~\eqref{eq:ch2.nr-current-def} is the Subsection
-~\ref{sec:ch272} development of Eq.~\eqref{eq:ch2.nr-current-template} and
-expresses Eq.~\eqref{eq:ch2.null-radiation} with explicit $\mathcal{D}_J=1$: far-zone export
-vanishes through Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade}, while near-zone fields
-may remain substantial kernel image on field space (Subsection~\ref{sec:ch271})
+\cite{stratton1941}. Equation~\eqref{eq:ch2.nr-current-def} instantiates the template
+Eq.~\eqref{eq:ch2.nr-current-template} and expresses Eq.~\eqref{eq:ch2.null-radiation}: far-zone
+export vanishes through Eq.~\eqref{eq:ch2.radiation-integral-outgoing-upgrade}, while near-zone
+fields may remain substantial (Subsection~\ref{sec:ch271})
 \cite{stratton1941}. Linearity Eq.~\eqref{eq:ch2.radiation-linearity} implies
 admissible superpositions of non-radiating configurations remain non-radiating when charge
 continuity is preserved \cite{stratton1941}.
@@ -185,6 +178,6 @@ Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Canonical familie
 \emph{explicit} members of \(\ker\mathcal{R}_\omega\); they do not exhaust
 \(\dim\ker\mathcal{R}_\omega=\infty\) on exterior domains
 Eq.~\eqref{eq:ch2.nullspace-dimensional-classification} \cite{harrington2001}.
-regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} remains mandatory: large near-zone
-\(|\E|\) from \(\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) is not export without
-\(\Pi_{\mathrm{rad}}\) qualification \cite{stratton1941}. \phantomsection\label{sec:ch273}
+Large near-zone \(|\E|\) from \(\mathcal{S}_\omega[\Jimp^{\mathrm{(NR)}}]\) does not qualify as
+far-zone export until $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is applied
+\cite{stratton1941}.

@@ -1,27 +1,14 @@
-% Stage 8 section framing — 2.9 Action of Radiation Operators on Angular Spectra
 \section{Action of Radiation Operators on Angular Spectra}
 \label{sec:ch29}
 Reciprocity in Section~\ref{sec:ch28} couples ports and probes. Section~\ref{sec:ch29} asks how
 radiation operators act on angular spectra---the language of pattern decomposition, near-field
-scanning, and plane-wave synthesis \cite{jackson1999}. Every qualified
-far-zone pattern is first a weighted sum of directional contributions: each term reports how much
-export reaches a unit direction $\widehat{\mathbf{k}}$ on the sphere after outgoing selection
-\cite{stratton1941}. That decomposition precedes any lateral Fourier transform;
-plane-wave spectra are one coordinate system on the same directional budget, not a separate
-physical layer \cite{jackson1999}. Maxwell propagation from compact support cannot populate
-every direction with equal strength: outgoing selection removes incoming admixture; evanescent
-sheets carry reactive content that decays with distance and does not survive the near-to-far map;
-finite apertures integrate over unresolved directions. The accessible amplitude
-$a(\widehat{\mathbf{k}})$ is therefore a compressed image of impressed structure, not a complete
-coordinate on $\mathcal{J}_\Omega$ \cite{stratton1941}. On the bench, a spherical
-near-field scanner records tangential $\E$ and $\H$ on a closed or planar surface at height $h$
-above the device under test; the angular-spectrum chart synthesizes outgoing plane-wave trials, back-propagates to
-the scan plane, and accepts residuals only after scan pitch, bandlimit, and probe correction are
-stated \cite{hansen1988}. The sequence scan--synthesize--bandlimit--report is what the
-theory encodes once radiation has been selected \cite{stratton1941}.
-
-
-
+scanning, and plane-wave synthesis \cite{jackson1999}. After outgoing selection, each unit direction $\widehat{\mathbf{k}}$ on $S^2$ carries amplitude
+$a(\widehat{\mathbf{k}})$ in the continuous spectral representation of
+Subsection~\ref{sec:ch261}; lateral Fourier coefficients on a scan plane are an equivalent
+description of the same propagating content, not an independent physical layer
+\cite{jackson1999,stratton1941}. Evanescent sheets and finite apertures restrict what portion of
+that amplitude field is observable at a given distance from compact support
+\cite{hansen1988,harrington2001}.
 
 Section~\ref{sec:ch28} closed the reciprocity chain
 Eq.~\eqref{eq:ch2.section28-reciprocity-chain}: Lorentz reciprocity (Subsection~\ref{sec:ch281}),
@@ -95,8 +82,8 @@ develops filters on the same outgoing branch fixed by
 Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique};
 incoming sheets remain excluded from \(\mathcal{F}_{\mathrm{rad}}\)
 \cite{harrington2001}.
-Plane-wave angular spectrum and radiation operators (leading template). Subsection~\ref{sec:ch291} supplies the definitive account of plane-wave angular spectra
-and the action of \(\mathcal{R}_\omega\circ\Pi_{\mathrm{prop}}\) on spectral coefficients (Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} in Subsection~\ref{sec:ch291}): \begin{equation}
+Subsection~\ref{sec:ch291} develops plane-wave angular spectra and the action of radiation
+selection on lateral coefficients; the section preview reads \begin{equation}
 \widetilde{\E}_{\mathrm{rad}}(k_x,k_y)
 =
 \mathcal{F}_{\mathrm{rad}}\big[\Pi_{\mathrm{rad}}\,\mathcal{R}_\omega[\Jimp]\big](k_x,k_y),

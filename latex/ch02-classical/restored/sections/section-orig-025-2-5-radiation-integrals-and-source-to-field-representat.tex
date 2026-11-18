@@ -1,14 +1,15 @@
-% Stage 8 section framing — 2.5 Radiation Integrals and Source-to-Field Representations
 \section{Radiation Integrals and Source-to-Field Representations}
 \label{sec:ch25}
-Uniqueness and radiation conditions in Section~\ref{sec:ch24} fix the exterior problem. Section~\ref{sec:ch25} writes the source integrals that range engineers discretize on wire and surface meshes \cite{stratton1941}. The same integrals appear in compact-range far-field transforms \cite{hansen1988}.
+Uniqueness and radiation conditions in Section~\ref{sec:ch24} fix the exterior problem.
+Section~\ref{sec:ch25} develops the source integrals that evaluate $(\E,\H)$ at observation
+points and connect $\mathcal{S}_\omega$ to measurable far-zone data \cite{stratton1941}.
 
 
 
 
 Section~\ref{sec:ch24} fixed the outgoing branch under which exterior solutions are unique.
-An engineer on a range nonetheless needs evaluated fields and pattern amplitudes at declared
-observation points---not proof of existence alone \cite{poynting1884}. Before any
+Radiation theory must supply evaluated fields and pattern amplitudes at declared observation
+points, not existence statements alone \cite{poynting1884}. Before any
 far-zone asymptotic is applied, the field surrounding a compact source occupies three spatial
 bands: a reactive near zone where $1/r^{3}$ and $1/r^{2}$ dyadic terms dominate what probes
 measure through $\mathcal{S}_\omega[\Jimp]$; an intermediate transition where storage and export
@@ -18,12 +19,11 @@ gain definitions through $\mathcal{R}_\omega[\Jimp]=\Pi_{\mathrm{rad}}\,\mathcal
 Subsection~\ref{sec:ch252} before asymptotic reductions; the integral representations below are
 the constructive route to $\mathcal{S}_\omega$ in all three bands \cite{stratton1941}. A gain trace
 on $\Gamma_R$ is a pattern meter reading on $\mathcal{R}_\omega[\Jimp]$ after export selection;
-a port $|S_{11}|$ meter on a horn feed reads coupling through $\mathcal{S}_\omega[\Jimp]$ and
-may include reactive storage unrelated to far-zone export \cite{harrington2001}. A
-method-of-moments solution on a horn mouth illustrates the distinction: port coupling integrals
-supply $|S_{11}|$, while a radiation integral on $\Gamma_R$ supplies far-zone gain; both descend
-from the same outgoing Green convolution but meter different observables
-\cite{harrington2001}.
+port coupling at a feed reads through $\mathcal{S}_\omega[\Jimp]$ and may include reactive
+storage unrelated to far-zone export, whereas a radiation integral on $\Gamma_R$ supplies
+outgoing power and pattern amplitudes through $\mathcal{R}_\omega[\Jimp]$ \cite{harrington2001}.
+Both descend from the same outgoing Green representation but answer different observables
+\cite{stratton1941}.
 The excitation-to-flux sequence $\Jimp\mapsto\mathcal{S}_\omega[\Jimp]\mapsto\mathcal{R}_\omega[\Jimp]$
 is single-valued on $\mathcal{F}_{\mathrm{SF}}$ at the field level yet rank-deficient at the
 source level through Eq.~\eqref{eq:ch2.ker-R-omega} \cite{stratton1941}. This

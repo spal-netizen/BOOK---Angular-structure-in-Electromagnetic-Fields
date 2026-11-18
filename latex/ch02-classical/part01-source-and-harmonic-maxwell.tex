@@ -5,7 +5,7 @@
 
 Chapter~\ref{ch:01} fixed what it means for an electromagnetic state to be \emph{Maxwell-consistent} on a declared domain: compatible traces on $\Gamma=\partial\Omega$, charge--current closure, and---when radiation is claimed---outgoing support at infinity \cite{maxwell1873,stratton1941}. The present chapter asks the complementary source question: \emph{given} an admissible impressed current $\Jimp$ on bounded support, what field does Maxwell theory determine, which part of that field constitutes outgoing \emph{radiation}, and what of that radiative structure can ever be inferred from finite measurements?
 
-A compact-range engineer already separates these ideas in practice. The feed synthesizes a current on a horn aperture; probes in the reactive shell record standing structure; a turntable far from the structure samples directional amplitude. The wattmeter on a enclosing sphere integrates power flux. None of these readings is interchangeable: near-field reactive storage can be large while far-zone export is weak, and a finite probe set cannot resolve arbitrary source detail \cite{harrington2001,hansen1988}. Maxwell's equations supply the common mathematical thread.
+A finite-aperture engineer already separates these ideas in practice. The feed synthesizes a current on a horn aperture; probes in the reactive shell record standing structure; a turntable far from the structure samples directional amplitude. The wattmeter on a enclosing sphere integrates power flux. None of these readings is interchangeable: near-field reactive storage can be large while far-zone export is weak, and a finite probe set cannot resolve arbitrary source detail \cite{harrington2001,hansen1988}. Maxwell's equations supply the common mathematical thread.
 
 \subsection{Harmonic conventions and admissible sources}
 \label{sec:ch02.1.1}
@@ -85,7 +85,7 @@ where $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_\Omega$ is the subspace of p
 \end{equation}
 where $\mathcal{O}_{\mathrm{out}}$ removes incoming propagating content from completed Maxwell pairs (Subsection~\ref{sec:ch242}) and $\Pi_{\mathrm{rad}}$ forms far-zone equivalence classes with common amplitude $\mathbf{E}_0$ (Subsection~\ref{sec:ch201}). On $\mathcal{F}_{\mathrm{rad}}$, $\Pi_{\mathrm{rad}}$ is the identity on classes; it is not equal to $\mathcal{O}_{\mathrm{out}}$ on $\mathcal{F}_\Omega$ (Proposition~\ref{prop:ch2.Pirad-vs-Oout}).
 
-Finite measurements compose with $\mathcal{R}_\omega$, not with $\mathcal{S}_\omega$, when the declared observable is a far-zone quantity. Let $\mathcal{O}_{\mathrm{far}}$ extract a pattern coefficient or polarization component from $\mathcal{F}_{\mathrm{rad}}$, and let $\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}$ model a finite probe bank of rank at most $N$. The laboratory readout map is
+Finite measurements compose with $\mathcal{R}_\omega$, not with $\mathcal{S}_\omega$, when the declared observable is a far-zone quantity. Let $\mathcal{O}_{\mathrm{far}}$ extract a pattern coefficient or polarization component from $\mathcal{F}_{\mathrm{rad}}$, and let $\mathcal{O}_{\mathrm{meas}}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}^{N}$ model a finite probe bank of rank at most $N$. The measurement readout map is
 \begin{equation}
 \label{eq:ch2.Qomega-def}
 \Qomega=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega

@@ -6,7 +6,7 @@
 |------|--------|
 | Branch | `volume-i/ch2-4-coordinated-transformation` |
 | Parent (start) | `509eaa0` (Batch C) |
-| Batch D commit | *pending commit after this edit pass* |
+| Batch D commit | `fa99809` (parent `509eaa0`) |
 | Chapter 1 | **Not edited**; `latex/ch01.tex` SHA256 at audit time: `595BF96BFAAC7FED4F568E9573C70CD302296E40BEA31773F0DCD4BBF72DFD85` (working-tree path; benchmark manifest uses canonical R13 tree) |
 
 ## Batch C build verification

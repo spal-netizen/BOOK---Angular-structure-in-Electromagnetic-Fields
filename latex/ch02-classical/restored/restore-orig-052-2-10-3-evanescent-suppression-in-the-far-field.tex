@@ -1,29 +1,20 @@
-% Stage 8 restored fragment — 2.10.3 Evanescent suppression in the far field (archive lines 12839-13127)
 \subsection{Evanescent suppression in the far field}
 \label{sec:ch2103}
-The bench issue is whether reactive richness on a near scan establishes additional far-zone angular content. Handset and IoT platforms routinely exhibit strong tangential fields within one wavelength of a patch or ground plane while qualified far-zone gain remains modest \cite{harrington2001}. Far-field extractors must not be applied directly to spherical near-field samples; Maxwell theory shows that $\mathcal{S}_\omega[\Jimp]$ and $\mathcal{R}_\omega[\Jimp]$ possess different asymptotic envelopes, so reactive-dominated shell traces can bias angular export by order unity even when the true radiative amplitude $a(\widehat{\mathbf{k}})$ is unchanged \cite{stratton1941}. $\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]$ must not be identified with export: evanescent sheets carry storage measurable on enclosing probes yet are annihilated before near-to-far maps attach to pattern meters \cite{stratton1941}. An instrument on $S_b$ with $k_0 b\sim\mathcal{O}(1)$ is therefore not, by itself, a far-zone pattern; qualified analysis applies $\mathcal{R}_\omega$ before $\mathcal{H}_{\mathrm{ff}}$ \cite{hansen1988}.
+Subsection~\ref{sec:ch2103} addresses evanescent storage: reactive field content that inflates
+tangential data on a shell with $k_0 b\sim\mathcal{O}(1)$ while leaving the radiative image
+$\mathcal{R}_\omega[\Jimp]$ and far-zone amplitude $a(\widehat{\mathbf{k}})$ unchanged
+\cite{stratton1941,hansen1988}. The mechanism differs from source nullity: near enhancement arises
+from $\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]$, not from membership in
+$\ker\mathcal{R}_\omega$. Far-zone extractors must therefore be applied only after
+$\mathcal{R}_\omega$, not to raw near-shell samples of $\mathcal{S}_\omega[\Jimp]$
+\cite{harrington2001}.
 
-A handset-scale test fixture places a rectangular patch of width $W$ and length $L$ on a
-dielectric substrate of height $h\ll\lambda$ above a finite ground plane; probe or inset feed
-with $\VSWR$ tuned for narrowband operation at fixed $\omega$ drives the structure
-\cite{harrington2001}. Spherical near-field scans at height $h$ above the substrate
-record tangential fields whose raw magnitude can exceed the radiative component by factors near
-two before radiation selection; ground-edge diffraction and substrate modes dominate the
-reactive shell \cite{stratton1941}. The third worked problem addresses \emph{evanescent storage}: field-side reactive content that
-inflates near-shell readouts while leaving the radiative image $\mathcal{R}_\omega[\Jimp]$
-unchanged. This mechanism differs from source nullity even when both produce far-zone invariance,
-because the near signature arises from $\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]$ rather than
-from membership in $\ker\mathcal{R}_\omega$. Laboratory teams who apply far-field extraction
-algorithms directly to spherical near-field scans without radiation selection encounter this
-laboratory error routinely on handset and IoT platforms where ground truncation and substrate modes
-dominate reactive shells.
-\emph{Geometry and size.} A rectangular patch of width $W$ and length $L$ is printed on a
-dielectric substrate of height $h\ll\lambda$ above a finite ground plane whose electrical extent
-sets the effective radiation aperture \cite{harrington2001}. \emph{Excitation.} Probe or inset
-feed with $\VSWR$ tuned for narrowband operation at fixed $\omega$ \cite{hansen1988}.
-\emph{Observable behavior.} Copolar pattern cuts show low-order aperture modes; ripples from
-ground-edge diffraction appear when the scan surface is too close to the substrate
-\cite{stratton1941}. \emph{Mathematical analysis.} Impressed currents on the patch and image
+A patch radiator on a grounded substrate provides a concrete geometry. Width $W$, length $L$, and
+substrate height $h\ll\lambda_0$ fix an electrically compact feed; impressed currents on the patch
+and image charges set the impressed-current model \cite{harrington2001,stratton1941}. Tangential
+fields measured at height $h$ can exceed the radiative component substantially before outgoing
+selection; ground-edge diffraction and substrate modes dominate the reactive shell
+\cite{stratton1941}. Impressed currents on the patch and image
 currents on the ground enter $\mathcal{R}_\omega$ with compact support; balanced reactive loops
 below threshold contribute to $\mathcal{S}_\omega$ without altering export \cite{devaney2004}.
 \emph{Measurement consequence.} Spherical near-field scans must include ground-edge diffraction;

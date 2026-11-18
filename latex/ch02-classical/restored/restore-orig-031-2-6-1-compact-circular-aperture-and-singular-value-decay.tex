@@ -1,24 +1,17 @@
-% Stage 8 restored fragment — 2.6.1 Compact circular aperture and singular-value decay (archive lines 7474-7642)
 \subsection{Compact circular aperture and singular-value decay}
 \label{sec:ch26.signature-aperture}
-Consider a circular observation disk of radius $a_{\mathrm{ap}}$ sampling the far-zone tangential
-field on $S_r$. The number of angular patterns distinguishable through that aperture scales with
-$k_0 a_{\mathrm{ap}}$ and with electrical source size, not with the cardinality of a formal
-harmonic list \cite{chu1948,hansen1988}. Singular values $\sigma_n$ of
-$\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ rank how efficiently each
-independent source organization couples to the recorded field; they decay once the modal index
-exceeds what $a_{\mathrm{ap}}$ can resolve \cite{stratton1941}. Compact decay of
-$\sigma_n(\mathcal{K})$ and the finite recoverable rank are established here once; later
-subsections cite Subsection~\ref{sec:ch26.signature-aperture} by reference
+A finite circular aperture of radius $a_{\mathrm{ap}}$ that samples tangential fields on a distant
+sphere $S_r$ cannot resolve arbitrarily fine angular structure. The number of independently
+distinguishable patterns scales with $k_0 a_{\mathrm{ap}}$ and with the electrical size of the
+source, not with the length of a formal harmonic expansion list \cite{chu1948,hansen1988}.
+Compose observation with radiation export as
+$\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$. Compactness of $\mathcal{K}$
+on the spaces of Section~\ref{sec:ch213} yields singular values
+$\sigma_1\ge\sigma_2\ge\cdots\to 0$ that rank how efficiently each source organization couples
+to the recorded data; once the index exceeds what the aperture geometry can support, $\sigma_n$
+falls into the observation noise floor \cite{stratton1941,hansen1988}. The decay law and
+recoverable rank fixed below are cited throughout Section~\ref{sec:ch26} without repetition
 \cite{harrington2001}.
-
-Consider a circular scan aperture of radius \(a_{\mathrm{ap}}\) on plane \(z=0\) sampling the
-far-zone tangential field from a compact source with \(k_0 a=1.5\). The measurement composition
-$\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$ is compact on the source and
-field spaces declared in Section~\ref{sec:ch213}; its singular values $\sigma_n$ rank radiation
-efficiency of source organizations and decay, defining a practical recoverable rank and finite
-effective dimension before any harmonic label is attached
-\cite{stratton1941}.
 \begin{figure}[t]
 \centering
 \ChOneFigGeo{%
@@ -35,17 +28,13 @@ effective dimension before any harmonic label is attached
 singular-value decay marks angular harmonics that fall below instrument threshold.}
 \label{fig:ch2.signature-aperture-svd}
 \end{figure}
-Compactness from Subsection~\ref{sec:ch213} yields \(\sigma_n(\mathcal{K})\to 0\); for disk
-apertures the decay is approximately exponential in modal index when \(k_0 a_{\mathrm{ap}}\) is
-moderate \cite{stratton1941}. In practice the engineer reads off a knee in the singular-value
-curve: retain modes above the knee for synthesis or inversion; discard the tail and accept the
-residual sidelobe floor as a geometry-limited artifact rather than a tuning defect
-\cite{hansen1988}. What practical criterion tells the engineer where to truncate
-the spectrum? Retaining every mode is impossible: instrument noise, finite aperture extent, and
-finite scan count cap recoverable rank, and singular-value decay controls which source
-organizations remain physically realizable through the actual receiver chain
-\cite{stratton1941}. Truncation is therefore inevitable; the engineering question is
-where the knee lies. Truncating at \(N\) modes with
+For disk apertures at moderate $k_0 a_{\mathrm{ap}}$, $\sigma_n(\mathcal{K})$ typically decays
+approximately exponentially in modal index \cite{stratton1941}. Truncation is therefore
+unavoidable: finite aperture extent, finite sample count, and receiver noise cap the
+recoverable rank, and only modes with $\sigma_n$ above the noise floor correspond to patterns
+that the measurement chain can distinguish from clutter \cite{hansen1988,stratton1941}. A
+practical truncation at rank $N$ is controlled by the tail $\sigma_{N+1}$ relative to the
+dominant channel $\sigma_1$:
 \begin{equation}
 \label{eq:ch2.signature-aperture-truncation}
 \frac{\|\mathcal{K}-\mathcal{K}_N\|}{\|\mathcal{K}\|}
@@ -57,29 +46,21 @@ chain from source to recorded samples, $\mathcal{K}_N$ is its rank-$N$ truncated
 $\sigma_1$ is the largest singular value (dominant export channel), and $\sigma_{N+1}$ is the
 first discarded singular value \cite{harrington2001}. The ratio $\sigma_{N+1}/\sigma_1$ is the
 relative strength of the strongest discarded radiation channel compared with the dominant
-channel---a direct laboratory readout of how much pattern error truncation will introduce
+channel---a direct measurement readout of how much pattern error truncation will introduce
 \cite{hansen1988}. Eq.~\eqref{eq:ch2.compression-error-bound} bounds pattern error on \(S_r\). At
 \(k_0 a_{\mathrm{ap}}=3\), retaining \(N=9\) singular modes typically captures \(95\%\)
 of the radiated power resolvable through the disk; harmonics beyond \(N\approx 12\) lie
 below a \(-20\,\mathrm{dB}\) threshold relative to \(\sigma_1\)
 \cite{harrington2001}.
-Figure~\ref{fig:ch2.signature-aperture-svd} foreshadows Chapter~\ref{ch:04}: realizability
-and spectral truncation ask which angular components survive compression by
-\(\mathcal{K}\), not which indices a formal expansion can list
-\cite{devaney2004}. Laboratory reports therefore inherit a finite rank from
-geometry before source inversion is attempted; improving SNR without enlarging
-\(a_{\mathrm{ap}}\) cannot recover modes annihilated by \(\sigma_n\) below measurement
-noise \cite{hansen1988}.
-Local notation ($\sigma_n$, recoverable rank). Compose the measurement operator $\mathcal{K}=\mathcal{O}_{\mathrm{meas}}\circ\mathcal{R}_\omega$
-on declared source and field spaces. Its singular values $\sigma_n$---ordered
-$\sigma_1\ge\sigma_2\ge\cdots\to 0$---are the radiation efficiencies of independent source
-organizations as seen through the actual aperture and receiver chain \cite{stratton1941}. The
-\emph{recoverable rank} is the largest $N$ for which $\sigma_N$ remains above the instrument noise
-floor; modes beyond that cliff are mathematically listable in a harmonic post-processor yet
-physically indistinguishable from clutter on $\Gamma_R$ \cite{chu1948}. Compact
-$\sigma_n$ decay and finite dimension on $\mathcal{K}$ are fixed in the display below; elsewhere
-invoke Subsection~\ref{sec:ch26.signature-aperture} by reference only \cite{harrington2001}.
-The spectral relations developed below restate three laboratory facts in compact form before the eigenbasis is
+Figure~\ref{fig:ch2.signature-aperture-svd} summarizes the geometry: export passes through
+$\mathcal{R}_\omega$, then through a finite disk that suppresses high-index angular content via
+$\sigma_n$ decay. Source realizability in Chapter~\ref{ch:04} will ask which components survive
+that compression; enlarging signal-to-noise ratio without enlarging $a_{\mathrm{ap}}$ cannot
+restore modes whose $\sigma_n$ lies below the observation threshold \cite{devaney2004,hansen1988}.
+The \emph{recoverable rank} is the largest $N$ with $\sigma_N$ above the declared noise floor;
+higher indices may appear in formal harmonic charts yet are indistinguishable from clutter on
+$\Gamma_R$ \cite{chu1948,stratton1941}.
+The spectral relations developed below restate three physical facts in compact form before the eigenbasis is
 constructed. A \emph{radiation mode} is a normalized far-zone pattern direction
 $\mathbf{u}_n$; its \emph{source mode} $\Jimp^{(n)}$ is an admissible current that excites it.
 The \emph{export eigenvalue} $\lambda_n$ of the radiation operator $\mathcal{R}_\omega$---not a
@@ -118,7 +99,7 @@ pattern null that persists despite port tuning \cite{harrington2001}. Solvabilit
 \end{equation}
 with \(K\) compact on the graph domain of impressed sources \cite{stratton1941}.
 When a symmetry group \(G\) commutes with \(\mathcal{R}_\omega\), the equation below expresses
-a simple laboratory fact: rotating the hardware and then measuring the pattern gives the same
+a simple physical fact: rotating the hardware and then measuring the pattern gives the same
 result as measuring first and rotating the resulting pattern \cite{harrington2001}.
 \begin{equation}
 \label{eq:ch2.degeneracy-covariance}

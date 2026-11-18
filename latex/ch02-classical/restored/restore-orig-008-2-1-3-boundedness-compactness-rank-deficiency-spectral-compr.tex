@@ -1,4 +1,3 @@
-% Stage 12 — 2.1.3 Boundedness, compactness, rank deficiency, spectral compression
 \subsection{Boundedness, compactness, rank deficiency, spectral compression}
 \label{sec:ch213}
 
@@ -149,7 +148,7 @@ K\ \text{compact on graph domain},
 \end{equation}
 with \(\mathcal{L}_0\) an invertible reference operator on the quotient by \(\ker\mathcal{L}_\omega\) \cite{stratton1941}. Equation~\eqref{eq:ch2.fredholm-split} supplies the split invoked in Subsection~\ref{sec:ch212} when relating resolvent boundedness to solvability; index and solvability criteria are developed in Section~\ref{sec:ch263}.
 
-As a worked example, a spherical near-field scanner records \(N=50\) tangential field samples on a closed surface. The map \(\mathcal{O}_{\mathrm{meas}}\) has rank at most \(50\), so angular harmonics beyond the resolved set lie in \(\ker\mathcal{O}_{\mathrm{meas}}\). Applying Eq.~\eqref{eq:ch2.singular-value-decay} to the compact smoothing operator from sample interpolation shows that recovered far-zone coefficient error is controlled by \(\sigma_{51}\), not by Maxwell residual alone \cite{stratton1941}. Increasing frequency without increasing \(N\) lowers \(\sigma_{N+1}\) slowly for fixed aperture, worsening compression error even when \(\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}\) in the volume.
+As a worked example, a spherical near-zone observation records \(N=50\) tangential field samples on a closed surface. The map \(\mathcal{O}_{\mathrm{meas}}\) has rank at most \(50\), so angular harmonics beyond the resolved set lie in \(\ker\mathcal{O}_{\mathrm{meas}}\). Applying Eq.~\eqref{eq:ch2.singular-value-decay} to the compact smoothing operator from sample interpolation shows that recovered far-zone coefficient error is controlled by \(\sigma_{51}\), not by Maxwell residual alone \cite{stratton1941}. Increasing frequency without increasing \(N\) lowers \(\sigma_{N+1}\) slowly for fixed aperture, worsening compression error even when \(\mathcal{L}_\omega[\mathbf{u}_\omega]=\mathbf{0}\) in the volume.
 
 In a closed cavity, compact embedding yields discrete resonances and Eq.~\eqref{eq:ch2.spectral-compression-operator} sums over cavity modes. In an exterior problem with outgoing radiation condition, the same formula requires a continuous spectral integral rather than a finite sum; using cavity compression on an open antenna model conflates discrete storage modes with continuous radiation modes \cite{stratton1941}. Section~\ref{sec:ch243} selects the outgoing branch; Subsection~\ref{sec:ch213} only records that compression templates differ by domain class \cite{stratton1941}.
 

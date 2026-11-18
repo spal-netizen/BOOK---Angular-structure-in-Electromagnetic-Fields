@@ -1,31 +1,17 @@
-% Stage 8 restored fragment — 2.8.3 Reciprocity in radiation and reception (archive lines 10909-11155)
 \subsection{Reciprocity in radiation and reception}
 \label{sec:ch283}
 
-Two-port coupling on reciprocal passive hardware exemplifies Lorentz reciprocity: the complex
-response at port $B$ when port $A$ is excited matches the reversed coupling when excitations and
-observation functionals are exchanged under Eq.~\eqref{eq:ch2.reciprocal-medium-class}
-\cite{stratton1941,collin2001}. Subsection~\ref{sec:ch283} gives the operator account:
-transmit--receive symmetry, two-port bilinears, and measurement-qualified reciprocity on
-\(\operatorname{ran}\mathcal{R}_\omega\), developing Eq.
-Eq.~\eqref{eq:ch2.transmit-receive-swap} \cite{stratton1941}. Observation
-composition Eq.~\eqref{eq:ch2.reconstruction-observation-map}, finite-rank readouts
-Eq.~\eqref{eq:ch2.finite-rank-observation}, rank cap
-Eq.~\eqref{eq:ch2.reconstruction-rank-cap}, and null-space laws
-Eqs.~\eqref{eq:ch2.reconstruction-null-space}--\eqref{eq:ch2.nr-superposition-law} are
-presupposed; inverse-source regularization is not re-developed \cite{stratton1941}.
-Plane-wave angular-spectrum filters belong to Section~\ref{sec:ch29}; explicit port circuit
-models are not tabulated \cite{stratton1941}.
-Assumptions. Fix \(\omega>0\), reciprocal media Eq.~\eqref{eq:ch2.reciprocal-medium-class}, passive
-boundary Eq.~\eqref{eq:ch2.passive-impedance-class}, outgoing radiation condition, and admissible sources
-\(\Jimp^{\mathrm{(tx)}},\Jimp^{\mathrm{(rx)}}\in\mathcal{J}_\Omega\) on ports \(A\) and \(B\)
-\cite{stratton1941}. Each port carries a finite-rank observation functional
-\(\mathcal{O}_{\mathrm{meas}}^{(P)}:\mathcal{F}_{\mathrm{rad}}\to\mathbb{C}\) or
-\(\mathbb{C}^{N_P}\) of the form Eq.~\eqref{eq:ch2.finite-rank-observation}
-\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} and transport
-qualification Eq.~\eqref{eq:ch2.transport-qualified-radiation} govern when port outputs may be
-reported as radiative transport \cite{harrington2001}. The same \(\mathcal{B}_\Gamma\), outgoing
-branch, and material data are used for both excitations \cite{stratton1941}.
+On reciprocal passive media, mutual coupling between two ports is invariant under interchange of
+transmit and receive roles when the same $\mathcal{B}_\Gamma$ and outgoing branch govern both
+excitations \cite{stratton1941,collin2001}. The composition laws below develop
+Eq.~\eqref{eq:ch2.transmit-receive-swap}; finite-rank observation maps and null-space laws from
+earlier sections are presupposed \cite{stratton1941}.
+
+Fix $\omega>0$, Eq.~\eqref{eq:ch2.reciprocal-medium-class}, passive
+Eq.~\eqref{eq:ch2.passive-impedance-class}, outgoing radiation condition, and impressed sources
+$\Jimp^{\mathrm{(tx)}},\Jimp^{\mathrm{(rx)}}$ on ports $A$ and $B$ \cite{stratton1941}. Each port
+uses $\mathcal{O}_{\mathrm{meas}}^{(P)}$ of the form Eq.~\eqref{eq:ch2.finite-rank-observation}.
+Far-zone power reports presuppose Section~\ref{sec:ch01.2.4} \cite{harrington2001}.
 For port \(P\in\{A,B\}\), define the \emph{port radiation--reception operator}
 
 \begin{equation}
@@ -91,7 +77,7 @@ readout at the other interchange under Eq.~\eqref{eq:ch2.transmit-receive-recipr
 reciprocal media.}
 \label{fig:ch2.transmit-receive-measurement chain}
 \end{figure}
-Figure interpretation. Transmit port $\Jimp^{\mathrm{(tx)}}$ and receive probe $\Jimp^{\mathrm{(rx)}}$ compose through the same $\mathcal{R}_\omega$ and observation $\mathcal{O}_{\mathrm{meas}}$. Swap symmetry Eq.~\eqref{eq:ch2.transmit-receive-swap} holds on observable coordinates after projection onto $\operatorname{ran}\mathcal{R}_\omega$; additions in $\ker\mathcal{R}_\omega$ leave port coupling unchanged. The schematic separates reciprocity-qualified S-parameters from raw near-field cross terms that may violate apparent symmetry while far-zone reciprocity remains valid \cite{stratton1941}. Figure~\ref{fig:ch2.transmit-receive-measurement chain} displays the two compositions constrained by
+Transmit port $\Jimp^{\mathrm{(tx)}}$ and receive probe $\Jimp^{\mathrm{(rx)}}$ compose through the same $\mathcal{R}_\omega$ and observation $\mathcal{O}_{\mathrm{meas}}$. Swap symmetry Eq.~\eqref{eq:ch2.transmit-receive-swap} holds on observable coordinates after projection onto $\operatorname{ran}\mathcal{R}_\omega$; additions in $\ker\mathcal{R}_\omega$ leave port coupling unchanged. The schematic separates reciprocity-qualified S-parameters from raw near-field cross terms that may violate apparent symmetry while far-zone reciprocity remains valid \cite{stratton1941}. Figure~\ref{fig:ch2.transmit-receive-measurement chain} displays the two compositions constrained by
 Eq.~\eqref{eq:ch2.transmit-receive-reciprocity}. Both paths pass through the same
 \(\mathcal{R}_\omega\); port asymmetry enters only through \(\mathcal{O}_{\mathrm{meas}}^{(A)}\),
 \(\mathcal{O}_{\mathrm{meas}}^{(B)}\) \cite{stratton1941}.
@@ -166,7 +152,7 @@ c_n[\Jimp^{\mathrm{(tx)}}]^{*}\,c_n[\Jimp^{\mathrm{(rx)}}],
 \end{equation}
 using Eq.~\eqref{eq:ch2.modal-coupling-sum-diagonal} \cite{stratton1941}. Equation
 \eqref{eq:ch2.port-modal-coupling-sum} shows that reciprocity symmetry is diagonal in a mode
-basis but may be dense in fixed laboratory coordinates when degenerate multiplets from
+basis but may be dense in fixed instrument coordinates when degenerate multiplets from
 Subsection~\ref{sec:ch262} are expressed in non-eigenvector bases
 \cite{harrington2001}.
 \phantomsection\label{prop:ch2.measurement-reciprocity}
@@ -193,7 +179,7 @@ eliminating null-space or geometric deficits \cite{stratton1941}.
 Reciprocity acts on \(\operatorname{ran}\mathcal{R}_\omega\); geometric and observation
 constraints from geometric constraints on radiative spectra (Subsection~\ref{sec:ch264}) and
 Eq.~\eqref{eq:ch2.angular-spectrum-composition-law} restrict reported coordinates only
-Laboratory errors and broken reciprocity. Magneto-electric media, active surfaces, and non-reciprocal port calibrations break
+Common errors and broken reciprocity. Magneto-electric media, active surfaces, and non-reciprocal port calibrations break
 Eq.~\eqref{eq:ch2.transmit-receive-reciprocity} even when export maps differ
 \(\mathcal{S}_\omega\) are accurate \cite{stratton1941}. Near-zone reactive
 coupling measured without \(\Pi_{\mathrm{rad}}\) can appear non-reciprocal while For matched half-wave dipole ports at $k_0 a=1.2$ with $d=4a$, Eq.~\eqref{eq:ch2.reciprocal-impedance-matrix} requires $Z_{12}=Z_{21}$ when entries are extracted from $\mathcal{R}_\omega[\Jimp^{\mathrm{(tx)}}]$ on the far-zone branch. A typical reciprocity check gives $|Z_{12}-Z_{21}|/|Z_{11}|<0.02$ in reciprocal vacuum; swapping transmit and receive probes while holding $\mathcal{O}_{\mathrm{meas}}$ fixed reproduces the same mutual entry within numerical tolerance \cite{jackson1999}. If near-field probes at $k_0 r=1.5$ report $|Z_{12}/Z_{21}-1|\approx0.18$, the discrepancy is a regime failure, not a Lorentz violation: re-meter on $\mathcal{R}_\omega[\cdot]$ with $k_0 r>3$ before asserting broken reciprocity \cite{harrington2001}. Eq.~\eqref{eq:ch2.radiation-map-reciprocity} holds on \(\mathcal{F}_{\mathrm{rad}}\)

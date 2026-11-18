@@ -1,18 +1,13 @@
-% Stage 8 restored fragment — 2.3.5 Inversion and solvability (archive lines 4662-4915)
 \subsection{Inversion and solvability}
 \label{sec:ch234}
 
-Subsection~\ref{sec:ch234} supplies the definitive account of constructive inversion and
-solvability on single- and multi-region domains with interface data from
-Eq.~\eqref{eq:ch1.interface-conditions} \cite{stratton1941}. Weak well-posedness on
-bounded quotients through Eqs.~\eqref{eq:ch2.lax-milgram-wellposed} and~\eqref{eq:ch2.coercivity-quotient}
-from Subsection~\ref{sec:ch214} is presupposed; Lax--Milgram and Friedrichs arguments
-are not repeated. Outgoing uniqueness on exterior domains is finalized in
-Section~\ref{sec:ch243}; here the resolvent branch and its Green realization are
-stated as hypotheses \cite{stratton1941}. Material Helmholtz symbols
-Eqs.~\eqref{eq:ch2.material-helmholtz-electric}--\eqref{eq:ch2.material-helmholtz-magnetic}
-and trace spaces Eqs.~\eqref{eq:ch2.interface-trace-space}--\eqref{eq:ch2.domain-refinement-L}
-from Sections~\ref{sec:ch211}--\ref{sec:ch222} are fixed input classes.
+Constructive inversion asks whether a declared impressed current and boundary class determine a
+unique harmonic Maxwell pair, and whether that pair can be assembled patchwise when media and
+interfaces vary \cite{stratton1941}. Well-posedness on bounded domains is inherited from
+Subsection~\ref{sec:ch214}; outgoing uniqueness on exteriors from Section~\ref{sec:ch243}.
+Interface data follow Eq.~\eqref{eq:ch1.interface-conditions}; material Helmholtz symbols and
+trace spaces from Sections~\ref{sec:ch211}--\ref{sec:ch222} are fixed input classes
+\cite{stratton1941}.
 
 Let \(\Omega=\cup_{j=1}^{N_p}\Omega_j\) be a finite union of Lipschitz patches with
 pairwise interfaces \(\Sigma_{ab}=\overline{\Omega_a}\cap\overline{\Omega_b}\),
@@ -23,10 +18,10 @@ Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, and boundary class
 \(\mathcal{B}_\Gamma\) compatible with Eq.~\eqref{eq:ch2.admissible-field-space}.
 Regularized convolutions follow Subsection~\ref{sec:ch232}; retarded causality follows
 Subsection~\ref{sec:ch233} \cite{stratton1941}.
-Composite domain and patchwise inversion. Inversion separates invertible propagation from compact perturbations and null directions
-\cite{stratton1941}. Ill-posed spherical near-field campaigns often fail here: the
-export map is well defined, but the inverse amplifies noise along small singular values
-\cite{hansen1988}.
+Composite domain and patchwise inversion. Inversion separates invertible propagation from
+compact perturbations and null directions \cite{stratton1941}. Equivalence-surface and
+pattern inversions often fail at this stage: the forward export map is well defined, but the
+adjoint problem amplifies uncertainty along small singular values \cite{hansen1988}.
 On a composite domain the impressed-source region is partitioned into material patches
 \(\Omega_j\) separated by interfaces \(\Sigma_{ab}\); each patch carries its own wavenumber
 \(k_j=\omega\sqrt{\mu_j\varepsilon_j}\) (rad\,m\(^{-1}\)).

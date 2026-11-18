@@ -2,14 +2,26 @@
 \input{ch01-handdrawn-figures}
 \input{vol-i-physical-figure-library}
 
-% Slug → VolIPhys figure (Volume I review builds; does not modify chapter sources)
+% Slug → VolIPhys figure (hyphenated slugs via \csname)
+\expandafter\newcommand\csname volifig@ch1-three-level-hierarchy\endcsname{%
+  \VolIPhysFig{\VolIPhysThreeLevelHierarchy}}
+\expandafter\newcommand\csname volifig@ch1-wp-matched-aperture\endcsname{%
+  \VolIPhysFig{\VolIPhysMatchedAperture}}
+\expandafter\newcommand\csname volifig@ch1-vacuum-closure-map\endcsname{%
+  \VolIPhysFig{\VolIPhysVacuumClosureMap}}
+\expandafter\newcommand\csname volifig@ch1-transport-triad-map\endcsname{%
+  \VolIPhysFig{\VolIPhysChapterOneSynthesis}}
+\expandafter\newcommand\csname volifig@ch2-source-radiation-sequence\endcsname{%
+  \VolIPhysFig{\VolIPhysSourceRadiationSequence}}
+\expandafter\newcommand\csname volifig@ch4-volume-consumption-map\endcsname{%
+  \VolIPhysFig{\VolIPhysMaxwellBoundaryVolume}}
+
+\makeatletter
 \newcommand{\VolIFigInclude}[1]{%
-  \ifstrequal{#1}{ch1-three-level-hierarchy}{\VolIPhysFig{\VolIPhysThreeLevelHierarchy}}{%
-  \ifstrequal{#1}{ch1-wp-matched-aperture}{\VolIPhysFig{\VolIPhysMatchedAperture}}{%
-  \ifstrequal{#1}{ch1-vacuum-closure-map}{\VolIPhysFig{\VolIPhysVacuumClosureMap}}{%
-  \ifstrequal{#1}{ch1-transport-triad-map}{\VolIPhysFig{\VolIPhysChapterOneSynthesis}}{%
-  \ifstrequal{#1}{ch2-source-radiation-sequence}{\VolIPhysFig{\VolIPhysSourceRadiationSequence}}{%
-  \ifstrequal{#1}{ch4-volume-consumption-map}{\VolIPhysFig{\VolIPhysMaxwellBoundaryVolume}}{%
-  \PackageWarning{fig-macros}{Unknown VolIFigInclude slug `#1'}%
-  }}}}}}}%
+  \ifcsname volifig@#1\endcsname
+    \@nameuse{volifig@#1}%
+  \else
+    \PackageWarning{fig-macros}{Unknown VolIFigInclude slug `#1'}%
+  \fi
 }
+\makeatother

@@ -1,4 +1,3 @@
-% Stage 8 restored fragment — 2.4.2 Outgoing-wave selection (archive lines 5231-5455)
 \subsection{Outgoing-wave selection}
 \label{sec:ch242}
 Unbounded exterior problems must select an outgoing branch at infinity so that impressed sources
@@ -21,7 +20,7 @@ conditions
 Eqs.~\eqref{eq:ch2.sommerfeld-field-condition}--\eqref{eq:ch2.sommerfeld-outgoing-class}
 are presupposed; uniqueness proofs belong to Subsection~\ref{sec:ch243}.
 
-Readers should distinguish three objects that are often conflated in compact-range practice.
+Readers should distinguish three objects that are often conflated in finite-aperture practice.
 The dyadic Green convolution Eq.~\eqref{eq:ch2.electric-dyadic-convolution} maps $\Jimp$ to an electric field
 pair in $\mathcal{F}_\Omega$ without yet declaring which analytic branch of the Helmholtz resolvent is selected at infinity.
 $\mathcal{O}_{\mathrm{out}}$ acts on completed Maxwell pairs in $\mathcal{F}_\Omega$ and returns the member of
@@ -206,11 +205,11 @@ with $\Pi_{\mathrm{rad}}:\mathcal{D}(\Pi_{\mathrm{rad}})\subset\mathcal{F}_{\mat
 with $\mathcal{F}_{\mathrm{rad}}\subset\mathcal{F}_{\mathrm{SF}}$ the space of classes carrying transverse far-zone data Eq.~\eqref{eq:ch2.far-zone-transverse-radiation}.
 Evanescent and reactive content may remain in $\mathcal{S}_\omega^{\mathrm{(out)}}[\Jimp]$ while yielding the same $\Pi_{\mathrm{rad}}$ class when $\mathbf{E}_0$ agrees \cite{stratton1941}.
 Transport reporting therefore applies Eq.~\eqref{eq:ch2.regime-operator-screen} after $\mathcal{R}_\omega$, not after $\mathcal{O}_{\mathrm{out}}$ alone \cite{harrington2001}.
-Outgoing selection on a compact range is implemented twice in practice: absorbers suppress
-multipath reflections that would mimic incoming waves, and harmonic solvers fix the propagating
-$k_z$ branch of Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion} on exterior meshes
-\cite{hansen1988}. When either layer fails, $\mathcal{O}_{\mathrm{out}}$ acts on
-the wrong field orbit even though volume Maxwell rows still vanish \cite{harrington2001}.
+Outgoing selection appears twice in analysis and computation: absorbing boundaries suppress
+reflections that mimic incoming waves, and harmonic solvers fix the propagating
+$k_z$ branch of Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion} on truncated exteriors
+\cite{hansen1988,stratton1941}. When either completion fails, $\mathcal{O}_{\mathrm{out}}$ acts on
+an unphysical branch even though the local Maxwell system remains satisfied \cite{harrington2001}.
 Incoming--outgoing split. Define \(\mathcal{O}_{\mathrm{in}}\) analogously on \(\mathcal{F}_{\mathrm{in}}\).
 On the propagating subspace,
 \begin{equation}

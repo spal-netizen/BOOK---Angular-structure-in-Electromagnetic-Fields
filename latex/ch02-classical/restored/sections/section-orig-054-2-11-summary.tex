@@ -1,40 +1,36 @@
-% Stage 8 section framing — 2.11 Summary
 \section{Summary}
 \label{sec:ch02.11}
-% CH02-NARR-EXP:02.11
-Maxwell evolution generates fields; outgoing selection determines export; finite instruments recover only part of that export \cite{maxwell1873,stratton1941,sommerfeld1949}. Vector spherical harmonics, source realizability, and interaction formalism beyond this chapter are cited in Chapters~3--4 without local re-derivation here \cite{harrington2001,devaney2004}.
-Chapter~\ref{ch:02} began from a premise that Maxwell's equations, once supplemented by
-outgoing radiation conditions, do not merely \emph{propagate} fields---they \emph{select} which
-field content qualifies as radiative export. That selection is implemented by the radiation
-operator $\mathcal{R}_\omega$, whose image is what finite instruments ultimately interrogate,
-always incompletely and always through additional rank limits imposed by geometry and hardware.
-The distinction is not pedantic. A near-field scanner that records thirty-six complex samples
-has performed a serious measurement; yet the number answers a question about accessible angular
-structure only after one traces which term in the master degree-of-freedom partition removed
-the unresolved content---source nullity, aperture rank, evanescent storage, spectral compression,
-or geometric suppression.
 
+Chapter~\ref{ch:02} developed harmonic Maxwell theory as an operator chain from impressed sources
+to measurable radiative data. Impressed currents $\Jimp$ on bounded support, together with
+declared boundary data and charge continuity inherited from Chapter~\ref{ch:01}, determine a
+harmonic field pair through the solution map $\mathcal{S}_\omega$. Outgoing Sommerfeld
+selection and far-amplitude extraction $\Pi_{\mathrm{rad}}$ isolate the transverse content
+that carries net export to infinity; the radiation map
+$\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is the object to which power,
+pattern, and reciprocity integrals attach \cite{maxwell1873,stratton1941,sommerfeld1949}.
 
-The four worked configurations in Section~\ref{sec:ch210} were composed to make that partition
-tangible. The electrically small dipole showed that modal truncation error tracks compact singular
-values, not non-radiating nullity. The loop-superposition problem showed that far patterns can
-remain invariant while near probes register a thirty-five percent increment in tangential
-amplitude. The evanescent-overlap problem showed that near-shell energy can exceed the
-radiative component by more than a factor of two while far amplitude $a(\widehat{\mathbf{k}})$
-remains fixed, and that applying far-field extractors to raw $\mathcal{S}_\omega[\Jimp]$ can
-bias angular export by forty percent. The structured ring array showed that azimuthal phase
-organization in $a_\sigma(\widehat{\mathbf{k}})$ can coexist with vanishing signed angular flux
-until a modest amplitude imbalance restores transport. Each result is a laboratory caution stated
-in operator language: existence of field does not imply export; export does not imply
-wattmeter reading; $\oint_{\Gamma_R}$ closure does not imply unique source identification
-\cite{maxwell1873}.
-Read against that laboratory background, the chapter's central lesson is a completion criterion,
-not a slogan. \ref{ch:01} established $\mathcal{D}_J=1$---what impressed currents and phasor
-fields may enter the monograph at all. Chapter~\ref{ch:02} establishes $\mathcal{E}_{\mathrm{acc}}^{(N)}$: which
-radiative content survives outgoing selection and which parts finite geometry and finite
-instruments can resolve. Throughout, qualified reporting applies $\mathcal{R}_\omega$ before
-Stokes parameters, Poynting vectors, or angular-flux functionals, and composes with regime
-qualification inherited from \ref{ch:01} so that reactive shells are not mistaken for
-transport \cite{harrington2001}. From the vector-network-analyzer reciprocity checks of Section~\ref{sec:ch28} through the directional
-decompositions of Section~\ref{sec:ch29} to the four worked configurations of Section~\ref{sec:ch210},
-the chapter supplies operator criteria for diagnosing pattern residuals by mechanism rather than by fitting alone.
+Function spaces and domain declarations in Section~\ref{sec:ch21} made curl, divergence, and
+tangential trace legitimate operations. Time--frequency equivalence in Section~\ref{sec:ch22}
+showed that $\mathcal{S}_\omega$ is the $\omega$-slice of causal retarded evolution when media,
+sources, and boundary class are fixed. Green convolutions in Section~\ref{sec:ch23} realize
+$\mathcal{L}_\omega^{-1}$ on exteriors; Sommerfeld selection and uniqueness in Section~\ref{sec:ch24}
+fix the outgoing branch. Radiation integrals in Section~\ref{sec:ch25} evaluate fields in near,
+intermediate, and far regimes and separate reactive storage from conserved radiated power.
+
+Spectral structure, null spaces of $\mathcal{R}_\omega$, reciprocity, and angular-spectrum
+filters in Sections~\ref{sec:ch26}--\ref{sec:ch29} explain why finite geometry and finite
+observation rank compress accessible degrees of freedom without altering Maxwell's local laws
+\cite{chu1948,devaney2004,harrington2001}. Worked configurations in Section~\ref{sec:ch210}
+illustrate the distinction between field existence, radiative export, and finite recoverability:
+electrically small sources suffer spectral compression; non-radiating currents share patterns with
+radiating partners; evanescent energy can dominate near shells while far amplitudes remain fixed;
+balanced modal superpositions may exhibit vivid phase structure with vanishing signed transport
+\cite{stratton1941}.
+
+Vector spherical harmonics, realizability bounds, and formal interaction theory beyond this
+chapter are developed in Chapters~\ref{ch:03} and~\ref{ch:04} by reference, without local
+re-derivation here \cite{harrington2001}. The central lesson for the remainder of Volume~I is
+that every angular or transport claim must state whether it refers to $\mathcal{S}_\omega[\Jimp]$,
+to $\mathcal{R}_\omega[\Jimp]$ after outgoing selection, or to a finite-rank observation of
+that radiative image \cite{stratton1941}.

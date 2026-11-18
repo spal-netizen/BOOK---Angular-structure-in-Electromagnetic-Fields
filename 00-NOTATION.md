@@ -63,6 +63,9 @@ Underlined symbols denote phasors; time-domain vectors are **not** underlined.
 ## Angular momentum and spherical coordinates
 
 - Spherical coordinates \((r,\theta,\phi)\) with **unit vectors** \(\hat{\mathbf{r}}, \hat{\boldsymbol{\theta}}, \hat{\boldsymbol{\phi}}\).
+- **VSH normalization:** \(\Lambda_{\ell}=\sqrt{\ell(\ell+1)}\) (vector-spherical-harmonic scale; not surface charge).
+- **Helicity/hand index:** \(\sigma_{\mathrm{h}}\in\{+1,-1\}\) (macro `\sigmahel` in `macros.tex`); distinguish from conductivity \(\sigma\) in \(\mathbf{J}=\sigma\E+\mathbf{J}_{\mathrm{imp}}\) and from surface charge \(\rho_s\) or \(\rho_{s,ab}\) on interfaces.
+- **Stress-channel admissibility:** \(\mathcal{D}_{\mathrm{meas}}=1\) denotes calibrated stress/torque reporting (not conductivity \(\sigma\)).
 - Scalar spherical harmonics \(Y_{\ell}^{m}(\theta,\phi)\) with **Condon–Shortley phase**.
 - Vector spherical harmonics \(\mathbf{M}_{\ell m}, \mathbf{N}_{\ell m}\) (exact definitions in §3.4.1 only — do not redefine elsewhere).
 - Total angular momentum operators \(\mathbf{J} = \mathbf{L}+\mathbf{S}\) on fields: defined once in §3.2.1.

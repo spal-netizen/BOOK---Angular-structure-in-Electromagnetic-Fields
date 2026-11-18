@@ -1,13 +1,11 @@
-% Stage 8 restored fragment — 2.3.2 Point electric dipole and the dyadic Green operator (archive lines 3953-4085)
 \subsection{Point electric dipole and the dyadic Green operator}
 \label{sec:ch23.signature-dipole}
 A Hertzian dipole is the smallest oriented radiator that still exercises the full dyadic
 structure: one current moment, one outgoing Green kernel, and a transverse far-zone pattern
 with $\sin\theta$ dependence when the moment is aligned with a Cartesian axis
 \cite{jackson1999,stratton1941}.
-At electrical size $k_0 a\ll 1$, compact feeds and method-of-moments self-tests should match
-the closed form below before multipole catalogs are applied to larger structures
-\cite{chu1948,hansen1988}.
+At electrical size $k_0 a\ll 1$, the closed form below is the reference against which larger
+multipole expansions are compared \cite{chu1948,jackson1999}.
 The dipole moment \(\mathbf{p}=\int \Jimp\,d^{3}r'\) (units: A\,m, equivalently C\,m for
 equivalent polarization sources) localizes the impressed current at the origin; $\mathbf{r}$
 denotes the observation point and $\mathbf{r}'$ the source coordinate in the display below.
@@ -60,16 +58,12 @@ Eq.~\eqref{eq:ch2.far-field-amplitude-integral} with
 so the transverse radiative image is fixed by \(\widehat{\mathbf{r}}\times(\widehat{\mathbf{r}}\times\mathbf{p})\).
 This expression reveals that only transverse components survive at large distance. The far
 field therefore forgets most local source details and retains only radiatively accessible
-information---precisely the content a compact-range pattern measurement can resolve on
-$\Gamma_R$ \cite{stratton1941}.
+information that $\mathcal{R}_\omega$ retains on $\Gamma_R$ \cite{stratton1941}.
 Power through sphere \(S_r\) follows Eq.~\eqref{eq:ch2.radiated-power-screen} with
 \(P_{\mathrm{rad}}\propto k_0^{4}|\mathbf{p}|^{2}\) in the electrically small limit
-\cite{stratton1941}. Experimentally, the angular spectrum is the decomposition of the
-far-zone field into plane waves propagating in different directions $\widehat{\mathbf{k}}$:
-each outgoing direction receives a distinct amplitude fixed by how the dipole moment
-projects transversely onto that direction \cite{hansen1988}. Pattern measurements on a
-spherical scanner therefore sample this angular distribution; synthesis codes invert the
-same lateral Fourier image when reconstructing aperture fields from far-zone data
+\cite{stratton1941}. The angular spectrum decomposes the far-zone field into plane waves
+propagating in directions $\widehat{\mathbf{k}}$: each outgoing direction receives
+transverse amplitude fixed by $(\overline{\mathbf{I}}-\widehat{\mathbf{k}}\widehat{\mathbf{k}})\cdot\mathbf{p}$
 \cite{stratton1941}. The plane-wave angular spectrum of
 Subsection~\ref{sec:ch291} reads
 \begin{equation}
@@ -87,7 +81,6 @@ is the lateral Fourier image of the same export channel: each outgoing direction
 transverse amplitude fixed by $(\overline{\mathbf{I}}-\widehat{\mathbf{k}}\widehat{\mathbf{k}})\cdot\mathbf{p}$.
 One source, one kernel, one radiation map, one far field, one angular spectrum---every
 abstract operator statement in Chapter~\ref{ch:02} reduces to this geometry when
-\(\Jimp=\mathbf{p}\,\delta(\mathbf{r}')\) \cite{stratton1941}. The dipole test on
-$\Gamma_R$ is therefore not a numerical afterthought; it is the lowest-dimensional
-witness that $G$, $\overline{\mathbf{G}}_{E}$, $\mathcal{S}_\omega$, and
-$\mathcal{R}_\omega$ describe the same hardware \cite{hansen1988}.
+\(\Jimp=\mathbf{p}\,\delta(\mathbf{r}')\) \cite{stratton1941}. The Hertzian dipole is
+therefore the elementary witness that $G$, $\overline{\mathbf{G}}_{E}$, $\mathcal{S}_\omega$,
+and $\mathcal{R}_\omega$ form one propagation chain \cite{jackson1999}.

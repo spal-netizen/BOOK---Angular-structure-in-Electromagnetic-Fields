@@ -1,4 +1,3 @@
-% Stage 8 restored fragment — 2.3.1 Scalar, vector, and dyadic Green functions (archive lines 3515-3952)
 \subsection{Scalar, vector, and dyadic Green functions}
 \label{sec:ch231}
 Under $\eim$, the scalar Green function $G$ inverts the Helmholtz operator $(\nabla^2+k_0^2)$ that governs monopole radiation and Lorenz potentials in vacuum \cite{stratton1941,jackson1999}. The dyadic $\overline{\mathbf{G}}_{E}$ is the electric-field response of Maxwell's system to an impressed electric dipole: it satisfies the vector Helmholtz equation with a point dyadic source and the same outgoing condition as Eq.~\eqref{eq:ch2.free-space-scalar-green} \cite{tai1994}. Causality requires the retarded branch: response at $\mathbf{r}$ is driven only by sources at $\mathbf{r}'$ with propagation phase $e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}$ compatible with Sommerfeld selection (Section~\ref{sec:ch242}) \cite{sommerfeld1949}.
@@ -16,7 +15,7 @@ A point impulse at $\mathbf{r}'$ produces the scalar response $G(\mathbf{r},\mat
 for vector currents, the dyadic response whose columns are electric fields of Cartesian unit
 dipoles.
 Extended feeds are superpositions of such impulses: each element $\Jimp(\mathbf{r}')\,d^{3}\mathbf{r}'$
-radiates with the same kernel, so method-of-moments assembly and near-field propagation share one
+radiates with the same kernel, so integral-equation assembly and near-field propagation share one
 propagation law \cite{harrington2001}.
 The physical significance of Eq.~\eqref{eq:ch2.scalar-helmholtz-green-pde} is that it isolates
 the response of the medium to the smallest source that can be imagined---a unit point excitation.
@@ -24,9 +23,7 @@ Once this elementary response is known, more complicated sources may be synthesi
 superposition \cite{jackson1999}. The scalar Green function $G(\mathbf{r},\mathbf{r}')$
 inverts the Helmholtz operator $(\nabla^2+k_0^2)$ on scalar potentials; $\mathbf{r}$ denotes
 the observation point and $\mathbf{r}'$ the source point, with $R=|\mathbf{r}-\mathbf{r}'|$
-the geometric separation in metres. On a compact range, the scalar kernel is the monopole
-reference against which probe calibration and layered-substrate corrections are measured
-\cite{hansen1988}. It satisfies
+the geometric separation in metres. In unbounded vacuum with outgoing selection at infinity, it satisfies
 \begin{equation}
 \label{eq:ch2.scalar-helmholtz-green-pde}
 \big(\nabla^{2}+k_0^{2}\big)\,G(\mathbf{r},\mathbf{r}')
@@ -67,6 +64,8 @@ On exterior domains, $G$ must satisfy outgoing decay compatible
 with Section~\ref{sec:ch24}; on bounded domains, Dirichlet, Neumann, or impedance
 data on \(\Gamma\) replace the free-space radiation template
 \cite{harrington2001}.
+The outgoing vacuum normalization $G=e^{-\jj k_0 R}/(4\pi R)$ and the $\nabla^2(1/R)=-4\pi\delta$ singularity match were established in Eq.~\eqref{eq:ch1.scalar-green-outgoing} (Chapter~\ref{ch:01}); this subsection states the free-space template and extends to vector and dyadic kernels without repeating that Chapter~\ref{ch:01} derivation \cite{stratton1941,jackson1999}.
+
 Before examining Eq.~\eqref{eq:ch2.free-space-scalar-green} itself, it is useful to recall
 the familiar physical picture of a disturbance spreading outward from a localized source.
 An expanding spherical wavefront carries phase $e^{-\jj k_0 R}$ and amplitude dilution
@@ -115,8 +114,8 @@ Subsection~\ref{sec:ch232}; outgoing completion at infinity to Section~\ref{sec:
 Vector potential and vector kernels. Direct field inversion from measured $\E$ alone is difficult because Maxwell's equations
 couple $\E$ and $\H$ through curls, material response, and boundary data; the map from
 sources to fields is nonlocal and orientation-dependent \cite{stratton1941}. Vector
-potentials are introduced not as additional fields one would place on a probe calibration
-sheet but as mathematical intermediaries that simplify reconstruction. In Lorenz gauge,
+potentials are introduced not as supplementary measurable fields but as mathematical
+intermediaries that simplify reconstruction. In Lorenz gauge,
 each Cartesian component of $\mathbf{A}$ satisfies the scalar Helmholtz template of
 Eq.~\eqref{eq:ch2.scalar-helmholtz-green-pde} with source $-\mu_0\Jimp$
 \cite{jackson1999}. The vector potential is not an
@@ -160,10 +159,10 @@ observation coordinate and $\mathbf{r}'$ the source coordinate.
 The electric dyadic Green function answers, in dyadic form, the impulse-response
 question: what electric field \(\E(\mathbf{r})\) is produced at \(\mathbf{r}\) when a
 vector current impulse is placed at \(\mathbf{r}'\)?
-Method-of-moments assembly implements Eq.~\eqref{eq:ch2.electric-dyadic-convolution}
-by testing this kernel against patch basis functions; near-field scanners apply the same
-propagation law when translating probe-corrected samples to a reference surface
-\cite{harrington2001}. Readers should notice that the dyad encodes polarization
+Surface and volume integral formulations implement Eq.~\eqref{eq:ch2.electric-dyadic-convolution}
+by testing this kernel against basis currents; analytic continuation from a measurement
+surface to a reference sphere uses the same propagation law
+\cite{harrington2001}. The dyad encodes polarization
 coupling absent from the scalar $G$: a transverse feed excites both radiative and reactive
 dyadic components, which is why the Hertzian dipole test at $k_0 a\ll 1$ remains the
 lowest-dimensional calibration before aperture catalogs are trusted \cite{jackson1999}.
@@ -259,12 +258,11 @@ The distributional mass at $\mathbf{r}=\mathbf{r}'$ is established in Theorem~\r
 The longitudinal Lorenz term $\nabla(\nabla\cdot\mathbf{A})$ does not generate a second tensor $\delta^{(3)}$ source when tested against smooth $\mathbf{f}$; it pairs with charge continuity through the scalar Green identity \cite{stratton1941,tai1994}.
 \emph{Step 5 (current representation).} Convolving Eq.~\eqref{eq:ch2.dyadic-curl-curl-source} with $\Jimp$ and using linearity produces Eq.~\eqref{eq:ch2.electric-dyadic-convolution} when $\E_{\mathrm{hom}}$ is fixed by boundary data \cite{harrington2001}.
 \end{proof}
-Every method-of-moments code and every near-field scanner relies on the convolution
-structure below: given an impressed current distribution $\Jimp$, the electric field at
-observation points follows by superposition through the dyadic propagator
-$\overline{\mathbf{G}}_{E}$. The physical measurement problem is forward prediction---what
-field does a known or assumed current produce?---which is the prerequisite for calibration,
-coupling analysis, and array synthesis \cite{harrington2001}. Inversion asks the inverse
+Forward analysis rests on the convolution structure below: given an impressed current
+distribution $\Jimp$, the electric field at observation points follows by superposition
+through the dyadic propagator $\overline{\mathbf{G}}_{E}$. That map answers the direct
+question---what field does a declared current produce?---and underlies coupling estimates
+and aperture synthesis \cite{harrington2001}. Inversion asks the inverse
 question from sparse $\E$ samples and is substantially harder even though forward
 propagation is linear and explicit \cite{hansen1988}.
 Superposition over an extended impressed current \(\Jimp\) then yields the electric field
@@ -292,10 +290,10 @@ A\,m\(^{-2}\), \(\mu_0\) is the vacuum permeability (H\,m\(^{-1}\)), and \(\omeg
 angular frequency in rad\,s\(^{-1}\); the volume integral extends over the source region
 \(\Omega\), and \(\E_{\mathrm{hom}}\) collects excitations not attributable to \(\Jimp\),
 including incident fields and cavity modes fixed by \(\mathcal{B}_\Gamma\).
-Equation~\eqref{eq:ch2.electric-dyadic-convolution} is the constructive export map every
-method-of-moments impedance matrix discretizes: patch currents $\Jimp$ tested against
-$\overline{\mathbf{G}}_{E}$ produce the $\E$ that near-field scanners back-propagate to
-equivalent surfaces \cite{harrington2001}. The consequence for inversion is
+Equation~\eqref{eq:ch2.electric-dyadic-convolution} is the constructive map that
+discretized boundary formulations implement: basis currents tested against
+$\overline{\mathbf{G}}_{E}$ yield the $\E$ used in equivalence-surface analyses
+\cite{harrington2001}. The consequence for inversion is
 immediate: specifying $\Jimp$ determines $\E$ through a single propagator integral, while
 recovering $\Jimp$ from sparse $\E$ samples is ill-posed and requires the regularization
 program of Subsection~\ref{sec:ch232} \cite{stratton1941}. Equation~\eqref{eq:ch2.electric-dyadic-convolution} is the
@@ -477,7 +475,7 @@ The scalar monopole kernel $G$ supplies the lowest-dimensional propagation law;
 the electric dyad $\overline{\mathbf{G}}_{E}$ is the vector generalization demanded
 by polarization on real feeds. Subsection~\ref{sec:ch23.signature-dipole} closes the
 loop in the opposite pedagogical order: a measured dipole pattern on $\Gamma_R$
-precedes the dyadic tabulation, so the laboratory observation remains the anchor
+precedes the dyadic tabulation, so the measurement observation remains the anchor
 when the full tensor formulas are applied to extended apertures
 \cite{jackson1999}. Scalar monopole law $G$, vector dyad
 $\overline{\mathbf{G}}_{E}$, and operator realization $\mathcal{G}_{E,\omega}$ are now fixed with

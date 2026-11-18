@@ -1,4 +1,3 @@
-% Stage 8 restored fragment — 2.7.1 Null spaces of radiation operators (archive lines 9114-9365)
 \subsection{Null spaces of radiation operators}
 \label{sec:ch271}
 
@@ -144,7 +143,13 @@ Eq.~\eqref{eq:ch2.radiation-adjoint-nullspace} paired by solvability
 Eq.~\eqref{eq:ch2.radiation-solvability-criterion}.}
 \label{fig:ch2.radiation-nullspace-measurement chain}
 \end{figure}
-Figure interpretation. Read $\mathcal{J}_\Omega$ as the impressed-source Hilbert space and $\mathcal{F}_{\mathrm{rad}}$ as the outgoing radiative image. The forward arrow $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ is the only laboratory-export channel; dashed $\ker\mathcal{R}_\omega$ feeds back into $\mathcal{J}_\Omega$ as invisible source degrees that annihilate far-zone patterns Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law}. The lower adjoint kernel $\ker\mathcal{R}_\omega^{\dagger}$ pairs with cokernel directions through reciprocity-based solvability Eq.~\eqref{eq:ch2.radiation-solvability-criterion}: a nonzero cokernel obstruction means no impressed current can realize the target far field, independent of mesh resolution \cite{stratton1941}. Figure~\ref{fig:ch2.radiation-nullspace-measurement chain} separates kernel and cokernel data before observation composition Eq.~\eqref{eq:ch2.observation-fredholm-composition}.
+Figure~\ref{fig:ch2.radiation-nullspace-measurement chain} displays the forward map
+$\mathcal{R}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_{\mathrm{rad}}$ together with kernel and
+adjoint-kernel sectors. Impressed currents in $\ker\mathcal{R}_\omega$ annihilate far-zone pattern
+content Eq.~\eqref{eq:ch2.angular-spectrum-nullspace-law}; cokernel obstructions block pattern
+synthesis through Eq.~\eqref{eq:ch2.radiation-solvability-criterion} \cite{stratton1941}.
+Finite observation rank enters only after these operator sectors are identified,
+Eq.~\eqref{eq:ch2.observation-fredholm-composition}.
 \phantomsection\label{thm:ch2.radiation-nullspace-structure}
 Let \(\mathcal{R}_\omega\) satisfy Eq.~\eqref{eq:ch2.radiation-nullspace-def} on admissible
 \(\mathcal{J}_\Omega\) with outgoing radiation condition. Then:
@@ -223,6 +228,5 @@ reactive dominance as null-space membership \cite{stratton1941}.
 Subsection~\ref{sec:ch271} fixed operator null-space structure through
 Eq.~\eqref{eq:ch2.radiation-nullspace-def}, adjoint and cokernel pairings, and the modal null
 sector Eqs.~\eqref{eq:ch2.modal-null-index-set}--\eqref{eq:ch2.modal-null-sector-reduction}
-\cite{stratton1941}. Constructive non-radiating current families that realize the kernel in the
-laboratory develop next.
-\phantomsection\label{sec:ch272}
+\cite{stratton1941}. Constructive non-radiating current families that realize the kernel are
+developed in Subsection~\ref{sec:ch272}.

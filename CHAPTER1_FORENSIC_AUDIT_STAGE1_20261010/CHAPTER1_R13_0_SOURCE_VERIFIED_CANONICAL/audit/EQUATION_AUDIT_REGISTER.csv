@@ -18,16 +18,12 @@ equation,eq:ch1.angular-momentum-product-rule,TEX,,DERIVED_OR_CITED_PENDING_ROW_
 equation,eq:ch1.azimuthal-eigenvalue,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.beth-torque-cycle-average,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.boundary-data-operator,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.bridge-compatibility-criteria,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.charge-continuity-harmonic,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.chu-Qn-def,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.chu-Z-TM-normalized,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.chu-q-adopted,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.chu-q-lower-bound,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.coherency-matrix,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.compatibility-criteria,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.continuity-admissibility,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.continuity-charge-continuous,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.continuity-integral,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.cp-spin-flux-magnitude,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.curl-curl-identity,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -103,8 +99,6 @@ equation,eq:ch1.lg-vortex-field,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.linear-momentum-balance,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.local-plane-wave-relations,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.lorentz-force,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.master-admissibility-chain,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.master-charge-continuous-chain,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.maxwell-centre,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.maxwell-component-example,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.maxwell-integral,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -136,7 +130,6 @@ equation,eq:ch1.qvol-prad-outer,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.radiation-intensity-Ur,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.radiation-trace-condition,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.rank1-dyad-rotation,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
-equation,eq:ch1.report-class-lock,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.representation-linked-jloc,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.rodrigues-rotation,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.rotation-from-generators,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
@@ -176,6 +169,9 @@ equation,eq:ch1.vacuum-impedance-wavenumber,TEX,,DERIVED_OR_CITED_PENDING_ROW_AU
 equation,eq:ch1.vacuum-wave-source-driven,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.vector-observable-covariance,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.vector-rotation-components,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.vsw-curl-identities,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.vsw-delta-E-expansion,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
+equation,eq:ch1.vsw-delta-H-expansion,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.wave-derivation-intermediate,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 equation,eq:ch1.worked-aperture-power,TEX,,DERIVED_OR_CITED_PENDING_ROW_AUDIT
 figure,fig:ch1.beth-schematic,TEX,,VISUAL_OPEN

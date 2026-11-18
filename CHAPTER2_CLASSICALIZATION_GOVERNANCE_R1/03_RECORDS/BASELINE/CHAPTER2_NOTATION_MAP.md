@@ -8,6 +8,7 @@
 
 | Symbol | Role | Domain → Codomain | Stage 2 status |
 |--------|------|-------------------|----------------|
+| \(\mathbf{j}(\mathbf{r},t)\), \(\rho(\mathbf{r},t)\) | Time-domain impressed sources | — | **ADDED R1b** (TD); harmonic \(\Jimp\), \(\rho\) phasors |
 | \(\omega\) | Angular frequency | — | PRESERVE |
 | \(k_0\) | Vacuum wavenumber | — | PRESERVE |
 | \(\Jimp\) | Impressed current | \(\mathcal{J}_\Omega\) | PRESERVE (Ch.1 macro) |
@@ -29,6 +30,12 @@
 | \(\mathcal{Q}_\omega\) | **Proposed lab / inverse observation map** | \(\mathcal{J}_\Omega\to\mathbb{C}^{N}\); \(\mathcal{Q}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\) | **AD-002** — replaces misuse of \(\mathcal{M}_\omega\) at `eq:ch2.reconstruction-observation-map` |
 | \(\mathcal{D}_J\) | Source admissibility screen | — | PRESERVE |
 | \(\ker\mathcal{R}_\omega\), \(\ker\mathcal{Q}_\omega\) | Null spaces | — | Update labels when AD-002 applied |
+| \(\mathbf{S}_{\mathrm{rad}}[\Jimp]\) | Radiative Poynting functional | — | **ADDED R1d** (`eq:ch2.poynting-functional-radiative`) |
+| \(\mathbf{T}_{\mathrm{rad}}[\Jimp]\) | Radiative Maxwell stress functional | — | **ADDED R1d**; maps via Ch.1 \(\mathbf{T}(\E,\H)\) |
+| \(\mathbf{M}_{\mathrm{rad}}[\Jimp]=\mathbf{r}\times\mathbf{T}_{\mathrm{rad}}\) | Angular momentum flux density | — | **ADDED R1d** |
+| \(\mathbf{F}_{\mathrm{rad}}(r)\) | Net momentum export through \(S_r\) | N | **ADDED R1d** |
+| \(\mathbf{J}_{\mathrm{rad}}(r)\) | Net angular-momentum flux through \(S_r\) | kg·m²/s (mechanical reading) | **ADDED R1d** |
+| \(\tau_{\hat{\mathbf{u}}}(r)\) | Torque about axis \(\hat{\mathbf{u}}\) | N·m | **ADDED R1d**; Ch.1 torque gate by `\ref` |
 
 ---
 
@@ -36,12 +43,11 @@
 
 | Artifact | Convention |
 |----------|------------|
-| **Proposed authoritative (AD-001)** | \(\exp(+\jj\omega t)\), \(\partial_t\to+\jj\omega\), outgoing \(\exp(-\jj kr)\) |
-| **Current `latex/ch02.tex`** | \(\exp(-\jj\omega t)\) |
-| **Ch.1 MICROR1 snapshot** | \(\exp(+\jj\omega t)\) |
-| **`book-consistency.mdc`** | \(\exp(-j\omega t)\) — **reconcile if AD-001 approved (AD-007)** |
+| **Chapter 2 (Stage 4 verified)** | \(\exp(+\jj\omega t)\) via `\eim`; \(\partial_t\to+\jj\omega\); outgoing \(\exp(-\jj kr)\); Maxwell display `eq:ch1.maxwell-local` |
+| **Frozen `latex/ch01.tex` prose** | States \(\exp(-\jj\omega t)\); **same** displayed curl system as Ch.2 cites |
+| **`book-consistency.mdc`** | \(\exp(-j\omega t)\) — **AD-007** (Volume-I; Ch.1 not edited in Stage 4) |
 
-**No silent manuscript change until AD-001 approved.**
+**Stage 4:** Ch.2 internal consistency **VERIFIED**; Volume-I narrative alignment **AUTHOR DECISION**.
 
 ---
 

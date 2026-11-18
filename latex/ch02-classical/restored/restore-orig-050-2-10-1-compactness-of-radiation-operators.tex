@@ -1,55 +1,22 @@
-% Stage 8 restored fragment — 2.10.1 Compactness of radiation operators (archive lines 12435-12629)
 \subsection{Compactness of radiation operators}
 \label{sec:ch2101}
-This worked configuration addresses observability under finite instrumentation, not whether Maxwell permits radiation from an electrically small source. A short dipole in free space certainly radiates; the bench issue is how many independent complex samples a spherical near-field scan can resolve on the outgoing branch when the source ball and observation shell are both small compared with wavelength \cite{harrington2001}. Increasing modal order in a spherical-harmonic fit need not improve pattern agreement; however, Maxwell theory shows that rank limits arise jointly from compact Green smoothing on bounded domains and from the finite probe bank, while non-radiating nullity is a separate mechanism that leaves far data unchanged \cite{devaney2004}. Spectral truncation error must be distinguished from membership in $\ker\mathcal{R}_\omega$: the former shrinks when singular values of the compact part decay, the latter is invisible to any far-zone array regardless of modal count \cite{stratton1941}. What a laboratory instrument detects on $S_b$ at $b=2a$ is dominated by reactive falloff faster than $r^{-1}$; only after regime qualification and outgoing selection does the same campaign report a rank statement on $\mathcal{R}_\omega[\Jimp]$ \cite{hansen1988}.
-
-On a compact-range turntable, a center-fed wire dipole of length $L\ll\lambda$ and radius
-$a\ll L$ sits inside a source ball $\Omega_s$ of radius $a$ with $k_0 a=1.5$ at the operating
-frequency $\omega$ \cite{stratton1941}. A spherical near-field scanner records $N=36$ tangential
-electric samples on a closed surface $S_b$ at radius $b=2a$; a vector network analyzer reports
-$\VSWR$ and $|S_{11}|$ on the coax feed, confirming that stored reactive energy dominates the
-input admittance at this electrical size \cite{hansen1988}. Far-field pattern cuts on the
-principal planes show a single-lobe $\ell=1$ template, while probe magnitudes on $S_b$ fall off
-faster than $r^{-1}$ in the reactive shell---the bench configuration on which compact truncation
-is first isolated \cite{harrington2001}.
-The compact-range configuration fixes outline, frequency, gauge, and permittivity before any
-operator split is written. The objective is to connect one finite probe bank to one rank statement
-on $\mathcal{R}_\omega[\Jimp]$: hardware fixes how many independent complex samples are available,
-and the singular-value tail of the compact Green part controls how much of the radiative image
-those samples can resolve \cite{stratton1941}. Watt closure and
-probe-count limits must be reported separately; conflating synthesis ceilings with observation
-ceilings is a common laboratory error on electrically small campaigns \cite{hansen1988}.
-The first worked problem isolates \emph{spectral compression}: when a source and its observation
-shell are electrically small, the Green operator that maps impressed current to tangential field
-on a closed surface possesses a compact part whose singular values decay rapidly. Truncating that
-part controls pattern-fitting error, but the error is \emph{not} non-radiating nullity---it is
-finite-geometry flux report. Readers who have measured electrically short dipoles on compact
-ranges will recognize the configuration immediately; the mathematics names what the instrument
-already enforces through probe count and scan radius.
-The bench places a center-fed wire of length $L\ll\lambda$ and radius $a\ll L$ at the center of a
-compact-range turntable; the source ball $\Omega_s$ enclosing the wire has radius $a$ with
-$k_0 a=1.5$ at the operating frequency $\omega$ \cite{stratton1941}. Port voltage on a coax feed
-drives a triangle current distribution along $L$; a vector network analyzer reports $\VSWR$ and
-$|S_{11}|$, confirming that stored reactive energy dominates the input admittance at this
-electrical size \cite{hansen1988}. Far-field pattern cuts on the principal planes show a
-single-lobe $\ell=1$ template; a spherical near-field probe at radius $b=2a$ records tangential
-$\E$-field samples whose magnitude falls off faster than $r^{-1}$ in the reactive shell, so
-watt-meter integration on a small sphere would overestimate radiated power unless the shell is
-qualified \cite{chu1948}. The radiation integral yields $\ell=1$ dominance with higher multipoles
-suppressed by $(k_0 a)^{2}$ \cite{stratton1941}; pattern cuts agree with the $\ell=1$ template,
-while spherical near-field grids must sample within $\lambda/4$ to avoid aliasing the reactive
-shell. Retaining only $M=20$ modes in a spherical-harmonic surrogate leaves a tail error set by the
-twenty-first singular value of the compact Green part \cite{hansen1988}. The dipole is the sanity
-check that every radiation map on compact support collapses toward a single export direction at
-low $k_0 a$, while the near field remains rich with reactive structure that no far-zone array can
-resolve \cite{harrington2001}.
-Problem. A compact impressed-current ball \(\Omega_s=B_a(0)\) carries an electric dipole
-\(\Jimp(\mathbf{r})=\mathbf{J}_0\,\delta(\mathbf{r})\) in the distributional limit with
-\(\int_{\Omega_s}\Jimp\,d^{3}r=\mathbf{p}\) and \(k_0 a=1.5\) at fixed \(\omega\)
-. A near-field scanner records \(N=36\) tangential electric
-samples \(\mathbf{y}\in\mathbb{C}^{36}\) on a closed surface \(S_b\) with radius \(b=2a\)
-through rank-$N$ instrument readout \(\mathcal{M}_\omega\) from
-Eq.~\eqref{eq:ch2.reconstruction-observation-map} . The task is to:
+This worked example isolates observability under finite observation rank, not whether an
+electrically small source radiates. A short dipole in free space exports dominant $\ell=1$ content,
+yet the map from impressed current to $N$ tangential samples on a closed shell $S_b$ at $b=2a$
+is compact: singular values of the composed Green observation operator decay, and truncation at
+$M$ modes leaves a tail set by $\sigma_{M+1}$ \cite{hansen1988,harrington2001}. That spectral
+compression must be distinguished from membership in $\ker\mathcal{R}_\omega$, which annihilates
+export entirely \cite{devaney2004,stratton1941}. Near $S_b$ with $b\sim 2a$ and $k_0 a=1.5$,
+tangential field magnitudes fall faster than $r^{-1}$ in the reactive shell; only after regime
+qualification and $\mathcal{R}_\omega$ selection does shell power report qualified export
+\cite{chu1948,stratton1941}. Higher multipoles are suppressed by $(k_0 a)^2$ in the far pattern;
+retaining $M=20$ modes in a spherical surrogate bounds the pattern error by the twenty-first
+singular value of the compact part \cite{hansen1988}.
+Consider an electrically small source with characteristic radius $a$ and $k_0 a=1.5$. The impressed
+current is dipolar, $\int_{\Omega_s}\Jimp\,d^{3}\mathbf{r}=\mathbf{p}$ on
+$\Omega_s=B_a(0)$. Tangential electric data $\mathbf{y}\in\mathbb{C}^{36}$ are specified on a
+closed shell $S_b$ at $b=2a$ through the rank-$N$ observation map
+$\mathcal{M}_\omega$ of Eq.~\eqref{eq:ch2.reconstruction-observation-map}. Determine:
 \begin{enumerate}
 \item[(a)] identify the compact and non-compact parts of the probe-to-far-field operator implied by
 Subsection~\ref{sec:ch213};
@@ -75,14 +42,14 @@ surrogate of \(\mathcal{R}_\omega[\Jimp]\);
  \draw[ch1flow] (rank.south |- m.north) -- (m.north);
 \end{tikzpicture}%
 }
-\caption{Worked problem~\ref{sec:ch2101}: compact source, Green split on \(\mathcal{S}_\omega\),
-radiation map, and rank-\(36\) near-field probe bank. Compact part \(K_{\mathrm{cpt}}\) controls
-modal truncation error; \(\mathcal{R}_\omega\) is not compact on \(\mathcal{J}_\Omega\).}
+\caption{Compact dipole example: operator chain from $\Jimp$ through $\mathcal{S}_\omega$ and
+$\mathcal{R}_\omega$ to finite-rank readout $\mathcal{M}_\omega$. The compact part
+$K_{\mathrm{cpt}}$ controls modal truncation error; $\mathcal{R}_\omega$ itself is not compact
+on $\mathcal{J}_\Omega$.}
 \label{fig:ch2.wp-compact-radiation-probes}
 \end{figure}
-The schematic
-separates compact smoothing on the source-to-field operator from non-compact radiation selection and
-finite-rank readout.
+Figure~\ref{fig:ch2.wp-compact-radiation-probes} separates compact smoothing on the
+source-to-field map from radiation selection and the finite-rank observation step.
 On bounded domains with compact \(\Omega_s\), Subsection~\ref{sec:ch213} records
 \begin{equation}
 \label{eq:ch2.ex-compact-green-split}
@@ -179,4 +146,4 @@ reports as transport \cite{harrington2001}. A practitioner who increases modal o
 raising probe count $N$ or scan radius $b/a$ may reduce a pattern residual that owes nothing to
 source physics---only to compact smoothing---while true non-radiating additions would leave
 $\mathbf{y}$ unchanged regardless of $M$.
-The distinction is not whether the dipole radiates---it does---but which term in Eq.~\eqref{eq:ch2.dof-partition-master} removed unresolved content when a finite probe bank was compared with a truncated modal surrogate. Compact-range reporting often reports a single pattern residual without separating compact singular-value tails from true source nullity \cite{hansen1988}. Electrically small geometry compresses resolvable radiation degrees of freedom on a nearby shell; probe count and scan radius already enforce the bound on the bench \cite{stratton1941}. Subsection~\ref{sec:ch2102} turns to the complementary case in which impressed current is substantial yet annihilated by $\mathcal{R}_\omega$, so far-zone arrays remain blind while near probes change.
+The distinction is not whether the dipole radiates---it does---but which term in Eq.~\eqref{eq:ch2.dof-partition-master} removed unresolved content when a finite probe bank was compared with a truncated modal surrogate. Truncated-domain reporting often reports a single pattern residual without separating compact singular-value tails from true source nullity \cite{hansen1988}. Electrically small geometry compresses resolvable radiation degrees of freedom on a nearby shell; probe count and scan radius already enforce the bound on the bench \cite{stratton1941}. Subsection~\ref{sec:ch2102} turns to the complementary case in which impressed current is substantial yet annihilated by $\mathcal{R}_\omega$, so far-zone arrays remain blind while near probes change.

@@ -6,7 +6,7 @@
 |------|--------|
 | Branch | `volume-i/ch2-4-coordinated-transformation` |
 | Parent | `c6d7e5e` (Batch E) |
-| Batch F commit | *set on commit* |
+| Batch F commit | `8413d7b` (parent `c6d7e5e`) |
 | Ch.1 `latex/ch01.tex` | Unedited; SHA256 `595BF96BFAAC7FED4F568E9573C70CD302296E40BEA31773F0DCD4BBF72DFD85` |
 
 ## B. Build recovery

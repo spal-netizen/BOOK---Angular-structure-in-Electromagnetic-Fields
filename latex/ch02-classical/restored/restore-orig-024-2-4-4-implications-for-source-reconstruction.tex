@@ -1,24 +1,20 @@
-% Stage 8 restored fragment — 2.4.4 Implications for source reconstruction (archive lines 5773-6089)
 \subsection{Implications for source reconstruction}
 \label{sec:ch244}
 
-Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) fixes uniqueness of
-\(\mathcal{S}_\omega[\Jimp]\) on the outgoing branch. Subsection~\ref{sec:ch244}
-records the inverse-source consequences: field uniqueness does not imply source
-identifiability. Uniqueness of \((\E,\H)\) under outgoing conditions does not make
-$\mathcal{R}_\omega$ injective---distinct $\Jimp$ can share the same far pattern
-\cite{devaney2004}. Source reconstruction is a conditioned inverse, not a direct readout
-of coefficients \cite{hansen1988}.
-\medskip
-\(\mathcal{R}_\omega\) is generally non-injective, and finite observation channels
-compress rank further \cite{stratton1941}. Observation null-space
-Eq.~\eqref{eq:ch2.observation-null-space}, rank composition
-Eq.~\eqref{eq:ch2.rank-composition-law}, and non-radiating relation
-Eq.~\eqref{eq:ch2.null-radiation} from Subsection~\ref{sec:ch213} are
-presupposed; complete structure of \(\ker\mathcal{R}_\omega\) belongs to
-Section~\ref{sec:ch272} \cite{harrington2001}. Measurement classification from
-Section~\ref{sec:ch01.5} applies here; angular-momentum observables from
-Chapter~\ref{ch:01} are not re-opened \cite{stratton1941}. Field uniqueness versus source identifiability. Forward exterior completion yields
+Subsection~\ref{sec:ch243} showed that outgoing Maxwell fields on an exterior domain are
+uniquely fixed by impressed data and boundary class. That statement concerns the
+\emph{field} pair \((\E,\H)\). Source identification is a separate question: the radiation
+map $\mathcal{R}_\omega$ is generally not injective, so distinct impressed currents can
+produce the same far-zone pattern \cite{devaney2004,hansen1988}. Inverse source problems
+therefore seek a representative within an equivalence class, subject to rank limits imposed
+by finite observation and geometry, not a unique current density read from pattern data alone
+\cite{stratton1941}.
+
+The forward-null structure of Subsection~\ref{sec:ch213} and the complete analysis of
+$\ker\mathcal{R}_\omega$ in Section~\ref{sec:ch27} are cited rather than reproved here;
+angular-momentum observables from Chapter~\ref{ch:01} enter only through the report classes
+fixed in Section~\ref{sec:ch01.5} \cite{stratton1941}. Field uniqueness and source
+identifiability diverge as follows.
 
 \begin{equation}
 \label{eq:ch2.field-source-uniqueness-split}
@@ -87,8 +83,8 @@ carry substantial near-zone reactive energy through \(\mathcal{S}_\omega\)
 \(\mathcal{R}_\omega\) collapses many sources to the same radiative output.}
 \label{fig:ch2.reconstruction-forward-chain}
 \end{figure}
-Observation composition and inverse problem. Laboratory readouts compose with $\mathcal{R}_\omega$ before any source inversion
-is attempted: pattern probes and near-field scanners observe a finite-rank image of impressed
+Observation composition and inverse problem. Finite readouts compose with $\mathcal{R}_\omega$ before any source inversion
+is attempted: pattern probes and near-zone observations observe a finite-rank image of impressed
 currents, not $\Jimp$ itself \cite{hansen1988}. From
 Eq.~\eqref{eq:ch2.radiation-operator-composition} and finite-rank observation
 Eq.~\eqref{eq:ch2.finite-rank-observation},
@@ -206,7 +202,7 @@ far-zone observables were designed:
 with \(\mathcal{D}_{J,\mathrm{reg}}\) from Eq.~\eqref{eq:ch1.regime-qualified-decision}
 \cite{stratton1941}. Attempting to reconstruct \(\Jimp\) from
 near-zone reactive samples without regime qualification conflates storage with export,
-the laboratory error flagged in Section~\ref{sec:ch01.2.4} \cite{stratton1941}. Outgoing
+the common misinterpretation flagged in Section~\ref{sec:ch01.2.4} \cite{stratton1941}. Outgoing
 uniqueness from exterior radiative uniqueness (Subsection~\ref{sec:ch243}) stabilizes the
 \emph{field} side of Eq.~\eqref{eq:ch2.inverse-source-equation}; it does not promote
 evanescent-dominated states to identifiable radiative sources
@@ -270,8 +266,8 @@ does not make \(\mathcal{R}_\omega\) injective on all of \(\mathcal{J}_\Omega\)
 \cite{harrington2001}. Complete null-space bases and NR source examples belong to
 Section~\ref{sec:ch27} \cite{stratton1941}.
 As a worked example, with \(N\) probe channels, Eq.~\eqref{eq:ch2.reconstruction-rank-cap} limits
-recoverable modal content to rank \(N\) regardless of mesh density
-\cite{stratton1941}. Refining a boundary-element mesh without adding independent
+recoverable modal content to rank \(N\) regardless of discretization density
+\cite{stratton1941}. Refining a boundary discretization without adding independent
 measurements does not resolve components in
 \(\ker\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\)
 \cite{harrington2001}. This is the operator reading of

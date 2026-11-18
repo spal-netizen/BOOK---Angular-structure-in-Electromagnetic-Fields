@@ -1,56 +1,38 @@
-% Stage 8 restored fragment — 2.10.2 Non-radiating source configurations (archive lines 12630-12838)
 \subsection{Non-radiating source configurations}
 \label{sec:ch2102}
 
-A coax-fed pyramidal horn over a ground plane defines the impressed-current and boundary-data tuple technicians declare before Maxwell export is computed \cite{stratton1941}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
-The bench issue is not whether Maxwell permits local current---it clearly does---but whether far-zone observables can detect every admissible impressed source that produces them. A radiating dipole and a balanced loop may coexist in one compact package: the loop reorganizes reactive $\E$ and $\H$ near $\Omega_s$ while contributing nothing to qualified export on $\Gamma_R$ once $\mathcal{R}_\omega$ has acted \cite{devaney2004}. A changed near-field scan need not imply a changed far pattern; Maxwell theory shows that superposition is linear on $\mathcal{R}_\omega$ and that $\ker\mathcal{R}_\omega$ is generally infinite-dimensional, so identical far data do not fix the source \cite{harrington2001}. Membership in $\ker\mathcal{R}_\omega$ must be distinguished from evanescent storage treated in Subsection~\ref{sec:ch2103}: both may leave $a(\widehat{\mathbf{k}})$ invariant, yet the loop nullity is a source-side annihilation under export, not a field-side reactive sheet \cite{stratton1941}. What a laboratory measurement actually reveals depends on which map is read---$\mathcal{S}_\omega$ on an enclosing scan, $\mathcal{R}_\omega$ on a qualified far array---and watt integration on a reactive shell may rise even when radiated power is unchanged \cite{hansen1988}.
-
-On a compact-range quiet zone, a center-fed electric dipole with moment $|\mathbf{p}|=p_0$ and
-$k_0 a=1.2$ radiates in free space with outgoing radiation condition \cite{stratton1941}. An
-engineer mounts a small magnetic loop of radius $a_{\mathrm{loop}}=0.3a$ beside the feed with
-equal opposing filaments so net dipole moment vanishes; near-field probes on $S_b$ at $b=2a$
-record tangential samples, while a far-zone array estimates $\E_0(\theta,\phi)$ from
-Eq.~\eqref{eq:ch2.far-field-amplitude-integral} \cite{devaney2004}. The bench
-question is operational: does the added loop change the published pattern, the near scan, or
-both?
-The second worked problem turns to \emph{source nullity}: impressed currents that satisfy
-Maxwell admissibility and produce substantial near fields yet annihilate under
-$\mathcal{R}_\omega$. Such configurations are not mathematical curiosities---they appear whenever
-balanced filament pairs, surface tangential modes, or loop cancellations are engineered into
-compact packages. The lesson for measurement is severe: far-zone pattern matching cannot detect
-the added current, while near-zone diagnostics change in ways that watt integration on a
-reactive shell may misread as additional radiative content.
-\emph{Geometry and size.} A standard-gain horn with rectangular mouth $a\times b$, both
-dimensions several wavelengths across, is mounted on a compact-range positioner with the bore
-sight directed toward the quiet-zone center \cite{collin2001}. \emph{Excitation.} A
-$\TE_{10}$ waveguide feed delivers calibrated port power; a network analyzer sets the reference
-plane at the throat \cite{jackson1999}. \emph{Observable behavior.} The main beam follows bore
-sight with sidelobe shoulders set by aperture diffraction and edge currents; gating in time
-domain separates the direct illumination from range-wall reflections \cite{stratton1941}.
-\emph{Mathematical analysis.} Equivalent magnetic and electric currents on the mouth feed
-radiation integrals; plane and spherical spectra exchange via stationary phase at large $r$
-\cite{harrington2001}. \emph{Measurement consequence.} Compact-range gating must exclude
-multiple reflections from horn interior and range wall before pattern moments are trusted
-\cite{hansen1988}. \emph{Physical interpretation.} Horn patterns test outgoing selection and
-equivalence surfaces before rank claims are transferred to more complex feeds; they also provide
+Far-zone observables do not determine impressed current uniquely: superposition on
+$\mathcal{R}_\omega$ is linear and $\ker\mathcal{R}_\omega$ is generally infinite-dimensional, so
+identical far patterns admit distinct source superpositions \cite{harrington2001,devaney2004}. A
+radiating dipole and a balanced loop may coexist: the loop reorganizes reactive $\E$ and $\H$ near
+$\Omega_s$ while contributing nothing to $\mathcal{R}_\omega[\Jimp]$ on $\Gamma_R$
+\cite{devaney2004,stratton1941}. Source-side nullity in $\ker\mathcal{R}_\omega$ must be
+distinguished from evanescent field storage (Subsection~\ref{sec:ch2103}); both may leave
+$a(\widehat{\mathbf{k}})$ unchanged, but only the former annihilates export under
+$\mathcal{R}_\omega$ \cite{stratton1941}.
+\emph{Worked nullity.} A center-fed electric dipole with $k_0 a=1.2$ radiates under outgoing
+selection \cite{stratton1941}. A small balanced magnetic loop beside the feed with vanishing net
+dipole moment may leave $\E_0(\theta,\phi)$ from Eq.~\eqref{eq:ch2.far-field-amplitude-integral}
+unchanged while altering tangential samples on $S_b$ at $b=2a$ \cite{devaney2004}. The diagnostic
+is which map is compared---$\mathcal{S}_\omega$ on a near shell versus $\mathcal{R}_\omega$ on the
+far integral \cite{hansen1988}.
+\emph{Aperture illustration.} A rectangular horn mouth several wavelengths across radiates through
+equivalent surface currents; bore-sight beams and sidelobes follow aperture diffraction and edge
+currents \cite{collin2001,stratton1941}. Equivalent currents on the mouth feed the radiation
+integrals; large-$r$ reductions exchange plane and spherical spectra via stationary phase
+\cite{harrington2001}. Horn patterns thereby test outgoing selection and equivalence-surface
+consistency before rank claims transfer to more complex feeds; they also provide
 the contrasting backdrop against which loop-null configurations in the display below become
 visible only through near-field probes, not through far-zone arrays \cite{maxwell1873}.
-Subsection~\ref{sec:ch2102} activates the \(\ker\mathcal{R}_\omega\) term of
-Eq.~\eqref{eq:ch2.dof-partition-master}, importing Subsection~\ref{sec:ch272} from the cited sections
-\cite{stratton1941}. Non-radiating current definition Eq.~\eqref{eq:ch2.nr-current-def}, canonical families
-Eqs.~\eqref{eq:ch2.nr-loop-cancellation}--\eqref{eq:ch2.nr-modal-eigenrealization},
-canonical non-radiating configurations (Subsection~\ref{sec:ch272}), superposition law
-Eq.~\eqref{eq:ch2.nr-superposition-law}, near-field law
-Eq.~\eqref{eq:ch2.nr-near-field-energy-law}, and modal invisibility
-Eq.~\eqref{eq:ch2.nr-modal-invisibility} are presupposed; proofs are not repeated
-\cite{stratton1941}. Null-space operator structure (Subsection~\ref{sec:ch271}),
-angular invariance Eq.~\eqref{eq:ch2.angular-spectrum-nr-invariance}, and inverse obstruction
-angular spectra and inverse problems (Subsection~\ref{sec:ch274}) supply context
-\cite{harrington2001}. Problem. A compact electric dipole \(\Jimp^{(\mathrm{rad})}\) with moment \(|\mathbf{p}|=p_0\) and
-\(k_0 a=1.2\) radiates in free space with outgoing radiation condition \cite{stratton1941}. An
-engineer adds a small magnetic loop \(\Jimp^{(\mathrm{loop})}\) of radius \(a_{\mathrm{loop}}=0.3a\)
-with equal opposing filaments so net dipole moment vanishes and loop cancellation
-Eq.~\eqref{eq:ch2.nr-loop-cancellation} applies \cite{stratton1941}. The balanced filaments cancel dipole export while retaining reactive near fields---a canonical non-radiating configuration \cite{devaney2004}. Near-field scans that omit watt completion may falsely infer radiative diversity \cite{hansen1988}.
+Subsection~\ref{sec:ch2102} illustrates the \(\ker\mathcal{R}_\omega\) term in
+Eq.~\eqref{eq:ch2.dof-partition-master}, citing the constructive families of
+Subsection~\ref{sec:ch272} \cite{stratton1941}. Consider a compact electric dipole
+\(\Jimp^{(\mathrm{rad})}\) with \(k_0 a=1.2\) that radiates under outgoing selection
+\cite{stratton1941}. Superpose a small balanced magnetic loop \(\Jimp^{(\mathrm{loop})}\) with
+radius \(a_{\mathrm{loop}}=0.3a\) satisfying loop cancellation
+Eq.~\eqref{eq:ch2.nr-loop-cancellation} \cite{devaney2004}. The total impressed current alters
+tangential fields on $S_b$ at $b=2a$ while leaving $a(\widehat{\mathbf{k}})$ unchanged when the
+loop contribution lies in \(\ker\mathcal{R}_\omega\) \cite{hansen1988}.
 Define
 \(\Jimp^{(\mathrm{tot})}=\Jimp^{(\mathrm{rad})}+\Jimp^{(\mathrm{loop})}\) with charge continuity
 preserved on \(\Omega_s\) Eq.~\eqref{eq:ch2.nr-current-admissibility-law}

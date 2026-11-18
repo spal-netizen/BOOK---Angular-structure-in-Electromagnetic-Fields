@@ -1,0 +1,23 @@
+% R10.2 — local layout patch for Fig.~1.12 (build-package only)
+\makeatletter
+\renewcommand{\VolIPhysReactiveVsRadiative}{%
+\begin{tikzpicture}[voliphys]
+  \draw[volishelld, fill=black!4] (-0.35,-0.35) rectangle (0.35,0.35);
+  \draw[volisrc] (0,0) circle (1.5pt);
+  \node[volilabel, font=\scriptsize, align=center] at (0,-0.78) {bounded\\source};
+  \draw[volishelld] (0,0) circle (0.58);
+  \foreach \a in {20,80,140,200,260,320} {
+    \draw[gray!40!black, -{Latex[length=1.6mm,width=1mm]}, line width=0.55pt]
+      ({0.42*cos(\a)},{0.42*sin(\a)}) arc [start angle=\a, end angle=\a+50, radius=0.42];
+  }
+  \node[volilabel, font=\scriptsize, align=center] at (-1.75,0.15) {reactive\\$\mathbf{P}$};
+  \draw[volishell] (0,0) circle (1.38);
+  \node[volilabel, font=\scriptsize] at (1.65,-0.35) {$\Gamma_R$};
+  \foreach \a in {0,45,90,135,180,225,270,315} {
+    \draw[volipoynt] ({1.38*cos(\a)},{1.38*sin(\a)}) -- ({1.78*cos(\a)},{1.78*sin(\a)});
+  }
+  \node[volilabel, font=\scriptsize, align=center] at (0,2.15)
+    {$\oint_{\Gamma_R}\Re\{\mathbf{S}_\mathrm{c}\!\cdot\!\hat{\mathbf{n}}\}\,dS$};
+\end{tikzpicture}%
+}
+\makeatother

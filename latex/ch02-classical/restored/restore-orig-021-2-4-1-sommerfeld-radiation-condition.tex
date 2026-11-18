@@ -1,12 +1,10 @@
-% Stage 8 restored fragment — 2.4.1 Sommerfeld radiation condition (archive lines 4939-5230)
 \subsection{Sommerfeld radiation condition}
 \label{sec:ch241}
-At fixed $\omega$ under $\eim$, the exterior Helmholtz operator admits spherical partners that grow or decay with
-$e^{\mp\jj k_0 r}/r$. A finite computational domain without a radiation condition therefore leaves the same near-field
-data compatible with an incoming partner at infinity, with chamber reflections, or with a purely formal advanced
-solution \cite{sommerfeld1949,hansen1988}. Sommerfeld selection is the asymptotic rule that excludes incoming energy
-from infinity so that patterns measured on $\Gamma_R$ refer to the declared feed rather than to spurious exterior
-completion \cite{sommerfeld1949,stratton1941}.
+At fixed $\omega$ under $\eim$, the exterior Helmholtz equation admits spherical solutions that grow or decay with
+$e^{\mp\jj k_0 r}/r$. Without a radiation condition, the same near-field data remain compatible with an incoming
+partner at infinity or with a formal advanced solution \cite{sommerfeld1949,jackson1999}. Sommerfeld selection is
+the asymptotic rule that excludes incoming energy from infinity so that far-zone patterns on $\Gamma_R$ refer to
+the impressed source rather than to spurious exterior completion \cite{sommerfeld1949,stratton1941}.
 Sommerfeld's condition is the asymptotic statement that, for $r\to\infty$, fields launched from
 compact sources carry phase fronts $k_0 r$ increasing outward and amplitudes decaying no slower than
 $r^{-1}$, thereby excluding incoming energy from infinity \cite{sommerfeld1949,jackson1999}.
@@ -29,14 +27,10 @@ constants \(\varepsilon_0,\mu_0\) in the far zone. Spherical coordinates
 Eq.~\eqref{eq:ch2.helmholtz-symbol} \cite{stratton1941}. Interior interfaces and
 finite domains use Eq.~\eqref{eq:ch1.outer-boundary-classes}; Sommerfeld completion
 applies on artificial or physical spheres at large \(r\) \cite{harrington2001}.
-On $\Gamma_R$ with $R\gg\lambda_0$, a range engineer expects the measured phase to advance as
-$k_0 r$ increases---outgoing fronts receding from the enclosure---and the amplitude to fall no
-faster than $r^{-1}$ in three dimensions \cite{jackson1999}. That observation is what
-Sommerfeld selection encodes at infinity: the scalar template states what every outgoing Helmholtz
-response must look like at large distance from a localized source. Phase fronts recede with the
-observer; amplitude decay compatible with energy export to infinity is $r^{-1}$ in three
-dimensions \cite{jackson1999}. For scalar potentials and Helmholtz kernels, outgoing radiation
-requires, with $r=|\mathbf{r}|$ the observation radius from an origin enclosing the source,
+On a large sphere $\Gamma_R$ enclosing the source, outgoing fields exhibit phase $k_0 r$ advancing
+with radius and transverse amplitude decaying no slower than $r^{-1}$ \cite{jackson1999}.
+Sommerfeld selection encodes that behavior at infinity. For scalar potentials and Helmholtz kernels,
+outgoing radiation requires, with $r=|\mathbf{r}|$ the observation radius from an origin enclosing the source,
 $k_0=\omega\sqrt{\mu_0\varepsilon_0}$ the vacuum wavenumber (rad\,m$^{-1}$), and
 $A(\theta,\phi,\mathbf{r}')$ the angular amplitude that carries directional information while
 $\mathbf{r}'$ labels the fixed source point during the limit $r\to\infty$:
@@ -255,11 +249,11 @@ Eq.~\eqref{eq:ch2.sommerfeld-radiation-composition} \cite{stratton1941}. Equatio
 \eqref{eq:ch2.sommerfeld-radiation-composition} expresses
 Eq.~\eqref{eq:ch2.radiation-time-frequency-equiv} on the Sommerfeld domain without
 re-proving causality from Subsection~\ref{sec:ch223} \cite{harrington2001}. Consequence for
-range practice: pattern meters and gain reports must compose with $\mathcal{R}_\omega$, not with
+far-zone reporting: power and pattern functionals must compose with $\mathcal{R}_\omega$, not with
 raw $\mathcal{S}_\omega[\Jimp]$, whenever reactive near fields are non-negligible on the
-measurement shell \cite{stratton1941}. Subsection~\ref{sec:ch241} therefore states
-what the compact range already assumes before any far-zone integral is evaluated in
-Section~\ref{sec:ch25} \cite{stratton1941}.
+observation shell \cite{stratton1941}. Subsection~\ref{sec:ch241} therefore states
+the asymptotic premises required before the radiation integrals of Section~\ref{sec:ch25}
+are evaluated \cite{stratton1941}.
 Equations~\eqref{eq:ch2.sommerfeld-scalar-asymptotic}--\eqref{eq:ch2.sommerfeld-outgoing-class}
 require linear vacuum far zones, fixed \(\omega>0\), and compact \(\operatorname{supp}\Jimp\).
 They fail for anisotropic or magneto-electric exterior media without modified

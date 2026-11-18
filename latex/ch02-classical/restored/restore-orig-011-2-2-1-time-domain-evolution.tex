@@ -1,25 +1,11 @@
-% Stage 8 restored fragment — 2.2.1 Time-domain evolution (archive lines 2469-2734)
 \subsection{Time-domain evolution}
 \label{sec:ch221}
 
-Fixed-frequency measurements report phasors tied to the locked convention $\eim=\exp(+\jj\omega t)$ of Chapter~\ref{ch:01}; the time-domain equations below are the causal law from which that substitution inherits its sign structure \cite{stratton1941,poynting1884}.
-The physical problem is causal propagation: a switched feed, a pulsed radar, or a transient
-immunity test excites fields whose support in $(\mathbf{r},t)$ must respect finite signal
-speed \cite{maxwell1873}. Time-harmonic phasors are how network analyzers, compact
-ranges, and chamber receivers report steady-state radiation at each frequency step
-\cite{stratton1941}. The $\eim$ convention fixed in Chapter~\ref{ch:01} aligns
-Poynting flux with wattmeter readings and VNA phase references \cite{poynting1884}. Phasor
-analysis is best viewed as a steady-state reduction of a fundamentally causal theory rather
-than as the primary formulation of electromagnetic dynamics \cite{harrington2001}. Even small
-phase errors can rotate synthesized patterns when near-field data are back-propagated
-\cite{hansen1988}. The time-domain picture below states the causal support that every VNA tone
-must inherit when $\mathcal{L}_\omega$ is interpreted as a frequency slice rather than an
-independent postulate \cite{stratton1941}.
+Harmonic analysis at fixed $\omega$ employs the phasor convention $\eim=\exp(+\jj\omega t)$ established in Chapter~\ref{ch:01}. The time-domain Maxwell system stated below is the causal law from which that substitution inherits its sign structure \cite{stratton1941,poynting1884}.
 
-Subsection~\ref{sec:ch221} supplies the time-domain foundation underlying every harmonic
-formulation used later in the chapter. It introduces the first-order Maxwell evolution
-system, the associated evolution operator, and the causal support restrictions that all
-physically admissible frequency-domain solutions must inherit \cite{stratton1941}.
+The physical problem is causal propagation: a switched feed or pulsed excitation produces fields whose support in $(\mathbf{r},t)$ must respect finite signal speed $c$ \cite{maxwell1873}. Time-harmonic phasors are steady-state reductions of that law, valid when excitation and constitutive response are sufficiently narrowband on the declared band \cite{stratton1941,harrington2001}. Phasor analysis is therefore not an independent postulate; it is the frequency representation of retarded Maxwell evolution under the hypotheses stated in Subsection~\ref{sec:ch223}.
+
+Subsection~\ref{sec:ch221} develops the first-order Maxwell evolution system, the associated evolution operator, and the causal support restrictions that every admissible frequency-domain solution must inherit \cite{stratton1941}.
 Time-domain evolution specifies retarded trajectories: the field observed at
 $(\mathbf{r},t)$ depends only on source events contained within the corresponding past
 light cone \cite{stratton1941}. Any numerical or analytical approximation that violates
@@ -36,7 +22,7 @@ The evolution problem is posed on trajectories of the electromagnetic state rath
 than on isolated snapshots at a single frequency.
 A pulsed or switched excitation on a feed line makes the distinction visible: the field at
 $(\mathbf{r},t)$ cannot respond until source events inside the backward light cone have
-occurred. Time-domain evolution is therefore the laboratory picture behind every harmonic
+occurred. Time-domain evolution is therefore the measurement picture behind every harmonic
 slice $\mathcal{S}_\omega$ used later in the chapter \cite{stratton1941}. The state vector
 $\mathbf{U}(t)$ packages the coupled $(\E,\H)$ fields at frozen time $t$ into a single
 object on which the Maxwell generator acts; this packaging mirrors the phasor state $\mathbf{u}_\omega$ of Eq.~\eqref{eq:ch2.maxwell-state-vector},

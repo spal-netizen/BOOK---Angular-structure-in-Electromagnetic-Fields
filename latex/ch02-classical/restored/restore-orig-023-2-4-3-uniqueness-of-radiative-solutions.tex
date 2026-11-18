@@ -1,4 +1,3 @@
-% Stage 8 restored fragment — 2.4.3 Uniqueness of radiative solutions (archive lines 5456-5772)
 \subsection{Uniqueness of radiative solutions}
 \label{sec:ch243}
 
@@ -7,17 +6,18 @@ traces yet differ in their far-zone phase if incoming and outgoing spherical con
 separated. The exterior uniqueness question is whether Sommerfeld's outgoing selection, passive
 material response in $\Omega_s$, and finite radiated power together force the difference field to
 vanish identically in the radiation domain \cite{sommerfeld1949,stratton1941,harrington2001}.
-Without that conclusion, a compact-range pattern could not be attributed to a declared feed:
+Without that conclusion, a far-zone pattern could not be attributed to a declared feed:
 reactive storage near $\Omega_s$ could be traded against incoming partners at infinity without
-changing near-field samples on a finite scan. Reactive energy may dominate on $\Gamma_R$ close to $\Omega_s$ while
+changing tangential data on a finite enclosing surface. Reactive energy may dominate on $\Gamma_R$ close to $\Omega_s$ while
 contributing negligibly to $P_{\mathrm{rad}}$ once
 $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{\mathrm{(out)}}$ with
 $\mathcal{S}_\omega^{\mathrm{(out)}}=\mathcal{O}_{\mathrm{out}}\circ\mathcal{S}_\omega$
 is applied (Eq.~\eqref{eq:ch2.outgoing-radiation-refinement}) \cite{harrington2001}.
 
-The proof imports the difference-field energy method of Subsection~\ref{sec:ch01.1.3}
-(Eqs.~\eqref{eq:ch1.uniqueness-difference-system}--\eqref{eq:ch1.uniqueness-energy-identity})
-and specializes it to exterior domains with outgoing completion
+The proof \emph{uses by citation only} the difference-field energy method of Subsection~\ref{sec:ch01.1.3}
+(Eqs.~\eqref{eq:ch1.uniqueness-difference-system}--\eqref{eq:ch1.uniqueness-energy-identity}):
+the local div\,$\mathbf{S}_\Delta$ identity and its integration over a truncated exterior are not re-derived here
+\cite{stratton1941,harrington2001}. This subsection specializes that Chapter~\ref{ch:01} argument to exterior domains with outgoing completion
 Eqs.~\eqref{eq:ch2.sommerfeld-field-condition}--\eqref{eq:ch2.sommerfeld-outgoing-class}
 (Subsection~\ref{sec:ch241}). Source non-uniqueness is deferred to Subsection~\ref{sec:ch244}. Let \(\Omega_{\mathrm{ext}}\) denote an exterior domain with compact
 \(\operatorname{supp}\Jimp\subset B_R(0)\), vacuum constants \(\varepsilon_0,\mu_0\)
@@ -111,11 +111,11 @@ $u_{\Delta H}=\tfrac14\mu|\Delta\H|^{2}$,
 Integrating Eq.~\eqref{eq:ch2.poynting-difference-divergence} yields volume split
 $-2\jj\omega\!\int(u_{\Delta H}-u_{\Delta E})\,dV$.
 Equation~\eqref{eq:ch1.uniqueness-energy-identity} displays
-$-\jj\omega\!\int(u_{\Delta H}-u_{\Delta E})\,dV$ (factor $2$ absent);
-Chapter~\ref{ch:01} is left unchanged, so the integrated prefactor remains an open
-interface until author alignment---the exterior proof below uses only
+$-\jj\omega\!\int(u_{\Delta H}-u_{\Delta E})\,dV$, which differs by a factor $2$ from the
+integrated form of Eq.~\eqref{eq:ch2.poynting-difference-divergence}; Chapter~\ref{ch:01} is
+left unchanged. The exterior uniqueness proof below invokes only
 $\Re\oint\mathbf{S}_\Delta\cdot\hat{\mathbf{n}}\,dS$, Sommerfeld decay, and passivity on
-$\Omega_s$.
+$\Omega_s$, not the Chapter~\ref{ch:01} integrated volume coefficient.
 For a large sphere \(\Gamma_R=\{r=R\}\) enclosing \(\Omega_s\), let
 \(\Omega_R=B_R\setminus\Omega_s\) and $\Gamma_s=\partial\Omega_s$.
 Integrating Eq.~\eqref{eq:ch2.poynting-difference-divergence} and applying the divergence theorem,
@@ -346,7 +346,7 @@ Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}. A finite scattere
 embedded in free space may support Mie resonances in the near field without breaking
 exterior uniqueness: those modes are driven by \(\Jimp\) and do not appear as free
 homogeneous outgoing states \cite{jackson1999}.
-Laboratory errors and non-applicability. Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) requires linear passive media,
+Common errors and non-applicability. Exterior radiative uniqueness (Subsection~\ref{sec:ch243}) requires linear passive media,
 fixed \(\omega\) away from pathological embedded spectra, and exact outgoing radiation condition
 rather than approximate ABC alone \cite{stratton1941}. First-order
 absorbing boundaries that do not enforce Eq.~\eqref{eq:ch2.sommerfeld-field-condition}

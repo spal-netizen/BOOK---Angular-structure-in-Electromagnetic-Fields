@@ -1,31 +1,20 @@
-% Stage 8 restored fragment — 2.7.3 Evanescent overlap and non-reconstructability (archive lines 9570-9849)
 \subsection{Evanescent overlap and non-reconstructability}
-Subsections~\ref{sec:ch271}--\ref{sec:ch272} fixed $\ker\mathcal{R}_\omega$ and canonical
-non-radiating impressed currents Eq.~\eqref{eq:ch2.nr-current-def}. Evanescent sheets are a
-distinct field-side deficit: reactive storage that never passes $\Pi_{\mathrm{rad}}$ even when
-the source radiates. Subsection~\ref{sec:ch273} supplies the definitive account of evanescent
-subspaces, their overlap with non-radiating source content, and reconstructability limits under
-finite observation rank---developing Eq.
-Eq.~\eqref{eq:ch2.evanescent-nonreconstruct} from Section~\ref{sec:ch27}
-\cite{stratton1941}. Propagation projectors
-Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent} from
-Subsection~\ref{sec:ch224}, non-propagating split
-Eq.~\eqref{eq:ch2.nonpropagating-component-def} from Subsection~\ref{sec:ch254}, measurement
-null-space extension measurement null-space extension (Subsection~\ref{sec:ch271}) from
-Subsection~\ref{sec:ch271}, and rank cap Eq.~\eqref{eq:ch2.reconstruction-rank-cap} from
-Subsection~\ref{sec:ch244} are presupposed; projector algebra and inverse-source templates are
-not re-proved \cite{stratton1941}. Angular-spectrum consequences belong to Subsection
-~\ref{sec:ch274}; plane-wave filters to Section~\ref{sec:ch29} \cite{harrington2001}.
-Assumptions. Fix \(\omega>0\), admissible \(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-admissibility},
-outgoing radiation condition Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique},
-field pairs in \(\mathcal{F}_{\mathrm{SF}}\subset\mathcal{F}_\Omega\), and spectral completion
-supporting Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra}
-\cite{stratton1941}. Observation map
-\(\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}\) from
-Eq.~\eqref{eq:ch2.reconstruction-observation-map} is finite rank with
-\(\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})=N\) Eq.~\eqref{eq:ch2.finite-rank-observation}
-\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} governs transport
-reports on any recovered radiative component \cite{harrington2001}. On the spectral completion \(\widehat{\mathcal{F}}_\Omega\), the \emph{evanescent subspace} is
+\label{sec:ch273}
+Source nullity in $\ker\mathcal{R}_\omega$ annihilates far-zone export while local fields may
+persist (Subsections~\ref{sec:ch271}--\ref{sec:ch272}). Evanescent spectral content is a
+separate field-side phenomenon: lateral wavenumbers with $k_t>k_0$ decay exponentially with
+distance and do not feed conserved far-zone power, even when the impressed current is radiating
+\cite{stratton1941,hansen1988}. The present subsection relates evanescent subspaces to
+non-radiating overlap and to reconstructability limits under finite observation rank, developing
+Eq.~\eqref{eq:ch2.evanescent-nonreconstruct} \cite{stratton1941}. Spectral projectors of
+Subsection~\ref{sec:ch224}, the reconstruction rank cap of Subsection~\ref{sec:ch244}, and
+angular-spectrum consequences of Subsection~\ref{sec:ch274} are cited without reproof
+\cite{harrington2001}.
+
+Fix $\omega>0$, admissible sources, outgoing radiation condition, and finite-rank observation
+$\mathcal{M}_\omega=\mathcal{O}_{\mathrm{meas}}\circ\Lambda_{\mathrm{rad}}$ with
+$\mathrm{rank}(\mathcal{O}_{\mathrm{meas}})=N$ \cite{stratton1941}. On the spectral completion
+$\widehat{\mathcal{F}}_\Omega$, the \emph{evanescent subspace} is
 \begin{equation}
 \label{eq:ch2.evanescent-subspace-def}
 \mathcal{F}_{\mathrm{ev}}

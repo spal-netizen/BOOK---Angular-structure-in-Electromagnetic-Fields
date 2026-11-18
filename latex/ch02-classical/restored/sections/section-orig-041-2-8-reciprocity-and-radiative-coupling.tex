@@ -1,7 +1,13 @@
-% Stage 8 section framing — 2.8 Reciprocity and Radiative Coupling
 \section{Reciprocity and Radiative Coupling}
 \label{sec:ch28}
-Null-space structure explains invisible near-field rearrangements; reciprocity explains why passive hardware nevertheless reports the same complex coupling when transmit and receive roles are exchanged \cite{stratton1941}. On a calibrated vector network analyzer the practitioner excites port~$A$, reads the complex response at port~$B$, then exchanges cables, standards, and probe normalization so that port~$B$ drives and port~$A$ receives; on reciprocal antennas and reciprocal media the normalized scattering entries $S_{21}$ and $S_{12}$ must agree once outgoing qualification and impressed-current normalization are held fixed \cite{hansen1988}. Two-port impedance matrices $\mathbf{Z}$ and scattering matrices $\mathbf{S}$ inherit the same interchange symmetry whenever terminations and reference planes are declared consistently \cite{collin2001}. That bench fact precedes every volume identity below: reciprocity is what the network analyzer already presupposes when a passive feed is tuned by comparing forward and reverse coupling \cite{stratton1941}.
+
+Section~\ref{sec:ch27} classified null-space directions invisible to far-zone pattern
+measurement. Reciprocity explains why passive reciprocal structures nevertheless report the same
+complex coupling when transmit and receive roles are exchanged \cite{stratton1941}. On a
+calibrated reciprocal two-port, normalized scattering entries $S_{21}$ and $S_{12}$ agree when
+outgoing qualification, terminations, and impressed-current normalization are held fixed
+\cite{hansen1988,collin2001}. That interchange symmetry is the physical content of the volume
+identities developed below \cite{stratton1941}.
 
 
 
@@ -71,7 +77,7 @@ outgoing branches fixed by
 Eqs.~\eqref{eq:ch2.outgoing-radiation-refinement}--\eqref{eq:ch2.outgoing-resolvent-unique}
 \cite{stratton1941}. Subsection~\ref{sec:ch281} upgrades the bench fact to
 sesquilinear form on $\mathcal{S}_\omega$ and $\mathcal{R}_\omega$; the identity below states the
-operator identity the VNA experiment already presupposes.
+operator identity the instrument experiment already presupposes.
 Lorentz reciprocity (leading template). Subsection~\ref{sec:ch281} supplies the definitive operator statement: for
 admissible source pairs \((\Jimp^{(1)},\Jimp^{(2)})\) and induced fields
 \((\mathbf{u}_1,\mathbf{u}_2)\),

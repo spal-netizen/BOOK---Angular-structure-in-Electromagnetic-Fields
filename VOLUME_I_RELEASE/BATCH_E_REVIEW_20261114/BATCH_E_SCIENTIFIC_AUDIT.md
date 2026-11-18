@@ -6,7 +6,7 @@
 |------|--------|
 | Branch | `volume-i/ch2-4-coordinated-transformation` |
 | Start parent | `fa99809` (Batch D) |
-| Batch E commit | *see `git log -1` after commit* |
+| Batch E commit | `c6d7e5e` (parent `fa99809`) |
 | Chapter 1 | **Not edited**; hash recorded at build in `CHAPTER1_HASH_CHECK.txt` |
 
 ## B. Batch D build resolution

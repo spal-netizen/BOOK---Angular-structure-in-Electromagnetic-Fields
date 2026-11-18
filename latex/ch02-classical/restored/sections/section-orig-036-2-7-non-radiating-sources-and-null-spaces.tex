@@ -1,33 +1,15 @@
-% Stage 8 section framing — 2.7 Non-Radiating Sources and Null Spaces
 \section{Non-Radiating Sources and Null Spaces}
 \label{sec:ch27}
 Spectral theory in Section~\ref{sec:ch26} ranked export directions and recoverable rank.
-Section~\ref{sec:ch27} addresses the complementary laboratory question: \emph{How can current
-exist without observable radiation?} \cite{devaney2004}
-
-
-
-
-Laboratory signatures. Three configurations recur before any kernel is displayed. A balanced wire loop in vacuum,
-driven at fixed \(\omega\) with vanishing net electric dipole moment, stores reactive \(\E\) and
-\(\H\) within \(\lambda_0\) of the conductor while a qualified wattmeter on \(\Gamma_R\) at
-\(R\gg\lambda_0\) records zero outgoing transverse flux once \(\Pi_{\mathrm{rad}}\) selection is
-enforced \cite{stratton1941}. A counter-directed dipole pair separated by
-\(d\ll\lambda_0\) can annihilate leading \(1/r\) transverse fields on \(S^{2}\) while reactive
-overlap remains in the gap \cite{jackson1999}. A waveguide section below cutoff carries standing
-reactive fields at ports yet contributes no propagating sheet to exterior flux meters
-\cite{stratton1941}. In each case Maxwell permits substantial local structure while
-\(\mathcal{R}_\omega[\Jimp]=\mathbf{0}\): rich near-zone data, null far-zone export---not a
-solver artifact \cite{jackson1999}.
-The \emph{radiation kernel} collects every admissible impressed current whose outgoing
-radiative image vanishes: currents that reorganize near-zone energy without qualified far-zone
-flux \cite{devaney2004}. Near-field scanners sample
-\(\mathcal{S}_\omega[\Jimp]\) on enclosing shells; far-zone flux meters and angular integrators
-read only after \(\Pi_{\mathrm{rad}}\) has removed non-export content
-\cite{hansen1988}. A source invisible to the latter may remain vivid to the
-former---the central diagnostic that separates reactive storage from qualified export. Campaigns
-that report singular values without kernel awareness merge synthesis with invisible modes
-\cite{jackson1999}.
+Section~\ref{sec:ch27} addresses the complementary question: how admissible impressed current can
+satisfy $\mathcal{R}_\omega[\Jimp]=\mathbf{0}$ while $\mathcal{S}_\omega[\Jimp]\neq\mathbf{0}$
+\cite{devaney2004,stratton1941}. Balanced loops, counter-directed dipole pairs with
+$d\ll\lambda_0$, and below-cutoff guide sections exemplify reactive storage without qualified
+export \cite{jackson1999,harrington2001}. The \emph{radiation kernel}
+$\ker\mathcal{R}_\omega$ collects every admissible impressed current whose radiative image
+vanishes under outgoing selection \cite{devaney2004}. Observations of $\mathcal{S}_\omega[\Jimp]$
+on an enclosing shell need not fix $\mathcal{R}_\omega[\Jimp]$; conflating the two maps is a
+common source of inversion error \cite{hansen1988,stratton1941}.
 By the \emph{radiation null space} \(\ker\mathcal{R}_\omega\) we mean precisely this kernel:
 admissible impressed currents whose radiative image vanishes under the outgoing map
 \(\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega\)---physically realizable
@@ -117,7 +99,7 @@ of the spectral chain Eq.~\eqref{eq:ch2.section26-spectral-chain}: operator
 nullity precedes constructive NR catalogs, which precede evanescent
 non-reconstructability, which precede angular-spectrum consequences.
 Mathematically, each arrow preserves linearity of \(\mathcal{R}_\omega\);
-physically, each stage removes a distinct laboratory error from inverse-source
+physically, each stage removes a distinct common misinterpretation from inverse-source
 charting. On a cube of side \(2a\) with \(k_0 a=2\), evanescent overlap with
 \(\Pi_{\mathrm{ev}}\mathcal{S}_\omega[\Jimp]\) can exceed \(25\%\) of the
 near-field energy on \(S_R\) with \(R=a\) while contributing zero to
@@ -129,7 +111,7 @@ Composition law Eq.~\eqref{eq:ch2.constraint-composition-law} still
 applies: geometric annihilation Eq.~\eqref{eq:ch2.geometric-symmetry-operator-def} and
 observation rank Eq.~\eqref{eq:ch2.reconstruction-rank-cap} are independent of, and
 composable with, source null-space membership \cite{harrington2001}.
-The laboratory examples and kernel reading above fix the measurement ordering before any
+The illustrative examples and kernel reading above fix the measurement ordering before any
 operator display. Near-field probes sample \(\mathcal{S}_\omega[\Jimp]\); flux meters read only
 after \(\Pi_{\mathrm{rad}}\) \cite{stratton1941}. With that ordering in place,
 keep three spaces in view throughout Section~\ref{sec:ch27}: impressed currents

@@ -13,10 +13,8 @@ resolvent notation and variational formulations without abandoning the physical 
 \cite{stratton1941}. \(\mathbf{u}_\omega\) is
 not an arbitrary six-vector: each admissible state satisfies Gauss constraints and carries
 tangential traces compatible with the boundary class declared with the impressed data tuple
-\(\mathfrak{D}\). From an antenna engineer's perspective, \(\mathbf{u}_\omega\) is what a
-full-wave solver stores at each mesh node---the coupled \((\E,\H)\) phasor pair at fixed
-\(\omega\)---before any post-processing extracts patterns or port quantities
-\cite{harrington2001}. Collect phasor fields into the Maxwell state
+\(\mathfrak{D}\). It is simply the coupled phasor pair \((\E,\H)\) at fixed
+\(\omega\) regarded as one unknown for analysis \cite{harrington2001}. Collect phasor fields into the Maxwell state
 
 \begin{equation}
 \label{eq:ch2.maxwell-state-vector}
@@ -133,7 +131,7 @@ with impressed sources removed to the forcing vector, while its second block tes
 tangential traces on \(\Gamma\) match the declared termination (PEC, impedance, or outgoing)
 \cite{harrington2001}. Experimentally, a solver that minimizes volume residuals while
 ignoring port or chamber walls produces a formal Maxwell solution that may disagree with
-what a network analyzer reports on the same structure \cite{stratton1941}. The harmonic
+what a harmonic measurement reports on the same structure \cite{stratton1941}. The harmonic
 boundary-value problem is to find \(\mathbf{u}_\omega\in\mathcal{F}_\Omega\)
 such that
 \begin{equation}
@@ -212,7 +210,7 @@ where \(\mathcal{F}_\Omega^{0}\) carries homogeneous boundary traces compatible 
 \(\mathcal{B}_\Gamma\) and \(\mathfrak{f}_\omega\) is induced by
 \(\mathbf{s}_\omega(\mathfrak{D})\) \cite{poynting1884}. Equation
 \eqref{eq:ch2.maxwell-weak-form} is the variational face of
-Eq.~\eqref{eq:ch2.closed-maxwell-bvp}; finite-element discretizations favor this
+Eq.~\eqref{eq:ch2.closed-maxwell-bvp}; variational discretizations favor this
 route when material coefficients are piecewise constant
 \cite{harrington2001}.
 Well-posedness of Eq.~\eqref{eq:ch2.maxwell-weak-form} is not automatic on
@@ -232,7 +230,7 @@ the impressed tuple lies in the compatible range of
 Eq.~\eqref{eq:ch2.source-compatibility}. Numerical codes that enforce volume
 Maxwell rows on truncated domains but leave exterior faces open implement an
 \emph{implicit} \(\mathcal{B}_\Gamma\); unless that implicit completion matches
-the laboratory termination, \(\mathcal{S}_\omega\) in the code is a different
+the measurement termination, \(\mathcal{S}_\omega\) in the code is a different
 operator from the one measured on the bench \cite{harrington2001}. Domain specification cannot remain at \(C^\infty\) when sources are distributional.
 The minimal energy class declared here is
 \begin{equation}
@@ -294,7 +292,7 @@ When a volumetric \(\rho\) is prescribed independently of \(\Jimp\), the pair
 must be adjusted so that their divergence balance matches the Amp\`ere--Gauss
 rows; otherwise the closed problem is mathematically posed but physically
 inconsistent. Feed models that inject \(\Jimp\) without updating \(\rho\) are
-common in method-of-moments implementations; they remain valid only when the
+common in integral-equation implementations; they remain valid only when the
 discretization enforces continuity on the impressed grid or when the problem
 is magnetostatic in the relevant band \cite{harrington2001}.
 Linking to Subsection~\ref{sec:ch201}, radiation acts on closed solutions:

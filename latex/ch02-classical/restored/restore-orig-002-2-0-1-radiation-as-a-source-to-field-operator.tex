@@ -1,17 +1,16 @@
-% Stage 8 restored fragment — 2.0.1 Radiation as a source-to-field operator (archive lines 111-549)
 \subsection{Radiation as a source-to-field operator}
 \label{sec:ch201}
 
-A network analyzer $|S_{11}|$, a spherical near-field scan on $\Gamma_R$, and a far-zone pattern cut sample different points on one physical chain: impressed data, Maxwell closure on $(\E,\H)$, identification of outgoing asymptotics, and finite observation \cite{maxwell1873,stratton1941}. Misplacing a measurement on that chain---for example, reporting reactive storage as radiated power---remains a common compact-range failure mode \cite{poynting1884,hansen1988}.
+Impressed current on a bounded feed, the Maxwell field pair $(\E,\H)$ it generates, the outgoing transverse asymptotics selected at infinity, and a far-zone pattern or power flux on an enclosing sphere are successive objects in one physical chain \cite{maxwell1873,stratton1941}. Confusing reactive exchange on a nearby shell with conserved outward radiated power remains a frequent source of error in near-field interpretation \cite{poynting1884,stratton1941}.
 
 Section~\ref{sec:ch20} treated radiation as a question of \emph{accessibility} of outgoing data, not merely of field existence. Maxwell's equations in Eq.~\eqref{eq:ch1.maxwell-local} specify the complete field pair driven by admissible impressed sources; only after Sommerfeld-outgoing selection is the transverse far-zone fraction that carries net export singled out for pattern and wattmeter interpretation \cite{stratton1941,sommerfeld1949}. The formal solution and radiation maps introduced below are concise labels for those already-stated physical steps.
 
-Laboratory measurements presuppose an excitation model even when it is left implicit: a port
-drive, a probe sample, or a termination fixes how energy is partitioned between storage and
-escape \cite{stratton1941}. Impressed data from Section~\ref{sec:ch01.1.2} map through Maxwell's
-equations to \((\E,\H)\), and only then is the outward-propagating asymptotic data
-identified as the carrier of far-zone power and angular flux
-(Eq.~\eqref{eq:ch1.maxwell-local}; Sections~\ref{sec:ch01.1.4}--\ref{sec:ch01.1.5}). At fixed
+Any far-zone measurement presupposes impressed data and boundary termination even when the feed
+is not written explicitly: the same Maxwell closure that fixes \((\E,\H)\) also partitions
+energy between reactive storage and outward escape \cite{stratton1941}. Impressed sources of
+Section~\ref{sec:ch01.1.2} map through Eq.~\eqref{eq:ch1.maxwell-local} to the field pair, and
+only after outgoing selection is the transverse asymptotic data identified as the carrier of
+conserved power and momentum flux (Sections~\ref{sec:ch01.1.4}--\ref{sec:ch01.1.5}). At fixed
 $\omega$, $\mathcal{S}_\omega$ denotes the harmonic solution map and $\mathcal{R}_\omega$ the
 corresponding far-zone radiation data under the Chapter~\ref{ch:01} convention $\eim$ with
 $\partial_t\to+\jj\omega$ \cite{stratton1941}.
@@ -21,11 +20,10 @@ Let \(\Omega\subset\mathbb{R}^{3}\) be a piecewise smooth domain with boundary
 are suppressed in time unless causality is restored below. Impressed electric
 current \(\Jimp\), charge density \(\rho\), and the data tuple \(\mathfrak{D}\) of
 Eq.~\eqref{eq:ch1.data-specification-tuple} are not redefined; they are the
-inputs on which the maps act. Finite-source admissibility is assumed in the sense of the
-\ref{ch:01} $\mathcal{D}_J=1$ conditions
-(Eq.~\eqref{eq:ch1.continuity-admissibility}): only configurations with
-\(\mathcal{D}_{J}=1\) enter the domain of the radiation chain developed here
-\cite{stratton1941}.
+inputs on which the maps act. Only impressed sources that satisfy charge continuity
+(Eq.~\eqref{eq:ch1.charge-continuity-harmonic}), compatible boundary traces, and the
+finite-energy class of Chapter~\ref{ch:01} enter the domain of the radiation chain
+developed here \cite{stratton1941}.
 
 \begin{figure}[t]
 \centering
@@ -49,11 +47,11 @@ Section~\ref{sec:ch211}; here the declaration is minimal but precise enough to
 state the maps \cite{stratton1941}. The harmonic Maxwell \emph{solution map} is the
 first quantitative object in the radiation chain: it records, for each admissible impressed
 current \(\Jimp\in\mathcal{J}_\Omega\), the Maxwell field pair that the governing
-equations and boundary data jointly permit. Physically, this map is what a full-wave solver
-computes when it inverts Maxwell's equations on a declared domain; the output is a \emph{complete} field state, not yet a radiative report
-\cite{stratton1941}. Experimentally one would observe, on a closed measurement surface
-enclosing the source, both reactive circulation and outward-propagating flux in the
-solution unless outgoing selection is applied afterward \cite{harrington2001}. The solution
+equations and boundary data jointly permit. Physically, this map is the harmonic Maxwell solution on a declared domain: a
+\emph{complete} field state that generally contains reactive as well as radiative
+contributions \cite{stratton1941}. On a closed surface enclosing the source, the same
+solution exhibits both reactive normal flux and outward-propagating radiation until
+outgoing selection isolates the asymptotic branch \cite{harrington2001}. The solution
 map sends impressed data to a field state:
 \begin{equation}
 \label{eq:ch2.maxwell-solution-map}
@@ -161,9 +159,8 @@ Maxwell completion:
 where $\mathcal{S}_\omega$ is the harmonic Maxwell solution map on admissible sources (Eq.~\eqref{eq:ch2.charge-continuity-admissibility} and Section~\ref{sec:ch203}), $\Pi_{\mathrm{rad}}$ is the far-zone extraction map, $\mathcal{R}_\omega$ the radiation map, and $\mathcal{J}_\Omega$, $\mathcal{F}_\Omega$, $\mathcal{F}_{\mathrm{rad}}$ the source and field spaces declared in Subsection~\ref{sec:ch211} \cite{stratton1941}. On a ball
 $B_a$ with $k_0 a=0.5$, reactive-to-radiative field-energy ratios on $S_R$ with $R=2a$
 typically exceed unity by an order of magnitude; applying pattern or transport metrics to
-$\mathcal{S}_\omega[\Jimp]$ without $\Pi_{\mathrm{rad}}$ therefore overstates export by
-roughly $10\times$ in magnitude bookkeeping before phase errors accumulate
-\cite{jackson1999}. Superposition of radiative images is legitimate only after each
+$\mathcal{S}_\omega[\Jimp]$ without $\Pi_{\mathrm{rad}}$ therefore conflates storage with
+export \cite{jackson1999}. Superposition of radiative images is legitimate only after each
 constituent satisfies Eq.~\eqref{eq:ch2.source-admissibility} and outgoing radiation
 condition \cite{harrington2001}. Outgoing field selection $\mathcal{O}_{\mathrm{out}}$ and far-amplitude extraction $\Pi_{\mathrm{rad}}$
 are distinct maps (Subsection~\ref{sec:ch242}, Proposition~\ref{prop:ch2.Pirad-vs-Oout}): the former acts on
@@ -175,11 +172,10 @@ coefficients read from reactive components of $\mathcal{S}_\omega[\Jimp]$ descri
 near-zone storage, not exported flux \cite{allen1992}.
 When Green operators are available (Section~\ref{sec:ch23}), \(\mathcal{R}_\omega\)
 admits a retarded integral representation that makes the propagation step explicit.
-The integral representation below is the frequency-domain statement of what a
-method-of-moments code evaluates when it integrates the dyadic Green function against
-impressed currents: each source element at \(\mathbf{r}'\) contributes to the observation
-point \(\mathbf{r}\) with phase and amplitude fixed by outgoing propagation
-\cite{stratton1941}. Physically, the integral superposes the radiative
+The integral representation below is the frequency-domain superposition of impressed
+current elements against the outgoing dyadic Green function: each source point
+\(\mathbf{r}'\) contributes to the observation point \(\mathbf{r}\) with retarded phase and
+amplitude fixed by outgoing propagation \cite{stratton1941}. Physically, the integral superposes the radiative
 images of all current elements; only the portion of \(\mathcal{S}_\omega[\Jimp]\) that
 \(\Pi_{\mathrm{rad}}\) retains enters the integrand in the completed theory developed in
 Section~\ref{sec:ch23}. For \(\mathbf{r}\notin\Omega_s\) with
@@ -207,7 +203,7 @@ Here \(\boldsymbol{\Gamma}\) is the outgoing dyadic Green function
 \cite{stratton1941}. Equation~\eqref{eq:ch2.radiation-integral} is a
 frequency-domain representation of the radiative field generated by a compact source
 distribution through the outgoing dyadic Green function \cite{stratton1941}.
-Every application of this representation assumes the $\mathcal{D}_J=1$ and boundary conditions
+Every application of this representation assumes the charge-consistent sources and boundary conditions
 stated above. Unless noted otherwise, \(\omega>0\) is fixed,
 materials are linear isotropic passive regions, and \(\Omega\) is either bounded
 with declared \(\mathcal{B}_\Gamma\) or an exterior domain with compact
@@ -313,11 +309,10 @@ assignments to invisible sources.
 Membership in \(\mathcal{J}_\Omega\) requires more than square integrability:
 the Maxwell-closed screen below states, in compact form, which impressed currents
 may enter the radiation chain without contradicting charge continuity or boundary
-compatibility. \(\mathcal{D}_{J}\) is not a mathematical
-regularity condition alone: it encodes the laboratory requirement that impressed currents
-be charge-consistent and boundary-compatible before Maxwell field specification is attempted
-\cite{maxwell1873}. Violating the screen produces formal solutions that no
-passive feed can realize \cite{harrington2001}:
+compatibility. The screen encodes the physical requirement that impressed currents be charge-consistent
+and boundary-compatible before Maxwell's equations are solved
+\cite{maxwell1873}. Violating it yields formal field pairs that no passive feed can
+realize \cite{harrington2001}:
 \begin{equation}
 \label{eq:ch2.source-admissibility}
 \mathcal{D}_{J}[\Jimp]=1
@@ -391,7 +386,7 @@ proxy, or a single spherical-harmonic coefficient---from a field pair in
 \(\mathcal{O}_{\mathrm{far}}\big[\mathcal{S}_\omega[\Jimp]\big]\) unless the
 observable has been shown to vanish on reactive content. Because both
 \(\mathcal{R}_\omega\) and \(\mathcal{O}_{\mathrm{far}}\) are linear on their
-domains, the laboratory reading is a linear functional
+domains, the measurement reading is a linear functional
 \(\Lambda_{\mathrm{rad}}=\mathcal{O}_{\mathrm{far}}\circ\mathcal{R}_\omega\)
 on \(\mathcal{J}_\Omega\). That composition expresses in map language
 the measurement limitations in Section~\ref{sec:ch01.5}: finite apertures and
@@ -418,11 +413,9 @@ $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$ the radiation map
 Green kernels realize \(\mathcal{S}_\omega\); Sommerfeld conditions define
 \(\Pi_{\mathrm{rad}}\); spectral theory in Section~\ref{sec:ch26} studies
 eigenstructure on spaces refined in Section~\ref{sec:ch21}
-\cite{harrington2001}. Nothing in
-Eqs.~\eqref{eq:ch2.maxwell-solution-map}--\eqref{eq:ch2.measurement chain-composition}
-re-proves results listed in Section~\ref{sec:ch01.7.1}; continuity
-Eq.~\eqref{eq:ch1.continuity-map} is honored by citation-only continuity
-of curl--curl algebra, stress flux theorems, and gauge lemmas.
+\cite{harrington2001}. Results proved in Chapter~\ref{ch:01}---curl--curl structure, stress flux theorems, and
+gauge invariance of $(\E,\H)$---are used here by reference without re-derivation
+\cite{stratton1941}.
 Subsection~\ref{sec:ch201} has named \(\mathcal{S}_\omega\), \(\Pi_{\mathrm{rad}}\), and
 \(\mathcal{R}_\omega\), introduced their Green and Poynting realizations, and connected
 finite measurement rank to composition with far-zone observables. Subsection~\ref{sec:ch202}

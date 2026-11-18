@@ -76,9 +76,9 @@ Status: **OPEN** until author marks **APPROVED** in this file.
 |-------|---------|
 | **Issue** | Boundary with Ch.1 §1.1.5 and Ch.3 |
 | **Options** | Compress to Poynting reminder + `\ref`; or retain full flux treatment in Ch.2 |
-| **Status** | **AUTHOR DECISION REQUIRED** |
+| **Status** | **DECISION RECORDED (R1d default)** |
 
-**Author response:** _(pending)_
+**Author response:** **Implemented R1d (2026-10-07)** — radiative-branch flux in `part12-momentum-angular-momentum-flux.tex`; USE Ch.1 stress/angular gate by `\ref`; no Belinfante/canonical decomposition (Ch.3 HOME).
 
 ---
 
@@ -91,6 +91,65 @@ Status: **OPEN** until author marks **APPROVED** in this file.
 | **Status** | Blocked on AD-001 |
 
 **Author response:** _(pending)_
+
+---
+
+## Stage 3B-R1 (2026-10-07)
+
+| Topic | Author action needed |
+|-------|---------------------|
+| **Scientific completeness** | CH2-D015: approve further archive migration tranches (time-domain, spectral eigenfunctions, flux subsections, figure recovery) |
+| **AD-004** | Ratify classical 9-figure set vs full archive 53-label recovery |
+| **AD-001 / AD-007** | Volume-I single convention before Ch.1 TeX edit |
+| **AD-006** | **R1d:** radiative flux migrated to `part12` (see above) |
+
+---
+
+## Stage 3B-R1d (2026-10-07)
+
+| Topic | Outcome |
+|-------|---------|
+| Momentum / angular-momentum flux | `part12` + fig `momentum-flux-sphere` |
+| Examples | `part05` §2.11.3–2.11.5 |
+| Stage-4 gate | **B** — ready with minor errata (AD-004, AD-001) |
+| **AD-004** | Still **AUTHOR DECISION REQUIRED** (16 classical vs ~54 archive labels) |
+
+No freeze or Stage 4 execution authorized by R1d.
+
+---
+
+## Stage 4 (2026-10-08)
+
+| Topic | Outcome |
+|-------|---------|
+| **AD-001 / AD-007** | Ch.2 `\eim` and Maxwell citations **verified consistent**; frozen Ch.1 prose still states $\exp(-\jj\omega t)$ — **Volume-I author decision** (Ch.1 not edited) |
+| **AD-004** | Scientific figure content **preserved** at 16 TikZ; count policy **still author decision** |
+| **Acceptance** | **ACCEPTED WITH MINOR ERRATA** — see `CHAPTER2_STAGE4_FINAL_AUDIT.md` |
+
+Chapter 2 **not frozen**.
+
+---
+
+## Stage 5 (2026-10-08)
+
+| Topic | Outcome |
+|-------|---------|
+| Independent audit | Structural §2.7/§2.10 order **corrected** (S5-D001/D002) |
+| Ch.2 science/signs | **No independent defect** |
+| **Acceptance** | **ACCEPTED WITH MINOR ERRATA** |
+| Production | Build `latex/main-ch02-classical-only.tex` locally for PDF audit |
+
+Chapter 2 **not frozen**.
+
+---
+
+## Stage 3B-R1c (2026-10-07)
+
+| Topic | Status |
+|-------|--------|
+| CH2-D015 | Analyzed — see R1c report; optional R1d for flux integrals + extra examples |
+| Stage 4 | Await author review of `CURSOR_COMMAND_REPORT_STAGE3B_R1C.md` |
+| Freeze | **Not authorized** |
 
 ---
 

@@ -1,4 +1,3 @@
-% Stage 8 restored fragment — 2.2.2 Frequency-domain Maxwell operators (archive lines 2735-3005)
 \subsection{Frequency-domain Maxwell operators}
 \label{sec:ch222}
 
@@ -26,15 +25,13 @@ deferred to Section~3.3 \cite{stratton1941}.
 Under the locked \(\eim=\exp(+\jj\omega t)\) convention of Chapter~\ref{ch:01}, differentiation with respect to
 time converts to multiplication by \(+\jj\omega\) on phasor quantities, and the
 second time derivative maps to \(-\omega^{2}\).
-Every phasor displayed on a network analyzer trace has already undergone this
-substitution: a time derivative in Maxwell's equations becomes a multiplication by
-$+\jj\omega$ on the locked $\eim$ convention. Engineers should notice
-that the substitution is not a notational convenience alone; it is the algebraic
-condition under which a time-domain IBVP and a frequency-domain BVP describe the same
-passive structure at fixed $\omega$ \cite{stratton1941}. The substitution fails when
-excitation is broadband without superposition, when $\mathcal{B}_\Gamma$ varies in time,
-or when material response is not single-frequency on the declared band
-\cite{harrington2001}. With those limits stated, the formal rule is:
+Under $\eim$, a time derivative in Maxwell's equations becomes multiplication by
+$+\jj\omega$ on phasor quantities. That rule is the algebraic condition under which a
+time-domain initial-boundary value problem and a harmonic boundary value problem describe
+the same passive structure at fixed $\omega$ \cite{stratton1941}. The reduction fails when
+excitation is broadband without superposition, when $\mathcal{B}_\Gamma$ varies in time, or
+when material response is not single-frequency on the declared band \cite{harrington2001}.
+The formal substitution is:
 Time derivatives map to
 \begin{equation}
 \label{eq:ch2.frequency-substitution-rule}
@@ -56,7 +53,7 @@ Eq.~\eqref{eq:ch2.time-to-frequency-map} and converts
 Eq.~\eqref{eq:ch1.ibvp-time-domain} to the harmonic BVP of
 Eq.~\eqref{eq:ch1.ibvp-harmonic-bvp} by reference.
 The harmonic residual collects the four Maxwell rows in frequency form.
-A finite-element or method-of-moments solve at fixed $\omega$ is, operationally, the search
+A variational or integral-equation solve at fixed $\omega$ is, operationally, the search
 for $\mathbf{u}_\omega=(\E,\H)$ that drives $\mathcal{M}_\omega[\mathbf{u}_\omega]$ to zero
 in the volume while satisfying the boundary row enforced by $\mathcal{B}_\Gamma$.
 The engineer observes residuals indirectly through solver convergence and port matching;

@@ -1,10 +1,23 @@
-% Stage 8 restored fragment — 2.1.1 Spaces for sources, fields, and distributions (archive lines 1226-1624)
 \subsection{Spaces for sources, fields, and distributions}
 \label{sec:ch211} 
 
-Antenna synthesis begins with a realizability question, not with a modal expansion: which impressed currents on bounded support, subject to charge continuity and compatible boundary traces, can be driven by laboratory feeds and mapped to measurable fields on \(\Gamma=\partial\Omega\) \cite{stratton1941,devaney2004}? Horn rims, patch edges, and waveguide ports produce sheet-like or filamentary excitations whose derivatives fail at edges; treating them as pointwise smooth functions on all of \(\mathbb{R}^{3}\) breaks flux through \(\Gamma\) and corrupts near-field transforms on spherical scanners \cite{harrington2001}. Subsections~\ref{sec:ch201}--\ref{sec:ch202} named minimal classes \(\mathcal{F}_\Omega\) and \(\mathcal{J}_\Omega\) sufficient to define \(\mathcal{S}_\omega\), \(\mathcal{R}_\omega\), and \(\mathcal{L}_\omega\); here those names are embedded in Sobolev and trace spaces where \(\curl\), \(\divg\), and tangential restriction are continuous operations with explicit domains \cite{stratton1941}.
+Radiation problems begin with a realizability question: which impressed currents on
+bounded support, subject to charge continuity and compatible boundary traces, can be
+specified consistently and mapped to admissible fields on \(\Gamma=\partial\Omega\)
+\cite{stratton1941,devaney2004}? Horn rims, patch edges, and waveguide ports produce
+sheet-like or filamentary excitations whose derivatives fail at edges; treating them as
+pointwise smooth functions on all of \(\mathbb{R}^{3}\) breaks flux identities on
+\(\Gamma\) and corrupts near-field representation \cite{harrington2001}. Subsections~\ref{sec:ch201}--\ref{sec:ch202} named minimal classes \(\mathcal{F}_\Omega\) and \(\mathcal{J}_\Omega\) sufficient to define \(\mathcal{S}_\omega\), \(\mathcal{R}_\omega\), and \(\mathcal{L}_\omega\); here those names are embedded in Sobolev and trace spaces where \(\curl\), \(\divg\), and tangential restriction are continuous operations with explicit domains \cite{stratton1941}.
 
-A PEC-backed slot fed by \(\Jimp\in L^{2}(\Omega_s)^{3}\) carries finite power at fixed \(\omega\), whereas an idealized non-integrable \(1/r\) template violates the finite-energy \(\mathcal{D}_J=1\) screen inherited from Chapter~\ref{ch:01} even when a post-processor fits a smooth far pattern \cite{stratton1941}. Method-of-moments and finite-element codes test Maxwell residuals against localized bases; that discretization presupposes square-integrable \(\curl\) fields, well-defined tangential traces on conductors and apertures, and distributional extensions when sources collapse to sheets---gaps that plain \(L^{2}\) current models leave open \cite{harrington2001}. Charge continuity, interface conditions, and outer-boundary classes fixed in Chapter~\ref{ch:01} are used by reference only.
+A PEC-backed slot fed by \(\Jimp\in L^{2}(\Omega_s)^{3}\) carries finite power at fixed
+\(\omega\), whereas an idealized non-integrable \(1/r\) template violates the
+finite-energy class inherited from Chapter~\ref{ch:01} even when a smooth far pattern is
+prescribed in isolation \cite{stratton1941}. Weak formulations of Maxwell's equations
+presuppose square-integrable \(\curl\) fields, well-defined tangential traces on
+conductors and apertures, and distributional extensions when sources collapse to
+sheets---requirements that plain \(L^{2}\) current models do not supply
+\cite{harrington2001}. Charge continuity, interface conditions, and outer-boundary
+classes fixed in Chapter~\ref{ch:01} are used by reference only.
 
 Let \(\Omega\subset\mathbb{R}^{3}\) be a bounded Lipschitz domain or a finite union of Lipschitz patches \(\{\Omega_a\}\) with outward boundary \(\Gamma=\partial\Omega\). Phasor fields use \(\Re\{\mathbf{F}(\mathbf{r})\eim\}\) as in Chapter~\ref{ch:01} and the chapter preamble, so \(\partial_t\to+\jj\omega\) on phasors \cite{stratton1941}.
 In the display below, \(L^{2}(\Omega)\) denotes square-integrable field energy on \(\Omega\);
@@ -17,10 +30,9 @@ Section~\ref{sec:ch201} \cite{stratton1941}.
 Square-integrability alone is too weak for curl-coupled Maxwell theory: one needs
 control of both the field and its curl so that circulation balances are meaningful
 in the \(L^{2}\) sense.
-An engineer measuring tangential \(\E\) on a patch boundary is, in effect, asking whether
-the recorded trace is the restriction of a field with square-integrable curl; a
-method-of-moments code that tests \(\curl\E\) against rooftop functions presupposes the
-same control. The space \(\HCurl(\Omega)\) names precisely that charge-continuous class:
+Tangential \(\E\) prescribed on a patch boundary is physically meaningful only when it is
+the restriction of a field with square-integrable curl. The space \(\HCurl(\Omega)\) names
+precisely that admissible class:
 elements of \(L^{2}(\Omega)^{3}\) whose curls also lie in \(L^{2}(\Omega)^{3}\), so
 Faraday and Amp\`ere balances can be posed weakly without assuming pointwise smoothness
 at horn rims or slot edges \cite{stratton1941}. Readers should notice that
@@ -348,7 +360,7 @@ consequences for radiation accessibility and finite observation.
 Subsection~\ref{sec:ch211} has refined \(\mathcal{F}_\Omega\), \(\mathcal{J}_\Omega\), and
 \(\mathcal{D}(\mathcal{L}_\omega)\) from minimal declarations to Sobolev, trace, and
 distributional classes compatible with \ref{ch:01} charge-continuous. The consequence
-for measurement is immediate: near-field scanners and method-of-moments codes inherit
+for measurement is immediate: near-zone observations and integral-equation codes inherit
 these spaces as the continuous targets their discretizations must approximate.
 Subsection~\ref{sec:ch212}
 treats the Maxwell maps as linear operators with explicit domains, ranges, and adjoints on

@@ -1,18 +1,16 @@
-% Stage 8 restored fragment — 2.3.3 Singularities, distributions, and regularization (archive lines 4086-4419)
 \subsection{Singularities, distributions, and regularization}
 \label{sec:ch232}
-A method-of-moments cell or a near-field probe approaches the source support until the
-separation $R=|\mathbf{r}-\mathbf{r}'|$ is small compared with the mesh pitch.
-At that scale the free-space dyad is still the reference impulse, but its inverse powers of $R$
-signal reactive self-interaction rather than far-zone radiation \cite{stratton1941}.
-Laboratory stacks add reflected waves in each half-space; probe calibration must then use the
-appropriate layered Green function, while the vacuum template below remains the limiting
-case used to prove distributional identities and Sommerfeld selection \cite{collin2001,sommerfeld1949}.
-Under $\eim$, vacuum Maxwell equations follow Eq.~\eqref{eq:ch1.maxwell-local}:
+When observation points approach $\operatorname{supp}\Jimp$, the separation
+$R=|\mathbf{r}-\mathbf{r}'|$ is small and the free-space dyad exhibits inverse powers of $R$
+that encode reactive self-interaction as well as radiation \cite{stratton1941}. Layered media
+require the corresponding stratified Green function; the vacuum template below is the reference
+kernel used to establish distributional identities and outgoing selection at infinity
+\cite{collin2001,sommerfeld1949}.
+Vacuum Maxwell equations under $\eim$ follow Eq.~\eqref{eq:ch1.maxwell-local}:
 $\curl\E=-\jj\omega\mu_0\H$, $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$, and $\nabla\cdot\Jimp=-\jj\omega\rho$
-with impressed sources $(\Jimp,\rho)$ \cite{stratton1941,jackson1999}.
-Every identity below is checked in that row structure, not in a $e^{-\jj\omega t}$ convention that flips both time and spatial outgoing signs without a coordinated rewrite.
-Three distinct objects must not be conflated \cite{yaghjian1978,tai1994}:
+with impressed sources $(\Jimp,\rho)$ \cite{stratton1941,jackson1999}. Every distributional identity
+below is verified in that coupled system with outgoing spatial phase $e^{-\jj k_0 R}$.
+Three distinct mathematical objects must not be conflated \cite{yaghjian1978,tai1994}:
 (i)~the tabulated dyad $\overline{\mathbf{G}}_{E,0}(\mathbf{r},\mathbf{r}')$ for $R=|\mathbf{r}-\mathbf{r}'|>0$ in Eq.~\eqref{eq:ch2.free-space-dyadic-green};
 (ii)~its distributional extension under $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^2$ tested against smooth $\mathbf{f}$;
 (iii)~the electric field obtained by convolving $\Jimp$ with the kernel through a specified excluded principal volume $V_\varepsilon$ centred on the source point.
@@ -143,7 +141,7 @@ Second derivatives of $G_{\mathrm{dyn}}$ therefore contribute at most finitely t
 The contact distribution in Eq.~\eqref{eq:ch2.grad-grad-1-over-R-distributional} arises from the electrostatic $1/R$ piece alone;
 dynamic corrections enter Eq.~\eqref{eq:ch2.dyadic-inner-sphere-flux-column} through $e^{-\jj k_0\varepsilon}=1-\jj k_0\varepsilon+\mathcal{O}(\varepsilon^{2})$ on $\partial B_\varepsilon$.
 The distributional relation Eq.~\eqref{eq:ch2.grad-grad-1-over-R-distributional} and the geometry-dependent source dyad $\overline{\overline L}$ in the principal-volume field representation are two languages for the same spherical centred contact physics; the macroscopic field is unique when singular convolution and source-dyad terms are counted exactly once \cite{yaghjian1978,yaghjian1980source}.
-Physically, excluding a small ball around a mesh self-cell implements the same regularization a reader expects from reactive near-zone storage: transverse radiation still decouples at large $r$, while longitudinal self-fields remain confined to the source region until $\Pi_{\mathrm{rad}}$ is applied in Section~\ref{sec:ch25}.
+Physically, excluding a small ball around a discretization cell implements the same regularization a reader expects from reactive near-zone storage: transverse radiation still decouples at large $r$, while longitudinal self-fields remain confined to the source region until $\Pi_{\mathrm{rad}}$ is applied in Section~\ref{sec:ch25}.
 \begin{theorem}[Distributional fundamental dyad at coincidence --- vacuum Lorenz construction]
 \label{thm:ch2.dyadic-distributional-fundamental}
 For the outgoing vacuum kernels $G_0$ and $\overline{\mathbf{G}}_{E,0}$ from
@@ -320,10 +318,11 @@ Columns $a=y,z$ follow by cyclic permutation of Cartesian labels.
 \end{proof}
 Physically, the $\delta^{(3)}$ term is the idealized impressed dipole source; finite patches regularize the same mass over
 $\operatorname{supp}\Jimp$ rather than a mathematical point \cite{stratton1941}.
-For a laboratory observer, the distinction among (i)--(iii) is concrete: the tabulated dyad answers what field a distant
-probe sees from an offset dipole; the distributional identity fixes how that kernel must be tested when $\mathbf{r}\to\mathbf{r}'$ in
-equations; the principal-volume convolution is what a mesh or MoM patch integral implements when it excludes a small ball around
-each self-term before applying Eq.~\eqref{eq:ch2.electric-dyadic-convolution} \cite{yaghjian1978,harrington2001}.
+Physically, the distinction among (i)--(iii) is sharp: the tabulated dyad gives the field at
+observation points separated from the source; the distributional identity specifies how the kernel
+must be tested when $\mathbf{r}\to\mathbf{r}'$; the principal-volume convolution is the
+finite-ball exclusion prescription required before Eq.~\eqref{eq:ch2.electric-dyadic-convolution}
+is applied on extended supports \cite{yaghjian1978,harrington2001}.
 The longitudinal contact in Proposition~\ref{prop:ch2.grad-grad-PV-proof} is the price of differentiating the $1/R$ Coulomb potential
 inside the source region: it is reactive, not radiative, and cancels in far-zone flux meters that select outgoing transverse content
 through $\Pi_{\mathrm{rad}}$ in Chapter~\ref{ch:02} and Section~\ref{sec:ch24}.
@@ -369,7 +368,7 @@ carries the parallel ordering \(R^{-1}\), \(R^{0}\), \ldots\ with
 In the electrostatic limit \(k_0\to 0\) at fixed separation \(R>0\) (metres), the dynamic
 terms in Eq.~\eqref{eq:ch2.dyadic-singular-expansion} vanish and only the \(R^{-3}\)
 dipolar projector survives; that static piece is extracted analytically in
-method-of-moments codes before the smooth remainder is integrated numerically.
+integral-equation codes before the smooth remainder is integrated numerically.
 Eq.~\eqref{eq:ch2.dyadic-singular-expansion} reduces to
 \begin{equation}
 \label{eq:ch2.static-dyadic-limit}
@@ -382,7 +381,7 @@ the field of a unit dipole aligned with each Cartesian source direction
 dominance at small $k_0 R$: reactive storage and self-interaction between neighboring
 current elements overwhelm the radiative $R^{-1}$ term until separation or frequency
 increases \cite{stratton1941}. Equation~\eqref{eq:ch2.static-dyadic-limit} is the
-leading singular part extracted in method-of-moments static--dynamic splits: dynamic
+leading singular part extracted in integral-equation static--dynamic splits: dynamic
 corrections are \(\mathcal{O}(k_0 R)\) relative to the static term when
 \(k_0 R\ll 1\) on source patches \cite{harrington2001}. For divergence-free
 \(\Jimp\), the \(\grad\,\divg\) structure of Lorenz reduction
@@ -493,7 +492,7 @@ diverges because of the \(R^{-3}\) term; the \emph{Hadamard finite part} subtrac
 the singular expansion explicitly and retains the finite reactive coupling between
 extended patches. Finite-part subtraction works because the non-integrable piece is known
 analytically from Eq.~\eqref{eq:ch2.dyadic-singular-expansion} and can be removed before
-the remainder is integrated numerically---the engineering prescription MoM codes implement
+the remainder is integrated numerically---the engineering prescription integral-equation codes implement
 as static--dynamic splitting \cite{harrington2001}:
 \begin{equation}
 \label{eq:ch2.finite-part-convolution}
@@ -513,18 +512,18 @@ provided \(\Jimp\) is smooth enough on the patch that the limit exists
 prescription for on-surface field evaluation; it differs
 from Eq.~\eqref{eq:ch2.principal-value-convolution} by the explicit analytic
 subtraction of \(\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}\), not by numerical
-mesh refinement alone \cite{stratton1941}. Mathematically, the finite part is the
+finer spatial resolution alone \cite{stratton1941}. Mathematically, the finite part is the
 constant term in the Laurent expansion of the integral as \(\varepsilon\to 0\);
 physically, it removes infinite self-energy of pointwise source models while retaining
 finite reactive coupling between extended patches \cite{jackson1999}.
-Method-of-moments and boundary-element codes replace the continuum convolution
+Integral-equation and boundary-element codes replace the continuum convolution
 Eq.~\eqref{eq:ch2.electric-dyadic-convolution} by discrete impedance entries obtained
 by testing the dyadic kernel against pairs of basis functions on source patches. In plain
 language: $\mathbf{f}_m$ and $\mathbf{f}_n$ are the $m$th and $n$th current basis functions
 on patches $\Omega_m$ and $\Omega_n$; $\Omega_m$ and $\Omega_n$ are the surface or volume
 patches where those basis functions live; and $Z_{mn}$ is the mutual impedance---the
 complex voltage response at patch $m$ per unit current on patch $n$---that a numerical code
-assembles from the double integral below \cite{harrington2001}. What a MoM code actually
+assembles from the double integral below \cite{harrington2001}. What a integral-equation code actually
 computes is this bilinear pairing of basis functions through the dyadic propagator, not a
 pointwise field evaluation at patch centers unless a separate approximation is introduced.
 The Galerkin entry for patches \(\Omega_m\) and \(\Omega_n\) reads
@@ -555,7 +554,7 @@ where $Z_{mm}^{\mathrm{(reg)}}$ is the numerically integrated smooth remainder,
 $Z_{mm}^{\mathrm{(sing)}}$ is the analytic integral of
 \(\overline{\mathbf{G}}_{E}^{\mathrm{(sing)}}\) over the coincident patch---often
 reduced to closed forms for flat triangles and rectangles---and the sum is the quantity a
-code must assemble so that neighboring mesh elements do not produce near-singular divergences
+code must assemble so that neighboring discretization elements do not produce near-singular divergences
 when observation and source points approach one another \cite{stratton1941}. Point
 matching---evaluating Eq.~\eqref{eq:ch2.electric-dyadic-convolution} at patch centers
 with \(\overline{\mathbf{G}}_{E}\) replaced by
@@ -595,7 +594,7 @@ Scalar singularities are weaker than dyadic singularities: the monopole kernel d
 as $R^{-1}$, which is barely non-integrable in three dimensions, whereas the dyadic kernel
 carries an $R^{-3}$ pole that breaks naive integration more severely \cite{jackson1999}. This
 distinction matters computationally because scalar potential formulations can sometimes use
-simpler self-term corrections, while vector MoM codes must implement full static--dynamic
+simpler self-term corrections, while vector integral-equation codes must implement full static--dynamic
 dyadic subtraction \cite{harrington2001}. The scalar Green function satisfies, in distributional sense,
 \begin{equation}
 \label{eq:ch2.scalar-coincidence-limit}

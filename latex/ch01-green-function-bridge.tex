@@ -1,0 +1,64 @@
+% Outgoing Green function and retarded potentials (Ch.~1 HOME)
+\subsection{From inhomogeneous Helmholtz equation to outgoing Green function}
+\label{sec:ch01.1.1c}
+
+Maxwell's local laws fix how $\E$ and $\H$ balance for prescribed $\Jimp$ and $\rho$, but they do not yet construct the field at a distant observation point from a finite source \cite{stratton1941,maxwell1873}. That construction is the Helmholtz Green-function problem: impressed data on compact support, outgoing radiation at infinity, and uniqueness on the exterior branch already assumed in Subsection~\ref{sec:ch01.1.2} \cite{stratton1941,jackson1999}.
+
+Let $\mathbf{r}$ be the observation point and $\mathbf{r}'$ the source point, with $R=|\mathbf{r}-\mathbf{r}'|$. Under the chapter convention $\exp(-\jj\omega t)$, retardation $R/c$ appears as $e^{-\jj k_0 R}$ in the frequency-domain kernel because $e^{-\jj\omega(t-R/c)}=e^{-\jj\omega t}\,e^{-\jj k_0 R}$ with $k_0=\omega/c$ \cite{stratton1941,jackson1999}. The minus sign selects the outgoing spherical wave that carries energy toward increasing $R$.
+
+Restoring sources in a homogeneous region gives the scalar prototype
+\begin{equation}
+\label{eq:ch1.inhomogeneous-helmholtz}
+(\nabla^2+k_0^2)\,U(\mathbf{r})=-S(\mathbf{r}),
+\end{equation}
+where $U$ is a scalar potential or field component and $S$ is the corresponding source density whose SI units match $(\nabla^2+k_0^2)U$ \cite{stratton1941,jackson1999}. The Green function satisfies
+\begin{equation}
+\label{eq:ch1.green-defining}
+(\nabla^2+k_0^2)\,G(\mathbf{r},\mathbf{r}')=-\delta(\mathbf{r}-\mathbf{r}'),
+\end{equation}
+with the outgoing solution
+\begin{equation}
+\label{eq:ch1.scalar-green-outgoing}
+G(\mathbf{r},\mathbf{r}')
+=
+\frac{e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}}{4\pi|\mathbf{r}-\mathbf{r}'|}.
+\end{equation}
+Matching $\nabla^2(1/R)=-4\pi\delta(\mathbf{r}-\mathbf{r}')$ fixes the $1/(4\pi R)$ normalization in the distributional sense \cite{stratton1941,jackson1999}. The retarded potentials are
+\begin{equation}
+\label{eq:ch1.vector-potential-retarded}
+\mathbf{A}(\mathbf{r})
+=
+\mu_0\int
+\Jimp(\mathbf{r}')\,
+G(\mathbf{r},\mathbf{r}')\,
+d^3r',
+\end{equation}
+\begin{equation}
+\label{eq:ch1.lorenz-scalar-potential-retarded}
+\phi(\mathbf{r})
+=
+\frac{1}{\varepsilon_0}\int
+\rho(\mathbf{r}')\,
+G(\mathbf{r},\mathbf{r}')\,
+d^3r',
+\end{equation}
+and, under $\exp(-\jj\omega t)$,
+\begin{equation}
+\label{eq:ch1.lorenz-field-reconstruction}
+\E=-\nabla\phi-\jj\omega\mathbf{A},\qquad \B=\nabla\times\mathbf{A},\qquad \H=\B/\mu_0,
+\end{equation}
+with Lorenz gauge $\divg\mathbf{A}-\jj\omega\mu_0\varepsilon_0\phi=0$ \cite{stratton1941,jackson1999}. Charge continuity Eq.~\eqref{eq:ch1.charge-continuity-harmonic} is the physical constraint that makes $(\phi,\mathbf{A})$ consistent with Maxwell's curl system \cite{maxwell1873}.
+
+For $r=|\mathbf{r}|\gg|\mathbf{r}'|$, geometry gives $R\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}'$. When the neglected Fresnel phase $k_0|\mathbf{r}'|^2/r$ is small compared with $2\pi$ across the source support,
+\begin{equation}
+\label{eq:ch1.green-far-zone-phase}
+e^{-\jj k_0 R}\approx e^{-\jj k_0 r}\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}.
+\end{equation}
+The factor $e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}$ imprints direction-dependent phase on the radiation integral; signed angular-momentum transport still requires the stress-flux integrals of Subsection~\ref{sec:ch01.1.5}, not phase alone \cite{stratton1941,jackson1999}. Chapter~\ref{ch:02} develops the dyadic Green function under the same time convention \cite{harrington2001,tai1994}.
+
+\begin{figure}[t]
+\centering
+\VolIPhysFig{\VolIPhysGreenFunctionGeometry}
+\caption{Retarded Helmholtz geometry: impressed support at $\mathbf{r}'$, observation at $\mathbf{r}$, separation $R$, outgoing phase $e^{-\jj k_0 R}/(4\pi R)$, and far-zone direction $\hat{\mathbf{r}}$ for the Fraunhofer expansion Eq.~\eqref{eq:ch1.green-far-zone-phase} \cite{stratton1941,jackson1999}.}
+\label{fig:ch1.green-function-seed}
+\end{figure}

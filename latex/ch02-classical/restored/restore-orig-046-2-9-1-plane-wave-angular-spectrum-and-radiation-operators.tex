@@ -1,61 +1,27 @@
-% Stage 8 restored fragment — 2.9.1 Plane-wave angular spectrum and radiation operators (archive lines 11360-11620)
 \subsection{Plane-wave angular spectrum and radiation operators}
 \label{sec:ch291}
 
-Plane-wave angular spectra connect near fields to far patterns on scanners \cite{jackson1999}. Evanescent content must be filtered before far-zone claims \cite{hansen1988}. Maxwell's retarded export to $\Gamma_R$ remains the governing constraint \cite{maxwell1873}.
-Before lateral wavenumbers enter, fix what a pattern measurement actually resolves. Qualified
-far-zone export is a directional budget: each direction $\widehat{\mathbf{k}}$ on $S^{2}$ carries
-an amplitude $a(\widehat{\mathbf{k}})$ reporting surviving power flux after radiation selection
-\cite{stratton1941}. Propagating directions ($k_t\le k_0$) contribute to that
-budget and can reach the far zone; evanescent directions ($k_t>k_0$) store reactive energy that
-decays exponentially with distance from the source and is annihilated on export
-\cite{harrington2001}. A spherical near-field scanner or planar phased-array diagnostic
-begins on a measurement surface, not in $(k_x,k_y)$ space \cite{hansen1988}. Probes record
-tangential \(\E\) and \(\H\) on a sheet at height \(h\); the angular-spectrum chart synthesizes outgoing plane-wave
-trials, back-propagates to the scan plane, and accepts the residual only after scan height, probe
-pitch, and bandlimit are declared \cite{devaney2004}. Aperture campaigns favor plane spectra;
-spherical-harmonic and plane-wave charts express the same directional decomposition in
-different coordinates \cite{harrington2001}. Denser scan grids sharpen interpolation; they do not
-invent propagating modes absent from \(\mathcal{R}_\omega[\Jimp]\) \cite{devaney2004}.
-\medskip
-\noindent\textit{Observation versus source coordinates.} Probes report fields in laboratory
-Cartesian coordinates \((x,y,z)\) on the scan plane \(z=z_0\). Lateral wavenumbers \((k_x,k_y)\)
-index plane-wave trials in the \((x,y)\) plane and are \emph{observation-side} spectral labels
-attached to tangential traces on \(z=z_0\), not source coordinates on compact
-\(\Omega_s=\operatorname{supp}\Jimp\) \cite{stratton1941}. Transverse magnitude
-\(k_t=\sqrt{k_x^2+k_y^2}\) partitions the spectrum: sheets with \(k_t\le k_0\) carry propagating
-export, while \(k_t>k_0\) carry evanescent reactive content whose decay length scales with scan
-height \cite{harrington2001}. Impressed current \(\Jimp(\mathbf{r}')\) enters the reported spectrum
-only through \(\mathcal{R}_\omega\) after radiation selection; treating raw scan data as if it
-were already \(a(\widehat{\mathbf{k}})\) amplifies high-\(k_t\) noise into false superdirective
-claims \cite{devaney2004}.
-\medskip
-Section~\ref{sec:ch29} developed angular-spectrum action through
-Eqs.~\eqref{eq:ch2.section29-angular-spectrum-chain}--\eqref{eq:ch2.plane-wave-radiation-operator}.
-Subsection~\ref{sec:ch291} supplies the definitive account of plane-wave angular spectra
-and the action of \(\mathcal{R}_\omega\), \(\Pi_{\mathrm{rad}}\), and outgoing selection on
-lateral spectral coefficients \cite{stratton1941}. Dispersion split
-Eqs.~\eqref{eq:ch2.dispersion-relation}--\eqref{eq:ch2.longitudinal-wavenumber-split},
-spectral projectors Eqs.~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.rad-null-on-evanescent},
-outgoing selector Eq.~\eqref{eq:ch2.outgoing-selector-def}, plane-wave criterion
-Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion}, radiation map
-Eq.~\eqref{eq:ch2.nullspace-operator-targets}, and lateral template
-Eq.~\eqref{eq:ch2.angular-spectrum} are presupposed; Subsection~\ref{sec:ch224} and
-Section~\ref{sec:ch243} proofs are not repeated \cite{stratton1941}. Continuous angular
-representation Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} and far amplitude
-Eq.~\eqref{eq:ch2.far-field-amplitude-integral} are cited as consistency targets; rigged
-normalization belongs to Chapter~3 (\emph{Angular Momentum Operators and SO(3)}) Subsection~3.1.3
-\cite{harrington2001}. Retained/suppressed partitions belong to Subsection~\ref{sec:ch292}.
-Assumptions. Fix \(\omega>0\), homogeneous exterior region with symbol \(k_0\) from
-Eq.~\eqref{eq:ch2.helmholtz-symbol}, compact \(\Omega_s=\operatorname{supp}\Jimp\), admissible
-\(\Jimp\in\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-admissibility}, and outgoing fields
-\(\mathbf{u}_\omega=(\E,\H)\in\mathcal{F}_{\mathrm{SF}}\) Eq.~\eqref{eq:ch2.admissible-field-space}
-\cite{stratton1941}. Lateral wavenumbers \((k_x,k_y)\) use
-\(k_t=\sqrt{k_x^2+k_y^2}\) and outgoing longitudinal root
-Eq.~\eqref{eq:ch2.outgoing-plane-wave-criterion} \cite{stratton1941}. Transverse polarization satisfies
-Eq.~\eqref{eq:ch2.transverse-polarization-constraint} on each spectral sheet
-\cite{stratton1941}. regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen} governs
-transport interpretation of spectral outputs \cite{harrington2001}.
+The lateral angular spectrum represents tangential fields on a plane $z=z_0$ as a superposition
+of plane-wave trials indexed by $(k_x,k_y)$ \cite{jackson1999,stratton1941}. Each direction
+$\widehat{\mathbf{k}}$ on $S^2$ that survives radiation selection carries far-zone amplitude
+$a(\widehat{\mathbf{k}})$; trials with $k_t\le k_0$ propagate, while $k_t>k_0$ are evanescent and
+decay with distance without entering conserved export \cite{hansen1988,harrington2001}. Tangential
+data on a measurement sheet are not yet $a(\widehat{\mathbf{k}})$: qualified patterns require
+$\mathcal{R}_\omega$ and the asymptotic reduction of Subsection~\ref{sec:ch252}
+\cite{devaney2004,maxwell1873}.
+
+Lateral wavenumbers label observations on $z=z_0$, not coordinates on $\Omega_s$
+\cite{stratton1941}. Finer spatial sampling improves interpolation but cannot create propagating
+content absent from $\mathcal{R}_\omega[\Jimp]$ \cite{devaney2004}. Spectral projectors,
+outgoing selection, and the radiation map from Section~\ref{sec:ch29} are presupposed; rigged
+normalization of Eq.~\eqref{eq:ch2.exterior-continuous-spectral-integral} belongs to
+Chapter~\ref{ch:03} \cite{harrington2001}.
+
+Fix $\omega>0$, symbol $k_0$, compact $\Omega_s$, admissible $\Jimp$, and outgoing
+$\mathbf{u}_\omega\in\mathcal{F}_{\mathrm{SF}}$ \cite{stratton1941}. Longitudinal roots follow
+Eqs.~\eqref{eq:ch2.dispersion-relation}--\eqref{eq:ch2.outgoing-plane-wave-criterion}; transverse
+polarization satisfies Eq.~\eqref{eq:ch2.transverse-polarization-constraint}. Far-zone transport
+claims presuppose Section~\ref{sec:ch01.2.4} \cite{harrington2001}.
 On a plane \(z=z_0\) in an outgoing admissible region, the SNF back-propagation step seeks a
 superposition of plane-wave trials whose tangential field matches the measured trace on
 \(z=z_0\). Each trial is labeled by \((k_x,k_y)\); the synthesis charting propagates it along
@@ -163,7 +129,9 @@ by Eq.~\eqref{eq:ch2.rad-null-on-evanescent} \cite{stratton1941}. Consequence: r
 transforms of \(\mathcal{S}_\omega[\Jimp]\) may show large \(|\widetilde{\E}(k_x,k_y)|\) for
 \(k_t>k_0\) while \(\widetilde{\E}_{\mathrm{rad}}=\mathbf{0}\) on export; only the radiative
 branch Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def} may be compared to far-field reports
-\cite{harrington2001}.
+\cite{harrington2001}. Figure~\ref{fig:ch2.plane-wave-radiation-measurement chain} records the
+operator order used throughout this subsection: radiation map, projection onto outgoing
+propagating content, then lateral Fourier analysis.
 \begin{figure}[t]
 \centering
 \ChOneFigBlock{%
@@ -182,10 +150,10 @@ branch Eq.~\eqref{eq:ch2.radiative-lateral-spectrum-def} may be compared to far-
  \draw[ch1flow] (oo.south |- pi.north) -- (pi.north);
 \end{tikzpicture}%
 }
-\caption{Subsection~\ref{sec:ch291} plane-wave measurement sequence:
-Eq.~\eqref{eq:ch2.plane-wave-radiation-operator} applies \(\mathcal{R}_\omega\),
-Eq.~\eqref{eq:ch2.rad-projection-composition}, then lateral transform
-Eq.~\eqref{eq:ch2.plane-wave-angular-spectrum-def}.}
+\caption{Lateral readout of qualified export: \(\mathcal{R}_\omega\) and
+Eq.~\eqref{eq:ch2.rad-projection-composition} precede the lateral transform
+Eq.~\eqref{eq:ch2.plane-wave-angular-spectrum-def}, as in
+Eq.~\eqref{eq:ch2.plane-wave-radiation-operator}.}
 \label{fig:ch2.plane-wave-radiation-measurement chain}
 \end{figure}
 The horizontal chain enforces operator order: $\mathcal{R}_\omega$ first, then $\Pi_{\mathrm{rad}}=\mathcal{O}_{\mathrm{out}}\circ\Pi_{\mathrm{prop}}$, then lateral transform $\mathcal{F}_{\mathrm{lat}}$. Lower nodes $\Pi_{\mathrm{prop}}$ and $\mathcal{O}_{\mathrm{out}}$ are \emph{constituents} of radiation selection, not optional post-filters. Applying $\mathcal{F}_{\mathrm{lat}}$ to raw $\mathcal{S}_\omega[\Jimp]$ without $\Pi_{\mathrm{rad}}$ contaminates $\widetilde{\E}_{\mathrm{rad}}$ with evanescent sheets annihilated by Eq.~\eqref{eq:ch2.evanescent-angular-null-law}. The terminal node $\widetilde{\E}_{\mathrm{rad}}$ is the plane-wave-side readout of qualified export only \cite{stratton1941}. Figure~\ref{fig:ch2.plane-wave-radiation-measurement chain} orders operators as in

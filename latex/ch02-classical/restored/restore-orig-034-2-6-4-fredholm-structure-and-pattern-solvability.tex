@@ -1,4 +1,3 @@
-% Stage 8 restored fragment — 2.6.4 Fredholm structure and pattern solvability (archive lines 8332-8619)
 \subsection{Fredholm structure and pattern solvability}
 \label{sec:ch263}
 Pattern synthesis asks which impressed currents produce a prescribed far-zone field; source
@@ -13,16 +12,13 @@ continuous target is mathematically consistent \cite{hansen1988}. Fredholm theor
 kernel, cokernel, and index after the eigenbasis and rotational structure above are in place
 \cite{stratton1941}.
 
-Assumptions. Fix \(\omega>0\), bounded or exterior problem class with outgoing radiation condition on open problems,
-physically realizable \(\mathcal{J}_\Omega\) Eq.~\eqref{eq:ch2.source-space-refined}, export map
-Eq.~\eqref{eq:ch2.spectral-operator-targets}, and the radiation eigenbasis developed above
-\cite{stratton1941}. Source pairing uses dual space
-Eq.~\eqref{eq:ch2.dual-source-pairing}; field pairing uses
-Eq.~\eqref{eq:ch2.maxwell-adjoint-pairing} \cite{stratton1941}. Compact perturbations are
-taken in operator norm on \(\mathcal{J}_\Omega\) for sources with compact support
-\(\Omega_s\) \cite{harrington2001}. Regime qualification Eq.~\eqref{eq:ch2.regime-operator-screen}
-governs whether recovered \(\mathbf{g}\) may be reported as transport data
-\cite{stratton1941}.
+Fix $\omega>0$, outgoing radiation condition on exterior problems, admissible
+$\mathcal{J}_\Omega$, export map Eq.~\eqref{eq:ch2.spectral-operator-targets}, and the
+eigenbasis of Subsection~\ref{sec:ch261} \cite{stratton1941}. Dual pairings on sources and fields
+follow Eqs.~\eqref{eq:ch2.dual-source-pairing} and~\eqref{eq:ch2.maxwell-adjoint-pairing};
+compact perturbations act on $\mathcal{J}_\Omega$ with compact support $\Omega_s$
+\cite{harrington2001}. Recovered pattern targets $\mathbf{g}$ qualify as transport data only
+after reactive content is excluded per Section~\ref{sec:ch01.2.4} \cite{stratton1941}.
 The \emph{radiation kernel} $\ker\mathcal{R}_\omega$ collects impressed currents invisible to
 qualified far-zone meters. The \emph{cokernel}
 $\mathrm{coker}\,\mathcal{R}_\omega=\mathcal{F}_{\mathrm{rad}}/\operatorname{ran}\mathcal{R}_\omega$
@@ -31,8 +27,8 @@ orthogonal to every radiative image under the adjoint pairing \cite{stratton1941
 \emph{Fredholm index}
 $\mathrm{ind}\,\mathcal{R}_\omega=\dim\ker\mathcal{R}_\omega-\dim\mathrm{coker}\,\mathcal{R}_\omega$
 counts the net imbalance between invisible source degrees and unreachable pattern obstructions;
-it is stable under the compact perturbations recorded below \cite{harrington2001}. In the
-laboratory, kernel membership explains why two distinct feeds can match the same far pattern;
+it is stable under the compact perturbations recorded below \cite{harrington2001}. Kernel
+membership explains why two distinct impressed currents can share the same far pattern;
 cokernel membership explains why a synthesis target refuses to converge no matter how many ports
 are tuned \cite{stratton1941}.
 Source inversion is difficult because radiation smooths fine source detail: the far-zone map
@@ -236,7 +232,7 @@ must be computed on the outgoing subspace after Eq.~\eqref{eq:ch2.outgoing-radia
 \(\ker\mathcal{R}_\omega\) Eq.~\eqref{eq:ch2.ker-R-omega} \cite{harrington2001}.
 regime qualification Eq.~\eqref{eq:ch2.regime-component-criterion} remains mandatory before transport claims
 on recovered \(\mathbf{g}\) \cite{stratton1941}.
-As a worked example, a spherical near-field scanner with $N=50$ probe channels is a concrete inversion budget.
+As a worked example, a spherical near-zone observation with $N=50$ probe channels is a concrete inversion budget.
 The physical configuration places fifty probes on a sphere of radius $R\approx 2\lambda_0$ around
 a compact horn feed; each channel records tangential $\E$ or $\H$ depending on probe design
 \cite{hansen1988}. After transformation to far-zone coefficients, the composition
@@ -249,7 +245,7 @@ Even when Eq.~\eqref{eq:ch2.radiation-solvability-criterion} holds for a continu
 $\mathbf{g}$, discrete recovery satisfies only a truncated modal system; tail error is bounded
 by Eq.~\eqref{eq:ch2.compression-error-bound} with the first neglected singular value of the
 measurement composition cited from Subsection~\ref{sec:ch26.signature-aperture}
-\cite{harrington2001}. The lesson for laboratory planning is direct: adding probes without
+\cite{harrington2001}. The lesson for experimental design is direct: adding probes without
 enlarging scan radius or improving SNR cannot recover modes the geometry has already annihilated.
 Scanner rank is a hard cap that composes with, but does not replace, Fredholm obstructions from
 $\ker\mathcal{R}_\omega$ \cite{stratton1941}.

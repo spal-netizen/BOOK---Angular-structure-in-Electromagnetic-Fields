@@ -1,29 +1,24 @@
-% Stage 8 section framing — 2.10 Examples
 \section{Examples}
 \label{sec:ch210}
 % CH02-NARR-EXP:02.210
-The four worked cases trace propagation, export, spectral rank, and instrument access in fixed order: compact dipole truncation, loop nullity, evanescent contamination, and structured-source topology \cite{stratton1941,harrington2001,devaney2004}. Each closes with an explicit verdict on what is radiated, null, or merely reactive before harmonic headlines enter \cite{chu1948,poynting1884}.
-Angular-spectrum action in Section~\ref{sec:ch29} states what finite instruments resolve on outgoing fields. Section~\ref{sec:ch210} returns to named hardware---apertures, dipoles, arrays, and scans---with the same tolerance discipline \cite{stratton1941}. Each example is one integrated exercise, not a problem sheet \cite{collin2001}.
-
-
-
-
 The preceding sections developed radiation operators, null spaces, near-to-far limits, and
-rank-$N$ instrument readouts as abstract objects on exterior domains. A graduate reader may accept the
-algebra while still wondering how the distinctions appear on a laboratory bench: when a
-spherical near-field scanner reports thirty-six complex samples, which part of the pattern
-residual owes to modal truncation, which to source nullity, and which to reactive contamination
-that never reaches the far zone? The four worked configurations below answer that question in
-fixed order---compact dipole truncation, loop nullity, evanescent contamination, and
-structured-source topology---each closing with an explicit verdict on what is radiated, null, or
-merely reactive before harmonic headlines enter \cite{stratton1941}.
+finite-rank observation maps on exterior domains. The four configurations below make those
+distinctions concrete in fixed order: electrically small dipole truncation, loop nullity,
+evanescent near-to-far contamination, and structured-source topology with transport
+qualification \cite{stratton1941,harrington2001,devaney2004}. Each case closes by stating what
+is radiated, what lies in $\ker\mathcal{R}_\omega$, and what is reactive storage that does not
+alter far-zone amplitude $a(\widehat{\mathbf{k}})$ \cite{chu1948,poynting1884}.
+Angular-spectrum filters from Section~\ref{sec:ch29} fix what finite observation can resolve on
+outgoing fields; the examples apply the same criteria to dipoles, apertures, and arrays without
+reopening the operator proofs \cite{stratton1941,collin2001}.
 Subsections~\ref{sec:ch2101}--\ref{sec:ch2104} isolate compact truncation, source nullity,
 evanescent near-to-far contamination, and structured-source topology--transport separation,
 respectively \cite{stratton1941}. Every numerical ratio
 quoted below is \emph{illustrative}: values follow author-calibrated discretizations of the stated
 geometries and are not reported measurement data; they are included only to show order-of-magnitude
-separation among mechanisms \cite{hansen1988}. Master DOF partition. Radiation reports can fail for distinct reasons that must not be merged in harmonic charts or laboratory
-interpretation \cite{marengo2000}. Before the subsections activate individual terms, it is
+separation among mechanisms \cite{hansen1988}. Radiation reports can fail for distinct reasons
+that must not be merged in harmonic charts or in pattern interpretation \cite{marengo2000}. Before
+the subsections activate individual terms, it is
 useful to name the full partition once: each summand below removes degrees of freedom from
 qualified radiation reports through a \emph{distinct} physical mechanism, and conflating them
 produces remedies that treat symptoms rather than causes.

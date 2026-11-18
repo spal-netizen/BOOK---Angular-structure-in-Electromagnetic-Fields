@@ -1,23 +1,17 @@
-% Stage 8 restored fragment — 2.6.3 Rotational symmetry and spectral degeneracy (archive lines 8071-8331)
 \subsection{Rotational symmetry and spectral degeneracy}
 \label{sec:ch262}
-When a source or observation frame is rotated, export eigenvalues within an irreducible block
-often remain degenerate while modal coefficients mix under the spatial rotation group
-\cite{harrington2001,stratton1941}. The commutation relations below state that covariance on
-the export eigenbasis from Subsection~\ref{sec:ch261}.
+Rotation of a source or of the measurement frame reorients modal coefficients on $S^2$ while
+leaving export eigenvalues degenerate within each irreducible block when the environment is
+isotropic \cite{harrington2001,stratton1941}. Subsection~\ref{sec:ch261} fixed the eigenbasis;
+the commutation relations below express how $\mathcal{R}_\omega$ covaries with spatial
+rotations.
 
-Let \(R\in\mathrm{SO}(3)\), field rotation \(\mathcal{D}(R)\) on qualified Maxwell pairs
-\(\mathbf{u}=(\E,\H)\in\mathcal{F}_{\mathrm{SF}}\), and radiation map
-Eq.~\eqref{eq:ch2.spectral-operator-targets} on outgoing data
-\cite{stratton1941}. Isotropic vacuum or statistically isotropic
-environments are assumed unless stated otherwise: constitutive tensors commute with
-\(R\) in the sense of Section~\ref{sec:ch01.3.2} \cite{stratton1941}. Impressed sources
-transform as polar vectors under active rotation,
-\(\big(\mathcal{A}_R\Jimp\big)(\mathbf{r})=R\,\Jimp(R^{-1}\mathbf{r})\), consistent with
-Eq.~\eqref{eq:ch1.vector-rotation-components} \cite{stratton1941}. regime qualification
-Eq.~\eqref{eq:ch2.regime-operator-screen} and transport qualification
-Eq.~\eqref{eq:ch2.transport-qualified-radiation} remain mandatory before interpreting
-rotated reports as export data \cite{harrington2001}.
+Let $R\in\mathrm{SO}(3)$ act on qualified Maxwell pairs $\mathbf{u}=(\E,\H)$ through field
+rotation $\mathcal{D}(R)$, with impressed sources transforming as polar vectors
+$\big(\mathcal{A}_R\Jimp\big)(\mathbf{r})=R\,\Jimp(R^{-1}\mathbf{r})$ per
+Section~\ref{sec:ch01.3.1} \cite{stratton1941}. Vacuum isotropy is assumed unless stated
+otherwise. Far-zone power and pattern reports apply to $\mathcal{R}_\omega[\Jimp]$ after
+reactive content is excluded per Section~\ref{sec:ch01.2.4} \cite{harrington2001}.
 Active rotation $\mathcal{A}_R$ reorients impressed currents and co-rotates field components
 $\mathcal{D}(R)$; total radiated power is invariant when constitutive response is isotropic and
 frames are consistently transformed, but modal amplitudes mix within fixed-$\ell$ sectors
@@ -46,13 +40,11 @@ Eq.~\eqref{eq:ch1.active-passive-duality} \cite{stratton1941}. Group composition
 Eq.~\eqref{eq:ch1.rotation-group-action} yields
 \(\mathcal{D}(R_1R_2)=\mathcal{D}(R_1)\mathcal{D}(R_2)\) on qualified field pairs
 \cite{stratton1941}.
-Covariance of the radiation map. This equation is perhaps the most important symmetry statement in antenna engineering: active
-rotation of the feed in a co-rotated measurement frame leaves physical export content unchanged
-while reorienting modal coefficients through the representation $\mathcal{D}(R)$
-\cite{harrington2001}. When sources and observation frames are co-rotated, the radiation chain must commute with
-rotation up to the field representation $\mathcal{D}(R)$: rotating the feed and evaluating on a
-co-rotated far-zone frame must yield the same physics as evaluating first and then rotating the
-pattern \cite{stratton1941}. Formally,
+Active rotation of the impressed source in a co-rotated observation frame leaves qualified export
+invariant while reorienting coefficients within each degenerate block through $\mathcal{D}(R)$
+\cite{harrington2001}. Equivalently, applying $\mathcal{R}_\omega$ after rotation must agree with
+rotating the pattern obtained from the unrotated source when frames are transformed consistently
+\cite{stratton1941}. Thus
 \begin{equation}
 \label{eq:ch2.radiation-rotation-commutation}
 \mathcal{R}_\omega\big[\mathcal{A}_R\Jimp\big]

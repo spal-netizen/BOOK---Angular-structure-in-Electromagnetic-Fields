@@ -1,6 +1,21 @@
 # Chapter 2 — Figure Audit (Stage 2 reconciliation)
 
-## Summary counts (FACT — `latex/ch02.tex`)
+## Classical Ch.2 (Stage 3B-R1 — `latex/ch02-classical/`)
+
+| Metric | Value |
+|--------|--------|
+| `\label{fig:ch2.*}` | **16** TikZ (`ChOneFigBlock`) after Stage 3B-R1d |
+| Disposition | Schematic geometry / regime / operator chain only |
+
+Labels: `source-to-maxwell-field`, `source-observation-green`, `distance-regimes`, `forward-chain`, `fredholm-radiation-map`, `hertzian-dipole-regimes`, `momentum-flux-sphere`, `aperture-limited-observation`, `propagating-evanescent-spectrum`, `causal-light-cone`, `singular-regularization-split`, `rotation-radiation-covariance`, `duhamel-evolution`, `radiation-spectral-decomposition`, `fredholm-radiation-chain`.
+
+**R1d reconciliation:** Archive ~54 labels → classical **16** retained/reconstructed; ~15 measurement-chain figures **MERGE/COMPRESS**; Sobolev/cavity formal figures **REJECT AS REDUNDANT** for Vol I Ch.2; wp-* floats **COMPRESS** to Problems A–G. Archive target recovery: **partial** — AD-004 open (author figure budget).
+
+**Stage 5 (2026-10-08):** Independent **scientific sufficiency** audit — **16 figures adequate** for Vol I Ch.2 spine; no mandatory additions. NR cancellation and reciprocity chains covered by prose + existing schematics. AD-004 remains **count policy**, not science gap.
+
+---
+
+## Summary counts (FACT — archived `ch02_PRE_CLASSICALIZATION_20261006.tex`)
 
 | Metric | Value |
 |--------|--------|

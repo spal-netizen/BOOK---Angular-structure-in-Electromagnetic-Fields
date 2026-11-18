@@ -1,22 +1,8 @@
-% Stage 8 section framing — 2.3 Green Functions and Electromagnetic Inversion
 \section{Green Functions and Electromagnetic Inversion}
 \label{sec:ch23}
-Section~\ref{sec:ch22} fixed the harmonic Maxwell operator $\mathcal{L}_\omega$ and the
-source-to-field map $\mathcal{S}_\omega$ on bounded domains with declared boundary data.
-Section~\ref{sec:ch23} answers the propagation question those operators presuppose: what field
-does a localized impressed current produce at an observation point $\mathbf{r}$ when the medium
-response is known through its Green function \cite{stratton1941}.
-In homogeneous vacuum the scalar kernel inverts $(\nabla^{2}+k_0^{2})$; the electric dyad inverts
-the curl--curl operator $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^{2}$ that appears in the
-electric-wave form of Maxwell's equations under $\eim$ \cite{jackson1999,tai1994}.
-Subsection~\ref{sec:ch231} derives the outgoing vacuum kernels; Subsection~\ref{sec:ch232} treats
-coincidence, distributions, and regularization so convolution integrals are defined on realistic source
-supports; retarded time-domain support belongs to Subsection~\ref{sec:ch233}.
-The same propagation law underlies method-of-moments matrix entries, near-field scan
-back-propagation, and compact-range transforms---only the discretization differs \cite{harrington2001}.
-A Hertzian dipole at $k_0 a\ll 1$ remains the lowest-dimensional calibration: it images
-$\mathcal{S}_\omega[\Jimp]$ when $\Jimp$ collapses to a moment, with transverse far-zone pattern fixed by
-Subsection~\ref{sec:ch23.signature-dipole} \cite{jackson1999}.
-Outgoing branch selection, Sommerfeld radiation, and uniqueness of the exterior radiative solution belong to
-Section~\ref{sec:ch24}; until then $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{(\mathrm{out})}$
-is cited only as the target export map, not re-derived here \cite{sommerfeld1949}.
+
+Section~\ref{sec:ch22} fixed the harmonic Maxwell operator $\mathcal{L}_\omega$ and the source-to-field map $\mathcal{S}_\omega$ on domains with declared boundary data. The present section answers the propagation question those operators presuppose: what field does a localized impressed current produce at an observation point $\mathbf{r}$ when the medium response is known through its Green function \cite{stratton1941}.
+
+In homogeneous vacuum the scalar kernel inverts $(\nabla^{2}+k_0^{2})$; the electric dyad inverts the curl--curl operator $\mathcal{W}_{E,\omega}=\nabla\times\nabla\times-k_0^{2}$ that appears in the electric-wave form of Maxwell's equations under $\eim$ \cite{jackson1999,tai1994}. Subsection~\ref{sec:ch231} derives the outgoing vacuum kernels; Subsection~\ref{sec:ch232} treats coincidence, distributions, and regularization so convolution integrals are defined on realistic source supports; Subsection~\ref{sec:ch233} records retarded time-domain support. Subsection~\ref{sec:ch234} addresses inversion and solvability on the outgoing branch. The Hertzian dipole remains the elementary calibration: it images $\mathcal{S}_\omega[\Jimp]$ when $\Jimp$ collapses to a moment, with transverse far-zone pattern developed in Subsection~\ref{sec:ch23.signature-dipole} \cite{jackson1999}.
+
+Outgoing branch selection, Sommerfeld radiation, and uniqueness of the exterior radiative solution belong to Section~\ref{sec:ch24}; until then $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega^{(\mathrm{out})}$ is cited only as the target export map \cite{sommerfeld1949}.

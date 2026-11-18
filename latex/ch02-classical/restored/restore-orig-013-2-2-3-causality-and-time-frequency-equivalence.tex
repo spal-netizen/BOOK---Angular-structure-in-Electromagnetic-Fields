@@ -1,25 +1,17 @@
-% Stage 8 restored fragment — 2.2.3 Causality and time-frequency equivalence (archive lines 3006-3480)
 \subsection{Causality and time-frequency equivalence}
 \label{sec:ch223}
 
-The physical problem is retarded response: no field at $(\mathbf{r},t)$ may depend on source
-events that have not yet had time to propagate from $\mathbf{r}'$ to $\mathbf{r}$
-\cite{maxwell1873}. Advanced kernels that respond before light-travel time
-$|\mathbf{r}-\mathbf{r}'|/c_0$ violate that constraint; retarded Green functions enforce it
-\cite{sommerfeld1949,stratton1941}. Harmonic single-frequency analysis can mask causality
-violations that appear under broadband excitation \cite{harrington2001}. Causality links
-time-domain evolution
-to harmonic analysis before any Laplace or resolvent notation is introduced
-\cite{stratton1941}. A time-domain operator is causal when no response can occur before the
-corresponding excitation \cite{stratton1941}. In electromagnetics this requirement appears
-through retarded propagation: disturbances generated at one location influence another only
-after the finite transit time imposed by the speed of light \cite{sommerfeld1949}.
-Subsection~\ref{sec:ch223} supplies the definitive proof that $\mathcal{S}_\omega$ and
-$\mathcal{R}_\omega$ are the frequency-domain images of causal time-domain maps when
-impressed data, media, and boundary class are held fixed \cite{stratton1941}. The retarded
-Eq.~\eqref{eq:ch2.causality-retarded} and symbolic relation
-Eq.~\eqref{eq:ch2.time-to-frequency-map} are upgraded to an equivalence theorem;
-Green-function construction remains in Section~\ref{sec:ch23} \cite{stratton1941}.
+Harmonic solutions at fixed $\omega$ are physically meaningful only when they arise from a
+causal time-domain evolution. No field at $(\mathbf{r},t)$ may depend on source events at
+$\mathbf{r}'$ that have not yet had time to propagate across the distance
+$|\mathbf{r}-\mathbf{r}'|$ at speed $c_0$ \cite{maxwell1873,sommerfeld1949}. Retarded Green
+functions enforce that light cone; advanced kernels that respond before transit time lie
+outside the class treated here \cite{stratton1941}. The present subsection proves that
+$\mathcal{S}_\omega$ and $\mathcal{R}_\omega$ are frequency-domain images of causal maps when
+impressed data, media, and boundary class are held fixed \cite{stratton1941}. Explicit
+construction of retarded kernels belongs to Section~\ref{sec:ch23}; here the equivalence
+between Eq.~\eqref{eq:ch2.causality-retarded} and Eq.~\eqref{eq:ch2.time-to-frequency-map}
+is established \cite{harrington2001}.
 Causal support. A time-domain operator \(\mathcal{K}\) is \emph{causal} if
 
 \begin{equation}
@@ -29,9 +21,9 @@ Causal support. A time-domain operator \(\mathcal{K}\) is \emph{causal} if
 \operatorname{supp}_t f\subseteq[t_0,\infty),
 \end{equation}
 for admissible test functions \(f\) \cite{stratton1941}. Retarded propagation forbids
-response before transit time $|\mathbf{r}-\mathbf{r}'|/c$; frequency-domain Green
-functions used on ranges are analytic continuations of that support, while broadband
-pulses expose violations that single-frequency phasors can hide \cite{sommerfeld1949}.
+response before transit time $|\mathbf{r}-\mathbf{r}'|/c$; harmonic Green functions are
+analytic continuations of that causal support, while broadband excitation exposes
+violations that single-frequency phasors can mask \cite{sommerfeld1949}.
 The retarded dyadic kernel
 in Eq.~\eqref{eq:ch2.retarded-convolution-form} satisfies
 \begin{equation}
@@ -170,27 +162,26 @@ Reactive versus radiative regime criteria from Section~\ref{sec:ch01.2.4} are in
 reference; the outgoing selector $\Pi_{\mathrm{rad}}$ of
 Eq.~\eqref{eq:ch2.radiation-operator-def} is refined spectrally, not replaced
 \cite{poynting1884}.
-The physical problem is spectral transport: a near-field scanner records both traveling and
-decaying longitudinal content, yet only outgoing propagating modes may enter far-zone power
-reports \cite{hansen1988}. Subsection~\ref{sec:ch224} defines propagating, evanescent, and non-propagating spectral
+Spectral transport separates what Maxwell solutions store locally from what outgoing
+selection exports. Tangential samples taken within a reactive length of the source
+contain both traveling and evanescent lateral content, yet only outgoing propagating modes
+enter conserved far-zone power integrals \cite{stratton1941,poynting1884}.
+Subsection~\ref{sec:ch224} defines propagating, evanescent, and non-propagating spectral
 subspaces; outgoing selection $\mathcal{O}_{\mathrm{out}}$ and far-amplitude extraction
-$\Pi_{\mathrm{rad}}$ remain distinct (Proposition~\ref{prop:ch2.Pirad-vs-Oout}), and only
-outgoing propagating content qualifies for far-zone transport reports
-\cite{stratton1941}. Recall that $\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega$ produces the
-full harmonic field pair, $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$
-retains only radiative content, and $\Pi_{\mathrm{rad}}$ acts after propagating selection
-\cite{harrington2001}. A near-field scanner routinely measures both propagating and evanescent spectral content.
-The distinction becomes visible when reconstructed fields are propagated away from the
-measurement surface: propagating components persist, whereas evanescent components decay
-exponentially with distance \cite{hansen1988}. The spectral decomposition
-developed below states that experimentally familiar observation in spectral language.
+$\Pi_{\mathrm{rad}}$ remain distinct (Proposition~\ref{prop:ch2.Pirad-vs-Oout})
+\cite{harrington2001}. The map $\mathcal{S}_\omega:\mathcal{J}_\Omega\to\mathcal{F}_\Omega$
+produces the full harmonic pair, whereas $\mathcal{R}_\omega=\Pi_{\mathrm{rad}}\circ\mathcal{S}_\omega$
+retains only radiative content after propagating selection. When fields reconstructed on a
+surface are continued outward, propagating components persist whereas evanescent components
+decay exponentially with distance \cite{hansen1988}. The decomposition developed below
+states that familiar distinction in lateral-wavenumber language.
 In a homogeneous region with symbol \(k_0\) from Eq.~\eqref{eq:ch2.helmholtz-symbol},
 plane-wave trials decompose the field into lateral and longitudinal wavenumber components.
 The dispersion relation below is the local criterion that
 separates traveling from decaying longitudinal behavior: when lateral wavenumber
 \(k_t=\sqrt{k_x^2+k_y^2}\) exceeds \(k_0\), no real propagating longitudinal root exists
-and the mode becomes evanescent \cite{stratton1941}. Experimentally one would observe that
-near-field scan content with \(k_t>k_0\) dies away within a penetration depth
+and the mode becomes evanescent \cite{stratton1941}. On a shell within the reactive zone, spectral content with \(k_t>k_0\)
+decays within a penetration depth
 \(\delta_{\mathrm{ev}}=1/\alpha(k_t)\) as the field is propagated outward
 \cite{hansen1988}. Plane-wave trials \(\mathbf{u}_{\mathbf{k}}(\mathbf{r})=\mathbf{u}_0\,e^{-\jj\mathbf{k}\cdot\mathbf{r}}\)
 satisfy the Helmholtz condition when
@@ -291,16 +282,16 @@ with \(\widehat{\mathcal{F}}_\Omega\) the spectral completion of admissible stat
 \end{equation}
 with analogous zero products for \(\Pi_{\mathrm{non}}\) \cite{stratton1941}. On
 \(\mathcal{D}(\mathcal{L}_\omega)\) from Subsection~\ref{sec:ch222}, each projector
-block is an invariant subspace of the scalar Helmholtz symbol in the plane-wave
-basis,
-\medskip
+block is an invariant subspace of the scalar Helmholtz symbol in the plane-wave basis
+when boundary closure does not couple propagating and evanescent sheets
+\cite{stratton1941,harrington2001}.
 Equations~\eqref{eq:ch2.spectral-projectors}--\eqref{eq:ch2.spectral-projector-algebra} are
-\emph{formal} on the spectral completion \(\widehat{\mathcal{F}}_\Omega\): idempotency and
-orthogonality are justified in the rigged Hilbert space treatment of Chapter~3 (\emph{Angular Momentum Operators and SO(3)})
-Subsections~3.1.3--3.5.2 \cite{stratton1941}. Until that completion,
-projector algebra is used only on admissible finite superpositions and on
-\(\mathcal{R}_\omega[\Jimp]\), where outgoing selection is already enforced
-\cite{harrington2001}. \begin{equation}
+\emph{formal} on the spectral completion $\widehat{\mathcal{F}}_\Omega$: full idempotency and
+orthogonality under the energy inner product are established on outgoing domains in
+Chapter~\ref{ch:03} \cite{stratton1941}. Until that completion, the algebra below is applied on
+finite superpositions and on $\mathcal{R}_\omega[\Jimp]$ with outgoing selection already enforced
+\cite{harrington2001}.
+\begin{equation}
 \label{eq:ch2.helmholtz-subspace-commutation}
 \mathcal{L}_\omega\big(\Pi_{\mathrm{prop}}\mathbf{u}\big)
 =
@@ -429,9 +420,8 @@ Eq.~\eqref{eq:ch2.dispersion-relation} \cite{harrington2001}.
 \(\Pi_{\mathrm{rad}}\); evanescent and non-propagating components remain reactive.}
 \label{fig:ch2.spectral-radiation-criterion}
 \end{figure}
-Figure~\ref{fig:ch2.source-radiation-sequence}. Causality from
-Subsection~\ref{sec:ch223} does not automatically place evanescent energy in
-\(\mathcal{F}_{\mathrm{rad}}\); spectral and regime qualifications are additional
+Causality alone does not place evanescent energy in \(\mathcal{F}_{\mathrm{rad}}\): outgoing
+selection and propagating spectral content remain separate requirements
 \cite{stratton1941}. Near-zone reactive fields decompose into large evanescent and non-propagating
 fractions even when \(\mathcal{S}_\omega[\Jimp]\) is exact. As \(r\to\infty\),
 \(\Pi_{\mathrm{prop}}\) content dominates \(P_{\mathrm{rad}}\) when

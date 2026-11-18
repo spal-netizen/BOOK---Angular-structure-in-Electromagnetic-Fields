@@ -1,43 +1,8 @@
-% Stage 8 section framing — 2.2 Time- and Frequency-Domain Maxwell Operators
 \section{Time- and Frequency-Domain Maxwell Operators}
 \label{sec:ch22}
-Function spaces and Maxwell operators in Section~\ref{sec:ch21} fix admissible sources and field pairs before time-harmonic reduction.
-Section~\ref{sec:ch22} carries the same Maxwell physics into the frequency-domain operators used when a single angular frequency $\omega$ is declared \cite{stratton1941}.
-Time-domain fields $\E(\mathbf{r},t)$ and $\H(\mathbf{r},t)$ specify retarded support explicitly; fixed-$\omega$ phasors are steady-state reductions valid when excitation and media are narrowband on the declared band \cite{harrington2001}.
-Each harmonic operator $\mathcal{L}_\omega$ is therefore a labeled cross-section of one causal evolution law, not an independent postulate.
-The harmonic operators $\mathcal{L}_\omega$ and $\mathcal{S}_\omega$ introduced earlier
-describe individual frequency slices of Maxwell evolution. The purpose of the present
-section is to show how those slices emerge from a single causal time-domain theory
-\cite{stratton1941}. Section~\ref{sec:ch22} develops the time--frequency equivalences that
-connect harmonic operators to causal evolution, Helmholtz symbols, and
-propagating-versus-evanescent splits under the $\eim$ convention locked in
-\ref{ch:01}. It records when that reduction is valid, how retarded time-domain maps
-relate to $\mathcal{R}_\omega$, and which spectral components carry far-zone transport
-content importable from Section~\ref{sec:ch01.2.4}.
-Harmonic Maxwell theory in Section~\ref{sec:ch20} treated $\omega>0$ as a fixed parameter.
-Time-domain formulations restore the full operator pencil $\partial/\partial t$ and clarify
-why frequency-domain solvers implement causal limits when inversion is performed correctly.
-Subsection~\ref{sec:ch221} gives the Chapter~\ref{ch:02} account of time-domain evolution;
-Subsection~\ref{sec:ch222} packages frequency-domain Maxwell and curl--curl Helmholtz
-operators without re-displaying Eq.~\eqref{eq:ch1.maxwell-local}; Subsection~\ref{sec:ch223}
-proves equivalence between retarded Green propagation and $\mathcal{S}_\omega$ stated in
-Eq.~\eqref{eq:ch2.causality-retarded}; Subsection~\ref{sec:ch224} applies the
-reactive-radiative partition of Section~\ref{sec:ch01.2.4} to propagating, evanescent, and
-non-propagating subspaces in operator form \cite{stratton1941}.
-Several related constructions are deferred deliberately. In particular, dyadic
-Green-function development and inversion theory are postponed until Section~\ref{sec:ch23},
-where the harmonic operators introduced here acquire explicit integral representations
-\cite{stratton1941}. Section~\ref{sec:ch22} does not re-open function-space declarations
-from Section~\ref{sec:ch21} or local Maxwell derivations from \ref{ch:01}.
-Helmholtz and curl--curl reductions developed in Subsection~\ref{sec:ch222} are
-single-field tools: they simplify kernel construction but do not replace the first-order
-$\mathcal{L}_\omega$ packaging of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} when
-boundary rows and impedance closures must be enforced jointly \cite{harrington2001}.
-Within the locked harmonic band, $\mathcal{S}_\omega$ is the $\omega$-slice of a causal
-time-domain map whenever impressed data and $\mathcal{B}_\Gamma$ are held fixed across the
-transform \cite{stratton1941}. Finite-difference time-domain schemes approximate
-Subsection~\ref{sec:ch221}; frequency-domain finite-element solvers approximate
-Subsection~\ref{sec:ch222} on the domains of Eq.~\eqref{eq:ch2.domain-refinement-L}.
-Modal and plane-wave decompositions in Subsection~\ref{sec:ch224} filter which components
-of $\mathcal{S}_\omega[\Jimp]$ may enter $\mathcal{R}_\omega$ under
-Eq.~\eqref{eq:ch2.transport-qualified-radiation} \cite{harrington2001}.
+
+Section~\ref{sec:ch21} fixed the function spaces and operator domains on which impressed sources and field pairs are defined. The present section shows how the same Maxwell physics appears in time-domain evolution and in the harmonic operators used when a single angular frequency $\omega$ is declared \cite{stratton1941}. Time-domain fields $\E(\mathbf{r},t)$ and $\H(\mathbf{r},t)$ make retarded causality explicit; phasor fields at fixed $\omega$ are steady-state reductions valid when excitation and media are sufficiently narrowband on the declared band \cite{harrington2001}. Each harmonic operator $\mathcal{L}_\omega$ is therefore a labelled cross-section of one causal law, not an independent postulate.
+
+Subsection~\ref{sec:ch221} develops the time-domain Maxwell system and its retarded Green representation. Subsection~\ref{sec:ch222} packages the frequency-domain Maxwell operator and curl--curl Helmholtz reductions without re-displaying Eq.~\eqref{eq:ch1.maxwell-local}. Subsection~\ref{sec:ch223} states the equivalence between retarded propagation and the solution map $\mathcal{S}_\omega$ under the hypotheses fixed in Eq.~\eqref{eq:ch2.causality-retarded}. Subsection~\ref{sec:ch224} applies the reactive--radiative partition of Chapter~\ref{ch:01} to propagating, evanescent, and non-propagating subspaces in operator form \cite{stratton1941}.
+
+Dyadic Green functions and inversion theory are deferred to Section~\ref{sec:ch23}, where the harmonic operators introduced here acquire explicit integral representations \cite{stratton1941}. Helmholtz and curl--curl reductions simplify kernel construction but do not replace the first-order $\mathcal{L}_\omega$ packaging of Eq.~\eqref{eq:ch2.maxwell-boundary-composite} when volume and boundary rows must be enforced jointly \cite{harrington2001}. Within a fixed harmonic band, $\mathcal{S}_\omega$ is the $\omega$-slice of a causal time-domain map whenever impressed data and $\mathcal{B}_\Gamma$ are held fixed across the transform \cite{stratton1941}. Modal and plane-wave decompositions in Subsection~\ref{sec:ch224} filter which components of $\mathcal{S}_\omega[\Jimp]$ may enter $\mathcal{R}_\omega$ under outgoing selection \cite{harrington2001}.
