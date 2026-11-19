@@ -1,7 +1,8 @@
 # Chapter 1 — final author benchmark lock
 
-**Locked:** 2026-11-18 (Pass 8 + Pass 8 literary/TR-064 pins)  
-**Status:** **AUTHOR BENCHMARK FROZEN** — structural prose locked; optional Pass 8b (lemma-depth expansion of §1.1.5, §1.6.4, etc.) is **author-gated** subsection-by-subsection, not required for Volume I Ch.2 entry.
+**Locked:** 2026-11-19 (Pass 8b chronological pass on §1.0–§1.8)  
+**Prior:** 2026-11-18 Pass 8 literary/TR-064 pins.  
+**Status:** **AUTHOR BENCHMARK FROZEN** — Pass 8b register `reports/CHAPTER1_PASS8B_SUBSECTION_REGISTER_20261119.md`; further lemma depth only via named subsection unlock.
 
 ## Author review PDF (canonical)
 
