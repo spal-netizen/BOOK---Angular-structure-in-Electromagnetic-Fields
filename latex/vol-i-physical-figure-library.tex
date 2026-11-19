@@ -70,20 +70,30 @@
 \end{tikzpicture}%
 }
 
-% --- Fig. 1.5: vacuum constitutive link (physical vectors) ---
+% --- Fig. 1.6: vacuum constitutive relations and TEM plane wave ---
 \newcommand{\VolIPhysVacuumClosureMap}{%
-\begin{tikzpicture}[voliphys]
-  \draw[voliaxis] (-1.9,0) -- (1.9,0) node[right, font=\scriptsize] {$\hat{\mathbf{k}}$};
-  \draw[volifield] (-1.15,0) -- (-1.15,0.8) node[above, font=\scriptsize] {$\mathbf{E}$};
-  \draw[volifield] (-0.35,0) -- (-0.35,0.55) node[above, font=\scriptsize] {$\mathbf{H}$};
-  \draw[volipoynt] (0.45,0) -- (0.45,0.8) node[above, font=\scriptsize] {$\mathbf{D}$};
-  \draw[volipoynt] (1.25,0) -- (1.25,0.55) node[above, font=\scriptsize] {$\mathbf{B}$};
-  \draw[-{Latex[length=1.5mm,width=1mm]}, gray!50!black, line width=0.5pt]
-    (-1.15,0.35) -- (-0.35,0.35);
-  \node[volilabel, font=\scriptsize] at (-0.75,-0.22) {$\mathbf{E}\perp\mathbf{H}$};
-  \node[volilabel, font=\scriptsize, align=center] at (-1.15,-0.55) {$\mathbf{D}=\varepsilon_0\mathbf{E}$\\(C\,m$^{-2}$)};
-  \node[volilabel, font=\scriptsize, align=center] at (-0.35,-0.55) {$\mathbf{B}=\mu_0\mathbf{H}$\\(T)};
-  \node[volilabel, font=\scriptsize, align=center] at (1.35,-0.55) {$\eta_0=\sqrt{\mu_0/\varepsilon_0}$\\$c=1/\sqrt{\varepsilon_0\mu_0}$};
+\begin{tikzpicture}[voliphys, scale=1.08]
+  \draw[gray!45!black, dashed, line width=0.45pt] (-2.35,1.1) rectangle (2.35,0.05);
+  \node[volilabel, font=\scriptsize] at (0,1.22) {(a) vacuum constitutive relations};
+  \node[volilabel, font=\scriptsize, align=center] at (-1.05,0.68)
+    {$\mathbf{D}=\varepsilon_0\mathbf{E}$};
+  \node[volilabel, font=\scriptsize] at (-1.05,0.42) {$[\mathbf{D}]=\mathrm{C\,m^{-2}}$};
+  \node[volilabel, font=\scriptsize, align=center] at (1.05,0.68)
+    {$\mathbf{B}=\mu_0\mathbf{H}$};
+  \node[volilabel, font=\scriptsize] at (1.05,0.42) {$[\mathbf{B}]=\mathrm{T}$};
+  \node[volilabel, font=\scriptsize, align=center] at (0,0.18)
+    {$\eta_0=\sqrt{\mu_0/\varepsilon_0}$,\quad $c=1/\sqrt{\varepsilon_0\mu_0}$};
+  \draw[gray!45!black, dashed, line width=0.45pt] (-2.35,-0.15) rectangle (2.35,-1.55);
+  \node[volilabel, font=\scriptsize] at (0,-0.28) {(b) transverse outgoing plane wave};
+  \draw[-{Latex[length=2mm,width=1.2mm]}, voliaxis, line width=0.7pt]
+    (-1.85,-0.85) -- (1.85,-0.85) node[right, font=\scriptsize] {$\hat{\mathbf{k}}$};
+  \draw[-{Latex[length=2mm,width=1.2mm]}, volifield, line width=0.7pt]
+    (-1.0,-0.85) -- (-1.0,-0.35) node[above, font=\scriptsize] {$\mathbf{E}$};
+  \draw[-{Latex[length=2mm,width=1.2mm]}, volifield, line width=0.7pt]
+    (-0.1,-0.85) -- (-0.1,-0.48) node[above, font=\scriptsize] {$\mathbf{H}$};
+  \draw[-{Latex[length=2mm,width=1.2mm]}, volipoynt, line width=0.7pt]
+    (0.75,-0.85) -- (0.75,-0.38) node[above, font=\scriptsize] {$\langle\mathbf{S}\rangle$};
+  \node[volilabel, font=\scriptsize] at (-0.55,-1.25) {$\mathbf{E}\perp\mathbf{H}\perp\hat{\mathbf{k}}$};
 \end{tikzpicture}%
 }
 
@@ -458,22 +468,35 @@
 % --- Ch.1: counter-rotating beams on observation aperture ---
 \newcommand{\VolIPhysCounterRotatingAperture}{%
 \begin{tikzpicture}[voliphys]
-  \draw[volishell] (-1.05,-0.85) rectangle (1.05,0.85);
-  \node[volilabel, font=\scriptsize] at (0,1.05) {$S_o$};
-  \draw[volifield] (-1.55,0.38) -- (-1.05,0.38);
-  \draw[volifield] (-1.55,-0.38) -- (-1.05,-0.38);
-  \node[volilabel, font=\scriptsize] at (-1.78,0.38) {$m{=}+2$};
-  \node[volilabel, font=\scriptsize] at (-1.78,-0.38) {$m{=}-2$};
-  \foreach \a in {45,135,225,315} {
-    \draw[gray!40!black, line width=0.85pt] (0,0) -- (\a:0.72);
-  }
-  \draw[gray!40!black, line width=0.45pt, dashed] (0,0) circle (0.38);
-  \node[volilabel, font=\scriptsize] at (0.45,0.35) {$|E_t|^2$};
-  \node[volilabel, font=\scriptsize] at (0,-0.35) {four lobes};
-  \node[volilabel, font=\scriptsize] at (0,0.62) {$P_+=P_-$};
-  \node[volilabel, font=\scriptsize] at (0,-0.62) {$\dot J_z{=}0$};
-  \draw[voliaxis] (0,-0.12) -- (0,0.48);
-  \node[volilabel, font=\scriptsize] at (0.1,0.55) {$\hat{\mathbf{z}}$};
+  \begin{scope}[shift={(-1.65,0)}]
+    \draw[volifield] (-0.85,0.32) -- (-0.15,0.32);
+    \draw[volifield] (-0.85,-0.32) -- (-0.15,-0.32);
+    \node[volilabel, font=\scriptsize] at (-0.5,0.48) {$m{=}+2$};
+    \node[volilabel, font=\scriptsize] at (-0.5,-0.48) {$m{=}-2$};
+    \draw[volishell] (-0.12,-0.65) rectangle (0.12,0.65);
+    \node[volilabel, font=\scriptsize] at (0,0.82) {$S_o$};
+    \node[volilabel, font=\scriptsize, align=center] at (0,-0.95) {$P_+=P_-$};
+  \end{scope}
+  \begin{scope}[shift={(0.95,0)}]
+    \node[volilabel, font=\scriptsize] at (0,1.45) {$I(\phi)=I_{\max}\cos^2(2\phi)$};
+    \draw[voliaxis] (-1.05,0) -- (1.05,0);
+    \draw[voliaxis] (0,-1.05) -- (0,1.05);
+    \node[volilabel, font=\scriptsize] at (1.08,0.08) {$x$};
+    \node[volilabel, font=\scriptsize] at (0.08,1.08) {$y$};
+    \foreach \a in {0,90,180,270} {
+      \draw[gray!30!black, dashed, line width=0.4pt] (\a:1.05) -- (\a:0.18);
+    }
+    \foreach \a in {45,135,225,315} {
+      \fill[volisrc] (\a:0.18) circle (1pt);
+    }
+    \draw[black, line width=0.85pt, domain=0:360, samples=181, variable=\x]
+      plot ({(0.18+0.82*cos(2*\x)*cos(2*\x))*cos(\x)},
+            {(0.18+0.82*cos(2*\x)*cos(2*\x))*sin(\x)});
+    \node[volilabel, font=\scriptsize] at (0.12,0.95) {$\phi{=}0$};
+    \node[volilabel, font=\scriptsize] at (0.95,0.12) {$\phi{=}\pi/2$};
+    \node[volilabel, font=\scriptsize, align=center] at (0,-1.35) {four maxima;\\nulls at $\phi=\pi/4,3\pi/4,\ldots$};
+    \node[volilabel, font=\scriptsize, align=center] at (0,-1.75) {modal estimate: $\dot J_z{=}0$};
+  \end{scope}
 \end{tikzpicture}%
 }
 
@@ -576,38 +599,31 @@
 
 % --- Ch.1: Beth experiment schematic (multi-pass, after Beth 1936) ---
 \newcommand{\VolIPhysBethSchematic}{%
-\begin{tikzpicture}[voliphys]
-  % incident linear / CP microwave beam
+\begin{tikzpicture}[voliphys, scale=1.02]
   \draw[volifield, decorate, decoration={snake, amplitude=0.35mm, segment length=2.2mm}]
-    (-2.35,-0.55) -- (-1.05,-0.55);
-  \node[volilabel, font=\scriptsize] at (-1.65,-0.15) {incident beam};
-  % lower quarter-wave plate
-  \draw[volishell, fill=black!6] (-1.02,-0.78) rectangle (1.02,-0.48);
-  \node[volilabel, font=\scriptsize] at (0,-0.92) {lower $\lambda/4$ plate};
-  % suspended half-wave plate (center)
-  \draw[volishell, volihatch] (-0.5,-0.38) rectangle (0.5,0.38);
-  \node[volilabel, font=\scriptsize, align=center] at (0,-0.68)
-    {suspended $\lambda/2$ plate};
-  % upper quarter-wave plate + reflector
-  \draw[volishell, fill=black!6] (-1.02,0.48) rectangle (1.02,0.78);
-  \node[volilabel, font=\scriptsize] at (0,0.92) {upper $\lambda/4$ plate};
-  \draw[volishell, fill=black!10] (1.05,0.48) -- (1.85,0.48) -- (1.85,1.05) -- (1.05,1.05) -- cycle;
-  \node[volilabel, font=\scriptsize] at (1.45,0.35) {reflector};
-  % double pass
+    (-2.55,-0.62) -- (-1.12,-0.62);
+  \node[volilabel, font=\scriptsize] at (-1.82,-0.28) {incident beam};
+  \draw[volishell, fill=black!6] (-1.08,-0.92) rectangle (1.08,-0.58);
+  \node[volilabel, font=\scriptsize] at (0,-1.08) {lower $\lambda/4$ plate};
+  \draw[volishell, volihatch] (-0.55,-0.45) rectangle (0.55,0.45);
+  \node[volilabel, font=\scriptsize, align=center] at (0,0) {suspended\\$\lambda/2$ quartz};
+  \draw[volishell, fill=black!6] (-1.08,0.58) rectangle (1.08,0.92);
+  \node[volilabel, font=\scriptsize] at (0,1.12) {upper $\lambda/4$ plate};
+  \draw[volishell, fill=black!10] (1.12,0.55) -- (2.15,0.55) -- (2.15,1.18) -- (1.12,1.18) -- cycle;
+  \node[volilabel, font=\scriptsize, align=center] at (1.62,0.22) {mirror};
   \draw[volifield, decorate, decoration={snake, amplitude=0.35mm, segment length=2.2mm}]
-    (-0.85,-0.55) -- (1.35,0.55);
+    (-0.92,-0.62) -- (1.48,0.68);
   \draw[volifield, dashed, decorate, decoration={snake, amplitude=0.3mm, segment length=2mm}]
-    (1.25,0.62) -- (-0.75,0.12);
-  \node[volilabel, font=\scriptsize, align=center] at (0.35,0.62) {return beam};
-  % torsion suspension
-  \draw[volishelld, line width=0.55pt] (0.62,0) -- (0.62,1.5);
-  \draw[volishell, line width=0.65pt] (0.4,1.5) rectangle (0.84,1.68);
-  \node[volilabel, font=\scriptsize, align=center] at (0.62,-1.08) {torsion axis};
+    (1.38,0.75) -- (-0.82,0.05);
+  \node[volilabel, font=\scriptsize] at (0.28,0.78) {return beam};
+  \draw[volishelld, line width=0.55pt] (0.68,0.45) -- (0.68,1.62);
+  \draw[volishell, line width=0.65pt] (0.46,1.62) rectangle (0.9,1.82);
+  \node[volilabel, font=\scriptsize] at (0.68,-1.22) {torsion fibre};
   \draw[-{Latex[length=1.8mm,width=1.1mm]}, gray!45!black, line width=0.6pt]
-    (0,0.42) arc (85:395:0.26);
-  \node[volilabel, font=\scriptsize] at (0.48,0.88) {$\boldsymbol{\tau}_{\mathrm{load}}$};
-  \node[volilabel, font=\scriptsize, align=center] at (-2.05,-1.05)
-    {$\boldsymbol{\tau}=\mathbf{P}\times\mathbf{E}$ in quartz};
+    (0,0.5) arc (80:400:0.28);
+  \node[volilabel, font=\scriptsize] at (0.52,0.98) {$\boldsymbol{\tau}_{\mathrm{load}}$};
+  \node[volilabel, font=\scriptsize, align=center] at (-2.15,-1.15)
+    {$\boldsymbol{\tau}=\mathbf{P}\times\mathbf{E}$ in crystal};
 \end{tikzpicture}%
 }
 
@@ -1181,25 +1197,22 @@
 
 % --- Ch.1: electric dipole radiation pattern $\sin^2\theta$ (meridional plane) ---
 \newcommand{\VolIPhysDipoleRadiationPattern}{%
-\begin{tikzpicture}[voliphys]
-  \draw[voliaxis, line width=0.55pt] (0,-1.5) -- (0,1.5);
-  \node[volilabel, font=\scriptsize] at (0.14,1.58) {$\hat{\mathbf{z}}$};
-  \draw[volishell, line width=0.7pt] (0,0) -- (0,0.5);
-  \node[volilabel, font=\scriptsize] at (0.24,0.25) {$\mathbf{p}$};
-  \fill[volisrc] (0,0) circle (1.8pt);
-  \draw[volishell, line width=0.85pt, smooth, samples=181, domain=-180:180]
-    plot ({1.2*sin(\x)*sin(\x)*sin(\x)},{1.2*sin(\x)*sin(\x)*cos(\x)});
-  \draw[gray!45!black, line width=0.4pt, dashed] (-1.35,0) -- (1.35,0);
-  \node[volilabel, font=\scriptsize] at (1.38,0.08) {$\theta$};
-  \node[volilabel, font=\scriptsize] at (0.12,1.22) {$\theta{=}0$};
-  \node[volilabel, font=\scriptsize] at (0.12,-1.22) {$\theta{=}\pi$};
-  \node[volilabel, font=\scriptsize, align=center] at (0.28,1.42) {0};
-  \node[volilabel, font=\scriptsize, align=center] at (0.28,-1.42) {0};
-  \node[volilabel, font=\scriptsize] at (1.12,0) {$\theta{=}\pi/2$};
-  \node[volilabel, font=\scriptsize] at (0.95,0.12) {max};
-  \node[volilabel, font=\scriptsize] at (-0.95,0.12) {max};
-  \node[volilabel, font=\scriptsize, align=center] at (0,-1.78)
-    {$U/U_{\max}=\sin^2\theta$; $D(\theta)=\tfrac32\sin^2\theta$};
+\begin{tikzpicture}[voliphys, scale=1.05]
+  \draw[voliaxis, line width=0.55pt] (0,-1.55) -- (0,1.55);
+  \node[volilabel, font=\scriptsize] at (0.16,1.65) {$\hat{\mathbf{z}}$ (dipole axis)};
+  \fill[volisrc] (0,0) circle (2pt);
+  \draw[volishell, line width=0.75pt] (0,-0.55) -- (0,0.55);
+  \node[volilabel, font=\scriptsize] at (0.28,0.28) {$\mathbf{p}$};
+  \draw[black, line width=0.9pt, domain=0:180, samples=181, variable=\x]
+    plot ({1.25*sin(\x)*sin(\x)*sin(\x)},{1.25*sin(\x)*sin(\x)*cos(\x)});
+  \draw[gray!40!black, line width=0.4pt, dashed] (-1.4,0) -- (1.4,0);
+  \node[volilabel, font=\scriptsize] at (0.14,1.28) {null};
+  \node[volilabel, font=\scriptsize] at (0.14,-1.28) {null};
+  \node[volilabel, font=\scriptsize] at (1.18,0.1) {max};
+  \node[volilabel, font=\scriptsize] at (-1.18,0.1) {max};
+  \node[volilabel, font=\scriptsize] at (1.22,-0.12) {$\theta{=}\pi/2$};
+  \node[volilabel, font=\scriptsize, align=center] at (0,-1.92)
+    {$U/U_{\max}=\sin^2\theta$;\quad $D(\theta)=\tfrac{3}{2}\sin^2\theta$};
 \end{tikzpicture}%
 }
 
