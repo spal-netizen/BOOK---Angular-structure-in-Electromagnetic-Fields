@@ -1572,9 +1572,108 @@ Rotations fix how $(\E,\H)$ and the stress tensor appear in a new frame, but the
 \phantomsection\label{sec:ch01.4.2}
 \phantomsection\label{prin:ch1.angular-em-structure}
 
-\subsubsection*{Gauge freedom and angular structure}
+\subsection{Potentials and gauge transformations}
+\label{sec:ch01.4.1}
 
-Potentials introduce a redundancy that rotation does not remove: $(\mathbf{A},\phi)$ may be altered while $(\E,\H)$ remain fixed \cite{maxwell1873,belinfante1940}. That freedom belongs to the gauge of the potential representation, not to ambiguity in Maxwell's field observables. Wattmeters, torsion balances, and stress integrals respond to $(\E,\H)$, $\mathbf{S}_\mathrm{c}$, and $\Tavg$, not to $\mathbf{A}$ alone \cite{maxwell1873,beth1936}.
+Harmonic Maxwell fields in a linear isotropic region admit a potential pair $(\phi,\mathbf{A})$ with $\phi$ in volts and $\mathbf{A}$ in tesla-metres. Under $\exp(+\jj\omega t)$ the field reconstruction is
+\begin{equation}
+\label{eq:ch1.potential-field-relations}
+\E=-\nabla\phi-\jj\omega\mathbf{A},\qquad
+\mathbf{B}=\curl\mathbf{A}=\mu\H,
+\end{equation}
+where $\mu$ and $\varepsilon$ are the local permeability and permittivity used in the curl pair of Subsection~\ref{sec:ch01.1.1} \cite{stratton1941,jackson1999}. Equations~\eqref{eq:ch1.potential-field-relations} are not independent postulates: with $\mathbf{B}=\curl\mathbf{A}$, Faraday's law $\curl\E=-\jj\omega\mathbf{B}$ is satisfied identically, while Amp\`ere--Maxwell and the divergence laws tie $\phi$, $\mathbf{A}$, $\Jimp$, and $\rho$ \cite{stratton1941}.
+
+To obtain the wave equations satisfied by the potentials, insert Eq.~\eqref{eq:ch1.potential-field-relations} into the curl system. Amp\`ere--Maxwell gives
+\begin{equation}
+\label{eq:ch1.ampere-for-potentials}
+\curl(\curl\mathbf{A})
+=\jj\omega\mu\Jimp-\jj\omega\mu\varepsilon\E
+=\jj\omega\mu\Jimp+\omega^2\mu\varepsilon\mathbf{A}+\jj\omega\mu\varepsilon\nabla\phi,
+\end{equation}
+where $\E=-\nabla\phi-\jj\omega\mathbf{A}$ was used on the right-hand side \cite{stratton1941}. With the vector identity $\curl(\curl\mathbf{A})=\nabla(\nabla\cdot\mathbf{A})-\nabla^2\mathbf{A}$,
+\begin{equation}
+\label{eq:ch1.A-general-gauge-wave}
+\nabla^2\mathbf{A}+k^2\mathbf{A}
+=-\jj\omega\mu\Jimp-\nabla\!\left(\nabla\cdot\mathbf{A}+\jj\omega\mu\varepsilon\phi\right),
+\end{equation}
+for $k^2=\omega^2\mu\varepsilon=\omega^2/(c^2)$ in the medium \cite{stratton1941,jackson1999}. The bracketed term on the right is a gauge-dependent divergence; its choice fixes which wave equation $\phi$ satisfies.
+
+\textbf{Lorenz gauge.} Imposing
+\begin{equation}
+\label{eq:ch1.lorenz-gauge-condition}
+\nabla\cdot\mathbf{A}+\jj\omega\mu\varepsilon\phi=0
+\end{equation}
+decouples Eq.~\eqref{eq:ch1.A-general-gauge-wave} to the inhomogeneous vector Helmholtz equation
+\begin{equation}
+\label{eq:ch1.A-lorenz-wave}
+\nabla^2\mathbf{A}+k^2\mathbf{A}=-\jj\omega\mu\Jimp,
+\end{equation}
+with outgoing solutions tied to the Green function of Subsection~\ref{sec:ch01.1.1c} \cite{stratton1941,jackson1999}. Taking the divergence of Eq.~\eqref{eq:ch1.ampere-for-potentials} and using $\divg(\curl(\curl\mathbf{A}))=0$ leaves
+\begin{equation}
+\label{eq:ch1.ampere-div-potentials}
+\jj\omega\mu\,\divg\Jimp+\omega^2\mu\varepsilon\,\divg\mathbf{A}+\jj\omega\mu\varepsilon\,\nabla^2\phi=0.
+\end{equation}
+With charge continuity $\divg\Jimp=-\jj\omega\rho$ from Eq.~\eqref{eq:ch1.charge-continuity-harmonic}, the impressed current divergence contributes $-\omega^2\mu\rho$, and Eq.~\eqref{eq:ch1.ampere-div-potentials} becomes
+\begin{equation}
+\label{eq:ch1.ampere-div-continuity}
+\omega^2\mu\varepsilon\,\divg\mathbf{A}+\jj\omega\mu\varepsilon\,\nabla^2\phi=\omega^2\mu\rho.
+\end{equation}
+The scalar wave equation is fixed by Gauss's law with $\E=-\nabla\phi-\jj\omega\mathbf{A}$ and uniform $\varepsilon$:
+\begin{equation}
+\label{eq:ch1.gauss-phi-potential-form}
+\varepsilon\bigl(-\nabla^2\phi-\jj\omega\,\divg\mathbf{A}\bigr)=\rho.
+\end{equation}
+Under Lorenz gauge, Eq.~\eqref{eq:ch1.lorenz-gauge-condition} gives $\divg\mathbf{A}=-\jj\omega\mu\varepsilon\phi$, so $-\jj\omega\,\divg\mathbf{A}=\omega^2\mu\varepsilon\phi=k^2\phi$ and Eq.~\eqref{eq:ch1.gauss-phi-potential-form} reduces to
+\begin{equation}
+\label{eq:ch1.phi-lorenz-wave}
+\nabla^2\phi+k^2\phi=-\frac{\rho}{\varepsilon}.
+\end{equation}
+Eq.~\eqref{eq:ch1.ampere-div-continuity} is then a consistency check on $(\mathbf{A},\phi,\rho,\Jimp)$ once Eqs.~\eqref{eq:ch1.charge-continuity-harmonic} and~\eqref{eq:ch1.lorenz-gauge-condition} hold; it does not supply an independent scalar potential \cite{stratton1941,jackson1999}.
+Equations~\eqref{eq:ch1.A-lorenz-wave}--\eqref{eq:ch1.phi-lorenz-wave} are the Stratton--Jackson retarded-potential system; their solutions under outgoing radiation selection reproduce Eqs.~\eqref{eq:ch1.lorenz-field-reconstruction}--\eqref{eq:ch1.lorenz-scalar-potential-retarded} once $\Jimp$ and $\rho$ obey charge continuity \cite{stratton1941,jackson1999}.
+
+\textbf{Coulomb gauge.} In a charge-free region ($\rho=0$), the alternative condition $\nabla\cdot\mathbf{A}=0$ (Coulomb or transverse gauge) removes the $\nabla\phi$ term from Eq.~\eqref{eq:ch1.A-general-gauge-wave} and leaves
+\begin{equation}
+\label{eq:ch1.A-coulomb-wave}
+\nabla^2\mathbf{A}+k^2\mathbf{A}=-\jj\omega\mu\Jimp,
+\qquad \nabla\cdot\mathbf{A}=0,
+\end{equation}
+while $\phi$ satisfies the static Poisson equation $\nabla^2\phi=-\rho/\varepsilon$ wherever $\rho\neq0$ \cite{stratton1941}. The same physical $(\E,\H)$ follows from either gauge after the radiation condition is imposed, but $\phi$ and $\nabla\phi$ differ in the interior; local maps built from $\phi$ alone are therefore gauge-linked (Eq.~\eqref{eq:ch1.representation-linked-jloc}) \cite{belinfante1940,stratton1941}.
+
+\textbf{Gauge transformation.} Let $\chi(\mathbf{r})$ be a smooth scalar. The map
+\begin{equation}
+\label{eq:ch1.gauge-transform}
+\mathbf{A}'=\mathbf{A}+\nabla\chi,\qquad
+\phi'=\phi-\jj\omega\chi
+\end{equation}
+leaves $(\E,\H)$ invariant under Eq.~\eqref{eq:ch1.potential-field-relations}:
+\begin{equation}
+\label{eq:ch1.gauge-E-invariant}
+\E'
+=-\nabla\phi'-\jj\omega\mathbf{A}'
+=-\nabla\phi-\jj\omega\mathbf{A}
++\nabla(\jj\omega\chi)-\jj\omega\nabla\chi
+=\E,
+\end{equation}
+\begin{equation}
+\label{eq:ch1.gauge-H-invariant}
+\mathbf{B}'=\curl\mathbf{A}'=\curl\mathbf{A}=\mathbf{B},
+\qquad
+\H'=\H,
+\end{equation}
+because $\curl\nabla\chi=\mathbf{0}$ \cite{maxwell1873,stratton1941,jackson1999}. Substituting Eq.~\eqref{eq:ch1.gauge-transform} into Eq.~\eqref{eq:ch1.lorenz-gauge-condition} gives
+\begin{equation}
+\label{eq:ch1.lorenz-gauge-transform-shift}
+\nabla\cdot\mathbf{A}'+\jj\omega\mu\varepsilon\phi'
+=\nabla\cdot\mathbf{A}+\jj\omega\mu\varepsilon\phi+\nabla^2\chi+k^2\chi,
+\end{equation}
+where $k^2=\omega^2\mu\varepsilon$ was used to collect $\nabla\cdot\nabla\chi=\nabla^2\chi$ and $\jj\omega\mu\varepsilon\cdot(-\jj\omega\chi)=\omega^2\mu\varepsilon\chi=k^2\chi$ on the right \cite{stratton1941}. Thus Lorenz gauge is preserved exactly when
+\begin{equation}
+\label{eq:ch1.chi-lorenz-wave}
+\nabla^2\chi+k^2\chi=0;
+\end{equation}
+otherwise Eq.~\eqref{eq:ch1.gauge-transform} maps one admissible $(\mathbf{A},\phi)$ pair to another without changing $(\E,\H)$, but with a shifted divergence constraint until $\chi$ is chosen to obey Eq.~\eqref{eq:ch1.chi-lorenz-wave} or Coulomb gauge is adopted instead \cite{stratton1941,jackson1999}.
+
+The redundancy is kinematic, not physical: wattmeters, torsion balances, and stress integrals depend on $(\E,\H)$, $\mathbf{S}_\mathrm{c}$, and $\Tavg$, not on $\mathbf{A}$ alone \cite{maxwell1873,beth1936,stratton1941}. Closed-surface fluxes built from $\Tavg$ and $\Mavg=\mathbf{r}\times\Tavg$ are gauge invariant because they are functionals of the physical field pair; potential-based local densities are not unless an explicit gauge is named and the same gauge is used throughout a comparison \cite{belinfante1940}.
 
 \begin{figure}[t]
 \centering
@@ -1618,22 +1717,12 @@ Potentials introduce a redundancy that rotation does not remove: $(\mathbf{A},\p
 \label{fig:ch1.gauge-same-field}
 \end{figure}
 
-Because $\mathbf{B}=\mu\H=\curl\mathbf{A}$, adding $\nabla\chi$ to $\mathbf{A}$ and co-adjusting $\phi$ leaves $(\E,\H)$ invariant (Figure~\ref{fig:ch1.gauge-same-field}). The subsection below states the transformation under $\exp(+\jj\omega t)$, lists the field observables that survive it, and separates gauge maps from electromagnetic duality.
+Because $\mathbf{B}=\mu\H=\curl\mathbf{A}$, adding $\nabla\chi$ to $\mathbf{A}$ and co-adjusting $\phi$ leaves $(\E,\H)$ invariant, as proved in Eqs.~\eqref{eq:ch1.gauge-E-invariant}--\eqref{eq:ch1.gauge-H-invariant} and illustrated in Figure~\ref{fig:ch1.gauge-same-field}. Coulomb and Lorenz gauges are two different ways of fixing the bracket in Eq.~\eqref{eq:ch1.A-general-gauge-wave}; both yield the same $(\E,\H)$ on $\partial V_g$ for identical impressed sources and outgoing selection \cite{stratton1941}.
 
 \subsection{Gauge-invariant observables, helicity, and dual symmetry}
 \label{sec:ch01.4.3}
 
-Take the phasor state $\mathcal{F}=(\E,\H)$ in a linear isotropic region with scalar $\varepsilon$, scalar $\mu$, angular frequency $\omega$, and intrinsic impedance $\eta=\sqrt{\mu/\varepsilon}$. Let $(\mathbf{A},\phi)$ denote a potential pair tied to the physical fields by
-\begin{equation}
-\label{eq:ch1.potential-field-relations}
-\E=-\nabla\phi-\jj\omega\mathbf{A},\qquad \mathbf{B}=\curl\mathbf{A}=\mu\H,
-\end{equation}
-The vector potential $\mathbf{A}$ is a calculational device, not a field observable: its curl fixes $\mathbf{B}$, and its coupling with $\phi$ fixes $\E$. Since $\curl\nabla\chi=\mathbf{0}$, a gradient shift in $\mathbf{A}$ leaves $\mathbf{B}$ unchanged; compensating $\phi$ by $-\jj\omega\chi$ restores $\E$:
-\begin{equation}
-\label{eq:ch1.gauge-transform}
-\mathbf{A}'=\mathbf{A}+\nabla\chi,\qquad \phi'=\phi-\jj\omega\chi,\qquad \E'=\E,\ \H'=\H.
-\end{equation}
-Direct substitution into $\E=-\nabla\phi-\jj\omega\mathbf{A}$ yields $\E'=\E$ and $\mathbf{B}'=\mathbf{B}$, as in Figure~\ref{fig:ch1.gauge-same-field}. Eq.~\eqref{eq:ch1.gauge-transform} encodes that relabeling. Observables are $\E$, $\B$, $\mathbf{S}_\mathrm{c}$, $\Tavg$, and closed-surface integrals free of explicit potential dependence \cite{maxwell1873,belinfante1940}. \phantomsection\label{eq:ch1.gauge-observable-invariance}\phantomsection\label{eq:ch1.observable-admissibility-triad}\phantomsection\label{eq:ch1.observable-charge-continuous-triad}
+Section~\ref{sec:ch01.4.1} fixed the potential calculus. Here the same phasor state $\mathcal{F}=(\E,\H)$ in a linear isotropic region with scalar $\varepsilon$, scalar $\mu$, angular frequency $\omega$, and intrinsic impedance $\eta=\sqrt{\mu/\varepsilon}$ is read through observables that do not depend on the chosen gauge. Direct field observables are $\E$, $\B$, $\mathbf{S}_\mathrm{c}$, $\Tavg$, and closed-surface integrals built from them \cite{maxwell1873,belinfante1940}. \phantomsection\label{eq:ch1.gauge-observable-invariance}\phantomsection\label{eq:ch1.observable-admissibility-triad}\phantomsection\label{eq:ch1.observable-charge-continuous-triad}
 Any local map tagged to potentials must state its gauge \cite{belinfante1940}.
 
 Coulomb and Lorenz gauges agree on $(\E,\H)$ but differ on $\phi$ and $\nabla\phi$ in the interior, so a potential-based local map may disagree pointwise between gauges even while traction and angular-flux integrals built from $\Tavg$ and $\Mavg=\mathbf{r}\times\Tavg$ stay fixed on chosen surfaces \cite{belinfante1940,maxwell1873}. For illustration alone, introduce the gauge-linked map below; it exhibits non-uniqueness of potential-based local constructions and is not an electromagnetic angular-momentum density.
@@ -1866,7 +1955,52 @@ The preceding sections stated general balances and their limitations. The exampl
 \subsection{Angular momentum conservation in radiation}
 \label{sec:ch01.6.1}
 
-Circular polarization fixes the handedness with which $\E$ and $\H$ rotate about the beam axis \cite{stratton1941,beth1936}. Mechanical torque on matter, and signed outward transport through a source-free shell, are read from the Maxwell stress integrals below---not from a polarization label or phase portrait alone. The axial flux definition is
+Circular polarization fixes the handedness with which $\E$ and $\H$ rotate about the beam axis \cite{stratton1941,beth1936}. Mechanical torque on matter, and signed outward transport through a source-free shell, are read from the Maxwell stress integrals of Subsection~\ref{sec:ch01.1.5}---not from a polarization label or phase portrait alone. The subsection below derives a vacuum circularly polarized plane wave, evaluates its Maxwell stress on a finite disk, separates that closed-surface result from Beth's anisotropic material torque $\boldsymbol{\tau}=\mathbf P\times\mathbf E$, and records the ideal $P/\omega$ and $2P/\omega$ scales only under the assumptions stated \cite{beth1936,stratton1941}.
+
+\paragraph{Circularly polarized plane wave in vacuum.}
+Take an outgoing uniform plane wave with $\mathbf{k}=k\hat{\mathbf{z}}$, $\sigma=\pm1$, and real amplitude $E_0>0$:
+\begin{equation}
+\label{eq:ch1.ex61-cp-EH}
+\E=\frac{E_0}{\sqrt{2}}\bigl(\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}}\bigr)e^{-\jj kz},
+\qquad
+\H=\frac{1}{\eta_0}\,\hat{\mathbf{z}}\times\E
+=\frac{E_0}{\eta_0\sqrt{2}}\bigl(\hat{\mathbf{y}}-\jj\sigma\hat{\mathbf{x}}\bigr)e^{-\jj kz},
+\end{equation}
+with $k=\omega/c$ and $\eta_0=\sqrt{\mu_0/\varepsilon_0}$ \cite{stratton1941}. Faraday's and Amp\`ere--Maxwell's laws close without remainder because $\hat{\mathbf{z}}\cdot\E=\hat{\mathbf{z}}\cdot\H=0$. The complex Poynting vector is spatially constant,
+\begin{equation}
+\label{eq:ch1.ex61-cp-poynting}
+\mathbf{S}_\mathrm{c}=\tfrac12\E\times\H^*
+=\frac{|E_0|^2}{2\eta_0}\,\hat{\mathbf{z}},
+\end{equation}
+so the time-averaged power through a disk of radius $a$ in the plane $z=z_0$ with normal $\hat{\mathbf{n}}=+\hat{\mathbf{z}}$ is
+\begin{equation}
+\label{eq:ch1.ex61-cp-power-disk}
+P=\int_0^{2\pi}\!\int_0^a
+\Re\{\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{z}}\}\,\rho\,d\rho\,d\phi
+=\frac{\pi a^2|E_0|^2}{2\eta_0},
+\end{equation}
+as in Eq.~\eqref{eq:ch1.worked-aperture-power} \cite{poynting1884,stratton1941}.
+
+\paragraph{Maxwell stress on a centred transverse disk.}
+In vacuum, cycle-averaged stress components follow Eq.~\eqref{eq:ch1.maxwell-stress}. For Eq.~\eqref{eq:ch1.ex61-cp-EH} only $E_x,E_y,H_x,H_y$ are nonzero, and
+\begin{equation}
+\label{eq:ch1.ex61-cp-stress-nonzero}
+\langle T_{xz}\rangle=-\langle T_{zx}\rangle
+=-\frac{\varepsilon_0}{2}\,\Re\{E_x E_z^*\}=0,
+\quad
+\langle T_{yz}\rangle=-\langle T_{zy}\rangle=0,
+\end{equation}
+because $E_z=H_z=0$, while $\langle T_{zz}\rangle=-\varepsilon_0|E_0|^2/2$ and $\langle T_{xx}\rangle=\langle T_{yy}\rangle=\varepsilon_0|E_0|^2/4$ \cite{stratton1941,harrington2001}. On the disk at $z=z_0$ with $\hat{\mathbf{n}}=\hat{\mathbf{z}}$, traction is $\mathbf{t}=\Tavg\cdot\hat{\mathbf{z}}$, and the $z$-component of stress moment density is $[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{z}})]_z=x\,\langle T_{yz}\rangle-y\,\langle T_{zx}\rangle$. With $\langle T_{yz}\rangle=\langle T_{zx}\rangle=0$, the integrand vanishes pointwise. Integrating in polar coordinates $(\rho,\varphi)$ with $\mathbf{r}=\rho\cos\varphi\,\hat{\mathbf{x}}+\rho\sin\varphi\,\hat{\mathbf{y}}$ confirms
+\begin{equation}
+\label{eq:ch1.ex61-cp-torque-disk-zero}
+\oint_{S_{\mathrm{disk}}}\bigl[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{z}})\bigr]\cdot\hat{\mathbf{z}}\,dS=0,
+\end{equation}
+for any radius $a$ and centred disk: azimuthal symmetry of the uniform CP stress forbids net axial stress-moment flux through a planar cross section, even though $P>0$ from Eq.~\eqref{eq:ch1.ex61-cp-power-disk} \cite{stratton1941,beth1936}. Polarization handedness therefore does not, by itself, determine $\dot J_{z,\mathrm{em,out}}$ on such a disk; a load or an enclosing surface whose normal is not purely axial is required for mechanical torque \cite{beth1936,stratton1941}.
+
+\paragraph{Helicity-associated flux scale in vacuum.}
+The same field carries definite handedness in Eq.~\eqref{eq:ch1.helicity-plane-wave}. For ideal one-way transport with power $P$ into a control surface, Beth's and Belinfante's vacuo bookkeeping associates an angular-momentum influx scale $|P/\omega|$ with circular polarization when the $\sigma=\pm1$ convention of Eq.~\eqref{eq:ch1.ex61-cp-EH} matches the flux definition of Eq.~\eqref{eq:ch1.am-flux-load-balance} \cite{beth1936,belinfante1940,stratton1941}. Eq.~\eqref{eq:ch1.ex61-cp-torque-disk-zero} shows that this scale is \emph{not} generally equal to the symmetric Maxwell-stress integral on a centred finite disk: the stress route and the flux-accounting scale coincide only under the surface geometry and constitutive model assumed in each statement \cite{beth1936,stratton1941}.
+
+The axial flux definition for an enclosing sphere is
 \begin{equation}
 \label{eq:ch1.ex61-flux-from-stress}
 \dot J_{z,\mathrm{em,out}}
@@ -1899,22 +2033,49 @@ With $\hat{\mathbf{e}}_\sigma=(\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}})/\sqrt
 \end{remark}
 
 \paragraph{Plane-wave stress countercheck (symmetric open disk).}
-For a uniform outgoing circularly polarized plane wave $\E=(E_0/\sqrt{2})(\hat{\mathbf{x}}+\jj\sigma\hat{\mathbf{y}})e^{-\jj kz}$, $\H=\eta_0^{-1}\hat{\mathbf{z}}\times\E$, the Maxwell stress tensor is spatially constant. On a finite transverse disk centered on the beam axis, $\oint[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{z}})]_z\,dS=0$ by azimuthal symmetry: power through the disk is $P=|E_0|^2 A/(2\eta_0)$, but the symmetric stress-moment integral does \emph{not} yield $\sigma P/\omega$ \cite{stratton1941,beth1936,stewart2005}. Torque on an anisotropic load in Beth's sense \cite{beth1936} is not recovered from this uniform-beam disk formula \cite{beth1936,stratton1941}.
+The centred-disk evaluation is Eq.~\eqref{eq:ch1.ex61-cp-torque-disk-zero}. Power through the same disk is Eq.~\eqref{eq:ch1.ex61-cp-power-disk}, but the symmetric stress-moment integral does \emph{not} yield $\sigma P/\omega$ \cite{stratton1941,beth1936,stewart2005}. Torque on an anisotropic load in Beth's sense \cite{beth1936} follows from Eqs.~\eqref{eq:ch1.beth-torque-plane-components}--\eqref{eq:ch1.beth-torque-per-area}, not from the uniform-beam disk stress formula \cite{beth1936,stratton1941}.
 
 \paragraph{Beth 1936 anisotropic material torque (inspected primary source).}
-Beth's theoretical calculation begins in an anisotropic dielectric with tensor response $\mathbf K$, permeability unity, and principal axes $(x,y,z)$ \cite{beth1936}. Because $\mathbf E$ is generally not parallel to $\mathbf P$ or $\mathbf D=\mathbf K\mathbf E$, the material torque density is $\boldsymbol\tau=\mathbf P\times\mathbf E=(\mathbf D\times\mathbf E)/(4\pi)$ in his Gaussian electromagnetic units \cite{beth1936}. In SI, with peak phasors $\mathbf P$, $\mathbf E$ under $\exp(+\jj\omega t)$,
+Beth's theoretical calculation begins in an anisotropic dielectric with tensor response $\mathbf K$, permeability unity, and principal axes $(x,y,z)$ \cite{beth1936}. For a lossless linear crystal,
+\begin{equation}
+\label{eq:ch1.beth-D-constitutive}
+\mathbf D=\varepsilon_0\mathbf K\mathbf E,
+\qquad
+\mathbf P=\mathbf D-\varepsilon_0\mathbf E
+=\varepsilon_0(\mathbf K-\mathbf I)\mathbf E,
+\end{equation}
+with $\mathbf K$ dimensionless in Beth's notation and $\mathbf I$ the unit dyad \cite{beth1936,stratton1941}. Electromagnetic torque on the polarized medium is the Lorentz torque on bound charge and current; in the quasistatic electromechanical model used by Beth it reduces to the cross product of polarization and electric field,
+\begin{equation}
+\label{eq:ch1.beth-torque-instantaneous}
+\boldsymbol\tau=\mathbf P\times\mathbf E
+=\varepsilon_0\bigl[(\mathbf K-\mathbf I)\mathbf E\bigr]\times\mathbf E.
+\end{equation}
+Because $\mathbf K$ is generally not proportional to $\mathbf I$, $\mathbf P$ is not parallel to $\mathbf E$ and $\boldsymbol\tau\neq\mathbf{0}$ even when $(\E,\H)$ are plane waves \cite{beth1936}. In Gaussian units Beth writes $\boldsymbol\tau=(\mathbf D\times\mathbf E)/(4\pi)$; the SI form is Eq.~\eqref{eq:ch1.beth-torque-instantaneous} without the $4\pi$ divisor \cite{beth1936,stratton1941}.
+
+Under $\exp(+\jj\omega t)$, define cycle-averaged torque density
 \begin{equation}
 \label{eq:ch1.beth-torque-cycle-average}
 \langle\boldsymbol\tau\rangle=\tfrac12\operatorname{Re}\{\mathbf P\times\mathbf E^*\},
 \qquad
 \boldsymbol\tau(t)=\mathbf P(t)\times\mathbf E(t),
 \end{equation}
-for the instantaneous material torque density; the Gaussian display is not copied into SI without the unit conversion above \cite{beth1936,stratton1941}.
+obtained by expanding $\mathbf P(t)\times\mathbf E(t)=\Re\mathbf P\,\Re\mathbf E+\cdots$ and retaining period-averaged bilinear terms \cite{stratton1941,beth1936}. For a plane wave with components $E_x,E_y$ at the entrance face of a quartz section,
+\begin{equation}
+\label{eq:ch1.beth-torque-plane-components}
+\langle\tau_z\rangle
+=\tfrac12\varepsilon_0\,\operatorname{Re}\bigl[(K_{xx}-1)E_x E_y^*-(K_{yy}-1)E_y E_x^*\bigr],
+\end{equation}
+when the optic axis is along $\hat{\mathbf{z}}$ and $K_{xx}\neq K_{yy}$ for birefringence \cite{beth1936}. Beth's component law (his eq.~(2)) supplies $(E_x,E_y)$ as functions of plate orientation; integration through the plate thickness,
+\begin{equation}
+\label{eq:ch1.beth-torque-per-area}
+\Gamma_z=\int_{z_1}^{z_2}\langle\tau_z\rangle\,dz,
+\end{equation}
+gives torque per unit area (N\,m\,m$^{-2}$), reversing sign when the lower quarter-wave plate is rotated by $90^\circ$ and vanishing at the half-wave design retardation (his eq.~(3)) \cite{beth1936}. The \emph{material} calculation is independent of the vacuum symmetric Maxwell stress inside the crystal; vacuum stress-moment flux on an enclosing shell closes the field budget with $\Gamma_z$ at the faces under Beth's interface assumptions \cite{beth1936,stratton1941}.
 \begin{remark}[Beth 1936 equation concordance]
 \label{rem:ch1.beth-1936-concordance}
-Beth's plane-wave component law (his eq.~(2)) supplies the boundary data paired with Eq.~\eqref{eq:ch1.beth-torque-cycle-average}. Integration of $\langle\boldsymbol\tau\rangle$ through the quartz section (his eq.~(3)) gives torque per unit area, which reverses when the lower quarter-wave plate is rotated by $90^\circ$. His angular-momentum flux density $\dot M_z\propto XY\sin 2\delta$ (eq.~(6), SI-converted) matches the flux accounting at a crystal face with Fresnel reflection \cite{beth1936}.
+Beth's angular-momentum flux density $\dot M_z\propto XY\sin 2\delta$ (his eq.~(6), SI-converted) matches the face-flux bookkeeping paired with Eq.~\eqref{eq:ch1.beth-torque-cycle-average} when Fresnel reflection at the crystal interface is included \cite{beth1936}.
 \end{remark}
-With plane-wave components along $+z$ through a quartz section between $z_1$ and $z_2$, integration of the time-averaged torque density yields torque per unit area, which reverses when the lower quarter-wave plate is rotated by $90^\circ$ and vanishes at the design half-wave retardation. Beth's quantum argument assigns spin $\hbar$ per left-circular and $-\hbar$ per right-circular photon, with the same flux law at the interface; conservation at a crystal face with Fresnel reflection reproduces the wave-theory torque \cite{beth1936}. This is a \emph{material} $\mathbf P\times\mathbf E$ calculation inside birefringent quartz, not an evaluation of the vacuum symmetric Maxwell stress tensor in the crystal interior. An enclosing vacuum stress-moment balance on a load control surface can be aligned with Beth's flux accounting only under the stated interface, reflection, and steady-state assumptions of his section~``Quantum theory'' \cite{beth1936,stratton1941}. The Princeton apparatus uses a suspended half-wave plate in vacuum, a fixed quarter-wave plate outside the chamber, and a reflector that returns the beam through the suspended plate so the delivered angular momentum is nearly four times that of simple one-pass absorption; Figure~\ref{fig:ch1.beth-schematic} is a pedagogical one-pass sketch, not a faithful diagram of that multi-plate reflected-beam arrangement \cite{beth1936}.
+Beth's quantum argument assigns spin $\hbar$ per left-circular photon and $-\hbar$ per right-circular photon, reproducing the same face-flux law at steady state \cite{beth1936}. The Princeton apparatus uses a suspended half-wave plate in vacuum, fixed quarter-wave optics, and a mirror that returns the beam through the stack so the mechanical exchange can exceed simple one-pass absorption; Figure~\ref{fig:ch1.beth-schematic} is a one-pass teaching sketch, not the full multi-bounce layout \cite{beth1936}.
 
 In the measurement programme (Beth's pp.~120--124), a torsion pendulum with period of order ten minutes detected changes in equilibrium when the lower quarter-wave plate was rotated between calibrated stops; resonance and antiresonance schedules in the angular deflection amplitude isolated the light torque from drift. Beth and Harris varied filament temperature, wavelength band, and plate orientation; Figs.~6--9 compare measured torque changes to the wave-theory factors obtained from Eq.~(8)--(9) with measured plate thicknesses and quartz indices. Agreement in sign and trend is reported, while Beth emphasizes that absolute calibration of the torque scale carries larger uncertainty than the relative checks \cite{beth1936}. The experiment establishes that polarization-controlled angular momentum exchange produces a mechanical torque on quartz in the stated apparatus; it does not verify the ideal one-pass scales $P/\omega$ and $2P/\omega$ quoted below without the multi-bounce geometry and crystal model of Eq.~(3).
 
