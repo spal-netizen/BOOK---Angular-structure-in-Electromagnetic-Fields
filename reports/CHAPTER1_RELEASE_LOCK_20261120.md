@@ -1,5 +1,6 @@
 # Chapter 1 release lock — 2026-11-20
 
+**Commit:** `7179a0f` on `volume-i/ch2-4-coordinated-transformation`  
 **Branch:** `volume-i/ch2-4-coordinated-transformation`  
 **Canonical PDF:** `VOLUME_I_RELEASE/CHAPTER1_FINAL_BENCHMARK_20261120.pdf` (**76 pages**)
 
