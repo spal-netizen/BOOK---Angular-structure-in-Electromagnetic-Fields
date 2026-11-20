@@ -2,7 +2,7 @@
 
 **Conventions:** \(e^{-j\omega t}\), SI | **Target:** publisher-ready Vol. I in 12 months  
 **Baseline locked:** 2026-05-24 (`LOCK-MANIFEST.md`)  
-**Chapter 1 locked:** 2026-06-07 (forensic re-lock)  
+**Chapter 1 locked:** 2026-11-20 classical-correction + Problems 1–10 solutions (`reports/CHAPTER1_RELEASE_LOCK_20261120.md`, PDF `CHAPTER1_FINAL_BENCHMARK_20261120.pdf`, 76 pp) — supersedes 2026-06-07 forensic re-lock for review baseline  
 **Chapter 2 locked:** 2026-05-31 (accessibility audit remediated 2026-05-29)  
 **Chapter 3 remediated:** 2026-05-29 (forensic audit + monograph compression pass)  
 **TOC:** `TOC/volume-I-ch01-04-FINAL.txt` — LOCKED  

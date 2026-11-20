@@ -1,21 +1,330 @@
-% Chapter 1 — Hints and selected solutions (Jackson-style supplement to §1.8)
-\section{Hints and selected solutions}
+% Chapter 1 — Worked solutions (Problems 1--10; §1.9 supplement)
+\section{Worked solutions to Problems 1--10}
 \label{sec:ch01.8-solutions}
 
-\noindent\emph{Selected hints for Problems 3(d), 7(b), 7(c), and 7(d); full numerical answers are left to the reader.}
+\noindent Conventions: harmonic phasors with $\exp(+\jj\omega t)$, outgoing radiation factor $e^{-\jj kr}$, SI units. The exterior uniqueness theorem is Theorem~\ref{thm:ch1.exterior-uniqueness}. Solutions use only equations and hypotheses already stated in Chapter~\ref{ch:01}.
 
-\paragraph{Problem 3(d) — passive loss and uniqueness.}
-\textbf{Hint.} Start from Eq.~\eqref{eq:ch1.uniqueness-local-div-complex} with $\varepsilon=\varepsilon'-\jj\varepsilon''$, $\mu=\mu'-\jj\mu''$ and $\varepsilon'',\mu''\ge0$. Take $\Re\{\cdot\}$ of the divergence identity and integrate over the bounded domain; dissipation appears as $-\omega\int(\varepsilon''|\E|^2+\mu''|\H|^2)\,dV\le0$ \cite{stratton1941,harrington2001}. Do \emph{not} substitute the lossless identity Eq.~\eqref{eq:ch1.uniqueness-energy-identity} when $\varepsilon'',\mu''>0$.
-\textbf{Outline.} (i)~On a bounded dissipative body with homogeneous PEC/PMC data, a homogeneous difference field has vanishing boundary trace and nonnegative dissipation, hence $\Delta\E=\Delta\H=\mathbf{0}$ (Subsection~\ref{sec:ch01.1.3}). (ii)~In a lossless cavity at an eigenfrequency, homogeneous tangential fields need not vanish---uniqueness is not claimed without a radiation or loss channel. (iii)~For an exterior with outgoing selection, use Theorem~\ref{thm:ch1.exterior-uniqueness}: $\mathcal{P}_\infty=0$ with passive impedance absorption forces the limiting far-field pattern $\E_\infty=\mathbf{0}$; vector spherical-wave coefficients then vanish and Rellich continuation gives $\Delta\E=\Delta\H=\mathbf{0}$ in the connected source-free exterior under the theorem's hypotheses \cite{sommerfeld1949,harrington2001,stratton1941}. For passive impedance boundaries, add the outward normal flux term from Eq.~\eqref{eq:ch1.impedance-boundary-power} with the sign of Eq.~\eqref{eq:ch1.outer-boundary-classes} \cite{stratton1941}.
+\subsection*{Problem 1 --- Conservation laws and measurable fluxes}
 
-\paragraph{Problem 7(b) — helicity--power scale versus Maxwell stress.}
-\textbf{Hint.} Remark~\ref{rem:ch1.m-plus-sigma} and Eq.~\eqref{eq:ch1.ex61-flux-from-stress} require a \emph{separable} Maxwell-valid vector mode, fixed propagation direction, and uniform impedance so that $(m+\sigma)P/\omega$ follows a normalized paraxial field representation \cite{allen1992,cerjan2011,monteiro2009}. Chapter~\ref{ch:01} torque theorems use $\tau_{\hat{\mathbf{u}}}(V_{\mathrm{A}})=\hat{\mathbf{u}}\cdot\boldsymbol{\Phi}_{J,\mathrm{out}}$ from stress, not $(m+\sigma)P/\omega$.
-\textbf{Outline.} On the finite transverse disk of Subsection~\ref{sec:ch01.6.1}, $\E$ and $\H$ are spatially constant and azimuthally symmetric about $\hat{\mathbf{z}}$. Then $\oint[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{z}})]_z\,dS=0$ while $P=|E_0|^2 A/(2\eta_0)>0$ \cite{stratton1941,beth1936,stewart2005}. Conclusion: a nonzero helicity label and finite power through the disk do not, by themselves, produce a Maxwell-stress torque integral along $\hat{\mathbf{z}}$; Beth torque on matter still follows $\oint\Mavg\cdot\hat{\mathbf{n}}\,dS$ on the enclosing vacuum shell with the declared origin \cite{beth1936}.
+\paragraph{(a) Real and imaginary Poynting flux.}
+With $\mathbf{S}_\mathrm{c}=\tfrac12\E\times\H^*$, expand $\divg(\E\times\H^*)$ using $\curl\E=-\jj\omega\mu_0\H$ and $\curl\H^*=\Jimp^*-\jj\omega\varepsilon_0\E^*$. The identity $\divg(\E\times\H^*)=\H^*\cdot\curl\E-\E\cdot\curl\H^*$ gives Eq.~\eqref{eq:ch1.poynting-intermediate}. Using $u_E=\tfrac14\varepsilon_0\E\cdot\E^*$, $u_H=\tfrac14\mu_0\H^*\cdot\H$ and $\varepsilon_0\E\cdot\E^*-\mu_0\H^*\cdot\H=4(u_E-u_H)$ yields Eq.~\eqref{eq:ch1.poynting-complex} for $\mathbf{S}_\mathrm{c}=\tfrac12\E\times\H^*$. Taking real and imaginary parts gives Eq.~\eqref{eq:ch1.poynting-real-imag-split}:
+\[
+\divg\Re(\mathbf{S}_\mathrm{c})=-\tfrac12\Re(\E\cdot\Jimp^*),\qquad
+\divg\Im(\mathbf{S}_\mathrm{c})=-\tfrac12\Im(\E\cdot\Jimp^*)-2\omega(u_H-u_E).
+\]
+On a closed surface $\partial V$, $\int_{\partial V}\Re(\mathbf{S}_\mathrm{c})\cdot\hat{\mathbf{n}}\,dS$ is time-averaged power leaving $V$ (impressed work inside when sources present). $\int_{\partial V}\Im(\mathbf{S}_\mathrm{c})\cdot\hat{\mathbf{n}}\,dS$ measures reactive harmonic exchange through the same shell (electric--magnetic storage imbalance plus imaginary impressed work), not uniquely equivalent to a volume stored-energy functional without a declared convention \cite{poynting1884,stratton1941}.
 
-\paragraph{Problem 7(c) — gauge invariance of field quantities.}
-\textbf{Hint.} Under $\mathbf{A}\to\mathbf{A}+\nabla\chi$ and $\phi\to\phi-\jj\omega\chi$, $(\E,\H)$ are unchanged so $\mathbf{g}_{\mathrm{em}}$, $\Tavg$, $\Mavg$, and $\boldsymbol{\Phi}_{J,\mathrm{out}}$ built from $(\E,\H)$ are gauge invariant. Local decompositions that insert $\nabla\phi$ or $\mathbf{A}\times\mathbf{H}$ pointwise without projecting to observables (Section~\ref{sec:ch01.4.4}) can change with $\chi$ \cite{belinfante1940,jackson1999}.
-\textbf{Outline.} List each candidate density in Problem~7(c) and test whether it is bilinear in $(\E,\H)$ or introduces $\phi$ or $\mathbf{A}$ alone; only the former class is guaranteed gauge invariant on the domain where $(\E,\H)$ solve Maxwell's equations.
+\paragraph{(b) Momentum balance and two force routes.}
+The Lorentz law Eq.~\eqref{eq:ch1.lorentz-force} gives mechanical force density on carriers. Maxwell's equations imply Eq.~\eqref{eq:ch1.maxwell-source-force}, $\mathbf{f}_{\mathrm{src}}=\rho\E+\Jimp\times\B$, as the field--source exchange density built from the same $(\rho,\Jimp)$ as Eq.~\eqref{eq:ch1.maxwell-local}. Contracting the symmetric stress Eq.~\eqref{eq:ch1.maxwell-stress-components} with $\partial_j$ and substituting Gauss's and Amp\`ere's laws yields Eq.~\eqref{eq:ch1.momentum-balance-instantaneous}, $\partial_t g_i+f_{\mathrm{src},i}=\partial_j T^{(i)}_{ij}$, with $\mathbf{g}_{\mathrm{em}}=\varepsilon_0\E\times\B$ (Eq.~\eqref{eq:ch1.momentum-density-instantaneous}) \cite{maxwell1873,stratton1941}.
 
-\paragraph{Problem 7(d) — standing modal pattern versus net stress flux.}
-\textbf{Hint.} Under the modal assumptions of Eq.~\eqref{eq:ch1.ex62-net-am-transport}, equal powers $P_+=P_-$ give $\dot J_{z,\mathrm{orb,out}}=(m/\omega)(P_+-P_-)=0$ even when $|E_t|\propto\sqrt{2}|A(\rho)||\cos(m\phi)|$ is large on the aperture \cite{allen1992,beth1936}.
-\textbf{Outline.} Evaluate $\boldsymbol{\Phi}_{J,\mathrm{out}}$ from Eq.~\eqref{eq:ch1.ex61-flux-from-stress} (or Eq.~\eqref{eq:ch1.am-net-transport-z}) on the stated vacuum shell; do not infer transport from the visible standing isophases alone. Subsection~\ref{sec:ch01.6.2} exhibits the cancellation explicitly \cite{beth1936,stratton1941}.
+\textit{Source-support volume $V_{\mathrm{A}}$.} When impressed sources model the actual carriers, $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ on $V_{\mathrm{A}}$. Integrating Eq.~\eqref{eq:ch1.momentum-balance-instantaneous} and applying the divergence theorem gives Eq.~\eqref{eq:ch1.momentum-integral-balance}: net mechanical force equals stress traction through $\partial V_A$ minus the rate of change of electromagnetic momentum storage in $V_{\mathrm{A}}$.
+
+\textit{Vacuum shell $\mathcal{V}_{\mathrm{vac}}$.} When a body $B$ sits in vacuum, $\mathcal{V}_{\mathrm{vac}}$ is source-free, so $\mathbf{f}_{\mathrm{src}}=\mathbf{0}$ there. Eq.~\eqref{eq:ch1.route-b-momentum-shell} gives body force $\mathbf{F}_{\mathrm{body}}=-\oint_{S_i}\Tavg\cdot\hat{\mathbf{n}}_i\,dS$ (Eq.~\eqref{eq:ch1.route-b-body-force}) from the inner shell traction, not from $\int_{\mathcal{V}_{\mathrm{vac}}}\mathbf{f}_{\mathrm{src}}\,dV$ \cite{stratton1941,harrington2001}.
+
+\paragraph{(c) Angular momentum, volumes, and steady torque.}
+Contract Eq.~\eqref{eq:ch1.momentum-balance-instantaneous} with $\varepsilon_{ijk}r_j$ as in Eqs.~\eqref{eq:ch1.angular-momentum-index-start}--\eqref{eq:ch1.stress-symmetry-torque-vanish}. Symmetry of $\Tinst$ annihilates the antisymmetric torque density; the stress term becomes $\divg(\mathbf{r}\times\Tinst)$. With $\mathbf{j}_{\mathrm{em}}=\mathbf{r}\times\mathbf{g}_{\mathrm{em}}$ and $\boldsymbol{\tau}_{\mathrm{src}}=\mathbf{r}\times\mathbf{f}_{\mathrm{src}}$, Eq.~\eqref{eq:ch1.angular-momentum-balance} follows.
+
+Define $\boldsymbol{\mathcal{T}}_J(V)=\oint_{\partial V}\Mavg\cdot\hat{\mathbf{n}}\,dS=\oint_{\partial V}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{n}})\,dS$ (Eq.~\eqref{eq:ch1.stress-moment-integral}) and $\boldsymbol{\Phi}_{J,\mathrm{out}}(V)=-\boldsymbol{\mathcal{T}}_J(V)$ (Eq.~\eqref{eq:ch1.outward-am-flux}). $V_{\mathrm{A}}$ is where $\mathbf{f}_{\mathrm{matter}}=\mathbf{f}_{\mathrm{src}}$ and Eq.~\eqref{eq:ch1.torque-stress-route-a} applies. $V_m$ encloses matter for traction integrals but need not equal $V_{\mathrm{A}}$. $\mathcal{V}_{\mathrm{vac}}$ is the source-free vacuum between $S_o$ and body interface $S_i$ (Eqs.~\eqref{eq:ch1.route-b-torque-shell}--\eqref{eq:ch1.route-b-body-torque-steady}).
+
+On $V_{\mathrm{A}}$, Eq.~\eqref{eq:ch1.angular-balance-integral} and Eq.~\eqref{eq:ch1.torque-observable} give
+\[
+\tau_{\hat{\mathbf{u}}}(V_{\mathrm{A}})
+=\hat{\mathbf{u}}\cdot\boldsymbol{\mathcal{T}}_J(V_{\mathrm{A}})
+-\hat{\mathbf{u}}\cdot\frac{d}{dt}\mathbf{J}_{\mathrm{em,A}}.
+\]
+At harmonic steady state with stationary storage on $V_{\mathrm{A}}$, $d\mathbf{J}_{\mathrm{em,A}}/dt=\mathbf{0}$, so
+\[
+\tau_{\hat{\mathbf{u}}}(V_{\mathrm{A}})=\hat{\mathbf{u}}\cdot\boldsymbol{\mathcal{T}}_J(V_{\mathrm{A}})
+=-\hat{\mathbf{u}}\cdot\boldsymbol{\Phi}_{J,\mathrm{out}}(V_{\mathrm{A}}).
+\]
+Use $\tau_{\hat{\mathbf{u}}}(V_{\mathrm{A}})$, not $\tau_{\hat{\mathbf{u}}}(V_m)$ unless $V_m\equiv V_{\mathrm{A}}$ is declared \cite{beth1936,stratton1941}.
+
+\paragraph{(d) Perfect absorber, radiation pressure.}
+For the plane wave of Eq.~\eqref{eq:ch1.plane-wave-transverse} incident on $z=0$ from $z<0$ with $\hat{\mathbf{n}}=+\hat{\mathbf{z}}$ outward from the field volume,
+\[
+\langle\mathbf{S}\rangle=\frac{|E_0|^2}{2\eta_0}\,\hat{\mathbf{z}},\qquad
+\langle\mathbf{g}_{\mathrm{em}}\rangle=\varepsilon_0\mu_0\,\langle\mathbf{S}\rangle
+=\frac{\langle\mathbf{S}\rangle}{c^2}
+\]
+(Eq.~\eqref{eq:ch1.rotation-generator-split}). The cycle-averaged electromagnetic momentum flux density toward the interface is $\langle\mathbf{g}_{\mathrm{em}}\rangle c=\langle\mathbf{S}\rangle/c$. A perfect absorber removes this flux, so the traction magnitude is
+\[
+p_{\mathrm{abs}}=\frac{|\langle\mathbf{S}\rangle|}{c}=\frac{|E_0|^2}{2\eta_0 c},
+\]
+consistent with Example~\ref{ex:ch1.radiation-pressure} and Figure~\ref{fig:ch1.plane-wave-handedness} \cite{stratton1941,maxwell1873}.
+
+\paragraph{(e) Perfect reflector, factor of two.}
+A specular reflector reverses the propagation direction of $\langle\mathbf{g}_{\mathrm{em}}\rangle$. Momentum delivered to the reflector is incident plus reflected magnitude:
+\[
+p_{\mathrm{refl}}=\frac{2|\langle\mathbf{S}\rangle|}{c},
+\]
+because $|\Delta(\langle\mathbf{g}_{\mathrm{em}}\rangle)|=2|\langle\mathbf{g}_{\mathrm{em}}\rangle|$ for normal incidence on a perfect conductor/mirror \cite{stratton1941,maxwell1873}.
+
+\paragraph{(f) Dimensions and torque closure.}
+$\Tavg$ has units N\,m$^{-2}$. With $[\mathbf{r}]=\mathrm{m}$, $[\Mavg]=\mathrm{N\,m^{-1}}$. Thus $[\Mavg\cdot\hat{\mathbf{n}}]=\mathrm{N\,m^{-1}}$ on a differential area element. Integrating over a closed surface,
+\[
+[\boldsymbol{\mathcal{T}}_J]=[\oint\Mavg\cdot\hat{\mathbf{n}}\,dS]=\mathrm{N\,m}=\mathrm{J},
+\qquad
+[\boldsymbol{\Phi}_{J,\mathrm{out}}]=\mathrm{J},
+\]
+matching Eqs.~\eqref{eq:ch1.stress-moment-integral}--\eqref{eq:ch1.outward-am-flux}. At harmonic steady state with $d\mathbf{J}_{\mathrm{em,A}}/dt=\mathbf{0}$ on $V_{\mathrm{A}}$, $\tau_{\hat{\mathbf{u}}}(V_{\mathrm{A}})=\hat{\mathbf{u}}\cdot\boldsymbol{\Phi}_{J,\mathrm{out}}(V_{\mathrm{A}})$ has units N\,m (Eq.~\eqref{eq:ch1.torque-observable}) \cite{beth1936,stratton1941}.
+
+\subsection*{Problem 2 --- Charge continuity and outgoing Green function}
+
+\paragraph{(a) Harmonic continuity.}
+Take $\divg$ of $\curl\H=\Jimp+\jj\omega\varepsilon_0\E$ (Eq.~\eqref{eq:ch1.maxwell-local}). The left-hand side vanishes identically. Gauss's law gives $\divg(\varepsilon_0\E)=\rho$, hence
+\[
+\divg\Jimp+\jj\omega\rho=0,
+\]
+Eq.~\eqref{eq:ch1.charge-continuity-harmonic}. Independent assignment of arbitrary $\rho$ and $\Jimp$ over-constrains Maxwell's four rows: Amp\`ere--Maxwell and Gauss cannot both hold unless the pair satisfies continuity \cite{maxwell1873,stratton1941}.
+
+\paragraph{(b) Global compatibility.}
+Integrate over source region $\Omega_s$:
+\[
+\int_{\Omega_s}(\divg\Jimp+\jj\omega\rho)\,dV
+=\oint_{\partial\Omega_s}\Jimp\cdot\hat{\mathbf{n}}\,dS+\jj\omega\int_{\Omega_s}\rho\,dV=0,
+\]
+Eq.~\eqref{eq:ch1.global-charge-compatibility}. For Class~A impressed sources with $\operatorname{supp}(\Jimp)\subset\Omega\setminus\Gamma$, the surface term vanishes and the volume integral is a global constraint linking $\rho$ and $\Jimp$ over $\Omega_s$ \cite{stratton1941}.
+
+\paragraph{(c) Retarded scalar potential and far-zone phase.}
+The scalar prototype $(\nabla^2+k_0^2)\phi=-\rho/\varepsilon_0$ is of the form Eq.~\eqref{eq:ch1.inhomogeneous-helmholtz}. With outgoing Green function Eq.~\eqref{eq:ch1.scalar-green-outgoing},
+\[
+\phi(\mathbf{r})=\frac{1}{\varepsilon_0}\int\rho(\mathbf{r}')\,
+\frac{e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}}{4\pi|\mathbf{r}-\mathbf{r}'|}\,d^3r',
+\]
+Eq.~\eqref{eq:ch1.lorenz-scalar-potential-retarded}. For $r=|\mathbf{r}|\gg|\mathbf{r}'|$,
+\[
+|\mathbf{r}-\mathbf{r}'|\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}'+\mathcal{O}(|\mathbf{r}'|^2/r),
+\]
+so
+\[
+e^{-\jj k_0|\mathbf{r}-\mathbf{r}'|}\approx e^{-\jj k_0 r}\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'},
+\]
+Eq.~\eqref{eq:ch1.green-far-zone-phase} \cite{stratton1941,jackson1999}.
+
+\paragraph{(d) Helmholtz of $\Jimp$ versus reactive/radiative split.}
+A solenoidal--irrotational Helmholtz decomposition of $\Jimp$ in a bounded volume classifies how impressed current is assembled from gradient and curl pieces at a fixed $\omega$; it does not coincide with partitioning the \emph{radiated} field into reactive $r^{-2},r^{-3}$ and radiative $r^{-1}$ shells. The latter follows from the outgoing Maxwell solution and shell functionals (e.g.\ Eqs.~\eqref{eq:ch1.ex64-power-functionals}, \eqref{eq:ch1.dipole-reactive-ratio}), while a longitudinal $\Jimp$ component may still contribute to radiation through charge continuity and potentials. Longitudinal current is not synonymous with ``non-radiating storage'' in the exterior field \cite{stratton1941,jackson1999}.
+
+\subsection*{Problem 3 --- Boundaries, outgoing waves, and uniqueness}
+
+\paragraph{(a) Boundary classes in words.}
+On an exterior problem the obstacle occupies $\mathcal{O}$ and the field domain is $\Omega_{\mathrm{ext}}=\mathbb{R}^3\setminus\overline{\mathcal{O}}$. The unit normal $\hat{\mathbf{n}}_{\mathrm{body}}$ points from the solid into the exterior vacuum; $\hat{\mathbf{n}}_{\mathrm{ext}}=-\hat{\mathbf{n}}_{\mathrm{body}}$ (Eq.~\eqref{eq:ch1.exterior-normal-convention}). Eq.~\eqref{eq:ch1.outer-boundary-classes} gives: on $\Gamma_{\mathrm{PEC}}$, tangential $\E$ vanishes; on $\Gamma_{\mathrm{PMC}}$, tangential $\H$ vanishes; on $\Gamma_Z$, the Leontovich relation $\hat{\mathbf{n}}_{\mathrm{body}}\times\E=-Z_s\mathbf{H}_t$ with passive $Z_s$ and $\Re(Z_s)>0$ on absorbing sheets \cite{stratton1941,harrington2001}.
+
+\paragraph{(b) Outgoing radiation condition.}
+Eq.~\eqref{eq:ch1.radiation-trace-condition} requires
+\[
+\hat{\mathbf{r}}\times\H+\eta_0^{-1}(\hat{\mathbf{r}}\times\E)\times\hat{\mathbf{r}}=\mathbf{o}(R^{-1})\quad\text{as }R\to\infty,
+\]
+selecting $\E\sim\E_0(\theta,\phi)e^{-\jj k_0 R}/R$ with $\H=\eta_0^{-1}\hat{\mathbf{r}}\times\E$. Superposition with an incoming spherical wave $e^{+\jj k_0 R}/R$ violates this trace and is excluded by the data specification \cite{sommerfeld1949,stratton1941}.
+
+\paragraph{(c) Lossless exterior energy balance (Problem step).}
+Let $(\Delta\E,\Delta\H)$ be a source-free difference field in real lossless $\varepsilon,\mu$ on $\Omega_{\mathrm{ext},R}$, the intersection of $\Omega_{\mathrm{ext}}$ with a ball of radius $R$. Eq.~\eqref{eq:ch1.uniqueness-local-div} gives $\divg\mathbf{S}_\Delta=-2\jj\omega(u_{\Delta H}-u_{\Delta E})$ with $u_{\Delta E}=\tfrac14\varepsilon|\Delta\E|^2$, $u_{\Delta H}=\tfrac14\mu|\Delta\H|^2$. Taking $\Re\{\cdot\}$ and integrating,
+\[
+\Re\!\left\{\int_{S_R\cup\Gamma}\hat{\mathbf{n}}\cdot\mathbf{S}_\Delta\,dS\right\}
+=-2\jj\omega\Re\!\left\{\int_{\Omega_{\mathrm{ext},R}}(u_{\Delta H}-u_{\Delta E})\,dV\right\}=0,
+\]
+because the right-hand side is purely imaginary. Hence
+\[
+\Re\!\left\{\int_{S_R}\hat{\mathbf{r}}\cdot\mathbf{S}_\Delta\,dS\right\}
++\Re\!\left\{\int_{\Gamma}\hat{\mathbf{n}}_{\mathrm{ext}}\cdot\mathbf{S}_\Delta\,dS\right\}=0,
+\]
+which is Eq.~\eqref{eq:ch1.exterior-difference-energy-balance} used in the proof of Theorem~\ref{thm:ch1.exterior-uniqueness}. On $\Gamma_{\mathrm{PEC}}$ and $\Gamma_{\mathrm{PMC}}$, homogeneous traces imply $\mathbf{S}_\Delta=\mathbf{0}$ and zero boundary contribution. This step does not by itself prove $\Delta\E=\mathbf{0}$; the limit $R\to\infty$ and outgoing selection are needed next \cite{stratton1941}.
+
+\paragraph{(d) Passive loss: three domains.}
+\textit{(i) Bounded dissipative domain, homogeneous PEC/PMC.} With complex passive $\varepsilon=\varepsilon'-\jj\varepsilon''$, $\mu=\mu'-\jj\mu''$, $\varepsilon'',\mu''\ge0$, Eq.~\eqref{eq:ch1.uniqueness-local-div-complex} yields
+\[
+\Re\{\nabla\cdot\mathbf{S}_\Delta\}
+=-\frac{\omega}{2}\left(\varepsilon''|\Delta\E|^2+\mu''|\Delta\H|^2\right)\le0.
+\]
+Integration over $\Omega$ and the divergence theorem give
+\[
+\Re\!\left\{\int_\Gamma\hat{\mathbf{n}}\cdot\mathbf{S}_\Delta\,dS\right\}
+=-\frac{\omega}{2}\int_\Omega\left(\varepsilon''|\Delta\E|^2+\mu''|\Delta\H|^2\right)dV\le0.
+\]
+With homogeneous PEC/PMC on all of $\Gamma$, $\Re\{\hat{\mathbf{n}}\cdot\mathbf{S}_\Delta\}=0$ on the boundary. If $\varepsilon''>0$ throughout connected $\Omega$, the volume integral forces $\Delta\E=\mathbf{0}$ almost everywhere; Faraday's law then gives $\Delta\H=\mathbf{0}$ where $\mu$ is nonsingular \cite{stratton1941}.
+
+\textit{(ii) Lossless cavity at an eigenfrequency.} When $\varepsilon'',\mu''=0$ throughout and $\Gamma$ is a closed perfectly conducting cavity, nontrivial standing modes can exist with $\Re\{\int_\Gamma\hat{\mathbf{n}}\cdot\mathbf{S}_\Delta\,dS\}=0$ but $\Delta\E,\Delta\H\neq\mathbf{0}$. Uniqueness of the homogeneous problem is not asserted without dissipation or radiation \cite{stratton1941,sommerfeld1949}.
+
+\textit{(iii) Exterior radiating problem.} Apply Theorem~\ref{thm:ch1.exterior-uniqueness}: on $\Gamma_Z$,
+\[
+\Re\{\hat{\mathbf{n}}_{\mathrm{ext}}\cdot\mathbf{S}_\Delta\}=\tfrac12\Re(Z_s)|\Delta\H_t|^2\ge0
+\]
+(Eqs.~\eqref{eq:ch1.impedance-boundary-power}, \eqref{eq:ch1.impedance-exterior-normal-flux}). With outgoing selection, $\mathcal{P}_\infty\ge0$ from the far-zone asymptotic Eqs.~\eqref{eq:ch1.uniqueness-far-field-asymptotic}--\eqref{eq:ch1.uniqueness-far-poynting-density}. The limit of Eq.~\eqref{eq:ch1.exterior-difference-energy-balance} gives $\mathcal{P}_\infty+\tfrac12\Re(Z_s)\int_{\Gamma_Z}|\Delta\H_t|^2\,dS=0$, hence $\E_\infty=\mathbf{0}$, vanishing VSW coefficients, and Rellich continuation to $\Delta\E=\mathbf{0}$ under the theorem's regularity hypotheses \cite{stratton1941,sommerfeld1949}. Do not substitute the lossless identity Eq.~\eqref{eq:ch1.uniqueness-local-div} when $\varepsilon'',\mu''>0$ in the bulk.
+
+\paragraph{(e) Why data must be fixed first.}
+Poynting and stress integrals are functionals of a particular Maxwell solution. Different $(\Jimp,\rho)$, interface jumps, boundary traces, or incoming versus outgoing completion at infinity yield different $(\E,\H)$ and different surface fluxes. The chapter fixes Class~A sources, Eq.~\eqref{eq:ch1.interface-conditions}, Eq.~\eqref{eq:ch1.outer-boundary-classes}, and Eq.~\eqref{eq:ch1.radiation-trace-condition} before interpreting $\oint\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{n}}\,dS$ or $\oint\Mavg\cdot\hat{\mathbf{n}}\,dS$ \cite{stratton1941,maxwell1873}.
+
+\subsection*{Problem 4 --- Direction-dependent far-zone phase}
+
+From Eq.~\eqref{eq:ch1.green-far-zone-phase}, a compact source in the radiation integral contributes
+\[
+\phi(\mathbf{r})\propto\int e^{-\jj k_0 r}\,e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}\,\rho(\mathbf{r}')\,d^3r',
+\]
+so the direction-dependent phase on fixed $r$ is $\exp\{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'\}$, equivalently the linear term $-\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'$ in the exponent of the full retarded factor $e^{-\jj k_0 R}$ when $R\approx r-\hat{\mathbf{r}}\cdot\mathbf{r}'$ \cite{stratton1941,jackson1999}.
+
+For $\Jimp(\mathbf{r}')\propto\delta^3(\mathbf{r}'-\mathbf{r}_1)+\delta^3(\mathbf{r}'-\mathbf{r}_2)$ with equal strengths, the far-zone transverse field on shell $r$ scales as
+\[
+\mathbf{E}_t(\mathbf{r})\propto e^{-\jj k_0 r}\left(e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}_1}+e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}_2}\right)\mathbf{f}(\theta,\phi),
+\]
+with polarization vector $\mathbf{f}$ fixed by the dipole moments of the sources. Writing $\hat{\mathbf{r}}=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$ and taking $\mathbf{r}_2-\mathbf{r}_1$ transverse to $\hat{\mathbf{r}}$ at an observation direction so $\hat{\mathbf{r}}\cdot\mathbf{r}_1=\hat{\mathbf{r}}\cdot\mathbf{r}_2=:s$ independent of $\phi$, the sum is $2e^{\jj k_0 s}$ and $|\mathbf{E}_t|$ is $\phi$-independent at that $\theta$. When $\mathbf{r}_2-\mathbf{r}_1\perp\hat{\mathbf{r}}$ is relaxed, the relative phase $\Delta\Phi=k_0(\hat{\mathbf{r}}\cdot\mathbf{r}_1-\hat{\mathbf{r}}\cdot\mathbf{r}_2)$ varies with $(\theta,\phi)$ and
+\[
+\frac{\partial}{\partial\phi}\arg E=\frac{\partial}{\partial\phi}\arg\!\left(e^{\jj\Delta\Phi}+\text{const}\right)
+=k_0\left(\frac{\partial\hat{\mathbf{r}}}{\partial\phi}\cdot(\mathbf{r}_1-\mathbf{r}_2)\right)
+\]
+where $\partial\hat{\mathbf{r}}/\partial\phi=(-\sin\theta\sin\phi,\sin\theta\cos\phi,0)$ \cite{stratton1941}.
+
+This phase slope is not a complete statement of angular-momentum transport: signed transport is $\boldsymbol{\Phi}_{J,\mathrm{out}}=-\oint_{S_r}\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{r}})\,dS$ (Eqs.~\eqref{eq:ch1.am-net-transport-condition}, \eqref{eq:ch1.ex61-flux-from-stress}), which couples both $\E$ and $\H$ bilinearly. Two sources with identical $|\mathbf{E}_t|$ interference can yield zero net $\dot J_{z,\mathrm{em,out}}$ on $S_r$ while $\partial(\arg E)/\partial\phi\neq0$ in a chart, or vice versa (Figure~\ref{fig:ch1.phase-vs-transport-sketch}) \cite{beth1936,stratton1941}.
+
+\subsection*{Problem 5 --- Outgoing cylindrical Hankel waves}
+
+For $J_m(\kappa\rho)\pm\jj Y_m(\kappa\rho)$, the outgoing combination under $\exp(+\jj\omega t)$ and $e^{-\jj\kappa\rho}$ radiation is $H_m^{(2)}(\kappa\rho)=J_m(\kappa\rho)-\jj Y_m(\kappa\rho)$. As $\kappa\rho\to\infty$,
+\begin{equation}
+H_m^{(2)}(\kappa\rho)\sim\sqrt{\frac{2}{\pi\kappa\rho}}\,
+e^{-\jj\left(\kappa\rho-\frac{m\pi}{2}-\frac{\pi}{4}\right)}.
+\end{equation}
+The first kind $H_m^{(1)}=J_m+\jj Y_m$ carries $e^{+\jj\kappa\rho}$ and is incoming \cite{stratton1941,harrington2001}.
+
+An azimuthal factor $e^{\jj m\phi}$ has period $\Delta\phi=2\pi/|m|$ for integer $m\neq0$. A single modal factor does not, by itself, imply net azimuthal power flux or $\boldsymbol{\Phi}_{J,\mathrm{out}}\neq\mathbf{0}$: the completed $(\E,\H)$ pair must satisfy $\curl\E=-\jj\omega\mu\H$ and $\curl\H=\jj\omega\varepsilon\E$ in the full cylindrical geometry, and the Maxwell stress integral on a closed surface (not $H_m$ alone) defines power and torque \cite{stratton1941,harrington2001}.
+
+\subsection*{Problem 6 --- Tangential fields on $S^2$}
+
+\paragraph{(a) Helmholtz decomposition on the sphere.}
+Let $\mathbf{f}$ be a smooth tangential vector field on $S^2$ ($\mathbf{f}\cdot\hat{\mathbf{r}}=0$). Standard surface Helmholtz theory gives
+\[
+\mathbf{f}=\nabla_S\psi+\hat{\mathbf{r}}\times\nabla_S\chi,
+\]
+with scalars $\psi,\chi$ on $S^2$ when $\mathbf{f}$ is sufficiently smooth (typically $C^2$ on the sphere) \cite{hansen1988,stratton1941}. The term $\nabla_S\psi$ is irrotational (surface-gradient); $\hat{\mathbf{r}}\times\nabla_S\chi$ is solenoidal on $S^2$.
+
+\paragraph{(b) Why one scalar harmonic is insufficient.}
+A single $Y_\ell^m$ is a scalar on $S^2$. A tangential electric field has two independent components $E_\theta,E_\phi$. Matching both components and the divergence constraint $\nabla_S\cdot\E_t$ (or the radiation admittance) generally requires a superposition of vector harmonics or, minimally, both gradient and surface-curl contributions in part~(a) \cite{stratton1941,hansen1988}.
+
+\paragraph{(c) Explicit $\mathbf{X}_{10}$.}
+With $\Lambda_1=\sqrt{1\cdot2}=\sqrt{2}$ and $\mathbf{L}=-\jj\mathbf{r}\times\nabla$, define $\mathbf{X}_{10}=\mathbf{L}Y_{10}/\Lambda_1$ on the unit sphere. Use $Y_{10}=\sqrt{3/(4\pi)}\cos\theta$. In spherical components $(\mathbf{L}Y)_r=0$ and
+\[
+(\mathbf{L}Y_{10})_\theta=\frac{1}{\sin\theta}\frac{\partial Y_{10}}{\partial\phi}=0,\qquad
+(\mathbf{L}Y_{10})_\phi=-\frac{\partial Y_{10}}{\partial\theta}
+=\sqrt{\frac{3}{4\pi}}\sin\theta.
+\]
+Hence on $r=1$,
+\[
+\mathbf{X}_{10}=\frac{1}{\sqrt{2}}(\mathbf{L}Y_{10})
+=\sqrt{\frac{3}{8\pi}}\sin\theta\,\hat{\boldsymbol\phi}
+\]
+with normalization $\int_{4\pi}|\mathbf{X}_{10}|^2\,d\Omega$ fixed by the Hansen convention cited in Chapter~\ref{ch:02} \cite{stratton1941,hansen1988}. Surface divergence with $f_\theta=0$, $f_\phi\propto\sin\theta$ gives $\nabla_S\cdot\mathbf{X}_{10}=0$.
+
+An axisymmetric $\hat{\boldsymbol\phi}$ component alone cannot cancel the surface divergence of a prescribed axisymmetric $\hat{\boldsymbol\theta}$ part: if $E_\theta\propto\cos\theta$ (odd in $\theta$ about the equator) while $E_\phi$ is $\phi$-symmetric, $\nabla_S\cdot\E_t$ contains $\partial_\theta(\sin\theta E_\theta)/\sin\theta$ and cannot vanish with $E_\phi$ only proportional to $\sin\theta$ independent of $\theta$'s gradient structure. A second vector mode (typically $\mathbf{N}_{10}$ or a surface-gradient term) is required \cite{stratton1941,hansen1988}.
+
+\subsection*{Problem 7 --- Rotation, helicity, and modal limits}
+
+\paragraph{(a) Active rotation versus passive relabeling.}
+\textit{Active:} a feed or scatterer that time-modulates or physically rotates so the impressed $\Jimp(\mathbf{r},t)$ changes in the laboratory frame (Figure~\ref{fig:ch1.signature-rotation-duality}(a)). Observables: altered $\P_{\mathrm{rad}}$, $\boldsymbol{\Phi}_{J,\mathrm{out}}$, and $\tau_{\hat{\mathbf{u}}}(V_{\mathrm{A}})$ on the same $\Gamma_R$ \cite{beth1936,stratton1941}.
+
+\textit{Passive:} rigid remapping of coordinates $(\theta,\phi)\mapsto(\theta',\phi')$ with the same fixed $\Jimp$ in the original frame (Figure~\ref{fig:ch1.source-vs-chart-rotation}(b)). The Maxwell solution $(\E,\H)$ is unchanged; only chart labels move. Observables on $\Gamma_R$ are invariant; harmonic coefficients of $\E_t$ change \cite{hansen1988,stratton1941}.
+
+\paragraph{(b) $(m+\sigma)P/\omega$ versus stress.}
+Remark~\ref{rem:ch1.m-plus-sigma} limits $(m+\sigma)P/\omega$ to a separable paraxial Maxwell-valid mode, fixed $\hat{\mathbf{k}}$, uniform $\eta_0$, and stated modal power $P=\int_{S_o}\Re\{\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{n}}\}\,dS$. The exact theorem-level torque projection is
+\[
+\tau_{\hat{\mathbf{u}}}=\hat{\mathbf{u}}\cdot\boldsymbol{\Phi}_{J,\mathrm{out}}
+=-\hat{\mathbf{u}}\cdot\boldsymbol{\mathcal{T}}_J
+\]
+from Eq.~\eqref{eq:ch1.ex61-flux-from-stress} \cite{stratton1941,beth1936}. On the uniform circularly polarized plane-wave disk (Subsection~\ref{sec:ch01.6.1}), azimuthal symmetry gives $\oint_{S_{\mathrm{disk}}}[\mathbf{r}\times(\Tavg\cdot\hat{\mathbf{z}})]_z\,dS=0$ while $P_{\mathrm{out}}>0$ (Eq.~\eqref{eq:ch1.ex61-cp-torque-disk-zero}). Thus $(m+\sigma)P/\omega$ is not a universal Maxwell-stress replacement \cite{stratton1941,beth1936}.
+
+\paragraph{(c) Gauge invariance.}
+Under $\mathbf{A}'=\mathbf{A}+\nabla\chi$, $\phi'=\phi-\jj\omega\chi$, $\E'=\E$ and $\H'=\H$. Bilinear observables $\mathbf{S}_\mathrm{c}$, $\Tavg$, $\Mavg$, and $\boldsymbol{\Phi}_{J,\mathrm{out}}$ built from $(\E,\H)$ are unchanged \cite{belinfante1940,jackson1999}. Potential-based local densities that display $\nabla\phi$ or $\mathbf{A}$ separately (Belinfante spin--orbit partitions) can shift with $\chi$ (Figure~\ref{fig:ch1.gauge-same-field}); shell integrals of stress quantities do not \cite{belinfante1940,stratton1941}.
+
+\paragraph{(d) Standing modal pattern, vanishing flux.}
+With counter-rotating components $A_+=A_-$ on aperture $S_o$, Eq.~\eqref{eq:ch1.ex62-power-amplitude-ratio} gives $P_+=P_-$. Eq.~\eqref{eq:ch1.ex62-net-am-transport} yields
+\[
+\dot J_z=\frac{m}{\omega}(P_+-P_-)=0.
+\]
+The standing intensity $|E_t|\propto\sqrt{2}\,|A(\rho)||\cos(m\phi)|$ can remain large (Figure~\ref{fig:ch1.ex62-counter-rotating-aperture}). A closed-surface stress evaluation on $\Gamma_R$ for the completed Maxwell pair is given by Eqs.~\eqref{eq:ch1.am-net-transport-condition}--\eqref{eq:ch1.am-net-transport-z}, distinct from the open-aperture modal estimate \cite{allen1992,beth1936,stratton1941}.
+
+\subsection*{Problem 8 --- Fraunhofer phase and Fresnel correction}
+
+Let $R=|\mathbf{r}-\mathbf{r}'|$ with $r=|\mathbf{r}|\gg|\mathbf{r}'|$. Expand
+\[
+R=\sqrt{r^2-2r\,\hat{\mathbf{r}}\cdot\mathbf{r}'+|\mathbf{r}'|^2}
+\simeq r-\hat{\mathbf{r}}\cdot\mathbf{r}'+\frac{|\mathbf{r}'|^2-(\hat{\mathbf{r}}\cdot\mathbf{r}')^2}{2r}+\mathcal{O}(|\mathbf{r}'|^3/r^2).
+\]
+In the outgoing Greens factor $e^{-\jj k_0 R}$,
+\[
+e^{-\jj k_0 R}
+\simeq e^{-\jj k_0 r}\,
+e^{+\jj k_0\hat{\mathbf{r}}\cdot\mathbf{r}'}\,
+e^{-\jj k_0\frac{|\mathbf{r}'|^2-(\hat{\mathbf{r}}\cdot\mathbf{r}')^2}{2r}},
+\]
+with the positive sign on the linear term consistent with Eq.~\eqref{eq:ch1.green-far-zone-phase} under $\exp(+\jj\omega t)$ \cite{stratton1941,silver1949}.
+
+For $\mathbf{r}'=\rho'(\cos\phi',\sin\phi',0)$ and $\hat{\mathbf{r}}=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$,
+\[
+\hat{\mathbf{r}}\cdot\mathbf{r}'=\rho'\sin\theta\cos(\phi'-\phi),
+\]
+so the leading aperture phase is $e^{+\jj k_0\rho'\sin\theta\cos(\phi'-\phi)}$.
+
+The quadratic factor is negligible when $k_0 a^2/(2r)\ll1$, i.e.\ $r\gg a^2/\lambda_0$ (strict Fraunhofer) \cite{bornwolf1999,silver1949}. Retain it in Fresnel (near-field of the radiation integral) regimes.
+
+\subsection*{Problem 9 --- Hertzian dipole}
+
+\paragraph{(a) Far-zone $\mathbf{E}$ scaling.}
+From Eq.~\eqref{eq:ch1.dipole-A-retarded}, $\mathbf{A}=\jj\omega\mu_0 p_0\hat{\mathbf{z}}\,e^{-\jj k_0 r}/(4\pi r)$. Faraday's law gives $H_\phi\sim k_0^2 p_0\sin\theta\,e^{-\jj k_0 r}/(4\pi\eta_0 r)$ from the $k_0/r$ term in $\curl\mathbf{A}$; the radiative branch of $E_\theta$ in Eq.~\eqref{eq:ch1.dipole-Etheta} scales as $-k_0^2 p_0\sin\theta\,e^{-\jj k_0 r}/(4\pi\varepsilon_0 r)$ without re-developing the full multipole ladder \cite{stratton1941,harrington2001}.
+
+\paragraph{(b) No radiating electric monopole at finite frequency.}
+Time-harmonic charge continuity $\divg\Jimp+\jj\omega\rho=0$ requires a balanced monopole current sheet or volume current paired with $\rho$. A spatially symmetric oscillating charge cloud has $\int\rho\,dV=0$ for radiation; only the dipole and higher multipoles carry $1/r$ radiation with $\int\rho\,dV=0$ at each instant for a compact neutral source. A static monopole $\rho\propto\delta^{3}(\mathbf{r})$ has $\omega=0$ and is not a radiating harmonic source \cite{stratton1941,jackson1999}.
+
+\paragraph{(c) Maxwell verification for $r>0$.}
+With $\H=H_\phi\hat{\boldsymbol\phi}$, $\partial_\phi H_\phi=0$. Spherical curls (chapter notation, $\exp(+\jj\omega t)$) give
+\[
+(\curl\E)_\theta=\frac{1}{r}\partial_r E_r-\frac{1}{r}\partial_\theta E_\theta,\quad
+(\curl\H)_\theta=-\partial_r H_\phi.
+\]
+Substitute Eqs.~\eqref{eq:ch1.dipole-Er}--\eqref{eq:ch1.dipole-Hphi}: each $\curl$ identity holds termwise with $(\curl\E)_\theta=+\jj\omega\mu_0 H_\phi$ and $(\curl\H)_\theta=+\jj\omega\varepsilon_0 E_\theta$ (the radial term $(\curl\H)_r$ balances $E_r$ even though $H_r=0$). Dominant radial scalings: $E_r,E_\theta$ contain $r^{-3}$, $r^{-2}$, $r^{-1}$; $H_\phi$ contains $r^{-2}$, $r^{-1}$ \cite{stratton1941}. Divergence $\nabla\cdot\E=0$ follows from
+\[
+\partial_r E_r+\frac{2}{r}E_r+\frac{1}{r}\partial_\theta E_\theta+\frac{\cot\theta}{r}E_\theta=0
+\]
+as verified in Subsection~\ref{sec:ch01.6.4}.
+
+\paragraph{(d) Shell ratios at $f=300\,\mathrm{MHz}$.}
+$k=2\pi\,\mathrm{rad/m}$, $\lambda_0=1\,\mathrm{m}$. $r_1=0.05\,\mathrm{m}$ gives $kr_1=0.1\pi\approx0.314$ (near-zone-dominated shell, not the asymptotic $kr\to0$ limit of a point dipole). $r_2=5\,\mathrm{m}$ gives $kr_2=10\pi\approx31.4$ (radiation-dominated shell). On $S_{r_1}$, $E_r\sim r^{-3}$ and $r^{-2}$ terms dominate normal $\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{r}}$; on $S_{r_2}$, $r^{-1}$ terms dominate.
+
+From Eq.~\eqref{eq:ch1.dipole-shell-algebra} and Eq.~\eqref{eq:ch1.dipole-complex-shell-flux},
+\[
+\frac{|P_{\mathrm{reac}}(r)|}{P_{\mathrm{rad}}}=\frac{1}{(kr)^3}.
+\]
+Numerically: at $kr_1=0.1\pi$, $(0.1\pi)^{-3}\approx31.8\approx32$; at $kr_2=10\pi$, $(10\pi)^{-3}\approx3.23\times10^{-5}$. $P_{\mathrm{rad}}$ from Eq.~\eqref{eq:ch1.ex64-power-invariance} is independent of $r$ on nested spheres in a lossless exterior; $|P_{\mathrm{reac}}(r)|$ is not \cite{stratton1941,poynting1884}.
+
+\paragraph{(e) Directivity.}
+Far-zone $U(\theta,\phi)\propto\sin^2\theta$. With Eq.~\eqref{eq:ch1.ex64-power-invariance}, $D(\theta)=(3/2)\sin^2\theta$ and $D_{\max}=(3/2)$. Check:
+\[
+\int_{4\pi}D(\theta,\phi)\,d\Omega
+=\frac{3}{2}\int_0^{2\pi}\!d\phi\int_0^{\pi}\sin^3\theta\,d\theta
+=\frac{3}{2}\cdot2\pi\cdot\frac{4}{3}=4\pi.
+\]
+\cite{stratton1941,harrington2001}.
+
+\subsection*{Problem 10 --- Reactive exchange, Chu $Q$, and finite size}
+
+\paragraph{(a) Reactive shell functional.}
+From Eq.~\eqref{eq:ch1.ex64-power-functionals},
+\[
+P_{\mathrm{reac}}(r)=\int_{S_r}\Im\{\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{r}}\}\,dS
+=\Im\!\left\{\oint_{S_r}\mathbf{S}_\mathrm{c}\cdot\hat{\mathbf{r}}\,dS\right\},
+\]
+because $\hat{\mathbf{r}}$ is real on $S_r$. For the Hertzian dipole, Eq.~\eqref{eq:ch1.ex64-complex-power} with Eq.~\eqref{eq:ch1.dipole-complex-shell-flux} shows $P_{\mathrm{reac}}(r)=-P_{\mathrm{rad}}/(kr)^3$ while $P_{\mathrm{rad}}$ is constant \cite{poynting1884,stratton1941}.
+
+\paragraph{(b) Three $Q$ notions.}
+$Q_{\mathrm{vol}}(V)=2\omega\max(W_e,W_m)/P_{\mathrm{rad}}$ (Eq.~\eqref{eq:ch1.chu-q-adopted}) integrates stored energy in a finite volume that generally includes propagating power, not McLean's non-propagating stored energy. $P_{\mathrm{reac}}(r)/P_{\mathrm{rad}}$ is a shell reactive-exchange ratio (Eq.~\eqref{eq:ch1.dipole-reactive-ratio}), not Chu $Q_1=2\omega W_{\mathrm{st,1}}/P_{\mathrm{rad,1}}$ (Eq.~\eqref{eq:ch1.chu-Qn-def}) \cite{chu1948,mcclean1996}.
+
+\paragraph{(c) Dipole shell comparison.}
+At $kr_1=0.1\pi$, $|P_{\mathrm{reac}}|/P_{\mathrm{rad}}\approx32\gg1$ (reactive dominance). At $kr_2=10\pi$, the ratio $\approx3.2\times10^{-5}\ll1$ (radiative dominance), Eq.~\eqref{eq:ch1.dipole-reactive-ratio}.
+
+\paragraph{(d) $TM_{01}$ $Q_{\mathrm{LB}}$ and $z_1(0.5)$.}
+For the ideal $TM_{01}$ model, Eq.~\eqref{eq:ch1.chu-q-lower-bound} gives
+\[
+Q_{\mathrm{LB}}=\frac{1}{(ka)^3}+\frac{1}{ka}.
+\]
+For $ka\ll1$, $Q_{\mathrm{LB}}\approx(ka)^{-3}+(ka)^{-1}$, distinct from $Q_{\mathrm{vol}}$ and modal $Q_1$ (Remark~\ref{rem:ch1.maxwell-admissibility}) \cite{mcclean1996,chu1948}.
+
+With $p=ka=0.5$ and outgoing $h_1^{(2)}(p)=e^{-\jj p}(\jj-p)/p^2$, Eq.~\eqref{eq:ch1.chu-Z-TM-normalized} gives
+\[
+z_1(p)=\jj\,\frac{\displaystyle\frac{d}{dp}\bigl[p\,h_1^{(2)}(p)\bigr]}{p\,h_1^{(2)}(p)}.
+\]
+Numerically, $z_1(0.5)\approx0.20-\jj1.60$ and $Z_1^{\mathrm{SI}}=\eta_0 z_1(0.5)\approx75-\jj603\,\Omega$ for $\eta_0\approx377\,\Omega$, matching Subsection~\ref{sec:ch01.6.4} and Chu TR-064 \cite{chu1948tr064,stratton1941}.

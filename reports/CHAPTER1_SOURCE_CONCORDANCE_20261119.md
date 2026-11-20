@@ -36,6 +36,10 @@
 
 DOI: `10.1002/mma.1670030133`. Equation numbers **not** quoted from the PDF in this register without a held copy; manuscript cites the paper for impedance BVP context only.
 
+### Bibliography locator detail (moved from `references.bib`)
+
+**Chu TR-064 (`chu1948tr064`):** Eqs.~(7)--(8) and Fig.~3 on printed pp.~7--8; Eqs.~(9)--(12) on printed p.~9 (footer markers `-7-` through `-9-` in the scanned report). DSpace `hdl:1721.1/4984`.
+
 ### Unresolved / deferred
 
 | ID | Issue | Missing evidence |
